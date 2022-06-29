@@ -1,0 +1,32 @@
+.inputForm{
+    border:1px solid $gray;
+    position: relative;
+    label.ico{
+        position: absolute;
+        ~ input{
+            padding-left: 30px;
+        }
+    }
+    button.ico{
+        position: absolute;
+        right:0;
+        ~ input{
+            padding-right: 30px;
+        }
+        &.is-active{
+            width: 10px;
+        }
+    }
+    input{
+        width: 100%;
+        &:focus{
+            outline: auto;
+            outline-color: $error;
+        }
+        
+    }
+}
+
+.error{
+    color: $error;
+}

@@ -1,0 +1,17 @@
+
+@mixin ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space:nowrap;
+}
+
+@mixin ellipsis-double {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap:break-word;
+    -webkit-line-clamp: 2;
+    text-align: left;
+    -webkit-box-orient: vertical;
+}

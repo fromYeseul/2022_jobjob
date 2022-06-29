@@ -1,0 +1,49 @@
+.modalLayer{
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    &.is-active{
+        display: block;
+        visibility: visible;
+    }
+    &.center{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        .layerBox{
+            position: relative;
+            overflow-y: auto;
+            width: 50%;     //임시
+            max-height: 100%;
+            top:50%;
+            left: 50%;
+            background: #fafafa;
+            transform: translate(-50%,-50%);
+            z-index: 10;
+        }
+        .layerDim{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 5;
+        }
+    }
+    .modalHeader{
+        .layerClose{
+            background: red; //임시
+        }
+    }
+    .modalCont{
+        background: pink; //임시
+    }
+    .modalFooter{
+        background: blue; //임시
+    }
+}
