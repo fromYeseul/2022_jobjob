@@ -1,9 +1,24 @@
 
+@mixin heightArray{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin sideArray{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
 @mixin ellipsis{
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
     white-space:nowrap;
+    text-align: left;
 }
 
 @mixin ellipsis-double {

@@ -1,0 +1,92 @@
+.btnWrap{
+    &.center{
+        text-align: center;
+    }
+    &.right{
+        text-align: right;
+    }
+}
+
+
+button, 
+.button{
+    color: $white;
+    border-radius: rem(6);
+    background-color: $mainColor;
+    //vertical-align: middle;
+    cursor: pointer;
+    &.fullSize{
+        width: 100%;
+        height: rem(54);
+        font-weight: 700;
+    }
+    &.laSize{
+        width: rem(130);
+        height: rem(55);
+        font-weight: 700;
+    }
+    &.midSize{
+        width: rem(90);
+        height: rem(50);
+    }
+    &.smSize{
+        width: rem(64);
+        height: rem(26);
+    }
+    &.download{
+        width: rem(98);
+        height: rem(36);
+        color: $black;
+        background-color: transparent;
+        border: 1px solid $inputGray;
+    }
+}
+//a태그
+.button{
+    display: inline-block;
+    text-align: center;
+    &.laSize{
+        line-height: rem(55);
+    }
+    &.midSize{
+        line-height: rem(40);
+    }
+    &.round{
+        width: rem(82);
+        height: rem(32);
+        line-height: rem(30);
+        color: $gray;
+        background: $white;
+        border: 1px solid $gray;
+        border-radius: rem(20);
+        &.order{
+            color: $highlight;
+            border-color: $highlight;
+        }
+        &.cancel{
+            color: $cancel;
+            border-color: $cancel;
+        }
+        &.checking{
+            color: $onGoing;
+            border-color: $onGoing;
+        }
+        &.short{
+            color: $delay;
+            border-color: $delay;
+        }
+        &.reject{
+            color: $delay;
+            border-color: $delay;
+        }
+        &.system{
+            width: rem(44);
+            height: rem(24);
+            line-height: rem(20);
+            color: $systemGray;
+            font-size: rem(14);
+            background: $tableBgGray;
+            border-color: $tableBgGray;
+        }
+    }
+}

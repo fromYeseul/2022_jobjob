@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 의뢰목록</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+    <div class="layoutWrapper">
+        <div class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                    <span>고정버튼</span>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li><a href="#"><i class="ico home"></i><span class="menuTxt">홈</span><i></i></a></li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span><i></i></a></li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span><i></i></a></li>
+                        <li><a href="#"><i class="ico hompage"></i><span class="menuTxt">홈페이지</span><i></i></a></li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span><i></i></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span><i></i></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span><i></i></a></li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span><i></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>   
+        
+        <div class="contWrapper">
+            <div class="header">
+                <div class="adminManage">
+                    <a href="#" class="button laSize">+요청등록</a>
+                </div>
+                <div class="userInfo">
+                    <ul>
+                        <li><a href="#"><i class="ico info"></i></a></li>
+                        <li><a href="#"><i class="ico setting"></i></a></li>
+                        <li>
+                            <a href="#">
+                                <img src="" alt="사용자이미지">
+                                <span>홍길동</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contLayout">
+                <!-- <div class="myProjList">
+                    myProjList
+                </div>
+                <div class="myProjDetail">
+                    <ul class="JobList">
+                        <li>myProjDetail</li>
+                        <li>myProjDetail</li>
+                        <li>myProjDetail</li>
+                        <li>myProjDetail</li>
+                        <li>myProjDetail</li>
+                    </ul>
+                </div>
+                <div class="myProJob">
+                    myProJob
+                </div> -->
+
+                <div class="projReqList">
+                    <h1>프로젝트 의뢰목록</h1>
+
+                    <div class="group">
+                        <ul>
+                            <li>
+                                <p class="groupTit">의뢰목록</p>
+                                <div class="tabType">
+                                    <input type="radio" id="allReq" name="reqCharge" value="allReq" checked>
+                                    <label for="allReq">모든 의뢰</label>
+                                    <input type="radio" id="myReq" name="reqCharge" value="myReq">
+                                    <label for="myReq">내 담당만</label>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="groupTit" for="reqState">의뢰상태</label>
+                                <select name="reqState" id="reqState">
+                                    <option value="0">전체</option>
+                                    <option value="1">접수</option>
+                                    <option value="2">접수취소</option>
+                                    <option value="3">검토중</option>
+                                    <option value="4">보완요구</option>
+                                    <option value="5">불가</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label class="groupTit" for="sourcingM">소싱담당</label>
+                                <select name="sourcingM" id="sourcingM">
+                                    <option value="0">전체</option>
+                                    <option value="1">접수</option>
+                                    <option value="2">접수취소</option>
+                                    <option value="3">검토중</option>
+                                    <option value="4">보완요구</option>
+                                    <option value="5">불가</option>
+                                </select>
+                            </li>
+                            <li class="hasBtn">
+                                <label class="groupTit" for="project2">프로젝트</label>
+                                <input type="text" id="project2" maxlength="20" placeholder="띄어쓰기로 and 검색 (예) 한화 삼성">
+                                <button class="midSize">검색</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tableWrap">        
+                        <div class="tableTop">
+                            <select class="tCount" name="tCount" id="tCount">
+                                <option value="10">10개씩 보기</option>
+                                <option value="20">20개씩 보기</option>
+                                <option value="50">50개씩 보기</option>
+                                <option value="100">100개씩 보기</option>
+                            </select>
+
+                            
+                            <button class="download">
+                                <i class="ico download"></i>
+                                엑셀저장
+                            </button>
+                        </div>
+                        
+                        <table class="colType">
+                            <colgroup>
+                                <col width="56px;">
+                                <col width="66px;">
+                                <col>
+                                <col>
+                                <col>
+
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+
+                                <col width="22%;">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>중요</th>
+                                    <th>등록일</th>
+                                    <th>시작희망일</th>
+                                    <th>요청사</th>
+                                    <th>요청자</th>
+                                    <th>의뢰상태</th>
+                                    <th>영업담당</th>
+                                    <th>소싱담당</th>
+                                    <th>모집인원</th>
+                                    <th>프로젝트</th>
+                                    <th>특이사항</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10</td>
+                                    <td>
+                                        <input type="checkbox" class="chkCustom" id="projReq-chk1">
+                                        <label for="projReq-chk1"></label>
+                                    </td>
+                                    <td>22.05.01</td>
+                                    <td>22.05.01</td>
+                                    <td>에코</td>
+                                    <td>김기쁨</td>
+                                    <td><a href="#" class="button round order">접수</a></td>
+                                    <td>한아라</td>
+                                    <td>한아라</td>
+                                    <td>5명</td>
+                                    <td class="ellipsis">
+                                        <span class="button round system">SM</span>
+                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                    </td>
+                                    <td>상암사옥</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>
+                                        <input type="checkbox" class="chkCustom" id="projReq-chk2">
+                                        <label for="projReq-chk2"></label>
+                                    </td>
+                                    <td>22.05.01</td>
+                                    <td>22.05.01</td>
+                                    <td>에코</td>
+                                    <td>김기쁨</td>
+                                    <td><a href="#" class="button round cancel">접수취소</a></td>
+                                    <td>한아라</td>
+                                    <td>한아라</td>
+                                    <td>5명</td>
+                                    <td class="ellipsis">
+                                        <span class="button round system">SI</span>
+                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                    </td>
+                                    <td>상암사옥</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>
+                                        <input type="checkbox" class="chkCustom" id="projReq-chk3">
+                                        <label for="projReq-chk3"></label>
+                                    </td>
+                                    <td>22.05.01</td>
+                                    <td>22.05.01</td>
+                                    <td>에코</td>
+                                    <td>김기쁨</td>
+                                    <td><a href="#" class="button round checking">검토중</a></td>
+                                    <td>한아라</td>
+                                    <td>한아라</td>
+                                    <td>5명</td>
+                                    <td class="ellipsis">
+                                        <span class="button round system">SM</span>
+                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                    </td>
+                                    <td>상암사옥</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>
+                                        <input type="checkbox" class="chkCustom" id="projReq-chk4">
+                                        <label for="projReq-chk4"></label>
+                                    </td>
+                                    <td>22.05.01</td>
+                                    <td>22.05.01</td>
+                                    <td>에코</td>
+                                    <td>김기쁨</td>
+                                    <td><a href="#" class="button round short">보완요구</a></td>
+                                    <td>한아라</td>
+                                    <td>한아라</td>
+                                    <td>5명</td>
+                                    <td class="ellipsis">
+                                        <span class="button round system">SM</span>
+                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                    </td>
+                                    <td>상암사옥</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>
+                                        <input type="checkbox" class="chkCustom" id="projReq-chk5">
+                                        <label for="projReq-chk5"></label>
+                                    </td>
+                                    <td>22.05.01</td>
+                                    <td>22.05.01</td>
+                                    <td>에코</td>
+                                    <td>김기쁨</td>
+                                    <td><a href="#" class="button round reject">불가</a></td>
+                                    <td>한아라</td>
+                                    <td>한아라</td>
+                                    <td>5명</td>
+                                    <td class="ellipsis">
+                                        <span class="button round system">SI</span>
+                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                    </td>
+                                    <td>상암사옥</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>
+                                        <input type="checkbox" class="chkCustom" id="projReq-chk6">
+                                        <label for="projReq-chk6"></label>
+                                    </td>
+                                    <td>22.05.01</td>
+                                    <td>22.05.01</td>
+                                    <td>에코</td>
+                                    <td>김기쁨</td>
+                                    <td><a href="#" class="button round order">접수</a></td>
+                                    <td>한아라</td>
+                                    <td>한아라</td>
+                                    <td>5명</td>
+                                    <td class="ellipsis">
+                                        <span class="button round system">SI</span>
+                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                    </td>
+                                    <td>상암사옥</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <input type="checkbox" class="chkCustom" id="projReq-chk7">
+                                        <label for="projReq-chk7"></label>
+                                    </td>
+                                    <td>22.05.01</td>
+                                    <td>22.05.01</td>
+                                    <td>에코</td>
+                                    <td>김기쁨</td>
+                                    <td><a href="#" class="button round order">접수</a></td>
+                                    <td>한아라</td>
+                                    <td>한아라</td>
+                                    <td>5명</td>
+                                    <td class="ellipsis">
+                                        <span class="button round system">SI</span>
+                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                    </td>
+                                    <td>상암사옥</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <input type="checkbox" class="chkCustom" id="projReq-chk8">
+                                        <label for="projReq-chk8"></label>
+                                    </td>
+                                    <td>22.05.01</td>
+                                    <td>22.05.01</td>
+                                    <td>에코</td>
+                                    <td>김기쁨</td>
+                                    <td><a href="#" class="button round order">접수</a></td>
+                                    <td>한아라</td>
+                                    <td>한아라</td>
+                                    <td>5명</td>
+                                    <td class="ellipsis">
+                                        <span class="button round system">SI</span>
+                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                    </td>
+                                    <td>상암사옥</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <input type="checkbox" class="chkCustom" id="projReq-chk9">
+                                        <label for="projReq-chk9"></label>
+                                    </td>
+                                    <td>22.05.01</td>
+                                    <td>22.05.01</td>
+                                    <td>에코</td>
+                                    <td>김기쁨</td>
+                                    <td><a href="#" class="button round order">접수</a></td>
+                                    <td>한아라</td>
+                                    <td>한아라</td>
+                                    <td>5명</td>
+                                    <td class="ellipsis">
+                                        <span class="button round system">SI</span>
+                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                    </td>
+                                    <td>상암사옥</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <input type="checkbox" class="chkCustom" id="projReq-chk10">
+                                        <label for="projReq-chk10"></label>
+                                    </td>
+                                    <td>22.05.01</td>
+                                    <td>22.05.01</td>
+                                    <td>에코</td>
+                                    <td>김기쁨</td>
+                                    <td><a href="#" class="button round order">접수</a></td>
+                                    <td>한아라</td>
+                                    <td>한아라</td>
+                                    <td>5명</td>
+                                    <td class="ellipsis">
+                                        <span class="button round system">SI</span>
+                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                    </td>
+                                    <td>상암사옥</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                
+                <!--우측패널-->
+                <div class="rPanelLayer">
+                    우측패널 레이어
+                </div>
+                <div class="rPanel">
+                    <ul>
+                        <li><i class="ico searchMem"></i></li>
+                        <li><i class="ico schedule"></i></li>
+                        <li><i class="ico mail"></i></li>
+                    </ul>
+                </div>
+                <!--우측패널-->
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+</body>
+</html>

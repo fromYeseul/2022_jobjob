@@ -1,13 +1,35 @@
 .header{        
     position: relative;
-    height: 50px;  //임시
-    background: pink; //임시   
-    .adminManage{
-        position: absolute;
-        left: 0;
+    height: rem(95);
+    padding: 0 rem(30);   //?????????box-sizing이 왜 안먹지.......
+    border-bottom: 2px solid $layoutColor;
+    @include sideArray;
+    .adminManage{       
+        @include heightArray;
+    }
+    .tabType{
+        label{
+            width: rem(194);
+            padding: rem(20) 0;
+            &:nth-child(2){
+                border-radius: rem(6) 0 0 rem(6);
+            } 
+            &:last-child{
+                border-radius: 0 rem(6) rem(6) 0;
+            }
+        }
     }
     .userInfo{
-        position: absolute;
-        right: 0;
+        @include heightArray;
+        li{
+            display: inline-block;
+            margin-left: rem(24);
+        }
     }
+    .ico{        
+        width: rem(22);
+        height: rem(22);
+        background-image: url(../img/iconImg.jpg);
+    }
+    
 }

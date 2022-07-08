@@ -1,0 +1,92 @@
+.usableMan{
+    padding: rem(40);
+    font-size: rem(14);
+}
+
+.memberWrap{
+    padding: rem(20) 0;
+    border-bottom:1px solid $memLayout;
+    > ul{
+        display: flex;    
+        > li{
+            padding: 0 rem(10);   
+            text-align: center;
+            &:first-child{
+                padding: 0;
+            }
+            &.memInfo{
+                text-align: left;
+            }     
+        }
+    }
+    li{
+        li{
+            display: inline-block;
+            position: relative;
+            margin-right: rem(6);
+            &::after{
+                content:'';
+                width: 1px;
+                height: rem(16);
+                background: $gray;
+                position: absolute;
+                right: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }        
+            &:last-child{
+                margin-right:0;
+                &::after{
+                    display: none;
+                }
+            }    
+        }
+    }
+    .memProfile{
+        color: $highlight;
+        line-height: rem(14);
+        img{
+            width: rem(40);
+            height: rem(40);
+            border-radius: rem(12);
+            margin-bottom: rem        (5);
+        }
+    }
+    .memInfo{
+        border-left: 1px solid $memLayout;
+        border-right: 1px solid $memLayout;
+        .memPersonal{
+            font-weight: bold;
+            .memName{
+                &::after{
+                    background: $black;
+                }
+            }
+        }
+        .memData{
+            margin-top: rem(12);
+            .memSkill{
+                li{
+                    margin-right: rem(0);
+                    &::after{
+                        display: none;
+                    }                
+                }
+            }
+            .memCareer{
+                li{
+                    &:last-child{
+                        color: $highlight;
+                    }
+                }
+            }
+        }
+    }
+    .memResume{
+        @include heightArray;
+    }
+    .memSchedule{
+        color: $highlight;
+        @include heightArray;
+    }
+}

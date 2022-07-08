@@ -1,9 +1,60 @@
 
 //메인컬러
-$mainColor : #0067a3;
+$mainColor : #0460d2;
+$bgColor : #f2f2f7;
+$layoutColor : #f3f3f6;
+$layoutColor : #ff0000;
 
 //상태컬러
 $error : #ff0000;
+$disable : #999;
+
+$highlight : #009ce0;
+$onGoing : #ffc812;
+$cancel : #b7b7c4;
+$delay : #ff1236;
 
 //모노톤
-$gray : #999;
+$black : #29292c;
+$gray : #828286;
+$white : #fff;
+
+
+$inputGray : #e6e6eb;
+$placeholder : #878791;
+$placeGray : #a5a5ac;
+$tableBgGray : $bgColor;
+$tableBorder : #e6e6eb;
+$tabGray : #e7e7ec;
+$memLayout : $layoutColor;
+
+$titleGray : $cancel;
+$groupGray : $placeholder;
+$tableGray : $placeholder;
+$systemGray : $placeholder;
+$footerGray : $titleGray;
+
+
+//에러텍스트
+.error{
+    display: none;
+    color: $error;
+    &.is-active{
+        display: block;
+    }
+    + input[type=password]{
+        margin-top: rem(10);
+    }
+}
+
+//감추기
+.blind {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(0, 0, 0, 0);
+}

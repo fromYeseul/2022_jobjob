@@ -1,4 +1,36 @@
 
+.wrapper{
+    width: 100%;
+    .section{
+        width: 100%;
+        max-width: rem(1200);
+        margin: auto;
+        &.login{
+            //padding-top: rem(150);
+            //margin: rem(50) 0;
+            max-width: inherit;
+            //height:100vh;
+            padding: rem(50) 0;
+            background-color: $bgColor;
+        }
+    }
+    &.center{
+        height:100vh;
+        background-color: $bgColor;
+        @include heightArray;
+    }
+}
+  
+
+
+
+
+
+
+
+
+
+
 .gnbWrapper{
     width: 50px;    //임시
     background: #fafafa;    //임시
@@ -9,7 +41,7 @@
     .navWrapper{
         height: calc(100vh - 30px); //임시
         background: pink; //임시
-        overflow-y: scroll;
+        overflow-y: auto;
         .menuTxt{
             display: none;
         }
@@ -48,14 +80,17 @@
 
 .contWrapper{
     width: calc(100% - 50px); //임시
-    //min-width: 1200px;  //임시
+    //min-width: 1780px;  //임시
     position: absolute;
     left: 50px; //임시
+    .proReqList{
+        padding: rem(35) rem(40);
+    }
     .contLayout{
         display: flex;
-        min-height: calc(100vh - 50px);
+        min-height: calc(100vh - 95px);
         .myProjList{
-            width: 200px; //임시
+            width: 30%; //임시
         }
         .myProjDetail{
             width: calc(100% - 250px); //임시
@@ -65,8 +100,24 @@
             display: none;
             width: 500px; //임시
         }
+
+
+        .myPeoList{
+            min-width: 570px;
+            border-right: 1px solid $layoutColor;
+        }
+        .myPeoDetail{
+            width: calc(100% - 570px - 50px);
+            padding: rem(30);
+        }
+
+
+        .projReqList{
+            width: calc(100% - 50px);
+            padding: rem(38) rem(40);
+        }
         .rPanelLayer{
-            width: 0;
+            width: 30px;
             transition: all .3s ease;
             background: yellow;  //임시
             &.is-active{
@@ -81,7 +132,7 @@
         }
         .rPanel{                
             width: 50px;  //임시
-            height: calc(100vh - 50px);  //임시
+            height: calc(100vh - 95px);
             position: fixed;
             right: 0;
             bottom: 0;
@@ -107,3 +158,4 @@
 
 
 
+  

@@ -1,11 +1,19 @@
 .tabBtnWrap{
+    @include sideArray;
+    padding: 0 rem(50);
+    padding-top: rem(30);
+    border-bottom:1px solid $tabGray;
+    
     li{
         display: inline-block;
-        background: #ebebeb;    //임시
+        text-align: center;
         a{
-            color: #999;     //임시
+            display: inline-block;
+            color: $gray; 
+            padding-bottom: rem(7);
             &.is-active{
-                background: #000;   //임시
+                color: $black;
+                border-bottom: 3px solid $black;
             }
         }
     }
