@@ -10,6 +10,16 @@
     justify-content: space-between;
 }
 
+@mixin flex_1_2{
+    display: flex;
+    .prefix{
+        flex: 1 1 0;
+    }
+    .suffix{
+        flex: 2 1 0;
+    }
+  }
+
 
 
 
@@ -30,3 +40,12 @@
     text-align: left;
     -webkit-box-orient: vertical;
 }
+
+
+@mixin scroll_0{
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+  

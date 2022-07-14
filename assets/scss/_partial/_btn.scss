@@ -15,6 +15,11 @@ button,
     background-color: $mainColor;
     //vertical-align: middle;
     cursor: pointer;
+    &.white{
+        color:$black;
+        border: 1px solid $gray;
+        background-color: $white;
+    }
     &.fullSize{
         width: 100%;
         height: rem(54);
@@ -40,6 +45,13 @@ button,
         background-color: transparent;
         border: 1px solid $inputGray;
     }
+    &.delete{
+        width: rem(84);
+        height: rem(32);
+        color: $black;
+        background-color: transparent;
+        border: 1px solid $inputGray;
+    }
 }
 //a태그
 .button{
@@ -49,7 +61,8 @@ button,
         line-height: rem(55);
     }
     &.midSize{
-        line-height: rem(40);
+        height: rem(50);
+        line-height: rem(50);
     }
     &.round{
         width: rem(82);

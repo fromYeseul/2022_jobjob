@@ -68,62 +68,69 @@ textarea{
 
 /* 체크박스 */
 input[type=checkbox]{
+    display: none;
     position: relative;
-    &.chkCustom{
-        display: none;
-        + label{
+    + label{
+        display: inline-block;
+        position: relative;
+        &::before{
+            content:'';
             display: inline-block;
-            position: relative;
-            &::before{
-                content:'';
-                display: inline-block;
-                width: rem(20);
-                height: rem(20);
-                background-image: url(../img/IcoGroup.png);
-                background-position: 0px 0px;
-                vertical-align: sub;
-            }
-        }
-        &:checked{
-            + label{
-                &::before{
-                    background-position: -20px 0;
-                }
-            }
-        }        
-        &.hasTxt{
-            + label{
-                &::before{
-                    margin-right: rem(6);
-                }
-            }
+            width: rem(20);
+            height: rem(20);
+            background-image: url(../img/IcoGroup.png);
+            background-position: 0px 0px;
+            vertical-align: sub;
         }
     }
-    /* 북마크 */
+    &:checked{
+        + label{
+            &::before{
+                background-position: -20px 0;
+            }
+        }
+    }        
+    &.hasTxt{
+        + label{
+            &::before{
+                margin-right: rem(6);
+            }
+        }
+    }    
+    // 북마크
     &.bMark{
         display:none;
-        & + label{
+        + label{
             display:inline-block;
-            width: 16px;
-            height: 16px;
-            background: red;
-            vertical-align: middle;
+            width: rem(20);
+            height: rem(20);
+            background-image: url(../img/IcoGroup.png);
+            background-position: 0px -20px;
+            vertical-align: sub;
+            &::before{
+                display: none;
+            }
         }
         &:checked{
             & + label{
-                background: blue;
+                background-position: -20px -21px;
             }
         }
     }
-    /* 토글스위치 - ****색상, 사이즈 재확인하기 */
+    // 토글스위치 - ****색상, 사이즈 재확인하기
     &.chkSwitch{
+        display: inline-block;
         -webkit-appearance: none;
         -moz-appearance: none;
         width: 38px;  
         height: 21px;  
         border: 1px solid $gray;
         border-radius: 11px;
-        
+        + label{
+            &::before{
+                display: none;
+            }
+        }
         &::after{
             content:'';
             width: 15px;

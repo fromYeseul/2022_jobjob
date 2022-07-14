@@ -41,9 +41,9 @@
             <div class="header">
                 <div class="adminManage">
                     <div class="tabType">
-                        <input type="radio" id="MyProject" name="category" value="MyProject" checked>
+                        <input type="radio" id="MyProject" name="category" value="MyProject">
                         <label for="MyProject">My Project</label>
-                        <input type="radio" id="MyPeople" name="category" value="MyPeople">
+                        <input type="radio" id="MyPeople" name="category" value="MyPeople" checked>
                         <label for="MyPeople">My People</label>
                     </div>
                 </div>
@@ -77,183 +77,845 @@
                         <div class="tabContWrap">
                             <div id="myPeo-1" class="tabCont is-active">
                                 <div class="usableMan">
-                                    <input type="checkbox">
-                                    <input type="checkbox">
-                                    <!--회원정보-->
-                                    <div class="memberWrap">
-                                        <ul>
-                                            <li><input type="checkbox"></li>
-                                            <li class="memProfile"> 
-                                                <img src="../assets/img/iconImg.jpg" alt="회원이미지">
-                                                <p class="memScore">90.0</p>
-                                                <p class="memSpecial">Special</p>                                                
-                                            </li>
-                                            <li class="memInfo">
-                                                <div class="memPersonal">
-                                                    <ul>
-                                                        <li>홍길순(여/29)</li>
-                                                        <li>개발</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="memData">
-                                                    <div class="memSkill">
-                                                        <ul>
-                                                            <li>ASP</li>
-                                                            <li>JSP</li>
-                                                            <li>Oracle</li>
-                                                            <li>Java</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="memCareer">
-                                                        <ul>
-                                                            <li>서울 강서</li>
-                                                            <li>4년제 졸업</li>
-                                                            <li>10년 2개월</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="memResume">
-                                                <a href="#" class="button round" target="_blank">이력서</a>
-                                            </li>
-                                            <li class="memSchedule">
-                                                <p class="date">
-                                                    22/05/01 <br> 투입종료
-                                                </p>
-                                            </li>
-                                        </ul>
+
+                                    <div class="peoListTop">                                        
+                                        <input type="checkbox" id="chkAll" class="chkAll hasTxt">
+                                        <label for="chkAll"> 0 / 4</label>
+                                        
+                                        <input type="checkbox" id="chkLevel" class="hasTxt">
+                                        <label for="chkLevel"> 등급으로 보기</label>
+
+                                        <button class="delete">선택삭제</button>
                                     </div>
-                                    <!--//회원정보-->
-                                    <div class="memberWrap">
-                                        <ul>
-                                            <li><input type="checkbox"></li>
-                                            <li class="memProfile"> 
-                                                <img src="../assets/img/iconImg.jpg" alt="회원이미지">
-                                                <p class="memScore">90.0</p>
-                                                <p class="memSpecial">Special</p>                                                
-                                            </li>
-                                            <li class="memInfo">
-                                                <div class="memPersonal">
-                                                    <ul>
-                                                        <li>홍길순(여/29)</li>
-                                                        <li>개발</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="memData">
-                                                    <div class="memSkill">
+                                    
+                                    <div class="peoList">
+                                        <!--회원정보-->
+                                        <div class="memberWrap hasTooltip">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_1" class="chkEach">
+                                                    <label for="chk_1"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
                                                         <ul>
-                                                            <li>ASP</li>
-                                                            <li>JSP</li>
-                                                            <li>Oracle</li>
-                                                            <li>Java</li>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_1" class="bMark" name="bMark" checked>
+                                                                <label for="bMark_1"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
                                                         </ul>
                                                     </div>
-                                                    <div class="memCareer">
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>
+                                                <li class="memSchedule">
+                                                    <p class="date">
+                                                        투입dd중 <br> (~22/05/01)
+                                                    </p>                                        
+                                                    <div class="tooltip">
+                                                        CJ프레시웨이 온리원푸드넷                             
+                                                    </div>
+                                                </li>  
+                                            </ul>    
+                                        </div>
+                                        <!--//회원정보-->
+                                        <div class="memberWrap hasTooltip">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_2" class="chkEach">
+                                                    <label for="chk_2"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
                                                         <ul>
-                                                            <li>서울 강서</li>
-                                                            <li>4년제 졸업</li>
-                                                            <li>10년 2개월</li>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_2" class="bMark" name="bMark" checked>
+                                                                <label for="bMark_2"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
                                                         </ul>
                                                     </div>
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>                                            
+                                                <li class="memSchedule">
+                                                    <p class="date ">
+                                                        투입중 <br> (~22/05/01)
+                                                    </p>
+                                                </li>                                      
+                                                <div class="tooltip">
+                                                    CJ프레시웨ddd이 온리원푸드넷                             
                                                 </div>
-                                            </li>
-                                            <li class="memResume">
-                                                <a href="#" class="button round" target="_blank">이력서</a>
-                                            </li>
-                                            <li class="memSchedule">
-                                                <p class="date">
-                                                    22/05/01 <br> 투입종료
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="memberWrap">
-                                        <ul>
-                                            <li><input type="checkbox"></li>
-                                            <li class="memProfile"> 
-                                                <img src="../assets/img/iconImg.jpg" alt="회원이미지">
-                                                <p class="memScore">90.0</p>
-                                                <p class="memSpecial">Special</p>                                                
-                                            </li>
-                                            <li class="memInfo">
-                                                <div class="memPersonal">
-                                                    <ul>
-                                                        <li>홍길순(여/29)</li>
-                                                        <li>개발</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="memData">
-                                                    <div class="memSkill">
+                                            </ul>    
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_3" class="chkEach">
+                                                    <label for="chk_3"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
                                                         <ul>
-                                                            <li>ASP</li>
-                                                            <li>JSP</li>
-                                                            <li>Oracle</li>
-                                                            <li>Java</li>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_3" class="bMark" name="bMark">
+                                                                <label for="bMark_3"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
                                                         </ul>
                                                     </div>
-                                                    <div class="memCareer">
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>
+                                                <li class="memSchedule">
+                                                    <p class="date">
+                                                        22/05/01~ <br> 투입종료
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_4" class="chkEach">
+                                                    <label for="chk_4"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
                                                         <ul>
-                                                            <li>서울 강서</li>
-                                                            <li>4년제 졸업</li>
-                                                            <li>10년 2개월</li>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_4" class="bMark" name="bMark">
+                                                                <label for="bMark_4"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
                                                         </ul>
                                                     </div>
-                                                </div>
-                                            </li>
-                                            <li class="memResume">
-                                                <a href="#" class="button round" target="_blank">이력서</a>
-                                            </li>
-                                            <li class="memSchedule">
-                                                <p class="date">
-                                                    22/05/01 <br> 투입종료
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="memberWrap">
-                                        <ul>
-                                            <li><input type="checkbox"></li>
-                                            <li class="memProfile"> 
-                                                <img src="../assets/img/iconImg.jpg" alt="회원이미지">
-                                                <p class="memScore">90.0</p>
-                                                <p class="memSpecial">Special</p>                                                
-                                            </li>
-                                            <li class="memInfo">
-                                                <div class="memPersonal">
-                                                    <ul>
-                                                        <li>홍길순(여/29)</li>
-                                                        <li>개발</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="memData">
-                                                    <div class="memSkill">
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>
+                                                <li class="memSchedule">
+                                                    <p class="date">
+                                                        22/05/01~ <br> 투입종료
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_5" class="chkEach">
+                                                    <label for="chk_5"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
                                                         <ul>
-                                                            <li>ASP</li>
-                                                            <li>JSP</li>
-                                                            <li>Oracle</li>
-                                                            <li>Java</li>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_5" class="bMark" name="bMark" checked>
+                                                                <label for="bMark_5"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
                                                         </ul>
                                                     </div>
-                                                    <div class="memCareer">
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>                                            
+                                                <li class="memSchedule">
+                                                    <p class="date ">
+                                                        투입중 <br> (~22/05/01)
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_6" class="chkEach">
+                                                    <label for="chk_6"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
                                                         <ul>
-                                                            <li>서울 강서</li>
-                                                            <li>4년제 졸업</li>
-                                                            <li>10년 2개월</li>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_6" class="bMark" name="bMark">
+                                                                <label for="bMark_6"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
                                                         </ul>
                                                     </div>
-                                                </div>
-                                            </li>
-                                            <li class="memResume">
-                                                <a href="#" class="button round" target="_blank">이력서</a>
-                                            </li>
-                                            <li class="memSchedule">
-                                                <p class="date">
-                                                    22/05/01 <br> 투입종료
-                                                </p>
-                                            </li>
-                                        </ul>
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>
+                                                <li class="memSchedule">
+                                                    <p class="date">
+                                                        22/05/01~ <br> 투입종료
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_7" class="chkEach">
+                                                    <label for="chk_7"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
+                                                        <ul>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_7" class="bMark" name="bMark">
+                                                                <label for="bMark_7"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>
+                                                <li class="memSchedule">
+                                                    <p class="date">
+                                                        22/05/01~ <br> 투입종료
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_8" class="chkEach">
+                                                    <label for="chk_8"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
+                                                        <ul>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_8" class="bMark" name="bMark" checked>
+                                                                <label for="bMark_8"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>                                            
+                                                <li class="memSchedule">
+                                                    <p class="date ">
+                                                        투입중 <br> (~22/05/01)
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_9" class="chkEach">
+                                                    <label for="chk_9"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
+                                                        <ul>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_9" class="bMark" name="bMark">
+                                                                <label for="bMark_9"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>
+                                                <li class="memSchedule">
+                                                    <p class="date">
+                                                        22/05/01~ <br> 투입종료
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_10" class="chkEach">
+                                                    <label for="chk_10"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
+                                                        <ul>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_10" class="bMark" name="bMark">
+                                                                <label for="bMark_10"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>
+                                                <li class="memSchedule">
+                                                    <p class="date">
+                                                        22/05/01~ <br> 투입종료
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_11" class="chkEach">
+                                                    <label for="chk_11"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
+                                                        <ul>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_11" class="bMark" name="bMark" checked>
+                                                                <label for="bMark_11"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>                                            
+                                                <li class="memSchedule">
+                                                    <p class="date ">
+                                                        투입중 <br> (~22/05/01)
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_12" class="chkEach">
+                                                    <label for="chk_12"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
+                                                        <ul>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_12" class="bMark" name="bMark">
+                                                                <label for="bMark_12"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>
+                                                <li class="memSchedule">
+                                                    <p class="date">
+                                                        22/05/01~ <br> 투입종료
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_13" class="chkEach">
+                                                    <label for="chk_13"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
+                                                        <ul>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_13" class="bMark" name="bMark">
+                                                                <label for="bMark_13"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>
+                                                <li class="memSchedule">
+                                                    <p class="date">
+                                                        22/05/01~ <br> 투입종료
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_14" class="chkEach">
+                                                    <label for="chk_14"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
+                                                        <ul>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_14" class="bMark" name="bMark" checked>
+                                                                <label for="bMark_14"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>                                            
+                                                <li class="memSchedule">
+                                                    <p class="date ">
+                                                        투입중 <br> (~22/05/01)
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_15" class="chkEach">
+                                                    <label for="chk_15"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
+                                                        <ul>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_15" class="bMark" name="bMark">
+                                                                <label for="bMark_15"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>
+                                                <li class="memSchedule">
+                                                    <p class="date">
+                                                        22/05/01~ <br> 투입종료
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="memberWrap">
+                                            <ul>
+                                                <li>
+                                                    <input type="checkbox" id="chk_16" class="chkEach">
+                                                    <label for="chk_16"></label>
+                                                </li>
+                                                <li class="memProfile"> 
+                                                    <img src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <p class="memScore">90.0</p>
+                                                    <p class="memSpecial">Special</p>                                                
+                                                </li>
+                                                <li class="memInfo">
+                                                    <div class="memPersonal">
+                                                        <ul>
+                                                            <li>                                                            
+                                                                <input type="checkbox" id="bMark_16" class="bMark" name="bMark">
+                                                                <label for="bMark_16"></label>
+                                                                홍길순(여/29)
+                                                            </li>
+                                                            <li>개발</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="memData">
+                                                        <div class="memSkill">
+                                                            <ul>
+                                                                <li>ASP</li>
+                                                                <li>JSP</li>
+                                                                <li>Oracle</li>
+                                                                <li>Java</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="memCareer">
+                                                            <ul>
+                                                                <li>서울 강서</li>
+                                                                <li>4년제 졸업</li>
+                                                                <li>10년 2개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="memResume">
+                                                    <a href="#" class="button round" target="_blank">이력서</a>
+                                                </li>
+                                                <li class="memSchedule">
+                                                    <p class="date">
+                                                        22/05/01~ <br> 투입종료
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
+
+                                    <div class="peoListBottom">
+                                        <button class="fullSize white prefix">+ 목록추가</button>
+                                        <button class="fullSize suffix">연락하기</button>
+                                    </div>
                             </div>
                             <div id="myPeo-2" class="tabCont">
                                 <div class="recomMan">

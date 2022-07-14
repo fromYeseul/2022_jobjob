@@ -1,7 +1,42 @@
 .usableMan{
-    padding: rem(40);
-    font-size: rem(14);
+    padding: rem(30);
+    padding-bottom: 0;
+    .peoListTop{
+        padding: 0 rem(10);
+        label{            
+            margin-right: rem(16);
+        }
+        button{
+            float: right;
+            margin-top: -5px;
+        }
+    }
+    .peoList{
+        @include scroll_0;
+        width: 100%;
+        height: calc(100vh - 230px);
+        margin-top: rem(16);
+        padding: rem(10);
+        padding-bottom: rem(100);
+    }
 }
+
+.peoListBottom{
+    width: 100%;
+    padding: rem(20) rem(40);
+    background: $white;
+    // /box-shadow: -5px -5px 10px rgba(0,0,0,0.05);
+    position: absolute;
+    bottom: 0;
+    @include flex_1_2;
+    .prefix{
+
+    }
+    .suffix{
+        margin-left: rem(10);
+    }
+}
+
 
 .memberWrap{
     padding: rem(20) 0;
@@ -23,14 +58,14 @@
         li{
             display: inline-block;
             position: relative;
-            margin-right: rem(6);
+            margin-right: rem(18);
             &::after{
                 content:'';
                 width: 1px;
-                height: rem(16);
-                background: $gray;
+                height: rem(15);
+                background: $subInfo;
                 position: absolute;
-                right: -7px;
+                right: -10px;
                 top: 50%;
                 transform: translateY(-50%);
             }        
@@ -44,30 +79,31 @@
     }
     .memProfile{
         color: $highlight;
+        font-size: rem(12);
         line-height: rem(14);
         img{
             width: rem(40);
             height: rem(40);
             border-radius: rem(12);
-            margin-bottom: rem        (5);
+            margin-bottom: rem(5);
         }
     }
     .memInfo{
+        width: rem(273);
         border-left: 1px solid $memLayout;
         border-right: 1px solid $memLayout;
         .memPersonal{
             font-weight: bold;
-            .memName{
-                &::after{
-                    background: $black;
-                }
-            }
         }
         .memData{
             margin-top: rem(12);
+            color: $subInfo;
             .memSkill{
                 li{
-                    margin-right: rem(0);
+                    margin-right: rem(4);
+                    &:last-child{
+                        margin-right: 0;
+                    }
                     &::after{
                         display: none;
                     }                
@@ -83,10 +119,33 @@
         }
     }
     .memResume{
+        font-size: rem(14);
         @include heightArray;
+        .button{
+            width: rem(60);
+        }
     }
     .memSchedule{
+        width: rem(84);
         color: $highlight;
+        font-size: rem(14);
         @include heightArray;
+        .tooltip{        
+            right:-8px;
+            bottom:rem(90);
+        }
+        &:first-child{
+            .tooltip{        
+                right:-8px;
+                top:rem(90);
+                bottom: auto;
+                &::after{
+                    top: auto;
+                    bottom: 100%;
+                    border-top-color: transparent;
+                    border-bottom-color: $tooltipGray;
+                }
+            }
+        }
     }
 }

@@ -53,26 +53,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #ddd;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 6px;
-  background-color: #878787;
-  background-clip: padding-box;
-  border: 2px solid transparent;
-}
-
-::-webkit-scrollbar-button {
-  width: 0;
-  height: 0;
-}
-
 @font-face {
   font-family: "NotoSansKR";
   font-style: thin;
@@ -129,6 +109,26 @@ h1, h2, h3, h4, h5, h6, p {
   height: 1px;
   border: none;
   clip: rect(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #878787;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
 }
 
 .wrapper {
@@ -211,11 +211,19 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .contWrapper .contLayout .myPeoList {
   min-width: 570px;
-  border-right: 1px solid #ff0000;
+  border-right: 1px solid #f3f3f6;
 }
 .contWrapper .contLayout .myPeoDetail {
   width: calc(100% - 570px - 50px);
   padding: 1.875rem;
+}
+.contWrapper .contLayout .myPeoDetail .tableWrap {
+  height: calc(100vh - 240px);
+  overflow-y: auto;
+}
+.contWrapper .contLayout .myPeoDetail .tableWrap th {
+  position: sticky;
+  top: 0;
 }
 .contWrapper .contLayout .projReqList {
   width: calc(100% - 50px);
@@ -264,7 +272,7 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   height: 5.9375rem;
   padding: 0 1.875rem;
-  border-bottom: 2px solid #ff0000;
+  border-bottom: 2px solid #f3f3f6;
   display: flex;
   justify-content: space-between;
 }
@@ -275,7 +283,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .header .tabType label {
   width: 12.125rem;
-  padding: 1.25rem 0;
 }
 .header .tabType label:nth-child(2) {
   border-radius: 0.375rem 0 0 0.375rem;
@@ -426,6 +433,7 @@ table th {
   color: #b7b7c4;
   font-weight: 500;
   padding: 1rem 0;
+  border-top: none;
   background: #f2f2f7;
 }
 table td {
@@ -463,6 +471,7 @@ table .ellipsis {
 
 .tabContWrap .tabCont {
   display: none;
+  position: relative;
 }
 .tabContWrap .tabCont.is-active {
   display: block;
@@ -481,6 +490,12 @@ button,
   border-radius: 0.375rem;
   background-color: #0460d2;
   cursor: pointer;
+}
+button.white,
+.button.white {
+  color: #29292c;
+  border: 1px solid #828286;
+  background-color: #fff;
 }
 button.fullSize,
 .button.fullSize {
@@ -512,6 +527,14 @@ button.download,
   background-color: transparent;
   border: 1px solid #e6e6eb;
 }
+button.delete,
+.button.delete {
+  width: 5.25rem;
+  height: 2rem;
+  color: #29292c;
+  background-color: transparent;
+  border: 1px solid #e6e6eb;
+}
 
 .button {
   display: inline-block;
@@ -521,7 +544,8 @@ button.download,
   line-height: 3.4375rem;
 }
 .button.midSize {
-  line-height: 2.5rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
 }
 .button.round {
   width: 5.125rem;
@@ -634,19 +658,15 @@ textarea:focus {
 
 /* 체크박스 */
 input[type=checkbox] {
+  display: none;
   position: relative;
-  /* 북마크 */
-  /* 토글스위치 - ****색상, 사이즈 재확인하기 */
   /*  */
 }
-input[type=checkbox].chkCustom {
-  display: none;
-}
-input[type=checkbox].chkCustom + label {
+input[type=checkbox] + label {
   display: inline-block;
   position: relative;
 }
-input[type=checkbox].chkCustom + label::before {
+input[type=checkbox] + label::before {
   content: "";
   display: inline-block;
   width: 1.25rem;
@@ -655,10 +675,10 @@ input[type=checkbox].chkCustom + label::before {
   background-position: 0px 0px;
   vertical-align: sub;
 }
-input[type=checkbox].chkCustom:checked + label::before {
+input[type=checkbox]:checked + label::before {
   background-position: -20px 0;
 }
-input[type=checkbox].chkCustom.hasTxt + label::before {
+input[type=checkbox].hasTxt + label::before {
   margin-right: 0.375rem;
 }
 input[type=checkbox].bMark {
@@ -666,21 +686,29 @@ input[type=checkbox].bMark {
 }
 input[type=checkbox].bMark + label {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  background: red;
-  vertical-align: middle;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(../img/IcoGroup.png);
+  background-position: 0px -20px;
+  vertical-align: sub;
+}
+input[type=checkbox].bMark + label::before {
+  display: none;
 }
 input[type=checkbox].bMark:checked + label {
-  background: blue;
+  background-position: -20px -21px;
 }
 input[type=checkbox].chkSwitch {
+  display: inline-block;
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 38px;
   height: 21px;
   border: 1px solid #828286;
   border-radius: 11px;
+}
+input[type=checkbox].chkSwitch + label::before {
+  display: none;
 }
 input[type=checkbox].chkSwitch::after {
   content: "";
@@ -703,8 +731,8 @@ input[type=checkbox].chkSwitch:checked::after {
   transform: translateX(17px);
 }
 input[type=checkbox].chkSwitch:checked:disabled {
-  background: #999;
-  border: 1px solid #999;
+  background: #878791;
+  border: 1px solid #878791;
   opacity: 0.2;
 }
 input[type=checkbox].chkSwitch:disabled {
@@ -807,12 +835,32 @@ select + input[type=text] {
   position: relative;
 }
 .hasTooltip .tooltip {
-  display: none;
+  visibility: hidden;
+  display: block;
   position: absolute;
-  background: red;
+  width: 6.25rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 0.25rem;
+  background: #58585e;
+}
+.hasTooltip .tooltip::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border: solid transparent;
+  border-color: transparent;
+  border-top-color: #58585e;
+  border-width: 0.375rem;
+  pointer-events: none;
 }
 .hasTooltip:hover .tooltip {
-  display: block;
+  visibility: visible;
 }
 
 /* GNB 아이콘 */
@@ -875,17 +923,56 @@ select + input[type=text] {
   width: 1.125rem;
   height: 1.125rem;
   background-image: url(../img/icoGroup.png);
-  background-position: -45px -4px;
+  background-position: -40px 0;
 }
 
 .usableMan {
-  padding: 2.5rem;
-  font-size: 0.875rem;
+  padding: 1.875rem;
+  padding-bottom: 0;
+}
+.usableMan .peoListTop {
+  padding: 0 0.625rem;
+}
+.usableMan .peoListTop label {
+  margin-right: 1rem;
+}
+.usableMan .peoListTop button {
+  float: right;
+  margin-top: -5px;
+}
+.usableMan .peoList {
+  overflow-y: auto;
+  width: 100%;
+  height: calc(100vh - 230px);
+  margin-top: 1rem;
+  padding: 0.625rem;
+  padding-bottom: 6.25rem;
+}
+.usableMan .peoList::-webkit-scrollbar {
+  width: 0;
+}
+
+.peoListBottom {
+  width: 100%;
+  padding: 1.25rem 2.5rem;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+.peoListBottom .prefix {
+  flex: 1 1 0;
+}
+.peoListBottom .suffix {
+  flex: 2 1 0;
+}
+.peoListBottom .suffix {
+  margin-left: 0.625rem;
 }
 
 .memberWrap {
   padding: 1.25rem 0;
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 1px solid #f3f3f6;
 }
 .memberWrap > ul {
   display: flex;
@@ -903,15 +990,15 @@ select + input[type=text] {
 .memberWrap li li {
   display: inline-block;
   position: relative;
-  margin-right: 0.375rem;
+  margin-right: 1.125rem;
 }
 .memberWrap li li::after {
   content: "";
   width: 1px;
-  height: 1rem;
-  background: #828286;
+  height: 0.9375rem;
+  background: #878791;
   position: absolute;
-  right: -7px;
+  right: -10px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -923,29 +1010,32 @@ select + input[type=text] {
 }
 .memberWrap .memProfile {
   color: #009ce0;
+  font-size: 0.75rem;
   line-height: 0.875rem;
 }
 .memberWrap .memProfile img {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 0.75rem;
-  margin-bottom: rem 5;
+  margin-bottom: 0.3125rem;
 }
 .memberWrap .memInfo {
-  border-left: 1px solid #ff0000;
-  border-right: 1px solid #ff0000;
+  width: 17.0625rem;
+  border-left: 1px solid #f3f3f6;
+  border-right: 1px solid #f3f3f6;
 }
 .memberWrap .memInfo .memPersonal {
   font-weight: bold;
 }
-.memberWrap .memInfo .memPersonal .memName::after {
-  background: #29292c;
-}
 .memberWrap .memInfo .memData {
   margin-top: 0.75rem;
+  color: #878791;
 }
 .memberWrap .memInfo .memData .memSkill li {
-  margin-right: 0rem;
+  margin-right: 0.25rem;
+}
+.memberWrap .memInfo .memData .memSkill li:last-child {
+  margin-right: 0;
 }
 .memberWrap .memInfo .memData .memSkill li::after {
   display: none;
@@ -954,15 +1044,36 @@ select + input[type=text] {
   color: #009ce0;
 }
 .memberWrap .memResume {
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.memberWrap .memResume .button {
+  width: 3.75rem;
+}
 .memberWrap .memSchedule {
+  width: 5.25rem;
   color: #009ce0;
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.memberWrap .memSchedule .tooltip {
+  right: -8px;
+  bottom: 5.625rem;
+}
+.memberWrap .memSchedule:first-child .tooltip {
+  right: -8px;
+  top: 5.625rem;
+  bottom: auto;
+}
+.memberWrap .memSchedule:first-child .tooltip::after {
+  top: auto;
+  bottom: 100%;
+  border-top-color: transparent;
+  border-bottom-color: #58585e;
 }
 
 h1 {
