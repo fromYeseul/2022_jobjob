@@ -1,65 +1,89 @@
-/* GNB 아이콘 */
+
 .ico{
     display: inline-block;
     vertical-align: middle;
-    //gnb 아이콘    
-    &.ctrlBtn{
-        background-position: 0px 0px;
-    }
-    &.home{
-        background-position: 30px 30px;
-    }
-    &.member{
-        background-position: 0px 0px;
-    }
-    &.project{
-        background-position: 30px 30px;
-    }
-    &.hompage{
-        background-position: 0px 0px;
-    }
-    &.event{
-        background-position: 30px 30px;
-    }
-    &.ask{
-        background-position: 0px 0px;
-    }
-    &.stats{
-        background-position: 30px 30px;
-    }
-    &.admin{
-        background-position: 0px 0px;
-    }
-    &.system{
-        background-position: 30px 30px;
-    }
-    &.commonCode{
-        background-position: 0px 0px;
-    }
-    //header    
-    &.info{        
-        background-position: 0px 0px;
-    } 
-    &.setting{        
-        background-position: 30px 30px;
-    }
+    background-image: url(../img/icoGroup.png);
     //공통
     &.search{
         width: rem(30);
         height: rem(30);
-        background-image: url(../img/iconImg.jpg);
         background-position: 0px 0px;
     }
     &.showPw{
         width: rem(30);
         height: rem(30);
-        background-image: url(../img/iconImg.jpg);
         background-position: 30px 30px;
     }    
     &.download{        
         width: rem(18);
         height: rem(18);
-        background-image: url(../img/icoGroup.png);
         background-position: -40px 0;
+    }
+    //페이징
+    &.paging{
+        width: rem(12);
+        height: rem(20);
+        background-position: 0 -40px;
+        &.right{
+            background-position: -20px -40px;
+        }
+    }
+}
+/* HEADER 아이콘 */
+.header{
+    .ico{
+        width: rem(24);
+        height: rem(24);
+        background-image: url(../img/icoGnb.png);
+        &.info{        
+            background-position: 0px 0px;
+        } 
+        &.setting{        
+            background-position: 30px 30px;
+        }
+    }
+}
+
+/* GNB 아이콘 */
+.gnb{
+    .ico{        
+        width: rem(24);
+        height: rem(24);
+        background-image: url(../img/icoGnb.png);
+        &.ctrlBtn{
+            background-position: 0px 0px;
+        }
+        &.home{
+            background-position: -30px 0;
+        }
+        &.member{
+            background-position: -30px -30px;
+        }
+        &.project{
+            background-position: -30px -60px;
+        }
+        &.homepage{
+            background-position: -30px 0;
+        }
+        &.event{
+            background-position: -30px 0;
+        }
+        &.ask{
+            background-position: -30px 0;
+        }
+        &.stats{
+            background-position: -30px 0;
+        }
+        &.admin{
+            width: rem(28);
+            height: rem(28);
+            background-position: -30px -90px;
+        }
+        &.system{
+            background-position: -30px 0;
+        }
+        &.commonCode{
+            background-position: -30px -120px;
+        }
     }
 }

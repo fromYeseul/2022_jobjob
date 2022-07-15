@@ -36,4 +36,19 @@ table{
     .ellipsis{
         @include ellipsis;
     }
+    .memo{
+        padding: rem(16);
+        position: relative;
+        text-align: left;
+        &::before{
+            content:'';
+            width: 1px;
+            height: rem(40);
+            background: $tableBorder;
+            position: absolute;
+            top:50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
 }

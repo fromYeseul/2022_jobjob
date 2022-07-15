@@ -56,35 +56,35 @@ tabMenu();
 
 
 /* GNB - nav */
-// function gnbNav(){
-//     let layoutWrapper = document.querySelector('.layoutWrapper');
-//     let navCtrlBtn = document.querySelector('.navCtrlBtn');
-//     let navWrapper = document.querySelector('.navWrapper');
+function gnbNav(){
+    let layoutWrapper = document.querySelector('.layoutWrapper');
+    let navCtrlBtn = document.querySelector('.navCtrlBtn');
+    let navWrapper = document.querySelector('.navWrapper');
 
-//     navCtrlBtn.addEventListener('click', function(){
-//         layoutWrapper.classList.toggle('is-active');
-//     });
+    navCtrlBtn.addEventListener('click', function(){
+        layoutWrapper.classList.toggle('is-active');
+    });
 
-//     navWrapper.addEventListener('mouseenter', function(){
-//         layoutWrapper.classList.add('is-hover');
-//     });
-//     navWrapper.addEventListener('mouseleave', function(){
-//         layoutWrapper.classList.remove('is-hover');
-//     });
-// }
-// gnbNav();
+    navWrapper.addEventListener('mouseenter', function(){
+        layoutWrapper.classList.add('is-hover');
+    });
+    navWrapper.addEventListener('mouseleave', function(){
+        layoutWrapper.classList.remove('is-hover');
+    });
+}
+gnbNav();
 
 
 /* MYPROJECT 레이아웃 */
-// function contLayout(){
-//     let contLayout = document.querySelector('.contLayout');
-//     let myProjDetail = document.querySelector('.myProjDetail');
+function contLayout(){
+    let contLayout = document.querySelector('.contLayout');
+    let myProjDetail = document.querySelector('.myProjDetail');
 
-//     myProjDetail.addEventListener('click', function(){
-//         contLayout.classList.add('is-active');
-//     });
-// }
-// contLayout();
+    myProjDetail.addEventListener('click', function(){
+        contLayout.classList.add('is-active');
+    });
+}
+contLayout();
 
 
 /* 우측패널 */

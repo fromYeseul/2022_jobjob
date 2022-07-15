@@ -21,21 +21,6 @@
     }
 }
 
-.peoListBottom{
-    width: 100%;
-    padding: rem(20) rem(40);
-    background: $white;
-    // /box-shadow: -5px -5px 10px rgba(0,0,0,0.05);
-    position: absolute;
-    bottom: 0;
-    @include flex_1_2;
-    .prefix{
-
-    }
-    .suffix{
-        margin-left: rem(10);
-    }
-}
 
 
 .memberWrap{
@@ -131,21 +116,25 @@
         font-size: rem(14);
         @include heightArray;
         .tooltip{        
-            right:-8px;
+            right:rem(2);
             bottom:rem(90);
         }
-        &:first-child{
-            .tooltip{        
-                right:-8px;
-                top:rem(90);
-                bottom: auto;
-                &::after{
-                    top: auto;
-                    bottom: 100%;
-                    border-top-color: transparent;
-                    border-bottom-color: $tooltipGray;
-                }
+    }
+    &:first-child{
+        .tooltip{       
+            top:rem(90);
+            bottom: auto;
+            &::after{
+                top: auto;
+                bottom: 100%;
+                border-top-color: transparent;
+                border-bottom-color: $tooltipGray;
             }
+        }
+    }
+    &.hasTooltip{
+        .memSchedule{
+            color: $disable;
         }
     }
 }

@@ -2,7 +2,7 @@
 //메인컬러
 $mainColor : #0460d2;
 $bgColor : #f2f2f7;
-$layoutColor : #f3f3f6;
+$layoutColor : #e6e6eb;
 //$layoutColor : #ff0000;
 
 //상태컬러
@@ -21,11 +21,11 @@ $gray : #828286;
 $white : #fff;
 
 
-$inputGray : #e6e6eb;
+$inputGray : $layoutColor;
 $placeholder : $disable;
 $placeGray : #a5a5ac;
 $tableBgGray : $bgColor;
-$tableBorder : #e6e6eb;
+$tableBorder : $inputGray;
 $tableGray : $placeholder;
 $tabGray : #e7e7ec;
 $memLayout : $layoutColor;
@@ -36,6 +36,30 @@ $systemGray : $placeholder;
 $tooltipGray : #58585e;
 
 $footerGray : $titleGray;
+
+
+//상태별 색상
+.sOrder{
+    color: $highlight;
+}
+.sCancel{
+    color: $cancel;
+}
+.sReject{
+    color: $delay;
+}
+
+//기한별 색상
+.dNear{
+    color: $delay;
+}
+.dOngoing{
+    color: $highlight;
+}
+.dNone{
+    color: $onGoing;
+}
+
 
 //에러텍스트
 .error{

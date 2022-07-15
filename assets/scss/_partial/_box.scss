@@ -1,0 +1,43 @@
+.boxListWrap{    
+    height: calc(100vh - 195px);    
+    @include scroll_0;
+}
+
+.boxList{
+    width: 100%;
+    height: rem(134);
+    margin-bottom: rem(8);
+    padding: rem(16);
+    background: $white;
+    border-radius: rem(5);
+    box-shadow: 3px 3px 5px 0 rgba(41, 41, 44, 0.07);
+    &.is-active{
+        border:1px solid $mainColor;
+    }
+    .head{
+        @include sideArray;
+    }
+    .deadline{
+        font-weight: 500;
+        .point{
+            display: inline-block;
+            width: rem(44);
+            line-height: rem(24);
+            color: $white;
+            font-size: rem(14);
+            text-align: center;
+            background: $delay;
+            border-radius: rem(5);
+        }
+    }
+    .title{
+        width: 80%;
+        height: rem(48);
+        margin-top: rem(10);
+        @include ellipsis-double;
+    }
+    .bottom{
+        text-align: right;
+        font-size: rem(14);
+    }
+}

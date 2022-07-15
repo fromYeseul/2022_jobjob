@@ -6,3 +6,22 @@
     text-align: center;
     margin-top: rem(160);
 }
+
+
+.listBottom{
+    width: 100%;
+    padding: rem(20) rem(40);
+    background: $white;
+    //box-shadow: -5px -5px 10px rgba(0,0,0,0.02);
+    position: absolute;
+    bottom: 0;
+    @include flex_1_2;
+    .suffix{
+        margin-left: rem(10);
+    }
+    &.pagingType{
+        justify-content: center;
+        width: calc(100% - 60px);
+        background: transparent;
+    }
+}

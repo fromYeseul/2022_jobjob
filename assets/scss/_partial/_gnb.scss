@@ -1,8 +1,99 @@
-/* GNB 아이콘 */
-.gnb{
-    .ico{        
-        width: 30px;
-        height: 30px;
-        background-image: url(../img/iconImg.jpg);
+
+.gnbWrapper{
+    width: rem(70);
+    background: $white; 
+    border-right: 1px solid $layoutColor;
+    transition: all .3s ease;
+    position: fixed;
+    left: 0;
+    z-index: 100;  
+    .gnb{
+        padding: rem(20) rem(10);
+    }  
+    .navCtrlBtn{
+        width: rem(50);
+        height: rem(50);
+        border-radius: rem(6);
+        padding: rem(12);
+        background: $bgColor;
+        cursor: pointer;
+        position: relative;
+        &::before{
+            content:'';
+            width: 0;
+            height: rem(50);
+            background:  $bgColor;
+            position: absolute;
+            left: -10px;
+            top: 0;
+            transition: all .01s ease;
+        }
+    }    
+    .navWrapper{
+        height: calc(100vh - 105px);
+        margin-top: rem(35);
+        overflow-y: auto;
+        li{
+            padding: rem(13);
+        }
+        .menuTxt{
+            display: none;
+            margin-left: rem(14);
+            vertical-align: middle;
+        }
     }
+} 
+
+
+// GNB 클릭, 마우스오버 이벤트
+.layoutWrapper{
+    &.is-active{
+        .gnbWrapper{
+            width: 205px;
+        }
+        .navCtrlBtn{
+            width: 100%;
+            text-align: right;
+            position: relative;
+            &::before{
+                width: rem(15);
+            }
+            .ctrlBtn{
+                width: rem(14);
+                height: rem(17);
+                background-position: 0px -30px;
+            }
+        }    
+        .navWrapper{
+            .menuTxt{
+                display: inline-block;
+            }
+        }
+        .contWrapper{
+            width: calc(100% - 205px);
+            left: 205px;
+        }   
+    }   
+    &.is-hover{
+        .gnbWrapper{
+            width: 205px;
+        }
+        .navCtrlBtn{
+            width: 100%;
+            text-align: right;
+            &::before{
+                width: rem(15);
+            }
+            .ctrlBtn{
+                width: rem(14);
+                height: rem(17);
+                background-position: 0px -30px;
+            }
+        }    
+        .navWrapper{
+            .menuTxt{
+                display: inline-block;
+            }
+        }
+    }   
 }
