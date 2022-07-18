@@ -1,21 +1,24 @@
 .boxListWrap{    
-    height: calc(100vh - 195px);    
     @include scroll_0;
 }
 
+
+
+.boxWrap,
 .boxList{
-    width: 100%;
-    height: rem(134);
-    margin-bottom: rem(8);
-    padding: rem(16);
     background: $white;
     border-radius: rem(5);
-    box-shadow: 3px 3px 5px 0 rgba(41, 41, 44, 0.07);
+    border:1px solid $layoutColor;
     &.is-active{
         border:1px solid $mainColor;
     }
-    .head{
-        @include sideArray;
+    .key{
+        color: $subInfo;
+        font-weight: rem(14);
+        margin-bottom: rem(8);
+    }
+    .origin{
+        color: $subInfo;
     }
     .deadline{
         font-weight: 500;
@@ -31,13 +34,39 @@
         }
     }
     .title{
+        @include ellipsis;
+        color: $black;
+        font-weight: rem(20);
+        font-weight: 700;
+    }
+    .bottom{
+        @include sideArray;
+        align-items: center;
+        .button{
+            font-weight: 700;
+        }  
+    }
+}
+
+
+.boxList{
+    background: $white;
+    border-radius: rem(5);
+    border:0;
+    box-shadow: 3px 3px 5px 0 rgba(41, 41, 44, 0.07);
+    .head{
+        @include sideArray;
+    }
+    .title{
         width: 80%;
         height: rem(48);
+        font-weight: 400;
         margin-top: rem(10);
         @include ellipsis-double;
     }
     .bottom{
+        display: inherit;
         text-align: right;
         font-size: rem(14);
-    }
+    }   
 }

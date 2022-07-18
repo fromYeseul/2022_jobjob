@@ -2,7 +2,7 @@ input[type=text],
 input[type=password],
 textarea{
     width: 100%;
-    padding: 0 rem(16);
+    //padding: 0 rem(16);
     font-size: rem(14);
     letter-spacing: -0.5px;
     border-radius: rem(4);
@@ -28,7 +28,9 @@ textarea{
     }
     button.ico{
         position: absolute;
-        right:0;
+        top: 50%;
+        right:rem(14);
+        transform: translateY(-50%);
         ~ input{
             padding-right: 30px;
         }
@@ -45,9 +47,22 @@ textarea{
     }
     input{
         width: auto;    //임시
+        height: rem(50);
+        padding-left: rem(14);
+        & + button{
+            margin-left: rem(4);
+        }
     }
     button{
-        margin-left: rem(4);
+        & + input{
+            margin-left: rem(4);
+        }
+    }
+    .inputIco{
+        display: inline-block;
+        input{
+            width: 100%;
+        }
     }
 }
 

@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .error {
   display: none;
-  color: #ff0000;
+  color: #ff1236;
 }
 .error.is-active {
   display: block;
@@ -135,17 +135,22 @@ h1, h2, h3, h4, h5, h6, p {
   clip: rect(0, 0, 0, 0);
 }
 
+.flex {
+  display: flex;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #ddd;
+  border-radius: 5px;
+  background-color: #f2f2f7;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 6px;
-  background-color: #878787;
+  background-color: #b7b7c4;
   background-clip: padding-box;
   border: 2px solid transparent;
 }
@@ -190,17 +195,19 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .contWrapper .contLayout .myProjList {
   width: 30%;
+  min-width: 19.1875rem;
   padding: 1.875rem;
   background: #f2f2f7;
   position: relative;
 }
 .contWrapper .contLayout .myProjDetail {
   width: 100%;
+  padding: 1.875rem 1.25rem;
 }
 .contWrapper .contLayout .myProJob {
-  display: none;
   width: 40%;
-  background: #f2f2f7;
+  padding: 1.875rem 0.625rem;
+  padding-left: 0;
 }
 .contWrapper .contLayout .myPeoList {
   min-width: 38.125rem;
@@ -261,13 +268,14 @@ h1, h2, h3, h4, h5, h6, p {
   z-index: 100;
 }
 .gnbWrapper .gnb {
-  padding: 1.25rem 0.625rem;
+  padding: 1.25rem 0;
 }
 .gnbWrapper .navCtrlBtn {
   width: 3.125rem;
   height: 3.125rem;
-  border-radius: 0.375rem;
   padding: 0.75rem;
+  margin-left: 0.625rem;
+  border-radius: 0.375rem;
   background: #f2f2f7;
   cursor: pointer;
   position: relative;
@@ -285,6 +293,7 @@ h1, h2, h3, h4, h5, h6, p {
 .gnbWrapper .navWrapper {
   height: calc(100vh - 105px);
   margin-top: 2.1875rem;
+  margin-left: 0.625rem;
   overflow-y: auto;
 }
 .gnbWrapper .navWrapper li {
@@ -300,7 +309,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 205px;
 }
 .layoutWrapper.is-active .navCtrlBtn {
-  width: 100%;
+  width: calc(100% - 24px);
   text-align: right;
   position: relative;
 }
@@ -323,7 +332,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 205px;
 }
 .layoutWrapper.is-hover .navCtrlBtn {
-  width: 100%;
+  width: calc(100% - 24px);
   text-align: right;
 }
 .layoutWrapper.is-hover .navCtrlBtn::before {
@@ -495,8 +504,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .group ul li input {
   width: 25rem;
-  height: 3.125rem;
-  padding-left: 0.875rem;
 }
 
 .tableWrap {
@@ -576,7 +583,7 @@ table .memo::before {
   justify-content: space-between;
   padding: 0 3.125rem;
   padding-top: 1.875rem;
-  border-bottom: 1px solid #e7e7ec;
+  border-bottom: 1px solid #e6e6eb;
 }
 .tabBtnWrap li {
   display: inline-block;
@@ -584,12 +591,27 @@ table .memo::before {
 }
 .tabBtnWrap li a {
   display: inline-block;
-  color: #828286;
+  color: #b7b7c4;
+  font-weight: 700;
   padding-bottom: 0.4375rem;
 }
 .tabBtnWrap li a.is-active {
   color: #29292c;
   border-bottom: 3px solid #29292c;
+}
+.tabBtnWrap.wideType {
+  display: flex;
+  padding: 0 2.5rem;
+  padding-top: 1.25rem;
+}
+.tabBtnWrap.wideType .prefix {
+  flex: 1 1 0;
+}
+.tabBtnWrap.wideType .suffix {
+  flex: 1 1 0;
+}
+.tabBtnWrap.wideType a {
+  display: block;
 }
 .tabBtnWrap.btnType {
   display: block;
@@ -646,6 +668,10 @@ button,
   background-color: #0460d2;
   cursor: pointer;
 }
+button.ico,
+.button.ico {
+  background-color: inherit;
+}
 button.white,
 .button.white {
   color: #29292c;
@@ -674,10 +700,9 @@ button.smSize,
   width: 4rem;
   height: 1.625rem;
 }
-button.download,
-.button.download {
-  width: 6.125rem;
-  height: 2.25rem;
+button.white,
+.button.white {
+  padding: 0.3125rem 0.4375rem;
   color: #29292c;
   background-color: transparent;
   border: 1px solid #e6e6eb;
@@ -731,13 +756,14 @@ button.delete,
   color: #ff1236;
   border-color: #ff1236;
 }
-.button.system {
-  width: 2.75rem;
+.button.label {
+  min-width: 2.75rem;
   height: 1.5rem;
-  line-height: 1.25rem;
+  line-height: 1.375rem;
   color: #878791;
   font-size: 0.875rem;
   background: #f2f2f7;
+  border-radius: 1.25rem;
   border-color: #f2f2f7;
 }
 
@@ -745,7 +771,6 @@ input[type=text],
 input[type=password],
 textarea {
   width: 100%;
-  padding: 0 1rem;
   font-size: 0.875rem;
   letter-spacing: -0.5px;
   border-radius: 0.25rem;
@@ -776,7 +801,9 @@ textarea:focus {
 }
 .inputIco button.ico {
   position: absolute;
-  right: 0;
+  top: 50%;
+  right: 0.875rem;
+  transform: translateY(-50%);
 }
 .inputIco button.ico ~ input {
   padding-right: 30px;
@@ -791,9 +818,20 @@ textarea:focus {
 }
 .hasBtn input {
   width: auto;
+  height: 3.125rem;
+  padding-left: 0.875rem;
 }
-.hasBtn button {
+.hasBtn input + button {
   margin-left: 0.25rem;
+}
+.hasBtn button + input {
+  margin-left: 0.25rem;
+}
+.hasBtn .inputIco {
+  display: inline-block;
+}
+.hasBtn .inputIco input {
+  width: 100%;
 }
 
 /* 파일첨부 */
@@ -1020,23 +1058,28 @@ select + input[type=text] {
 
 .ico {
   display: inline-block;
+  width: 1.875rem;
+  height: 1.875rem;
   vertical-align: middle;
   background-image: url(../img/icoGroup.png);
 }
-.ico.search {
-  width: 1.875rem;
-  height: 1.875rem;
-  background-position: 0px 0px;
-}
 .ico.showPw {
-  width: 1.875rem;
-  height: 1.875rem;
   background-position: 30px 30px;
 }
 .ico.download {
   width: 1.125rem;
   height: 1.125rem;
   background-position: -40px 0;
+}
+.ico.filter {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  background-position: -60px 0;
+}
+.ico.search {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -80px 0px;
 }
 .ico.paging {
   width: 0.75rem;
@@ -1237,32 +1280,37 @@ select + input[type=text] {
 }
 
 .boxListWrap {
-  height: calc(100vh - 195px);
   overflow-y: auto;
 }
 .boxListWrap::-webkit-scrollbar {
   width: 0;
 }
 
+.boxWrap,
 .boxList {
-  width: 100%;
-  height: 8.375rem;
-  margin-bottom: 0.5rem;
-  padding: 1rem;
   background: #fff;
   border-radius: 0.3125rem;
-  box-shadow: 3px 3px 5px 0 rgba(41, 41, 44, 0.07);
+  border: 1px solid #e6e6eb;
 }
+.boxWrap.is-active,
 .boxList.is-active {
   border: 1px solid #0460d2;
 }
-.boxList .head {
-  display: flex;
-  justify-content: space-between;
+.boxWrap .key,
+.boxList .key {
+  color: #878791;
+  font-weight: 0.875rem;
+  margin-bottom: 0.5rem;
 }
+.boxWrap .origin,
+.boxList .origin {
+  color: #878791;
+}
+.boxWrap .deadline,
 .boxList .deadline {
   font-weight: 500;
 }
+.boxWrap .deadline .point,
 .boxList .deadline .point {
   display: inline-block;
   width: 2.75rem;
@@ -1273,19 +1321,56 @@ select + input[type=text] {
   background: #ff1236;
   border-radius: 0.3125rem;
 }
+.boxWrap .title,
+.boxList .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
+  color: #0460d2;
+  cursor: pointer;
+  color: #29292c;
+  font-weight: 1.25rem;
+  font-weight: 700;
+}
+.boxWrap .bottom,
+.boxList .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.boxWrap .bottom .button,
+.boxList .bottom .button {
+  font-weight: 700;
+}
+
+.boxList {
+  background: #fff;
+  border-radius: 0.3125rem;
+  border: 0;
+  box-shadow: 3px 3px 5px 0 rgba(41, 41, 44, 0.07);
+}
+.boxList .head {
+  display: flex;
+  justify-content: space-between;
+}
 .boxList .title {
   width: 80%;
   height: 3rem;
+  font-weight: 400;
   margin-top: 0.625rem;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: inherit;
   word-wrap: break-word;
   -webkit-line-clamp: 2;
   text-align: left;
   -webkit-box-orient: vertical;
 }
 .boxList .bottom {
+  display: inherit;
   text-align: right;
   font-size: 0.875rem;
 }
@@ -1343,6 +1428,101 @@ h1 {
 }
 .subLogin li:last-child::after {
   display: none;
+}
+
+.myProjList .boxListWrap {
+  height: calc(100vh - 195px);
+}
+.myProjList .boxList {
+  height: 8.375rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.myProjDetail .boxWrap {
+  padding: 2.5rem;
+}
+.myProjDetail .boxWrap .title {
+  margin-top: 0.25rem;
+}
+.myProjDetail .flex {
+  flex-wrap: wrap;
+  margin-top: 1.875rem;
+}
+.myProjDetail .flex .boxList {
+  width: 20%;
+  min-width: 6.625rem;
+  height: 7.625rem;
+  padding: 1.875rem 0.8125rem;
+  box-shadow: none;
+  border: 1px solid #e6e6eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.myProjDetail .flex .boxList + .bookList {
+  margin-left: -1px;
+}
+.myProjDetail .bottom {
+  margin-top: 2.8125rem;
+}
+.myProjDetail .bottom + .button {
+  margin-left: 0.5rem;
+}
+
+.myProJob {
+  width: 30%;
+  min-width: 38.5rem;
+}
+.myProJob .partList {
+  display: flex;
+  padding: 1.875rem 2.5rem;
+  padding-left: 0;
+  border-bottom: 1px solid #e6e6eb;
+}
+.myProJob .jobPart {
+  width: calc(100% - 336px);
+  height: 10.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myProJob .partDetail {
+  width: 21rem;
+  height: 10.5rem;
+  padding: 1rem 1.625rem;
+  border: 1px solid #e6e6eb;
+}
+.myProJob .partDetail ul {
+  height: 100%;
+  overflow-y: auto;
+}
+.myProJob .partDetail ul li {
+  width: 90%;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.3125rem 0.875rem;
+  border-bottom: 1px solid #e6e6eb;
+}
+.myProJob .partDetail ul li.is-active {
+  border-radius: 0.3125rem;
+  border: 1px solid #0460d2;
+}
+.myProJob .partDetail ul .label {
+  width: 1.625rem;
+  font-weight: 400;
+}
+.myProJob .partDetail ul .deadline {
+  font-weight: 400;
+}
+.myProJob .partDetail ul .memNum {
+  float: right;
+}
+.myProJob .tabContWrap {
+  padding: 1.25rem 2.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

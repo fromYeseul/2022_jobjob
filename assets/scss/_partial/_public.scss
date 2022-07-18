@@ -6,7 +6,7 @@ $layoutColor : #e6e6eb;
 //$layoutColor : #ff0000;
 
 //상태컬러
-$error : #ff0000;
+$error : #ff1236;
 $disable : #878791;
 $subInfo : $disable;
 
@@ -27,13 +27,14 @@ $placeGray : #a5a5ac;
 $tableBgGray : $bgColor;
 $tableBorder : $inputGray;
 $tableGray : $placeholder;
-$tabGray : #e7e7ec;
+$tabGray : $layoutColor;
 $memLayout : $layoutColor;
 
 $titleGray : $cancel;
 $groupGray : $placeholder;
 $systemGray : $placeholder;
 $tooltipGray : #58585e;
+$scrollThumb : $cancel;
 
 $footerGray : $titleGray;
 
@@ -85,16 +86,22 @@ $footerGray : $titleGray;
     clip: rect(0, 0, 0, 0);
 }
 
+//FLEX
+.flex{
+    display: flex;
+}
+
 //스크롤 커스텀
 ::-webkit-scrollbar {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background-color: #ddd;
+    border-radius: 5px;
+    background-color: $bgColor;
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 6px;
-    background-color: #878787;
+    background-color: $scrollThumb;
     //트랙사이 간격넣을 때
     background-clip: padding-box;
     border: 2px solid transparent;

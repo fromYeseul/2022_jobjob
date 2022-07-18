@@ -1,0 +1,96 @@
+.myProjList{
+    .boxListWrap{    
+        height: calc(100vh - 195px);  
+    }    
+    .boxList{
+        height: rem(134);
+        padding: rem(16);
+        margin-bottom: rem(8);
+    }
+}
+
+
+.myProjDetail{ 
+    .boxWrap{
+        padding: rem(40);
+        .title{
+            margin-top: rem(4);
+        }
+    }
+    .flex{
+        flex-wrap:wrap;
+        margin-top: rem(30);
+        .boxList{
+            width: 20%;
+            min-width: rem(106);
+            height: rem(122);
+            padding: rem(30) rem(13);
+            box-shadow: none;
+            border:1px solid $layoutColor;
+            @include heightArray;
+            text-align: center;
+            & + .bookList{
+                margin-left: -1px;
+            }
+        }
+    }
+    .bottom{
+        margin-top: rem(45);
+        & + .button{
+            margin-left: rem(8);
+        }
+    }
+}
+
+
+.myProJob{
+    width: 30%;
+    min-width: rem(616);
+    .partList{
+        display: flex;
+        padding: rem(30) rem(40);
+        padding-left: 0;
+        border-bottom:1px solid $layoutColor;
+    }
+    .jobPart{
+        width: calc(100% - 336px);
+        height: rem(168);
+        font-size: rem(24);
+        font-weight: 700;
+        @include heightArray;
+    }
+    .partDetail{
+        width: rem(336);
+        height: rem(168);
+        padding: rem(16) rem(26);
+        border: 1px solid $layoutColor;
+        ul{
+            height: 100%;
+            overflow-y: auto;
+            li{
+                width: 90%;
+                font-size: rem(14);
+                font-weight: 500;
+                padding: rem(5) rem(14);
+                border-bottom:1px solid $layoutColor;
+                &.is-active{
+                    border-radius: rem(5);
+                    border:1px solid $mainColor;
+                }
+            }
+            .label{
+                width: rem(26);
+                font-weight: 400;
+            }
+            .deadline{
+                font-weight: 400;
+            }
+            .memNum{
+                float: right;
+            }
+        }
+    }
+    .tabContWrap{
+        padding: rem(20) rem(40);
+    }
+}

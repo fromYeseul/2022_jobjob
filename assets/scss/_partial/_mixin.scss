@@ -18,6 +18,15 @@
     .suffix{
         flex: 2 1 0;
     }
+}
+@mixin flex_1_1{
+    display: flex;
+    .prefix{
+        flex: 1 1 0;
+    }
+    .suffix{
+        flex: 1 1 0;
+    }
   }
 
 
@@ -38,6 +47,7 @@
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: inherit;
     word-wrap:break-word;
     -webkit-line-clamp: 2;
     text-align: left;

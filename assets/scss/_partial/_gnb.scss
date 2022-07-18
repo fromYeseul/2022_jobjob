@@ -8,13 +8,14 @@
     left: 0;
     z-index: 100;  
     .gnb{
-        padding: rem(20) rem(10);
+        padding: rem(20) 0;
     }  
     .navCtrlBtn{
         width: rem(50);
         height: rem(50);
-        border-radius: rem(6);
         padding: rem(12);
+        margin-left: rem(10);
+        border-radius: rem(6);
         background: $bgColor;
         cursor: pointer;
         position: relative;
@@ -32,6 +33,7 @@
     .navWrapper{
         height: calc(100vh - 105px);
         margin-top: rem(35);
+        margin-left: rem(10);
         overflow-y: auto;
         li{
             padding: rem(13);
@@ -52,7 +54,7 @@
             width: 205px;
         }
         .navCtrlBtn{
-            width: 100%;
+            width: calc(100% - 24px);
             text-align: right;
             position: relative;
             &::before{
@@ -79,7 +81,7 @@
             width: 205px;
         }
         .navCtrlBtn{
-            width: 100%;
+            width: calc(100% - 24px);
             text-align: right;
             &::before{
                 width: rem(15);
