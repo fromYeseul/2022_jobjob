@@ -24,21 +24,33 @@
     .prefix{
         flex: 1 1 0;
     }
+    .center{
+        flex: 1 1 0;
+    }
     .suffix{
         flex: 1 1 0;
     }
   }
-
+  @mixin flex_3_1{
+    display: flex;
+    .prefix{
+        flex: 3 1 0;
+    }
+    .suffix{
+        flex: 1 1 0;
+    }
+}
 
 
 
 @mixin ellipsis{
+    width: 95%;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
     white-space:nowrap;
     text-align: left;
-    color: $mainColor;
+    //color: $mainColor;
     cursor:pointer;
     //text-decoration: underline;
 }

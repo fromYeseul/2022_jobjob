@@ -6,12 +6,19 @@
     vertical-align: middle;
     background-image: url(../img/icoGroup.png);
     //공통
+    &.search{
+        width: rem(18);
+        height: rem(18);
+        background-position: -80px 0px;
+    }
     &.showPw{
-        background-position: 30px 30px;
+        width: rem(18);
+        height: rem(18);
+        background-position: -80px 0px;
     }    
     &.download{        
         width: rem(18);
-        height: rem(18);
+        height: rem(22);
         background-position: -40px 0;
     }
     &.filter{
@@ -19,18 +26,19 @@
         height: rem(17);
         background-position: -60px 0;
     }
-    &.search{
-        width: rem(18);
-        height: rem(18);
-        background-position: -80px 0px;
-    }
     //페이징
     &.paging{
         width: rem(12);
         height: rem(20);
-        background-position: 0 -40px;
+        background-position: 0 -60px;
         &.right{
-            background-position: -20px -40px;
+            background-position: 0 -80px;
+        }
+        &.is-active{
+            background-position: -20px -60px;
+            &.right{
+                background-position: -20px -80px;
+            }
         }
     }
 }

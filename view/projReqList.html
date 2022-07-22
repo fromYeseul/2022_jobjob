@@ -12,6 +12,27 @@
 <body>
 
     <div class="layoutWrapper">
+        <div class="headerWrapper">
+            <div class="header">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo.png" alt="">
+                </a>
+                <div class="adminManage">
+                    <a href="#" class="is-active">My Project</a>
+                    <a href="#">My People</a>
+                </div>
+                <div class="userInfo">
+                    <ul>
+                        <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                        <li>
+                            <a href="#">내정보 수정</a>
+                            <a href="#" class="logState">로그아웃</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div class="gnbWrapper">
             <div class="gnb">
                 <div class="navCtrlBtn">
@@ -19,7 +40,7 @@
                 </div>
                 <nav class="navWrapper">
                     <ul>
-                        <li><a href="#"><i class="ico home"></i><span class="menuTxt">홈</span><i></i></a></li>
+                        <li class="is-active"><a href="#"><i class="ico home"></i><span class="menuTxt">홈</span><i></i></a></li>
                         <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span><i></i></a></li>
                         <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span><i></i></a></li>
                         <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span><i></i></a></li>
@@ -32,26 +53,9 @@
                     </ul>
                 </nav>
             </div>
-        </div> 
+        </div>   
         
         <div class="contWrapper">
-            <div class="header">
-                <div class="adminManage">
-                    <a href="#" class="button laSize">+요청등록</a>
-                </div>
-                <div class="userInfo">
-                    <ul>
-                        <li><a href="#"><i class="ico info"></i></a></li>
-                        <li><a href="#"><i class="ico setting"></i></a></li>
-                        <li>
-                            <a href="#">
-                                <img src="" alt="사용자이미지">
-                                <span>홍길동</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
             <div class="contLayout">
                 <!-- <div class="myProjList">
                     myProjList
@@ -65,17 +69,17 @@
                         <li>myProjDetail</li>
                     </ul>
                 </div>
-                <div class="myProJob">
-                    myProJob
+                <div class="myProjJob">
+                    myProjJob
                 </div> -->
 
                 <div class="projReqList">
-                    <h1>프로젝트 의뢰목록</h1>
+                    <h2>프로젝트 의뢰목록</h2>
 
-                    <div class="group">
+                    <div class="condition">
                         <ul>
                             <li>
-                                <p class="groupTit">의뢰목록</p>
+                                <p class="condiTit">의뢰목록</p>
                                 <div class="tabType">
                                     <input type="radio" id="allReq" name="reqCharge" value="allReq" checked>
                                     <label for="allReq">모든 의뢰</label>
@@ -84,7 +88,7 @@
                                 </div>
                             </li>
                             <li>
-                                <label class="groupTit" for="reqState">의뢰상태</label>
+                                <label class="condiTit" for="reqState">의뢰상태</label>
                                 <select name="reqState" id="reqState">
                                     <option value="0">전체</option>
                                     <option value="1">접수</option>
@@ -95,7 +99,7 @@
                                 </select>
                             </li>
                             <li>
-                                <label class="groupTit" for="sourcingM">소싱담당</label>
+                                <label class="condiTit" for="sourcingM">소싱담당</label>
                                 <select name="sourcingM" id="sourcingM">
                                     <option value="0">전체</option>
                                     <option value="1">접수</option>
@@ -106,7 +110,7 @@
                                 </select>
                             </li>
                             <li class="hasBtn">
-                                <label class="groupTit" for="project2">프로젝트</label>
+                                <label class="condiTit" for="project2">프로젝트</label>
                                 <input type="text" id="project2" maxlength="20" placeholder="띄어쓰기로 and 검색 (예) 한화 삼성">
                                 <button class="midSize">검색</button>
                             </li>

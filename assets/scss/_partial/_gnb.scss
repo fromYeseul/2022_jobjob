@@ -1,7 +1,7 @@
 
 .gnbWrapper{
     width: rem(70);
-    background: $white; 
+    background: $black; 
     border-right: 1px solid $layoutColor;
     transition: all .3s ease;
     position: fixed;
@@ -16,14 +16,14 @@
         padding: rem(12);
         margin-left: rem(10);
         border-radius: rem(6);
-        background: $bgColor;
+        background: $gnbGray;
         cursor: pointer;
         position: relative;
         &::before{
             content:'';
             width: 0;
             height: rem(50);
-            background:  $bgColor;
+            background: $white;
             position: absolute;
             left: -10px;
             top: 0;
@@ -37,9 +37,16 @@
         overflow-y: auto;
         li{
             padding: rem(13);
+            &.is-active{
+                .menuTxt{
+                    color: $white;
+                    font-weight: 700;
+                }
+            }
         }
         .menuTxt{
             display: none;
+            color: $cancel;
             margin-left: rem(14);
             vertical-align: middle;
         }
@@ -52,10 +59,12 @@
     &.is-active{
         .gnbWrapper{
             width: 205px;
+            background-image: linear-gradient(to bottom, $highlight, $gnbGreen);
         }
         .navCtrlBtn{
             width: calc(100% - 24px);
             text-align: right;
+            background: $white;
             position: relative;
             &::before{
                 width: rem(15);
@@ -79,10 +88,12 @@
     &.is-hover{
         .gnbWrapper{
             width: 205px;
+            background-image: linear-gradient(to bottom, $highlight, $gnbGreen);
         }
         .navCtrlBtn{
             width: calc(100% - 24px);
             text-align: right;
+            background: $white;
             &::before{
                 width: rem(15);
             }

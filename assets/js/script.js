@@ -111,7 +111,7 @@ function showPw(){
     let showPw = document.querySelector('.showPw');
         
     showPw.addEventListener('click', function(){
-        let inputPw = this.nextElementSibling;
+        let inputPw = this.previousElementSibling;
         let inputPwType = inputPw.getAttribute("type");
         
         if(inputPwType === "password"){

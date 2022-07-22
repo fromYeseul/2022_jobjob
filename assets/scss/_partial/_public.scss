@@ -14,13 +14,14 @@ $highlight : #009ce0;
 $onGoing : #ffc812;
 $cancel : #b7b7c4;
 $delay : #ff1236;
+$gnbGreen : #89c895;
 
 //모노톤
 $black : #29292c;
 $gray : #828286;
 $white : #fff;
 
-
+$gnbGray : #bcbcc4;
 $inputGray : $layoutColor;
 $placeholder : $disable;
 $placeGray : #a5a5ac;
@@ -31,10 +32,12 @@ $tabGray : $layoutColor;
 $memLayout : $layoutColor;
 
 $titleGray : $cancel;
-$groupGray : $placeholder;
+$condiGray : $placeholder;
 $systemGray : $placeholder;
 $tooltipGray : #58585e;
-$scrollThumb : $cancel;
+
+$scrollTrack : $bgColor;
+$scrollThumb : $tooltipGray;
 
 $footerGray : $titleGray;
 
@@ -58,7 +61,7 @@ $footerGray : $titleGray;
     color: $highlight;
 }
 .dNone{
-    color: $onGoing;
+    color: $highlight;
 }
 
 
@@ -86,25 +89,32 @@ $footerGray : $titleGray;
     clip: rect(0, 0, 0, 0);
 }
 
-//FLEX
+//정렬
 .flex{
     display: flex;
 }
+.block{
+    display: block;
+}
+
 
 //스크롤 커스텀
+.yScroll{
+    overflow-y: auto;
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
     border-radius: 5px;
-    background-color: $bgColor;
+    background-color: $scrollTrack;
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 6px;
     background-color: $scrollThumb;
-    //트랙사이 간격넣을 때
-    background-clip: padding-box;
-    border: 2px solid transparent;
+    //트랙사이 간격
+    //background-clip: padding-box;
+    //border: 2px solid transparent;
 }
 ::-webkit-scrollbar-button {
     width: 0;

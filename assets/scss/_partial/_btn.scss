@@ -10,73 +10,71 @@
 
 button, 
 .button{
+    display: inline-block;
     color: $white;
+    text-align: center;
     border-radius: rem(6);
     background-color: $mainColor;
-    //vertical-align: middle;
     cursor: pointer;
-    &.ico{
-        background-color: inherit;
+    //disable
+    &:disabled{
+        background: $cancel;
+        cursor:not-allowed;
     }
-    &.white{
-        color:$black;
-        border: 1px solid $gray; 
-        background-color: $white;
+    //버튼간격
+    & + button,
+    & + .button{
+        margin-left: rem(4);
     }
+    //사이즈
     &.fullSize{
         width: 100%;
-        height: rem(54);
+        line-height: rem(54);
         font-weight: 700;
     }
     &.laSize{
         width: rem(130);
-        height: rem(55);
+        line-height: rem(55);
         font-weight: 700;
     }
     &.midSize{
         width: rem(90);
-        height: rem(50);
+        line-height: rem(50);
     }
     &.smSize{
-        width: rem(64);
-        height: rem(26);
+        width: rem(74);
+        line-height: rem(30);
+    }
+    //디자인
+    &.ico{
+        background-color: inherit;
     }
     &.white{
         //width: rem(98);
-        //line-height: rem(34);
-        padding: rem(5) rem(7);
+        line-height: rem(34);
+        padding: 0 rem(7);
         color: $black;
         background-color: transparent;
         border: 1px solid $inputGray;
-    }
-    &.delete{
-        width: rem(84);
-        height: rem(32);
-        color: $black;
-        background-color: transparent;
-        border: 1px solid $inputGray;
-    }
-}
-//a태그
-.button{
-    display: inline-block;
-    text-align: center;
-    &.laSize{
-        line-height: rem(55);
-    }
-    &.midSize{
-        height: rem(50);
-        line-height: rem(50);
+        &.smType{
+            width: rem(84);
+            line-height: rem(32);
+        }
     }
     &.round{
-        width: rem(82);
+        width: rem(64);
         height: rem(32);
         line-height: rem(30);
-        color: $gray;
+        color: $black;
         background: $white;
         border: 1px solid $gray;
-        border-radius: rem(20);
+        border-radius: rem(20);        
+        &.disabled{
+            color: $layoutColor;
+            border: 1px solid $layoutColor;
+        }
     }
+    //상태
     &.order{
         color: $highlight;
         border-color: $highlight;
@@ -97,14 +95,33 @@ button,
         color: $delay;
         border-color: $delay;
     }
+    //라벨
     &.label{
         min-width: rem(44);
-        height: rem(24);
         line-height: rem(22);
         color: $systemGray;
         font-size: rem(14);
         background: $tableBgGray;
         border-radius: rem(20);
         border-color: $tableBgGray;
+        cursor: inherit;
+    }
+    &.point{
+        display: inline-block;
+        width: rem(44);
+        line-height: rem(24);
+        color: $white;
+        font-size: rem(14);
+        text-align: center;
+        background: $delay;
+        border-radius: rem(5);
+        margin-right: rem(4);
+    }
+}
+
+
+span{
+    &.button{
+        cursor:inherit;
     }
 }

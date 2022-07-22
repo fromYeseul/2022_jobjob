@@ -1,96 +1,137 @@
 .myProjList{
     .boxListWrap{    
-        height: calc(100vh - 195px);  
+        //padding-bottom: 100px;  
+        height: calc(100vh - 202px);
     }    
     .boxList{
-        height: rem(134);
-        padding: rem(16);
-        margin-bottom: rem(8);
+        height: rem(130);
+        padding: rem(20);
+        margin-bottom: rem(1);
+        border-radius: 0;
+        border:0;
+        .cont{
+            margin-top: rem(10);
+            position: relative;
+            .prefix{
+                width: 78%;
+                @include ellipsis-double;
+            }
+            .suffix{
+                color: $subInfo;
+                font-size: rem(14);
+                position: absolute;
+                right: 0;
+                bottom: rem(3);
+            }   
+        }
     }
 }
 
 
 .myProjDetail{ 
     .boxWrap{
-        padding: rem(40);
-        .title{
-            margin-top: rem(4);
+        .head{
+            padding: rem(20) rem(40);
+        }
+        .cont{
+            padding: rem(30) rem(40);
+        }.part{
+            margin-top: rem(50);
+        }
+        .bottom{
+            margin-top: rem(38);
+            & + .button{
+                margin-left: rem(8);
+            }
         }
     }
     .flex{
         flex-wrap:wrap;
-        margin-top: rem(30);
-        .boxList{
+        li{
             width: 20%;
-            min-width: rem(106);
-            height: rem(122);
-            padding: rem(30) rem(13);
-            box-shadow: none;
-            border:1px solid $layoutColor;
-            @include heightArray;
+            min-width: rem(104);
+            height: rem(90);
+            padding: rem(20) 0;
+            border: 1px solid $layoutColor;
+            border-left: 0;
             text-align: center;
-            & + .bookList{
-                margin-left: -1px;
+            @include heightArray;
+            &:last-child{                
+                border-right:0;
             }
-        }
-    }
-    .bottom{
-        margin-top: rem(45);
-        & + .button{
-            margin-left: rem(8);
         }
     }
 }
 
 
-.myProJob{
+.myProjJob{
     width: 30%;
     min-width: rem(616);
+    .boxWrap{
+        margin-top: rem(10);
+    }
     .partList{
-        display: flex;
-        padding: rem(30) rem(40);
-        padding-left: 0;
-        border-bottom:1px solid $layoutColor;
-    }
-    .jobPart{
-        width: calc(100% - 336px);
         height: rem(168);
-        font-size: rem(24);
-        font-weight: 700;
-        @include heightArray;
-    }
-    .partDetail{
-        width: rem(336);
-        height: rem(168);
-        padding: rem(16) rem(26);
+        padding: rem(10) rem(8) 0;
         border: 1px solid $layoutColor;
         ul{
             height: 100%;
+            padding-right: rem(5);
             overflow-y: auto;
+            display: flex;
+            flex-wrap: wrap;
             li{
-                width: 90%;
+                width: 30%;
                 font-size: rem(14);
                 font-weight: 500;
-                padding: rem(5) rem(14);
-                border-bottom:1px solid $layoutColor;
+                margin:rem(9);
+                padding: rem(12) rem(14);
+                border-radius: rem(5);
+                border:1px solid $layoutColor;
+                box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
                 &.is-active{
-                    border-radius: rem(5);
                     border:1px solid $mainColor;
                 }
+                &:first-child{
+                    padding: rem(30) rem(14);
+                }
             }
-            .label{
-                width: rem(26);
-                font-weight: 400;
-            }
-            .deadline{
-                font-weight: 400;
-            }
-            .memNum{
-                float: right;
+            p{
+                @include sideArray;
+                align-items: center;
+                .partWrap,
+                .memNum{
+                    font-size: rem(18);
+                    font-weight: 700;
+                }
+                .label{
+                    width: rem(44);
+                    font-weight: 400;
+                }
+                .deadline{
+                    font-size: rem(14);
+                }
+                & + p{
+                    margin-top: rem(10);
+                }
             }
         }
     }
+    .tabBtnWrap{
+        font-size: rem(18);
+    }
     .tabContWrap{
-        padding: rem(20) rem(40);
+        .inputIco{
+            width: calc(100% - 98px);
+        }
+        .yScroll{
+            padding: rem(20) rem(40);
+            //padding-bottom: rem(114);
+            height: calc(100vh - 558px);
+            @include scroll_0;
+            .listTop{
+                margin-top: rem(30);
+            }
+        }
     }
 }

@@ -52,3 +52,34 @@ table{
         }
     }
 }
+
+
+
+
+.listTop{
+    padding: 0 rem(10);
+    label{            
+        margin-right: rem(16);
+    }
+    button{
+        float: right;
+        margin-top: -5px;
+    }
+}
+
+.listBottom{
+    width: 100%;
+    padding: rem(30) rem(40);
+    background: $white;
+    //box-shadow: -5px -5px 10px rgba(0,0,0,0.1);
+    //position: absolute;
+    //bottom: 0;
+    @include flex_1_2;
+    .suffix{
+        margin-left: rem(10);
+    }
+    &.pagingType{
+        padding: rem(40);
+        @include heightArray;
+    }
+}
