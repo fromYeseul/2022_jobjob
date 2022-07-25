@@ -57,14 +57,17 @@ table{
 
 
 .listTop{
-    padding: 0 rem(10);
+    //padding: 0 rem(10);
+    &.flex{
+        @include sideArray;
+    }
     label{            
         margin-right: rem(16);
     }
-    button{
-        float: right;
-        margin-top: -5px;
-    }
+    // button{
+    //     float: right;
+    //     margin-top: -5px;
+    // }
 }
 
 .listBottom{

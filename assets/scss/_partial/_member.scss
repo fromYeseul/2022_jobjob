@@ -27,47 +27,61 @@
         .prefix{
             width: 64%;
             color: $subInfo; 
-            position: relative;
+            padding-right: rem(40);
             span{
                 margin-right: rem(10);
             }
-            &::after{
+            .memName{
+                color: $black;
+                font-weight: 700;
+                .photo{
+                    width: rem(40);
+                    height: rem(40);
+                    border-radius: rem(12);
+                    vertical-align: middle;
+                    margin-right: rem(10);
+                }
+            }
+            .memSkill{
+                @include ellipsis;
+            }
+            .memPay{
+                color: $black;
+                font-weight: 500;
+            }
+            .memCareer{
+                color: $highlight;
+            }
+            .memMemo{
+                margin-top: rem(4);
+            }
+        }   
+        .center,
+        .suffix{
+            text-align: center;
+            @include heightArray;
+        }
+        .center{
+            font-weight: 500;
+            padding: 0 rem(10);
+            position: relative;
+            &::before{
                 content:'';
                 width: 1px;
                 height: rem(106);
                 background: $layoutColor;
                 position: absolute;
-                right: 0;
+                left: 0;
                 top: 50%;
                 transform: translateY(-50%);
             }
-            .memName{
-                color: $black;
-                font-weight: 700;
-            }
-            .photo{
-                width: rem(40);
-                height: rem(40);
-                border-radius: rem(12);
-                vertical-align: middle;
-                margin-right: rem(10);
-            }
-            .memSkill{
-                @include ellipsis;
-            }
-            .memCareer{
+        }
+        .suffix{
+            color: $disable;
+            &.clear{
                 color: $highlight;
             }
-        }   
-        .center,
-        .suffix{
-            @include heightArray;
-        }
-        .center{
-            font-weight: 500;
-        }
-        .suffix{
-            color: $highlight;
+            
         }
     }
 }

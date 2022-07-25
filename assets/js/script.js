@@ -56,35 +56,35 @@ tabMenu();
 
 
 /* GNB - nav */
-function gnbNav(){
-    let layoutWrapper = document.querySelector('.layoutWrapper');
-    let navCtrlBtn = document.querySelector('.navCtrlBtn');
-    let navWrapper = document.querySelector('.navWrapper');
+// function gnbNav(){
+//     let layoutWrapper = document.querySelector('.layoutWrapper');
+//     let navCtrlBtn = document.querySelector('.navCtrlBtn');
+//     let navWrapper = document.querySelector('.navWrapper');
 
-    navCtrlBtn.addEventListener('click', function(){
-        layoutWrapper.classList.toggle('is-active');
-    });
+//     navCtrlBtn.addEventListener('click', function(){
+//         layoutWrapper.classList.toggle('is-active');
+//     });
 
-    navWrapper.addEventListener('mouseenter', function(){
-        layoutWrapper.classList.add('is-hover');
-    });
-    navWrapper.addEventListener('mouseleave', function(){
-        layoutWrapper.classList.remove('is-hover');
-    });
-}
-gnbNav();
+//     navWrapper.addEventListener('mouseenter', function(){
+//         layoutWrapper.classList.add('is-hover');
+//     });
+//     navWrapper.addEventListener('mouseleave', function(){
+//         layoutWrapper.classList.remove('is-hover');
+//     });
+// }
+// gnbNav();
 
 
 /* MYPROJECT 레이아웃 */
-function contLayout(){
-    let contLayout = document.querySelector('.contLayout');
-    let myProjDetail = document.querySelector('.myProjDetail');
+// function contLayout(){
+//     let contLayout = document.querySelector('.contLayout');
+//     let myProjDetail = document.querySelector('.myProjDetail');
 
-    myProjDetail.addEventListener('click', function(){
-        contLayout.classList.add('is-active');
-    });
-}
-contLayout();
+//     myProjDetail.addEventListener('click', function(){
+//         contLayout.classList.add('is-active');
+//     });
+// }
+// contLayout();
 
 
 /* 우측패널 */
@@ -107,23 +107,23 @@ rightPanel();
 
 
 /* 패스워드 보이기 */
-function showPw(){
-    let showPw = document.querySelector('.showPw');
+// function showPw(){
+//     let showPw = document.querySelector('.showPw');
         
-    showPw.addEventListener('click', function(){
-        let inputPw = this.previousElementSibling;
-        let inputPwType = inputPw.getAttribute("type");
+//     showPw.addEventListener('click', function(){
+//         let inputPw = this.previousElementSibling;
+//         let inputPwType = inputPw.getAttribute("type");
         
-        if(inputPwType === "password"){
-            showPw.classList.add('is-active');
-            inputPw.setAttribute("type", "text");
-        }else{
-            showPw.classList.remove('is-active');
-            inputPw.setAttribute("type", "password");
-        }
-    });
-}
-showPw();
+//         if(inputPwType === "password"){
+//             showPw.classList.add('is-active');
+//             inputPw.setAttribute("type", "text");
+//         }else{
+//             showPw.classList.remove('is-active');
+//             inputPw.setAttribute("type", "password");
+//         }
+//     });
+// }
+// showPw();
 
 
 
@@ -175,3 +175,35 @@ chkAll();
 //??????????????????
 //html에 없는 script일 경우 Uncaught TypeError : addEventListner 가
 //뜨면서 이하에 있는 script가 적용이 안됨
+
+
+/* SELECTBOX 일반태그 커스텀 */
+const label = document.querySelectorAll('.selDefault');
+label.forEach(function(lb){
+    lb.addEventListener('click', e => {
+        let optionList = lb.nextElementSibling;
+        let optionItems = optionList.querySelectorAll('.optionItem');
+        clickLabel(lb, optionItems);
+    })
+});
+const clickLabel = (lb, optionItems) => {
+    if(lb.parentNode.classList.contains('is-active')) {
+        lb.parentNode.classList.remove('is-active');
+        optionItems.forEach((opt) => {
+            opt.removeEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    } else {
+        lb.parentNode.classList.add('is-active');
+        optionItems.forEach((opt) => {
+            opt.addEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    }
+}
+const handleSelect = (label, item) => {
+    label.innerHTML = item.textContent;
+    label.parentNode.classList.remove('active');
+}

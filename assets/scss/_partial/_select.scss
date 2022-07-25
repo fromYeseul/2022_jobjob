@@ -20,3 +20,61 @@ select{
         width:auto;
     }
 }
+
+
+
+.select {
+  position: relative;
+  //z-index: 1;
+  width: rem(86);
+  line-height: rem(30);
+  border-radius: rem(4);
+  border: 1px solid $selGray;
+  font-size: rem(14);
+  cursor: pointer;
+  &::before{
+    content: '';
+    width: rem(12);
+    height: rem(6);
+    background: url(../img/icoSelect.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%); 
+    right: rem(5); 
+  }
+  .selDefault{
+    display: block;
+    text-align: left;
+    padding-left: rem(10);
+  }
+  .optionList {
+    display: none;
+    position: absolute; 
+    top: rem(33);
+    left: -1px;
+    width: calc(100% + 2px);
+    color: $subInfo;
+    padding: 0;
+    border-radius: rem(4);
+    border:1px solid $selOptList;
+    background: $white;
+    z-index: 10;
+    .optionItem {
+      padding: 0 rem(10);
+      &:hover {
+        color: $black;
+        font-weight: 500;
+        background: $selHover;
+      }
+    }
+  }
+  &.is-active{
+    border: 1px solid $mainColor;
+    &::before{
+      background: url(../img/icoSelect.png) no-repeat;
+    }
+    .optionList {
+      display: block;
+    }
+  }
+}
