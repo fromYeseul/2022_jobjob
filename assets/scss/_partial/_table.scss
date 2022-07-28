@@ -19,13 +19,14 @@ table{
     width: 100%;
     th, td{
         text-align: center;
+        background: $white;
         border-top: 1px solid $tableBorder;
         border-bottom: 1px solid $tableBorder;
     }
     th{
-        color: $titleGray;
+        color: $white;
         font-weight: 500;
-        padding: rem(16) 0;
+        padding: rem(12) 0;
         border-top: none;
         background: $tableBgGray;
     }
@@ -35,6 +36,7 @@ table{
     }
     .ellipsis{
         @include ellipsis;
+        color: $mainColor;
     }
     .memo{
         padding: rem(16);

@@ -1,3 +1,7 @@
+// .layoutWrapper{
+//     min-width: rem(1200);
+// }
+
 
 .wrapper{
     width: 100%;
@@ -30,13 +34,20 @@
 
 
 
-
+.headerWrapper{
+    .header{
+        min-width: rem(1200);
+        width: 100%;
+    }
+}
 
 
 .contWrapper{
+    min-width: rem(1200);
     width: calc(100% - 70px);
-    position: absolute;
-    left: rem(70);
+    margin-left: rem(70);
+    //position: absolute;
+    //left: rem(70);
     .proReqList{
         padding: rem(35) rem(40);
     }
@@ -45,7 +56,7 @@
         min-height: calc(100vh - 95px);
         background: $bgColor;
         .myProjList{
-            width: 30%;
+            width: 10%;
             min-width: rem(307);    
             //height: calc(100vh - 96px);
             //overflow-y: auto;
@@ -54,12 +65,12 @@
             position: relative;
         }
         .myProjDetail{
-            width: 100%;
+            width: 90%;
             padding: rem(30) rem(20);
         }
         .myProjJob{
-            //display: none;
-            width: 40%;
+            display: none;
+            width: 45%;
             padding: rem(30) rem(10);
             padding-left: 0;
         }
@@ -67,6 +78,7 @@
 
         .myPeoList{
             min-width: rem(610);
+            background: $white;
             border-right: 1px solid $layoutColor;
         }
         .myPeoDetail{
@@ -88,34 +100,53 @@
             width: calc(100% - 50px);
             padding: rem(38) rem(40);
         }
+
+
         .rPanelLayer{
-            width: 30px;
+            width: 0;
+            background: $white;
             transition: all .3s ease;
-            background: yellow;  //임시
+            position: relative;
+            .rPanelBox{
+                display: none;
+            }   
             &.is-active{
-                width: 200px;   //임시
+                width: rem(640); 
+                .rPanelBox{
+                    display: block;
+                }   
             }
             &.layerType{
                 min-height: calc(100vh - 200px); //임시
                 position: absolute;
-                right: 50px;    //임시
-                top: 50px; //임시
+                top: rem(95);
+                right: rem(60);
+            }
+        }
+        .filterWrapper{
+            display:none;
+            position: absolute;
+            left: -230px;
+            top:0;
+            &.is-active{
+                display: block;
             }
         }
         .rPanel{                
-            width: 50px;  //임시
+            width: rem(60);
+            padding: rem(20) rem(15);
             //height: calc(100vh - 95px);
             //position: fixed;
             right: 0;
             //bottom: 0;
-            background: lightblue;  //임시
+            background: $white;
             li{
-                background: red;
+                margin-bottom: rem(15);
             }
         }
         &.is-active{
             .myProjDetail{
-                width: 60%; //임시
+                width: 45%;
             }
             .myProjJob{
                 display: block;

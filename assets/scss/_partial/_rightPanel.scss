@@ -3,15 +3,65 @@
     i{        
         width: 30px;
         height: 30px;
-        background-image: url(../img/iconImg.jpg);
+        background-image: url(../img/IcoGnb.png);
         &.searchMem{
-            background-position: 0px 0px;
+            background-position: -120px 0px;
         }
         &.schedule{
-            background-position: 30px 30px;
+            background-position: -120px 0px;
         }
         &.mail{
-            background-position: 0px 0px;
+            background-position: -120px 0px;
         }
+    }
+}
+
+.rPanelLayer{
+    .rPanelBox{
+        padding: rem(30);
+        height: calc(100vh - 97px);
+        border: 1px solid $layoutColor;
+    }   
+    .rPanelCont{        
+        h4{
+            margin-bottom: rem(26);
+        }
+        .yScroll{
+            height: calc(100vh - 317px);
+            @include scroll_0;
+        }
+        .inputIco{
+            width: calc(100% - 98px);
+            margin-bottom: rem(30);
+        }
+    }
+    .filterWrapper{
+        width: rem(230);
+        height: 100%;
+        padding: rem(50) rem(30);
+        background: $white;
+        border: 1px solid $layoutColor;
+        box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
+        @include scroll_0;
+        .flex{
+            @include sideArray;
+        }
+    }
+}
+
+.rPanelHeader{
+    @include clear_float;
+    .layerClose{
+        float: right;
+    }
+}
+.filterList{
+    margin-top: rem(38);
+    .tit{
+        font-weight: 700;
+    }
+    label{
+        display: block !important;
+        margin-top: rem(14);
     }
 }

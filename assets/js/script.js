@@ -1,26 +1,26 @@
 
 /* 레이어팝업(여러개ok) - overflow, 외부영역선택시 close 추가해보기 */
-function layerPop(){
-    let openBtn = document.querySelectorAll(".layerOpen");
-    let closeBtn = document.querySelectorAll(".layerClose");
-    let layerID;
+// function layerPop(){
+//     let openBtn = document.querySelectorAll(".layerOpen");
+//     let closeBtn = document.querySelectorAll(".layerClose");
+//     let layerID;
 
-    for(let i=0; i<openBtn.length; i++){
-        openBtn[i].addEventListener("click", function(){
-            layerID = this.getAttribute('href');
-            document.querySelector(layerID).classList.add('is-active');
-        });
-    }
-    for(let j=0; j<openBtn.length; j++){
-        closeBtn[j].addEventListener('click', function(){
-            this.parentNode.parentNode.parentNode.classList.remove('is-active');
-        });
-    }
-}
-layerPop();
+//     for(let i=0; i<openBtn.length; i++){
+//         openBtn[i].addEventListener("click", function(){
+//             layerID = this.getAttribute('href');
+//             document.querySelector(layerID).classList.add('is-active');
+//         });
+//     }
+//     for(let j=0; j<openBtn.length; j++){
+//         closeBtn[j].addEventListener('click', function(){
+//             this.parentNode.parentNode.parentNode.classList.remove('is-active');
+//         });
+//     }
+// }
+// layerPop();
 
 
-/* 탭메뉴(여러개ok) */    
+/* 탭메뉴(여러개 확인하기!!) */    
 function tabMenu(){
     let tabBtn = document.querySelectorAll('.tabBtnWrap a');
     let tabCont = document.querySelectorAll('.tabContWrap > div');
@@ -97,7 +97,7 @@ function rightPanel(){
             rPanelLayer.classList.toggle('is-active');
 
             let windowWidth = window.innerWidth;
-            if(windowWidth <= 1000){
+            if(windowWidth <= 1200){
                 rPanelLayer.classList.toggle('layerType');
             }
         });
@@ -107,23 +107,23 @@ rightPanel();
 
 
 /* 패스워드 보이기 */
-// function showPw(){
-//     let showPw = document.querySelector('.showPw');
+function showPw(){
+    let showPw = document.querySelector('.showPw');
         
-//     showPw.addEventListener('click', function(){
-//         let inputPw = this.previousElementSibling;
-//         let inputPwType = inputPw.getAttribute("type");
+    showPw.addEventListener('click', function(){
+        let inputPw = this.previousElementSibling;
+        let inputPwType = inputPw.getAttribute("type");
         
-//         if(inputPwType === "password"){
-//             showPw.classList.add('is-active');
-//             inputPw.setAttribute("type", "text");
-//         }else{
-//             showPw.classList.remove('is-active');
-//             inputPw.setAttribute("type", "password");
-//         }
-//     });
-// }
-// showPw();
+        if(inputPwType === "password"){
+            showPw.classList.add('is-active');
+            inputPw.setAttribute("type", "text");
+        }else{
+            showPw.classList.remove('is-active');
+            inputPw.setAttribute("type", "password");
+        }
+    });
+}
+showPw();
 
 
 

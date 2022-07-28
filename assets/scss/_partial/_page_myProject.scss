@@ -38,8 +38,12 @@
         }
         .cont{
             padding: rem(30) rem(40);
-        }.part{
-            margin-top: rem(50);
+        }
+        .part{
+            margin-top: rem(40);
+            li{
+                margin-top: rem(10);
+            }
         }
         .bottom{
             margin-top: rem(38);
@@ -59,8 +63,14 @@
             border-left: 0;
             text-align: center;
             @include heightArray;
+            cursor: pointer;
             &:last-child{                
                 border-right:0;
+            }
+            &.is-active{
+                color: $white;
+                font-weight: 700;
+                background: $mainColor;
             }
         }
     }
@@ -70,6 +80,7 @@
 .myProjJob{
     width: 30%;
     min-width: rem(616);
+
     .boxWrap{
         margin-top: rem(10);
     }
@@ -92,6 +103,7 @@
                 border-radius: rem(5);
                 border:1px solid $layoutColor;
                 box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+                cursor: pointer;
                 &.is-active{
                     border:1px solid $mainColor;
                 }
@@ -134,6 +146,19 @@
             @include scroll_0;
             .listTop{
                 margin-top: rem(30);
+            }
+        }
+    }
+    //스크롤할 때
+    &.is-active{
+        overflow-y: scroll;
+        height: calc(100vh - 95px);
+        .wrap{
+            height: calc(100vh + 63px);
+        }
+        .tabContWrap{
+            .yScroll{
+                height: calc(100vh - 328px);
             }
         }
     }
