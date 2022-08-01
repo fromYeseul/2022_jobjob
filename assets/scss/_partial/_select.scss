@@ -28,6 +28,7 @@ select{
   //z-index: 1;
   width: rem(86);
   line-height: rem(30);
+  background: $white;
   border-radius: rem(4);
   border: 1px solid $selGray;
   font-size: rem(14);
@@ -41,6 +42,11 @@ select{
     top: 50%;
     transform: translateY(-40%); 
     right: rem(5); 
+  }
+  &.laSize{
+    width: rem(100);
+    line-height: rem(48);
+    border: 1px solid $inputGray;
   }
   .selDefault{
     display: block;
@@ -60,6 +66,7 @@ select{
     background: $white;
     z-index: 10;
     .optionItem {
+      display: block;
       padding: 0 rem(10);
       &:hover {
         color: $black;

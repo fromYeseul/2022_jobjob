@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAYOUT</title>
+    <title>MYPEOPLE</title>
     
     <link rel="stylesheet" href="../assets/css/style.css">
+
+
 
 </head>
 <body>
@@ -18,8 +20,8 @@
                     <img src="../assets/img/icoLogo.png" alt="">
                 </a>
                 <div class="adminManage">
-                    <a href="#" class="is-active">My Project</a>
-                    <a href="#">My People</a>
+                    <a href="#">My Project</a>
+                    <a href="#" class="is-active">My People</a>
                 </div>
                 <div class="userInfo">
                     <ul>
@@ -57,20 +59,63 @@
         
         <div class="contWrapper">
             <div class="contLayout">
-                
-                <!--기본화면-->
-                <div class="default">
-                    <div class="defaultBox">
-                        <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">                  
-                        <p class="notify">시스템 오류 및 개선 문의</p>
-                        <p>홍길동  abc@echoit.co.kr</p>
+                <div class="myPeoList">
+                    <div class="tabWrapper" id="tab01">
+                        <ul class="tabBtnWrap wideType">
+                            <li class="tabBtn prefix">
+                                <a href="#myPeoA-1" class="is-active">가용예정인력(3)</a>
+                            </li>
+                            <li class="tabBtn center">
+                                <a href="#myPeoA-2">추천검토인력(3)</a>
+                            </li>
+                            <li class="tabBtn suffix">
+                                <a href="#myPeoA-3">투입확정인력(10)</a>
+                            </li>
+                        </ul>
+                        <div class="tabContWrap">
+                            <div id="myPeoA-1" class="tabCont is-active">
+                                <div class="usableMan">
+                                    <div class="yScroll nodata">
+                                        가용할 수 있는 회원이 없습니다.                               
+                                    </div>
+                                    <div class="listBottom">
+                                        <button class="fullSize white prefix">+ 목록추가</button>
+                                        <button class="fullSize suffix">연락하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="myPeoA-2" class="tabCont">
+                                <div class="recomMan">
+                                    <div class="yScroll nodata">
+                                        가용할 수 있는 회원이 없습니다.  2222                             
+                                    </div>
+                                    <div class="listBottom">
+                                        <button class="fullSize white prefix">+ 목록추가</button>
+                                        <button class="fullSize suffix">연락하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="myPeoA-3" class="tabCont">
+                                <div class="setMan">
+                                    <div class="yScroll nodata">
+                                        가용할 수 있는 회원이 없습니다.   3333                            
+                                    </div>
+                                    <div class="listBottom">
+                                        <button class="fullSize white prefix">+ 목록추가</button>
+                                        <button class="fullSize suffix">연락하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!--//기본화면-->
+                <div class="myPeoDetail nodata">
+                        프로젝트에 지원 이력이 없습니다.
+                </div>
 
-                
+
                 <!--우측패널-->
-                <div class="rPanelLayer is-active">
+                <div class="rPanelLayer">
                     <div class="rPanelBox">
                         <div class="rPanelHeader">
                             <button class="ico layerClose"></button>
@@ -318,7 +363,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="filterWrapper is-active">
+                    <div class="filterWrapper">
                         <div class="flex">
                             <h4>필터</h4>
                             <a href="#" class="ico refresh"></a>

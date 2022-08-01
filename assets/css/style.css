@@ -143,6 +143,10 @@ h1, h2, h3, h4, h5, h6, p {
   display: block;
 }
 
+.txt_center {
+  text-align: center;
+}
+
 .yScroll {
   overflow-y: auto;
 }
@@ -189,14 +193,14 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .headerWrapper .header {
-  min-width: 75rem;
+  min-width: 120rem;
   width: 100%;
 }
 
 .contWrapper {
-  min-width: 75rem;
-  width: calc(100% - 70px);
-  margin-left: 4.375rem;
+  min-width: 120rem;
+  width: 100%;
+  padding-left: 3.75rem;
 }
 .contWrapper .proReqList {
   padding: 2.1875rem 2.5rem;
@@ -207,28 +211,27 @@ h1, h2, h3, h4, h5, h6, p {
   background: #f2f2f7;
 }
 .contWrapper .contLayout .myProjList {
-  width: 10%;
-  min-width: 19.1875rem;
+  width: 21.875rem;
   background: #f2f2f7;
   position: relative;
 }
 .contWrapper .contLayout .myProjDetail {
-  width: 90%;
+  width: calc(100% - 350px - 60px);
   padding: 1.875rem 1.25rem;
 }
 .contWrapper .contLayout .myProjJob {
   display: none;
-  width: 45%;
+  width: 40rem;
   padding: 1.875rem 0.625rem;
   padding-left: 0;
 }
 .contWrapper .contLayout .myPeoList {
-  min-width: 38.125rem;
+  width: 40rem;
   background: #fff;
   border-right: 1px solid #e6e6eb;
 }
 .contWrapper .contLayout .myPeoDetail {
-  width: calc(100% - 570px - 50px);
+  width: calc(100% - 640px - 60px);
   padding: 1.875rem;
 }
 .contWrapper .contLayout .myPeoDetail .tableWrap {
@@ -282,67 +285,25 @@ h1, h2, h3, h4, h5, h6, p {
 .contWrapper .contLayout .rPanel li {
   margin-bottom: 0.9375rem;
 }
+.contWrapper .contLayout .default {
+  width: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .contWrapper .contLayout.is-active .myProjDetail {
   width: 45%;
+  width: calc(100% - 350px - 640px - 60px);
 }
 .contWrapper .contLayout.is-active .myProjJob {
   display: block;
 }
-
-.gnbWrapper {
-  width: 4.375rem;
-  background: #29292c;
-  border-right: 1px solid #e6e6eb;
-  transition: all 0.3s ease;
-  position: fixed;
-  left: 0;
-  z-index: 100;
-}
-.gnbWrapper .gnb {
-  padding: 1.25rem 0;
-}
-.gnbWrapper .navCtrlBtn {
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0.75rem;
-  margin-left: 0.625rem;
-  border-radius: 0.375rem;
-  background: #bcbcc4;
-  cursor: pointer;
-  position: relative;
-}
-.gnbWrapper .navCtrlBtn::before {
-  content: "";
-  width: 0;
-  height: 3.125rem;
-  background: #fff;
-  position: absolute;
-  left: -10px;
-  top: 0;
-  transition: all 0.01s ease;
-}
-.gnbWrapper .navWrapper {
-  height: calc(100vh - 105px);
-  margin-top: 2.1875rem;
-  margin-left: 0.625rem;
-  overflow-y: auto;
-}
-.gnbWrapper .navWrapper li {
-  padding: 0.8125rem;
-}
-.gnbWrapper .navWrapper li.is-active .menuTxt {
-  color: #fff;
-  font-weight: 700;
-}
-.gnbWrapper .navWrapper .menuTxt {
-  display: none;
-  color: #b7b7c4;
-  margin-left: 0.875rem;
-  vertical-align: middle;
+.contWrapper .contLayout.is-active .myPeoDetail {
+  width: calc(100% - 640px - 640px - 60px);
 }
 
 .layoutWrapper.is-active .gnbWrapper {
-  width: 205px;
+  width: 12.8125rem;
   background-image: linear-gradient(to bottom, #009ce0, #89c895);
 }
 .layoutWrapper.is-active .navCtrlBtn {
@@ -364,7 +325,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .layoutWrapper.is-active .contWrapper {
   width: calc(100% - 205px);
-  margin-left: 12.8125rem;
+  padding-left: 12.8125rem;
 }
 .layoutWrapper.is-hover .gnbWrapper {
   width: 205px;
@@ -385,6 +346,56 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .layoutWrapper.is-hover .navWrapper .menuTxt {
   display: inline-block;
+}
+
+.gnbWrapper {
+  width: 3.75rem;
+  background-image: linear-gradient(to bottom, #009ce0, #89c895);
+  transition: all 0.3s ease;
+  position: fixed;
+  left: 0;
+  z-index: 100;
+}
+.gnbWrapper .gnb {
+  padding: 1.25rem 0;
+}
+.gnbWrapper .navCtrlBtn {
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0.75rem;
+  margin-left: 0.3125rem;
+  border-radius: 0.375rem;
+  background: #bcbcc4;
+  cursor: pointer;
+  position: relative;
+}
+.gnbWrapper .navCtrlBtn::before {
+  content: "";
+  width: 0;
+  height: 3.125rem;
+  background: #fff;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  transition: all 0.01s ease;
+}
+.gnbWrapper .navWrapper {
+  height: calc(100vh - 105px);
+  margin-top: 2.1875rem;
+  margin-left: 0.3125rem;
+  overflow-y: auto;
+}
+.gnbWrapper .navWrapper li {
+  padding: 0.8125rem;
+}
+.gnbWrapper .navWrapper li.is-active .menuTxt {
+  font-weight: 700;
+}
+.gnbWrapper .navWrapper .menuTxt {
+  display: none;
+  color: #fff;
+  margin-left: 0.875rem;
+  vertical-align: middle;
 }
 
 .header {
@@ -506,6 +517,32 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 0.875rem;
 }
 
+.defaultBox {
+  width: 25rem;
+  height: 12.5rem;
+  padding: 2.75rem 0;
+  text-align: center;
+  background: #fff;
+  border-radius: 0.3125rem;
+  border: 1px solid #e6e6eb;
+}
+.defaultBox img {
+  width: 2.5rem;
+  border-radius: 0.8125rem;
+  margin-bottom: 1rem;
+}
+.defaultBox .notify {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.nodata {
+  color: #878791;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer {
   width: 100%;
   color: #b7b7c4;
@@ -601,6 +638,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: block;
   margin-bottom: 0.5625rem;
   font-size: 0.875rem;
+  font-weight: 400;
   color: #878791;
 }
 .condition ul {
@@ -845,14 +883,20 @@ button.fullSize,
 }
 button.laSize,
 .button.laSize {
-  width: 8.125rem;
+  min-width: 8.125rem;
+  padding: 0 1.25rem;
   line-height: 3.4375rem;
+  font-size: 1.125rem;
   font-weight: 700;
 }
 button.midSize,
 .button.midSize {
   width: 5.625rem;
   line-height: 3.125rem;
+}
+button.midSize.low,
+.button.midSize.low {
+  line-height: 2.5rem;
 }
 button.smSize,
 .button.smSize {
@@ -871,10 +915,11 @@ button.white,
   background-color: transparent;
   border: 1px solid #e6e6eb;
 }
-button.white.smType,
-.button.white.smType {
-  width: 5.25rem;
-  line-height: 2rem;
+button.white.smSize,
+.button.white.smSize {
+  width: 4.625rem;
+  line-height: 1.875rem;
+  border: 1px solid #828286;
 }
 button.round,
 .button.round {
@@ -1196,6 +1241,37 @@ input[type=radio]:checked + label::before {
 }
 
 /* 탭타입 라디오박스 */
+.tabType {
+  display: flex;
+}
+.tabType input[type=radio] {
+  width: 0;
+  opacity: 0;
+  position: fixed;
+}
+.tabType input[type=radio] + label {
+  width: 5.375rem;
+  line-height: 3.125rem;
+  text-align: center;
+  color: #b7b7c4;
+  font-weight: 500;
+  border: 1px solid #e6e6eb;
+}
+.tabType input[type=radio] + label::before {
+  display: none;
+}
+.tabType input[type=radio] + label:nth-child(2) {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+.tabType input[type=radio] + label:last-child {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+.tabType input[type=radio]:checked + label {
+  color: #fff;
+  background-color: #0460d2;
+  border: 1px solid #0460d2;
+}
+
 /* 별점평가 */
 .starWrap {
   display: inline-block;
@@ -1253,6 +1329,7 @@ select + input[type=text] {
   position: relative;
   width: 5.375rem;
   line-height: 1.875rem;
+  background: #fff;
   border-radius: 0.25rem;
   border: 1px solid #b7b7c4;
   font-size: 0.875rem;
@@ -1267,6 +1344,11 @@ select + input[type=text] {
   top: 50%;
   transform: translateY(-40%);
   right: 0.3125rem;
+}
+.select.laSize {
+  width: 6.25rem;
+  line-height: 3rem;
+  border: 1px solid #e6e6eb;
 }
 .select .selDefault {
   display: block;
@@ -1287,6 +1369,7 @@ select + input[type=text] {
   z-index: 10;
 }
 .select .optionList .optionItem {
+  display: block;
   padding: 0 0.625rem;
 }
 .select .optionList .optionItem:hover {
@@ -1493,7 +1576,6 @@ select + input[type=text] {
   background: #fff;
   border-radius: 0.3125rem;
   border: 1px solid #e6e6eb;
-  cursor: pointer;
 }
 .boxWrap .head,
 .boxList .head {
@@ -1558,11 +1640,12 @@ select + input[type=text] {
   border-bottom: 1px solid #e6e6eb;
 }
 
+.boxList {
+  cursor: pointer;
+}
+
 .memberWrap .boxList {
   margin-top: 1.25rem;
-}
-.memberWrap .boxList.is-active {
-  border: 1px solid #e6e6eb;
 }
 .memberWrap .boxList.is-active .head {
   color: #fff;
@@ -1583,7 +1666,7 @@ select + input[type=text] {
   justify-content: space-between;
 }
 .memberWrap .cont .prefix {
-  width: 70%;
+  width: 66%;
   color: #878791;
   padding-right: 2.5rem;
 }
@@ -1649,14 +1732,25 @@ select + input[type=text] {
   color: #009ce0;
 }
 
+.jobWrapper {
+  margin-top: 1.875rem;
+  height: calc(100vh - 240px);
+  overflow-y: auto;
+}
+.jobWrapper::-webkit-scrollbar {
+  width: 0;
+}
+
 .jobBox {
+  margin-bottom: 1.25rem;
   border-radius: 0;
-  padding: 1.5625rem 0;
+  padding: 1.5625rem 1.875rem;
   display: flex;
   justify-content: space-between;
 }
-.jobBox > div {
-  padding: 0 1.875rem;
+.jobBox .prefix {
+  width: 10.625rem;
+  padding: 0;
 }
 .jobBox .prefix li {
   margin-top: 0.9375rem;
@@ -1667,6 +1761,7 @@ select + input[type=text] {
 }
 .jobBox .center {
   width: 65%;
+  padding: 0 1.875rem;
   border-left: 1px solid #e6e6eb;
   border-right: 1px solid #e6e6eb;
 }
@@ -1682,10 +1777,21 @@ select + input[type=text] {
   color: #b7b7c4;
 }
 .jobBox .suffix {
+  width: 10rem;
+  color: #878791;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.jobBox .suffix .more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.jobBox .suffix .txt_center .select {
+  margin: 10px auto;
 }
 
 h1 {
@@ -1831,12 +1937,9 @@ h4 {
   color: #fff;
   font-weight: 700;
   background: #0460d2;
+  border: 1px solid #0460d2;
 }
 
-.myProjJob {
-  width: 30%;
-  min-width: 38.5rem;
-}
 .myProjJob .boxWrap {
   margin-top: 0.625rem;
 }
@@ -1917,13 +2020,25 @@ h4 {
   height: calc(100vh - 328px);
 }
 
-.usableMan .yScroll {
+.myPeoList .yScroll {
   padding: 1.25rem 2.5rem;
   height: calc(100vh - 277px);
   overflow-y: auto;
 }
-.usableMan .yScroll::-webkit-scrollbar {
+.myPeoList .yScroll::-webkit-scrollbar {
   width: 0;
+}
+
+.myPeoDetail .notify p:first-child {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.genMember {
+  padding: 1.25rem 2.5rem;
+}
+.genMember h2 {
+  margin-top: 1.875rem;
 }
 
 /*# sourceMappingURL=style.css.map */

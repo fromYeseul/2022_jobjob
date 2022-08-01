@@ -1,12 +1,18 @@
+.jobWrapper{
+    margin-top: rem(30);
+    height: calc(100vh - 240px);
+    @include scroll_0;
+}
+
 .jobBox{
     //width: rem(1080);
+    margin-bottom: rem(20);
     border-radius: 0;
-    padding: rem(25) 0;
+    padding: rem(25) rem(30);
     @include sideArray;
-    > div{
-        padding: 0 rem(30);
-    }
     .prefix{
+        width: rem(170);
+        padding: 0; 
         li{
             margin-top: rem(15);
             span{
@@ -19,6 +25,7 @@
     }
     .center{
         width: 65%;
+        padding: 0 rem(30);
         border-left: 1px solid $jobLayout;
         border-right: 1px solid $jobLayout;
         .title{
@@ -35,7 +42,20 @@
         }
     }    
     .suffix{
+        width: rem(160);
+        color: $subInfo;
         text-align: center;
         @include heightArray;
+        position: relative;
+        .more{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .txt_center{
+            .select{
+                margin: 10px auto;
+            }
+        }
     }
 }

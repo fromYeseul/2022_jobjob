@@ -56,23 +56,23 @@ tabMenu();
 
 
 /* GNB - nav */
-// function gnbNav(){
-//     let layoutWrapper = document.querySelector('.layoutWrapper');
-//     let navCtrlBtn = document.querySelector('.navCtrlBtn');
-//     let navWrapper = document.querySelector('.navWrapper');
+function gnbNav(){
+    let layoutWrapper = document.querySelector('.layoutWrapper');
+    let navCtrlBtn = document.querySelector('.navCtrlBtn');
+    let navWrapper = document.querySelector('.navWrapper');
 
-//     navCtrlBtn.addEventListener('click', function(){
-//         layoutWrapper.classList.toggle('is-active');
-//     });
+    navCtrlBtn.addEventListener('click', function(){
+        layoutWrapper.classList.toggle('is-active');
+    });
 
-//     navWrapper.addEventListener('mouseenter', function(){
-//         layoutWrapper.classList.add('is-hover');
-//     });
-//     navWrapper.addEventListener('mouseleave', function(){
-//         layoutWrapper.classList.remove('is-hover');
-//     });
-// }
-// gnbNav();
+    navWrapper.addEventListener('mouseenter', function(){
+        layoutWrapper.classList.add('is-hover');
+    });
+    navWrapper.addEventListener('mouseleave', function(){
+        layoutWrapper.classList.remove('is-hover');
+    });
+}
+gnbNav();
 
 
 /* MYPROJECT 레이아웃 */
@@ -91,10 +91,13 @@ tabMenu();
 function rightPanel(){
     let rPanelList = document.querySelectorAll('.rPanel > ul > li');
     let rPanelLayer = document.querySelector('.rPanelLayer');
+    let contLayout = document.querySelector('.contLayout');
 
     for(let i=0; i<rPanelList.length; i++){
         rPanelList[i].addEventListener('click', function(){
             rPanelLayer.classList.toggle('is-active');
+            contLayout.classList.toggle('is-active');
+
 
             let windowWidth = window.innerWidth;
             if(windowWidth <= 1200){

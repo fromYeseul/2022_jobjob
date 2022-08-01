@@ -33,13 +33,18 @@ button,
         font-weight: 700;
     }
     &.laSize{
-        width: rem(130);
+        min-width: rem(130);
+        padding: 0 rem(20);
         line-height: rem(55);
+        font-size: rem(18);
         font-weight: 700;
     }
     &.midSize{
         width: rem(90);
         line-height: rem(50);
+        &.low{
+            line-height: rem(40);
+        }
     }
     &.smSize{
         width: rem(74);
@@ -56,9 +61,10 @@ button,
         color: $black;
         background-color: transparent;
         border: 1px solid $inputGray;
-        &.smType{
-            width: rem(84);
-            line-height: rem(32);
+        &.smSize{
+            width: rem(74);
+            line-height: rem(30);
+            border: 1px solid $gray;
         }
     }
     &.round{
