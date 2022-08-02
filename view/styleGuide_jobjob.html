@@ -244,41 +244,46 @@
 
     
     <div class="clip"><span>버튼타입 체크박스</span></div>
-    <hr>        
-        <input type="checkbox" id="b1" name="aa" class="hasTxt">
-        <label for="b1">galaxy</label>
-        <input type="checkbox" id="b2" name="aa" class="hasTxt" checked>
-        <label for="b2">iphone</label>
+    <hr>                
+        <div class="btnType">
+            <input type="checkbox" id="b1" name="aa" class="hasTxt">
+            <label for="b1">galaxy</label>
+            <input type="checkbox" id="b2" name="aa" class="hasTxt" checked>
+            <label for="b2">iphone</label>
+        </div>
 
 
     <div class="clip"><span>체크박스 전체선택 <span style="color: greenyellow">여러개 구분하기</span></span></div>
     <hr>
-        <div class="chkWrap">
+        <div class="chkWrap btnType">
             <input type="checkbox" id="chkAll" class="chkAll">
-            <label for="chkAll">전체 동의</label>
+            <label for="chkAll">전체</label>
             
             <input type="checkbox" id="chk_1" class="chkEach" checked>
-            <label for="chk_1">개인정보 처리방침 동의</label>
+            <label for="chk_1">에코</label>
             
             <input type="checkbox" id="chk_2" class="chkEach" >
-            <label for="chk_2">서비스 이용약관 동의</label>
+            <label for="chk_2">협력</label>
             
             <input type="checkbox" id="chk_3" class="chkEach" >
-            <label for="chk_3">마케팅 수신 동의</label>            
+            <label for="chk_3">대행</label>  
+
+            <input type="checkbox" id="chk_4" class="chkEach" >
+            <label for="chk_4">대행</label>            
         </div>
 
-        <div class="chkWrap">
+        <div class="chkWrap btnType">
             <input type="checkbox" id="chkAAll" class="chkAll">
             <label for="chkAAll">전체 동의</label>
             
-            <input type="checkbox" id="chk_4" class="chkEach" checked>
-            <label for="chk_4">개인정보 처리방침 동의</label>
-            
-            <input type="checkbox" id="chk_5" class="chkEach" >
-            <label for="chk_5">서비스 이용약관 동의</label>
+            <input type="checkbox" id="chk_5" class="chkEach" checked>
+            <label for="chk_5">동의</label>
             
             <input type="checkbox" id="chk_6" class="chkEach" >
-            <label for="chk_6">마케팅 수신 동의</label>            
+            <label for="chk_6">서비스</label>
+            
+            <input type="checkbox" id="chk_7" class="chkEach" >
+            <label for="chk_7">마케팅</label>            
         </div>
     <!--//체크박스-->
 
@@ -503,6 +508,64 @@
     <div class="clip"><span style="color:#ccc;">테이블(drag&drop)</span></div>
     <hr>
     <!--//테이블(drag&drop)-->
+
+    <div class="clip"><span>페이징 -1</span></div>
+    <hr>
+    <div class="listBottom pagingType">                        
+        <div class="paging">
+            <ul>
+                <li><a href="#">
+                    <span class="ico left"></span>
+                </a></li>
+                <li>
+                    3개 중 <span class="is-active">1-3</span>
+                </li>
+                <li><a href="#">
+                    <span class="ico right is-active"></span>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="listBottom pagingType">                        
+        <div class="paging">
+            <ul>
+                <li class="pagingDouble">
+                    <a href="#">
+                        <span class="ico left2_dou"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="ico left2"></span>
+                    </a>
+                </li>
+                <li class="is-active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>
+                    <a href="#">
+                        <span class="ico right2 is-active"></span>
+                    </a>
+                </li>
+                <li class="pagingDouble">
+                    <a href="#">
+                        <span class="ico right2_dou is-active"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--페이징-->
+
 
 
 

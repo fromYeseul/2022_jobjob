@@ -76,21 +76,22 @@ gnbNav();
 
 
 /* MYPROJECT 레이아웃 */
-// function contLayout(){
-//     let contLayout = document.querySelector('.contLayout');
-//     let myProjDetail = document.querySelector('.myProjDetail');
+function projLayout(){
+    //let contLayout = document.querySelector('.contLayout');
+    let myProjDetail = document.querySelector('.myProjDetail');
 
-//     myProjDetail.addEventListener('click', function(){
-//         contLayout.classList.add('is-active');
-//     });
-// }
-// contLayout();
+    myProjDetail.addEventListener('click', function(){
+        myProjDetail.classList.toggle('is-active');
+    });
+}
+projLayout();
 
 
 /* 우측패널 */
 function rightPanel(){
     let rPanelList = document.querySelectorAll('.rPanel > ul > li');
     let rPanelLayer = document.querySelector('.rPanelLayer');
+    let rClose = document.querySelector('.rClose');
     let contLayout = document.querySelector('.contLayout');
 
     for(let i=0; i<rPanelList.length; i++){
@@ -105,28 +106,44 @@ function rightPanel(){
             }
         });
     }
+
+    rClose.addEventListener('click', function(){
+        rPanelLayer.classList.toggle('is-active');
+    })
 }
 rightPanel();
 
+/* 우측 패널 필터창 */
+function filterLayer(){
+    let filterWrapper = document.querySelector('.filterWrapper');
+    let filter = document.querySelector('.filter');
 
-/* 패스워드 보이기 */
-function showPw(){
-    let showPw = document.querySelector('.showPw');
-        
-    showPw.addEventListener('click', function(){
-        let inputPw = this.previousElementSibling;
-        let inputPwType = inputPw.getAttribute("type");
-        
-        if(inputPwType === "password"){
-            showPw.classList.add('is-active');
-            inputPw.setAttribute("type", "text");
-        }else{
-            showPw.classList.remove('is-active');
-            inputPw.setAttribute("type", "password");
-        }
+
+    filter.addEventListener('click', function(){
+        filterWrapper.classList.toggle('is-active');
     });
 }
-showPw();
+filterLayer();
+
+
+/* 패스워드 보이기 */
+// function showPw(){
+//     let showPw = document.querySelector('.showPw');
+        
+//     showPw.addEventListener('click', function(){
+//         let inputPw = this.previousElementSibling;
+//         let inputPwType = inputPw.getAttribute("type");
+        
+//         if(inputPwType === "password"){
+//             showPw.classList.add('is-active');
+//             inputPw.setAttribute("type", "text");
+//         }else{
+//             showPw.classList.remove('is-active');
+//             inputPw.setAttribute("type", "password");
+//         }
+//     });
+// }
+// showPw();
 
 
 

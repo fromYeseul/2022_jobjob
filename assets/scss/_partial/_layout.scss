@@ -56,6 +56,12 @@
             //width: calc(100% - 60px);
             width: calc(100% - 350px - 60px);
             padding: rem(30) rem(20);
+            &.is-active{             
+                width: calc(100% - 350px - 640px - 60px);       
+                + .myProjJob{
+                    display: block;
+                }
+            }
         }
         .myProjJob{
             display: none;
@@ -74,15 +80,6 @@
         .myPeoDetail{
             width: calc(100% - 640px - 60px);
             padding: rem(30);
-            .tableWrap{
-                height: calc(100vh - 240px);
-                overflow-y: auto;
-                th{
-                    position: sticky;
-                    top:0;
-                }
-                
-            }
         }
 
 
@@ -144,9 +141,9 @@
             .myProjDetail{
                 width: 45%;
                 width: calc(100% - 350px - 640px - 60px);
-            }
-            .myProjJob{
-                display: block;
+                // &.is-active{
+                //     width: calc(100% - 350px - 640px - 60px);
+                // }
             }
             .myPeoDetail{
                 width: calc(100% - 640px - 640px - 60px);

@@ -219,6 +219,12 @@ h1, h2, h3, h4, h5, h6, p {
   width: calc(100% - 350px - 60px);
   padding: 1.875rem 1.25rem;
 }
+.contWrapper .contLayout .myProjDetail.is-active {
+  width: calc(100% - 350px - 640px - 60px);
+}
+.contWrapper .contLayout .myProjDetail.is-active + .myProjJob {
+  display: block;
+}
 .contWrapper .contLayout .myProjJob {
   display: none;
   width: 40rem;
@@ -233,14 +239,6 @@ h1, h2, h3, h4, h5, h6, p {
 .contWrapper .contLayout .myPeoDetail {
   width: calc(100% - 640px - 60px);
   padding: 1.875rem;
-}
-.contWrapper .contLayout .myPeoDetail .tableWrap {
-  height: calc(100vh - 240px);
-  overflow-y: auto;
-}
-.contWrapper .contLayout .myPeoDetail .tableWrap th {
-  position: sticky;
-  top: 0;
 }
 .contWrapper .contLayout .projReqList {
   width: calc(100% - 50px);
@@ -294,9 +292,6 @@ h1, h2, h3, h4, h5, h6, p {
 .contWrapper .contLayout.is-active .myProjDetail {
   width: 45%;
   width: calc(100% - 350px - 640px - 60px);
-}
-.contWrapper .contLayout.is-active .myProjJob {
-  display: block;
 }
 .contWrapper .contLayout.is-active .myPeoDetail {
   width: calc(100% - 640px - 640px - 60px);
@@ -652,19 +647,18 @@ h1, h2, h3, h4, h5, h6, p {
   width: 25rem;
 }
 
-.tableWrap {
-  margin-top: 1.875rem;
-}
-
 .tableTop {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.625rem;
 }
-.tableTop .tCount {
-  border: none;
-  padding-right: 0.375rem;
-  background-position: right 0 top 50%;
+
+.tableBox {
+  overflow-y: auto;
+}
+.tableBox th {
+  position: sticky;
+  top: 0;
 }
 
 table {
@@ -687,6 +681,11 @@ table td {
   color: #878791;
   padding: 0.875rem 0;
 }
+table td.nodata {
+  display: table-cell;
+  font-weight: 500;
+  background: transparent;
+}
 table .ellipsis {
   width: 95%;
   overflow: hidden;
@@ -696,6 +695,7 @@ table .ellipsis {
   text-align: left;
   cursor: pointer;
   color: #0460d2;
+  padding-left: 0.625rem;
 }
 table .memo {
   padding: 1rem;
@@ -724,7 +724,6 @@ table .memo::before {
 .listBottom {
   width: 100%;
   padding: 1.875rem 2.5rem;
-  background: #fff;
   display: flex;
 }
 .listBottom .prefix {
@@ -737,9 +736,6 @@ table .memo::before {
   margin-left: 0.625rem;
 }
 .listBottom.pagingType {
-  padding: 2.5rem;
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -912,7 +908,7 @@ button.white,
   line-height: 2.125rem;
   padding: 0 0.4375rem;
   color: #29292c;
-  background-color: transparent;
+  background-color: #fff;
   border: 1px solid #e6e6eb;
 }
 button.white.smSize,
@@ -1232,6 +1228,30 @@ input[type=radio].chkSwitch:disabled + label {
   cursor: not-allowed;
 }
 
+.btnType input[type=checkbox] {
+  width: 0;
+  opacity: 0;
+  position: fixed;
+}
+.btnType input[type=checkbox] + label {
+  width: 5rem;
+  line-height: 2.5rem;
+  margin-right: 0.3125rem;
+  text-align: center;
+  color: #b7b7c4;
+  font-weight: 500;
+  background: #fff;
+  border-radius: 0.3125rem;
+  border: 1px solid #e6e6eb;
+}
+.btnType input[type=checkbox] + label::before {
+  display: none;
+}
+.btnType input[type=checkbox]:checked + label {
+  color: #0460d2;
+  border: 1px solid #0460d2;
+}
+
 /* 라디오박스 */
 input[type=radio] + label::before {
   background-position: 0px -20px;
@@ -1306,25 +1326,6 @@ input[type=radio]:checked + label::before {
 }
 
 /* SELECT */
-select {
-  width: 6.25rem;
-  height: 3.125rem;
-  padding-left: 0.875rem;
-  border-radius: 0.25rem;
-  border: 1px solid #e6e6eb;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: url(../img/icoSelect.png) no-repeat;
-  background-position: right 0.875rem top 50%;
-}
-select:focus {
-  outline: none;
-}
-select + input[type=text] {
-  width: auto;
-}
-
 .select {
   position: relative;
   width: 5.375rem;
@@ -1348,11 +1349,22 @@ select + input[type=text] {
 .select.laSize {
   width: 6.25rem;
   line-height: 3rem;
+  font-weight: 500;
   border: 1px solid #e6e6eb;
+}
+.select.laSize .selDefault {
+  line-height: 3rem;
+}
+.select.noBorder {
+  border: 0;
+  padding-right: 0.375rem;
+  background: transparent;
+  background-position: right 0 top 50%;
 }
 .select .selDefault {
   display: block;
   text-align: left;
+  line-height: 2.25rem;
   padding-left: 0.625rem;
 }
 .select .optionList {
@@ -1459,6 +1471,12 @@ select + input[type=text] {
   width: 0.1875rem;
   height: 1.0625rem;
   background-position: -142px 0;
+}
+.ico.setting {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: sub;
+  background-position: -160px 0;
 }
 .ico.left {
   width: 0.75rem;
@@ -1895,6 +1913,10 @@ h4 {
   right: 0;
   bottom: 0.1875rem;
 }
+.myProjList .listBottom {
+  padding: 2.5rem 0;
+  background: #fff;
+}
 
 .myProjDetail .boxWrap .head {
   padding: 1.25rem 2.5rem;
@@ -2033,12 +2055,31 @@ h4 {
   font-size: 1.125rem;
   font-weight: 700;
 }
+.myPeoDetail .tableBox {
+  height: calc(100vh - 240px);
+  margin-top: 1.875rem;
+}
 
 .genMember {
   padding: 1.25rem 2.5rem;
+  height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 .genMember h2 {
   margin-top: 1.875rem;
+}
+.genMember .condition .chkWrap {
+  display: inline-block;
+  margin-right: 3.125rem;
+}
+.genMember .tableTop {
+  margin-top: 1.875rem;
+}
+.genMember .tableBox {
+  overflow-y: inherit;
+}
+.genMember .tableBox td.nodata {
+  height: 13.75rem;
 }
 
 /*# sourceMappingURL=style.css.map */

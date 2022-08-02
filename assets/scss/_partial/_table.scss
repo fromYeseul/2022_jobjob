@@ -1,16 +1,16 @@
-.tableWrap{
-    margin-top: rem(30);
-}
-
 .tableTop{
     @include sideArray;
-    margin-bottom: rem(10);    
-    .tCount{
-        border: none;
-        padding-right: rem(6);
-        background-position: right 0 top 50%;
+    margin-bottom: rem(10);   
+}
+.tableBox{
+    overflow-y: auto;
+    th{
+        position: sticky;
+        top:0;
     }
 }
+
+
 
 
 
@@ -33,10 +33,16 @@ table{
     td{
         color: $tableGray;
         padding: rem(14) 0;
+        &.nodata{
+            display: table-cell;
+            font-weight: 500;
+            background: transparent;
+        }
     }
     .ellipsis{
         @include ellipsis;
         color: $mainColor;
+        padding-left: rem(10);
     }
     .memo{
         padding: rem(16);
@@ -75,7 +81,6 @@ table{
 .listBottom{
     width: 100%;
     padding: rem(30) rem(40);
-    background: $white;
     //box-shadow: -5px -5px 10px rgba(0,0,0,0.1);
     //position: absolute;
     //bottom: 0;
@@ -84,7 +89,6 @@ table{
         margin-left: rem(10);
     }
     &.pagingType{
-        padding: rem(40);
-        @include heightArray;
+        justify-content: center;
     }
 }

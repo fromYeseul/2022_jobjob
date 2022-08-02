@@ -1,25 +1,25 @@
 
 /* SELECT */
-select{    
-    //display: block;
-    width: rem(100);
-    height: rem(50);
-    padding-left: rem(14);
-    border-radius: rem(4);
-    border: 1px solid $inputGray;
-    //화살표 수정
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: url(../img/icoSelect.png) no-repeat;
-    background-position: right rem(14) top 50%;
-    &:focus{
-        outline: none;
-    }
-    & + input[type=text]{
-        width:auto;
-    }
-}
+// select{    
+//     //display: block;
+//     width: rem(100);
+//     height: rem(50);
+//     padding-left: rem(14);
+//     border-radius: rem(4);
+//     border: 1px solid $inputGray;
+//     //화살표 수정
+//     appearance: none;
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     background: url(../img/icoSelect.png) no-repeat;
+//     background-position: right rem(14) top 50%;
+//     &:focus{
+//         outline: none;
+//     }
+//     & + input[type=text]{
+//         width:auto;
+//     }
+// }
 
 
 
@@ -46,11 +46,22 @@ select{
   &.laSize{
     width: rem(100);
     line-height: rem(48);
+    font-weight: 500;
     border: 1px solid $inputGray;
+    .selDefault{
+      line-height: rem(48);
+    }
+  } 
+  &.noBorder{
+      border: 0;
+      padding-right: rem(6);
+      background: transparent;
+      background-position: right 0 top 50%;
   }
   .selDefault{
     display: block;
     text-align: left;
+    line-height: rem(36);
     padding-left: rem(10);
   }
   .optionList {
