@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일반회원</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+    <div class="layoutWrapper">
+        <div class="headerWrapper">
+            <div class="header">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo.png" alt="">
+                </a>
+                <!-- <div class="adminManage">
+                    <a href="#" class="is-active">My Project</a>
+                    <a href="#">My People</a>
+                </div> -->
+                <div class="userInfo">
+                    <ul>
+                        <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                        <li>
+                            <a href="#">내정보 수정</a>
+                            <a href="#" class="logState">로그아웃</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="is-active"><a href="#"><i class="ico home"></i><span class="menuTxt">홈</span><i></i></a></li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span><i></i></a></li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span><i></i></a></li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span><i></i></a></li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span><i></i></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span><i></i></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span><i></i></a></li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span><i></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>   
+        
+        <div class="contWrapper">
+            <div class="contLayout">
+                <div class="genMember">
+
+                    <button class="laSize">+신규등록(2차)</button>
+
+                    <h2>일반회원</h2>
+
+                    <div class="condition">
+                        <ul>
+                            <li>
+                                <p class="condiTit">의뢰목록</p>  
+                                <div class="chkWrap btnType">
+                                    <input type="checkbox" id="reqChkAll" class="chkAll">
+                                    <label for="reqChkAll">전체</label>
+                                    
+                                    <input type="checkbox" id="reqChk_1" class="chkEach" checked>
+                                    <label for="reqChk_1">에코</label>
+                                    
+                                    <input type="checkbox" id="reqChk_2" class="chkEach" >
+                                    <label for="reqChk_2">협력</label>
+                                    
+                                    <input type="checkbox" id="reqChk_3" class="chkEach" >
+                                    <label for="reqChk_3">대행</label>  
+                        
+                                    <input type="checkbox" id="reqChk_4" class="chkEach" >
+                                    <label for="reqChk_4">프리</label>                                         
+                                </div>
+                                
+                                    
+                                <input type="checkbox" id="license01" name="aa" class="hasTxt">
+                                <label for="license01">정보처리기사</label>
+                                <input type="checkbox" id="license02" name="aa" class="hasTxt">
+                                <label for="license02">KOSA</label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="condition">
+                        <ul>
+                            <li>
+                                <p class="condiTit">직군</p>
+                                <div class="select laSize">
+                                    <span class="selDefault">전체</span>
+                                    <ul class="optionList">
+                                        <li class="optionItem">열람</li>
+                                        <li class="optionItem">추천검토</li>
+                                        <li class="optionItem">인터뷰</li>
+                                        <li class="optionItem">최종합격</li>
+                                        <li class="optionItem">불합격</li>
+                                        <li class="optionItem">투입확정</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="condiTit">등급</p>
+                                <div class="select laSize">
+                                    <span class="selDefault">최종합격</span>
+                                    <ul class="optionList">
+                                        <li class="optionItem">열람</li>
+                                        <li class="optionItem">추천검토</li>
+                                        <li class="optionItem">인터뷰</li>
+                                        <li class="optionItem">최종합격</li>
+                                        <li class="optionItem">불합격</li>
+                                        <li class="optionItem">투입확정</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="condiTit" for="project2">스킬</label>
+                                <input type="text" id="project2" maxlength="20" placeholder="띄어쓰기로 and 검색 ( 예 : Java asp )">
+                            </li>
+                            <li class="hasBtn">
+                                <label class="condiTit" for="project2">이름, 전화번호</label>
+                                <input type="text" id="project2" maxlength="20" placeholder="이름 또는 전화번호">
+                                <button class="midSize">검색</button>
+                            </li>
+                        </ul>
+                    </div>
+     
+                    <div class="tableTop">
+                        <div class="select noBorder">
+                            <span class="selDefault">10개씩</span>
+                            <ul class="optionList">
+                                <li class="optionItem">20개씩</li>
+                                <li class="optionItem">50개씩</li>
+                                <li class="optionItem">100개씩</li>
+                            </ul>
+                        </div>
+
+                        <button class="white">
+                            <i class="ico download"></i>
+                            엑셀저장
+                        </button>                        
+                    </div>
+                    
+                    <div class="tableBox">
+                        <table class="colType">
+                            <colgroup>
+                                <col width="56px;">
+                                <col width="66px;">
+                                <col>
+                                <col>
+                                <col>
+
+                                <col>
+                                <col>
+                                <col width="22%;">
+                                <col>
+                                <col>
+
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>중요</th>
+                                    <th>소속</th>
+                                    <th>이름</th>
+                                    <th>
+                                        등급
+                                        <input type="checkbox" id="careerChk" name="aa" class="hasTxt">
+                                        <label for="careerChk">경력보기</label>
+                                    </th>
+                                    <th>연락처</th>
+                                    <th>보유기술</th>
+                                    <th>Special</th>
+                                    <th>평가</th>
+                                    <th>정보처리</th>
+                                    <th>KOSA</th>
+                                    <th>가입일</th>
+                                    <th>이력서</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="nodata" colspan="13">검색 결과가 없습니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="listBottom pagingType">                        
+                        <div class="paging">
+                            <ul>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico left2_dou"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico left2"></span>
+                                    </a>
+                                </li>
+                                <li class="is-active">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                                <li>8</li>
+                                <li>9</li>
+                                <li>10</li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico right2 is-active"></span>
+                                    </a>
+                                </li>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico right2_dou is-active"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--우측패널-->
+                <div class="rPanelLayer">
+                    우측패널 레이어
+                </div>
+                <div class="rPanel">
+                    <ul>
+                        <li><i class="ico searchMem"></i></li>
+                        <li><i class="ico schedule"></i></li>
+                        <li><i class="ico mail"></i></li>
+                    </ul>
+                </div>
+                <!--우측패널-->
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+</body>
+</html>

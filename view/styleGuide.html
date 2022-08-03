@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styleGuide</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>     
+        body.styleguide {
+          width: calc(100% - 30px);
+          margin: 0 auto;
+          margin-bottom:100px;
+        }   
+        .clip {
+          border-left: 10px solid #ccc;
+          border-bottom: 10px solid #f4f5f9;
+          margin-top: 80px;
+          margin-bottom: 30px;
+        }    
+        .clip > span {position: absolute;}
+        hr {border: 0;}
+
+    </style>
+    
+</head>
+<body class="styleguide">    
+
+
+    <div class="clip"><span>버튼</span></div>
+    <hr>
+        <div class="btnWrap">
+            <button>default (submit)</button>
+            <button disabled>disabled</button>
+
+            <button type="button">button</button>
+
+            <a href="#" class="button">a type</a>
+
+            <br><br><br>
+            
+            <button class="fullSize">fullSize</button>
+            <button class="laSize">laSize</button>
+            <button class="midSize">midSize</button>
+            <button class="smSize">smSize</button>
+            <button class="white">download</button>
+
+            <br><br><br>
+
+            <a href="#" class="button fullSize">fullSize</a>
+            <a href="#" class="button laSize">laSize</a>
+            <a href="#" class="button midSize">midSize</a>
+            <a href="#" class="button smSize">smSize</a>
+
+            <br>
+            
+            <a href="#" class="button round">round</a>
+
+            <br>
+
+            <a href="#" class="button round order">order</a>
+            <a href="#" class="button round cancel">cancel</a>
+            <a href="#" class="button round checking">checking</a>
+            <a href="#" class="button round short">round</a>
+            <a href="#" class="button round reject">reject</a>
+            
+            <span class="button round order">order</span>
+            <span class="button round cancel">cancel</span>
+            <span class="button round checking">checking</span>
+            <span class="button round short">round</span>
+            <span class="button round reject">reject</span>
+            
+            <br>
+
+            <span class="button label">label</span>
+
+            <a href="#" class="button white">download</a>
+
+        </div>  
+
+        <br><br><br>
+
+        <div class="btnWrap center">
+            <button>default (submit)</button>
+            <button disabled>disabled</button>
+        </div>  
+
+        <br><br><br>
+        
+        <div class="btnWrap right">
+            <button>default (submit)</button>
+            <button disabled>disabled</button>
+        </div>  
+    <!--//버튼-->
+    
+
+
+    <div class="clip"><span>인풋박스(텍스트) + 에러메시지 / 인풋박스(패스워드) + 해제</span></div>
+    <hr>
+        <p class="inputTit">검색</p>
+        <div class="inputIco">
+            <label for="search" class="ico search"></label>
+            <button class="ico search"></button>
+            <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
+        </div>
+        <p class="error">* 아이디가 틀렸습니다.</p>
+
+        <br>
+        
+        <p class="inputTit">비밀번호</p>
+        <div class="inputIco">
+            <label for="pw" class="ico search"></label>
+            <button class="ico showPw"></button>
+            <input type="password" id="pw" maxlength="" placeholder="비밀번호를 입력하세요.">
+        </div>
+        <p class="error">* 비밀번호가 틀렸습니다.</p>
+    <!--//인풋박스(텍스트, 패스워드)-->
+
+
+
+    <div class="clip"><span>인풋박스 + 버튼</span></div>
+    <hr>
+        <label for="project">프로젝트 이름</label>
+        <input type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+
+        <br>
+
+        <div class="hasBtn">
+            <label for="project2">프로젝트 이름22</label>
+            <input type="text" id="project2" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+            <button>default (submit)</button>
+        </div>
+        
+        <div class="hasBtn">            
+            <div class="inputIco">
+                <label for="search" class="ico search"></label>
+                <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
+                <button class="ico search"></button>
+            </div>
+            <button>default (submit)</button>
+        </div>
+        
+        
+    <!--//인풋박스 + 버튼-->
+
+
+    
+
+    <div class="clip"><span>인풋박스(자동완성, 칩타입)</span></div>
+    <hr>
+    <input type="text">
+    <!--//인풋박스(자동완성, 칩타입)-->
+
+    
+
+    <div class="clip"><span>파일첨부</span></div>
+    <hr>
+        <div class="inputFile">
+            <label for="fileUpload">Choose a profile picture:</label>
+            <input type="file" id="fileUpload" name="fileUpload">
+        </div>
+    <!--//파일첨부-->
+
+
+
+    <div class="clip"><span>텍스트영역(버튼내부)</span></div>
+    <hr>
+        <div class="textForm">
+            <textarea name="" id="" rows="10"></textarea>
+            <div class="btnWrap right">
+                <button>default (submit)</button>
+                <button disabled>disabled</button>
+            </div>  
+        </div>
+    <!--//텍스트영역(버튼내부)-->
+
+
+
+        
+    <div class="clip"><span>텍스트영역(버튼외부)</span></div>
+    <hr>
+        <div class="textForm">
+            <textarea name="" id="" rows="10"></textarea>
+        </div>
+        <div class="btnWrap center">
+            <button>default (submit)</button>
+            <button disabled>disabled</button>
+        </div>  
+    <!--//텍스트영역(버튼외부)-->
+
+
+
+    <div class="clip"><span>체크박스</span></div>
+    <hr>
+        <input type="checkbox" id="galaxy" name="mobile">
+        <label for="galaxy">galaxy</label>
+        <input type="checkbox" id="iphone" name="mobile" checked>
+        <label for="iphone">iphone</label>
+
+        <br>
+        
+        <input type="checkbox" id="a1" name="aa" class="hasTxt">
+        <label for="a1">galaxy</label>
+        <input type="checkbox" id="a2" name="aa"  class="hasTxt" checked>
+        <label for="a2">iphone</label>
+    <!--//체크박스-->
+
+
+
+    <div class="clip"><span>체크박스(즐겨찾기)</span></div>
+    <hr>
+        <input type="checkbox" id="bMark" class="bMark" name="bMark" checked>
+        <label for="bMark"></label>
+    <!--//체크박스(즐겨찾기)-->
+
+    
+
+    <div class="clip"><span>스위치토글(chk)</span></div>
+    <!--???????? 스위치토글은 왜 checkbox로 쓰지?-->
+    <hr>
+        <input id="s2" type="checkbox" class="chkSwitch">
+        <label for="s2">Switch</label>
+        <input id="s22" type="checkbox" class="chkSwitch" disabled>
+        <label for="s22">disabled</label>
+        <input id="s222" type="checkbox" class="chkSwitch" checked disabled>
+        <label for="s222">chk disabled</label>
+    <!--//스위치토글-->
+
+
+
+    <div class="clip"><span>전체선택(chk)</span></div>
+    <hr>
+        <div class="chkWrap">
+            <input type="checkbox" id="chkAll" class="chkAll">
+            <label for="chkAll">전체 동의</label>
+            
+            <input type="checkbox" id="chk_1" class="chkEach" checked>
+            <label for="chk_1">개인정보 처리방침 동의</label>
+            
+            <input type="checkbox" id="chk_2" class="chkEach" >
+            <label for="chk_2">서비스 이용약관 동의</label>
+            
+            <input type="checkbox" id="chk_3" class="chkEach" >
+            <label for="chk_3">마케팅 수신 동의</label>            
+        </div>
+
+        <div class="chkWrap">
+            <input type="checkbox" id="chkAAll" class="chkAll">
+            <label for="chkAAll">전체 동의</label>
+            
+            <input type="checkbox" id="chk_4" class="chkEach" checked>
+            <label for="chk_4">개인정보 처리방침 동의</label>
+            
+            <input type="checkbox" id="chk_5" class="chkEach" >
+            <label for="chk_5">서비스 이용약관 동의</label>
+            
+            <input type="checkbox" id="chk_6" class="chkEach" >
+            <label for="chk_6">마케팅 수신 동의</label>            
+        </div>
+
+    <!--//전체선택(chk)-->
+
+
+
+    <div class="clip"><span>라디오박스</span></div>
+    <hr>
+        <input type="radio" id="apple" name="fruits" value="apple" checked>
+        <label for="apple">apple</label>
+        <input type="radio" id="banana" name="fruits" value="banana">
+        <label for="banana">banana</label>
+    <!--//라디오박스-->
+
+
+
+    <div class="clip"><span>탭타입 라디오박스</span></div>
+    <hr>        
+        <div class="tabType">
+            <input type="radio" id="americano" name="coffee" value="americano" checked>
+            <label for="americano">아메리카노</label>
+            <input type="radio" id="latte" name="coffee" value="latte">
+            <label for="latte">라떼</label>
+        </div>
+    <!--//탭타입 라디오박스-->
+
+
+
+    <div class="clip"><span>별점</span></div>
+    <hr>
+        <div class="starWrap">
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 0.5개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 1개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 1.5개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 2개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 2.5개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 3개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 3.5개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 4개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 4.5개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 5개</span>
+                </span>
+            </label>
+        </div>
+    <!--//별점-->
+
+
+
+    <div class="clip"><span>셀렉트박스</span></div>
+    <hr>
+        <label for="pet">Choose a pet:</label>
+        <select name="pet" id="pet">
+            <option value="">--Please choose an option--</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option>
+        </select>
+    <!--//셀렉트박스-->
+
+
+
+    <div class="clip"><span style="color:#ccc;">셀렉트박스(직접입력)</span></div>
+    <hr>
+        <label for="pet">Choose a pet:</label>
+        <select name="pet" id="pet">
+            <option value="">--Please choose an option--</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option>
+        </select>
+        <input type="text" id="directInput" name="directInput">
+    <!--//셀렉트박스(직접입력)-->
+
+
+
+    <div class="clip"><span>날짜</span></div>
+    <hr>
+    <input type="date">
+    <!--//날짜-->
+
+
+
+    <div class="clip"><span>로딩이미지</span></div>
+    <div class="clip"><span>테이블(가로타입)</span></div>
+    <hr>
+        <table class="colType">
+            <thead>
+                <tr>
+                    <th colspan="2">headerheaderheader</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>body</td>
+                    <td>body</td>
+                </tr>
+                <tr>
+                    <td>body</td>
+                    <td>body</td>
+                </tr>
+                <tr>
+                    <td>body</td>
+                    <td>body</td>
+                </tr>
+            </tbody>
+        </table>
+    <!--//테이블(가로타입)-->
+
+
+
+    <div class="clip"><span>테이블(세로타입)</span></div>
+    <hr>
+        <table class="rowType">
+            <tbody>
+                <tr>
+                    <th rowspan="2">headerheader</th>
+                    <td>body</td>
+                    <td>body</td>
+                </tr>
+                <tr>
+                    <td>body</td>
+                    <td>body</td>
+                </tr>
+                <tr>
+                    <th>header</th>
+                    <td>body</td>
+                    <td>body</td>
+                </tr>
+            </tbody>
+        </table>
+    <!--//테이블(세로타입)-->
+
+
+
+    <div class="clip"><span style="color:#ccc;">테이블(drag&drop)</span></div>
+    <hr>
+    <!--//테이블(drag&drop)-->
+
+
+
+    <div class="clip"><span>데이트피커</span></div>
+    <hr>
+    <!--//데이트피커-->
+    
+
+
+    <div class="clip"><span> 기간검색</span></div>
+    <hr>
+    <!--//기간검색-->
+
+
+
+    <div class="clip"><span>툴팁박스</span></div>
+    <hr>
+        <div class="hasTooltip">
+            <div class="">안녕하세요.</div>
+            <div class="tooltip"> Hi~</div>
+        </div>
+    <!--//툴팁박스-->
+
+
+
+    <div class="clip"><span>토스트팝업</span></div>
+    <hr>
+    <!--//토스트팝업-->
+
+
+
+    <div class="clip"><span>bottom 토스트팝업</span></div>
+    <hr>
+    <!--//bottom 토스트팝업-->
+
+
+
+    <div class="clip"><span>레이어팝업</span></div>
+    <hr>   
+        <a href="#layer01" class="layerOpen">팝업오픈 버튼</a>
+        <div id="layer01" class="modalLayer center">
+            <div class="layerBox">
+                <div class="modalHeader">
+                    <span class="tit">타이틀</span>
+                    <button class="layerClose">닫기버튼</button>
+                </div>
+                <div class="modalCont">
+                    <p>컨텐츠1111</p>
+                </div>
+                <div class="modalFooter">
+                    <p class="btnCover">
+                        <button class="">확인</button>
+                    </p>
+                </div>
+            </div>        
+            <div class="layerDim"></div>    
+        </div>
+        <a href="#layer02" class="layerOpen">팝업오픈 버튼</a>
+        <div id="layer02" class="modalLayer center">
+            <div class="layerBox">
+                <div class="modalHeader">
+                    <span class="tit">타이틀</span>
+                    <button class="layerClose">닫기버튼</button>
+                </div>
+                <div class="modalCont">
+                    <p>컨텐츠22222</p>
+                </div>
+                <div class="modalFooter">
+                    <p class="btnCover">
+                        <button class="">확인</button>
+                    </p>
+                </div>
+            </div>        
+            <div class="layerDim"></div>    
+        </div>
+    <!--//레이어팝업-->
+
+    
+
+    <div class="clip"><span>탭</span></div>
+    <hr>
+        <div class="tabWrapper" id="tab01">
+            <ul class="tabBtnWrap">
+                <li class="tabBtn">
+                    <a href="#tab-1" class="is-active">menu1</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#tab-2">menu2</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#tab-3">menu3</a>
+                </li>
+            </ul>
+            <div class="tabContWrap">
+                <div id="tab-1" class="tabCont is-active">aaa</div>
+                <div id="tab-2" class="tabCont">bbb</div>
+                <div id="tab-3" class="tabCont">ccc</div>
+            </div>
+        </div>
+        <div class="tabWrapper" id="tab02">
+            <ul class="tabBtnWrap">
+                <li class="tabBtn">
+                    <a href="#bbb-1" class="is-active">menu1</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#bbb-2">menu2</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#bbb-3">menu3</a>
+                </li>
+            </ul>
+            <div class="tabContWrap">
+                <div id="bbb-1" class="tabCont is-active">aaa</div>
+                <div id="bbb-2" class="tabCont">bbb</div>
+                <div id="bbb-3" class="tabCont">ccc</div>
+            </div>
+        </div>
+    <!--//탭-->
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
