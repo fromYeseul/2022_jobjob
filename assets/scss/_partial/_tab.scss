@@ -1,0 +1,79 @@
+.tabBtnWrap{
+    @include sideArray;
+    padding: 0 rem(50);
+    padding-top: rem(30);
+    border-bottom:1px solid $tabGray;    
+    li{
+        display: inline-block;
+        text-align: center;
+        a{
+            display: inline-block;
+            color: $cancel; 
+            font-weight: 700;
+            padding-bottom: rem(7);
+            &.is-active{
+                color: $black;
+                border-bottom: 3px solid $black;
+            }
+        }
+    }
+    &.wideType{
+        @include flex_1_1;
+        padding: 0 rem(45);
+        padding-top: rem(33);
+        a{
+            display: block;
+        }
+    }
+    &.btnType{        
+        display: block;
+        border: 0;
+        padding: 0;
+        text-align: left;
+        li{
+            line-height: rem(50);
+            text-align: center;
+            font-weight: 500;
+            &:first-child{
+                a{
+                    border-radius: rem(4) 0 0 rem(4);
+                }                
+            } 
+            &:last-child{
+                margin-left: -3px;
+                a{
+                    border-radius: 0 rem(4) rem(4) 0;
+                }                
+            }
+            a{
+                display: inline-block;
+                width: rem(96);
+                height: rem(50);
+                color: $cancel;
+                padding-bottom: 0;
+                background-color: $white;
+                border: 1px solid $inputGray;
+                &.is-active{                    
+                    color: $white;
+                    background-color: $mainColor;
+                    border: 1px solid $mainColor;
+                }
+            }
+        }
+        &.wideType{
+            a{
+                width: rem(194);
+                font-size: rem(18);
+            }
+        }
+    }
+}
+.tabContWrap{
+    .tabCont{
+        display: none;
+        position: relative;
+        &.is-active{
+            display: block;
+        }
+    }
+}

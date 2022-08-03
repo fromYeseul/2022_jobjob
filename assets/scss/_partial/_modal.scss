@@ -1,0 +1,66 @@
+.modalLayer{
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    z-index: 1000;
+    &.is-active{
+        display: block;
+        visibility: visible;
+    }
+    &.center{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+    }    
+    .layerBox{
+        position: relative;
+        overflow-y: auto;
+        width: rem(570);
+        max-height: 100%;
+        padding: rem(30);
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: $white;
+        border-radius: rem(4);
+        border:1px solid $layoutColor;
+        z-index: 10;
+    }
+    .layerDim{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 5;
+    }
+}
+
+.modalHeader{
+    @include clear_float;
+    .layerClose{
+        float: right;
+    }
+}
+.tabBtnWrap{
+    text-align: center;
+}
+.modalCont{
+    margin-top: rem(50);
+}
+.modalFooter{
+    width: 100%;
+    background: $white;
+    @include flex_1_2;
+    .suffix{
+        margin-left: rem(10);
+    }
+    &.pagingType{
+        padding: rem(40);
+        @include heightArray;
+    }
+}

@@ -1,0 +1,51 @@
+.header{        
+    position: relative;
+    height: rem(95);
+    padding: 0 rem(40);   //?????????box-sizing이 왜 안먹지.......
+    border-bottom: 1px solid $layoutColor;
+    align-items: center;
+    @include sideArray;       
+    .adminManage{
+        a{        
+            margin: 0 rem(25);
+            padding: rem(5) rem(4);
+            color: $cancel;
+            font-weight: 700;
+            font-size: rem(20);
+            &.is-active{
+                color: $mainColor;
+                border-bottom: 4px solid $mainColor;
+            }
+        }
+    }
+    .userInfo{
+        //@include heightArray;
+        li{
+            display: inline-block;
+            margin-left: rem(35);
+            &.userTeam{
+                font-weight: 700;
+            }
+            .logState{
+                position: relative;
+                margin-left: rem(16);
+                &::before{
+                    content: "";
+                    width: 1px;
+                    height: rem(16);
+                    background: #29292c;
+                    position: absolute;
+                    left: -9px;
+                    top: 50%;
+                    transform: translateY(-45%);
+                }
+            }
+        }
+    }
+    .ico{        
+        width: rem(22);
+        height: rem(22);
+        background-image: url(../img/iconImg.jpg);
+    }
+    
+}

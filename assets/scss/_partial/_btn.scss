@@ -1,0 +1,135 @@
+.btnWrap{
+    &.center{
+        text-align: center;
+    }
+    &.right{
+        text-align: right;
+    }
+}
+
+
+button, 
+.button{
+    display: inline-block;
+    color: $white;
+    text-align: center;
+    border-radius: rem(6);
+    background-color: $mainColor;
+    cursor: pointer;
+    //disable
+    &:disabled{
+        background: $cancel;
+        cursor:not-allowed;
+    }
+    //버튼간격
+    & + button,
+    & + .button{
+        margin-left: rem(4);
+    }
+    //사이즈
+    &.fullSize{
+        width: 100%;
+        line-height: rem(54);
+        font-weight: 700;
+    }
+    &.laSize{
+        min-width: rem(130);
+        padding: 0 rem(20);
+        line-height: rem(55);
+        font-size: rem(18);
+        font-weight: 700;
+    }
+    &.midSize{
+        width: rem(90);
+        line-height: rem(50);
+        &.low{
+            line-height: rem(40);
+        }
+    }
+    &.smSize{
+        width: rem(74);
+        line-height: rem(30);
+    }
+    //디자인
+    &.ico{
+        background-color: inherit;
+    }
+    &.white{
+        //width: rem(98);
+        line-height: rem(34);
+        padding: 0 rem(7);
+        color: $black;
+        background-color: $white;
+        border: 1px solid $inputGray;
+        &.smSize{
+            width: rem(74);
+            line-height: rem(30);
+            border: 1px solid $gray;
+        }
+    }
+    &.round{
+        // width: rem(64);
+        // height: rem(32);
+        min-width: rem(64);
+        padding: 0 rem(7);
+        line-height: rem(30);
+        color: $black;
+        background: $white;
+        border: 1px solid $gray;
+        border-radius: rem(20);        
+        &.disabled{
+            color: $layoutColor;
+            border: 1px solid $layoutColor;
+        }
+    }
+    //상태
+    &.order{
+        color: $highlight;
+        border-color: $highlight;
+    }
+    &.cancel{
+        color: $cancel;
+        border-color: $cancel;
+    }
+    &.checking{
+        color: $onGoing;
+        border-color: $onGoing;
+    }
+    &.short{
+        color: $delay;
+        border-color: $delay;
+    }
+    &.reject{
+        color: $delay;
+        border-color: $delay;
+    }
+    //라벨
+    &.label{
+        min-width: rem(44);
+        line-height: rem(22);
+        color: $systemGray;
+        font-size: rem(14);
+        background: $bgColor;
+        border-radius: rem(20);
+        border-color: $tableBgGray;
+        cursor: inherit;
+    }
+    &.point{
+        display: inline-block;
+        width: rem(44);
+        line-height: rem(24);
+        color: $white;
+        font-size: rem(14);
+        text-align: center;
+        background: $delay;
+        border-radius: rem(5);
+        margin-right: rem(4);
+    }
+}
+
+
+span{
+    &.button{
+        cursor:inherit;
+    }
+}

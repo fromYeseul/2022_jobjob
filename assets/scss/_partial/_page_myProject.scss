@@ -1,0 +1,170 @@
+.myProjList{
+    .boxListWrap{    
+        //padding-bottom: 100px;  
+        height: calc(100vh - 202px);
+    }    
+    .boxList{
+        height: rem(130);
+        padding: rem(20);
+        margin-bottom: rem(1);
+        border-radius: 0;
+        border:0;
+        &.is-active{
+            border: 1px solid #0460d2;
+        }
+        .cont{
+            margin-top: rem(10);
+            position: relative;
+            .prefix{
+                width: 78%;
+                @include ellipsis-double;
+            }
+            .suffix{
+                color: $subInfo;
+                font-size: rem(14);
+                position: absolute;
+                right: 0;
+                bottom: rem(3);
+            }   
+        }
+    }
+    .listBottom{
+        padding: rem(40) 0;
+        background: $white;
+    }
+}
+
+
+.myProjDetail{ 
+    .boxWrap{
+        .head{
+            padding: rem(20) rem(40);
+        }
+        .cont{
+            padding: rem(30) rem(40);
+        }
+        .part{
+            margin-top: rem(40);
+            li{
+                margin-top: rem(10);
+            }
+        }
+        .bottom{
+            margin-top: rem(38);
+            & + .button{
+                margin-left: rem(8);
+            }
+        }
+    }
+    .flex{
+        flex-wrap:wrap;
+        li{
+            width: 20%;
+            min-width: rem(104);
+            height: rem(90);
+            padding: rem(20) 0;
+            border: 1px solid $layoutColor;
+            border-left: 0;
+            text-align: center;
+            @include heightArray;
+            cursor: pointer;
+            &:last-child{                
+                border-right:0;
+            }
+            &.is-active{
+                color: $white;
+                font-weight: 700;
+                background: $mainColor;
+                border: 1px solid $mainColor;
+            }
+        }
+    }
+}
+
+
+.myProjJob{
+    //width: 30%;
+    //min-width: rem(616);
+
+    .boxWrap{
+        margin-top: rem(10);
+    }
+    .partList{
+        height: rem(168);
+        padding: rem(10) rem(8) 0;
+        border: 1px solid $layoutColor;
+        ul{
+            height: 100%;
+            padding-right: rem(5);
+            overflow-y: auto;
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                width: 30%;
+                font-size: rem(14);
+                font-weight: 500;
+                margin:rem(9);
+                padding: rem(12) rem(14);
+                border-radius: rem(5);
+                border:1px solid $layoutColor;
+                box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+                cursor: pointer;
+                &.is-active{
+                    border:1px solid $mainColor;
+                }
+                &:first-child{
+                    padding: rem(30) rem(14);
+                }
+            }
+            p{
+                @include sideArray;
+                align-items: center;
+                .partWrap,
+                .memNum{
+                    font-size: rem(18);
+                    font-weight: 700;
+                }
+                .label{
+                    width: rem(44);
+                    font-weight: 400;
+                }
+                .deadline{
+                    font-size: rem(14);
+                }
+                & + p{
+                    margin-top: rem(10);
+                }
+            }
+        }
+    }
+    .tabBtnWrap{
+        font-size: rem(18);
+    }
+    .tabContWrap{
+        .inputIco{
+            width: calc(100% - 98px);
+        }
+        .yScroll{
+            padding: rem(20) rem(40);
+            //padding-bottom: rem(114);
+            height: calc(100vh - 558px);
+            @include scroll_0;
+            .listTop{
+                margin-top: rem(30);
+            }
+        }
+    }
+    //스크롤할 때
+    &.is-active{
+        overflow-y: scroll;
+        height: calc(100vh - 95px);
+        .wrap{
+            height: calc(100vh + 63px);
+        }
+        .tabContWrap{
+            .yScroll{
+                height: calc(100vh - 328px);
+            }
+        }
+    }
+}

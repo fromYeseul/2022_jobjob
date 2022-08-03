@@ -1,0 +1,98 @@
+
+/* SELECT */
+// select{    
+//     //display: block;
+//     width: rem(100);
+//     height: rem(50);
+//     padding-left: rem(14);
+//     border-radius: rem(4);
+//     border: 1px solid $inputGray;
+//     //화살표 수정
+//     appearance: none;
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     background: url(../img/icoSelect.png) no-repeat;
+//     background-position: right rem(14) top 50%;
+//     &:focus{
+//         outline: none;
+//     }
+//     & + input[type=text]{
+//         width:auto;
+//     }
+// }
+
+
+
+.select {
+  position: relative;
+  //z-index: 1;
+  width: rem(86);
+  line-height: rem(30);
+  background: $white;
+  border-radius: rem(4);
+  border: 1px solid $selGray;
+  font-size: rem(14);
+  cursor: pointer;
+  &::before{
+    content: '';
+    width: rem(12);
+    height: rem(6);
+    background: url(../img/icoSelect.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%); 
+    right: rem(10); 
+  }
+  &.laSize{
+    width: rem(100);
+    line-height: rem(48);
+    font-weight: 500;
+    border: 1px solid $inputGray;
+    .selDefault{
+      line-height: rem(48);
+    }
+  } 
+  &.noBorder{
+      border: 0;
+      padding-right: rem(6);
+      background: transparent;
+      background-position: right 0 top 50%;
+  }
+  .selDefault{
+    display: block;
+    text-align: left;
+    line-height: rem(36);
+    padding-left: rem(10);
+  }
+  .optionList {
+    display: none;
+    position: absolute; 
+    top: rem(33);
+    left: -1px;
+    width: calc(100% + 2px);
+    color: $subInfo;
+    padding: 0;
+    border-radius: rem(4);
+    border:1px solid $selOptList;
+    background: $white;
+    z-index: 10;
+    .optionItem {
+      display: block;
+      padding: 0 rem(10);
+      &:hover {
+        color: $black;
+        font-weight: 500;
+        background: $selHover;
+      }
+    }
+  }
+  &.is-active{
+    border: 1px solid $mainColor;
+    &::before{
+      background: url(../img/icoSelect.png) no-repeat;
+    }
+    .optionList {
+      display: block;
+    }
+  }
+}

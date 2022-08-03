@@ -1,0 +1,97 @@
+.tableTop{
+    @include sideArray;
+    margin-bottom: rem(10);   
+}
+.tableBox{
+    overflow-y: auto;
+    th{
+        position: sticky;
+        top:0;
+    }
+}
+
+
+
+
+
+
+table{
+    width: 100%;
+    th, td{
+        text-align: center;
+        background: $white;
+        border-top: 1px solid $tableBorder;
+        border-bottom: 1px solid $tableBorder;
+    }
+    th{
+        color: $white;
+        font-weight: 500;
+        padding: rem(12) 0;
+        border-top: none;
+        background: $tableBgGray;
+    }
+    td{
+        color: $tableGray;
+        padding: rem(14) 0;
+        &.nodata{
+            display: table-cell;
+            font-weight: 500;
+            background: transparent;
+        }
+    }
+    .ellipsis{
+        @include ellipsis;
+        padding: rem(14);
+    }
+    .anchor{
+        color: $mainColor;
+        cursor: pointer;
+    }
+    .memo{
+        padding: rem(16);
+        position: relative;
+        text-align: left;
+        &::before{
+            content:'';
+            width: 1px;
+            height: rem(40);
+            background: $tableBorder;
+            position: absolute;
+            top:50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+
+
+
+.listTop{
+    //padding: 0 rem(10);
+    &.flex{
+        @include sideArray;
+    }
+    label{            
+        margin-right: rem(16);
+    }
+    // button{
+    //     float: right;
+    //     margin-top: -5px;
+    // }
+}
+
+.listBottom{
+    width: 100%;
+    padding: rem(30) rem(40);
+    //box-shadow: -5px -5px 10px rgba(0,0,0,0.1);
+    //position: absolute;
+    //bottom: 0;
+    @include flex_1_2;
+    .suffix{
+        margin-left: rem(10);
+    }
+    &.pagingType{
+        justify-content: center;
+    }
+}
