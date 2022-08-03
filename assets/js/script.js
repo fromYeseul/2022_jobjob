@@ -75,16 +75,16 @@ function gnbNav(){
 gnbNav();
 
 
-/* MYPROJECT 레이아웃 */
-function projLayout(){
-    //let contLayout = document.querySelector('.contLayout');
-    let myProjDetail = document.querySelector('.myProjDetail');
+// /* MYPROJECT 레이아웃 */
+// function projLayout(){
+//     //let contLayout = document.querySelector('.contLayout');
+//     let myProjDetail = document.querySelector('.myProjDetail');
 
-    myProjDetail.addEventListener('click', function(){
-        myProjDetail.classList.toggle('is-active');
-    });
-}
-projLayout();
+//     myProjDetail.addEventListener('click', function(){
+//         myProjDetail.classList.toggle('is-active');
+//     });
+// }
+// projLayout();
 
 
 /* 우측패널 */

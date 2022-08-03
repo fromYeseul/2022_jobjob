@@ -101,6 +101,14 @@ h1, h2, h3, h4, h5, h6, p {
   color: #ff1236;
 }
 
+.eHigh {
+  color: #009ce0;
+}
+
+.eLow {
+  color: #ff1236;
+}
+
 .dNear {
   color: #ff1236;
 }
@@ -240,9 +248,10 @@ h1, h2, h3, h4, h5, h6, p {
   width: calc(100% - 640px - 60px);
   padding: 1.875rem;
 }
-.contWrapper .contLayout .projReqList {
-  width: calc(100% - 50px);
-  padding: 2.375rem 2.5rem;
+.contWrapper .contLayout .projReqList, .contWrapper .contLayout .genMember {
+  height: calc(100vh - 100px);
+  padding: 1.25rem 2.5rem;
+  overflow-y: auto;
 }
 .contWrapper .contLayout .rPanelLayer {
   width: 0;
@@ -694,8 +703,11 @@ table .ellipsis {
   white-space: nowrap;
   text-align: left;
   cursor: pointer;
+  padding: 0.875rem;
+}
+table .anchor {
   color: #0460d2;
-  padding-left: 0.625rem;
+  cursor: pointer;
 }
 table .memo {
   padding: 1rem;
@@ -1146,6 +1158,10 @@ input[type=checkbox]:checked + label::before,
 input[type=radio]:checked + label::before {
   background-position: -20px 0;
 }
+input[type=checkbox].hasTxt + label,
+input[type=radio].hasTxt + label {
+  margin-right: 0.625rem;
+}
 input[type=checkbox].hasTxt + label::before,
 input[type=radio].hasTxt + label::before {
   margin-right: 0.375rem;
@@ -1228,6 +1244,7 @@ input[type=radio].chkSwitch:disabled + label {
   cursor: not-allowed;
 }
 
+/* 버튼타입 */
 .btnType input[type=checkbox] {
   width: 0;
   opacity: 0;
@@ -1275,6 +1292,7 @@ input[type=radio]:checked + label::before {
   text-align: center;
   color: #b7b7c4;
   font-weight: 500;
+  background: #fff;
   border: 1px solid #e6e6eb;
 }
 .tabType input[type=radio] + label::before {
@@ -1344,7 +1362,7 @@ input[type=radio]:checked + label::before {
   position: absolute;
   top: 50%;
   transform: translateY(-40%);
-  right: 0.3125rem;
+  right: 0.625rem;
 }
 .select.laSize {
   width: 6.25rem;
@@ -2060,11 +2078,6 @@ h4 {
   margin-top: 1.875rem;
 }
 
-.genMember {
-  padding: 1.25rem 2.5rem;
-  height: calc(100vh - 100px);
-  overflow-y: auto;
-}
 .genMember h2 {
   margin-top: 1.875rem;
 }
@@ -2075,11 +2088,15 @@ h4 {
 .genMember .tableTop {
   margin-top: 1.875rem;
 }
-.genMember .tableBox {
-  overflow-y: inherit;
-}
 .genMember .tableBox td.nodata {
   height: 13.75rem;
+}
+
+.projReqList h2 {
+  margin-top: 1.875rem;
+}
+.projReqList .tableTop {
+  margin-top: 1.875rem;
 }
 
 /*# sourceMappingURL=style.css.map */
