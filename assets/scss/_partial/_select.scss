@@ -43,6 +43,13 @@
     transform: translateY(-40%); 
     right: rem(10); 
   }
+  &.wideSize{
+    width: rem(180);
+    line-height: rem(40);
+    .optionList {
+      top: rem(40);
+    }
+  }
   &.laSize{
     width: rem(100);
     line-height: rem(48);
@@ -60,7 +67,8 @@
   }
   .selDefault{
     display: block;
-    text-align: left;
+    //text-align: left;
+    font-weight: 500;
     line-height: rem(36);
     padding-left: rem(10);
   }
@@ -84,11 +92,24 @@
         font-weight: 500;
         background: $selHover;
       }
+      label{
+        font-weight: 400;
+      }
     }
   }
+  //체크박스를 가진 select
+  label{
+      display: block;
+      &::before{
+        vertical-align: middle;
+      }
+    }
+
   &.is-active{
     border: 1px solid $mainColor;
     &::before{
+      top: 45%;
+      transform: rotate(180deg);
       background: url(../img/icoSelect.png) no-repeat;
     }
     .optionList {

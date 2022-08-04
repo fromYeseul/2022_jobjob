@@ -470,9 +470,6 @@ h1, h2, h3, h4, h5, h6, p {
   height: calc(100vh - 97px);
   border: 1px solid #e6e6eb;
 }
-.rPanelLayer .rPanelCont h4 {
-  margin-bottom: 1.625rem;
-}
 .rPanelLayer .rPanelCont .yScroll {
   height: calc(100vh - 317px);
   overflow-y: auto;
@@ -578,7 +575,7 @@ h1, h2, h3, h4, h5, h6, p {
   overflow-y: auto;
   width: 35.625rem;
   max-height: 100%;
-  padding: 1.875rem;
+  padding: 2.5rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -586,6 +583,10 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 0.25rem;
   border: 1px solid #e6e6eb;
   z-index: 10;
+}
+.modalLayer .layerBox.smSize {
+  width: 23.75rem;
+  padding: 2.8125rem;
 }
 .modalLayer .layerDim {
   position: absolute;
@@ -606,17 +607,28 @@ h1, h2, h3, h4, h5, h6, p {
   float: right;
 }
 
-.tabBtnWrap {
+.modalCont {
+  margin-top: 0.625rem;
+}
+.modalCont.center {
   text-align: center;
 }
-
-.modalCont {
+.modalCont.center .select {
+  margin: 0 auto;
+  text-align: left;
+}
+.modalCont .tabBtnWrap {
+  text-align: center;
+}
+.modalCont .inputList {
   margin-top: 3.125rem;
+}
+.modalCont p {
+  margin-bottom: 1rem;
 }
 
 .modalFooter {
-  width: 100%;
-  background: #fff;
+  margin-top: 2.5rem;
   display: flex;
 }
 .modalFooter .prefix {
@@ -633,6 +645,42 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.modalInfo {
+  font-size: 0.875rem;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  position: relative;
+}
+.modalInfo::before {
+  content: "";
+  width: calc(100% + 90px);
+  height: 1px;
+  background: #e6e6eb;
+  position: absolute;
+  top: 0;
+  left: -45px;
+}
+.modalInfo p {
+  font-weight: 500;
+}
+.modalInfo .list {
+  color: #878791;
+}
+.modalInfo .list li {
+  margin-left: 0.75rem;
+  margin-top: 0.875rem;
+  position: relative;
+}
+.modalInfo .list li::before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  background: #878791;
+  position: absolute;
+  top: 0.625rem;
+  left: -9px;
 }
 
 .condition {
@@ -705,7 +753,7 @@ table .ellipsis {
   cursor: pointer;
   padding: 0.875rem;
 }
-table .anchor {
+table .layerOpen {
   color: #0460d2;
   cursor: pointer;
 }
@@ -814,7 +862,6 @@ table .memo::before {
   display: block;
   border: 0;
   padding: 0;
-  text-align: left;
 }
 .tabBtnWrap.btnType li {
   line-height: 3.125rem;
@@ -825,7 +872,7 @@ table .memo::before {
   border-radius: 0.25rem 0 0 0.25rem;
 }
 .tabBtnWrap.btnType li:last-child {
-  margin-left: -3px;
+  margin-left: -4px;
 }
 .tabBtnWrap.btnType li:last-child a {
   border-radius: 0 0.25rem 0.25rem 0;
@@ -1364,6 +1411,13 @@ input[type=radio]:checked + label::before {
   transform: translateY(-40%);
   right: 0.625rem;
 }
+.select.wideSize {
+  width: 11.25rem;
+  line-height: 2.5rem;
+}
+.select.wideSize .optionList {
+  top: 2.5rem;
+}
 .select.laSize {
   width: 6.25rem;
   line-height: 3rem;
@@ -1381,7 +1435,7 @@ input[type=radio]:checked + label::before {
 }
 .select .selDefault {
   display: block;
-  text-align: left;
+  font-weight: 500;
   line-height: 2.25rem;
   padding-left: 0.625rem;
 }
@@ -1407,10 +1461,21 @@ input[type=radio]:checked + label::before {
   font-weight: 500;
   background: #e5effa;
 }
+.select .optionList .optionItem label {
+  font-weight: 400;
+}
+.select label {
+  display: block;
+}
+.select label::before {
+  vertical-align: middle;
+}
 .select.is-active {
   border: 1px solid #0460d2;
 }
 .select.is-active::before {
+  top: 45%;
+  transform: rotate(180deg);
   background: url(../img/icoSelect.png) no-repeat;
 }
 .select.is-active .optionList {
@@ -1849,6 +1914,7 @@ h4 {
   text-align: center;
   font-size: 1.75rem;
   letter-spacing: -1px;
+  margin-bottom: 1.625rem;
 }
 
 .login {

@@ -20,7 +20,7 @@
         overflow-y: auto;
         width: rem(570);
         max-height: 100%;
-        padding: rem(30);
+        padding: rem(40);
         top:50%;
         left: 50%;
         transform: translate(-50%,-50%);
@@ -28,6 +28,10 @@
         border-radius: rem(4);
         border:1px solid $layoutColor;
         z-index: 10;
+        &.smSize{
+            width: rem(380);
+            padding: rem(45);
+        }
     }
     .layerDim{
         position: absolute;
@@ -46,15 +50,29 @@
         float: right;
     }
 }
-.tabBtnWrap{
-    text-align: center;
-}
 .modalCont{
-    margin-top: rem(50);
+    margin-top: rem(10);
+    &.center{
+        text-align: center;
+        .select{
+            margin:0 auto;
+            text-align: left;
+        }
+    }
+    .tabBtnWrap{
+        text-align: center;
+    }
+    .inputList{
+        margin-top: rem(50);
+    }
+    p{
+        margin-bottom: rem(16);
+    }
 }
 .modalFooter{
-    width: 100%;
-    background: $white;
+    //width: 100%;
+    //background: $white;
+    margin-top: rem(40);
     @include flex_1_2;
     .suffix{
         margin-left: rem(10);
@@ -62,5 +80,40 @@
     &.pagingType{
         padding: rem(40);
         @include heightArray;
+    }
+}
+.modalInfo{
+    font-size: rem(14);
+    margin-top: rem(40);
+    padding-top: rem(20);
+    position: relative;
+    &::before{
+        content:'';
+        width: calc(100% + 90px);
+        height: 1px;
+        background: $layoutColor;
+        position: absolute;
+        top: 0;
+        left: -45px;
+    }
+    p{
+        font-weight: 500;
+    }
+    .list{
+        color: $subInfo;
+        li{
+            margin-left: rem(12);
+            margin-top: rem(14);
+            position: relative;
+            &::before{
+                content:'';
+                width: 5px;
+                height: 1px;
+                background: $subInfo;
+                position: absolute;
+                top: rem(10);
+                left: -9px;
+            }
+        }
     }
 }

@@ -170,8 +170,12 @@
                                     <td>에코</td>
                                     <td>김기쁨</td>
                                     <td><a href="#" class="button round order">접수</a></td>
-                                    <td class="anchor">한아라</td>
-                                    <td class="anchor">한아라</td>
+                                    <td>
+                                        <a href="#sales_admin" class="layerOpen">영업 담당 팝업</a>
+                                    </td>
+                                    <td>
+                                        <a href="#sourcing_admin" class="layerOpen">소싱 담당 팝업</a>
+                                    </td>
                                     <td>5명</td>
                                     <td class="ellipsis anchor">
                                         <span class="button label">SM</span>
@@ -726,6 +730,101 @@
             </div>
         </div>
     </div>
+
+    <!--영업 담당자 지정 레이어 팝업-->
+    <div id="sales_admin" class="modalLayer center">
+        <div class="layerBox smSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+
+            <div class="modalCont center">
+                <h4>영업 담당자 지정</h4>
+                            
+                <p>프로젝트 추천 직원 : 홍길동</p>
+                <div class="select wideSize">
+                    <span class="selDefault">fruits</span>
+                    <ul class="optionList">
+                        <li class="optionItem">apple</li>
+                        <li class="optionItem">orange</li>
+                        <li class="optionItem">grape</li>
+                        <li class="optionItem">melon</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="modalFooter">
+                <button class="fullSize">저장</button>
+            </div>
+
+            <div class="modalInfo">
+                <p>유의사항</p>
+                <div class="list">
+                    <ul>
+                        <li>목록에 노출되지 않는 담당자는<br>
+                            운영자관리 > 담당자 권한을 확인하세요.</li>
+                        <li>종료된 프로젝트는 담당자 지정/변경이 불가합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//영업 담당자 지정 레이어 팝업-->
+
+    
+    <!--소싱 담당자 지정 레이어 팝업-->
+    <div id="sourcing_admin" class="modalLayer center is-active">
+        <div class="layerBox smSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+
+            <div class="modalCont center">
+                <h4>소싱 담당자 지정</h4>
+                            
+                <div class="select wideSize">
+                    <span class="selDefault">fruits</span>
+                    <ul class="optionList">
+                        <li class="optionItem">
+                            <input type="checkbox" id="optChk_1" name="aa" class="hasTxt">
+                            <label for="optChk_1">apple</label>
+                        </li>
+                        
+                        <li class="optionItem">
+                            <input type="checkbox" id="optChk_2" name="aa" class="hasTxt">
+                            <label for="optChk_2">banana</label>
+                        </li>
+                        <li class="optionItem">
+                            <input type="checkbox" id="optChk_3" name="aa" class="hasTxt">
+                            <label for="optChk_3">grape</label>
+                        </li>
+                        <li class="optionItem">
+                            <input type="checkbox" id="optChk_4" name="aa" class="hasTxt">
+                            <label for="optChk_4">mango</label>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="modalFooter">
+                <button class="fullSize">저장</button>
+            </div>
+
+            <div class="modalInfo">
+                <p>유의사항</p>
+                <div class="list">
+                    <ul>
+                        <li>목록에 노출되지 않는 담당자는<br>
+                            운영자관리 > 담당자 권한을 확인하세요.</li>
+                        <li>종료된 프로젝트는 담당자 지정/변경이 불가합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//소싱 담당자 지정 레이어 팝업-->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>

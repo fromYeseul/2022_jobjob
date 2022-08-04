@@ -1,23 +1,23 @@
 
 /* 레이어팝업(여러개ok) - overflow, 외부영역선택시 close 추가해보기 */
-// function layerPop(){
-//     let openBtn = document.querySelectorAll(".layerOpen");
-//     let closeBtn = document.querySelectorAll(".layerClose");
-//     let layerID;
+function layerPop(){
+    let openBtn = document.querySelectorAll(".layerOpen");
+    let closeBtn = document.querySelectorAll(".layerClose");
+    let layerID;
 
-//     for(let i=0; i<openBtn.length; i++){
-//         openBtn[i].addEventListener("click", function(){
-//             layerID = this.getAttribute('href');
-//             document.querySelector(layerID).classList.add('is-active');
-//         });
-//     }
-//     for(let j=0; j<openBtn.length; j++){
-//         closeBtn[j].addEventListener('click', function(){
-//             this.parentNode.parentNode.parentNode.classList.remove('is-active');
-//         });
-//     }
-// }
-// layerPop();
+    for(let i=0; i<openBtn.length; i++){
+        openBtn[i].addEventListener("click", function(){
+            layerID = this.getAttribute('href');
+            document.querySelector(layerID).classList.add('is-active');
+        });
+    }
+    for(let j=0; j<openBtn.length; j++){
+        closeBtn[j].addEventListener('click', function(){
+            this.parentNode.parentNode.parentNode.classList.remove('is-active');
+        });
+    }
+}
+layerPop();
 
 
 /* 탭메뉴(여러개 확인하기!!) */    
@@ -197,7 +197,7 @@ chkAll();
 //뜨면서 이하에 있는 script가 적용이 안됨
 
 
-/* SELECTBOX 일반태그 커스텀 */
+/* SELECTBOX 일반태그 커스텀  */
 const label = document.querySelectorAll('.selDefault');
 label.forEach(function(lb){
     lb.addEventListener('click', e => {
@@ -225,5 +225,6 @@ const clickLabel = (lb, optionItems) => {
 }
 const handleSelect = (label, item) => {
     label.innerHTML = item.textContent;
-    label.parentNode.classList.remove('active');
+    label.parentNode.classList.remove('is-active');
+    
 }
