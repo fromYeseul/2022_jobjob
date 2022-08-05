@@ -1,8 +1,3 @@
-.boxListWrap{    
-    //height: calc(100vh - 100px);
-    @include scroll_0;
-}
-
 
 
 .boxWrap,
@@ -15,36 +10,20 @@
     // }
     .head{
         align-items: center;
-        @include sideArray;        
-        .prefix{
-            font-weight: 500;
-        }
-        .suffix{
-            color: $subInfo;
-            font-size: rem(14);
-            span{
-                &:nth-child(2){
-                    margin-left: rem(10);
-                    position: relative;
-                    &::before{
-                        content:'';
-                        width: 1px;
-                        height: rem(14);
-                        background: $subInfo;
-                        position: absolute;
-                        top:50%;
-                        left: -4px;
-                        transform: translateY(-40%);
-                    }
-                }
-            }
-        }
+        @include sideArray;      
     }
     .title{
         @include ellipsis;
         color: $black;
         font-size: rem(20);
         font-weight: 700;
+    }
+    .cont{
+        li{
+            &:last-child{
+                color: $highlight;
+            }
+        }
     }
     .bottom{
         @include sideArray;
@@ -61,26 +40,44 @@
             border-bottom: 1px solid $layoutColor;
         }
     }
+    &.borderType{
+        &.is-active{
+            border: 1px solid #0460d2;
+        }
+    }
 }
 .boxList{
     cursor: pointer;
 }
 
 
-// .boxList{
-//     border-radius: 0;
-//     border:0;
-//     .cont{
-//         margin-top: rem(10);
-//         @include sideArray;
-//         .prefix{
-//             width: 80%;
-//             //height: rem(48);
-//             @include ellipsis-double;
-//         }
-//         .suffix{
-//             color: $subInfo;
-//             font-size: rem(14);
-//         }   
-//     }
-// }
+.boxListWrap{    
+    height: calc(100vh - 187px);
+    @include scroll_0;
+    .boxList{
+        padding: rem(20);
+        margin-bottom: rem(1);
+        border-radius: 0;
+        border:0;
+        .cont{
+            margin-top: rem(10);
+            position: relative;
+            .prefix{
+                width: 78%;
+                @include ellipsis-double;
+            }
+            .suffix{
+                color: $subInfo;
+                font-size: rem(14);
+                position: absolute;
+                right: 0;
+                bottom: rem(3);
+            }   
+        }
+    }
+    & + .listBottom{
+        padding: rem(40) 0;
+        background: $white;
+    }
+}
+

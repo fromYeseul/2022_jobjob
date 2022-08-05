@@ -1,23 +1,23 @@
 
 /* 레이어팝업(여러개ok) - overflow, 외부영역선택시 close 추가해보기 */
-function layerPop(){
-    let openBtn = document.querySelectorAll(".layerOpen");
-    let closeBtn = document.querySelectorAll(".layerClose");
-    let layerID;
+// function layerPop(){
+//     let openBtn = document.querySelectorAll(".layerOpen");
+//     let closeBtn = document.querySelectorAll(".layerClose");
+//     let layerID;
 
-    for(let i=0; i<openBtn.length; i++){
-        openBtn[i].addEventListener("click", function(){
-            layerID = this.getAttribute('href');
-            document.querySelector(layerID).classList.add('is-active');
-        });
-    }
-    for(let j=0; j<openBtn.length; j++){
-        closeBtn[j].addEventListener('click', function(){
-            this.parentNode.parentNode.parentNode.classList.remove('is-active');
-        });
-    }
-}
-layerPop();
+//     for(let i=0; i<openBtn.length; i++){
+//         openBtn[i].addEventListener("click", function(){
+//             layerID = this.getAttribute('href');
+//             document.querySelector(layerID).classList.add('is-active');
+//         });
+//     }
+//     for(let j=0; j<openBtn.length; j++){
+//         closeBtn[j].addEventListener('click', function(){
+//             this.parentNode.parentNode.parentNode.classList.remove('is-active');
+//         });
+//     }
+// }
+// layerPop();
 
 
 /* 탭메뉴(여러개 확인하기!!) */    

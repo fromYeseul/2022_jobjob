@@ -1,25 +1,29 @@
-.header{        
-    position: relative;
-    height: rem(95);
-    padding: 0 rem(40);   //?????????box-sizing이 왜 안먹지.......
-    border-bottom: 1px solid $layoutColor;
+header{        
+    width: 100%;
+    min-width: rem(1920);
+    height: rem(70);
+    padding: 0 rem(40);
+
     align-items: center;
+    position: relative;
+    
+    border-bottom: 1px solid $layoutColor;
     @include sideArray;       
-    .adminManage{
+    .center{
+        margin-top: -10px;
         a{        
             margin: 0 rem(25);
             padding: rem(5) rem(4);
-            color: $cancel;
-            font-weight: 700;
             font-size: rem(20);
+            font-weight: 700;
+            color: $cancel;
             &.is-active{
                 color: $mainColor;
                 border-bottom: 4px solid $mainColor;
             }
         }
     }
-    .userInfo{
-        //@include heightArray;
+    .suffix{
         li{
             display: inline-block;
             margin-left: rem(35);
@@ -33,7 +37,7 @@
                     content: "";
                     width: 1px;
                     height: rem(16);
-                    background: #29292c;
+                    background: $black;
                     position: absolute;
                     left: -9px;
                     top: 50%;
@@ -42,10 +46,7 @@
             }
         }
     }
-    .ico{        
-        width: rem(22);
-        height: rem(22);
-        background-image: url(../img/iconImg.jpg);
+    &.center{
+        justify-content: center;
     }
-    
 }

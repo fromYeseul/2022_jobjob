@@ -200,22 +200,14 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
 }
 
-.headerWrapper .header {
-  min-width: 120rem;
-  width: 100%;
-}
-
 .contWrapper {
   min-width: 120rem;
   width: 100%;
   padding-left: 3.75rem;
 }
-.contWrapper .proReqList {
-  padding: 2.1875rem 2.5rem;
-}
 .contWrapper .contLayout {
   display: flex;
-  min-height: calc(100vh - 95px);
+  min-height: calc(100vh - 70px);
   background: #f2f2f7;
 }
 .contWrapper .contLayout .myProjList {
@@ -224,17 +216,10 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
 }
 .contWrapper .contLayout .myProjDetail {
-  width: calc(100% - 350px - 60px);
+  width: calc(100% - 350px - 640px - 60px);
   padding: 1.875rem 1.25rem;
 }
-.contWrapper .contLayout .myProjDetail.is-active {
-  width: calc(100% - 350px - 640px - 60px);
-}
-.contWrapper .contLayout .myProjDetail.is-active + .myProjJob {
-  display: block;
-}
 .contWrapper .contLayout .myProjJob {
-  display: none;
   width: 40rem;
   padding: 1.875rem 0.625rem;
   padding-left: 0;
@@ -271,7 +256,7 @@ h1, h2, h3, h4, h5, h6, p {
 .contWrapper .contLayout .rPanelLayer.layerType {
   min-height: calc(100vh - 200px);
   position: absolute;
-  top: 5.9375rem;
+  top: 4.375rem;
   right: 3.75rem;
 }
 .contWrapper .contLayout .filterWrapper {
@@ -304,6 +289,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .contWrapper .contLayout.is-active .myPeoDetail {
   width: calc(100% - 640px - 640px - 60px);
+}
+.contWrapper.noNav {
+  padding-left: 0;
 }
 
 .layoutWrapper.is-active .gnbWrapper {
@@ -352,6 +340,11 @@ h1, h2, h3, h4, h5, h6, p {
   display: inline-block;
 }
 
+@media (max-width: 1920px) {
+  .contLayout {
+    min-height: calc(100vh - 80px) !important;
+  }
+}
 .gnbWrapper {
   width: 3.75rem;
   background-image: linear-gradient(to bottom, #009ce0, #89c895);
@@ -402,38 +395,43 @@ h1, h2, h3, h4, h5, h6, p {
   vertical-align: middle;
 }
 
-.header {
-  position: relative;
-  height: 5.9375rem;
+header {
+  width: 100%;
+  min-width: 120rem;
+  height: 4.375rem;
   padding: 0 2.5rem;
-  border-bottom: 1px solid #e6e6eb;
   align-items: center;
+  position: relative;
+  border-bottom: 1px solid #e6e6eb;
   display: flex;
   justify-content: space-between;
 }
-.header .adminManage a {
+header .center {
+  margin-top: -10px;
+}
+header .center a {
   margin: 0 1.5625rem;
   padding: 0.3125rem 0.25rem;
-  color: #b7b7c4;
-  font-weight: 700;
   font-size: 1.25rem;
+  font-weight: 700;
+  color: #b7b7c4;
 }
-.header .adminManage a.is-active {
+header .center a.is-active {
   color: #0460d2;
   border-bottom: 4px solid #0460d2;
 }
-.header .userInfo li {
+header .suffix li {
   display: inline-block;
   margin-left: 2.1875rem;
 }
-.header .userInfo li.userTeam {
+header .suffix li.userTeam {
   font-weight: 700;
 }
-.header .userInfo li .logState {
+header .suffix li .logState {
   position: relative;
   margin-left: 1rem;
 }
-.header .userInfo li .logState::before {
+header .suffix li .logState::before {
   content: "";
   width: 1px;
   height: 1rem;
@@ -443,10 +441,8 @@ h1, h2, h3, h4, h5, h6, p {
   top: 50%;
   transform: translateY(-45%);
 }
-.header .ico {
-  width: 1.375rem;
-  height: 1.375rem;
-  background-image: url(../img/iconImg.jpg);
+header.center {
+  justify-content: center;
 }
 
 /* GNB 아이콘 */
@@ -574,7 +570,7 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   overflow-y: auto;
   width: 35.625rem;
-  max-height: 100%;
+  max-height: 80%;
   padding: 2.5rem;
   top: 50%;
   left: 50%;
@@ -864,32 +860,29 @@ table .memo::before {
   padding: 0;
 }
 .tabBtnWrap.btnType li {
-  line-height: 3.125rem;
+  line-height: 3rem;
   text-align: center;
   font-weight: 500;
 }
 .tabBtnWrap.btnType li:first-child a {
   border-radius: 0.25rem 0 0 0.25rem;
 }
-.tabBtnWrap.btnType li:last-child {
+.tabBtnWrap.btnType li:not(first-child) {
   margin-left: -4px;
 }
 .tabBtnWrap.btnType li:last-child a {
   border-radius: 0 0.25rem 0.25rem 0;
 }
 .tabBtnWrap.btnType li a {
-  display: inline-block;
   width: 6rem;
   height: 3.125rem;
   color: #b7b7c4;
-  padding-bottom: 0;
   background-color: #fff;
   border: 1px solid #e6e6eb;
 }
 .tabBtnWrap.btnType li a.is-active {
   color: #fff;
   background-color: #0460d2;
-  border: 1px solid #0460d2;
 }
 .tabBtnWrap.btnType.wideType a {
   width: 12.125rem;
@@ -946,8 +939,9 @@ button.laSize,
 }
 button.midSize,
 .button.midSize {
-  width: 5.625rem;
+  min-width: 5.625rem;
   line-height: 3.125rem;
+  padding: 0 0.9375rem;
 }
 button.midSize.low,
 .button.midSize.low {
@@ -965,7 +959,7 @@ button.ico,
 button.white,
 .button.white {
   line-height: 2.125rem;
-  padding: 0 0.4375rem;
+  padding: 0 0.9375rem;
   color: #29292c;
   background-color: #fff;
   border: 1px solid #e6e6eb;
@@ -1665,13 +1659,6 @@ input[type=radio]:checked + label::before {
   background-position: -30px -120px;
 }
 
-.boxListWrap {
-  overflow-y: auto;
-}
-.boxListWrap::-webkit-scrollbar {
-  width: 0;
-}
-
 .boxWrap,
 .boxList {
   background: #fff;
@@ -1683,31 +1670,6 @@ input[type=radio]:checked + label::before {
   align-items: center;
   display: flex;
   justify-content: space-between;
-}
-.boxWrap .head .prefix,
-.boxList .head .prefix {
-  font-weight: 500;
-}
-.boxWrap .head .suffix,
-.boxList .head .suffix {
-  color: #878791;
-  font-size: 0.875rem;
-}
-.boxWrap .head .suffix span:nth-child(2),
-.boxList .head .suffix span:nth-child(2) {
-  margin-left: 0.625rem;
-  position: relative;
-}
-.boxWrap .head .suffix span:nth-child(2)::before,
-.boxList .head .suffix span:nth-child(2)::before {
-  content: "";
-  width: 1px;
-  height: 0.875rem;
-  background: #878791;
-  position: absolute;
-  top: 50%;
-  left: -4px;
-  transform: translateY(-40%);
 }
 .boxWrap .title,
 .boxList .title {
@@ -1721,6 +1683,10 @@ input[type=radio]:checked + label::before {
   color: #29292c;
   font-size: 1.25rem;
   font-weight: 700;
+}
+.boxWrap .cont li:last-child,
+.boxList .cont li:last-child {
+  color: #009ce0;
 }
 .boxWrap .bottom,
 .boxList .bottom {
@@ -1740,9 +1706,53 @@ input[type=radio]:checked + label::before {
 .boxList.divideType .head {
   border-bottom: 1px solid #e6e6eb;
 }
+.boxWrap.borderType.is-active,
+.boxList.borderType.is-active {
+  border: 1px solid #0460d2;
+}
 
 .boxList {
   cursor: pointer;
+}
+
+.boxListWrap {
+  height: calc(100vh - 187px);
+  overflow-y: auto;
+}
+.boxListWrap::-webkit-scrollbar {
+  width: 0;
+}
+.boxListWrap .boxList {
+  padding: 1.25rem;
+  margin-bottom: 0.0625rem;
+  border-radius: 0;
+  border: 0;
+}
+.boxListWrap .boxList .cont {
+  margin-top: 0.625rem;
+  position: relative;
+}
+.boxListWrap .boxList .cont .prefix {
+  width: 78%;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: inherit;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  text-align: left;
+  -webkit-box-orient: vertical;
+}
+.boxListWrap .boxList .cont .suffix {
+  color: #878791;
+  font-size: 0.875rem;
+  position: absolute;
+  right: 0;
+  bottom: 0.1875rem;
+}
+.boxListWrap + .listBottom {
+  padding: 2.5rem 0;
+  background: #fff;
 }
 
 .memberWrap .boxList {
@@ -1798,9 +1808,6 @@ input[type=radio]:checked + label::before {
   color: #29292c;
   font-weight: 500;
 }
-.memberWrap .cont .prefix .memCareer {
-  color: #009ce0;
-}
 .memberWrap .cont .prefix .memMemo {
   margin-top: 0.25rem;
 }
@@ -1842,6 +1849,10 @@ input[type=radio]:checked + label::before {
   width: 0;
 }
 
+.jobTop {
+  text-align: right;
+}
+
 .jobBox {
   margin-bottom: 1.25rem;
   border-radius: 0;
@@ -1850,7 +1861,6 @@ input[type=radio]:checked + label::before {
   justify-content: space-between;
 }
 .jobBox .prefix {
-  width: 10.625rem;
   padding: 0;
 }
 .jobBox .prefix li {
@@ -1870,12 +1880,22 @@ input[type=radio]:checked + label::before {
   margin-top: 0.125rem;
   margin-bottom: 0.25rem;
 }
+.jobBox .center .part {
+  margin-top: 1.25rem;
+  color: #878791;
+}
+.jobBox .center .part li {
+  margin-right: 0.625rem;
+}
 .jobBox .center .bottom {
   margin-top: 1.0625rem;
   color: red;
 }
 .jobBox .center .bottom .prefix {
   color: #b7b7c4;
+}
+.jobBox .center .bottom .prefix span {
+  margin-right: 1.5rem;
 }
 .jobBox .suffix {
   width: 10rem;
@@ -1915,6 +1935,15 @@ h4 {
   font-size: 1.75rem;
   letter-spacing: -1px;
   margin-bottom: 1.625rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.86px;
+}
+h5 + h5 {
+  margin-left: 1.6875rem;
 }
 
 .login {
@@ -1962,48 +1991,33 @@ h4 {
   display: none;
 }
 
-.myProjList .boxListWrap {
-  height: calc(100vh - 202px);
-}
 .myProjList .boxList {
   height: 8.125rem;
-  padding: 1.25rem;
-  margin-bottom: 0.0625rem;
-  border-radius: 0;
-  border: 0;
-}
-.myProjList .boxList.is-active {
-  border: 1px solid #0460d2;
-}
-.myProjList .boxList .cont {
-  margin-top: 0.625rem;
-  position: relative;
-}
-.myProjList .boxList .cont .prefix {
-  width: 78%;
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: inherit;
-  word-wrap: break-word;
-  -webkit-line-clamp: 2;
-  text-align: left;
-  -webkit-box-orient: vertical;
-}
-.myProjList .boxList .cont .suffix {
-  color: #878791;
-  font-size: 0.875rem;
-  position: absolute;
-  right: 0;
-  bottom: 0.1875rem;
-}
-.myProjList .listBottom {
-  padding: 2.5rem 0;
-  background: #fff;
 }
 
 .myProjDetail .boxWrap .head {
   padding: 1.25rem 2.5rem;
+}
+.myProjDetail .boxWrap .head .prefix {
+  font-weight: 500;
+}
+.myProjDetail .boxWrap .head .suffix {
+  color: #878791;
+  font-size: 0.875rem;
+}
+.myProjDetail .boxWrap .head .suffix span:nth-child(2) {
+  margin-left: 0.625rem;
+  position: relative;
+}
+.myProjDetail .boxWrap .head .suffix span:nth-child(2)::before {
+  content: "";
+  width: 1px;
+  height: 0.875rem;
+  background: #878791;
+  position: absolute;
+  top: 50%;
+  left: -4px;
+  transform: translateY(-40%);
 }
 .myProjDetail .boxWrap .cont {
   padding: 1.875rem 2.5rem;
@@ -2106,7 +2120,7 @@ h4 {
 }
 .myProjJob .tabContWrap .yScroll {
   padding: 1.25rem 2.5rem;
-  height: calc(100vh - 558px);
+  height: calc(100vh - 543px);
   overflow-y: auto;
 }
 .myProjJob .tabContWrap .yScroll::-webkit-scrollbar {
@@ -2117,7 +2131,7 @@ h4 {
 }
 .myProjJob.is-active {
   overflow-y: scroll;
-  height: calc(100vh - 95px);
+  height: calc(100vh - 70px);
 }
 .myProjJob.is-active .wrap {
   height: calc(100vh + 63px);
@@ -2163,6 +2177,28 @@ h4 {
 }
 .projReqList .tableTop {
   margin-top: 1.875rem;
+}
+
+.memList {
+  width: 17.5rem;
+}
+.memList .boxList {
+  height: 7.8125rem;
+}
+.memList .boxList .head {
+  font-weight: 700;
+}
+
+.memDetail {
+  width: calc(100% - 280px);
+  padding: 1.875rem;
+}
+.memDetail .tableBox {
+  height: calc(100vh - 310px);
+  margin-top: 1.875rem;
+}
+.memDetail .jobBox {
+  margin-top: 0.625rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,36 +1,6 @@
 .myProjList{
-    .boxListWrap{    
-        //padding-bottom: 100px;  
-        height: calc(100vh - 202px);
-    }    
     .boxList{
         height: rem(130);
-        padding: rem(20);
-        margin-bottom: rem(1);
-        border-radius: 0;
-        border:0;
-        &.is-active{
-            border: 1px solid #0460d2;
-        }
-        .cont{
-            margin-top: rem(10);
-            position: relative;
-            .prefix{
-                width: 78%;
-                @include ellipsis-double;
-            }
-            .suffix{
-                color: $subInfo;
-                font-size: rem(14);
-                position: absolute;
-                right: 0;
-                bottom: rem(3);
-            }   
-        }
-    }
-    .listBottom{
-        padding: rem(40) 0;
-        background: $white;
     }
 }
 
@@ -38,7 +8,30 @@
 .myProjDetail{ 
     .boxWrap{
         .head{
-            padding: rem(20) rem(40);
+            padding: rem(20) rem(40);   
+            .prefix{
+                font-weight: 500;
+            }           
+            .suffix{
+                color: $subInfo;
+                font-size: rem(14);
+                span{
+                    &:nth-child(2){
+                        margin-left: rem(10);
+                        position: relative;
+                        &::before{
+                            content:'';
+                            width: 1px;
+                            height: rem(14);
+                            background: $subInfo;
+                            position: absolute;
+                            top:50%;
+                            left: -4px;
+                            transform: translateY(-40%);
+                        }
+                    }
+                }
+            }
         }
         .cont{
             padding: rem(30) rem(40);
@@ -147,7 +140,8 @@
         .yScroll{
             padding: rem(20) rem(40);
             //padding-bottom: rem(114);
-            height: calc(100vh - 558px);
+            //height: calc(100vh - 558px);
+            height: calc(100vh - 543px);
             @include scroll_0;
             .listTop{
                 margin-top: rem(30);
@@ -157,7 +151,8 @@
     //스크롤할 때
     &.is-active{
         overflow-y: scroll;
-        height: calc(100vh - 95px);
+        //height: calc(100vh - 95px);
+        height: calc(100vh - 70px);
         .wrap{
             height: calc(100vh + 63px);
         }

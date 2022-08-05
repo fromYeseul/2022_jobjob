@@ -4,6 +4,10 @@
     @include scroll_0;
 }
 
+.jobTop{
+    text-align: right;
+}
+
 .jobBox{
     //width: rem(1080);
     margin-bottom: rem(20);
@@ -11,7 +15,7 @@
     padding: rem(25) rem(30);
     @include sideArray;
     .prefix{
-        width: rem(170);
+        //width: rem(170);
         padding: 0; 
         li{
             margin-top: rem(15);
@@ -32,12 +36,21 @@
             margin-top: rem(2);
             margin-bottom: rem(4);
         }
+        .part{
+            margin-top: rem(20);
+            color: $subInfo;
+            li{
+                margin-right: rem(10);
+            }
+        }
         .bottom{
             margin-top: rem(17);
             color:red;
             .prefix{
                 color: $cancel;
-                
+                span{
+                    margin-right: rem(24);
+                }
             }
         }
     }    

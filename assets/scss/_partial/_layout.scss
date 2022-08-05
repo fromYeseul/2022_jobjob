@@ -22,25 +22,16 @@
   
 
 
-.headerWrapper{
-    .header{
-        min-width: rem(1920);
-        width: 100%;
-    }
-}
-
-
 .contWrapper{
     min-width: rem(1920);
     width: 100%;
     padding-left: rem(60);
-    .proReqList{
-        padding: rem(35) rem(40);
-    }
     .contLayout{
         display: flex;
-        min-height: calc(100vh - 95px);
+        min-height: calc(100vh - 70px);
         background: $bgColor;
+
+        //마이프로젝트
         .myProjList{
             //width: 10%;
             //min-width: rem(307);    
@@ -52,26 +43,27 @@
             position: relative;
         }
         .myProjDetail{
-            //width: 90%;
-            //width: calc(100% - 60px);
-            width: calc(100% - 350px - 60px);
+            width: calc(100% - 350px - 640px - 60px);            
             padding: rem(30) rem(20);
-            &.is-active{             
-                width: calc(100% - 350px - 640px - 60px);       
-                + .myProjJob{
-                    display: block;
-                }
-            }
+            //화면분할
+            //width: calc(100% - 350px - 60px);
+            // &.is-active{             
+            //     width: calc(100% - 350px - 640px - 60px);       
+            //     + .myProjJob{
+            //         display: block;
+            //     }
+            // }
         }
         .myProjJob{
-            display: none;
-            //width: 45%;
+            //화면분할
+            //display: none;
             width: rem(640);
             padding: rem(30) rem(10);
             padding-left: 0;
         }
 
 
+        //마이피플
         .myPeoList{
             width: rem(640);
             background: $white;
@@ -83,11 +75,14 @@
         }
 
 
+        //프로젝트 의뢰목록
         .projReqList, .genMember{
             height: calc(100vh - 100px);
             padding: rem(20) rem(40);
             overflow-y: auto;
         }
+
+        //우측패널
         .rPanelLayer{
             width: 0;
             background: $white;
@@ -105,7 +100,8 @@
             &.layerType{
                 min-height: calc(100vh - 200px); //임시
                 position: absolute;
-                top: rem(95);
+                //top: rem(95);
+                top: rem(70);
                 right: rem(60);
             }
         }
@@ -131,6 +127,9 @@
             }
         }
 
+        //
+
+        //기본
         .default{
             width: calc(100% - 60px);
             @include heightArray;
@@ -148,6 +147,9 @@
                 width: calc(100% - 640px - 640px - 60px);
             }
         }
+    }
+    &.noNav{
+        padding-left: 0;
     }
 } 
 
@@ -211,6 +213,9 @@
 }
 
 
-
-
+@media (max-width: 1920px) {
+    .contLayout{
+        min-height: calc(100vh - 80px) !important;
+    }
+  }
   
