@@ -19,12 +19,15 @@
 .rPanelLayer{
     .rPanelBox{
         padding: rem(30);
-        height: calc(100vh - 97px);
+        //height: calc(100vh - 97px);
+        height: calc(100vh - 70px);
         border: 1px solid $layoutColor;
+        border-top:0;
     }   
     .rPanelCont{  
         .yScroll{
-            height: calc(100vh - 317px);
+            //height: calc(100vh - 317px);
+            height: calc(100vh - 272px);
             @include scroll_0;
         }
         .inputIco{
@@ -42,6 +45,10 @@
         @include scroll_0;
         .flex{
             @include sideArray;
+            align-items: center;
+        }
+        h4{
+            margin-bottom: 0;
         }
     }
 }

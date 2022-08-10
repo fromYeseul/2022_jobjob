@@ -1,0 +1,27 @@
+.projRegister{
+    width: 100%;
+    padding: rem(30) rem(40);
+    h2{
+        position: relative;
+        padding-bottom: rem(20);
+        &::after{
+            content:'';
+            width: calc(100% + 80px);
+            height: 1px;
+            background: $titleGray;
+            position: absolute;
+            left: -40px;
+            bottom: 0;
+        }
+    }
+    .regPart{
+        padding-top: rem(70);
+        .boxWrap{
+            margin-top: rem(20);
+            padding: rem(40);
+            .btnType{
+                display: inline-block;
+            }
+        }
+    }
+}

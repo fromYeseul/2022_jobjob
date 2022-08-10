@@ -1,83 +1,385 @@
 
 
-.boxWrap,
-.boxList{
-    background: $white;
-    border-radius: rem(5);
-    border:1px solid $layoutColor;
-    // &.is-active{
-    //     border:1px solid $mainColor;
-    // }
-    .head{
-        align-items: center;
-        @include sideArray;      
-    }
-    .title{
-        @include ellipsis;
-        color: $black;
-        font-size: rem(20);
-        font-weight: 700;
-    }
-    .cont{
-        li{
-            &:last-child{
-                color: $highlight;
-            }
-        }
-    }
-    .bottom{
-        @include sideArray;
-        align-items: center;
-        .prefix{
-            color: $subInfo;
-        }
-        .button{
-            font-weight: 700;
-        }  
-    }
-    &.divideType{
-        .head{
-            border-bottom: 1px solid $layoutColor;
-        }
-    }
-    &.borderType{
-        &.is-active{
-            border: 1px solid #0460d2;
-        }
-    }
-}
-.boxList{
-    cursor: pointer;
-}
-
-
 .boxListWrap{    
-    height: calc(100vh - 187px);
-    @include scroll_0;
-    .boxList{
-        padding: rem(20);
-        margin-bottom: rem(1);
-        border-radius: 0;
-        border:0;
-        .cont{
-            margin-top: rem(10);
-            position: relative;
-            .prefix{
-                width: 78%;
-                @include ellipsis-double;
-            }
-            .suffix{
-                color: $subInfo;
-                font-size: rem(14);
-                position: absolute;
-                right: 0;
-                bottom: rem(3);
-            }   
-        }
-    }
+    // height: calc(100vh - 187px);
+    @include scroll_0;    
     & + .listBottom{
         padding: rem(40) 0;
         background: $white;
     }
 }
+
+.boxTop{
+    text-align: right;
+    button, .button{
+        font-weight: 700;
+    }
+}
+
+.boxWrap{
+    background: $white;
+    border-radius: rem(7);
+    border: 1px solid $layoutColor;
+    &.headType{
+        padding: rem(20) rem(40) rem(30);   
+        .head,
+        .bottom{
+            align-items: center;
+            @include sideArray; 
+        }
+        .head{
+            padding-bottom: rem(20);
+            position: relative;
+            &::after{
+                content:'';
+                width: calc(100% + 80px);
+                height: 1px;
+                background: $layoutColor;
+                position: absolute;
+                left: -40px;
+                bottom: 0;
+            }
+            .prefix{
+                font-weight: 500;
+            }           
+            .suffix{
+                color: $subInfo;
+                font-size: rem(14);
+                span{
+                    &:nth-child(2){
+                        margin-left: rem(10);
+                        position: relative;
+                        &::before{
+                            content:'';
+                            width: 1px;
+                            height: rem(14);
+                            background: $subInfo;
+                            position: absolute;
+                            top:50%;
+                            left: -4px;
+                            transform: translateY(-40%);
+                        }
+                    }
+                }
+            }
+        }
+        .cont{
+            margin: rem(30) 0;
+            position: relative;
+                .flex{
+                    margin: rem(50) 0 rem(30);
+                    flex-wrap:wrap;
+                    li{
+                        width: 20%;
+                        min-width: rem(104);
+                        height: rem(90);
+                        padding: rem(20) 0;
+                        border: 1px solid $layoutColor;
+                        //border-left: 0;
+                        text-align: center;
+                        @include heightArray;
+                        cursor: pointer;
+                        &.is-active{
+                            color: $white;
+                            font-weight: 700;
+                            background: $mainColor;
+                            border: 1px solid $mainColor;
+                        }
+                    }
+                }
+        }
+        .bottom{
+            .prefix{
+                color: $subInfo;
+            }
+        }
+    }
+}
+
+
+.boxList{
+    background: $white;
+    border-radius: rem(5);
+    .head,
+    .bottom{
+        font-weight: 500;
+        align-items: center;
+        @include sideArray; 
+    }
+    .cont{
+        margin-top: rem(10);
+        position: relative;
+    }
+    &.listType{
+        margin-bottom: 1px;
+        padding: rem(22);
+        border-radius: 0;
+        .cont{       
+            .prefix{
+                width: 70%;            
+                @include ellipsis-double;
+            }
+            .suffix{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }  
+        }
+        &.is-active{
+            border: 1px solid $mainColor;
+        }
+    }
+    &.flexType{
+        margin-top: rem(20);
+        padding: rem(25) rem(30);
+        border:1px solid $layoutColor;
+        @include sideArray;
+        &:first-child{
+            margin-top:0;
+        }
+        .prefix{
+            width: rem(160);
+            li{
+                margin-top: rem(14);
+                span{
+                    &:first-child{
+                        font-weight: 700;
+                        margin-right: rem(10);
+                    }
+                }
+            }
+        }        
+        .center{
+            width: calc(100% - 340px);
+            //margin-left: rem(30);
+            padding: rem(6) rem(30);
+            border-left: 1px solid $jobLayout;
+            border-right: 1px solid $jobLayout;
+            .head{
+                .prefix{
+                    @include ellipsis;
+                    font-size: rem(20);
+                    font-weight: 700;
+                }
+                .suffix{
+                    width: auto;
+                    font-weight: 500;
+                }
+            }
+            .cont{
+                margin-top: rem(24);
+                li{
+                    margin-right: rem(10);
+                    color: $subInfo;
+                }
+            }
+            .bottom{
+                align-items: end;
+                //margin-top: rem(6);
+                color: $titleGray;
+                .prefix{
+                    width:auto;
+                    span{
+                        margin-right: rem(24);
+                    }
+                }
+            }
+        }    
+        .suffix{
+            width: rem(160);
+            @include heightArray;
+            color: $subInfo;
+            position: relative;
+            .more{
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .txt_center{
+                .select{
+                    margin: 10px auto;
+                }
+            }
+        }
+    }
+    &.headType{
+        margin-top: rem(20);
+        .head{
+            color: $disable;
+            background: $memLayout;
+            border-radius: rem(5) rem(5) 0 0;
+            padding: rem(5) rem(20);
+            .prefix{
+                font-weight: 400; 
+            }
+        }
+        .cont{       
+            margin-top: 0;
+            padding: rem(20);
+            border-radius:0 0 rem(5) rem(5);
+            border:1px solid $layoutColor;
+            border-top:0;
+            @include sideArray;
+            .prefix{
+                width: 66%;
+                color: $subInfo; 
+                span{
+                    margin-right: rem(10);
+                }
+                .memName{
+                    color: $black;
+                    font-weight: 700;
+                    .photo{
+                        width: rem(40);
+                        height: rem(40);
+                        border-radius: rem(12);
+                        vertical-align: middle;
+                        margin-right: rem(10);
+                    }
+                }
+                .memSkill{
+                    @include ellipsis;
+                }
+                .memPay{
+                    color: $black;
+                    font-weight: 500;
+                }
+                .memCareer{
+                    color: $highlight;
+                }
+                .memMemo{
+                    margin-top: rem(10);
+                    padding: rem(5) rem(8);
+                    background: $bgColor;
+                    color: $subInfo;
+                    @include ellipsis;
+                    b{
+                        color: $black;
+                    }
+                }
+            }   
+            .center,
+            .suffix{
+                text-align: center;
+                font-size: rem(14);
+                @include heightArray;
+            }
+            .center{
+                font-weight: 500;
+                padding: 0 rem(17);
+                position: relative;
+                &::before{
+                    content:'';
+                    width: 1px;
+                    height: rem(106);
+                    background: $layoutColor;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .suffix{
+                width: rem(80);
+                color: $disable;
+                &.clear{
+                    color: $mainColor;
+                }
+                
+            }
+        }
+        &.is-active{
+            .head{
+                color: $white;
+                background: $mainColor;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// .boxWrap,
+// .boxList{
+//     background: $white;
+//     border-radius: rem(5);
+//     border:1px solid $layoutColor;
+//     // &.is-active{
+//     //     border:1px solid $mainColor;
+//     // }
+//     .head{
+//         align-items: center;
+//         @include sideArray;      
+//     }
+//     .title{
+//         @include ellipsis;
+//         color: $black;
+//         font-size: rem(20);
+//         font-weight: 700;
+//     }
+//     .cont{
+//         li{
+//             &:last-child{
+//                 color: $highlight;
+//             }
+//         }
+//     }
+//     .bottom{
+//         @include sideArray;
+//         align-items: center;
+//         .prefix{
+//             color: $subInfo;
+//         }
+//         .button{
+//             font-weight: 700;
+//         }  
+//     }
+//     &.divideType{
+//         .head{
+//             border-bottom: 1px solid $layoutColor;
+//         }
+//     }
+//     &.borderType{
+//         &.is-active{
+//             border: 1px solid #0460d2;
+//         }
+//     }
+// }
+// .boxList{
+//     cursor: pointer;
+// }
+
+
+// .boxListWrap{    
+//     height: calc(100vh - 187px);
+//     @include scroll_0;
+//     .boxList{
+//         padding: rem(20);
+//         margin-bottom: rem(1);
+//         border-radius: 0;
+//         border:0;
+//         .cont{
+//             margin-top: rem(10);
+//             position: relative;
+//             .prefix{
+//                 width: 78%;
+//                 @include ellipsis-double;
+//             }
+//             .suffix{
+//                 color: $subInfo;
+//                 font-size: rem(14);
+//                 position: absolute;
+//                 right: 0;
+//                 bottom: rem(3);
+//             }   
+//         }
+//     }
+//     & + .listBottom{
+//         padding: rem(40) 0;
+//         background: $white;
+//     }
+// }
 

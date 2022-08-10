@@ -1,23 +1,23 @@
 
 /* 레이어팝업(여러개ok) - overflow, 외부영역선택시 close 추가해보기 */
-// function layerPop(){
-//     let openBtn = document.querySelectorAll(".layerOpen");
-//     let closeBtn = document.querySelectorAll(".layerClose");
-//     let layerID;
+function layerPop(){
+    let openBtn = document.querySelectorAll(".layerOpen");
+    let closeBtn = document.querySelectorAll(".layerClose");
+    let layerID;
 
-//     for(let i=0; i<openBtn.length; i++){
-//         openBtn[i].addEventListener("click", function(){
-//             layerID = this.getAttribute('href');
-//             document.querySelector(layerID).classList.add('is-active');
-//         });
-//     }
-//     for(let j=0; j<openBtn.length; j++){
-//         closeBtn[j].addEventListener('click', function(){
-//             this.parentNode.parentNode.parentNode.classList.remove('is-active');
-//         });
-//     }
-// }
-// layerPop();
+    for(let i=0; i<openBtn.length; i++){
+        openBtn[i].addEventListener("click", function(){
+            layerID = this.getAttribute('href');
+            document.querySelector(layerID).classList.add('is-active');
+        });
+    }
+    for(let j=0; j<openBtn.length; j++){
+        closeBtn[j].addEventListener('click', function(){
+            this.parentNode.parentNode.parentNode.classList.remove('is-active');
+        });
+    }
+}
+layerPop();
 
 
 /* 탭메뉴(여러개 확인하기!!) */    
@@ -93,11 +93,13 @@ function rightPanel(){
     let rPanelLayer = document.querySelector('.rPanelLayer');
     let rClose = document.querySelector('.rClose');
     let contLayout = document.querySelector('.contLayout');
+    let filterWrapper = document.querySelector('.filterWrapper');
 
     for(let i=0; i<rPanelList.length; i++){
         rPanelList[i].addEventListener('click', function(){
             rPanelLayer.classList.toggle('is-active');
             contLayout.classList.toggle('is-active');
+            filterWrapper.classList.remove('is-active');
 
 
             let windowWidth = window.innerWidth;
@@ -109,6 +111,7 @@ function rightPanel(){
 
     rClose.addEventListener('click', function(){
         rPanelLayer.classList.toggle('is-active');
+        filterWrapper.classList.remove('is-active');
     })
 }
 rightPanel();
@@ -119,7 +122,8 @@ function filterLayer(){
     let filter = document.querySelector('.filter');
 
 
-    filter.addEventListener('click', function(){
+    filter.addEventListener('click', function(e){
+        e.preventDefault();
         filterWrapper.classList.toggle('is-active');
     });
 }
@@ -228,3 +232,18 @@ const handleSelect = (label, item) => {
     label.parentNode.classList.remove('is-active');
     
 }
+
+/* 파일업로드 */
+const output = document.querySelector('.fileList');
+const myFiles = document.querySelector("#fileUpload");
+
+function logFilenames(){
+  const fileInput = document.querySelector("#fileUpload");
+  const files = fileInput.files;
+  const fileListLength = files.length;
+  for (let i = 0; i < fileListLength; i++) {
+    output.innerText = `${output.innerText}\n${files.item(i).name}</li>`;
+  }
+}
+
+myFiles.addEventListener("change", logFilenames);

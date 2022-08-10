@@ -17,9 +17,12 @@ button,
     background-color: $mainColor;
     cursor: pointer;
     //disable
-    &:disabled{
-        background: $cancel;
+    &:disabled,
+    &.disabled{
         cursor:not-allowed;
+        color: $cancel;
+        background-color: $white;
+        border: 1px solid $inputGray;
     }
     //버튼간격
     & + button,
@@ -43,12 +46,14 @@ button,
         min-width: rem(90);
         line-height: rem(50);
         padding: 0 rem(15);
+        font-weight: 700;
         &.low{
             line-height: rem(40);
         }
     }
     &.smSize{
-        width: rem(74);
+        //width: rem(74);
+        padding: 0 rem(12);
         line-height: rem(30);
     }
     //디자인
@@ -63,9 +68,14 @@ button,
         background-color: $white;
         border: 1px solid $inputGray;
         &.smSize{
-            width: rem(74);
+            //width: rem(74);
             line-height: rem(30);
-            border: 1px solid $gray;
+            //border: 1px solid $gray;
+        }
+        &:disabled,
+        &.disabled{
+            color: $cancel;
+            cursor:not-allowed;
         }
     }
     &.round{
@@ -110,6 +120,7 @@ button,
         line-height: rem(22);
         color: $systemGray;
         font-size: rem(14);
+        font-weight: 400;
         background: $bgColor;
         border-radius: rem(20);
         border-color: $tableBgGray;

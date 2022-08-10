@@ -12,42 +12,70 @@
 <body>
     <!--레이어팝업-->
     <a href="#layer01" class="layerOpen">팝업오픈 버튼</a>
-    <div id="layer01" class="modalLayer center">
-        <div class="layerBox">
-            <div class="modalHeader">
-                <span class="tit">타이틀</span>
-                <button class="layerClose">닫기버튼</button>
-            </div>
-            <div class="modalCont">
-                <p>컨텐츠1111</p>
-            </div>
-            <div class="modalFooter">
-                <p class="btnCover">
-                    <button class="">확인</button>
-                </p>
-            </div>
-        </div>        
-        <div class="layerDim"></div>    
-    </div>
-
-    <a href="#layer02" class="layerOpen">팝업오픈 버튼</a>
-    <div id="layer02" class="modalLayer center">
-        <div class="layerBox">
-            <div class="modalHeader">
-                <span class="tit">타이틀</span>
-                <button class="layerClose">닫기버튼</button>
-            </div>
-            <div class="modalCont">
-                <p>컨텐츠22222</p>
-            </div>
-            <div class="modalFooter">
-                <p class="btnCover">
-                    <button class="">확인</button>
-                </p>
-            </div>
-        </div>        
-        <div class="layerDim"></div>    
-    </div>
+        <div id="layer01" class="modalLayer center is-active">
+            <div class="layerBox">
+                <div class="modalHeader">
+                    <button class="ico layerClose"></button>
+                </div>
+                <div class="modalCont">
+                    <div class="tabWrapper">
+                        <ul class="tabBtnWrap btnType wideType">
+                            <li class="tabBtn">
+                                <a href="#offer_message" class="is-active">문자</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#offer_mail">메일</a>
+                            </li>
+                        </ul>
+                        <div class="tabContWrap">
+                            <div id="offer_message" class="tabCont is-active">
+    
+                                <div class="inputList">   
+                                    <ul>
+                                        <li>
+                                            <label class="need" for="receiver">받는 사람</label>
+                                            <div class="inputGroup">
+                                                <div class="inputObj">
+                                                    <span>박예슬 (010-000-0000)</span>
+                                                    <button class="ico smClose"></button>
+                                                </div>
+                                                <div class="inputObj is-active">
+                                                    <input type="text">
+                                                </div>
+                                            </div>    
+                                        </li>
+                                        <li>
+                                            <label for="receiver">첨부파일</label>
+                                            <div class="inputGroup">
+                                                <label for="fileUpload">여기에 첨부 파일을 끌어오세요. 또는 </label>
+                                                <input multiple type="file" id="fileUpload">
+                                                <label for="fileUpload" class="selFile">직접선택</label>
+                                    
+                                                <div class="fileBox">
+                                                    <ul>
+                                                        <li class="fileList"></li>
+                                                    </ul>
+                                                </div>
+                                            </div>   
+                                        </li>
+                                        <li>
+                                            <textarea name="" id="" rows="13"></textarea>
+                                            <p class="counter">글자 수 50자</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="offer_mail" class="tabCont">bbb</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modalFooter">
+                        <button class="fullSize white prefix">닫기</button>
+                        <button class="fullSize suffix">문자보내기</button>
+                </div>
+            </div>        
+            <div class="layerDim"></div>    
+        </div>
     <!--//레이어팝업-->
 
     

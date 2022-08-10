@@ -1,78 +1,13 @@
 .myProjList{
+    .boxListWrap{    
+        //height: calc(100vh - 187px);
+        height: calc(100vh - 177px);
+    }
     .boxList{
         height: rem(130);
     }
 }
 
-
-.myProjDetail{ 
-    .boxWrap{
-        .head{
-            padding: rem(20) rem(40);   
-            .prefix{
-                font-weight: 500;
-            }           
-            .suffix{
-                color: $subInfo;
-                font-size: rem(14);
-                span{
-                    &:nth-child(2){
-                        margin-left: rem(10);
-                        position: relative;
-                        &::before{
-                            content:'';
-                            width: 1px;
-                            height: rem(14);
-                            background: $subInfo;
-                            position: absolute;
-                            top:50%;
-                            left: -4px;
-                            transform: translateY(-40%);
-                        }
-                    }
-                }
-            }
-        }
-        .cont{
-            padding: rem(30) rem(40);
-        }
-        .part{
-            margin-top: rem(40);
-            li{
-                margin-top: rem(10);
-            }
-        }
-        .bottom{
-            margin-top: rem(38);
-            & + .button{
-                margin-left: rem(8);
-            }
-        }
-    }
-    .flex{
-        flex-wrap:wrap;
-        li{
-            width: 20%;
-            min-width: rem(104);
-            height: rem(90);
-            padding: rem(20) 0;
-            border: 1px solid $layoutColor;
-            border-left: 0;
-            text-align: center;
-            @include heightArray;
-            cursor: pointer;
-            &:last-child{                
-                border-right:0;
-            }
-            &.is-active{
-                color: $white;
-                font-weight: 700;
-                background: $mainColor;
-                border: 1px solid $mainColor;
-            }
-        }
-    }
-}
 
 
 .myProjJob{
@@ -85,7 +20,7 @@
     .partList{
         height: rem(168);
         padding: rem(10) rem(8) 0;
-        border: 1px solid $layoutColor;
+        //border: 1px solid $layoutColor;
         ul{
             height: 100%;
             padding-right: rem(5);

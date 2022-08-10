@@ -58,6 +58,8 @@
             //화면분할
             //display: none;
             width: rem(640);
+            height: calc(100vh - 80px);
+            overflow-y: auto;
             padding: rem(30) rem(10);
             padding-left: 0;
         }
@@ -108,8 +110,8 @@
         .filterWrapper{
             display:none;
             position: absolute;
-            left: -230px;
-            top:0;
+            left: -229px;
+            top: -1px;
             &.is-active{
                 display: block;
             }
@@ -164,14 +166,13 @@
         .navCtrlBtn{
             width: calc(100% - 24px);
             text-align: right;
-            background: $white;
             position: relative;
             &::before{
                 width: rem(15);
             }
             .ctrlBtn{
                 width: rem(14);
-                height: rem(17);
+                height: rem(22);
                 background-position: 0px -30px;
             }
         }    
@@ -200,7 +201,7 @@
             }
             .ctrlBtn{
                 width: rem(14);
-                height: rem(17);
+                height: rem(22);
                 background-position: 0px -30px;
             }
         }    
@@ -213,7 +214,7 @@
 }
 
 
-@media (max-width: 1920px) {
+@media (max-width: 1919px) {
     .contLayout{
         min-height: calc(100vh - 80px) !important;
     }
