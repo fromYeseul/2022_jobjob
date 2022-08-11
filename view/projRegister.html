@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="layoutWrapper">
+    <section class="layoutWrapper">
         <header>
             <div class="prefix">
                 <a href="#" class="logo">
@@ -35,7 +35,7 @@
             </div>
         </header>
 
-        <div class="gnbWrapper">
+        <section class="gnbWrapper">
             <div class="gnb">
                 <div class="navCtrlBtn">
                     <i class="ico ctrlBtn"></i>
@@ -55,12 +55,12 @@
                     </ul>
                 </nav>
             </div>
-        </div>   
+        </section>   
         
-        <div class="contWrapper">
-            <div class="contLayout">
+        <section class="contWrapper">
+            <section class="contLayout">
                 
-                <div class="projRegister">
+                <section class="projRegister">
                     <h2>프로젝트 요청등록</h2>
 
                     <div class="regPart">
@@ -188,7 +188,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <textarea name="" id="" rows="10"></textarea>
+                                        <textarea class="wideSize" name="" id="" rows="8"></textarea>
                                     </li>
                                 </ul>
                             </div>
@@ -311,10 +311,29 @@
                         <h5>4. 추가정보</h5>
                         <div class="boxWrap">
                             <div class="inputList columnType">   
+                                <div class="h5_sub">
+                                    프로젝트와 관련된 자료를 첨부해 주세요.<br>첨부하신 자료는 외부로 공유되지 않으며 프로젝트 분석과 인력 매칭을 위해서만 사용됩니다.
+                                </div>
                                 <ul>
-                                    <div class="h5_sub">
-                                        프로젝트와 관련된 자료를 첨부해 주세요.<br>첨부하신 자료는 외부로 공유되지 않으며 프로젝트 분석과 인력 매칭을 위해서만 사용됩니다.
-                                    </div>
+                                    <li class="flex_bottom">
+                                        <div class="inputGroup">
+                                            <div class="flex">
+                                                <i class="ico fileUpload"></i>
+                                                <label for="fileUpload">
+                                                    RFP, 기획서, 스토리보드 등 프로젝트를 파악할 수 있는 자료를<br>
+                                                    여기에 첨부해 주세요. (파일 최대 5개, 100MB이하)
+                                                </label>
+                                                <input multiple="" type="file" id="fileUpload">
+                                            </div>
+                                            <div class="fileBox">
+                                                <ul>
+                                                    <li class="fileList">ico.png <button class="ico smClose"></button></li>
+                                                </ul>
+                                            </div>
+                                        </div>   
+                                        <input multiple="" type="file" id="fileUpload">
+                                        <label for="fileUpload" class="selFile button midSize">또는 직접 선택</label>
+                                    </li>
                                 </ul>
                                 <ul>
                                     <li>
@@ -335,47 +354,16 @@
                             </div>
                         </div>
                     </div>                    
-                </div>
+                </section>
                 
                 
                 <!--우측패널 없는 페이지-->
-            </div>
-        </div>
-    </div>
+            </section>
+        </section>
+    </section>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="../assets/js/script.js"></script> -->
-<script>
-    const label = document.querySelectorAll('.selDefault');
-label.forEach(function(lb){
-    lb.addEventListener('click', e => {
-        let optionList = lb.nextElementSibling;
-        let optionItems = optionList.querySelectorAll('.optionItem');
-        clickLabel(lb, optionItems);
-    })
-});
-const clickLabel = (lb, optionItems) => {
-    if(lb.parentNode.classList.contains('is-active')) {
-        lb.parentNode.classList.remove('is-active');
-        optionItems.forEach((opt) => {
-            opt.removeEventListener('click', () => {
-                handleSelect(lb, opt)
-            })
-        })
-    } else {
-        lb.parentNode.classList.add('is-active');
-        optionItems.forEach((opt) => {
-            opt.addEventListener('click', () => {
-                handleSelect(lb, opt)
-            })
-        })
-    }
-}
-const handleSelect = (label, item) => {
-    label.innerHTML = item.textContent;
-    label.parentNode.classList.remove('is-active');
-    
-}
-</script>
+    <script src="../assets/js/script.js"></script>
+
 </body>
 </html>

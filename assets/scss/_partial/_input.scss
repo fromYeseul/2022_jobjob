@@ -21,13 +21,25 @@
     &.columnType{
         >ul{
             display: flex;
+            margin-bottom: rem(30);
+            &:last-child{
+                margin-bottom: 0;
+            }
             li{
+                margin-bottom: 0;
                 & + li{
                     margin-left: rem(30);
                 }
                 > ul{
                     display: flex;
+                    margin-bottom: rem(30);
                 }
+            }
+        }
+        label{
+            + input, 
+            + .select{
+                margin-top: rem(6);
             }
         }
     }
@@ -36,7 +48,7 @@
 /* 공통 */
 label{
     font-weight: 500;
-    margin-bottom: rem(6);
+    //margin-bottom: rem(6);
     // & + input[type=text].full,
     //  input[type=password].full{
     //     margin-top: rem(6);
@@ -161,6 +173,16 @@ input[type=password]{
 }
 
 /* 파일첨부 */
+input[type=file] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+}
 .inputGroup {
     //height: rem(50);
     padding: rem(10) rem(16);
@@ -171,16 +193,6 @@ input[type=password]{
         color: $placeholder;
         font-weight: 400;
         line-height: rem(29);
-    }
-    input[type=file] {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip:rect(0,0,0,0);
-        border: 0;
     }
     .selFile {     
         cursor: pointer;
@@ -201,6 +213,9 @@ input[type=password]{
       li{
         margin-bottom: 0;
       }
+    }
+    & + .selFile{
+        margin-left: rem(15);
     }
 }
 
