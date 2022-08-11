@@ -2,10 +2,10 @@
 .inputList{
     li{
         margin-bottom: rem(30);
-        &.half{
-            display: inline-block;
-            width: 40%;
-        }
+        // &.half{
+        //     display: inline-block;
+        //     width: 40%;
+        // }
         > label{
             display: block;
         }
@@ -16,6 +16,19 @@
         &::after{
             content:'*';
             margin-left: rem(4);
+        }
+    }
+    &.columnType{
+        >ul{
+            display: flex;
+            li{
+                & + li{
+                    margin-left: rem(30);
+                }
+                > ul{
+                    display: flex;
+                }
+            }
         }
     }
 }
@@ -31,30 +44,40 @@ label{
 }
 input[type=text],
 input[type=password],
+input[type=date],
 textarea{
     font-size: rem(14);
+    width: rem(140);
     padding: rem(16);
     border-radius: rem(4);
     border:1px solid $inputGray;   
     resize: none; 
     cursor: pointer;
+    &.smSize{
+        width: rem(70);
+    }
+    &.laSize{
+        width: rem(360);
+    }
+    &.wideSize{
+        width: rem(440);
+    }
+    &.full{
+        width: 100%;
+    }
     &:focus{        
         outline: 1px solid $mainColor;
+    }
+    &::placeholder{
+        color: $placeholder;
+        font-size: rem(16);
     }
     & + .btnType{
         margin-left: rem(10);
     }
 }
 input[type=date]{
-    font-size: rem(14);
     padding: rem(13) rem(16);
-    border-radius: rem(4);
-    border:1px solid $inputGray;   
-    resize: none; 
-    cursor: pointer;
-    &.full{
-        width: 100%;
-    }
 }
 
 
@@ -63,16 +86,6 @@ input[type=text],
 input[type=password]{
     height: rem(50);
     padding: 0 rem(16);
-    &.full{
-        width: 100%;
-    }
-    // &.lowType{
-    //     height: rem(30);
-    // }
-    &::placeholder{
-        color: $placeholder;
-        font-size: rem(16);
-    }
 }
 
 /* INPUT 좌우아이콘 */
@@ -149,7 +162,7 @@ input[type=password]{
 
 /* 파일첨부 */
 .inputGroup {
-    height: rem(50);
+    //height: rem(50);
     padding: rem(10) rem(16);
     margin-top: rem(5);
     border-radius: rem(7);
@@ -185,6 +198,9 @@ input[type=password]{
    .fileBox {
       overflow-y: auto;
       max-height: 50px;
+      li{
+        margin-bottom: 0;
+      }
     }
 }
 

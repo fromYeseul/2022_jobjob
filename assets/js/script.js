@@ -232,18 +232,3 @@ const handleSelect = (label, item) => {
     label.parentNode.classList.remove('is-active');
     
 }
-
-/* 파일업로드 */
-const output = document.querySelector('.fileList');
-const myFiles = document.querySelector("#fileUpload");
-
-function logFilenames(){
-  const fileInput = document.querySelector("#fileUpload");
-  const files = fileInput.files;
-  const fileListLength = files.length;
-  for (let i = 0; i < fileListLength; i++) {
-    output.innerText = `${output.innerText}\n${files.item(i).name}</li>`;
-  }
-}
-
-myFiles.addEventListener("change", logFilenames);
