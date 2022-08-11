@@ -63,12 +63,12 @@
                 <section class="projRegister">
                     <h2>프로젝트 요청등록</h2>
 
-                    <div class="regPart">
+                    <div class="regiPart">
                         <h5>1. 프로젝트 기본정보</h5>
                         <div class="boxWrap">
-                            <div class="inputList columnType">   
+                            <div class="inputList column half">   
                                 <ul>
-                                    <li>
+                                    <li class="full">
                                         <label class="need" for="project">프로젝트 이름</label>
                                         <input class="" type="text" id="project" maxlength="50" placeholder="프로젝트 이름을 입력하세요."> 
                                             
@@ -79,8 +79,6 @@
                                             <label for="b2">운영(SM)</label>
                                         </div>
                                     </li>
-                                </ul>                                  
-                                <ul>
                                     <li>
                                         <label class="need" for="">요청회사</label>
                                         <input class="full" type="text" id="" maxlength="" placeholder="프로젝트 이름을 입력하세요."> 
@@ -89,8 +87,6 @@
                                         <label class="need" for="">요청자 이름</label>
                                         <input class="full" type="text" id="" maxlength="" placeholder="프로젝트 이름을 입력하세요."> 
                                     </li>
-                                </ul>
-                                <ul>
                                     <li>
                                         <label class="need" for="">요청자 이메일</label>
                                         <input class="full" type="text" id="" maxlength="" placeholder="프로젝트 이름을 입력하세요."> 
@@ -99,105 +95,116 @@
                                         <label class="need" for="">연락처</label>
                                         <input class="full" type="text" id="" maxlength="" placeholder="프로젝트 이름을 입력하세요."> 
                                     </li>
-                                </ul>  
-                                <ul> 
                                     <li>
                                         <label class="need" for="">프로젝트 시작희망일</label>
-                                        <input class="full" type="date" id="" maxlength="" placeholder="프로젝트 이름을 입력하세요."> 
+                                        <input class="full mr0" type="date" id="" maxlength="" placeholder="프로젝트 이름을 입력하세요."> 
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>  
-                    <div class="regPart">
+                    <div class="regiPart">
                         <h5>2. 모집인원</h5>
                         <div class="h5_sub">
                             모집하는 인력의 업무 포지션과 경력, 인건비를 입력해주세요.<br>그리고 각 직무에 해당하는 업무 내용과 주요 필수 요건이 있다면 입력해 주세요.
                         </div>
                         <div class="boxWrap">
-                            <div class="inputList columnType">   
+                            <div class="inputList column row">   
                                 <ul>
                                     <li>
-                                        <ul>
-                                            <li>
-                                                <label class="need" for="">직군</label>
-                                                <div class="select">
-                                                    <span class="selDefault">전체</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">열람</li>
-                                                        <li class="optionItem">추천검토</li>
-                                                        <li class="optionItem">인터뷰</li>
-                                                        <li class="optionItem">최종합격</li>
-                                                        <li class="optionItem">불합격</li>
-                                                        <li class="optionItem">투입확정</li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <label class="need" for="project">직무</label>
-                                                <div class="select wideSize">
-                                                    <span class="selDefault">전체</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">열람</li>
-                                                        <li class="optionItem">추천검토</li>
-                                                        <li class="optionItem">인터뷰</li>
-                                                        <li class="optionItem">최종합격</li>
-                                                        <li class="optionItem">불합격</li>
-                                                        <li class="optionItem">투입확정</li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <label class="need" for="">모집인원</label>
-                                                <div class="select">
-                                                    <span class="selDefault">전체</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">열람</li>
-                                                        <li class="optionItem">추천검토</li>
-                                                        <li class="optionItem">인터뷰</li>
-                                                        <li class="optionItem">최종합격</li>
-                                                        <li class="optionItem">불합격</li>
-                                                        <li class="optionItem">투입확정</li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <label class="need" for="">모집인원</label>
-                                                <input class="smSize" type="text" id="" maxlength="" placeholder="00"> 
-                                                <span>명</span>
-                                            </li>
-                                            <li>
-                                                <label class="need" for="">단가</label>
-                                                <input class="" type="text" id="" maxlength="" placeholder=""> 
-                                                <span>만원</span>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <label class="need" for="">투입(예정)일</label>
-                                                <input class="" type="date" id="" maxlength="">
-                                            </li>
-                                            <li>
-                                                <label class="need" for="">종료(예정)일</label>
-                                                <input class="" type="date" id="" maxlength="">
-                                            </li>
-                                            <li>
-                                                <label class="need" for="">요구스킬</label>
-                                                <input class="wideSize" type="text" id="" maxlength="" placeholder="예) Java, JSP등"> 
-                                            </li>
-                                        </ul>
+                                        <label class="need" for="">직군</label>
+                                        <div class="select">
+                                            <span class="selDefault">전체</span>
+                                            <ul class="optionList">
+                                                <li class="optionItem">열람</li>
+                                                <li class="optionItem">추천검토</li>
+                                                <li class="optionItem">인터뷰</li>
+                                                <li class="optionItem">최종합격</li>
+                                                <li class="optionItem">불합격</li>
+                                                <li class="optionItem">투입확정</li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li>
-                                        <textarea class="wideSize" name="" id="" rows="8"></textarea>
+                                        <label class="need" for="project">직무</label>
+                                        <div class="select wideSize">
+                                            <span class="selDefault">전체</span>
+                                            <ul class="optionList">
+                                                <li class="optionItem">열람</li>
+                                                <li class="optionItem">추천검토</li>
+                                                <li class="optionItem">인터뷰</li>
+                                                <li class="optionItem">최종합격</li>
+                                                <li class="optionItem">불합격</li>
+                                                <li class="optionItem">투입확정</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <label class="need" for="">등급</label>
+                                        <div class="select">
+                                            <span class="selDefault">전체</span>
+                                            <ul class="optionList">
+                                                <li class="optionItem">열람</li>
+                                                <li class="optionItem">추천검토</li>
+                                                <li class="optionItem">인터뷰</li>
+                                                <li class="optionItem">최종합격</li>
+                                                <li class="optionItem">불합격</li>
+                                                <li class="optionItem">투입확정</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="need" for="">모집인원</label>
+                                        <input class="smSize" type="text" id="" maxlength="" placeholder="00"> 
+                                        <span>명</span>
+                                    </li>
+                                    <li>
+                                        <label class="need" for="">단가</label>
+                                        <input class="" type="text" id="" maxlength="" placeholder=""> 
+                                        <span>만원</span>
+                                    </li>
+                                </ul>
+                                <ul class="row">
+                                    <li>
+                                        <textarea class="wideSize" name="" id="" rows="9"></textarea>
+                                    </li>
+                                    <li>
+                                        <button class="onlyIco">
+                                            <i class="ico refresh"></i>
+                                        </button>
+                                        <button class="onlyIco">
+                                            <i class="ico minus"></i>
+                                        </button>
+                                        <button class="onlyIco">
+                                            <i class="ico plus"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <label class="need" for="">투입(예정)일</label>
+                                        <input class="" type="date" id="" maxlength="">
+                                    </li>
+                                    <li>
+                                        <label class="need" for="">종료(예정)일</label>
+                                        <input class="" type="date" id="" maxlength="">
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <label class="need" for="">요구스킬</label>
+                                        <input class="wideSize" type="text" id="" maxlength="" placeholder="예) Java, JSP등"> 
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>      
-                    <div class="regPart">
+                    <div class="regiPart">
                         <h5>3. 근무환경</h5>
                         <div class="boxWrap">
-                            <div class="inputList columnType">   
+                            <div class="inputList column row">   
                                 <ul>
                                     <li>
                                         <label class="need" for="">근무방식</label>
@@ -307,16 +314,16 @@
                             </div>
                         </div>
                     </div>        
-                    <div class="regPart">
+                    <div class="regiPart">
                         <h5>4. 추가정보</h5>
                         <div class="boxWrap">
-                            <div class="inputList columnType">   
+                            <div class="inputList">   
                                 <div class="h5_sub">
                                     프로젝트와 관련된 자료를 첨부해 주세요.<br>첨부하신 자료는 외부로 공유되지 않으며 프로젝트 분석과 인력 매칭을 위해서만 사용됩니다.
                                 </div>
                                 <ul>
                                     <li class="flex_bottom">
-                                        <div class="inputGroup">
+                                        <div class="inputGroup mt20">
                                             <div class="flex">
                                                 <i class="ico fileUpload"></i>
                                                 <label for="fileUpload">
@@ -332,23 +339,27 @@
                                             </div>
                                         </div>   
                                         <input multiple="" type="file" id="fileUpload">
-                                        <label for="fileUpload" class="selFile button midSize">또는 직접 선택</label>
+                                        <label for="fileUpload" class="selFile button midSize ml15">또는 직접 선택</label>
                                     </li>
                                 </ul>
+                            </div>
+                            <div class="inputList column half"> 
                                 <ul>
                                     <li>
                                         <h3>프로젝트 소개</h3>
-                                        <textarea name="" id="" rows="10"></textarea>
+                                        <textarea class="xlSize" name="" id="" rows="10"></textarea>
                                     </li>
                                     <li>
                                         <h3>기타 참고사항</h3>
-                                        <textarea name="" id="" rows="10"></textarea>
+                                        <textarea class="xlSize" name="" id="" rows="10"></textarea>
                                     </li>
                                 </ul>
+                            </div>
+                            <div class="inputList"> 
                                 <h3>프로젝트를 잡잡 직원과 먼저 의논하셨나요?<br>또는 추천을 받으셨나요?</h3>
                                 <ul>
                                     <li>
-                                        <input class="full" type="text" id="" maxlength="" placeholder="직원 이름 입력">
+                                        <input class="xlSize" type="text" id="" maxlength="" placeholder="직원 이름 입력">
                                     </li>
                                 </ul>
                             </div>

@@ -18,31 +18,80 @@
             margin-left: rem(4);
         }
     }
-    &.columnType{
-        >ul{
-            display: flex;
-            margin-bottom: rem(30);
-            &:last-child{
-                margin-bottom: 0;
+    &.column{
+        label{
+            & + input,
+            & + .select{
+                margin-top: rem(10);
             }
-            li{
-                margin-bottom: 0;
-                & + li{
-                    margin-left: rem(30);
-                }
-                > ul{
-                    display: flex;
-                    margin-bottom: rem(30);
+        }
+        &.half{
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: rem(30);
+                .full{
+                    grid-column: 1 / 3;
                 }
             }
         }
-        label{
-            + input, 
-            + .select{
-                margin-top: rem(6);
+        &.row{
+            display: grid;
+            column-gap: rem(30);
+            ul{            
+                display: flex;
+                column-gap: rem(30);
+                &.row{
+                    column-gap: rem(6);
+                    grid-column: 3 / span 1;
+                    grid-row: 1 / span 2;
+                }
             }
         }
     }
+    // &.grid_row{
+    //     display: grid;
+    //     column-gap: rem(30);
+    //     ul{            
+    //         display: flex;
+    //         column-gap: rem(30);
+    //         &.row{
+    //             grid-column: 3 / span 1;
+    //             grid-row: 1 / span 2;
+    //         }
+    //     }
+    // }
+    // &.columnType{
+    //     >ul{
+    //         display: flex;
+    //         margin-bottom: rem(30);
+    //         &:last-child{
+    //             margin-bottom: 0;
+    //         }
+    //         &.half{
+    //             li{
+    //                 width: 50%;
+    //             }
+    //         }
+    //         li{
+    //             margin-bottom: 0;
+    //             margin-right: rem(30);
+    //             &:last-child{
+    //                 margin-right: 0;
+    //             }
+    //             > ul{
+    //                 display: flex;
+    //                 margin-bottom: rem(30);
+    //             }
+    //         }
+    //     }
+    //     label{
+    //         + input, 
+    //         + .select{
+    //             margin-top: rem(6);
+    //         }
+    //     }
+    // }
 }
 
 /* 공통 */
@@ -74,6 +123,9 @@ textarea{
     &.wideSize{
         width: rem(440);
     }
+    &.xlSize{
+        width: rem(500);
+    }
     &.full{
         width: 100%;
     }
@@ -89,7 +141,22 @@ textarea{
     }
 }
 input[type=date]{
+    position: relative;
     padding: rem(13) rem(16);
+    &::-webkit-calendar-picker-indicator {
+        background: transparent;
+        z-index: 1;
+    }
+    &::after{
+        content:'';
+        width: rem(18);
+        height: rem(18);
+        position: absolute;
+        top: 50%;
+        right: rem(16);
+        transform: translateY(-50%);
+        background: url(../img/icoCal.png) no-repeat;
+    }
 }
 
 

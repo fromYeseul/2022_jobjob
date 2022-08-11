@@ -16,12 +16,13 @@
             bottom: 0;
         }
     }
-    .regPart{
+    .regiPart{
         padding-top: rem(70);
         .boxWrap{
             margin-top: rem(20);
             padding: rem(40);
             .inputList{
+                width: 60%;
                 span{
                     font-weight: 500;
                 }
@@ -31,14 +32,17 @@
                         margin-right: 0;
                     }
                 }
-                h3{
-                    margin-top: rem(70);
-                    + input, textarea{
-                        margin-top: rem(10);
+                .full{
+                    input{
+                        width: rem(740);
                     }
                 }
             }
             h3{
+                margin-top: rem(40);
+                &.need{
+                    margin-bottom: rem(40);
+                }
                 + ul,
                 + textarea{
                     margin-top: rem(6);
