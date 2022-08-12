@@ -50,6 +50,11 @@ $scrollThumb : $tooltipGray;
 $footerGray : $titleGray;
 
 
+
+.hasFooter{
+    overflow-y: hidden;
+}
+
 //상태별 색상
 .sOrder{
     color: $highlight;
@@ -85,6 +90,9 @@ $footerGray : $titleGray;
 .error{
     display: none;
     color: $error;
+    font-size: rem(14);
+    text-indent: rem(16);
+    margin-top: rem(6);
     &.is-active{
         display: block;
     }
@@ -109,16 +117,24 @@ $footerGray : $titleGray;
 //정렬
 .flex{
     display: flex;
+}
+.flexCenter{
+    display: flex;
     align-items: center;
 }
-.flex_bottom{
+.flexEnd{
     display: flex;
     align-items: end;
+}
+.flexBetween{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;;
 }
 .block{
     display: block;
 }
-.txt_center{
+.txtCenter{
     text-align: center;
 }
 
@@ -152,3 +168,6 @@ $footerGray : $titleGray;
 .ml15{margin-left: rem(15) !important;}
 
 .mt20{margin-top: rem(20) !important;}
+
+.h100{height: 100%;}
+.lh50{line-height: rem(50);}

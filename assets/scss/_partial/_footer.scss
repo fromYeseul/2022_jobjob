@@ -1,9 +1,33 @@
 
-.footer{
+footer{
     width: 100%;
     color: $footerGray;
     font-size: rem(14);
     text-align: center;
     margin-top: rem(160);
+    &.toast{
+        margin-top: 0;
+        padding: rem(33) rem(40);
+        @include sideArray;
+        color:$white;
+        background: rgba($black, .6);
+        position: fixed;
+        left: 0;
+        bottom: -120px;
+        z-index: 101;
+        transition: all 1s;
+        &.is-active{
+            bottom:0;
+        }
+        h5{
+            @include heightArray;
+        }
+        button{
+            border:0;
+             + button{
+                margin-left: rem(20);
+             }
+        }
+    }
 }
 

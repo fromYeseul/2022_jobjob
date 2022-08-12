@@ -89,6 +89,10 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: 900;
   src: url(../font/NotoSansKR-Black.otf) format("truetype"), url(../font/NotoSansKR-Black.woff) format("woff");
 }
+.hasFooter {
+  overflow-y: hidden;
+}
+
 .sOrder {
   color: #009ce0;
 }
@@ -124,6 +128,9 @@ h1, h2, h3, h4, h5, h6, p {
 .error {
   display: none;
   color: #ff1236;
+  font-size: 0.875rem;
+  text-indent: 1rem;
+  margin-top: 0.375rem;
 }
 .error.is-active {
   display: block;
@@ -145,19 +152,29 @@ h1, h2, h3, h4, h5, h6, p {
 
 .flex {
   display: flex;
+}
+
+.flexCenter {
+  display: flex;
   align-items: center;
 }
 
-.flex_bottom {
+.flexEnd {
   display: flex;
   align-items: end;
+}
+
+.flexBetween {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .block {
   display: block;
 }
 
-.txt_center {
+.txtCenter {
   text-align: center;
 }
 
@@ -195,6 +212,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 .mt20 {
   margin-top: 1.25rem !important;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.lh50 {
+  line-height: 3.125rem;
 }
 
 .wrapper {
@@ -561,12 +586,39 @@ header.center {
   justify-content: center;
 }
 
-.footer {
+footer {
   width: 100%;
   color: #b7b7c4;
   font-size: 0.875rem;
   text-align: center;
   margin-top: 10rem;
+}
+footer.toast {
+  margin-top: 0;
+  padding: 2.0625rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  background: rgba(41, 41, 44, 0.6);
+  position: fixed;
+  left: 0;
+  bottom: -120px;
+  z-index: 101;
+  transition: all 1s;
+}
+footer.toast.is-active {
+  bottom: 0;
+}
+footer.toast h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer.toast button {
+  border: 0;
+}
+footer.toast button + button {
+  margin-left: 1.25rem;
 }
 
 .modalLayer {
@@ -700,6 +752,32 @@ header.center {
   left: -9px;
 }
 
+.floatingWrapper {
+  position: fixed;
+  right: 5rem;
+  top: 15rem;
+}
+.floatingWrapper .floating {
+  padding: 2.5rem 2.75rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 0.4375rem;
+  box-shadow: 0 0 25px 0 rgba(41, 41, 44, 0.17);
+}
+.floatingWrapper .floating + .floating {
+  margin-top: 0.625rem;
+}
+.floatingWrapper .select {
+  margin-top: 0.375rem;
+}
+.floatingWrapper .select + h6 {
+  margin-top: 2.5rem;
+}
+.floatingWrapper button {
+  display: block;
+  margin-left: 0;
+}
+
 .condition {
   margin-top: 1.875rem;
 }
@@ -710,14 +788,14 @@ header.center {
   font-weight: 400;
   color: #878791;
 }
-.condition ul {
+.condition > ul {
   display: flex;
 }
-.condition ul li {
+.condition > ul li {
   display: inline-block;
   margin-right: 0.625rem;
 }
-.condition ul li input {
+.condition > ul li input {
   width: 25rem;
 }
 
@@ -744,6 +822,10 @@ table th, table td {
   border-top: 1px solid #e6e6eb;
   border-bottom: 1px solid #e6e6eb;
 }
+table th .select, table td .select {
+  text-align: left;
+  color: #29292c;
+}
 table th {
   color: #fff;
   font-weight: 500;
@@ -759,6 +841,20 @@ table td.nodata {
   display: table-cell;
   font-weight: 500;
   background: transparent;
+}
+table td.right {
+  text-align: right;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tfoot td {
+  padding: 1.125rem;
+  background: #f2f2f7;
+  border-bottom: 0;
+}
+table.hasInput td {
+  padding: 0.625rem;
 }
 table .ellipsis {
   width: 90%;
@@ -932,6 +1028,7 @@ button,
 .button {
   display: inline-block;
   color: #fff;
+  font-weight: 700;
   text-align: center;
   border-radius: 0.375rem;
   background-color: #0460d2;
@@ -954,31 +1051,40 @@ button.fullSize,
 .button.fullSize {
   width: 100%;
   line-height: 3.375rem;
-  font-weight: 700;
 }
-button.laSize,
-.button.laSize {
-  min-width: 8.125rem;
-  padding: 0 1.25rem;
-  line-height: 3.4375rem;
-  font-size: 1.125rem;
-  font-weight: 700;
+button.lowSize,
+.button.lowSize {
+  width: 8.125rem;
+  line-height: 2.375rem;
+}
+button.smSize,
+.button.smSize {
+  line-height: 1.875rem;
+  padding: 0 0.75rem;
+  font-weight: 400;
 }
 button.midSize,
 .button.midSize {
   min-width: 5.625rem;
   line-height: 3.125rem;
   padding: 0 0.9375rem;
-  font-weight: 700;
 }
 button.midSize.low,
 .button.midSize.low {
   line-height: 2.5rem;
 }
-button.smSize,
-.button.smSize {
-  padding: 0 0.75rem;
-  line-height: 1.875rem;
+button.laSize,
+.button.laSize {
+  min-width: 8.125rem;
+  line-height: 3.4375rem;
+  padding: 0 1.25rem;
+  font-size: 1.125rem;
+}
+button.xlSize,
+.button.xlSize {
+  width: 10rem;
+  line-height: 3.375rem;
+  font-size: 1.125rem;
 }
 button.ico,
 .button.ico {
@@ -992,15 +1098,35 @@ button.white,
   background-color: #fff;
   border: 1px solid #e6e6eb;
 }
+button.white.lowSize,
+.button.white.lowSize {
+  width: 8.125rem;
+  line-height: 2.375rem;
+}
 button.white.smSize,
 .button.white.smSize {
   line-height: 1.875rem;
+}
+button.white.laSize,
+.button.white.laSize {
+  line-height: 3.4375rem;
+}
+button.white.xlSize,
+.button.white.xlSize {
+  width: 10rem;
+  line-height: 3.375rem;
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 button.white:disabled, button.white.disabled,
 .button.white:disabled,
 .button.white.disabled {
   color: #b7b7c4;
   cursor: not-allowed;
+}
+button.warning,
+.button.warning {
+  background: #ff1236;
 }
 button.round,
 .button.round {
@@ -1088,7 +1214,6 @@ span.button {
   display: block;
 }
 .inputList .need {
-  padding-right: 0.625rem;
   position: relative;
 }
 .inputList .need::after {
@@ -1118,6 +1243,12 @@ span.button {
   column-gap: 0.375rem;
   grid-column: 3/span 1;
   grid-row: 1/span 2;
+}
+.inputList.column.row ul.gap20 {
+  column-gap: 1.25rem;
+}
+.inputList.column.row textarea {
+  height: 100%;
 }
 
 /* 공통 */
@@ -1166,6 +1297,19 @@ input[type=password].full,
 input[type=date].full,
 textarea.full {
   width: 100%;
+}
+input[type=text].need,
+input[type=password].need,
+input[type=date].need,
+textarea.need {
+  border: 1px solid #ff1236;
+}
+input[type=text].need:focus,
+input[type=password].need:focus,
+input[type=date].need:focus,
+textarea.need:focus {
+  border: 0;
+  outline: 1px solid #0460d2;
 }
 input[type=text]:focus,
 input[type=password]:focus,
@@ -1277,8 +1421,9 @@ input[type=password] {
   background: transparent;
 }
 .inputObj input[type=text] {
-  border: 0;
   height: auto;
+  padding: 0.25rem;
+  border: 0;
 }
 
 /* 파일첨부 */
@@ -1323,6 +1468,10 @@ input[type=file] {
 }
 .inputGroup .fileBox li {
   margin-bottom: 0;
+}
+.inputGroup.wide {
+  margin-top: 1.25rem;
+  padding: 1.125rem 7.1875rem;
 }
 .inputGroup + .selFile {
   margin-left: 0.9375rem;
@@ -1583,9 +1732,9 @@ input[type=radio]:checked + label::before {
   position: relative;
   display: inline-block;
   width: 6.25rem;
-  line-height: 3rem;
   font-size: 0.875rem;
   font-weight: 500;
+  text-align: left !important;
   background: #fff;
   border-radius: 0.25rem;
   border: 1px solid #e6e6eb;
@@ -1622,7 +1771,7 @@ input[type=radio]:checked + label::before {
 }
 .select .optionList .optionItem {
   display: block;
-  padding: 0 0.625rem;
+  padding: 0.5rem 0.625rem;
   margin: 0;
 }
 .select .optionList .optionItem:hover {
@@ -1632,6 +1781,10 @@ input[type=radio]:checked + label::before {
 }
 .select .optionList .optionItem label {
   font-weight: 400;
+  vertical-align: middle;
+}
+.select .optionList .optionItem p {
+  font-size: 0.75rem;
 }
 .select.lowSize {
   width: 6.25rem;
@@ -1643,12 +1796,11 @@ input[type=radio]:checked + label::before {
 .select.lowSize .optionList {
   top: 2.6875rem;
 }
+.select.laSize {
+  width: 8.125rem;
+}
 .select.wideSize {
   width: 11.25rem;
-  line-height: 2.5rem;
-}
-.select.wideSize .optionList {
-  top: 2.5rem;
 }
 .select label {
   display: block;
@@ -1737,6 +1889,7 @@ input[type=radio]:checked + label::before {
 .ico.smClose {
   width: 0.875rem;
   height: 0.875rem;
+  vertical-align: inherit;
   background-position: -160px 0;
 }
 .ico.smClose.w {
@@ -1772,6 +1925,11 @@ input[type=radio]:checked + label::before {
   width: 1.125rem;
   height: 0.125rem;
   background-position: 0 -180px;
+}
+.ico.sort {
+  width: 1.125rem;
+  height: 0.1875rem;
+  background-position: -220px 0;
 }
 .ico.left {
   width: 0.75rem;
@@ -2083,7 +2241,7 @@ input[type=radio]:checked + label::before {
   right: 0;
   top: 0;
 }
-.boxList.flexType .suffix .txt_center .select {
+.boxList.flexType .suffix .txtCenter .select {
   margin: 10px auto;
 }
 .boxList.headType {
@@ -2197,6 +2355,50 @@ h1 {
   letter-spacing: -1.93px;
 }
 
+.pageTit {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+.pageTit::after {
+  content: "";
+  width: calc(100% + 80px);
+  height: 1px;
+  background: #b7b7c4;
+  position: absolute;
+  left: -40px;
+  bottom: 0;
+}
+.pageTit .breadCrumb {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.pageTit .breadCrumb li {
+  margin-left: 3.4375rem;
+  position: relative;
+}
+.pageTit .breadCrumb li::after {
+  content: "";
+  width: 1.125rem;
+  height: 0.1875rem;
+  background: url(../img/icoGroup.png);
+  background-position: -220px 0;
+  position: absolute;
+  top: 50%;
+  right: -36px;
+  transform: translateY(-50%);
+}
+.pageTit .breadCrumb li:last-child::after {
+  display: none;
+}
+.pageTit .breadCrumb li a {
+  color: #b7b7c4;
+}
+.pageTit .breadCrumb li.is-active a {
+  color: #0460d2;
+}
+
 h2 {
   font-size: 2rem;
   letter-spacing: -1.14px;
@@ -2216,7 +2418,6 @@ h4 {
 
 h5 {
   font-size: 1.5rem;
-  font-weight: 700;
   letter-spacing: -0.86px;
 }
 h5 + h5 {
@@ -2225,6 +2426,10 @@ h5 + h5 {
 h5 + .h5_sub {
   color: #878791;
   margin-top: 0.75rem;
+}
+
+h6 {
+  font-size: 1.125rem;
 }
 
 .login {
@@ -2407,19 +2612,6 @@ h5 + .h5_sub {
   overflow-y: auto;
   height: calc(100vh - 80px);
 }
-.projRegister h2 {
-  position: relative;
-  padding-bottom: 1.25rem;
-}
-.projRegister h2::after {
-  content: "";
-  width: calc(100% + 80px);
-  height: 1px;
-  background: #b7b7c4;
-  position: absolute;
-  left: -40px;
-  bottom: 0;
-}
 .projRegister .regiPart {
   padding-top: 4.375rem;
 }
@@ -2440,6 +2632,9 @@ h5 + .h5_sub {
 .projRegister .regiPart .boxWrap .inputList .full input {
   width: 46.25rem;
 }
+.projRegister .regiPart .boxWrap .inputList.wide {
+  width: 83.75rem;
+}
 .projRegister .regiPart .boxWrap h3 {
   margin-top: 2.5rem;
 }
@@ -2447,11 +2642,15 @@ h5 + .h5_sub {
   margin-bottom: 2.5rem;
 }
 .projRegister .regiPart .boxWrap h3 + ul,
-.projRegister .regiPart .boxWrap h3 + textarea {
+.projRegister .regiPart .boxWrap h3 + textarea,
+.projRegister .regiPart .boxWrap h3 + table {
   margin-top: 0.375rem;
 }
 .projRegister .regiPart .boxWrap .btnType {
   display: inline-block;
+}
+.projRegister .regiPart .boxWrap .inputGroup {
+  width: 27.5rem;
 }
 
 .memList {

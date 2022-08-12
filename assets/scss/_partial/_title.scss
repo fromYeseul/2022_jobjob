@@ -5,6 +5,52 @@ h1{
 }
 
 //페이지 타이틀
+.pageTit{
+    @include sideArray;
+    position: relative;
+    padding-bottom: rem(20);
+    &::after{
+        content:'';
+        width: calc(100% + 80px);
+        height: 1px;
+        background: $titleGray;
+        position: absolute;
+        left: -40px;
+        bottom: 0;
+    }
+    .breadCrumb{
+        font-size: rem(24);
+        font-weight: 700;
+        li{
+            margin-left: rem(55);
+            position: relative;
+            &::after{
+                content:'';
+                width: rem(18);
+                height: rem(3);
+                background: url(../img/icoGroup.png);
+                background-position: -220px 0;
+                position: absolute;
+                top: 50%;
+                right: -36px;
+                transform: translateY(-50%);
+            }
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+            a{
+                color: $titleGray;
+            }
+            &.is-active{
+                a{
+                    color: $mainColor;
+                }                
+            }
+        }
+    }
+}
 h2{    
     font-size: rem(32);
     letter-spacing: -1.14px;
@@ -27,7 +73,6 @@ h4{
 //회원상세 타이틀
 h5{
     font-size: rem(24);
-    font-weight: 700;
     letter-spacing: -0.86px;
     + h5{
         margin-left: rem(27);
@@ -36,4 +81,9 @@ h5{
         color: $subInfo;
         margin-top: rem(12);
     }
+}
+
+//플록메뉴 타이틀
+h6{
+    font-size: rem(18);
 }

@@ -27,9 +27,9 @@
   position: relative;
   display: inline-block;
   width: rem(100);
-  line-height: rem(48);
   font-size: rem(14);
   font-weight: 500;
+  text-align: left !important;
   background: $white;
   border-radius: rem(4);
   border: 1px solid $inputGray;
@@ -65,8 +65,8 @@
     z-index: 10;
     .optionItem {
       display: block;
-      padding: 0 rem(10);
-      margin: 0;
+      padding: rem(8) rem(10);
+      margin: 0;      
       &:hover {
         color: $black;
         font-weight: 500;
@@ -74,6 +74,10 @@
       }
       label{
         font-weight: 400;
+        vertical-align: middle;
+      }
+      p{
+        font-size: rem(12);
       }
     }
   }
@@ -87,12 +91,11 @@
       top: rem(43);
     }
   }
+  &.laSize{
+    width: rem(130);
+  }
   &.wideSize{
     width: rem(180);
-    line-height: rem(40);
-    .optionList {
-      top: rem(40);
-    }
   }
   //체크박스를 가진 select
   label{

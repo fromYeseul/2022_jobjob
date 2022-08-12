@@ -12,6 +12,7 @@ button,
 .button{
     display: inline-block;
     color: $white;
+    font-weight: 700;
     text-align: center;
     border-radius: rem(6);
     background-color: $mainColor;
@@ -33,28 +34,35 @@ button,
     &.fullSize{
         width: 100%;
         line-height: rem(54);
-        font-weight: 700;
     }
-    &.laSize{
-        min-width: rem(130);
-        padding: 0 rem(20);
-        line-height: rem(55);
-        font-size: rem(18);
-        font-weight: 700;
+    &.lowSize{
+        width: rem(130);
+        line-height: rem(38);
+    }
+    &.smSize{
+        //width: rem(74);
+        line-height: rem(30);
+        padding: 0 rem(12);
+        font-weight: 400;
     }
     &.midSize{
         min-width: rem(90);
         line-height: rem(50);
         padding: 0 rem(15);
-        font-weight: 700;
         &.low{
             line-height: rem(40);
         }
     }
-    &.smSize{
-        //width: rem(74);
-        padding: 0 rem(12);
-        line-height: rem(30);
+    &.laSize{
+        min-width: rem(130);
+        line-height: rem(55);
+        padding: 0 rem(20);
+        font-size: rem(18);
+    }
+    &.xlSize{
+        width: rem(160);
+        line-height: rem(54);
+        font-size: rem(18);
     }
     //디자인
     &.ico{
@@ -67,16 +75,32 @@ button,
         color: $black;
         background-color: $white;
         border: 1px solid $inputGray;
+        &.lowSize{
+            width: rem(130);
+            line-height: rem(38);
+        }
         &.smSize{
             //width: rem(74);
             line-height: rem(30);
             //border: 1px solid $gray;
+        }
+        &.laSize{
+            line-height: rem(55);
+        }
+        &.xlSize{
+            width: rem(160);
+            line-height: rem(54);
+            font-size: rem(18);
+            font-weight: 700;
         }
         &:disabled,
         &.disabled{
             color: $cancel;
             cursor:not-allowed;
         }
+    }
+    &.warning{
+        background: $error;
     }
     &.round{
         // width: rem(64);

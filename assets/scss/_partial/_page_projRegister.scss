@@ -3,19 +3,6 @@
     padding: rem(30) rem(40);
     overflow-y: auto;
     height: calc(100vh - 80px);
-    h2{
-        position: relative;
-        padding-bottom: rem(20);
-        &::after{
-            content:'';
-            width: calc(100% + 80px);
-            height: 1px;
-            background: $titleGray;
-            position: absolute;
-            left: -40px;
-            bottom: 0;
-        }
-    }
     .regiPart{
         padding-top: rem(70);
         .boxWrap{
@@ -37,6 +24,9 @@
                         width: rem(740);
                     }
                 }
+                &.wide{
+                    width: rem(1340);
+                }
             }
             h3{
                 margin-top: rem(40);
@@ -44,12 +34,16 @@
                     margin-bottom: rem(40);
                 }
                 + ul,
-                + textarea{
+                + textarea,
+                + table{
                     margin-top: rem(6);
                 }
             }
             .btnType{
                 display: inline-block;
+            }
+            .inputGroup{
+                width: rem(440);
             }
         }
     }

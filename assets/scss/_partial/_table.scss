@@ -22,6 +22,10 @@ table{
         background: $white;
         border-top: 1px solid $tableBorder;
         border-bottom: 1px solid $tableBorder;
+        .select{
+            text-align: left;
+            color: $black;
+        }
     }
     th{
         color: $white;
@@ -37,6 +41,28 @@ table{
             display: table-cell;
             font-weight: 500;
             background: transparent;
+        }
+        &.right{
+            text-align: right;
+        }
+    }
+    tr{
+        &:last-child{
+            td{
+                border-bottom: 0;
+            }
+        }
+    }
+    tfoot{
+        td{
+            padding: rem(18);
+            background: $bgColor;
+            border-bottom: 0;
+        }
+    }
+    &.hasInput{
+        td{
+            padding: rem(10);
         }
     }
     .ellipsis{
