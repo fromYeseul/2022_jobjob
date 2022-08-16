@@ -1,7 +1,8 @@
 .floatingWrapper{
     position: fixed;
     right: rem(80);
-    top: rem(240);
+    top: 50%;
+    transform: translateY(-55%);
     .floating{
         padding: rem(40) rem(44);
         text-align: center;
@@ -13,13 +14,17 @@
         }
     }
     .select{
-        margin-top: rem(6);
+        margin-top: rem(14);
         & + h6{
             margin-top: rem(40);
         }
     }
     button{
         display: block;
-        margin-left: 0;
+        width: rem(130);
+        margin: rem(13) auto;
+        &:last-child{
+            margin-top: rem(25);
+        }
     }
 }

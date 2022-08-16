@@ -1,8 +1,12 @@
 .projRegister{
     width: 100%;
     padding: rem(30) rem(40);
-    overflow-y: auto;
-    height: calc(100vh - 80px);
+    // overflow-y: auto;
+    // height: calc(100vh - 80px);
+    .regiPartWrapper{
+        @include scroll_0;
+        height: calc(100vh - 220px);
+    }
     .regiPart{
         padding-top: rem(70);
         .boxWrap{
@@ -42,9 +46,9 @@
             .btnType{
                 display: inline-block;
             }
-            .inputGroup{
-                width: rem(440);
-            }
+            // .inputGroup{
+            //     width: rem(440);
+            // }
         }
     }
 }
