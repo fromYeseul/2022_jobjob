@@ -1,6 +1,7 @@
 .projRegister{
     width: 100%;
     padding: rem(30) rem(40);
+    position: relative;
     // overflow-y: auto;
     // height: calc(100vh - 80px);
     .regiPartWrapper{
@@ -14,6 +15,9 @@
             padding: rem(40);
             .inputList{
                 width: 60%;
+                &.row{
+                    width: 75%;
+                }
                 span{
                     font-weight: 500;
                 }
@@ -25,7 +29,7 @@
                 }
                 .full{
                     input{
-                        width: rem(740);
+                        width: rem(746);
                     }
                 }
                 &.wide{
@@ -46,9 +50,19 @@
             .btnType{
                 display: inline-block;
             }
-            // .inputGroup{
-            //     width: rem(440);
-            // }
+            .inputGroup{
+                width: rem(440);
+                height: rem(50);
+                &.wide{
+                    width: rem(600);
+                    height: auto;
+                    font-size: rem(14);
+                    label{
+                        line-height: rem(20);
+                        margin-left: rem(10);
+                    }
+                }
+            }
         }
     }
 }

@@ -67,13 +67,13 @@
                 <section class="projRegister">
 
                     <div class="pageTit">
-                        <h2>프로젝트 요청등록</h2>
+                        <h2 id="test">프로젝트 요청등록</h2>
                         <div class="breadCrumb">
                             <ul class="flex">
-                                <li class="is-active"><a href="#">기본정보</a></li>
-                                <li><a href="#">모집인원</a></li>
-                                <li><a href="#">근무환경</a></li>
-                                <li><a href="#">추가정보</a></li>
+                                <li class="is-active" id="clickOne"><a href="#">기본정보</a></li>
+                                <li id="clickTwo"><a href="#">모집인원</a></li>
+                                <li id="clickThree"><a href="#">근무환경</a></li>
+                                <li id="clickFour"><a href="#">추가정보</a></li>
                             </ul>
                         </div>
                     </div>
@@ -231,7 +231,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="inputList wide">
+                                <!-- <div class="inputList wide">
                                     <h3>매출</h3>
                                     <table class="hasInput">
                                         <colgroup>
@@ -546,7 +546,7 @@
                                             </tr>
                                         </tfoot>
                                     </table>
-                                </div>
+                                </div> -->
                             </div>
                         </div>      
                         <div class="regiPart">
@@ -711,25 +711,28 @@
                                 </div>
                             </div>
                         </div>    
-                    </div>                         
+                    </div>     
+
+                    <footer class="toast">
+                        <h5>이 프로젝트의 진행 여부를 판단하세요.</h5>
+                        <div class="suffix">
+                            <button class="xlSize">공고등록</button>
+                            <button class="white xlSize">공고수정</button>
+                            <button class="warning xlSize">진행불가</button>
+                        </div>
+                    </footer>
+
+
                 </section>
                 
                 <!--우측패널 없는 페이지-->
             </section>
         </section>
 
-        <footer class="toast">
-            <h5>이 프로젝트의 진행 여부를 판단하세요.</h5>
-            <div class="suffix">
-                <button class="xlSize">공고등록</button>
-                <button class="white xlSize">공고수정</button>
-                <button class="warning xlSize">진행불가</button>
-            </div>
-        </footer>
     </section>
 
-    <!--플로팅메뉴-->
-    <!-- <div class="floatingWrapper">
+    <!--플로팅메뉴
+    <div class="floatingWrapper">
         <div class="floating">
             <h6>이 프로젝트의 상태를</h6>
             <div class="select laSize">
@@ -800,15 +803,220 @@
             <button class="white lowSize">임시저장</button>
             <button class="midSize">저장</button>
         </div>
-    </div> -->
-    <!--//플로팅메뉴-->
+    </div>
+   //플로팅메뉴-->
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- <script src="../assets/js/script.js"></script> -->
-<script>  
+
+    <script>
+    //스크롤이동 - 프로젝트 등록
+
+    $(function(){
+
+        var $breadCrumbs = $('.breadCrumb li');
+
+        $breadCrumbs.on('click', function(e){
+            e.preventDefault();
+
+            $breadCrumbs.removeClass('is-active');
+            $(this).addClass('is-active');
+
+            var index = $(this).index();
+
+            if(index == 0){
+                $(".regiPartWrapper").animate({
+                    scrollTop: "0", 
+                },500);
+            }else if(index == 1){
+                $(".regiPartWrapper").animate({
+                    scrollTop: "700", 
+                },500);
+            }else if(index = 2){
+                $(".regiPartWrapper").animate({
+                    scrollTop: "1200", 
+                },500);
+            }else {
+                $(".regiPartWrapper").animate({
+                    scrollTop: "1700", 
+                },500);
+            }
+            
+        })
+
+        var $Wrapper = $('.regiPartWrapper');
+
+        $Wrapper.scroll(function(){            
+            var $scrollTop = $('.regiPartWrapper').scrollTop();
+
+            if($scrollTop < 700){
+                $breadCrumbs.removeClass('is-active');
+                $breadCrumbs.eq(0).addClass('is-active');
+            }else if($scrollTop < 1200){
+                $breadCrumbs.removeClass('is-active');
+                $breadCrumbs.eq(1).addClass('is-active');
+            }else if($scrollTop < 1700){
+                $breadCrumbs.removeClass('is-active');
+                $breadCrumbs.eq(2).addClass('is-active');
+            }else{
+                $breadCrumbs.removeClass('is-active');
+                $breadCrumbs.eq(3).addClass('is-active');
+            }
+        })
+        
+        
+    })
+
+    // $("#clickOne").click(function() {
+    //     $(".regiPartWrapper").animate({
+    //         scrollTop: "0", 
+    //     },500);
+    //     event.preventDefault();
+    // })
+    // $("#clickTwo").click(function() {
+    //     $(".regiPartWrapper").animate({
+    //         scrollTop: "700",
+    //     },500);
+    //     event.preventDefault();
+    // })
+    // $("#clickThree").click(function() {
+    //     $(".regiPartWrapper").animate({
+    //         scrollTop: "1200", 
+    //     },500);
+    //     event.preventDefault();
+    // })
+    // $("#clickFour").click(function() {
+    //     $(".regiPartWrapper").animate({
+    //         scrollTop: "1700",
+    //     },500);
+    //     event.preventDefault();
+    // })
+
+
+    
+    //푸터보이기
+    function showFooter(){
+
+        let regiPartWrapper = document.querySelector('.regiPartWrapper');
+        let regiPart = document.querySelectorAll('.regiPart');
+        let regi3Top = regiPart[3].offsetTop;
+        let toast = document.querySelector('.toast');
+
+        for(let i=0; i<regiPart.length; i++){            
+            regiPartWrapper.addEventListener('scroll', function(e){
+                e.preventDefault();
+
+                if(regiPartWrapper.scrollTop > regi3Top){
+                    toast.classList.add('is-active');
+                }else{
+                    toast.classList.remove('is-active');
+                }
+            })
+        }
+        }
+        showFooter();
+    </script>
+<!-- <script>  
 
     //스크롤이동 - 프로젝트 등록
+    function regiScroll(){
+
+        let breadCrumb = document.querySelectorAll('.breadCrumb li a');
+        let regiPartWrapper = document.querySelector('.regiPartWrapper');
+        let regi0Top = document.getElementById('regi0Top');
+        let regiPart = document.querySelectorAll('.regiPart');
+
+
+
+        for(let i=0; i<breadCrumb.length; i++){
+            for(let j=0; j<regiPart.length; j++){   
+
+                
+                
+                breadCrumb[0].addEventListener('click', function(e){
+                    e.preventDefault();
+
+
+                    let regi0Top = regiPart[0].getBoundingClientRect().top;
+                    let regi1Top = regiPart[1].getBoundingClientRect().top;
+                    let regi2Top = regiPart[2].getBoundingClientRect().top;
+                    let regi3Top = regiPart[3].getBoundingClientRect().top;
+                    
+                    // console.log(regi0Top);
+                    // console.log(regi1Top);
+                    // console.log(regi2Top);
+                    // console.log(regi3Top);
+                    // console.log('-------------');
+
+                    let wrapperTop = regiPartWrapper.scrollTop;
+
+                    console.log(wrapperTop);
+                    console.log('------');
+
+                    regiPartWrapper.scrollTop = 0;
+
+                    wrapperTop.animate
+                });
+
+                // breadCrumb[0].addEventListener('click', function(e){
+
+                //     let regiPartWrapper = document.querySelector('.regiPartWrapper');
+                    
+                //     let regi0Top = regiPart[0];
+                //     let regi1Top = regiPart[1];
+                //     let regi2Top = regiPart[2];
+                //     let regi3Top = regiPart[3];
+
+                    
+                //     console.log(regi0Top);
+
+                //     regi0Top = 166;
+                // })
+
+                
+            }           
+        }
+
+
+        // breadCrumb[0].addEventListener('click', function(e){
+        //     $('#regi0Top').animate({
+        //         scrollTop: $('.regiPartWrapper').offset().top
+        //     }, 500);
+        // });
+
+        // console.log($('#regi0Top'));
+
+        
+
+        // var scroll = 0;
+        // $(window).scroll(function(event){
+        //     var moved = $(this).scrollTop();
+        //     if (moved > scroll){
+        //         $('.header').addClass('smaller')
+        //         $('.header').css('background', '#111111');
+        //     }
+                        
+        //     if (moved === 0) {
+        //     $('.header').removeClass('smaller')
+        //     $('.header').css('background', '#111111');
+        //     }
+        //     if (moved > scroll){
+        //     //on  UP scroll event 
+        //     }
+        //     scroll = moved;
+        // });
+
+    }
+    regiScroll();
+
+
+
+
+
+
+
+
     // function scrollRegi(){    
 
     //     let breadCrumb = document.querySelectorAll('.breadCrumb li');
@@ -870,25 +1078,28 @@
     // chkScroll();
 
     //토스트푸터 - 프로젝트 등록
+    
+    //푸터보이기
     function showFooter(){
 
-        let breadCrumb = document.querySelectorAll('.breadCrumb li');
         let regiPartWrapper = document.querySelector('.regiPartWrapper');
         let regiPart = document.querySelectorAll('.regiPart');
+        let regi3Top = regiPart[3].offsetTop;
         let toast = document.querySelector('.toast');
 
-        regiPartWrapper.addEventLister('scroll', function(e){
-            e.preventDefault();
+        for(let i=0; i<regiPart.length; i++){            
+            regiPartWrapper.addEventListener('scroll', function(e){
+                e.preventDefault();
 
-            if(regiPartWrapper.scrollTop > 2000){
-                toast.classList.add('is-active');
-            }else{
-                toast.classList.remove('is-active');
-            }
-
-        })
+                if(regiPartWrapper.scrollTop > regi3Top){
+                    toast.classList.add('is-active');
+                }else{
+                    toast.classList.remove('is-active');
+                }
+            })
+        }
     }
     showFooter();
-</script>
+</script> -->
 </body>
 </html>

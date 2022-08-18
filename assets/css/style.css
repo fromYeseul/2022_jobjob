@@ -594,14 +594,15 @@ footer {
   margin-top: 10rem;
 }
 footer.toast {
+  width: calc(100% + 60px);
   margin-top: 0;
   padding: 2.0625rem 2.5rem;
   display: flex;
   justify-content: space-between;
   color: #fff;
   background: rgba(41, 41, 44, 0.6);
-  position: fixed;
-  left: 0;
+  position: absolute;
+  left: -60px;
   bottom: -120px;
   z-index: 101;
   transition: all 1s;
@@ -1445,8 +1446,8 @@ input[type=file] {
 
 .inputGroup {
   padding: 0.625rem 1rem;
-  margin-top: 0.3125rem;
-  border-radius: 0.4375rem;
+  margin-top: 0.625rem;
+  border-radius: 0.3125rem;
   border: 1px solid #e6e6eb;
 }
 .inputGroup label {
@@ -2628,6 +2629,7 @@ h6 {
 .projRegister {
   width: 100%;
   padding: 1.875rem 2.5rem;
+  position: relative;
 }
 .projRegister .regiPartWrapper {
   overflow-y: auto;
@@ -2646,6 +2648,9 @@ h6 {
 .projRegister .regiPart .boxWrap .inputList {
   width: 60%;
 }
+.projRegister .regiPart .boxWrap .inputList.row {
+  width: 75%;
+}
 .projRegister .regiPart .boxWrap .inputList span {
   font-weight: 500;
 }
@@ -2654,7 +2659,7 @@ h6 {
   margin-right: 0;
 }
 .projRegister .regiPart .boxWrap .inputList .full input {
-  width: 46.25rem;
+  width: 46.625rem;
 }
 .projRegister .regiPart .boxWrap .inputList.wide {
   width: 83.75rem;
@@ -2672,6 +2677,19 @@ h6 {
 }
 .projRegister .regiPart .boxWrap .btnType {
   display: inline-block;
+}
+.projRegister .regiPart .boxWrap .inputGroup {
+  width: 27.5rem;
+  height: 3.125rem;
+}
+.projRegister .regiPart .boxWrap .inputGroup.wide {
+  width: 37.5rem;
+  height: auto;
+  font-size: 0.875rem;
+}
+.projRegister .regiPart .boxWrap .inputGroup.wide label {
+  line-height: 1.25rem;
+  margin-left: 0.625rem;
 }
 
 .memList {
