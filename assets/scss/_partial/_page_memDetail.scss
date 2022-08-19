@@ -23,3 +23,78 @@
         margin-top: rem(10);
     }
 }
+
+.resumeWrapper{
+    width: rem(1210);
+    .resuTop{
+        text-align: right;
+    }
+}
+.resume{
+    display: flex;
+    width: rem(1210);
+    margin-top: rem(15);
+    //height: rem(756);
+    ul{
+        li{
+            margin: 6px 0;
+            b{
+                margin-right: rem(6);
+            }
+        }
+    }
+    p{
+        font-weight: 900;
+    }
+    .prefix{
+        width: rem(350);
+        padding: rem(70) rem(40);
+        background: $beige;
+        .profile{
+            width: rem(210);
+            height: rem(210);
+            margin:0 auto;
+            margin-bottom: rem(48);
+            img{
+                border-radius: 50%;
+            }
+        }
+        h1{
+            margin-bottom: rem(28);
+            font-size: rem(40);
+            span{
+                margin-left: rem(13);
+                font-size: rem(20);
+                letter-spacing: -0.71px;
+                color: $subGray;
+            }
+        }
+        ul{
+            margin-top: rem(20);
+        }
+    }
+    .center, .suffix{
+        padding: rem(70);
+        background: $white;
+        .resuInfo{
+            width: rem(330);
+            + .resuInfo{
+                margin-top: rem(60);
+            }
+            h5{
+                padding-bottom: rem(14);
+                color: $beigeTit;
+                border-bottom: 1px solid $titleGray;
+            }
+            .cont{
+                margin-top: rem(15);
+                b{
+                    margin-right: rem(20);
+                }
+            }
+        }
+    }
+    .center{
+        padding-right: 0;
+    }
+}
