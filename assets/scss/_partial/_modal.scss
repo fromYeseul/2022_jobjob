@@ -32,6 +32,10 @@
             width: rem(380);
             padding: rem(45);
         }
+        &.confirmType{
+            width: rem(330);
+            padding: rem(30) rem(45);
+        }
     }
     .layerDim{
         position: absolute;
@@ -45,6 +49,7 @@
 }
 
 .modalHeader{
+    text-align: center;
     @include clear_float;
     .layerClose{
         float: right;
@@ -74,12 +79,17 @@
     //background: $white;
     margin-top: rem(40);
     @include flex_1_2;
-    .suffix{
-        margin-left: rem(10);
+    &.halfType{
+        @include flex_1_1;
     }
     &.pagingType{
         padding: rem(40);
         @include heightArray;
+    }
+    button{
+        + button{
+            margin-left: rem(10);
+        }
     }
 }
 .modalInfo{

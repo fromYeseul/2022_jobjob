@@ -140,6 +140,9 @@
             width: rem(160);
             li{
                 margin-top: rem(14);
+                &:first-child{
+                    margin-top: 0;
+                }
                 span{
                     &:first-child{
                         font-weight: 700;
@@ -187,12 +190,13 @@
         .suffix{
             width: rem(160);
             @include heightArray;
+            text-align: center;
             color: $subInfo;
             position: relative;
             .more{
                 position: absolute;
                 right: 0;
-                top: 0;
+                top: -45px;
             }
             .txtCenter{
                 .select{
@@ -220,7 +224,7 @@
             border-top:0;
             @include sideArray;
             .prefix{
-                width: 66%;
+                width: 58%;
                 color: $subInfo; 
                 span{
                     margin-right: rem(10);
@@ -264,6 +268,7 @@
                 @include heightArray;
             }
             .center{
+                margin-left: rem(30);
                 font-weight: 500;
                 padding: 0 rem(17);
                 position: relative;
@@ -286,6 +291,10 @@
                 }
                 
             }
+        }
+        textarea, input[type=text]{
+            margin-top: rem(5);
+            padding: rem(7);
         }
         &.is-active{
             .head{

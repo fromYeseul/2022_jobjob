@@ -833,7 +833,7 @@
                 $(".regiPartWrapper").animate({
                     scrollTop: "700", 
                 },500);
-            }else if(index = 2){
+            }else if(index == 2){
                 $(".regiPartWrapper").animate({
                     scrollTop: "1200", 
                 },500);
@@ -841,8 +841,7 @@
                 $(".regiPartWrapper").animate({
                     scrollTop: "1700", 
                 },500);
-            }
-            
+            }            
         })
 
         var $Wrapper = $('.regiPartWrapper');
@@ -868,32 +867,6 @@
         
     })
 
-    // $("#clickOne").click(function() {
-    //     $(".regiPartWrapper").animate({
-    //         scrollTop: "0", 
-    //     },500);
-    //     event.preventDefault();
-    // })
-    // $("#clickTwo").click(function() {
-    //     $(".regiPartWrapper").animate({
-    //         scrollTop: "700",
-    //     },500);
-    //     event.preventDefault();
-    // })
-    // $("#clickThree").click(function() {
-    //     $(".regiPartWrapper").animate({
-    //         scrollTop: "1200", 
-    //     },500);
-    //     event.preventDefault();
-    // })
-    // $("#clickFour").click(function() {
-    //     $(".regiPartWrapper").animate({
-    //         scrollTop: "1700",
-    //     },500);
-    //     event.preventDefault();
-    // })
-
-
     
     //푸터보이기
     function showFooter(){
@@ -917,189 +890,5 @@
         }
         showFooter();
     </script>
-<!-- <script>  
-
-    //스크롤이동 - 프로젝트 등록
-    function regiScroll(){
-
-        let breadCrumb = document.querySelectorAll('.breadCrumb li a');
-        let regiPartWrapper = document.querySelector('.regiPartWrapper');
-        let regi0Top = document.getElementById('regi0Top');
-        let regiPart = document.querySelectorAll('.regiPart');
-
-
-
-        for(let i=0; i<breadCrumb.length; i++){
-            for(let j=0; j<regiPart.length; j++){   
-
-                
-                
-                breadCrumb[0].addEventListener('click', function(e){
-                    e.preventDefault();
-
-
-                    let regi0Top = regiPart[0].getBoundingClientRect().top;
-                    let regi1Top = regiPart[1].getBoundingClientRect().top;
-                    let regi2Top = regiPart[2].getBoundingClientRect().top;
-                    let regi3Top = regiPart[3].getBoundingClientRect().top;
-                    
-                    // console.log(regi0Top);
-                    // console.log(regi1Top);
-                    // console.log(regi2Top);
-                    // console.log(regi3Top);
-                    // console.log('-------------');
-
-                    let wrapperTop = regiPartWrapper.scrollTop;
-
-                    console.log(wrapperTop);
-                    console.log('------');
-
-                    regiPartWrapper.scrollTop = 0;
-
-                    wrapperTop.animate
-                });
-
-                // breadCrumb[0].addEventListener('click', function(e){
-
-                //     let regiPartWrapper = document.querySelector('.regiPartWrapper');
-                    
-                //     let regi0Top = regiPart[0];
-                //     let regi1Top = regiPart[1];
-                //     let regi2Top = regiPart[2];
-                //     let regi3Top = regiPart[3];
-
-                    
-                //     console.log(regi0Top);
-
-                //     regi0Top = 166;
-                // })
-
-                
-            }           
-        }
-
-
-        // breadCrumb[0].addEventListener('click', function(e){
-        //     $('#regi0Top').animate({
-        //         scrollTop: $('.regiPartWrapper').offset().top
-        //     }, 500);
-        // });
-
-        // console.log($('#regi0Top'));
-
-        
-
-        // var scroll = 0;
-        // $(window).scroll(function(event){
-        //     var moved = $(this).scrollTop();
-        //     if (moved > scroll){
-        //         $('.header').addClass('smaller')
-        //         $('.header').css('background', '#111111');
-        //     }
-                        
-        //     if (moved === 0) {
-        //     $('.header').removeClass('smaller')
-        //     $('.header').css('background', '#111111');
-        //     }
-        //     if (moved > scroll){
-        //     //on  UP scroll event 
-        //     }
-        //     scroll = moved;
-        // });
-
-    }
-    regiScroll();
-
-
-
-
-
-
-
-
-    // function scrollRegi(){    
-
-    //     let breadCrumb = document.querySelectorAll('.breadCrumb li');
-    //     let regiPartWrapper = document.querySelector('.regiPartWrapper');
-    //     let regiPart = document.querySelectorAll('.regiPart');
-    //     let toast = document.querySelector('.toast');
-        
-    //     for(let i=0; i<breadCrumb.length; i++){
-    //         breadCrumb[i].addEventListener('click', function(e){
-    //             e.preventDefault();
-
-    //             console.log(regiPartWrapper.offsetTop);
-    //             console.log(regiPart[i].offsetTop);
-
-    //             console.log(regiPartWrapper.scrollTop);
-    //             console.log(regiPartWrapper.pageYOffset);
-
-    //             // regiPart[i].offsetTop = regiPartWrapper.offsetTop;
-    //             // regiPartWrapper.scrollTo(100, 0);
-                
-    //             for(let j=0; j<breadCrumb.length; j++){
-    //                 breadCrumb[j].classList.remove('is-active');
-    //             }                
-    //             breadCrumb[i].classList.add('is-active');
-
-
-
-    //             //regiPartWrapper.scrollTop = (regiPart[i].offsetTop) - 120;
-
-    //             window.scrollTo({top:-100, left: 100, behavior: "smooth"});
-                
-    //             // $('.regiPartWrapper').animate({
-    //             //     scrollTop: $(this).offset().top
-    //             // }, 500);
-    //         })
-    //     }
-    // }
-    // scrollRegi();
-
-
-    //스크롤 감지 - 프로젝트 등록
-    // function chkScroll(){
-    //     let breadCrumb = document.querySelectorAll('.breadCrumb li');
-    //     let regiPartWrapper = document.querySelector('.regiPartWrapper');
-    //     let regiPart = document.querySelectorAll('.regiPart');
-    //     let toast = document.querySelector('.toast');
-
-    //     regiPartWrapper.addEventListener('scroll', function(e){
-    //         //console.log(regiPartWrapper.offsetTop);
-
-    //         for(let i=0; i<regiPart.length; i++){
-    //             let offsetTop = document.querySelectorAll(regiPart.offsetTop);
-    //             if(offsetTop > 180){
-    //                 breadCrumb[i].classList.add('is-active');
-    //             }
-    //         }
-    //     })
-    // }
-    // chkScroll();
-
-    //토스트푸터 - 프로젝트 등록
-    
-    //푸터보이기
-    function showFooter(){
-
-        let regiPartWrapper = document.querySelector('.regiPartWrapper');
-        let regiPart = document.querySelectorAll('.regiPart');
-        let regi3Top = regiPart[3].offsetTop;
-        let toast = document.querySelector('.toast');
-
-        for(let i=0; i<regiPart.length; i++){            
-            regiPartWrapper.addEventListener('scroll', function(e){
-                e.preventDefault();
-
-                if(regiPartWrapper.scrollTop > regi3Top){
-                    toast.classList.add('is-active');
-                }else{
-                    toast.classList.remove('is-active');
-                }
-            })
-        }
-    }
-    showFooter();
-</script> -->
 </body>
 </html>
