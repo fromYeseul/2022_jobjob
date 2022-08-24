@@ -322,7 +322,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .contWrapper .contLayout .rPanel li {
   margin-bottom: 0.9375rem;
-  cursor: pointer;
 }
 .contWrapper .contLayout .default {
   width: calc(100% - 60px);
@@ -1504,36 +1503,33 @@ input[type=file] {
   font-weight: 400;
   line-height: 1.8125rem;
 }
-.inputGroup.upload {
-  display: inline-block;
-  width: calc(100% - 132px);
-  line-height: 1.75rem;
-  vertical-align: bottom;
+.inputGroup .selFile {
+  cursor: pointer;
+  position: relative;
 }
-.inputGroup.upload .drop {
-  color: #878791;
-  display: flex;
+.inputGroup .selFile::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #878791;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.inputGroup .fileBox {
+  overflow-y: auto;
+  max-height: 50px;
+}
+.inputGroup .fileBox li {
+  margin-bottom: 0;
 }
 .inputGroup.wide {
   width: 37.5rem;
   margin-top: 1.25rem;
-  padding: 1.125rem 6.875rem;
+  padding: 1.125rem 7.1875rem;
 }
-.inputGroup .fileName {
-  margin-left: 0.625rem;
-  vertical-align: text-bottom;
-}
-.inputGroup + label {
-  min-width: 5.625rem;
-  margin-left: 0.625rem;
-  line-height: 3.125rem;
-  padding: 0 0.9375rem;
-  display: inline-block;
-  color: #fff;
-  font-weight: 700;
-  text-align: center;
-  border-radius: 0.375rem;
-  background-color: #0460d2;
+.inputGroup + .selFile {
+  margin-left: 0.9375rem;
 }
 
 a.download {
@@ -1549,9 +1545,10 @@ a.download img {
 
 .uploadFile {
   min-height: 50px;
-  padding: 0.75rem 1rem;
-  border-radius: 0.3125rem;
-  border: 1px solid #e6e6eb;
+  width: 250px;
+  border: 1px solid blue;
+  margin: 10px;
+  padding: 10px;
 }
 
 /* TEXTAREA */

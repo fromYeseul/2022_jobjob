@@ -669,23 +669,25 @@
                                     </div>
                                     <ul>
                                         <li class="flexEnd">
-                                            <div class="inputGroup wide">
-                                                <div class="flexCenter">
-                                                    <i class="ico fileUpload"></i>
-                                                    <label for="fileUpload">
-                                                        RFP, 기획서, 스토리보드 등 프로젝트를 파악할 수 있는 자료를<br>
-                                                        여기에 첨부해 주세요. (파일 최대 5개, 100MB이하)
-                                                    </label>
-                                                    <input multiple="" type="file" id="fileUpload">
+                                            <!--220824 수정 -ys -->
+                                            <div class="uploadBox">
+                                                <div class="inputGroup upload wide">
+                                                    <div class="drop">
+                                                        <i class="ico fileUpload"></i>
+                                                        <label for="fileUpload">
+                                                            RFP, 기획서, 스토리보드 등 프로젝트를 파악할 수 있는 자료를<br>
+                                                            여기에 첨부해 주세요. (파일 최대 5개, 100MB이하)
+                                                        </label>
+                                                    </div>
+                                                    <div class="list">
+                                                        <ul class="list_ul"></ul>
+                                                    </div>
                                                 </div>
-                                                <div class="fileBox">
-                                                    <ul>
-                                                        <li class="fileList">ico.png <button class="ico smClose"></button></li>
-                                                    </ul>
-                                                </div>
-                                            </div>   
-                                            <input multiple="" type="file" id="fileUpload">
-                                            <label for="fileUpload" class="selFile button midSize ml15">또는 직접 선택</label>
+                                            
+                                                <label for="cycleDocument" class="">또는 직접선택</label>
+                                                <input type="file" name="cycleDocument" id="cycleDocument" class="" tabindex="" />
+                                            </div>
+                                            <!--//220824 수정 -ys -->
                                         </li>
                                     </ul>
                                 </div>
