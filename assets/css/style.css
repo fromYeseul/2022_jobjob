@@ -226,6 +226,10 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 3.125rem;
 }
 
+.p0-30 {
+  padding: 0 1.875rem;
+}
+
 .wrapper {
   width: 100%;
 }
@@ -277,7 +281,13 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .contWrapper .contLayout .myPeoDetail {
   width: calc(100% - 640px - 60px);
-  padding: 1.875rem;
+  padding: 1.875rem 0;
+}
+.contWrapper .contLayout .myPeoDetail .boxListWrap {
+  padding: 0 1.875rem;
+}
+.contWrapper .contLayout .myPeoDetail .tabBtnWrap {
+  padding: 0 1.875rem;
 }
 .contWrapper .contLayout .projReqList, .contWrapper .contLayout .genMember, .contWrapper .contLayout .projProgList {
   height: calc(100vh - 80px);
@@ -1202,6 +1212,21 @@ button.onlyIco,
   align-items: center;
   justify-content: center;
 }
+button.square,
+.button.square {
+  display: none;
+  min-width: 5.25rem;
+  padding: 0.1875rem 0;
+  color: #29292c;
+  font-weight: 400;
+  background: #fff;
+  border-radius: 0;
+  border: 1px solid #b7b7c4;
+}
+button.square.is-active,
+.button.square.is-active {
+  display: block;
+}
 button.order,
 .button.order {
   color: #009ce0;
@@ -1547,13 +1572,6 @@ a.download img {
   vertical-align: middle;
 }
 
-.uploadFile {
-  min-height: 50px;
-  padding: 0.75rem 1rem;
-  border-radius: 0.3125rem;
-  border: 1px solid #e6e6eb;
-}
-
 /* TEXTAREA */
 textarea {
   width: 100%;
@@ -1875,6 +1893,9 @@ input[type=radio]:checked + label::before {
 }
 .select.lowSize .optionList {
   top: 2.6875rem;
+}
+.select.lowSize .optionList .optionItem {
+  padding: 0 0.625rem;
 }
 .select.smSize {
   width: 5.375rem;
@@ -2337,17 +2358,23 @@ input[type=radio]:checked + label::before {
 }
 .boxList.flexType .suffix {
   width: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   color: #878791;
   position: relative;
 }
-.boxList.flexType .suffix .more {
+.boxList.flexType .suffix > .showMore {
   position: absolute;
   right: 0;
   top: -45px;
+}
+.boxList.flexType .suffix .square {
+  position: absolute;
+  right: -60px;
+  top: 2.1875rem;
+}
+.boxList.flexType .suffix .info {
+  color: #878791;
+  margin-bottom: 0.625rem;
 }
 .boxList.flexType .suffix .txtCenter .select {
   margin: 10px auto;
@@ -2609,8 +2636,10 @@ h6 {
   margin-top: 1.875rem;
 }
 .myProjDetail .boxWrap .yScroll {
-  margin-top: 1.875rem;
-  height: calc(100vh - 663px);
+  height: calc(100vh - 633px);
+}
+.myProjDetail .boxWrap .yScroll .tit {
+  margin-top: 1.25rem;
 }
 
 .myProjJob .boxWrap {
@@ -2702,6 +2731,9 @@ h6 {
   width: 0;
 }
 
+.myPeoDetail .notify {
+  padding: 0 1.875rem;
+}
 .myPeoDetail .notify p:first-child {
   font-size: 1.125rem;
   font-weight: 700;
@@ -2815,6 +2847,8 @@ h6 {
 .memDetail {
   width: calc(100% - 280px);
   padding: 1.875rem;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
 }
 .memDetail .tableBox {
   height: calc(100vh - 310px);

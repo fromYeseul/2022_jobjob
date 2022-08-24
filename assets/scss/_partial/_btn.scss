@@ -125,6 +125,20 @@ button,
         border: 1px solid $inputGray;
         @include heightArray;
     }
+    //마이피플 더보기 삭제
+    &.square{
+        display: none;
+        min-width: rem(84);
+        padding: rem(3) 0;
+        color: $black;
+        font-weight: 400;
+        background: $white;
+        border-radius: 0;
+        border:1px solid $selGray;
+        &.is-active{
+            display: block;
+        }
+    }
     //상태
     &.order{
         color: $highlight;

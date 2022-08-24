@@ -309,3 +309,23 @@ function uploadFile(){
   
 }
 uploadFile();
+
+
+//더보기 (마이피플)
+function showMore(){
+    let showMore = document.querySelectorAll(".showMore");
+    let btnDel = document.querySelectorAll(".square");
+
+        console.log(showMore);
+        console.log(btnDel);
+    
+        for(let i=0; i<showMore.length; i++){
+            showMore[i].addEventListener("click", function(){
+                console.log(showMore);
+                console.log(btnDel);
+
+                btnDel[i].classList.toggle("is-active");
+             });
+    }
+}
+showMore();

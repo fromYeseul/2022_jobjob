@@ -189,14 +189,23 @@
         }    
         .suffix{
             width: rem(160);
-            @include heightArray;
+            //@include heightArray;
             text-align: center;
             color: $subInfo;
             position: relative;
-            .more{
+            > .showMore{
                 position: absolute;
                 right: 0;
                 top: -45px;
+            }
+            .square{
+                position: absolute;
+                right: -60px;
+                top: rem(35);
+            }
+            .info{
+                color:$subInfo;
+                margin-bottom: rem(10);
             }
             .txtCenter{
                 .select{
