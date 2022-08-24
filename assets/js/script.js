@@ -315,10 +315,6 @@ uploadFile();
 function showMore(){
     let showMore = document.querySelectorAll(".showMore");
     let btnDel = document.querySelectorAll(".square");
-
-        console.log(showMore);
-        console.log(btnDel);
-    
         for(let i=0; i<showMore.length; i++){
             showMore[i].addEventListener("click", function(){
                 console.log(showMore);
@@ -329,3 +325,6 @@ function showMore(){
     }
 }
 showMore();
+
+
+

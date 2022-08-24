@@ -39,7 +39,7 @@
         }
         .myProjDetail{
             width: calc(100% - 350px - 640px - 60px);            
-            padding: rem(30) rem(20);
+            padding: rem(30);
             //화면분할
             //width: calc(100% - 350px - 60px);
             // &.is-active{             
@@ -56,8 +56,18 @@
             //height: calc(100vh - 88px);
             height: calc(100vh - 70px);
             overflow-y: auto;
-            padding: rem(30) rem(10);
+            padding: rem(30) rem(30);
             padding-left: 0;
+            .wrap{
+                
+                &.is-active{
+                    .tabContWrap{
+                        .yScroll{
+                            height: calc(100vh - 315px);
+                        }
+                    }
+                }
+            }
         }
 
 
