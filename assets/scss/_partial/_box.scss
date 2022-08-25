@@ -65,27 +65,31 @@
         .cont{
             margin: rem(30) 0;
             position: relative;
-                .flexCenter{
-                    margin: rem(50) 0 rem(30);
-                    flex-wrap:wrap;
-                    li{
-                        width: 20%;
-                        min-width: rem(104);
-                        height: rem(90);
-                        padding: rem(20) 0;
-                        border: 1px solid $layoutColor;
-                        //border-left: 0;
-                        text-align: center;
-                        @include heightArray;
-                        cursor: pointer;
-                        &.is-active{
-                            color: $white;
-                            font-weight: 700;
-                            background: $mainColor;
-                            border: 1px solid $mainColor;
-                        }
-                    }
-                }
+            // .flexCenter{
+            //     margin: rem(50) 0 rem(30);
+            //     flex-wrap:wrap;
+            //     li{
+            //         width: 20%;
+            //         min-width: rem(104);
+            //         height: rem(90);
+            //         margin-left: -1px;
+            //         padding: rem(20) 0;
+            //         border: 1px solid $layoutColor;
+            //         //border-left: 0;
+            //         text-align: center;
+            //         @include heightArray;
+            //         cursor: pointer;
+            //         // &:nth-child(5){
+            //         //     border-right:0;
+            //         // }
+            //         &.is-active{
+            //             color: $white;
+            //             font-weight: 700;
+            //             background: $mainColor;
+            //             border: 1px solid $mainColor;
+            //         }
+            //     }
+            // }
         }
         .bottom{
             .prefix{
@@ -310,6 +314,9 @@
             .head{
                 color: $white;
                 background: $mainColor;
+            }
+            .cont{       
+                border:1px solid $mainColor;
             }
         }
     }

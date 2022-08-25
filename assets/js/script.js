@@ -92,19 +92,22 @@ function rightPanel(){
     let rPanelList = document.querySelectorAll('.rPanel > ul > li');
     let rPanelLayer = document.querySelector('.rPanelLayer');
     let rClose = document.querySelector('.rClose');
+
     let contLayout = document.querySelector('.contLayout');
+
     let filterWrapper = document.querySelector('.filterWrapper');
 
     for(let i=0; i<rPanelList.length; i++){
-        rPanelList[i].addEventListener('click', function(){
+        rPanelList[i].addEventListener('click', function(){            
             rPanelLayer.classList.toggle('is-active');
             contLayout.classList.toggle('is-active');
-            filterWrapper.classList.remove('is-active');
-
+            filterWrapper.classList.remove('is-active');                                       
 
             let windowWidth = window.innerWidth;
             if(windowWidth <= 1200){
                 rPanelLayer.classList.toggle('layerType');
+            }else{
+                contLayout.classList.remove('is-active');
             }
         });
     }
@@ -119,11 +122,12 @@ rightPanel();
 /* 우측 패널 필터창 */
 function filterLayer(){
     let filterWrapper = document.querySelector('.filterWrapper');
-    let filter = document.querySelector('.filter');
+    let filter = document.querySelector('.rPanelLayer .filter');
 
 
     filter.addEventListener('click', function(e){
         e.preventDefault();
+        //alert('aaa');
         filterWrapper.classList.toggle('is-active');
     });
 }
