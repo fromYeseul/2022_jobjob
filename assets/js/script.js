@@ -32,7 +32,7 @@ function rightPanel(){
 
     if(rPanelList !== null){
         for(let i=0; i<rPanelList.length; i++){
-            rPanelList[i].addEventListener('click', function(){            
+            rPanelList[i].addEventListener('click', function(){  
                 rPanelLayer.classList.toggle('is-active');
                 contLayout.classList.toggle('is-active');
                 filterWrapper.classList.remove('is-active');                                       
@@ -40,16 +40,17 @@ function rightPanel(){
                 let windowWidth = window.innerWidth;
                 if(windowWidth <= 1200){
                     rPanelLayer.classList.toggle('layerType');
-                }else{
-                    contLayout.classList.remove('is-active');
+                // }else{
+                //     contLayout.classList.remove('is-active');
                 }
             });
             rClose.addEventListener('click', function(){
                 rPanelLayer.classList.toggle('is-active');
+                contLayout.classList.remove('is-active');
                 filterWrapper.classList.remove('is-active');
             });
         }  
-        // 왜 여기 있으면 안되지??
+        // 왜 여기에 있으면 적용이 안되지??
         // rClose.addEventListener('click', function(){
         //     rPanelLayer.classList.toggle('is-active');
         //     filterWrapper.classList.remove('is-active');

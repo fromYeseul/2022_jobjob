@@ -26,6 +26,7 @@
         display: flex;
         min-height: calc(100vh - 70px);
         background: $bgColor;
+        width: 100%;
 
         //마이프로젝트
         .myProjList{
@@ -80,7 +81,8 @@
             border-right: 1px solid $layoutColor;
         }
         .myPeoDetail{
-            width: calc(100% - 640px - 60px);
+            //width: calc(100% - 640px - 60px);
+            width: calc(100% - 640px);
             padding: rem(30) 0;  
             .boxListWrap{
                 padding:0  rem(30) ;  
@@ -99,17 +101,15 @@
             overflow-y: auto;
         }
 
-        
-
-        //
-
         //기본
         .default{
-            width: calc(100% - 60px - 60px);
+            //width: calc(100% - 60px - 60px);
+            width: 100%;
             @include heightArray;
         }
 
         &.is-active{
+            width: calc(100% - 640px);
             // .myProjDetail{
             //     width: 45%;
             //     width: calc(100% - 350px - 640px - 60px);
@@ -121,7 +121,8 @@
                 display: none;
             }
             .myPeoDetail{
-                width: calc(100% - 640px - 640px - 60px);
+                //width: calc(100% - 640px - 640px - 60px);
+                width: calc(100% - 640px);
             }
         }
     }

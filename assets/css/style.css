@@ -258,6 +258,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   min-height: calc(100vh - 70px);
   background: #f2f2f7;
+  width: 100%;
 }
 .contWrapper .contLayout .myProjList {
   width: 21.875rem;
@@ -285,7 +286,7 @@ h1, h2, h3, h4, h5, h6, p {
   border-right: 1px solid #e6e6eb;
 }
 .contWrapper .contLayout .myPeoDetail {
-  width: calc(100% - 640px - 60px);
+  width: calc(100% - 640px);
   padding: 1.875rem 0;
 }
 .contWrapper .contLayout .myPeoDetail .boxListWrap {
@@ -300,16 +301,19 @@ h1, h2, h3, h4, h5, h6, p {
   overflow-y: auto;
 }
 .contWrapper .contLayout .default {
-  width: calc(100% - 60px - 60px);
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.contWrapper .contLayout.is-active {
+  width: calc(100% - 640px);
 }
 .contWrapper .contLayout.is-active .myProjDetail {
   display: none;
 }
 .contWrapper .contLayout.is-active .myPeoDetail {
-  width: calc(100% - 640px - 640px - 60px);
+  width: calc(100% - 640px);
 }
 .contWrapper.noSide {
   padding-left: 0;
@@ -863,6 +867,7 @@ footer.toast button + button {
 }
 .condition > ul {
   display: flex;
+  flex-wrap: wrap;
 }
 .condition > ul li {
   display: inline-block;
@@ -870,6 +875,10 @@ footer.toast button + button {
 }
 .condition > ul li input {
   width: 25rem;
+}
+
+.contLayout.is-active .condition li {
+  margin-bottom: 0.625rem;
 }
 
 .tableTop {

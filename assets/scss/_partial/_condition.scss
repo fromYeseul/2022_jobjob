@@ -9,6 +9,7 @@
     }
     > ul{
         display: flex;
+        flex-wrap: wrap;
         li{
             display: inline-block;
             margin-right: rem(10);
@@ -17,6 +18,16 @@
             }
 
             //select, input 너비, 높이 등을 기본값으로할건지???
+        }
+    }
+}
+
+.contLayout{
+    &.is-active{
+        .condition{
+            li{
+                margin-bottom: rem(10);
+            }
         }
     }
 }
