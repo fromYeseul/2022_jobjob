@@ -504,8 +504,12 @@
                                                         </div>
                                                     </li>
                                                 </ul>
-                                            </div>       
-                                        </div>
+                                            </div> 
+                                        </div>    
+                                            
+                                        <a href="#" class="goTop">
+                                            <i class="ico top"></i>
+                                        </a>
 
                                         <div class="listBottom">
                                             <button class="fullSize white prefix">선택삭제</button>
@@ -622,7 +626,9 @@
                                                 </ul>
                                             </div>   
                                         </div>
-
+                                        <a href="#" class="goTop">
+                                            <i class="ico top"></i>
+                                        </a>
                                         <div class="listBottom">
                                             <button class="fullSize white prefix">이력서 다운로드</button>
                                             <button class="fullSize suffix">면접잡기</button>
@@ -1024,5 +1030,16 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>
+    <script>
+        $(function(){
+            var $goTop = $('.goTop');
+
+            $goTop.on('click', function(e){
+                e.preventDefault();
+                
+                $('.tabCont .yScroll').animate({scrollTop : "0",}, 500);
+            })
+        })
+    </script>
 </body>
 </html>
