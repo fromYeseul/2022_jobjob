@@ -10,7 +10,6 @@
 
 </head>
 <body>
-
     <section class="layoutWrapper">
         <header>
             <div class="prefix">
@@ -96,6 +95,7 @@
                                 <div class="select">
                                     <span class="selDefault">전체</span>
                                     <ul class="optionList">
+                                        <li class="optionItem">전체</li>
                                         <li class="optionItem">열람</li>
                                         <li class="optionItem">추천검토</li>
                                         <li class="optionItem">인터뷰</li>
@@ -747,6 +747,9 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>
-
+    <script>
+        selDefault.onclick = selectBox();
+        chkWrap.onclick = chkAll();
+    </script>
 </body>
 </html>

@@ -995,6 +995,7 @@ table .memo::before {
   vertical-align: middle;
   margin: 0 0.625rem;
   color: #878791;
+  cursor: pointer;
 }
 .paging li a {
   color: #878791;
@@ -1003,10 +1004,6 @@ table .memo::before {
   margin: 0;
 }
 .paging li.is-active {
-  color: #29292c;
-  font-weight: 700;
-}
-.paging li .is-active {
   color: #29292c;
   font-weight: 700;
 }
@@ -1173,7 +1170,7 @@ button.white,
   padding: 0 0.9375rem;
   color: #29292c;
   background-color: #fff;
-  border: 1px solid #e6e6eb;
+  border: 1px solid #b7b7c4;
 }
 button.white.lowSize,
 .button.white.lowSize {
@@ -1214,7 +1211,7 @@ button.round,
   color: #29292c;
   font-weight: 400;
   background: #fff;
-  border: 1px solid #828286;
+  border: 1px solid #b7b7c4;
   border-radius: 1.25rem;
 }
 button.round.disabled,
@@ -1799,6 +1796,7 @@ input[type=radio]:checked + label::before {
   font-weight: 500;
   background: #fff;
   border: 1px solid #e6e6eb;
+  cursor: pointer;
 }
 .tabType input[type=radio] + label::before {
   display: none;
@@ -2493,6 +2491,10 @@ input[type=radio]:checked + label::before {
   align-items: center;
   justify-content: center;
 }
+.boxList.headType .cont .center button,
+.boxList.headType .cont .suffix button {
+  font-size: 0.875rem;
+}
 .boxList.headType .cont .center {
   margin-left: 1.875rem;
   font-weight: 500;
@@ -2608,6 +2610,9 @@ h5 + h5 {
 h5 + .h5_sub {
   color: #878791;
   margin-top: 0.75rem;
+}
+h5 + .h5_sub + button {
+  margin-top: 1.25rem;
 }
 
 h6 {

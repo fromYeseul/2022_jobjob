@@ -1024,41 +1024,5 @@
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>
-
-    <script>
-        /* 탭메뉴(여러개 확인하기!!) */    
-        function tabMenu(){
-            let tabBtn = document.querySelectorAll('.tabBtnWrap a');
-            let tabCont = document.querySelectorAll('.tabContWrap > div');
-
-            for(let i=0; i < tabBtn.length; i++){
-                tabBtn[i].addEventListener('click',function(e){
-
-                    let tab_id = this.closest('.tabWrapper').id;
-
-                    e.preventDefault();
-                    let tabHref = e.target.getAttribute('href');    //e의 역할?????
-                    let tabTarget = tabHref.replace('#','');
-
-                    // for(let x=0; x < tabCont.length; x++){
-                    //     if (tabCont[x].closest('.tabWrapper').id == tab_id){
-                    //         tabCont[x].style.display='none';
-                    //     }
-                    // }
-                    //document.getElementById(tabTarget).style.display="block";
-
-                    for(let j=0; j < tabBtn.length; j++){
-                        if (tabBtn[j].closest('.tabWrapper').id == tab_id){
-                            tabBtn[j].classList.remove('is-active');
-                            e.target.classList.add('is-active');
-                            tabCont[j].style.display='none';   //???????? 왜 remove is-active는 안되지???? ,  ???????? 왜 i로 통일은 안되지????
-                        }
-                    }
-                    document.getElementById(tabTarget).style.display="block";
-                });
-            }        
-        }
-        tabMenu();
-    </script>
 </body>
 </html>
