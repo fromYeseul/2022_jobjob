@@ -17,6 +17,9 @@
 
 table{
     width: 100%;
+    //220829
+    font-size: rem(14);
+    //220829
     th, td{
         text-align: center;
         background: $white;
@@ -36,7 +39,10 @@ table{
     }
     td{
         color: $tableGray;
-        padding: rem(14) 0;
+        //220829
+        // padding: rem(14) 0;
+        padding: 0;
+        //220829
         &.nodata{
             display: table-cell;
             font-weight: 500;
@@ -114,10 +120,16 @@ table{
     //position: absolute;
     //bottom: 0;
     @include flex_1_2;
+    //220829
+    font-size: rem(14);
+    //220829
     .suffix{
         margin-left: rem(10);
     }
     &.pagingType{
         justify-content: center;
+    }
+    button{
+        font-size: rem(16);
     }
 }

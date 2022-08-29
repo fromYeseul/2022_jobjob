@@ -734,7 +734,7 @@
     <div class="floatingWrapper">
         <div class="floating">
             <h6>이 프로젝트의 상태를</h6>
-            <div class="select laSize">
+            <div class="select lowSize"><!--220829 수정 -ys-->
                 <span class="selDefault">선택</span>
                 <ul class="optionList">
                     <li class="optionItem">의뢰단계</li>
@@ -750,7 +750,7 @@
                 </ul>
             </div>
             <h6>영업담당자</h6>
-            <div class="select laSize">
+            <div class="select lowSize"><!--220829 수정 -ys-->
                 <span class="selDefault">선택</span>
                 <ul class="optionList">
                     <li class="optionItem">
@@ -773,7 +773,7 @@
                 </ul>
             </div>
             <h6>소싱담당자</h6>
-            <div class="select laSize">
+            <div class="select lowSize"><!--220829 수정 -ys-->
                 <span class="selDefault">선택</span>
                 <ul class="optionList">
                     <li class="optionItem">
@@ -829,15 +829,15 @@
                 },500);
             }else if(index == 1){
                 $(".regiPartWrapper").animate({
-                    scrollTop: "700", 
+                    scrollTop: "630", 
                 },500);
             }else if(index == 2){
                 $(".regiPartWrapper").animate({
-                    scrollTop: "1200", 
+                    scrollTop: "1160", 
                 },500);
             }else {
                 $(".regiPartWrapper").animate({
-                    scrollTop: "1700", 
+                    scrollTop: "1630", 
                 },500);
             }            
         })
@@ -847,13 +847,15 @@
         $Wrapper.scroll(function(){            
             var $scrollTop = $('.regiPartWrapper').scrollTop();
 
-            if($scrollTop < 700){
+            console.log($scrollTop);
+
+            if($scrollTop < 630){
                 $breadCrumbs.removeClass('is-active');
                 $breadCrumbs.eq(0).addClass('is-active');
-            }else if($scrollTop < 1200){
+            }else if($scrollTop < 1160){
                 $breadCrumbs.removeClass('is-active');
                 $breadCrumbs.eq(1).addClass('is-active');
-            }else if($scrollTop < 1700){
+            }else if($scrollTop < 1630){
                 $breadCrumbs.removeClass('is-active');
                 $breadCrumbs.eq(2).addClass('is-active');
             }else{
