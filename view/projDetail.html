@@ -7,7 +7,6 @@
     <title>프로젝트 상세</title>
     
     <link rel="stylesheet" href="../assets/css/style.css">
-
 </head>
 <body>
     <section class="layoutWrapper">
@@ -273,7 +272,7 @@
                     <div class="wrap">
                         <h3>백엔드 / 서버 개발</h3>
                         <div class="boxWrap">
-                            <div class="partList">
+                            <div class="partList iscroll">
                                 <ul>
                                     <li class="is-active">
                                         <p>
@@ -1002,6 +1001,22 @@
     <!--//문자보내기 팝업-->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <!-- <script src="../assets/js/script.js"></script> -->
+    
+    <!--선택된 직무유형 영역 스크롤바-->
+    <script src="../assets/js/iscroll.js"></script>
+    <script>
+        window.onload = function(){
+            var myScroll = new IScroll('.iscroll',{
+                mouseWheel: true,
+                scrollbars: true,
+                scrollX: false,
+                scrollY: true,
+                interactiveScrollbars: true
+            });
+            document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        }
+    </script>
+    <!--//선택된 직무유형 영역 스크롤바-->
 </body>
 </html>

@@ -230,6 +230,25 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0 1.875rem;
 }
 
+.iscroll {
+  overflow: hidden;
+  position: relative;
+}
+
+.iScrollVerticalScrollbar {
+  width: 10px !important;
+  height: 90%;
+  border-radius: 5px;
+  background: #f2f2f7 !important;
+  top: 10px !important;
+  right: 8px !important;
+}
+.iScrollVerticalScrollbar .iScrollIndicator {
+  background: #58585e !important;
+  border: 0 !important;
+  border-radius: 5px !important;
+}
+
 .wrapper {
   width: 100%;
 }
@@ -2722,10 +2741,8 @@ h6 {
   padding: 0.625rem 0.5rem 0;
 }
 .myProjJob .partList ul {
-  height: 100%;
   padding-right: 0.3125rem;
   padding-bottom: 0.625rem;
-  overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
 }

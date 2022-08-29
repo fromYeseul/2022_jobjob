@@ -7,7 +7,6 @@
     <title>MYPROJECT</title>
     
     <link rel="stylesheet" href="../assets/css/style.css">
-
 </head>
 <body>
     <section class="layoutWrapper">
@@ -281,7 +280,7 @@
                     <div class="wrap">
                         <h3>백엔드 / 서버 개발</h3>
                         <div class="boxWrap">
-                            <div class="partList">
+                            <div class="partList iscroll">
                                 <ul>
                                     <li class="is-active">
                                         <p>
@@ -1044,5 +1043,21 @@
             })
         })
     </script>
+
+    <!--선택된 직무유형 영역 스크롤바-->
+    <script src="../assets/js/iscroll.js"></script>
+    <script>
+        window.onload = function(){
+            var myScroll = new IScroll('.iscroll',{
+                mouseWheel: true,
+                scrollbars: true,
+                scrollX: false,
+                scrollY: true,
+                interactiveScrollbars: true
+            });
+            document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        }
+    </script>
+    <!--//선택된 직무유형 영역 스크롤바-->
 </body>
 </html>
