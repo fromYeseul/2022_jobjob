@@ -1,28 +1,16 @@
 .myProjList{
     .boxListWrap{    
         //height: calc(100vh - 187px);
-    //220829
-        // height: calc(100vh - 177px);
-        height: calc(100vh - 164px);
-        //220829
+        height: calc(100vh - 177px);
     }
     .boxList{
-        //220829
-        // height: rem(130);
-        height: rem(115);
-        //220829
+        height: rem(130);
     }
 }
 
 .myProjDetail{
     .boxWrap{
-        //220829
-        // padding: rem(20) rem(40) rem(30);   
-        padding: rem(30);   
-        //220829
-        &.headType{
-            padding: rem(20) rem(30) rem(30);
-        }
+        padding: rem(20) rem(40) rem(30);   
         & + .boxWrap{
             margin-top: rem(30);
         }
@@ -30,18 +18,13 @@
             max-height: rem(180);
             overflow-y: auto;
             flex-wrap:wrap;
-            //220829
-            // margin: rem(50) 0 rem(30);
-            margin: rem(30) 0 rem(20);
-            //220829
+            margin: rem(50) 0 rem(30);
         }
         .yScroll{
             //margin-top: rem(30);
             //height: calc(100vh - 680px);
             //height: calc(100vh - 663px);
-            //220829
-            height: calc(100vh - 550px);
-            //220829
+            height: calc(100vh - 633px);
             .tit{
                 margin-top: rem(20);
             }
@@ -67,7 +50,7 @@
             display: flex;
             flex-wrap: wrap;
             li{
-                width: 29.5%;
+                width: 30%;
                 font-size: rem(14);
                 font-weight: 500;
                 margin:rem(9);
@@ -80,10 +63,7 @@
                     border:1px solid $mainColor;
                 }
                 &:first-child{
-                    //220829
-                    // padding: rem(30) rem(14);
-                    padding: rem(28) rem(14);
-                    //220829
+                    padding: rem(30) rem(14);
                 }
             }
             p{
@@ -91,7 +71,7 @@
                 align-items: center;
                 .partWrap,
                 .memNum{
-                    //font-size: rem(18);
+                    font-size: rem(18);
                     font-weight: 700;
                 }
                 .label{
@@ -108,34 +88,25 @@
         }
     }
     .tabBtnWrap{
-        //220829
-        // /font-size: rem(18);
-        font-size: rem(16);
-        //220829
+        font-size: rem(18);
     }
     .tabContWrap{
         .inputIco{
             width: calc(100% - 98px);
         }
         .yScroll{
+            padding: rem(20) rem(40);
             //padding-bottom: rem(114);
             //height: calc(100vh - 558px);
             //height: calc(100vh - 553px);
-            //padding: rem(20) rem(40);
-            //220829
-            height: calc(100vh - 502px);  
-            padding: rem(20) rem(30); 
-            //220829         
+            height: calc(100vh - 535px);            
             transition: height .3s;
             @include scroll_0;
             .listTop{
                 margin-top: rem(30);
             }
             &.is-active{
-                //220829
-                // height: calc(100vh - 315px);
-                height: calc(100vh - 285px);
-                //220829
+                height: calc(100vh - 315px);
             }
         }
         .tabCont{

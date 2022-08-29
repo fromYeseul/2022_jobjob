@@ -20,9 +20,6 @@
     background: $white;
     border-radius: rem(7);
     border: 1px solid $layoutColor;
-    //220829
-    font-size: rem(14);
-    //220829
     &.headType{
         .head,
         .bottom{
@@ -30,21 +27,15 @@
             @include sideArray; 
         }
         .head{
-            //220829
-            // padding-bottom: rem(20);
-            padding-bottom: rem(15);
-            //220829
+            padding-bottom: rem(20);
             position: relative;
             &::after{
                 content:'';
-                //220829
-                // width: calc(100% + 80px);
-                width: calc(100% + 60px);
-                //220829
+                width: calc(100% + 80px);
                 height: 1px;
                 background: $layoutColor;
                 position: absolute;
-                left: -30px;
+                left: -40px;
                 bottom: 0;
             }
             .prefix{
@@ -72,10 +63,7 @@
             }
         }
         .cont{
-            //220829
-            // margin: rem(30) 0;
-            margin-top: rem(20);
-            //220829
+            margin: rem(30) 0;
             position: relative;
             // .flexCenter{
             //     margin: rem(50) 0 rem(30);
@@ -115,9 +103,6 @@
 .boxList{
     background: $white;
     border-radius: rem(5);
-    //220829
-    font-size: rem(14);
-    //220829
     .head,
     .bottom{
         font-weight: 500;
@@ -125,10 +110,7 @@
         @include sideArray; 
     }
     .cont{
-        //220829
-        // margin-top: rem(10);
-        margin-top: rem(16);
-        //220829
+        margin-top: rem(10);
         position: relative;
     }
     button{
@@ -138,10 +120,7 @@
     }
     &.listType{
         margin-bottom: 1px;
-        //220829
-        // padding: rem(22);
-        padding: rem(16);
-        //220829
+        padding: rem(22);
         border-radius: 0;
         .cont{       
             .prefix{
@@ -160,20 +139,14 @@
     }
     &.flexType{
         margin-top: rem(20);
-        //220829
-        // padding: rem(25) rem(30);
-        padding: rem(20) rem(25);
-        //220829
+        padding: rem(25) rem(30);
         border:1px solid $layoutColor;
         @include sideArray;
         &:first-child{
             margin-top:0;
         }
         .prefix{
-            //220829
-            // width: rem(160);
-            width: rem(140);
-            //220829
+            width: rem(160);
             li{
                 margin-top: rem(14);
                 &:first-child{
@@ -188,22 +161,15 @@
             }
         }        
         .center{
+            width: calc(100% - 340px);
             //margin-left: rem(30);
-            //220829
-            // width: calc(100% - 340px);
-            // padding: rem(6) rem(30);
-            width: calc(100% - 300px);
-            padding: rem(6) rem(20);
-            //220829
+            padding: rem(6) rem(30);
             border-left: 1px solid $jobLayout;
             border-right: 1px solid $jobLayout;
             .head{
                 .prefix{
                     @include ellipsis;
-                    //220829
-                    // font-size: rem(20);
-                    font-size: rem(18);
-                    //220829
+                    font-size: rem(20);
                     font-weight: 700;
                 }
                 .suffix{
@@ -212,10 +178,7 @@
                 }
             }
             .cont{
-                //220829
-                // margin-top: rem(24);
-                margin-top: rem(16);
-                //220829
+                margin-top: rem(24);
                 li{
                     margin-right: rem(10);
                     color: $subInfo;
@@ -234,10 +197,7 @@
             }
         }    
         .suffix{
-            //220829
-            // width: rem(160);
-            width: rem(140);
-            //220829
+            width: rem(160);
             //@include heightArray;
             text-align: center;
             color: $subInfo;
@@ -245,19 +205,12 @@
             > .showMore{
                 position: absolute;
                 right: 0;
-                //220829
-                // top: -45px;
-                top: -27px;
-                //220829
+                top: -45px;
             }
             .square{
                 position: absolute;
-                //220829
-                // top: rem(35);
-                // right: -60px;
-                top: rem(28);
-                right: -56px;
-                //220829
+                right: -60px;
+                top: rem(35);
             }
             .info{
                 color:$subInfo;
@@ -276,35 +229,22 @@
             color: $disable;
             background: $memLayout;
             border-radius: rem(5) rem(5) 0 0;
-            //220829    
-            // padding: rem(5) rem(20);
-            padding: rem(5) rem(14);
-            //220829    
+            padding: rem(5) rem(20);
             .prefix{
                 font-weight: 400; 
             }
         }
         .cont{       
             margin-top: 0;
-            // padding: rem(20);
+            padding: rem(20);
             border-radius:0 0 rem(5) rem(5);
             border:1px solid $layoutColor;
             border-top:0;
             @include sideArray;
-            //220829    
-            font-size: rem(14);
-            padding: rem(14);
-            //220829        
             .prefix{
                 //width: 58%;
-                //220829    
-                // width: 57%;
-                width: 63%;
-                //220829    
+                width: 57%;
                 color: $subInfo; 
-                ul{
-                    width: 96%;
-                }
                 span{
                     margin-right: rem(10);
                 }
@@ -350,21 +290,14 @@
                 }
             }
             .center{
-                //220829    
-                // margin-left: rem(30);
-                // padding: 0 rem(17);
-                margin-left: 0;
-                padding: 0 rem(14);
-                //220829    
+                margin-left: rem(30);
                 font-weight: 500;
+                padding: 0 rem(17);
                 position: relative;
                 &::before{
                     content:'';
                     width: 1px;
-                    //220829    
-                    // height: rem(106);
-                    height: rem(90);
-                    //220829    
+                    height: rem(106);
                     background: $layoutColor;
                     position: absolute;
                     left: 0;

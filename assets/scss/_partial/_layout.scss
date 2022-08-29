@@ -20,18 +20,11 @@
 .contWrapper{
     min-width: rem(1920);
     width: 100%;
-    //220829
-    // padding-left: rem(60);
-    // padding-right: rem(60);
-    padding-left: rem(52);
-    padding-right: rem(52);
-    //220829
+    padding-left: rem(60);
+    padding-right: rem(60);
     .contLayout{
         display: flex;
-        //220829
-        // min-height: calc(100vh - 70px);
-        min-height: calc(100vh - 60px);
-        //220829
+        min-height: calc(100vh - 70px);
         background: $bgColor;
         width: 100%;
 
@@ -39,21 +32,15 @@
         .myProjList{
             //width: 10%;
             //min-width: rem(307);    
+            width: rem(350);
             //height: calc(100vh - 96px);
             //overflow-y: auto;
             //padding: rem(30);
-            //220829
-            // width: rem(350);
-            width: rem(300);
-            //220829
             background: $bgColor;
             position: relative;
         }
         .myProjDetail{
-            //220829
-            // width: calc(100% - 350px - 700px);       
-            width: rem(630);       
-            //220829     
+            width: calc(100% - 350px - 700px);            
             padding: rem(30);
             padding-right: 0;
             //화면분할
@@ -68,12 +55,9 @@
         .myProjJob{
             //화면분할
             //display: none;
-            //220829
-            // width: rem(700);
-            width: rem(640);
-            //220829
+            width: rem(700);
             //height: calc(100vh - 88px);
-            height: calc(100vh - 60px);
+            height: calc(100vh - 70px);
             overflow-y: auto;
             padding: rem(30) rem(30);
             padding-left: rem(30);
@@ -92,19 +76,13 @@
 
         //마이피플
         .myPeoList{
-            //220829
-            // width: rem(640);
-            width: rem(560);
-            //220829
+            width: rem(640);
             background: $white;
             border-right: 1px solid $layoutColor;
         }
         .myPeoDetail{
             //width: calc(100% - 640px - 60px);
-            //220829
-            // width: calc(100% - 640px);
-            width: rem(960);
-            //220829
+            width: calc(100% - 640px);
             padding: rem(30) 0;  
             .boxListWrap{
                 padding:0  rem(30) ;  
@@ -131,10 +109,7 @@
         }
 
         &.is-active{
-            //220829    
-            // width: calc(100% - 640px);
-            width: calc(100% - 560px);
-            //220829    
+            width: calc(100% - 640px);
             // .myProjDetail{
             //     width: 45%;
             //     width: calc(100% - 350px - 640px - 60px);
@@ -175,22 +150,14 @@
     transition: all .3s ease;
     //position: relative;
     position: fixed;
-    //220829    
-    // top: rem(70);
-    // right: rem(59);
+    right: rem(59);
+    top: rem(70);
     height: calc(100vh - 70px);
-    top: rem(60);
-    right: rem(51);
-    height: calc(100vh - 60px);
-    //220829    
     .rPanelBox{
         display: none;
     }   
     &.is-active{
-        //220829    
-        // width: rem(640); 
-        width: rem(560); 
-        //220829    
+        width: rem(640); 
         .rPanelBox{
             display: block;
         }   
@@ -206,29 +173,19 @@
 .filterWrapper{
     display:none;
     position: absolute;
-    //220829    
-    // left: -229px;
-    left: -199px;
-    //220829    
+    left: -229px;
     top: -1px;
     &.is-active{
         display: block;
     }
 }
-.rPanel{            
-    //220829    
-    // width: rem(60);
-    // height: calc(100vh - 70px);
-    width: rem(52);
-    height: calc(100vh - 60px);
-    //220829
+.rPanel{                
+    width: rem(60);
     padding: rem(20) rem(15);
+    height: calc(100vh - 70px);
     position: fixed;
     right: 0;
-    //220829    
-    // top: rem(70);
-    top: rem(60);
-    //220829    
+    top: 70px;
     background: $white;
     border-left: 1px solid $layoutColor;
     li{
@@ -242,10 +199,7 @@
 .layoutWrapper{
     &.is-active{
         .gnbWrapper{
-            //220829
-            //width: rem(205);
-            width: rem(180);
-            //220829
+            width: rem(205);
             background-image: linear-gradient(to bottom, $highlight, $gnbGreen);
         }
         .navCtrlBtn{
@@ -268,19 +222,13 @@
         }
         .contWrapper{
             width: calc(100% - 205px);
-            //220829
-            // padding-left: rem(205);
-            padding-left: rem(180);
-            //220829
+            padding-left: rem(205);
             //left: 205px;
         }   
     }   
     &.is-hover{
         .gnbWrapper{
-            //220829
-            //width: rem(205);
-            width: rem(180);
-            //220829
+            width: 205px;
             background-image: linear-gradient(to bottom, $highlight, $gnbGreen);
         }
         .navCtrlBtn{
