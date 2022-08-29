@@ -221,7 +221,30 @@ function showMore(){
     }
 }
 //showMore();
+/*-----------//호출-----------*/
 
+
+/*-----------별도 호출 없음---------*/
+//Top 버튼
+$(function(){
+    var $goTop = $('.goTop');
+    $goTop.on('click', function(e){
+        e.preventDefault();                
+        $('.tabCont .yScroll').animate({scrollTop : "0",}, 500);
+    })
+});
+
+//선택된 직무유형 영역 스크롤바
+window.onload = function(){
+    var myScroll = new IScroll('.iscroll',{
+        mouseWheel: true,
+        scrollbars: true,
+        scrollX: false,
+        scrollY: true,
+        interactiveScrollbars: true
+    });
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+}
 
 // 파일 다중선택
 // 호출 : 
@@ -296,7 +319,9 @@ function uploadFile(){
 }
 uploadFile();
 
-/*-----------//호출-----------*/
+
+/*-----------별도 호출 없음---------*/
+
 
 
 

@@ -892,10 +892,10 @@
                 </div>
             </div>
             <div class="filterWrapper">
-                <div class="flexCenter">
+                <div class="filterTop">
                     <h4>필터</h4>
                     <a href="#" class="ico refresh"></a>
-                </div>                        
+                </div>                    
                 
                 <div class="filterList">
                     <div class="tit">등급</div>  
@@ -1032,32 +1032,8 @@
     <script>
         selDefault.onclick = selectBox();
     </script>
-    <script>
-        $(function(){
-            var $goTop = $('.goTop');
-
-            $goTop.on('click', function(e){
-                e.preventDefault();
-                
-                $('.tabCont .yScroll').animate({scrollTop : "0",}, 500);
-            })
-        })
-    </script>
 
     <!--선택된 직무유형 영역 스크롤바-->
     <script src="../assets/js/iscroll.js"></script>
-    <script>
-        window.onload = function(){
-            var myScroll = new IScroll('.iscroll',{
-                mouseWheel: true,
-                scrollbars: true,
-                scrollX: false,
-                scrollY: true,
-                interactiveScrollbars: true
-            });
-            document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-        }
-    </script>
-    <!--//선택된 직무유형 영역 스크롤바-->
 </body>
 </html>
