@@ -2794,6 +2794,7 @@ h6 {
 .myProjJob .tabContWrap .yScroll {
   padding: 1.25rem 2.5rem;
   height: calc(100vh - 535px);
+  transition: height 0.3s;
   overflow-y: auto;
 }
 .myProjJob .tabContWrap .yScroll::-webkit-scrollbar {
@@ -2801,6 +2802,9 @@ h6 {
 }
 .myProjJob .tabContWrap .yScroll .listTop {
   margin-top: 1.875rem;
+}
+.myProjJob .tabContWrap .yScroll.is-active {
+  height: calc(100vh - 315px);
 }
 .myProjJob .tabContWrap .tabCont {
   position: relative;

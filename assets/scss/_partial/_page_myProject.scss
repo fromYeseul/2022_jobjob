@@ -35,7 +35,6 @@
 .myProjJob{
     //width: 30%;
     //min-width: rem(616);
-
     .boxWrap{
         margin-top: rem(10);
     }
@@ -100,10 +99,14 @@
             //padding-bottom: rem(114);
             //height: calc(100vh - 558px);
             //height: calc(100vh - 553px);
-            height: calc(100vh - 535px);
+            height: calc(100vh - 535px);            
+            transition: height .3s;
             @include scroll_0;
             .listTop{
                 margin-top: rem(30);
+            }
+            &.is-active{
+                height: calc(100vh - 315px);
             }
         }
         .tabCont{
