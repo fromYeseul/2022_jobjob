@@ -223,11 +223,26 @@ function showMore(){
 //showMore();
 
 
+//선택된 직무유형 영역 스크롤바
+//호출 : customScroll();
+function customScroll(){
+    window.onload = function(){
+        var myScroll = new IScroll('.iscroll',{
+            mouseWheel: true,
+            scrollbars: true,
+            scrollX: false,
+            scrollY: true,
+            interactiveScrollbars: true
+        });
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    }
+}
+// customScroll();
+
 //스크롤 생성
 //호출 : myProjJob.onclick = makeScroll();
 let myProjJob = document.querySelector('.myProjJob');
 function makeScroll(){            
-    let customScroll = document.querySelector('.iscroll');
     let yScroll = document.querySelector('.myProjJob .tabContWrap .yScroll');
     
     myProjJob.addEventListener('mousemove', function(){
@@ -265,17 +280,6 @@ $(function(){
     })
 });
 
-//선택된 직무유형 영역 스크롤바
-window.onload = function(){
-    var myScroll = new IScroll('.iscroll',{
-        mouseWheel: true,
-        scrollbars: true,
-        scrollX: false,
-        scrollY: true,
-        interactiveScrollbars: true
-    });
-    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-}
 
 // 파일 다중선택
 // 호출 : 

@@ -1,8 +1,12 @@
 /* GNB 아이콘 */
 .rPanel{
     i{        
-        width: 30px;
-        height: 30px;
+        //220829
+        width: rem(30);
+        height: rem(30);
+        width: rem(24);
+        height: rem(24);
+        //220829
         background-image: url(../img/icoGnb.png);
         &.searchMem{
             background-position: -120px 0px;
@@ -17,10 +21,16 @@
 }
 
 .rPanelLayer{
+    //220829    
+    font-size: rem(14);
+    //220829    
     .rPanelBox{
         padding: rem(30);
         //height: calc(100vh - 97px);
-        height: calc(100vh - 70px);
+        //220829    
+        // height: calc(100vh - 70px);
+        height: calc(100vh - 60px);
+        //220829    
         border: 1px solid $layoutColor;
         border-top:0;
     }   
@@ -36,7 +46,10 @@
         }
     }
     .filterWrapper{
-        width: rem(230);
+        //220829    
+        // width: rem(230);
+        width: rem(200);
+        //220829    
         height: 100%;
         padding: rem(50) rem(30);
         background: $white;
@@ -71,6 +84,9 @@
     }
     label{
         display: block !important;
-        margin-top: rem(14);
+        //220829    
+        // margin-top: rem(14);
+        margin-top: rem(10);
+        //220829    
     }
 }
