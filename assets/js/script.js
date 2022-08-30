@@ -124,11 +124,13 @@ function tabMenu(){
                 for(let j=0; j < tabBtn.length; j++){
                     if (tabBtn[j].closest('.tabWrapper').id == tab_id){
                         tabBtn[j].classList.remove('is-active');
+                        tabCont[j].classList.remove('is-active');
                         e.target.classList.add('is-active');
-                        tabCont[j].style.display='none';   //???????? 왜 remove is-active는 안되지???? ,  ???????? 왜 i로 통일은 안되지????
+                        //tabCont[j].style.display='none';   //???????? 왜 remove is-active는 안되지???? ,  ???????? 왜 i로 통일은 안되지????
                     }
                 }
-                document.getElementById(tabTarget).style.display="block";
+                //document.getElementById(tabTarget).style.display="block";
+                document.getElementById(tabTarget).classList.add('is-active');
             });
         }       
     }else{
@@ -283,76 +285,76 @@ $(function(){
 
 // 파일 다중선택
 // 호출 : 
-// function uploadFile(){
-//     if(window.FileReader) { 
-//         addEventHandler(window, 'load', function() {
-//         var drop   = document.getElementsByClassName('drop')[0];
-//         var list   = document.getElementsByClassName('list')[0];
-//         var list_ul = document.getElementsByClassName('list_ul')[0];
+function uploadFile(){
+    if(window.FileReader) { 
+        addEventHandler(window, 'load', function() {
+        var drop   = document.getElementsByClassName('drop')[0];
+        var list   = document.getElementsByClassName('list')[0];
+        var list_ul = document.getElementsByClassName('list_ul')[0];
 
-//         function cancel(e) {
-//             if (e.preventDefault) { 
-//                 e.preventDefault(); 
-//             }
-//             return false;
-//         }
+        function cancel(e) {
+            if (e.preventDefault) { 
+                e.preventDefault(); 
+            }
+            return false;
+        }
 
-//         // Tells the browser that we *can* drop on this target
-//         addEventHandler(drop, 'dragover', cancel);
-//         addEventHandler(drop, 'dragenter', cancel);
-//         addEventHandler(drop, 'drop', function (e) {
-//         e = e || window.event; // get window.event if e argument missing (in IE)   
+        // Tells the browser that we *can* drop on this target
+        addEventHandler(drop, 'dragover', cancel);
+        addEventHandler(drop, 'dragenter', cancel);
+        addEventHandler(drop, 'drop', function (e) {
+        e = e || window.event; // get window.event if e argument missing (in IE)   
 
-//         if (e.preventDefault) { 
-//             e.preventDefault(); 
-//         } // stops the browser from redirecting off to the image.
+        if (e.preventDefault) { 
+            e.preventDefault(); 
+        } // stops the browser from redirecting off to the image.
 
-//         var dt = e.dataTransfer;
-//         var files = dt.files;
-//         for (var i=0; i<files.length; i++) {
-//             var file = files[i];
-//             var reader = new FileReader();
+        var dt = e.dataTransfer;
+        var files = dt.files;
+        for (var i=0; i<files.length; i++) {
+            var file = files[i];
+            var reader = new FileReader();
 
-//         //attach event handlers here...
-//         reader.readAsDataURL(file);
-//         addEventHandler(reader, 'loadend', function(e, file) {
-//             var bin = this.result; 
-//             //	div.list...
-//             var newFile       = document.createElement('li');
-//             newFile.innerHTML = '<i class="ico delete"></i>' + '<span class="fileName">' + file.name + '</span>' + '<span class="float_r">' + file.size +' bytes' + '</span>';
-//             list_ul.appendChild(newFile);  
-//             }.bindToEventHandler(file));
-//         }
-//         return false;
-//     });
-//         Function.prototype.bindToEventHandler = function bindToEventHandler() {
-//             var handler = this;
-//             var boundParameters = Array.prototype.slice.call(arguments);
-//             //create closure
-//             return function(e) {
-//             e = e || window.event; // get window.event if e argument missing (in IE)   
-//             boundParameters.unshift(e);
-//             handler.apply(this, boundParameters);
-//             };
-//         };
-//     });
-//     } else { 
-//     //document.getElementsByClassName('status')[0].innerHTML = 'Your browser does not support the HTML5 FileReader.';
-//     }
-//     function addEventHandler(obj, evt, handler) {
-//     if(obj.addEventListener) {
-//         // W3C method
-//         obj.addEventListener(evt, handler, false);
-//         } else if(obj.attachEvent) {
-//         // IE method.
-//         obj.attachEvent('on'+evt, handler);
-//         } else {
-//         // Old school method.
-//         obj['on'+evt] = handler;
-//         }
-//     }  addEventHandler();
-// }
-// uploadFile();
+        //attach event handlers here...
+        reader.readAsDataURL(file);
+        addEventHandler(reader, 'loadend', function(e, file) {
+            var bin = this.result; 
+            //	div.list...
+            var newFile       = document.createElement('li');
+            newFile.innerHTML = '<i class="ico delete"></i>' + '<span class="fileName">' + file.name + '</span>' + '<span class="float_r">' + file.size +' bytes' + '</span>';
+            list_ul.appendChild(newFile);  
+            }.bindToEventHandler(file));
+        }
+        return false;
+    });
+        Function.prototype.bindToEventHandler = function bindToEventHandler() {
+            var handler = this;
+            var boundParameters = Array.prototype.slice.call(arguments);
+            //create closure
+            return function(e) {
+            e = e || window.event; // get window.event if e argument missing (in IE)   
+            boundParameters.unshift(e);
+            handler.apply(this, boundParameters);
+            };
+        };
+    });
+    } else { 
+    //document.getElementsByClassName('status')[0].innerHTML = 'Your browser does not support the HTML5 FileReader.';
+    }
+    function addEventHandler(obj, evt, handler) {
+    if(obj.addEventListener) {
+        // W3C method
+        obj.addEventListener(evt, handler, false);
+        } else if(obj.attachEvent) {
+        // IE method.
+        obj.attachEvent('on'+evt, handler);
+        } else {
+        // Old school method.
+        obj['on'+evt] = handler;
+        }
+    }  addEventHandler();
+}
+uploadFile();
 
 
 /*-----------별도 호출 없음---------*/
