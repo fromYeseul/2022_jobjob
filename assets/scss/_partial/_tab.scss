@@ -1,3 +1,43 @@
+.tabWrapper{
+    &.listType{
+        display: flex;
+        .tabBtnWrap{
+            display: block;
+            width: rem(250);
+            max-height: 100vh;
+            overflow-y: auto;
+            padding: 0;
+            border-bottom: 0;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+            h2{
+                padding: rem(20) rem(16);
+                border-bottom:1px solid $layoutColor;
+            }
+        }
+        .tabContWrap{
+            width: calc(100% - 250px);
+        }
+        .tabBtn{
+            font-size: rem(16);
+            text-align: left;
+            border-bottom:1px solid $layoutColor;
+            a{
+                display: block;
+                width: rem(250);
+                padding: rem(15) rem(25);
+                &.is-active{
+                    border-bottom: 0;
+                    border-left: 3px solid $mainColor;
+                }
+            }
+        }
+        .tabCont{
+            padding: rem(30) rem(50);
+        }
+    }
+}
+
+
 .tabBtnWrap{
     @include sideArray;
     padding: 0 rem(50);
@@ -9,18 +49,28 @@
         a{
             display: inline-block;
             color: $cancel; 
-            font-weight: 700;
+            //220829
+            //font-weight: 700;
+            font-weight: 500;
+            //220829
             padding-bottom: rem(7);
             &.is-active{
                 color: $black;
-                border-bottom: 3px solid $black;
+                //220829
+                // border-bottom: 3px solid $black;
+                border-bottom: 2px solid $black;
+                //220829
             }
         }
     }
     &.wideType{
         @include flex_1_1;
-        padding: 0 rem(45);
-        padding-top: rem(33);
+        //220829
+        // padding: 0 rem(45);
+        // padding-top: rem(33);
+        padding: 0 rem(30);
+        padding-top: rem(23);
+        //220829
         a{
             display: block;
         }
@@ -31,7 +81,10 @@
         padding: 0;
         //text-align: left;
         li{
-            line-height: rem(48);
+            //220829
+            // line-height: rem(48);
+            line-height: rem(42);
+            //220829
             text-align: center;
             font-weight: 500;
             &:first-child{
@@ -49,7 +102,10 @@
             }
             a{
                 width: rem(96);
-                height: rem(50);
+                //220829
+                // height: rem(50);
+                height: rem(44);
+                //220829
                 color: $cancel;
                 background-color: $white;
                 border: 1px solid $inputGray;

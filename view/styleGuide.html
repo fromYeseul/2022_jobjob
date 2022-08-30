@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>     
         body.styleguide {
-          width: calc(100% - 30px);
+          /* width: calc(100% - 30px); */
           margin: 0 auto;
           margin-bottom:100px;
         }   
@@ -21,13 +21,69 @@
         }    
         .clip > span {position: absolute;}
         hr {border: 0;}
-
     </style>
     
 </head>
 <body class="styleguide">    
 
-    <!-- ys: 버튼태그 -> a태그 변환 가능 : class="button" 추가 -->
+    <div class="tabWrapper listType">
+        <div class="tabBtnWrap">
+            <h2>Style Guide</h2>
+            <ul class="">
+                <li class="tabBtn">
+                    <a href="#style-color" class="is-active">Color</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#style-font">Font</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#style-icon">Icon</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#style-title">Title</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#style-button">Button</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#style-input">Input / Select</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#style-chk">Check / Radio</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#style-table">Table / Paging</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#style-tab">Tab</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#style-tooltip">Tooltip</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#style-popup">Popup</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tabContWrap">
+            <div id="style-color" class="tabCont is-active">
+                <h2>Color</h2>
+                
+                <div class="clip"><span>Primary Color</span></div>
+                <hr>    
+            </div>
+            <div id="style-font" class="tabCont">bbb</div>
+            <div id="style-icon" class="tabCont">ccc</div>
+            <div id="style-title" class="tabCont">ccc</div>
+            <div id="style-button" class="tabCont">ccc</div>
+            <div id="style-input" class="tabCont">ccc</div>
+            <div id="style-chk" class="tabCont">ccc</div>
+            <div id="style-table" class="tabCont">ccc</div>
+            <div id="style-tab" class="tabCont">ccc</div>
+            <div id="style-tooltip" class="tabCont">ccc</div>
+            <div id="style-popup" class="tabCont">ccc</div>
+        </div>
+    </div>
     
     <div class="clip"><span>사이즈별 default 버튼</span></div>
     <hr>      
@@ -86,14 +142,20 @@
     <!--//버튼-->
     
 
-
-    <div class="clip"><span>인풋박스(가로)</span></div>
+    <div class="clip"><span>인풋박스</span></div>
     <hr>
-        <label class="need" for="project">프로젝트 이름</label>
-        <input type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
-
-    <div class="clip"><span>인풋박스(세로)</span></div>
-    <hr>
+        <label for="project">프로젝트 이름</label>
+        <input class="smSize" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+        <br>
+        <label for="project">프로젝트 이름</label>
+        <input class="" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+        <br>
+        <label for="project">프로젝트 이름</label>
+        <input class="laSize" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+        <br>
+        <label for="project">프로젝트 이름</label>
+        <input class="wideSize" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+        <br>
         <label for="project">프로젝트 이름</label>
         <input class="full" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
     
@@ -198,6 +260,21 @@
                 </ul>
             </div>
         </div>   
+
+        
+    <div class="clip"><span>다중 파일첨부</span></div>
+    <hr>
+        <div class="uploadBox">
+            <div class="inputGroup upload">
+                <div class="drop">여기에 첨부 파일을 끌어오세요.</div>
+                <div class="list">
+                    <ul class="list_ul"></ul>
+                </div>
+            </div>
+        
+            <label for="cycleDocument" class="">또는 직접선택</label>
+            <input type="file" name="cycleDocument" id="cycleDocument" class="" tabindex="" />
+        </div>
     <!--//파일첨부-->
 
 
@@ -395,9 +472,9 @@
 
 
 
-    <div class="clip"><span>셀렉트박스</span></div>
+    <div class="clip"><span>셀렉트박스(여러개)</span></div>
     <hr>
-        <label for="pet">Choose a pet:</label>
+        <!-- <label for="pet">Choose a pet:</label>
         <select name="pet" id="pet">
             <option value="">option</option>
             <option value="dog">Dog</option>
@@ -406,7 +483,7 @@
             <option value="parrot">Parrot</option>
             <option value="spider">Spider</option>
             <option value="goldfish">Goldfish</option>
-        </select>
+        </select> -->
 
 
         <div class="selectBoxList">
@@ -440,7 +517,44 @@
         </div>
     <!--//셀렉트박스-->
 
-    <div class="clip"><span>셀렉트박스(large)</span></div>
+    <div class="clip"><span>셀렉트박스(사이즈별)</span></div>
+    <hr>
+    
+        <div class="select lowSize">
+            <span class="selDefault">10개씩</span>
+            <ul class="optionList">
+                <li class="optionItem">20개씩</li>
+                <li class="optionItem">50개씩</li>
+                <li class="optionItem">100개씩</li>
+            </ul>
+        </div>
+
+        <div class="select">
+            <span class="selDefault">10개씩</span>
+            <ul class="optionList">
+                <li class="optionItem">20개씩</li>
+                <li class="optionItem">50개씩</li>
+                <li class="optionItem">100개씩</li>
+            </ul>
+        </div>
+
+        <div class="select laSize">
+            <span class="selDefault">10개씩</span>
+            <ul class="optionList">
+                <li class="optionItem">20개씩</li>
+                <li class="optionItem">50개씩</li>
+                <li class="optionItem">100개씩</li>
+            </ul>
+        </div>
+
+        <div class="select wideSize">
+            <span class="selDefault">10개씩</span>
+            <ul class="optionList">
+                <li class="optionItem">20개씩</li>
+                <li class="optionItem">50개씩</li>
+                <li class="optionItem">100개씩</li>
+            </ul>
+        </div>
 
 
 
@@ -624,16 +738,63 @@
         <div id="layer01" class="modalLayer center">
             <div class="layerBox">
                 <div class="modalHeader">
-                    <span class="tit">타이틀</span>
-                    <button class="layerClose">닫기버튼</button>
+                    <button class="ico layerClose"></button>
                 </div>
                 <div class="modalCont">
-                    <p>컨텐츠1111</p>
+                    <div class="tabWrapper">
+                        <ul class="tabBtnWrap btnType wideType">
+                            <li class="tabBtn">
+                                <a href="#offer_message" class="is-active">문자</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#offer_mail">메일</a>
+                            </li>
+                        </ul>
+                        <div class="tabContWrap">
+                            <div id="offer_message" class="tabCont is-active">
+    
+                                <div class="inputList">   
+                                    <ul>
+                                        <li>
+                                            <label class="need" for="receiver">받는 사람</label>
+                                            <div class="inputGroup">
+                                                <div class="inputObj">
+                                                    <span>박예슬 (010-000-0000)</span>
+                                                    <button class="ico smClose"></button>
+                                                </div>
+                                                <div class="inputObj is-active">
+                                                    <input type="text">
+                                                </div>
+                                            </div>    
+                                        </li>
+                                        <li>
+                                            <label for="receiver">첨부파일</label>
+                                            <div class="inputGroup">
+                                                <label for="fileUpload">여기에 첨부 파일을 끌어오세요. 또는 </label>
+                                                <input multiple type="file" id="fileUpload">
+                                                <label for="fileUpload" class="selFile">직접선택</label>
+                                    
+                                                <div class="fileBox">
+                                                    <ul>
+                                                        <li class="fileList"></li>
+                                                    </ul>
+                                                </div>
+                                            </div>   
+                                        </li>
+                                        <li>
+                                            <textarea name="" id="" rows="13"></textarea>
+                                            <p class="counter">글자 수 50자</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="offer_mail" class="tabCont">bbb</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modalFooter">
-                    <p class="btnCover">
-                        <button class="">확인</button>
-                    </p>
+                        <button class="fullSize white prefix">닫기</button>
+                        <button class="fullSize suffix">문자보내기</button>
                 </div>
             </div>        
             <div class="layerDim"></div>    
@@ -703,21 +864,6 @@
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="../assets/js/script.js"></script> -->
-    <script>
-        const output = document.querySelector('.fileList');
-        const myFiles = document.querySelector("#fileUpload");
-
-        function logFilenames(){
-        const fileInput = document.querySelector("#fileUpload");
-        const files = fileInput.files;
-        const fileListLength = files.length;
-        for (let i = 0; i < fileListLength; i++) {
-            output.innerText = `${output.innerText}\n${files.item(i).name}`;
-        }
-        }
-
-        myFiles.addEventListener("change", logFilenames);
-    </script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>
