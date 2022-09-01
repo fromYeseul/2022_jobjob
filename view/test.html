@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="select lowSize is-active"><!--220829 수정 -ys-->
+        <span class="selDefault">선택</span>
+        <ul class="optionList hasChk" id="hasChk">
+            <li class="optionItem">
+                <input type="checkbox" id="optChk_1" name="aa" class="hasTxt">
+                <label for="optChk_1">apple</label>
+            </li>                    
+            <li class="optionItem">
+                <input type="checkbox" id="optChk_2" name="aa" class="hasTxt">
+                <label for="optChk_2">banana</label>
+            </li>
+        </ul>
+    </div>
+    <div class="select lowSize is-active">
+        <span class="selDefault">선택</span>
+        <ul class="optionList hasChk">
+            <li class="optionItem">
+                <input type="checkbox" id="optChk_01" name="aa" class="hasTxt">
+                <label for="optChk_01">apple</label>
+            </li>                    
+            <li class="optionItem">
+                <input type="checkbox" id="optChk_02" name="aa" class="hasTxt">
+                <label for="optChk_02">banana</label>
+            </li>
+        </ul>
+    </div>
+    <div class="select lowSize is-active">
+        <span class="selDefault">선택</span>
+        <ul class="optionList hasChk">
+            <li class="optionItem">
+                <input type="checkbox" id="optChk_01" name="aa" class="hasTxt">
+                <label for="optChk_01">apple</label>
+            </li>                    
+            <li class="optionItem">
+                <input type="checkbox" id="optChk_02" name="aa" class="hasTxt">
+                <label for="optChk_02">banana</label>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function chk(){
+            let hasChk = document.querySelectorAll(".hasChk");
+            let Chk = document.getElementsByTagName("input");
+            for(let i=0; i<hasChk.length; i++){
+                hasChk[i].addEventListener('click', function(){
+                    let ddd = hasChk[i].contains(Chk[i]);
+                    console.log(Chk[i]);
+                    if(ddd == true){
+                        alert('aa');
+                    }else{
+                        alert('bb');
+                    }
+                });
+            }            
+        }
+        chk();
+        </script>
+</body>
+</html>

@@ -7,31 +7,17 @@
     <title>styleGuide | jobjob</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
-    <style>     
-        body.styleguide {
-          /* width: calc(100% - 30px); */
-          margin: 0 auto;
-          margin-bottom:100px;
-        }   
-        .clip {
-          border-left: 10px solid #ccc;
-          border-bottom: 10px solid #f4f5f9;
-          margin-top: 80px;
-          margin-bottom: 30px;
-        }    
-        .clip > span {position: absolute;}
-        hr {border: 0;}
-    </style>
     
 </head>
 <body class="styleguide">    
 
     <div class="tabWrapper listType">
+        <!--list-->
         <div class="tabBtnWrap">
             <h2>Style Guide</h2>
             <ul class="">
                 <li class="tabBtn">
-                    <a href="#style-color" class="is-active">Color</a>
+                    <a href="#style-color">Color</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-font">Font</a>
@@ -40,13 +26,13 @@
                     <a href="#style-icon">Icon</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-title">Title</a>
+                    <a href="#style-text">Text</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-button">Button</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-input">Input / Select</a>
+                    <a href="#style-input" class="is-active">Input / Select</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-chk">Check / Radio</a>
@@ -65,802 +51,448 @@
                 </li>
             </ul>
         </div>
+        <!--//list-->
+        <!--content-->
         <div class="tabContWrap">
-            <div id="style-color" class="tabCont is-active">
+            <div id="style-color" class="tabCont">
                 <h2>Color</h2>
-                
-                <div class="clip"><span>Primary Color</span></div>
-                <hr>    
+                <div class="">
+                    <div class="clip mt20"><span>Primary Color</span></div>
+                    <hr>    
+                    <div class="circle primary">
+                        primary<br>#0460d2
+                    </div>
+
+                    <div class="clip"><span>Gradient Color</span></div>
+                    <hr>    
+                    <div class="circle gradient">
+                        gradient<br>#009ce0<br>#89c895
+                    </div>
+                    
+                    <div class="clip"><span>Status Color</span></div>
+                    <hr>    
+                    <div class="flex">
+                        <div class="circle highlight">
+                            highlight<br>#009ce0
+                        </div>
+                        <div class="circle onGoing">
+                            onGoing<br>#ffc812
+                        </div>
+                        <div class="circle cancel">
+                            cancel<br>#b7b7c4
+                        </div>
+                        <div class="circle delay">
+                            delay<br>#ff1236
+                        </div>
+                    </div>
+                    <br>
+                    <div class="flex">                    
+                        <div class="circle error">
+                            error<br>#ff1236
+                        </div>               
+                        <div class="circle disable">
+                            disable<br>#878791
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="style-font" class="tabCont">bbb</div>
-            <div id="style-icon" class="tabCont">ccc</div>
-            <div id="style-title" class="tabCont">ccc</div>
-            <div id="style-button" class="tabCont">ccc</div>
-            <div id="style-input" class="tabCont">ccc</div>
+            <div id="style-font" class="tabCont">                
+                <h2>Font</h2>
+                <div class="">
+                    <div class="clip mt20"><span>국문</span></div>
+                    <hr> 
+                    <div class="font thin">
+                        <p>NotoSansKR</p>
+                        <span>font-style: thin; font-weight: 100;</span>
+                    </div>
+                    <div class="font light">
+                        <p>NotoSansKR</p>
+                        <span>font-style: light; font-weight: 300;</span>
+                    </div>
+                    <div class="font normal">
+                        <p>NotoSansKR</p>
+                        <span>font-style: normal; font-weight: 400;</span>
+                    </div>
+                    <div class="font medium">
+                        <p>NotoSansKR</p>
+                        <span>font-style: medium; font-weight: 500;</span>
+                    </div>
+                    <div class="font bold">
+                        <p>NotoSansKR</p>
+                        <span>font-style: bold; font-weight: 700;</span>
+                    </div>
+                    <div class="font black">
+                        <p>NotoSansKR</p>
+                        <span>font-style: black; font-weight: 900;</span>
+                    </div>
+                </div>
+            </div>
+            <div id="style-icon" class="tabCont">
+                <h2>Icon</h2>
+                <div class="icon">
+                    <div class="clip mt20"><span>Logo</span></div>
+                    <div class="logo">
+                        <img src="../assets/img/icoLogo.png" alt="">
+                    </div>
+
+                    <div class="clip"><span>Gnb</span></div>
+                    <div class="gnb">
+                        <ul>
+                            <li><span>gnb lock</span><i class="ico ctrlBtn"></i></li>
+                            <li><span>home</span><i class="ico home"></i></li>
+                            <li><span>member</span><i class="ico member"></i></li>
+                            <li><span>project</span><i class="ico project"></i></li>
+                            <li><span>homepage</span><i class="ico homepage"></i></li>
+                            <li><span>event</span><i class="ico event"></i></li>
+                            <li><span>ask</span><i class="ico ask"></i></li>
+                            <li><span>stats</span><i class="ico stats"></i></li>
+                            <li><span>admin</span><i class="ico admin"></i></li>
+                            <li><span>system</span><i class="ico system"></i></li>
+                            <li><span>commonCode</span><i class="ico commonCode"></i></li>
+                        </ul>
+                    </div>                    
+
+                    <div class="clip"><span>공통</span></div>
+                    <div class="common">
+                        <ul>
+                            <li><span>search</span><i class="ico search"></i></li>
+                            <li><span>download</span><i class="ico download"></i></li>
+                            <li><span>filter</span><i class="ico filter"></i></li>
+                            <li><span>fileUpload</span><i class="ico fileUpload"></i></li>
+                            <li><span>delete</span><i class="ico delete"></i></li>
+                            <li><span>refresh</span><i class="ico refresh"></i></li>
+                            <li><span>setting</span><i class="ico setting"></i></li>
+                            <li><span>sort</span><i class="ico sort"></i> </li>
+                            <li><span>change</span><i class="ico change"></i></li>
+                            <li><span>more</span><i class="ico more"></i></li>
+                            <li><span>smClose</span><i class="ico smClose"></i></li>
+                            <li><span>layerClose</span><i class="ico layerClose"></i></li>
+                            <li><span>plus</span><i class="ico plus"></i></li>
+                            <li><span>minus</span><i class="ico minus"></i></li>
+                            <li><span>top</span><i class="ico top"></i></li>
+                        </ul>
+                    </div>
+
+                    <div class="clip"><span>paging</span></div>
+                    <div class="paging">
+                        <ul>
+                            <li><span>left2_dou</span><i class="ico left2_dou"></i></li>
+                            <li><span>left2</span><i class="ico left2"></i></li>
+                            <li><span>left</span><i class="ico left"></i></li>
+                            <li><span>right</span><i class="ico right"></i></li>
+                            <li><span>right2</span><i class="ico right2"></i></li>
+                            <li><span>right2_dou</span><i class="ico right2_dou"></i></li>
+                        </ul>
+                    </div>             
+                </div>
+            </div>
+            <div id="style-text" class="tabCont">              
+                <h2>Text</h2>
+                <div class="text">
+                    <div class="clip mt20"><span>Title</span></div>
+                    <hr> 
+                    <div class="title">
+                        <ul>
+                            <li><span>h1</span><h1>타이틀입니다.</h1></li>
+                            <li><span>h2</span><h2>타이틀입니다.</h2></li>
+                            <li><span>h3</span><h3>타이틀입니다.</h3></li>
+                            <li><span>h4</span><h4>타이틀입니다.</h4></li>
+                            <li><span>h5</span><h5>타이틀입니다.</h5></li>
+                            <li><span>h6</span><h6>타이틀입니다.</h6></li>
+                        </ul>
+                    </div>
+
+                    <div class="clip"><span>notify</span></div>
+                    <div class="notify">
+                        <p>홍길동님은 총 4개의 프로젝트에 추천된 상태입니다.</p>
+                        <span>고객사에 결과 확인 후 합격여부를 변경하세요.</span>
+                    </div>
+
+                    <div class="clip"><span>error</span></div>
+                    <p class="error is-active">jpg, jpeg 이미지만 첨부할 수 있습니다.</p>
+                    
+                    <div class="clip"><span>label</span></div>
+                    <span class="label">SM</span>
+                    <span class="label">SI</span>
+                    <span class="point">중요</span>
+                </div>
+            </div>
+            <div id="style-button" class="tabCont">     
+                <h2>Button</h2>
+                <div class="btn">
+                    <div class="clip mt20"><span>Default Button</span></div>    
+                    <div class="default">          
+                        <ul>
+                            <li>
+                                <span>smSize</span>
+                                <span class="size">smSize</span>
+                                <button class="smSize">button</button>
+                            </li>
+                            <li>
+                                <span>lowSize</span>
+                                <span class="size">130px * 38px</span>                            
+                                <button class="lowSize">button</button>
+                            </li>
+                            <li>
+                                <span>midSize</span>
+                                <span class="size">min 90px * 50px</span>
+                                <button class="midSize">button</button>
+                            </li>
+                            <li>
+                                <span>midSize low</span>
+                                <span class="size">min 90px * 36px</span>
+                                <button class="midSize low">button</button>
+                            </li>
+                            <li>
+                                <span>laSize</span>
+                                <span class="size">min 120px * 48px</span>
+                                <button class="laSize">button</button>
+                            </li>
+                            <li>
+                                <span>xlSize</span>
+                                <span class="size">160px * 54px</span>
+                                <button class="xlSize">button</button>
+                            </li>
+                            <li>
+                                <span>fullSize</span>
+                                <span class="size">100%</span>
+                            </li>
+                            <li>
+                                <button class="fullSize">button</button>
+                            </li>
+                        </ul>               
+                    </div>   
+
+                    <div class="clip"><span>White Button</span></div>
+                    <div class="white">
+                        <ul>
+                            <li>
+                                <span>white</span>
+                                <span class="size">p 15px * 34px</span>
+                                <button class="white">button</button>
+                            </li>
+                            <li>
+                                <span>lowSize</span>
+                                <span class="size">100px * 34px</span>
+                                <button class="white lowSize">button</button>
+                            </li>
+                            <li>
+                                <span>smSize</span>
+                                <span class="size">p 12px * 30px</span>
+                                <button class="white smSize">button</button>
+                            </li>
+                            <li>
+                                <span>laSize</span>
+                                <span class="size">p 15px * 55px</span>
+                                <button class="white laSize">button</button>
+                            </li>
+                            <li>
+                                <span>xlSize</span>
+                                <span class="size">160px * 54px</span>
+                                <button class="white xlSize">button</button>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clip"><span>Warning Button</span></div>
+                    <div class="warning">
+                        <ul>
+                            <li>
+                                <span>warning</span>
+                                <span class="size">160px * 54px</span>
+                                <button class="warning xlSize">button</button>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clip"><span>Round Button</span></div>
+                    <div class="roung">
+                        <ul>
+                            <li>
+                                <button class="round">button</button>
+                                <button class="round order">button</button>
+                                <button class="round cancel">button</button>
+                                <button class="round checking">button</button>
+                                <button class="round short">button</button>
+                                <button class="round reject">button</button>
+                            </li>
+                        </ul>
+                    </div>
+                                    
+                    <div class="clip"><span>Icon Button</span></div>
+                    <div class="icon">
+                        <button class="white">
+                            <i class="ico download"></i>엑셀저장
+                        </button>                
+                        <button class="onlyIco"><i class="ico refresh"></i></button>
+                        <button class="onlyIco"><i class="ico minus"></i></button>
+                        <button class="onlyIco"><i class="ico plus"></i></button>
+                    </div>
+
+                    <div class="clip"><span>ETC Button</span></div>
+                    <button class="square is-active">더보기</button>
+                </div>
+            </div>
+            <div id="style-input" class="tabCont is-active">
+                <h2>Input / Select</h2>
+                <div class="input">
+                    <div class="clip mt20"><span>Input</span></div>   
+                    <div class="input">
+                        <ul>
+                            <li>
+                                <span>smSize</span>
+                                <span class="size">smSize</span>
+                                <label for="smSize">label</label>
+                                <input class="smSize" type="text" id="smSize" maxlength="" placeholder="placeholder">
+                            </li>
+                            <li>
+                                <span>default</span>
+                                <span class="size">default</span>
+                                <label for="default">label</label>
+                                <input class="" type="text" id="default" maxlength="" placeholder="placeholder">
+                            </li>
+                            <li>
+                                <span>laSize</span>
+                                <span class="size">laSize</span>
+                                <label for="laSize">label</label>
+                                <input class="laSize" type="text" id="laSize" maxlength="" placeholder="placeholder">
+                            </li>
+                            <!-- <li>
+                                <span>wideSize</span>
+                                <span class="size">wideSize</span>
+                                <label for="wideSize">label</label>
+                                <input class="wideSize" type="text" id="wideSize" maxlength="" placeholder="placeholder">
+                            </li> -->
+                            <li>
+                                <span>full</span>
+                                <span class="size">full</span>
+                                <label for="full">label</label>
+                            </li>
+                            <li>
+                                <input class="full" type="text" id="full" maxlength="" placeholder="placeholder">
+                            </li>
+                        </ul>
+                    </div> 
+
+                    <div class="clip"><span>Icon Input</span></div>   
+                    <div class="icon">
+                        <ul>
+                            <li>
+                                <label for="search">검색</label>
+                                <div class="inputIco">
+                                    <i class="ico search"></i>
+                                    <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="search">검색</label>
+                                <div class="inputIco">
+                                    <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
+                                    <button class="ico search"></button>
+                                </div>
+                            </li>
+                            <li>
+                                <label for="search">아이디</label>
+                                <div class="inputIco">
+                                    <i class="ico search"></i>
+                                    <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
+                                    <button class="ico search"></button>
+                                </div>
+                                <p class="error is-active">* 아이디가 틀렸습니다.</p>
+                            </li>
+                            <li>
+                                <label for="pw">비밀번호</label>
+                                <div class="inputIco">
+                                    <input type="password" id="pw" maxlength="" placeholder="비밀번호를 입력하세요.">
+                                    <button class="ico showPw"></button>
+                                </div>
+                                <p class="error is-active">* 비밀번호가 틀렸습니다.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clip"><span>Icon button Input</span></div>   
+                    <div class="">
+                        <ul>
+                            <li>
+                                <div class="hasBtn">
+                                    <label for="project2">검색</label>
+                                    <input type="text" id="project2" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+                                    <button class="midSize">검색</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="hasBtn">         
+                                    <label for="search">검색</label>
+                                    <div class="inputIco">
+                                        <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
+                                        <button class="ico search"></button>
+                                    </div>   
+                                    <button class="midSize">검색</button>
+                                </div> 
+                            </li>
+                            <li>
+                                <div class="hasBtn">
+                                    <label for="project2">검색</label>
+                                    <button class="midSize">검색</button>
+                                    <input type="text" id="project2" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="hasBtn">         
+                                    <label for="search">검색</label>
+                                    <button class="midSize">검색</button>
+                                    <div class="inputIco">
+                                        <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
+                                        <button class="ico search"></button>
+                                    </div>   
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="clip"><span>Chip Input</span></div>   
+                    <div class="">
+                        <ul>
+                            <li>
+                                <div class="inputGroup">
+                                    <div class="inputObj">
+                                        <span>박예슬 (010-000-0000)</span>
+                                        <button class="ico smClose w"></button>
+                                    </div>
+                                    <div class="inputObj is-active">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="clip"><span>파일첨부</span></div> 
+                    <div class="">
+                        <div class="inputGroup">
+                            <label for="fileUpload">여기에 첨부 파일을 끌어오세요. 또는 </label>
+                            <input multiple type="file" id="fileUpload">
+                            <label for="fileUpload" class="selFile">직접선택</label>
+                
+                            <div class="fileBox">
+                                <ul>
+                                    <li class="fileList"></li>
+                                </ul>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
             <div id="style-chk" class="tabCont">ccc</div>
             <div id="style-table" class="tabCont">ccc</div>
             <div id="style-tab" class="tabCont">ccc</div>
             <div id="style-tooltip" class="tabCont">ccc</div>
             <div id="style-popup" class="tabCont">ccc</div>
         </div>
+        <!--//content-->
     </div>
     
-    <div class="clip"><span>사이즈별 default 버튼</span></div>
-    <hr>      
-        <button class="fullSize">fullSize</button>
-        <button class="laSize">laSize</button>
-        <button class="midSize">midSize</button>
-        <button class="smSize">smSize</button>
-
-    <div class="clip"><span>비활성 버튼</span></div>
-    <hr>   
-        <button class="laSize" disabled>비활성</button>
-        <button class="white" disabled>white</button>
-
-    <div class="clip"><span>화이트 버튼</span></div>
-    <hr>   
-        <button class="white">white</button>
-        <button class="white smType">smallf</button>
-
-    <div class="clip"><span>아이콘 버튼</span></div>
-    <hr>   
-    <button class="white">
-        <i class="ico download"></i>
-        엑셀저장
-    </button>
-    
-    <div class="clip"><span>라운드 버튼</span></div>
-    <hr>   
-        <button class="round">round</button>
-
-    <div class="clip"><span>상태별 라운드 버튼</span></div>
-    <hr>   
-        <button class="round order">order</button>
-        <button class="round cancel">cancel</button>
-        <button class="round checking">checking</button>
-        <button class="round short">short</button>
-        <button class="round reject">reject</button>
-
-    <div class="clip"><span>라벨 버튼</span></div>
-    <hr>
-        <button class="label">button</button>
-        <span class="button label">span</span>
-
-    <div class="clip"><span>버튼 가운데 정렬</span></div>
-    <hr>
-        <div class="btnWrap center">            
-            <button class="laSize">등록</button>
-            <button class="laSize">취소</button>
-        </div>  
-
-    <div class="clip"><span>버튼 좌측 정렬</span></div>
-    <hr>
-        <div class="btnWrap right">            
-            <button class="laSize">등록</button>
-            <button class="laSize">취소</button>
-        </div>          
-    <!--//버튼-->
-    
-
-    <div class="clip"><span>인풋박스</span></div>
-    <hr>
-        <label for="project">프로젝트 이름</label>
-        <input class="smSize" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
-        <br>
-        <label for="project">프로젝트 이름</label>
-        <input class="" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
-        <br>
-        <label for="project">프로젝트 이름</label>
-        <input class="laSize" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
-        <br>
-        <label for="project">프로젝트 이름</label>
-        <input class="wideSize" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
-        <br>
-        <label for="project">프로젝트 이름</label>
-        <input class="full" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
-    
-    <div class="clip"><span>좌측 아이콘 인풋박스</span></div>
-    <hr>
-        <label for="search">검색</label>
-        <div class="inputIco">
-            <i class="ico search"></i>
-            <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
-        </div>
-        
-    <div class="clip"><span>우측 아이콘 인풋박스</span></div>
-    <hr>
-        <label for="search">검색</label>
-        <div class="inputIco">
-            <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
-            <button class="ico search"></button>
-        </div>
-
-    <div class="clip"><span>양쪽 아이콘 인풋박스, 에러메시지</span></div>
-    <hr>
-        <label for="search">아이디</label>
-        <div class="inputIco">
-            <i class="ico search"></i>
-            <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
-            <button class="ico search"></button>
-        </div>
-        <p class="error is-active">* 아이디가 틀렸습니다.</p>
-    
-    <div class="clip"><span>패스워드 인풋박스 + 해제</span></div>
-    <hr>        
-        <label for="pw">비밀번호</label>
-        <div class="inputIco">
-            <input type="password" id="pw" maxlength="" placeholder="비밀번호를 입력하세요.">
-            <button class="ico showPw"></button>
-        </div>
-        <p class="error is-active">* 비밀번호가 틀렸습니다.</p>
-
-    <div class="clip"><span>인풋박스 + 버튼</span></div>
-    <hr>
-        <div class="hasBtn">
-            <label for="project2">검색</label>
-            <input type="text" id="project2" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
-            <button class="midSize">검색</button>
-        </div>
-
-    <div class="clip"><span>우측 아이콘 인풋박스 + 버튼</span></div>
-    <hr>        
-        <div class="hasBtn">         
-            <label for="search">검색</label>
-            <div class="inputIco">
-                <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
-                <button class="ico search"></button>
-            </div>   
-            <button class="midSize">검색</button>
-        </div>        
-    
-    <div class="clip"><span>버튼 + 인풋박스</span></div>
-    <hr>
-        <div class="hasBtn">
-            <label for="project2">검색</label>
-            <button class="midSize">검색</button>
-            <input type="text" id="project2" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
-        </div>
-
-    <div class="clip"><span>버튼 + 우측 아이콘 인풋박스</span></div>
-    <hr>        
-        <div class="hasBtn">         
-            <label for="search">검색</label>
-            <button class="midSize">검색</button>
-            <div class="inputIco">
-                <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
-                <button class="ico search"></button>
-            </div>   
-        </div>
-
-    <div class="clip"><span>칩타입 인풋박스<span></div>
-    <hr>
-        <div class="inputGroup">
-            <div class="inputObj">
-                <span>박예슬 (010-000-0000)</span>
-                <button class="ico smClose"></button>
-            </div>
-            <div class="inputObj is-active">
-                <input type="text">
-            </div>
-        </div>          
-    <!--//인풋박스-->
-
-
-
-    <div class="clip"><span>파일첨부</span></div>
-    <hr>
-        <div class="inputGroup">
-            <label for="fileUpload">여기에 첨부 파일을 끌어오세요. 또는 </label>
-            <input multiple type="file" id="fileUpload">
-            <label for="fileUpload" class="selFile">직접선택</label>
-
-            <div class="fileBox">
-                <ul>
-                    <li class="fileList"></li>
-                </ul>
-            </div>
-        </div>   
-
-        
-    <div class="clip"><span>다중 파일첨부</span></div>
-    <hr>
-        <div class="uploadBox">
-            <div class="inputGroup upload">
-                <div class="drop">여기에 첨부 파일을 끌어오세요.</div>
-                <div class="list">
-                    <ul class="list_ul"></ul>
-                </div>
-            </div>
-        
-            <label for="cycleDocument" class="">또는 직접선택</label>
-            <input type="file" name="cycleDocument" id="cycleDocument" class="" tabindex="" />
-        </div>
-    <!--//파일첨부-->
-
-
-    <div class="clip"><span>텍스트영역(내부버튼)</span></div>
-    <hr>
-        <textarea name="" id="" rows="10"></textarea>
-        <p class="counter">글자 수 50자</p>
-
-    <div class="clip"><span>텍스트영역(내부버튼)</span></div>
-    <hr>
-        <div class="textForm">
-            <textarea name="" id="" rows="10"></textarea>
-            <div class="btnWrap right">
-                <button class="smSize">등록</button>
-            </div>  
-        </div>
-        
-    <div class="clip"><span>텍스트영역(외부버튼)</span></div>
-    <hr>
-        <div class="textForm">
-            <textarea name="" id="" rows="10"></textarea>
-        </div>
-        <div class="btnWrap center">
-            <button class="smSize">등록</button>
-        </div>  
-    <!--//텍스트영역-->
-
-
-
-    <div class="clip"><span>체크박스</span></div>
-    <hr>
-        <input type="checkbox" id="galaxy" name="mobile">
-        <label for="galaxy"></label>
-        <input type="checkbox" id="iphone" name="mobile">
-        <label for="iphone"></label>
-        <input type="checkbox" id="note" name="mobile" checked>
-        <label for="note"></label>
-
-    <div class="clip"><span>텍스트 있는 체크박스</span></div>
-    <hr>        
-        <input type="checkbox" id="a1" name="aa" class="hasTxt">
-        <label for="a1">galaxy</label>
-        <input type="checkbox" id="a2" name="aa" class="hasTxt" checked>
-        <label for="a2">iphone</label>
-
-    <div class="clip"><span>즐겨찾기</span></div>
-    <hr>
-        <input type="checkbox" id="bookMark" class="bMark" name="bMark" checked>
-        <label for="bookMark"></label>    
-
-    <div class="clip"><span>스위치토글</span></div>
-    <hr>
-        <input id="s2" type="checkbox" class="chkSwitch">
-        <label for="s2">Switch</label>
-        <input id="s22" type="checkbox" class="chkSwitch" disabled>
-        <label for="s22">disabled</label>
-        <input id="s222" type="checkbox" class="chkSwitch" checked disabled>
-        <label for="s222">chk disabled</label>
-
-    
-    <div class="clip"><span>버튼타입 체크박스</span></div>
-    <hr>                
-        <div class="btnType">
-            <input type="checkbox" id="b1" name="aa" class="hasTxt">
-            <label for="b1">galaxy</label>
-            <input type="checkbox" id="b2" name="aa" class="hasTxt" checked>
-            <label for="b2">iphone</label>
-        </div>
-
-
-    <div class="clip"><span>체크박스 전체선택 <span style="color: greenyellow">여러개 구분하기</span></span></div>
-    <hr>
-        <div class="chkWrap btnType">
-            <input type="checkbox" id="chkAll" class="chkAll">
-            <label for="chkAll">전체</label>
-            
-            <input type="checkbox" id="chk_1" class="chkEach" checked>
-            <label for="chk_1">에코</label>
-            
-            <input type="checkbox" id="chk_2" class="chkEach" >
-            <label for="chk_2">협력</label>
-            
-            <input type="checkbox" id="chk_3" class="chkEach" >
-            <label for="chk_3">대행</label>  
-
-            <input type="checkbox" id="chk_4" class="chkEach" >
-            <label for="chk_4">대행</label>            
-        </div>
-
-        <div class="chkWrap btnType">
-            <input type="checkbox" id="chkAAll" class="chkAll">
-            <label for="chkAAll">전체 동의</label>
-            
-            <input type="checkbox" id="chk_5" class="chkEach" checked>
-            <label for="chk_5">동의</label>
-            
-            <input type="checkbox" id="chk_6" class="chkEach" >
-            <label for="chk_6">서비스</label>
-            
-            <input type="checkbox" id="chk_7" class="chkEach" >
-            <label for="chk_7">마케팅</label>            
-        </div>
-    <!--//체크박스-->
-
-
-
-    <div class="clip"><span>라디오박스</span></div>
-    <hr>
-        <input type="radio" id="apple" name="fruits" value="apple" checked>
-        <label for="apple"></label>
-        <input type="radio" id="banana" name="fruits" value="banana">
-        <label for="banana"></label>
-        
-    <div class="clip"><span>텍스트 있는 라디오박스</span></div>
-    <hr>
-        <input type="radio" id="mug" name="cup" value="mug" class="hasTxt" checked>
-        <label for="mug">apple</label>
-        <input type="radio" id="glass" name="cup" value="glass" class="hasTxt">
-        <label for="glass">banana</label>
-
-    <div class="clip"><span>탭타입 라디오박스</span></div>
-    <hr>        
-        <div class="tabType">
-            <input type="radio" id="americano" name="coffee" value="americano" checked>
-            <label for="americano">아메리카노</label>
-            <input type="radio" id="latte" name="coffee" value="latte">
-            <label for="latte">라떼</label>
-        </div>
-
-    <div class="clip"><span>별점</span></div>
-    <hr>
-        <div class="starWrap">
-            <label class="starBox">
-                <input type="radio" name="star" id="">
-                <span class="starImg">
-                    <span class="blind">별 0.5개</span>
-                </span>
-            </label>
-            <label class="starBox">
-                <input type="radio" name="star" id="">
-                <span class="starImg">
-                    <span class="blind">별 1개</span>
-                </span>
-            </label>
-            <label class="starBox">
-                <input type="radio" name="star" id="">
-                <span class="starImg">
-                    <span class="blind">별 1.5개</span>
-                </span>
-            </label>
-            <label class="starBox">
-                <input type="radio" name="star" id="">
-                <span class="starImg">
-                    <span class="blind">별 2개</span>
-                </span>
-            </label>
-            <label class="starBox">
-                <input type="radio" name="star" id="">
-                <span class="starImg">
-                    <span class="blind">별 2.5개</span>
-                </span>
-            </label>
-            <label class="starBox">
-                <input type="radio" name="star" id="">
-                <span class="starImg">
-                    <span class="blind">별 3개</span>
-                </span>
-            </label>
-            <label class="starBox">
-                <input type="radio" name="star" id="">
-                <span class="starImg">
-                    <span class="blind">별 3.5개</span>
-                </span>
-            </label>
-            <label class="starBox">
-                <input type="radio" name="star" id="">
-                <span class="starImg">
-                    <span class="blind">별 4개</span>
-                </span>
-            </label>
-            <label class="starBox">
-                <input type="radio" name="star" id="">
-                <span class="starImg">
-                    <span class="blind">별 4.5개</span>
-                </span>
-            </label>
-            <label class="starBox">
-                <input type="radio" name="star" id="">
-                <span class="starImg">
-                    <span class="blind">별 5개</span>
-                </span>
-            </label>
-        </div>
-    <!--//라디오박스-->
-
-
-
-    <div class="clip"><span>셀렉트박스(여러개)</span></div>
-    <hr>
-        <!-- <label for="pet">Choose a pet:</label>
-        <select name="pet" id="pet">
-            <option value="">option</option>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-            <option value="hamster">Hamster</option>
-            <option value="parrot">Parrot</option>
-            <option value="spider">Spider</option>
-            <option value="goldfish">Goldfish</option>
-        </select> -->
-
-
-        <div class="selectBoxList">
-            <div class="select">
-                <span class="selDefault">fruits</span>
-                <ul class="optionList">
-                    <li class="optionItem">apple</li>
-                    <li class="optionItem">orange</li>
-                    <li class="optionItem">grape</li>
-                    <li class="optionItem">melon</li>
-                </ul>
-            </div>            
-            <div class="select">
-                <span class="selDefault">fruits</span>
-                <ul class="optionList">
-                    <li class="optionItem">apple</li>
-                    <li class="optionItem">orange</li>
-                    <li class="optionItem">grape</li>
-                    <li class="optionItem">melon</li>
-                </ul>
-            </div>
-            <div class="select">
-                <span class="selDefault">fruits</span>
-                <ul class="optionList">
-                    <li class="optionItem">apple</li>
-                    <li class="optionItem">orange</li>
-                    <li class="optionItem">grape</li>
-                    <li class="optionItem">melon</li>
-                </ul>
-            </div> 
-        </div>
-    <!--//셀렉트박스-->
-
-    <div class="clip"><span>셀렉트박스(사이즈별)</span></div>
-    <hr>
-    
-        <div class="select lowSize">
-            <span class="selDefault">10개씩</span>
-            <ul class="optionList">
-                <li class="optionItem">20개씩</li>
-                <li class="optionItem">50개씩</li>
-                <li class="optionItem">100개씩</li>
-            </ul>
-        </div>
-
-        <div class="select">
-            <span class="selDefault">10개씩</span>
-            <ul class="optionList">
-                <li class="optionItem">20개씩</li>
-                <li class="optionItem">50개씩</li>
-                <li class="optionItem">100개씩</li>
-            </ul>
-        </div>
-
-        <div class="select laSize">
-            <span class="selDefault">10개씩</span>
-            <ul class="optionList">
-                <li class="optionItem">20개씩</li>
-                <li class="optionItem">50개씩</li>
-                <li class="optionItem">100개씩</li>
-            </ul>
-        </div>
-
-        <div class="select wideSize">
-            <span class="selDefault">10개씩</span>
-            <ul class="optionList">
-                <li class="optionItem">20개씩</li>
-                <li class="optionItem">50개씩</li>
-                <li class="optionItem">100개씩</li>
-            </ul>
-        </div>
-
-
-
-    <div class="clip"><span style="color:#ccc;">셀렉트박스(직접입력)</span></div>
-    <hr>
-        <label for="pet">Choose a pet:</label>
-        <select name="pet" id="pet">
-            <option value="">option</option>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-            <option value="hamster">Hamster</option>
-            <option value="parrot">Parrot</option>
-            <option value="spider">Spider</option>
-            <option value="goldfish">Goldfish</option>
-        </select>
-        <input type="text" id="directInput" name="directInput">
-    <!--//셀렉트박스(직접입력)-->
-
-
-
-    <div class="clip"><span>날짜</span></div>
-    <hr>
-    <input type="date">
-    <!--//날짜-->
-
-
-
-    <div class="clip"><span>로딩이미지</span></div>
-    <div class="clip"><span>테이블(가로타입)</span></div>
-    <hr>
-        <table class="colType">
-            <thead>
-                <tr>
-                    <th colspan="2">headerheaderheader</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>body</td>
-                    <td>body</td>
-                </tr>
-                <tr>
-                    <td>body</td>
-                    <td>body</td>
-                </tr>
-                <tr>
-                    <td>body</td>
-                    <td>body</td>
-                </tr>
-            </tbody>
-        </table>
-    <!--//테이블(가로타입)-->
-
-
-
-    <div class="clip"><span>테이블(세로타입)</span></div>
-    <hr>
-        <table class="rowType">
-            <tbody>
-                <tr>
-                    <th rowspan="2">headerheader</th>
-                    <td>body</td>
-                    <td>body</td>
-                </tr>
-                <tr>
-                    <td>body</td>
-                    <td>body</td>
-                </tr>
-                <tr>
-                    <th>header</th>
-                    <td>body</td>
-                    <td>body</td>
-                </tr>
-            </tbody>
-        </table>
-    <!--//테이블(세로타입)-->
-
-
-
-    <div class="clip"><span style="color:#ccc;">테이블(drag&drop)</span></div>
-    <hr>
-    <!--//테이블(drag&drop)-->
-
-    <div class="clip"><span>페이징 -1</span></div>
-    <hr>
-    <div class="listBottom pagingType">                        
-        <div class="paging">
-            <ul>
-                <li><a href="#">
-                    <span class="ico left"></span>
-                </a></li>
-                <li>
-                    3개 중 <span class="is-active">1-3</span>
-                </li>
-                <li><a href="#">
-                    <span class="ico right is-active"></span>
-                </a></li>
-            </ul>
-        </div>
-    </div>
-
-
-    <div class="listBottom pagingType">                        
-        <div class="paging">
-            <ul>
-                <li class="pagingDouble">
-                    <a href="#">
-                        <span class="ico left2_dou"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="ico left2"></span>
-                    </a>
-                </li>
-                <li class="is-active">1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>
-                    <a href="#">
-                        <span class="ico right2 is-active"></span>
-                    </a>
-                </li>
-                <li class="pagingDouble">
-                    <a href="#">
-                        <span class="ico right2_dou is-active"></span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!--페이징-->
-
-
-
-
-    <div class="clip"><span>데이트피커</span></div>
-    <hr>
-    <!--//데이트피커-->
-    
-
-
-    <div class="clip"><span> 기간검색</span></div>
-    <hr>
-    <!--//기간검색-->
-
-
-
-    <div class="clip"><span>툴팁박스</span></div>
-    <hr>
-        <div class="hasTooltip">
-            <div class="">안녕하세요.</div>
-            <div class="tooltip"> Hi~</div>
-        </div>
-    <!--//툴팁박스-->
-
-
-
-    <div class="clip"><span>토스트팝업</span></div>
-    <hr>
-    <!--//토스트팝업-->
-
-
-
-    <div class="clip"><span>bottom 토스트팝업</span></div>
-    <hr>
-    <!--//bottom 토스트팝업-->
-
-
-
-    <div class="clip"><span>레이어팝업</span></div>
-    <hr>   
-        <a href="#layer01" class="layerOpen">팝업오픈 버튼</a>
-        <div id="layer01" class="modalLayer center">
-            <div class="layerBox">
-                <div class="modalHeader">
-                    <button class="ico layerClose"></button>
-                </div>
-                <div class="modalCont">
-                    <div class="tabWrapper">
-                        <ul class="tabBtnWrap btnType wideType">
-                            <li class="tabBtn">
-                                <a href="#offer_message" class="is-active">문자</a>
-                            </li>
-                            <li class="tabBtn">
-                                <a href="#offer_mail">메일</a>
-                            </li>
-                        </ul>
-                        <div class="tabContWrap">
-                            <div id="offer_message" class="tabCont is-active">
-    
-                                <div class="inputList">   
-                                    <ul>
-                                        <li>
-                                            <label class="need" for="receiver">받는 사람</label>
-                                            <div class="inputGroup">
-                                                <div class="inputObj">
-                                                    <span>박예슬 (010-000-0000)</span>
-                                                    <button class="ico smClose"></button>
-                                                </div>
-                                                <div class="inputObj is-active">
-                                                    <input type="text">
-                                                </div>
-                                            </div>    
-                                        </li>
-                                        <li>
-                                            <label for="receiver">첨부파일</label>
-                                            <div class="inputGroup">
-                                                <label for="fileUpload">여기에 첨부 파일을 끌어오세요. 또는 </label>
-                                                <input multiple type="file" id="fileUpload">
-                                                <label for="fileUpload" class="selFile">직접선택</label>
-                                    
-                                                <div class="fileBox">
-                                                    <ul>
-                                                        <li class="fileList"></li>
-                                                    </ul>
-                                                </div>
-                                            </div>   
-                                        </li>
-                                        <li>
-                                            <textarea name="" id="" rows="13"></textarea>
-                                            <p class="counter">글자 수 50자</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="offer_mail" class="tabCont">bbb</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modalFooter">
-                        <button class="fullSize white prefix">닫기</button>
-                        <button class="fullSize suffix">문자보내기</button>
-                </div>
-            </div>        
-            <div class="layerDim"></div>    
-        </div>
-        <a href="#layer02" class="layerOpen">팝업오픈 버튼</a>
-        <div id="layer02" class="modalLayer center">
-            <div class="layerBox">
-                <div class="modalHeader">
-                    <span class="tit">타이틀</span>
-                    <button class="layerClose">닫기버튼</button>
-                </div>
-                <div class="modalCont">
-                    <p>컨텐츠22222</p>
-                </div>
-                <div class="modalFooter">
-                    <p class="btnCover">
-                        <button class="">확인</button>
-                    </p>
-                </div>
-            </div>        
-            <div class="layerDim"></div>    
-        </div>
-    <!--//레이어팝업-->
-
-    
-
-    <div class="clip"><span>탭</span></div>
-    <hr>
-        <div class="tabWrapper" id="tab01">
-            <ul class="tabBtnWrap">
-                <li class="tabBtn">
-                    <a href="#tab-1" class="is-active">menu1</a>
-                </li>
-                <li class="tabBtn">
-                    <a href="#tab-2">menu2</a>
-                </li>
-                <li class="tabBtn">
-                    <a href="#tab-3">menu3</a>
-                </li>
-            </ul>
-            <div class="tabContWrap">
-                <div id="tab-1" class="tabCont is-active">aaa</div>
-                <div id="tab-2" class="tabCont">bbb</div>
-                <div id="tab-3" class="tabCont">ccc</div>
-            </div>
-        </div>
-        <div class="tabWrapper" id="tab02">
-            <ul class="tabBtnWrap">
-                <li class="tabBtn">
-                    <a href="#bbb-1" class="is-active">menu1</a>
-                </li>
-                <li class="tabBtn">
-                    <a href="#bbb-2">menu2</a>
-                </li>
-                <li class="tabBtn">
-                    <a href="#bbb-3">menu3</a>
-                </li>
-            </ul>
-            <div class="tabContWrap">
-                <div id="bbb-1" class="tabCont is-active">aaa</div>
-                <div id="bbb-2" class="tabCont">bbb</div>
-                <div id="bbb-3" class="tabCont">ccc</div>
-            </div>
-        </div>
-    <!--//탭-->
-
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

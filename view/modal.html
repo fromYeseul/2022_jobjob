@@ -13,7 +13,7 @@
     <!--레이어팝업-->
     <a href="#layer01" class="layerOpen">팝업오픈 버튼(메일/문자보내기)</a>
 
-    <div id="layer01" class="modalLayer center">
+    <div id="layer01" class="modalLayer center is-active">
         <div class="layerBox">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -22,14 +22,14 @@
                 <div class="tabWrapper">
                     <ul class="tabBtnWrap btnType wideType">
                         <li class="tabBtn">
-                            <a href="#offer_message" class="is-active">문자</a>
+                            <a href="#offer_message">문자</a>
                         </li>
                         <li class="tabBtn">
-                            <a href="#offer_mail">메일</a>
+                            <a href="#offer_mail" class="is-active">메일</a>
                         </li>
                     </ul>
                     <div class="tabContWrap">
-                        <div id="offer_message" class="tabCont is-active">
+                        <div id="offer_message" class="tabCont">
 
                             <div class="inputList">   
                                 <ul>
@@ -69,7 +69,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div id="offer_mail" class="tabCont">
+                        <div id="offer_mail" class="tabCont is-active">
                             <div class="inputList">   
                                 <ul>
                                     <!--220830 추가 -ys -->
@@ -109,7 +109,26 @@
                                     </li>
                                     <li>
                                         <textarea name="" id="" rows="13"></textarea>
-                                        <p class="counter">글자 수 50자</p>
+                                        
+                                        <!--220901 추가 -ys-->
+                                        <div class="flexBetween">
+                                            <div class="prefix">
+                                                <input type="checkbox" id="talkAlarm" name="aa" class="hasTxt" checked="">
+                                                <label for="talkAlarm">카카오톡 알림도 함께 보내기</label>
+
+                                                <span class="hasTooltip">
+                                                    <i class="ico qMark"></i>
+                                                    <div class="tooltip left">
+                                                        안녕하세요. 에코아이티입니다.<br>
+                                                        회원님의 {메일제목}을 보내드렸습니다. 확인부탁드립니다.<br>
+                                                        감사합니다.                            
+                                                    </div>         
+                                                </span>
+                                            </div>
+
+                                            <p class="counter">글자 수 50자</p>
+                                        </div>     
+                                        <!--//220901 추가 -ys-->                                   
                                     </li>
                                 </ul>
                             </div>

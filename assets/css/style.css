@@ -448,22 +448,20 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 .gnbWrapper {
-  width: 3.25rem;
-  background-image: linear-gradient(to bottom, #009ce0, #89c895);
+  width: 3.75rem;
+  background: linear-gradient(to bottom, #009ce0, #89c895);
   transition: all 0.3s ease;
   position: fixed;
   left: 0;
-  font-size: 0.875rem;
   z-index: 100;
 }
 .gnbWrapper .gnb {
   padding: 1.25rem 0;
 }
 .gnbWrapper .navCtrlBtn {
+  width: 2.5rem;
+  height: 2.5rem;
   padding: 0.5625rem;
-  width: 2.25rem;
-  height: 2.25rem;
-  padding: 0.5rem;
   margin-left: 0.5625rem;
   border-radius: 0.375rem;
   background: #fff;
@@ -473,7 +471,7 @@ h1, h2, h3, h4, h5, h6, p {
 .gnbWrapper .navCtrlBtn::before {
   content: "";
   width: 0;
-  height: 2.25rem;
+  height: 2.5rem;
   background: #fff;
   position: absolute;
   left: -10px;
@@ -487,7 +485,7 @@ h1, h2, h3, h4, h5, h6, p {
   overflow-y: auto;
 }
 .gnbWrapper .navWrapper li {
-  padding: 0.75rem 0.5625rem;
+  padding: 0.8125rem;
 }
 .gnbWrapper .navWrapper li.is-active .menuTxt {
   font-weight: 700;
@@ -495,7 +493,7 @@ h1, h2, h3, h4, h5, h6, p {
 .gnbWrapper .navWrapper .menuTxt {
   display: none;
   color: #fff;
-  margin-left: 0.75rem;
+  margin-left: 0.875rem;
   vertical-align: middle;
 }
 
@@ -788,10 +786,10 @@ footer.toast button + button {
   text-align: center;
 }
 .modalCont .inputList {
-  margin-top: 3.125rem;
+  margin-top: 1.875rem;
 }
-.modalCont p {
-  margin-bottom: 1rem;
+.modalCont .flexBetween {
+  color: #878791;
 }
 
 .modalFooter {
@@ -1095,6 +1093,8 @@ table .memo::before {
   border-left: 3px solid #0460d2;
 }
 .tabWrapper.listType .tabCont {
+  max-height: 100vh;
+  overflow-y: auto;
   padding: 1.875rem 3.125rem;
 }
 
@@ -1359,22 +1359,25 @@ button.reject,
   color: #ff1236;
   border-color: #ff1236;
 }
-button.label,
-.button.label {
+
+span.button {
+  cursor: inherit;
+}
+
+.label {
+  display: inline-block;
   min-width: 2.75rem;
   line-height: 1.375rem;
   color: #878791;
   font-size: 0.75rem;
-  font-weight: 400;
+  text-align: center;
   background: #f2f2f7;
   border-radius: 1.25rem;
-  border-color: #bcbcc4;
-  cursor: inherit;
 }
-button.point,
-.button.point {
+
+.point {
   display: inline-block;
-  width: 2.5rem;
+  min-width: 2.5rem;
   line-height: 1.375rem;
   font-size: 0.75rem;
   color: #fff;
@@ -1384,12 +1387,8 @@ button.point,
   margin-right: 0.25rem;
 }
 
-span.button {
-  cursor: inherit;
-}
-
 .inputList li {
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.25rem;
 }
 .inputList li > label {
   display: block;
@@ -1626,7 +1625,7 @@ input[type=file] {
 
 .inputGroup {
   padding: 0.625rem 1rem;
-  margin-top: 0.625rem;
+  margin-top: 0.25rem;
   border-radius: 0.3125rem;
   border: 1px solid #e6e6eb;
 }
@@ -1688,7 +1687,6 @@ textarea {
 textarea + .counter {
   color: #878791;
   text-align: right;
-  margin-top: 0.625rem;
 }
 textarea.oneLine {
   padding: 0.4375rem;
@@ -1733,10 +1731,6 @@ input[type=radio] + label::before {
 input[type=checkbox]:checked + label::before,
 input[type=radio]:checked + label::before {
   background-position: -20px 0;
-}
-input[type=checkbox].hasTxt + label,
-input[type=radio].hasTxt + label {
-  margin-right: 0.625rem;
 }
 input[type=checkbox].hasTxt + label::before,
 input[type=radio].hasTxt + label::before {
@@ -2091,7 +2085,6 @@ input[type=radio]:checked + label::before {
   color: #fff;
   text-align: center;
   font-size: 0.75rem;
-  font-weight: 700;
   padding: 0.625rem 0.9375rem;
   border-radius: 0.25rem;
   background: #58585e;
@@ -2108,6 +2101,12 @@ input[type=radio]:checked + label::before {
   border-width: 0.375rem;
   pointer-events: none;
 }
+.hasTooltip .tooltip.left {
+  width: 11.875rem;
+  text-align: left;
+  top: -95px;
+  left: -87px;
+}
 .hasTooltip:hover .tooltip {
   visibility: visible;
 }
@@ -2118,11 +2117,6 @@ input[type=radio]:checked + label::before {
   background-image: url(../img/icoGroup.png);
 }
 .ico.search {
-  width: 1.125rem;
-  height: 1.125rem;
-  background-position: -80px 0px;
-}
-.ico.showPw {
   width: 1.125rem;
   height: 1.125rem;
   background-position: -80px 0px;
@@ -2150,6 +2144,32 @@ input[type=radio]:checked + label::before {
   vertical-align: inherit;
   background-position: -160px 0;
 }
+.ico.refresh {
+  width: 1.3125rem;
+  height: 1.125rem;
+  background-position: -120px 0;
+}
+.ico.setting {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: sub;
+  background-position: -280px 0;
+}
+.ico.sort {
+  width: 1.125rem;
+  height: 0.1875rem;
+  background-position: -240px 0;
+}
+.ico.change {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-position: -260px 0;
+}
+.ico.more {
+  width: 0.1875rem;
+  height: 1.0625rem;
+  background-position: -142px 0;
+}
 .ico.smClose {
   width: 0.875rem;
   height: 0.875rem;
@@ -2164,22 +2184,6 @@ input[type=radio]:checked + label::before {
   height: 1.125rem;
   background-position: -100px 0;
 }
-.ico.refresh {
-  width: 1.3125rem;
-  height: 1.125rem;
-  background-position: -120px 0;
-}
-.ico.more {
-  width: 0.1875rem;
-  height: 1.0625rem;
-  background-position: -142px 0;
-}
-.ico.setting {
-  width: 1.25rem;
-  height: 1.25rem;
-  vertical-align: sub;
-  background-position: -280px 0;
-}
 .ico.plus {
   width: 1.125rem;
   height: 1.125rem;
@@ -2190,15 +2194,11 @@ input[type=radio]:checked + label::before {
   height: 0.125rem;
   background-position: 0 -180px;
 }
-.ico.sort {
-  width: 1.125rem;
-  height: 0.1875rem;
-  background-position: -240px 0;
-}
-.ico.change {
-  width: 1.25rem;
-  height: 1.25rem;
-  background-position: -260px 0;
+.ico.qMark {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  vertical-align: -2px;
+  background-position: -80px -20px;
 }
 .ico.top {
   width: 2.5rem;
@@ -2724,6 +2724,14 @@ h6 {
   font-size: 1rem;
 }
 
+.notify {
+  padding: 0 1.875rem;
+}
+.notify p:first-child {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
 .login {
   text-align: center;
 }
@@ -2902,13 +2910,6 @@ h6 {
   width: 0;
 }
 
-.myPeoDetail .notify {
-  padding: 0 1.875rem;
-}
-.myPeoDetail .notify p:first-child {
-  font-size: 1.125rem;
-  font-weight: 700;
-}
 .myPeoDetail .tableBox {
   height: calc(100vh - 200px);
   margin-top: 1.875rem;
@@ -3108,6 +3109,159 @@ h6 {
 
 .projProgList .tableTop {
   margin-top: 1.875rem;
+}
+
+.styleguide .clip {
+  height: 2.5rem;
+  background: #f2f2f7;
+  padding-left: 0.625rem;
+  margin-top: 5rem;
+  margin-bottom: 1.875rem;
+}
+.styleguide .clip.mt20 {
+  margin-top: 1.25rem;
+}
+.styleguide .clip > span {
+  position: absolute;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+.styleguide hr {
+  border: 0;
+}
+.styleguide .circle {
+  display: inline-block;
+  width: 8.125rem;
+  height: 8.125rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.styleguide .circle + .circle {
+  margin-left: 1.25rem;
+}
+.styleguide .circle.primary {
+  background: #0460d2;
+}
+.styleguide .circle.gradient {
+  background: linear-gradient(to bottom, #009ce0, #89c895);
+}
+.styleguide .circle.highlight {
+  background: #009ce0;
+}
+.styleguide .circle.onGoing {
+  background: #ffc812;
+}
+.styleguide .circle.cancel {
+  background: #b7b7c4;
+}
+.styleguide .circle.delay {
+  background: #ff1236;
+}
+.styleguide .circle.error {
+  background: #ff1236;
+}
+.styleguide .circle.disable {
+  background: #878791;
+}
+.styleguide .font {
+  font-size: 1.875rem;
+  margin-top: 1.875rem;
+}
+.styleguide .font p {
+  line-height: 0.875rem;
+}
+.styleguide .font span {
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+.styleguide .font.thin {
+  font-weight: 100;
+}
+.styleguide .font.light {
+  font-weight: 300;
+}
+.styleguide .font.normal {
+  font-weight: 400;
+}
+.styleguide .font.medium {
+  font-weight: 500;
+}
+.styleguide .font.bold {
+  font-weight: 700;
+}
+.styleguide .font.black {
+  font-weight: 900;
+}
+.styleguide .icon span {
+  display: inline-block;
+  width: 7.5rem;
+  line-height: 2.25rem;
+}
+.styleguide .icon .gnb {
+  padding: 0.625rem;
+  background: #e6e6eb;
+}
+.styleguide .icon .common ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.styleguide .icon .common ul li {
+  flex: 1 1 16%;
+}
+.styleguide .icon .paging {
+  text-align: left;
+}
+.styleguide .icon .paging span {
+  display: block;
+}
+.styleguide .text .title li {
+  display: flex;
+}
+.styleguide .text .title span {
+  display: flex;
+  width: 3.75rem;
+  align-items: center;
+}
+.styleguide .btn li {
+  margin-bottom: 0.625rem;
+  display: flex;
+  align-items: center;
+}
+.styleguide .btn li span {
+  display: inline-block;
+  width: 7.5rem;
+  font-size: 1.125rem;
+}
+.styleguide .btn li span.size {
+  color: #b7b7c4;
+  font-size: 0.875rem;
+}
+.styleguide .btn button.onlyIco {
+  display: inline-block;
+}
+.styleguide .input li {
+  margin-bottom: 0.625rem;
+}
+.styleguide .input li span {
+  display: inline-block;
+  width: 7.5rem;
+  font-size: 1.125rem;
+}
+.styleguide .input li span.size {
+  color: #b7b7c4;
+  font-size: 0.875rem;
+}
+.styleguide .input .inputGroup span {
+  display: inherit;
+  width: auto;
+  line-height: normal;
 }
 
 /*# sourceMappingURL=style.css.map */

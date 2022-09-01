@@ -171,6 +171,7 @@ function selectBox(){
             })
         }
     }
+
     const handleSelect = (selDefault, item) => {
         selDefault.innerHTML = item.textContent;
         selDefault.parentNode.classList.remove('is-active');        
