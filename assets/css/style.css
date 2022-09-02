@@ -966,6 +966,27 @@ table td.nodata {
 table td.right {
   text-align: right;
 }
+table td.hasToast {
+  position: relative;
+}
+table td.hasToast .toast {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  min-width: 14.375rem;
+  color: #fff;
+  text-align: left;
+  padding: 0.3125rem 0.625rem;
+  background: #58585e;
+  border-radius: 0.3125rem;
+}
+table td.hasToast .toast .ico {
+  position: absolute;
+  top: 50%;
+  right: 0.625rem;
+  transform: translateY(-50%);
+}
 table tr:last-child td {
   border-bottom: 0;
 }
@@ -1653,8 +1674,17 @@ input[type=file] {
   padding: 1.125rem 6.875rem;
 }
 .inputGroup .fileName {
+  display: inline-block;
   margin-left: 0.625rem;
   vertical-align: text-bottom;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
+  cursor: pointer;
+  width: 70%;
 }
 .inputGroup + label {
   min-width: 5.625rem;
@@ -1991,6 +2021,13 @@ input[type=radio]:checked + label::before {
   font-weight: 500;
   line-height: 2.75rem;
   padding-left: 0.625rem;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
+  cursor: pointer;
 }
 .select .optionList {
   display: none !important;
@@ -2173,7 +2210,7 @@ input[type=radio]:checked + label::before {
 .ico.smClose {
   width: 0.875rem;
   height: 0.875rem;
-  vertical-align: inherit;
+  vertical-align: -1px;
   background-position: -160px 0;
 }
 .ico.smClose.w {

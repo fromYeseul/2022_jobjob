@@ -172,10 +172,17 @@ function selectBox(){
         }
     }
 
+    /* 220902 수정 -ys */
     const handleSelect = (selDefault, item) => {
-        selDefault.innerHTML = item.textContent;
-        selDefault.parentNode.classList.remove('is-active');        
+        let hasChk = item.getElementsByTagName('input');
+        if(hasChk.length >= 1){
+            selDefault.innerHTML = item.textContent;
+        }else{
+            selDefault.innerHTML = item.textContent;
+            selDefault.parentNode.classList.remove('is-active');
+        }            
     }
+    /* //220902 수정 -ys */
 }
 //selectBox();
 
@@ -316,18 +323,18 @@ function uploadFile(){
             var file = files[i];
             var reader = new FileReader();
 
-        //attach event handlers here...
-        reader.readAsDataURL(file);
-        addEventHandler(reader, 'loadend', function(e, file) {
-            var bin = this.result; 
-            //	div.list...
-            var newFile       = document.createElement('li');
-            newFile.innerHTML = '<i class="ico delete"></i>' + '<span class="fileName">' + file.name + '</span>' + '<span class="float_r">' + file.size +' bytes' + '</span>';
-            list_ul.appendChild(newFile);  
-            }.bindToEventHandler(file));
-        }
-        return false;
-    });
+            //attach event handlers here...
+            reader.readAsDataURL(file);
+            addEventHandler(reader, 'loadend', function(e, file) {
+                var bin = this.result; 
+                //	div.list...
+                var newFile       = document.createElement('li');
+                newFile.innerHTML = '<i class="ico delete"></i>' + '<span class="fileName">' + file.name + '</span>' + '<span class="float_r">' + file.size +' bytes' + '</span>';
+                list_ul.appendChild(newFile);  
+                }.bindToEventHandler(file));
+            }
+            return false;
+        });
         Function.prototype.bindToEventHandler = function bindToEventHandler() {
             var handler = this;
             var boundParameters = Array.prototype.slice.call(arguments);
@@ -353,7 +360,7 @@ function uploadFile(){
         // Old school method.
         obj['on'+evt] = handler;
         }
-    }  addEventHandler();
+    } // addEventHandler();
 }
 uploadFile();
 

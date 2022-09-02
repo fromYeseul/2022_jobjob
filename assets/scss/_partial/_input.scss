@@ -332,8 +332,11 @@ input[type=file] {
         padding: rem(18) rem(110);
     }
     .fileName{
+        display: inline-block;
         margin-left: rem(10);
         vertical-align: text-bottom;
+        @include ellipsis;
+        width: 70%;
     }
     & + label{
         min-width: rem(90);

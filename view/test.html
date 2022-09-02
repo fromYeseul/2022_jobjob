@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <div class="select lowSize is-active"><!--220829 수정 -ys-->
-        <span class="selDefault">선택</span>
-        <ul class="optionList hasChk" id="hasChk">
+    <div class="select lowSize"><!--220829 수정 -ys-->
+        <span class="selDefault">선택11</span>
+        <ul class="optionList">
             <li class="optionItem">
                 <input type="checkbox" id="optChk_1" name="aa" class="hasTxt">
                 <label for="optChk_1">apple</label>
@@ -19,53 +19,115 @@
             <li class="optionItem">
                 <input type="checkbox" id="optChk_2" name="aa" class="hasTxt">
                 <label for="optChk_2">banana</label>
+            </li>               
+            <li class="optionItem">
+                <input type="checkbox" id="optChk_3" name="aa" class="hasTxt">
+                <label for="optChk_3">banana</label>
+            </li>               
+            <li class="optionItem">
+                <input type="checkbox" id="optChk_4" name="aa" class="hasTxt">
+                <label for="optChk_4">banana</label>
+            </li>               
+            <li class="optionItem">
+                <input type="checkbox" id="optChk_5" name="aa" class="hasTxt">
+                <label for="optChk_5">banana</label>
             </li>
         </ul>
     </div>
-    <div class="select lowSize is-active">
-        <span class="selDefault">선택</span>
-        <ul class="optionList hasChk">
-            <li class="optionItem">
-                <input type="checkbox" id="optChk_01" name="aa" class="hasTxt">
-                <label for="optChk_01">apple</label>
-            </li>                    
-            <li class="optionItem">
-                <input type="checkbox" id="optChk_02" name="aa" class="hasTxt">
-                <label for="optChk_02">banana</label>
-            </li>
+    <div class="select lowSize">
+        <span class="selDefault">선택22</span>
+        <ul class="optionList">
+            <li class="optionItem">aaaaaaaa</li>                    
+            <li class="optionItem">bbbbbbbbb</li>
         </ul>
     </div>
-    <div class="select lowSize is-active">
-        <span class="selDefault">선택</span>
+    <div class="select lowSize">
+        <span class="selDefault">선택33</span>
         <ul class="optionList hasChk">
             <li class="optionItem">
-                <input type="checkbox" id="optChk_01" name="aa" class="hasTxt">
-                <label for="optChk_01">apple</label>
+                <input type="checkbox" id="optChk_001" name="aa" class="hasTxt">
+                <label for="optChk_001">apple</label>
             </li>                    
             <li class="optionItem">
-                <input type="checkbox" id="optChk_02" name="aa" class="hasTxt">
-                <label for="optChk_02">banana</label>
+                <input type="checkbox" id="optChk_002" name="aa" class="hasTxt">
+                <label for="optChk_002">banana</label>
             </li>
         </ul>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="../assets/js/script.js"></script> -->
     <script>
-        function chk(){
-            let hasChk = document.querySelectorAll(".hasChk");
-            let Chk = document.getElementsByTagName("input");
-            for(let i=0; i<hasChk.length; i++){
-                hasChk[i].addEventListener('click', function(){
-                    let ddd = hasChk[i].contains(Chk[i]);
-                    console.log(Chk[i]);
-                    if(ddd == true){
-                        alert('aa');
-                    }else{
-                        alert('bb');
+        let selDefault = document.querySelectorAll('.selDefault');   
+        function selectBox(){ 
+            selDefault.forEach(function(lb){
+                lb.addEventListener('click', e => {
+                    let optionList = lb.nextElementSibling;
+                    let optionItems = optionList.querySelectorAll('.optionItem');
+                    clickLabel(lb, optionItems);
+
+                    document.addEventListener('click', function(e){
+                        
+                    if(e.target !== lb){
+                        alert('out');
                     }
-                });
-            }            
+                    })
+
+                    
+                })
+            });
+            const clickLabel = (lb, optionItems) => {
+                if(lb.parentNode.classList.contains('is-active')) {                    
+
+                    lb.parentNode.classList.remove('is-active');
+                    optionItems.forEach((opt) => {
+                        opt.removeEventListener('click', () => {
+                            handleSelect(lb, opt)
+                        })
+                    })
+
+
+                } else {
+                    lb.parentNode.classList.add('is-active');
+                    optionItems.forEach((opt) => {
+                        opt.addEventListener('click', () => {
+                            handleSelect(lb, opt)
+                        })
+                    })
+                }
+            }
+
+            /* 220902 수정 -ys */
+            const handleSelect = (selDefault, item) => {
+                let hasChk = item.getElementsByTagName('input');
+                if(hasChk.length >= 1){
+                    selDefault.innerHTML = item.textContent;
+                }else{
+                    selDefault.innerHTML = item.textContent;
+                    selDefault.parentNode.classList.remove('is-active');
+                }            
+            }
+            /* //220902 수정 -ys */
+
+            // document.addEventListener('click',function(e){
+            //     if(gnbSlide == true){ //슬라이드 메뉴가 열려 있을때
+            //         if(e.target.id != 'loopBtn'){ //e.target이 슬라이딩 이미지 재생 버튼이 아니면
+            //             let tgEl = e.target;
+            //             let header = tgEl.closest('#header');//조상중 #header를 찾음-버튼이 header안에 있을 경우//
+                    
+            //             if(!header){ //hdader이 조상이 아니면 닫기//
+            //                 nav.classList.remove('slide');
+            //                 return gnbSlide = false;
+            //             }
+            //         }
+            //     }
+            // });
+
+
+
+
         }
-        chk();
-        </script>
+        selDefault.onclick = selectBox();
+    </script>
 </body>
 </html>
