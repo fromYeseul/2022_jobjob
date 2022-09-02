@@ -127,3 +127,24 @@
         }
     }
 }
+
+//토스트팝업
+
+.toast{
+    position: absolute;
+    color: $white;
+    text-align: left;
+    padding: rem(5) rem(10);
+    background: $tooltipGray;
+    border-radius: rem(5);
+    display: none;
+    .ico{
+        position: absolute;
+        top: 50%;
+        right: rem(10);
+        transform: translateY(-50%);
+    }
+    &.reveal{
+        display: block;
+    }
+}

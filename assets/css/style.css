@@ -860,6 +860,25 @@ footer.toast button + button {
   left: -9px;
 }
 
+.toast {
+  position: absolute;
+  color: #fff;
+  text-align: left;
+  padding: 0.3125rem 0.625rem;
+  background: #58585e;
+  border-radius: 0.3125rem;
+  display: none;
+}
+.toast .ico {
+  position: absolute;
+  top: 50%;
+  right: 0.625rem;
+  transform: translateY(-50%);
+}
+.toast.reveal {
+  display: block;
+}
+
 .floatingWrapper {
   position: fixed;
   right: 5rem;
@@ -970,22 +989,10 @@ table td.hasToast {
   position: relative;
 }
 table td.hasToast .toast {
-  position: absolute;
   top: 50%;
   left: 100%;
   transform: translateY(-50%);
   min-width: 14.375rem;
-  color: #fff;
-  text-align: left;
-  padding: 0.3125rem 0.625rem;
-  background: #58585e;
-  border-radius: 0.3125rem;
-}
-table td.hasToast .toast .ico {
-  position: absolute;
-  top: 50%;
-  right: 0.625rem;
-  transform: translateY(-50%);
 }
 table tr:last-child td {
   border-bottom: 0;
