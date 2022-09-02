@@ -60,21 +60,13 @@
     <script>
         let selDefault = document.querySelectorAll('.selDefault');   
         function selectBox(){ 
-            selDefault.forEach(function(lb){
+            selDefault.forEach(function(lb){          
+                    
                 lb.addEventListener('click', e => {
                     let optionList = lb.nextElementSibling;
                     let optionItems = optionList.querySelectorAll('.optionItem');
                     clickLabel(lb, optionItems);
-
-                    document.addEventListener('click', function(e){
-                        
-                    if(e.target !== lb){
-                        alert('out');
-                    }
-                    })
-
-                    
-                })
+                });
             });
             const clickLabel = (lb, optionItems) => {
                 if(lb.parentNode.classList.contains('is-active')) {                    

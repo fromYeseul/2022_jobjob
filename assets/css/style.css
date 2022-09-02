@@ -860,7 +860,7 @@ footer.toast button + button {
   left: -9px;
 }
 
-.toast {
+.alertToast {
   position: absolute;
   color: #fff;
   text-align: left;
@@ -869,13 +869,13 @@ footer.toast button + button {
   border-radius: 0.3125rem;
   display: none;
 }
-.toast .ico {
+.alertToast .ico {
   position: absolute;
   top: 50%;
   right: 0.625rem;
   transform: translateY(-50%);
 }
-.toast.reveal {
+.alertToast.is-active {
   display: block;
 }
 
@@ -988,7 +988,7 @@ table td.right {
 table td.hasToast {
   position: relative;
 }
-table td.hasToast .toast {
+table td.hasToast .alertToast {
   top: 50%;
   left: 100%;
   transform: translateY(-50%);
@@ -1785,6 +1785,7 @@ input[type=radio].bMark + label {
   background-image: url(../img/icoGroup.png);
   background-position: 0px -40px;
   vertical-align: sub;
+  cursor: pointer;
 }
 input[type=checkbox].bMark + label::before,
 input[type=radio].bMark + label::before {
@@ -2038,6 +2039,8 @@ input[type=radio]:checked + label::before {
 }
 .select .optionList {
   display: none !important;
+  max-height: 13.75rem;
+  overflow-y: auto;
   position: absolute;
   top: 3.3125rem;
   left: -1px;
@@ -2048,6 +2051,13 @@ input[type=radio]:checked + label::before {
   border: 1px solid #e6e6eb;
   background: #fff;
   z-index: 10;
+}
+.select .optionList::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.select .optionList::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  border: 2px solid transparent;
 }
 .select .optionList .optionItem {
   display: block;
