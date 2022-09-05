@@ -60,25 +60,32 @@
     <script>
         let selDefault = document.querySelectorAll('.selDefault');   
         function selectBox(){ 
-            selDefault.forEach(function(lb){          
-                    
+            selDefault.forEach(function(lb){             
                 lb.addEventListener('click', e => {
                     let optionList = lb.nextElementSibling;
                     let optionItems = optionList.querySelectorAll('.optionItem');
                     clickLabel(lb, optionItems);
+
+                    /* 220902 수정(외부클릭시 닫힘) -ys */
+                    document.addEventListener('click', function(){
+                        let input = optionList.querySelector('input');
+                        let label = optionList.querySelector('label');
+                    
+                        if(event.target !== lb && event.target !== label && event.target !== input){
+                            lb.parentNode.classList.remove('is-active');
+                        }
+                    });
+                    /* //220902 수정(외부클릭시 닫힘) -ys */
                 });
             });
             const clickLabel = (lb, optionItems) => {
-                if(lb.parentNode.classList.contains('is-active')) {                    
-
+                if(lb.parentNode.classList.contains('is-active')) {     
                     lb.parentNode.classList.remove('is-active');
                     optionItems.forEach((opt) => {
                         opt.removeEventListener('click', () => {
                             handleSelect(lb, opt)
                         })
                     })
-
-
                 } else {
                     lb.parentNode.classList.add('is-active');
                     optionItems.forEach((opt) => {
@@ -92,6 +99,8 @@
             /* 220902 수정 -ys */
             const handleSelect = (selDefault, item) => {
                 let hasChk = item.getElementsByTagName('input');
+                console.log(hasChk);
+                console.log(hasChk.length);
                 if(hasChk.length >= 1){
                     selDefault.innerHTML = item.textContent;
                 }else{
@@ -100,24 +109,6 @@
                 }            
             }
             /* //220902 수정 -ys */
-
-            // document.addEventListener('click',function(e){
-            //     if(gnbSlide == true){ //슬라이드 메뉴가 열려 있을때
-            //         if(e.target.id != 'loopBtn'){ //e.target이 슬라이딩 이미지 재생 버튼이 아니면
-            //             let tgEl = e.target;
-            //             let header = tgEl.closest('#header');//조상중 #header를 찾음-버튼이 header안에 있을 경우//
-                    
-            //             if(!header){ //hdader이 조상이 아니면 닫기//
-            //                 nav.classList.remove('slide');
-            //                 return gnbSlide = false;
-            //             }
-            //         }
-            //     }
-            // });
-
-
-
-
         }
         selDefault.onclick = selectBox();
     </script>

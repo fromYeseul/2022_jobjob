@@ -277,6 +277,43 @@ function makeScroll(){
 }
 //makeScroll();
 
+
+//alert 토스트팝업
+//호출 : alertClose.onclick = toastClose();
+//let hasToast = document.querySelectorAll('.hasToast');
+let alertToast = document.querySelectorAll('.alertToast');
+let alertClose = document.querySelectorAll('.smClose');
+function toastClose(){
+    for(let i=0; i<alertClose.length; i++){
+        alertClose[i].addEventListener('click', function(){
+            alertClose[i].parentNode.classList.remove('is-active');
+        });
+    }
+}
+//toastClose();
+
+//허책임님 alert 팝업
+//let removeToast;
+// function toast(id) {    
+//     var toastId = "toast_" + id;
+//     var message = "";
+    
+//     if($("#genChk_" + id).prop("checked")) message= "관심회원으로 등록되었습니다." 
+//     else message= "관심회원에서 해제되었습니다."
+    
+//     const toast = document.getElementById(toastId);
+    
+//     toast.classList.contains("is-active") ?
+//         (clearTimeout(removeToast), removeToast = setTimeout(function () {
+//             document.getElementById(toastId).classList.remove("is-active")
+//         }, 3000)) :
+//         removeToast = setTimeout(function () {
+//             document.getElementById(toastId).classList.remove("is-active")
+//         }, 3000)
+//     toast.classList.add("is-active"),
+//         toast.innerHTML = "<i class='ico smClose w'></i>" + message;
+// }
+
 /*-----------//호출-----------*/
 
 
@@ -362,7 +399,7 @@ function uploadFile(){
         }
     } // addEventHandler();
 }
-uploadFile();
+//uploadFile();
 
 
 /*-----------별도 호출 없음---------*/
