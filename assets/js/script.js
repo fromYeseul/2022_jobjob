@@ -151,7 +151,20 @@ function selectBox(){
         lb.addEventListener('click', e => {
             let optionList = lb.nextElementSibling;
             let optionItems = optionList.querySelectorAll('.optionItem');
+
+            let child_optionItems = optionList.childNodes('.optionItem');
             clickLabel(lb, optionItems);
+                      
+            console.log(child_optionItems.length);
+            console.log(child_optionItems);
+
+            /* 220906 수정(외부클릭시 닫힘....) -ys */
+            document.addEventListener('click', function(event){
+                if(!(event.target.parentElement.parentElement == optionList || event.target == lb)){
+                    lb.parentNode.classList.remove('is-active');
+                }
+            });
+            /* //220906 수정(외부클릭시 닫힘....) -ys */   
         })
     });
     const clickLabel = (lb, optionItems) => {
@@ -280,7 +293,6 @@ function makeScroll(){
 
 //alert 토스트팝업
 //호출 : alertClose.onclick = toastClose();
-//let hasToast = document.querySelectorAll('.hasToast');
 let alertToast = document.querySelectorAll('.alertToast');
 let alertClose = document.querySelectorAll('.smClose');
 function toastClose(){

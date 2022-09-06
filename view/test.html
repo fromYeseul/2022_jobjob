@@ -65,19 +65,17 @@
                     let optionList = lb.nextElementSibling;
                     let optionItems = optionList.querySelectorAll('.optionItem');
                     clickLabel(lb, optionItems);
-
-                    /* 220902 수정(외부클릭시 닫힘) -ys */
-                    document.addEventListener('click', function(){
-                        let input = optionList.querySelector('input');
-                        let label = optionList.querySelector('label');
-                    
-                        if(event.target !== lb && event.target !== label && event.target !== input){
+                      
+                    /* 220902 수정(외부클릭시 닫힘....) -ys */
+                    document.addEventListener('click', function(event){
+                        if (event.target.nodeName == "HTML"){
                             lb.parentNode.classList.remove('is-active');
                         }
                     });
-                    /* //220902 수정(외부클릭시 닫힘) -ys */
+                    /* //220902 수정(외부클릭시 닫힘....) -ys */                    
                 });
             });
+
             const clickLabel = (lb, optionItems) => {
                 if(lb.parentNode.classList.contains('is-active')) {     
                     lb.parentNode.classList.remove('is-active');
@@ -96,19 +94,17 @@
                 }
             }
 
-            /* 220902 수정 -ys */
+            /* 220902 수정(체크박스가 있을때 닫히지않기) -ys */
             const handleSelect = (selDefault, item) => {
                 let hasChk = item.getElementsByTagName('input');
-                console.log(hasChk);
-                console.log(hasChk.length);
                 if(hasChk.length >= 1){
                     selDefault.innerHTML = item.textContent;
                 }else{
                     selDefault.innerHTML = item.textContent;
-                    selDefault.parentNode.classList.remove('is-active');
+                   selDefault.parentNode.classList.remove('is-active');
                 }            
             }
-            /* //220902 수정 -ys */
+            /* //220902 수정(체크박스가 있을때 닫히지않기) -ys */
         }
         selDefault.onclick = selectBox();
     </script>

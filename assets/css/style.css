@@ -89,10 +89,6 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: 900;
   src: url(../font/NotoSansKR-Black.otf) format("truetype"), url(../font/NotoSansKR-Black.woff) format("woff");
 }
-.hasFooter {
-  overflow-y: hidden;
-}
-
 .sOrder {
   color: #009ce0;
 }
@@ -268,6 +264,10 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
 }
 
+.hasFooter .contWrapper {
+  overflow-y: clip;
+}
+
 .contWrapper {
   min-width: 120rem;
   width: 100%;
@@ -276,7 +276,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .contWrapper .contLayout {
   display: flex;
-  min-height: calc(100vh - 60px);
+  height: calc(100vh - 60px);
   background: #f2f2f7;
   width: 100%;
 }
@@ -316,7 +316,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0 1.875rem;
 }
 .contWrapper .contLayout .projReqList, .contWrapper .contLayout .genMember, .contWrapper .contLayout .projProgList {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 60px);
   padding: 1.875rem 2.5rem;
   overflow-y: auto;
 }
@@ -444,7 +444,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media (max-width: 1919px) {
   .contLayout {
-    min-height: calc(100vh - 80px) !important;
+    min-height: calc(100vh - 70px) !important;
+  }
+}
+@media (min-width: 2200px) {
+  .contWrapper .contLayout.is-active .myProjDetail {
+    display: block;
   }
 }
 .gnbWrapper {
@@ -1323,10 +1328,11 @@ button.warning,
 }
 button.round,
 .button.round {
-  min-width: 4rem;
+  min-width: 2.75rem;
   padding: 0 0.4375rem;
-  line-height: 1.875rem;
+  line-height: 1.375rem;
   color: #29292c;
+  font-size: 0.75rem;
   font-weight: 400;
   background: #fff;
   border: 1px solid #b7b7c4;
@@ -1398,6 +1404,7 @@ span.button {
   line-height: 1.375rem;
   color: #878791;
   font-size: 0.75rem;
+  font-weight: 400;
   text-align: center;
   background: #f2f2f7;
   border-radius: 1.25rem;
@@ -1691,6 +1698,7 @@ input[type=file] {
   white-space: nowrap;
   text-align: left;
   cursor: pointer;
+  cursor: initial;
   width: 70%;
 }
 .inputGroup + label {
@@ -2177,9 +2185,10 @@ input[type=radio]:checked + label::before {
   background-position: -80px 0px;
 }
 .ico.download {
-  width: 1.125rem;
-  height: 1.375rem;
+  width: 1.0625rem;
+  height: 1.0625rem;
   background-position: -40px 0;
+  cursor: pointer;
 }
 .ico.filter {
   width: 1.0625rem;
@@ -2187,8 +2196,8 @@ input[type=radio]:checked + label::before {
   background-position: -60px 0;
 }
 .ico.fileUpload {
-  width: 1.375rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.375rem;
   background-position: -200px 0;
 }
 .ico.delete {
@@ -2198,15 +2207,16 @@ input[type=radio]:checked + label::before {
   height: 14px;
   vertical-align: inherit;
   background-position: -160px 0;
+  cursor: pointer;
 }
 .ico.refresh {
-  width: 1.3125rem;
-  height: 1.125rem;
+  width: 1.25rem;
+  height: 1.0625rem;
   background-position: -120px 0;
 }
 .ico.setting {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.0625rem;
+  height: 1.0625rem;
   vertical-align: sub;
   background-position: -280px 0;
 }
@@ -2216,9 +2226,10 @@ input[type=radio]:checked + label::before {
   background-position: -240px 0;
 }
 .ico.change {
-  width: 1.25rem;
-  height: 1.25rem;
-  background-position: -260px 0;
+  width: 1.0625rem;
+  height: 1.0625rem;
+  background-position: -220px 0;
+  cursor: pointer;
 }
 .ico.more {
   width: 0.1875rem;
@@ -2256,8 +2267,8 @@ input[type=radio]:checked + label::before {
   background-position: -80px -20px;
 }
 .ico.top {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.125rem;
+  height: 2.125rem;
   background-position: -40px -20px;
 }
 .ico.left {
@@ -2942,7 +2953,7 @@ h6 {
 .myProjJob .tabContWrap .tabCont .goTop {
   position: absolute;
   right: 2.5rem;
-  bottom: 6.75rem;
+  bottom: 5rem;
 }
 .myProjJob.is-active {
   overflow-y: scroll;
@@ -2997,6 +3008,7 @@ h6 {
 .projRegister .regiPartWrapper {
   overflow-y: auto;
   height: calc(100vh - 200px);
+  overflow-y: auto;
 }
 .projRegister .regiPartWrapper::-webkit-scrollbar {
   width: 0;
