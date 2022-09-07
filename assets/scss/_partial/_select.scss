@@ -34,16 +34,6 @@
   border-radius: rem(4);
   border: 1px solid $inputGray;
   cursor: pointer;
-  &::before{
-    content: '';
-    width: rem(12);
-    height: rem(6);
-    background: url(../img/icoSelect.png) no-repeat;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-40%); 
-    right: rem(10); 
-  }
   .selDefault{
     display: block;
     //text-align: left;
@@ -54,6 +44,16 @@
     //220829
     padding-left: rem(10);
     @include ellipsis;
+    &::before{
+      content: '';
+      width: rem(12);
+      height: rem(6);
+      background: url(../img/icoSelect.png) no-repeat;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-40%); 
+      right: rem(10); 
+    }
   }
   .optionList {
     display: none !important;
@@ -142,13 +142,24 @@
   }
   &.is-active{
     border: 1px solid $mainColor;
-    &::before{
-      top: 45%;
-      transform: rotate(180deg);
-      background: url(../img/icoSelect.png) no-repeat;
+    .selDefault{
+      &::before{
+        top: 45%;
+        transform: rotate(180deg);
+        background: url(../img/icoSelect.png) no-repeat;
+      }
     }
     .optionList {
       display: block !important;
+    }
+  }
+  &.disable{
+    color: $inputGray;
+    pointer-events: none;
+    .selDefault{
+      &::before{
+        background: url(../img/icoSelect_dis.png) no-repeat;
+      }
     }
   }
 }

@@ -148,25 +148,32 @@ tabMenu();
 let selDefault = document.querySelectorAll('.selDefault');   
 function selectBox(){ 
     selDefault.forEach(function(lb){
-        lb.addEventListener('click', e => {
-            let optionList = lb.nextElementSibling;
-            let optionItems = optionList.querySelectorAll('.optionItem');
-
-            let child_optionItems = optionList.childNodes('.optionItem');
-            clickLabel(lb, optionItems);
-                      
-            console.log(child_optionItems.length);
-            console.log(child_optionItems);
-
-            /* 220906 수정(외부클릭시 닫힘....) -ys */
+        //220907 변수 위치 수정
+        let optionList = lb.nextElementSibling;
+        let optionItems = optionList.querySelectorAll('.optionItem');
+        lb.addEventListener('click', e => {        
+            // let optionList = lb.nextElementSibling;
+            // let optionItems = optionList.querySelectorAll('.optionItem');
+            clickLabel(lb, optionItems);      
+            
+            /* 220906 수정(외부클릭시 닫힘) -ys */
             document.addEventListener('click', function(event){
                 if(!(event.target.parentElement.parentElement == optionList || event.target == lb)){
                     lb.parentNode.classList.remove('is-active');
                 }
             });
-            /* //220906 수정(외부클릭시 닫힘....) -ys */   
-        })
+            /* //220906 수정(외부클릭시 닫힘) -ys */ 
+            
+        });
+        
+        /* 220907 수정(옵션없을때) -ys */
+        if(optionItems.length == 0){
+            lb.parentNode.classList.add("disable");
+        }
+        /* //220907 수정(옵션없을때) -ys */
     });
+
+
     const clickLabel = (lb, optionItems) => {
         if(lb.parentNode.classList.contains('is-active')) {
             lb.parentNode.classList.remove('is-active');
@@ -185,7 +192,7 @@ function selectBox(){
         }
     }
 
-    /* 220902 수정 -ys */
+    /* 220902 수정(다중선택) -ys */
     const handleSelect = (selDefault, item) => {
         let hasChk = item.getElementsByTagName('input');
         if(hasChk.length >= 1){
@@ -195,7 +202,7 @@ function selectBox(){
             selDefault.parentNode.classList.remove('is-active');
         }            
     }
-    /* //220902 수정 -ys */
+    /* //220902 수정(다중선택) -ys */
 }
 //selectBox();
 
@@ -269,6 +276,7 @@ function makeScroll(){
     let yScroll = document.querySelector('.myProjJob .tabContWrap .yScroll');
     
     myProjJob.addEventListener('mousemove', function(){
+        setTimeout
         yScroll.classList.add('is-active');
     });
     myProjJob.addEventListener('mouseout', function(){
@@ -278,8 +286,6 @@ function makeScroll(){
     myProjJob.addEventListener('wheel', function(){
         let myProjJob_top = myProjJob.scrollTop;
         let deltaY = event.deltaY;
-        
-        console.log(deltaY);
 
         if(deltaY < 0 && myProjJob_top == 0){
             yScroll.classList.remove('is-active');
@@ -366,23 +372,24 @@ function uploadFile(){
             e.preventDefault(); 
         } // stops the browser from redirecting off to the image.
 
-        var dt = e.dataTransfer;
-        var files = dt.files;
-        for (var i=0; i<files.length; i++) {
-            var file = files[i];
-            var reader = new FileReader();
+        fileCheck(e);
+        // var dt = e.dataTransfer;
+        // var files = dt.files;
+        // for (var i=0; i<files.length; i++) {
+        //     var file = files[i];
+        //     var reader = new FileReader();
 
-            //attach event handlers here...
-            reader.readAsDataURL(file);
-            addEventHandler(reader, 'loadend', function(e, file) {
-                var bin = this.result; 
-                //	div.list...
-                var newFile       = document.createElement('li');
-                newFile.innerHTML = '<i class="ico delete"></i>' + '<span class="fileName">' + file.name + '</span>' + '<span class="float_r">' + file.size +' bytes' + '</span>';
-                list_ul.appendChild(newFile);  
-                }.bindToEventHandler(file));
-            }
-            return false;
+        //     //attach event handlers here...
+        //     reader.readAsDataURL(file);
+        //     addEventHandler(reader, 'loadend', function(e, file) {
+        //         var bin = this.result; 
+        //         //	div.list...
+        //         var newFile       = document.createElement('li');
+        //         newFile.innerHTML = '<i class="ico delete"></i>' + '<span class="fileName">' + file.name + '</span>' + '<span class="float_r">' + file.size +' bytes' + '</span>';
+        //         list_ul.appendChild(newFile);  
+        //         }.bindToEventHandler(file));
+        //     }
+        //     return false;
         });
         Function.prototype.bindToEventHandler = function bindToEventHandler() {
             var handler = this;

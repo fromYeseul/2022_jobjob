@@ -2022,16 +2022,6 @@ input[type=radio]:checked + label::before {
   border: 1px solid #e6e6eb;
   cursor: pointer;
 }
-.select::before {
-  content: "";
-  width: 0.75rem;
-  height: 0.375rem;
-  background: url(../img/icoSelect.png) no-repeat;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-40%);
-  right: 0.625rem;
-}
 .select .selDefault {
   display: block;
   font-weight: 500;
@@ -2044,6 +2034,16 @@ input[type=radio]:checked + label::before {
   white-space: nowrap;
   text-align: left;
   cursor: pointer;
+}
+.select .selDefault::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.375rem;
+  background: url(../img/icoSelect.png) no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-40%);
+  right: 0.625rem;
 }
 .select .optionList {
   display: none !important;
@@ -2126,13 +2126,20 @@ input[type=radio]:checked + label::before {
 .select.is-active {
   border: 1px solid #0460d2;
 }
-.select.is-active::before {
+.select.is-active .selDefault::before {
   top: 45%;
   transform: rotate(180deg);
   background: url(../img/icoSelect.png) no-repeat;
 }
 .select.is-active .optionList {
   display: block !important;
+}
+.select.disable {
+  color: #e6e6eb;
+  pointer-events: none;
+}
+.select.disable .selDefault::before {
+  background: url(../img/icoSelect_dis.png) no-repeat;
 }
 
 .hasTooltip {
@@ -2219,6 +2226,7 @@ input[type=radio]:checked + label::before {
   height: 1.0625rem;
   vertical-align: sub;
   background-position: -280px 0;
+  cursor: pointer;
 }
 .ico.sort {
   width: 1.125rem;
@@ -3056,6 +3064,7 @@ h6 {
 .projRegister .regiPart .boxWrap .inputGroup {
   width: 27.5rem;
   height: 3.125rem;
+  margin-top: 0.625rem;
 }
 .projRegister .regiPart .boxWrap .inputGroup.wide {
   width: 37.5rem;
