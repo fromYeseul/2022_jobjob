@@ -36,7 +36,7 @@ input, select, textarea, fieldset, button {
   border: 0;
   font-family: "NotoSansKR", sans-serif;
   font-weight: normal;
-  font-size: rem(14);
+  font-size: 14px;
   letter-spacing: -0.5px;
 }
 
@@ -214,6 +214,10 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 1.25rem !important;
 }
 
+.mb20 {
+  margin-bottom: 1.25rem !important;
+}
+
 .h100 {
   height: 100%;
 }
@@ -283,25 +287,28 @@ h1, h2, h3, h4, h5, h6, p {
 .contWrapper .contLayout .myProjList {
   width: 18.75rem;
   background: #f2f2f7;
+  border-right: 1px solid #e6e6eb;
   position: relative;
 }
 .contWrapper .contLayout .myProjDetail {
   width: 39.375rem;
-  padding: 1.875rem;
+  padding: 1.25rem;
   padding-right: 0;
+}
+.contWrapper .contLayout .myProjDetail.nodata {
+  width: calc(100% - 300px);
 }
 .contWrapper .contLayout .myProjJob {
   width: 40rem;
   height: calc(100vh - 60px);
   overflow-y: auto;
-  padding: 1.875rem 1.875rem;
-  padding-left: 1.875rem;
+  padding: 1.25rem;
 }
 .contWrapper .contLayout .myProjJob .wrap.is-active .tabContWrap .yScroll {
   height: calc(100vh - 315px);
 }
 .contWrapper .contLayout .myPeoList {
-  width: 35rem;
+  width: 33.75rem;
   background: #fff;
   border-right: 1px solid #e6e6eb;
 }
@@ -326,17 +333,11 @@ h1, h2, h3, h4, h5, h6, p {
   align-items: center;
   justify-content: center;
 }
-.contWrapper .contLayout.is-active {
-  width: calc(100% - 560px);
-}
 .contWrapper .contLayout.is-active.noResize {
   width: 100%;
 }
 .contWrapper .contLayout.is-active .myProjDetail {
   display: none;
-}
-.contWrapper .contLayout.is-active .myPeoDetail {
-  width: calc(100% - 640px);
 }
 .contWrapper.noSide {
   padding-left: 0;
@@ -453,7 +454,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 .gnbWrapper {
-  width: 3.75rem;
+  width: 3.25rem;
   background: linear-gradient(to bottom, #009ce0, #89c895);
   transition: all 0.3s ease;
   position: fixed;
@@ -464,9 +465,9 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 1.25rem 0;
 }
 .gnbWrapper .navCtrlBtn {
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0.5625rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.3125rem 0.5rem;
   margin-left: 0.5625rem;
   border-radius: 0.375rem;
   background: #fff;
@@ -477,6 +478,7 @@ h1, h2, h3, h4, h5, h6, p {
   content: "";
   width: 0;
   height: 2.5rem;
+  height: 2.25rem;
   background: #fff;
   position: absolute;
   left: -10px;
@@ -486,7 +488,7 @@ h1, h2, h3, h4, h5, h6, p {
 .gnbWrapper .navWrapper {
   height: calc(100vh - 105px);
   margin-top: 2.1875rem;
-  margin-left: 0.3125rem;
+  margin-left: 0.1875rem;
   overflow-y: auto;
 }
 .gnbWrapper .navWrapper li {
@@ -588,9 +590,10 @@ header.center .center {
   height: calc(100vh - 60px);
   border: 1px solid #e6e6eb;
   border-top: 0;
+  box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
 }
 .rPanelLayer .rPanelCont .yScroll {
-  height: calc(100vh - 272px);
+  height: calc(100vh - 322px);
   overflow-y: auto;
 }
 .rPanelLayer .rPanelCont .yScroll::-webkit-scrollbar {
@@ -602,8 +605,8 @@ header.center .center {
 }
 .rPanelLayer .filterWrapper {
   width: 12.5rem;
+  padding: 2.5rem 1.875rem;
   height: 100%;
-  padding: 3.125rem 1.875rem;
   background: #fff;
   border: 1px solid #e6e6eb;
   box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
@@ -638,7 +641,7 @@ header.center .center {
 }
 
 .filterList {
-  margin-top: 2.375rem;
+  margin-top: 1.875rem;
 }
 .filterList .tit {
   font-weight: 700;
@@ -938,10 +941,6 @@ footer.toast button + button {
   width: 25rem;
 }
 
-.contLayout.is-active .condition li {
-  margin-bottom: 0.625rem;
-}
-
 .tableTop {
   display: flex;
   align-items: center;
@@ -1045,13 +1044,17 @@ table .memo::before {
   align-items: center;
   justify-content: space-between;
 }
+.listTop span {
+  font-weight: 500;
+  margin-right: 1rem;
+}
 .listTop label {
   margin-right: 1rem;
 }
 
 .listBottom {
   width: 100%;
-  padding: 1.875rem 2.5rem;
+  padding-top: 1.5625rem;
   display: flex;
   font-size: 0.875rem;
 }
@@ -1090,6 +1093,12 @@ table .memo::before {
 .paging li.is-active {
   color: #29292c;
   font-weight: 700;
+}
+
+.goTop {
+  position: absolute;
+  right: 1.875rem;
+  bottom: 3.4375rem;
 }
 
 .tabWrapper.listType {
@@ -1330,7 +1339,7 @@ button.round,
 .button.round {
   min-width: 2.75rem;
   padding: 0 0.4375rem;
-  line-height: 1.375rem;
+  line-height: 1.5rem;
   color: #29292c;
   font-size: 0.75rem;
   font-weight: 400;
@@ -1629,23 +1638,6 @@ input[type=password] {
   display: inline-block;
 }
 
-/* 칩타입 */
-.inputObj {
-  display: inline-block;
-  padding: 0.125rem 0.625rem;
-  color: #fff;
-  background: #878791;
-  border-radius: 0.3125rem;
-}
-.inputObj.is-active {
-  background: transparent;
-}
-.inputObj input[type=text] {
-  height: auto;
-  padding: 0.25rem;
-  border: 0;
-}
-
 /* 파일첨부 */
 input[type=file] {
   position: absolute;
@@ -1659,7 +1651,7 @@ input[type=file] {
 }
 
 .inputGroup {
-  padding: 0.625rem 1rem;
+  padding: 0.375rem 1rem;
   margin-top: 0.25rem;
   border-radius: 0.3125rem;
   border: 1px solid #e6e6eb;
@@ -1668,6 +1660,7 @@ input[type=file] {
   color: #878791;
   font-weight: 400;
   line-height: 1.8125rem;
+  font-size: 0.875rem;
 }
 .inputGroup.upload {
   display: inline-block;
@@ -1678,6 +1671,7 @@ input[type=file] {
 .inputGroup.upload .drop {
   color: #878791;
   display: flex;
+  font-size: 0.875rem;
 }
 .inputGroup.upload .list li {
   margin-bottom: 0;
@@ -1712,6 +1706,27 @@ input[type=file] {
   text-align: center;
   border-radius: 0.375rem;
   background-color: #0460d2;
+}
+.inputGroup span {
+  font-size: 0.875rem;
+}
+
+/* 칩타입 */
+.inputObj {
+  display: inline-block;
+  padding: 0.125rem 0.625rem;
+  color: #fff;
+  line-height: 1.375rem;
+  background: #878791;
+  border-radius: 0.3125rem;
+}
+.inputObj.is-active {
+  background: transparent;
+}
+.inputObj input[type=text] {
+  height: auto;
+  padding: 0 0.25rem;
+  border: 0;
 }
 
 a.download {
@@ -1956,6 +1971,7 @@ input[type=radio]:checked + label::before {
   width: 20%;
   min-width: 6.5rem;
   height: 5.625rem;
+  margin-left: -1px;
   font-weight: 400;
   padding: 1.25rem 0;
   border: 1px solid #e6e6eb;
@@ -1968,6 +1984,9 @@ input[type=radio]:checked + label::before {
 }
 .boxType input[type=radio] + label::before {
   display: none;
+}
+.boxType input[type=radio]:first-child + label {
+  margin-left: 0;
 }
 .boxType input[type=radio]:checked + label {
   color: #fff;
@@ -2084,19 +2103,22 @@ input[type=radio]:checked + label::before {
 }
 .select .optionList .optionItem p {
   font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+.select .optionList.hasChk .optionItem {
+  padding: 0 !important;
+}
+.select .optionList.hasChk .optionItem label {
+  padding: 0.5rem 0.625rem;
 }
 .select.lowSize {
   width: 6.25rem;
-  line-height: 2.25rem;
 }
 .select.lowSize .selDefault {
   line-height: 2.125rem;
 }
 .select.lowSize .optionList {
   top: 2.6875rem;
-}
-.select.lowSize .optionList .optionItem {
-  padding: 0 0.625rem;
 }
 .select.smSize {
   width: 5.375rem;
@@ -2107,6 +2129,9 @@ input[type=radio]:checked + label::before {
 }
 .select.smSize .optionList {
   top: 2.0625rem;
+}
+.select.smSize .optionList .optionItem {
+  padding: 0.125rem 0.625rem;
 }
 .select.laSize {
   width: 8.125rem;
@@ -2249,6 +2274,7 @@ input[type=radio]:checked + label::before {
   height: 0.75rem;
   vertical-align: -1px;
   background-position: -160px 0;
+  cursor: pointer;
 }
 .ico.smClose.w {
   background-position: -180px 0;
@@ -2393,6 +2419,10 @@ input[type=radio]:checked + label::before {
   padding: 2.5rem 0;
   background: #fff;
 }
+.boxListWrap .nodata {
+  height: 100%;
+  background: #fff;
+}
 
 .boxTop {
   text-align: right;
@@ -2473,12 +2503,18 @@ input[type=radio]:checked + label::before {
   margin-top: 1rem;
   position: relative;
 }
-.boxList button.white {
+.boxList button.white,
+.boxList .button.white {
   border: 1px solid #b7b7c4;
+}
+.boxList button.round,
+.boxList .button.round {
+  min-width: 3.4375rem;
+  line-height: 1.625rem;
 }
 .boxList.listType {
   margin-bottom: 1px;
-  padding: 1rem;
+  padding: 1rem 1.25rem;
   border-radius: 0;
 }
 .boxList.listType .cont .prefix {
@@ -2588,14 +2624,20 @@ input[type=radio]:checked + label::before {
 .boxList.headType {
   margin-top: 1.25rem;
 }
+.boxList.headType:first-child {
+  margin-top: 0.625rem;
+}
 .boxList.headType .head {
   color: #878791;
   background: #e6e6eb;
   border-radius: 0.3125rem 0.3125rem 0 0;
-  padding: 0.3125rem 0.875rem;
+  padding: 0.375rem 0.5rem 0.375rem 0.875rem;
 }
 .boxList.headType .head .prefix {
   font-weight: 400;
+}
+.boxList.headType .head .suffix {
+  line-height: 1;
 }
 .boxList.headType .cont {
   margin-top: 0;
@@ -2609,7 +2651,7 @@ input[type=radio]:checked + label::before {
   padding: 0.875rem;
 }
 .boxList.headType .cont .prefix {
-  width: 63%;
+  width: 60%;
   color: #878791;
 }
 .boxList.headType .cont .prefix ul {
@@ -2706,6 +2748,7 @@ input[type=radio]:checked + label::before {
 }
 .boxList.headType.is-active .cont {
   border: 1px solid #0460d2;
+  border-top: 0;
 }
 
 h1 {
@@ -2861,6 +2904,9 @@ h6 {
 .myProjList .boxList {
   height: 7.1875rem;
 }
+.myProjList .nodata {
+  font-size: 0.875rem;
+}
 
 .myProjDetail .boxWrap {
   padding: 1.875rem;
@@ -2869,7 +2915,7 @@ h6 {
   padding: 1.25rem 1.875rem 1.875rem;
 }
 .myProjDetail .boxWrap + .boxWrap {
-  margin-top: 1.875rem;
+  margin-top: 1.25rem;
 }
 .myProjDetail .boxWrap .boxType {
   max-height: 11.25rem;
@@ -2878,10 +2924,13 @@ h6 {
   margin: 1.875rem 0 1.25rem;
 }
 .myProjDetail .boxWrap .yScroll {
-  height: calc(100vh - 550px);
+  height: calc(100vh - 520px);
 }
 .myProjDetail .boxWrap .yScroll .tit {
   margin-top: 1.25rem;
+}
+.myProjDetail .nodata {
+  height: 100%;
 }
 
 .myProjJob .boxWrap {
@@ -2941,26 +2990,22 @@ h6 {
   width: calc(100% - 98px);
 }
 .myProjJob .tabContWrap .yScroll {
-  height: calc(100vh - 502px);
-  padding: 1.25rem 1.875rem;
+  height: calc(100vh - 555px);
+  margin-top: 1.25rem;
   transition: height 0.3s;
   overflow-y: auto;
 }
 .myProjJob .tabContWrap .yScroll::-webkit-scrollbar {
   width: 0;
 }
-.myProjJob .tabContWrap .yScroll .listTop {
-  margin-top: 1.875rem;
-}
 .myProjJob .tabContWrap .yScroll.is-active {
-  height: calc(100vh - 285px);
+  height: calc(100vh - 335px);
 }
 .myProjJob .tabContWrap .tabCont {
   position: relative;
+  padding: 1.25rem 1.875rem;
 }
 .myProjJob .tabContWrap .tabCont .goTop {
-  position: absolute;
-  right: 2.5rem;
   bottom: 5rem;
 }
 .myProjJob.is-active {
@@ -2974,9 +3019,11 @@ h6 {
   height: calc(100vh - 328px);
 }
 
-.myPeoList .yScroll {
-  height: calc(100vh - 223px);
+.myPeoList .tabCont {
   padding: 1.25rem 1.875rem;
+}
+.myPeoList .yScroll {
+  height: calc(100vh - 233px);
   font-size: 0.875rem;
   overflow-y: auto;
 }
@@ -3047,16 +3094,15 @@ h6 {
 .projRegister .regiPart .boxWrap .inputList.wide {
   width: 83.75rem;
 }
-.projRegister .regiPart .boxWrap h3 {
-  margin-top: 2.5rem;
-}
-.projRegister .regiPart .boxWrap h3.need {
-  margin-bottom: 2.5rem;
-}
 .projRegister .regiPart .boxWrap h3 + ul,
 .projRegister .regiPart .boxWrap h3 + textarea,
 .projRegister .regiPart .boxWrap h3 + table {
   margin-top: 0.375rem;
+}
+.projRegister .regiPart .boxWrap h3 + ul + h3,
+.projRegister .regiPart .boxWrap h3 + textarea + h3,
+.projRegister .regiPart .boxWrap h3 + table + h3 {
+  margin-top: 1.875rem;
 }
 .projRegister .regiPart .boxWrap .btnType {
   display: inline-block;
@@ -3065,10 +3111,12 @@ h6 {
   width: 27.5rem;
   height: 3.125rem;
   margin-top: 0.625rem;
+  padding: 0.625rem 1rem;
 }
 .projRegister .regiPart .boxWrap .inputGroup.wide {
   width: 37.5rem;
   height: auto;
+  padding: 1.125rem 6.875rem;
   font-size: 0.875rem;
 }
 .projRegister .regiPart .boxWrap .inputGroup.wide label {
@@ -3334,10 +3382,14 @@ h6 {
   color: #b7b7c4;
   font-size: 0.875rem;
 }
+.styleguide .input .inputGroup li {
+  margin-bottom: 0;
+}
 .styleguide .input .inputGroup span {
   display: inherit;
   width: auto;
   line-height: normal;
+  font-size: 0.875rem;
 }
 
 /*# sourceMappingURL=style.css.map */

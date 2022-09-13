@@ -33,25 +33,30 @@
         //220829    
         border: 1px solid $layoutColor;
         border-top:0;
+        box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
     }   
     .rPanelCont{  
         .yScroll{
             //height: calc(100vh - 317px);
-            height: calc(100vh - 272px);
+            //height: calc(100vh - 272px);
+            height: calc(100vh - 322px);
             @include scroll_0;
         }
         .inputIco{
             width: calc(100% - 98px);
+            //220829
+            //margin-bottom: rem(30);
             margin-bottom: rem(30);
         }
     }
     .filterWrapper{
         //220829    
         // width: rem(230);
+        //padding: rem(50) rem(30);
         width: rem(200);
+        padding: rem(40) rem(30);
         //220829    
         height: 100%;
-        padding: rem(50) rem(30);
         background: $white;
         border: 1px solid $layoutColor;
         box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
@@ -78,7 +83,9 @@
     }
 }
 .filterList{
-    margin-top: rem(38);
+    //220829
+    //margin-top: rem(38);
+    margin-top: rem(30);
     .tit{
         font-weight: 700;
     }

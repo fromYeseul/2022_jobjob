@@ -70,14 +70,13 @@
         </section>
         
         <!--우측패널-->
-        <div class="rPanelLayer">
+        <div class="rPanelLayer is-active">
             <div class="rPanelBox">
                 <div class="rPanelHeader">
                     <button class="ico layerClose rClose"></button>
                 </div>
                 <div class="rPanelCont">
-                    <h4>회원검색</h4>
-                    <div class="yScroll">
+                        <h4>회원검색</h4>
                         <div class="hasBtn">  
                             <a href="#" class="button white midSize filter">
                                 <i class="ico filter"></i>
@@ -89,16 +88,18 @@
                             </div>
                         </div>
                         
+                    <div class="yScroll"><!--220907 위치수정 -ys -->
                         <div class="listTop">                                        
-                            <input type="checkbox" id="chkAll" class="hasTxt">
-                            <label for="chkAll"> 0 / 4</label>
+                            <!-- <input type="checkbox" id="chkAll" class="hasTxt">
+                            <label for="chkAll"> 0 / 4</label> -->
+                            <span>총 10 명</span>
                             
                             <input type="checkbox" id="chkLevel" class="hasTxt">
                             <label for="chkLevel" class="mr0"> 등급으로 보기</label>
 
                             <i class="ico setting"></i>
                         </div>
-
+                    
                         <div class="boxListWrap">            
                             <ul>
                                 <!--boxList-->
@@ -119,6 +120,12 @@
                                                     <span>개발</span>
                                                     <span>에코</span>
                                                 </li>
+                                                <!--220907 누락추가 -ys -->
+                                                <li>
+                                                    <span>010-5923-1209</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <!--//220907 누락추가 -ys -->
                                                 <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
                                                 <li>
                                                     <span>서울 강서</span>
@@ -157,6 +164,12 @@
                                                     <span>개발</span>
                                                     <span>에코</span>
                                                 </li>
+                                                <!--220907 누락추가 -ys -->
+                                                <li>
+                                                    <span>010-5923-1209</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <!--//220907 누락추가 -ys -->
                                                 <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
                                                 <li>
                                                     <span>서울 강서</span>
@@ -191,6 +204,12 @@
                                                     <span>개발</span>
                                                     <span>에코</span>
                                                 </li>
+                                                <!--220907 누락추가 -ys -->
+                                                <li>
+                                                    <span>010-5923-1209</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <!--//220907 누락추가 -ys -->
                                                 <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
                                                 <li>
                                                     <span>서울 강서</span>
@@ -225,6 +244,12 @@
                                                     <span>개발</span>
                                                     <span>에코</span>
                                                 </li>
+                                                <!--220907 누락추가 -ys -->
+                                                <li>
+                                                    <span>010-5923-1209</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <!--//220907 누락추가 -ys -->
                                                 <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
                                                 <li>
                                                     <span>서울 강서</span>
@@ -259,12 +284,18 @@
                                                     <span>개발</span>
                                                     <span>에코</span>
                                                 </li>
+                                                <!--220907 누락추가 -ys -->
+                                                <li>
+                                                    <span>010-5923-1209</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <!--//220907 누락추가 -ys -->
                                                 <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
                                                 <li>
                                                     <span>서울 강서</span>
                                                     <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
                                                 </li>
-                                                <li class="memCareer">22년 4개월</li>
                                             </ul>
                                         </div>
                                         <div class="center">
@@ -276,7 +307,14 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div>                        
+
+                        <!--220913 추가 ys -->
+                        <a href="#" class="goTop">
+                            <i class="ico top"></i>
+                        </a>
+                        <!--//220913 추가 ys -->
+                        
                     </div>
 
                     <div class="listBottom pagingType">                        
@@ -315,6 +353,7 @@
                             </ul>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <div class="filterWrapper">
@@ -339,6 +378,16 @@
                 <div class="filterList">
                     <div class="tit">학력</div>  
 
+                    <input type="radio" id="eduLv3" name="eduLevel" class="hasTxt">
+                    <label for="eduLv3">대졸이상</label>
+                    <input type="radio" id="eduLv2" name="eduLevel" class="hasTxt">
+                    <label for="eduLv2">초대졸 이상</label>
+                    <input type="radio" id="eduLv1" name="eduLevel" class="hasTxt">
+                    <label for="eduLv1">고졸 이상</label>
+                    <input type="radio" id="eduLv0" name="eduLevel" class="hasTxt">
+                    <label for="eduLv0">전체(default)</label>
+                    
+                    <!-- 220913 수정 -ys
                     <input type="checkbox" id="eduLv3" name="eduLevel" class="hasTxt">
                     <label for="eduLv3">대졸이상</label>                     
                     <input type="checkbox" id="eduLv2" name="eduLevel" class="hasTxt">
@@ -346,7 +395,7 @@
                     <input type="checkbox" id="eduLv1" name="eduLevel" class="hasTxt">
                     <label for="eduLv1">고졸 이상</label>                     
                     <input type="checkbox" id="eduLv0" name="eduLevel" class="hasTxt">
-                    <label for="eduLv0">전체(default)</label>
+                    <label for="eduLv0">전체(default)</label> -->
                 </div>      
                 
                 <div class="filterList">
@@ -369,7 +418,17 @@
                 
                 <div class="filterList">
                     <div class="tit">평가</div>  
+                    
+                    <input type="radio" id="score3" name="score" class="hasTxt">
+                    <label for="score3">90점 이상</label>  
+                    <input type="radio" id="score2" name="score" class="hasTxt">
+                    <label for="score2">80점 이상</label> 
+                    <input type="radio" id="score1" name="score" class="hasTxt">
+                    <label for="score1">70점 이상</label>   
+                    <input type="radio" id="score0" name="score" class="hasTxt">
+                    <label for="score0">전체(default)</label>    
 
+                    <!-- 220913 수정 -ys
                     <input type="checkbox" id="score3" name="score" class="hasTxt">
                     <label for="score3">90점 이상</label>                     
                     <input type="checkbox" id="score2" name="score" class="hasTxt">
@@ -377,7 +436,7 @@
                     <input type="checkbox" id="score1" name="score" class="hasTxt">
                     <label for="score1">70점 이상</label>                     
                     <input type="checkbox" id="score0" name="score" class="hasTxt">
-                    <label for="score0">전체(default)</label>       
+                    <label for="score0">전체(default)</label>-->
                 </div>             
             </div>
         </div>

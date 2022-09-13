@@ -12,6 +12,9 @@
         height: rem(115);
         //220829
     }
+    .nodata{
+        font-size: rem(14);
+    }
 }
 
 .myProjDetail{
@@ -24,7 +27,9 @@
             padding: rem(20) rem(30) rem(30);
         }
         & + .boxWrap{
-            margin-top: rem(30);
+            //220829
+            //margin-top: rem(30);
+            margin-top: rem(20);
         }
         .boxType{
             max-height: rem(180);
@@ -40,12 +45,15 @@
             //height: calc(100vh - 680px);
             //height: calc(100vh - 663px);
             //220829
-            height: calc(100vh - 550px);
+            height: calc(100vh - 520px);
             //220829
             .tit{
                 margin-top: rem(20);
             }
         }
+    }
+    .nodata{
+        height: 100%;
     }
 }
 
@@ -123,26 +131,32 @@
             //height: calc(100vh - 553px);
             //padding: rem(20) rem(40);
             //220829
-            height: calc(100vh - 502px);  
-            padding: rem(20) rem(30); 
+            height: calc(100vh - 555px);              
             //220829         
+            margin-top: rem(20);
             transition: height .3s;
             @include scroll_0;
             .listTop{
-                margin-top: rem(30);
+                //220829
+                //margin-top: rem(30);
+                //margin-top: rem(20);
             }
             &.is-active{
                 //220829
                 // height: calc(100vh - 315px);
-                height: calc(100vh - 285px);
+                height: calc(100vh - 335px);
                 //220829
             }
         }
+        //220829
+        // .boxListWrap{
+        //     margin-top: rem(20);
+        // }
         .tabCont{
             position: relative;
+            //220913
+            padding: rem(20) rem(30); 
             .goTop{
-                position: absolute;
-                right: rem(40);
                 bottom: rem(80);
             }
         }

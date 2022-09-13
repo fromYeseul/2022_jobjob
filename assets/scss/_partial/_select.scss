@@ -92,6 +92,15 @@
       }
       p{
         font-size: rem(12);
+        line-height: rem(14);
+      }
+    }
+    &.hasChk{
+      .optionItem{
+        padding: 0 !important;
+        label{
+          padding: rem(8) rem(10);
+        }
       }
     }
   }
@@ -99,7 +108,7 @@
     width: rem(100);
     //220829
     // line-height: rem(40);
-    line-height: rem(36);
+    //line-height: rem(36);
     //220829
     .selDefault{
       //220829
@@ -109,9 +118,6 @@
     }
     .optionList {
       top: rem(43);
-      .optionItem {
-        padding: 0 rem(10);
-      }
     }
   }
   &.smSize{
@@ -122,6 +128,9 @@
     }
     .optionList {
       top: rem(33);
+      .optionItem {
+        padding: rem(2) rem(10);
+      }
     }
   }
   &.laSize{

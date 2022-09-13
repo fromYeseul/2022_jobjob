@@ -7,6 +7,10 @@
         padding: rem(40) 0;
         background: $white;
     }
+    .nodata{
+        height: 100%;
+        background: $white;
+    }
 }
 
 .boxTop{
@@ -131,16 +135,21 @@
         //220829
         position: relative;
     }
-    button{
+    button,
+    .button{
         &.white{
             border: 1px solid $btnGray;
+        }
+        &.round{
+            min-width: rem(55);
+            line-height: rem(26);
         }
     }
     &.listType{
         margin-bottom: 1px;
         //220829
         // padding: rem(22);
-        padding: rem(16);
+        padding: rem(16) rem(20);
         //220829
         border-radius: 0;
         .cont{       
@@ -272,16 +281,22 @@
     }
     &.headType{
         margin-top: rem(20);
+        &:first-child{
+            margin-top: rem(10);
+        }
         .head{
             color: $disable;
             background: $memLayout;
             border-radius: rem(5) rem(5) 0 0;
             //220829    
             // padding: rem(5) rem(20);
-            padding: rem(5) rem(14);
+            padding: rem(6) rem(8) rem(6) rem(14);
             //220829    
             .prefix{
                 font-weight: 400; 
+            }
+            .suffix{
+                line-height: 1;
             }
         }
         .cont{       
@@ -299,7 +314,8 @@
                 //width: 58%;
                 //220829    
                 // width: 57%;
-                width: 63%;
+                // width: 63%;
+                width: 60%;
                 //220829    
                 color: $subInfo; 
                 ul{
@@ -373,6 +389,8 @@
                 }
             }
             .suffix{
+                //220829
+                //width: rem(88);
                 width: rem(80);
                 color: $disable;
                 &.clear{
@@ -392,6 +410,7 @@
             }
             .cont{       
                 border:1px solid $mainColor;
+                border-top:0;
             }
         }
     }

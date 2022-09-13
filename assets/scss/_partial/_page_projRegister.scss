@@ -50,14 +50,13 @@
                 }
             }
             h3{
-                margin-top: rem(40);
-                &.need{
-                    margin-bottom: rem(40);
-                }
                 + ul,
                 + textarea,
                 + table{
                     margin-top: rem(6);
+                    + h3{
+                        margin-top: rem(30);
+                    }
                 }
             }
             .btnType{
@@ -67,9 +66,11 @@
                 width: rem(440);
                 height: rem(50);
                 margin-top: rem(10);
+                padding: rem(10) rem(16);
                 &.wide{
                     width: rem(600);
                     height: auto;
+                    padding: rem(18) rem(110);
                     font-size: rem(14);
                     label{
                         line-height: rem(20);

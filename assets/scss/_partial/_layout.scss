@@ -55,14 +55,16 @@
             width: rem(300);
             //220829
             background: $bgColor;
+            border-right: 1px solid $layoutColor;
             position: relative;
         }
         .myProjDetail{
             //220829
-            // width: calc(100% - 350px - 700px);       
-            width: rem(630);       
+            // width: calc(100% - 350px - 700px); 
+            //padding: rem(30);      
+            width: rem(630);      
+            padding: rem(20); 
             //220829     
-            padding: rem(30);
             padding-right: 0;
             //화면분할
             //width: calc(100% - 350px - 60px);
@@ -72,6 +74,9 @@
             //         display: block;
             //     }
             // }
+            &.nodata{
+                width: calc(100% - 300px);
+            }
         }
         .myProjJob{
             //화면분할
@@ -81,10 +86,10 @@
             width: rem(640);
             //220829
             //height: calc(100vh - 88px);
+            //padding: rem(30);   
             height: calc(100vh - 60px);
             overflow-y: auto;
-            padding: rem(30) rem(30);
-            padding-left: rem(30);
+            padding: rem(20); 
             .wrap{
                 
                 &.is-active{
@@ -102,7 +107,7 @@
         .myPeoList{
             //220829
             // width: rem(640);
-            width: rem(560);
+            width: rem(540);
             //220829
             background: $white;
             border-right: 1px solid $layoutColor;
@@ -142,7 +147,7 @@
         &.is-active{
             //220829    
             // width: calc(100% - 640px);
-            width: calc(100% - 560px);
+            //width: calc(100% - 560px);
             //220829    
             // .myProjDetail{
             //     width: 45%;
@@ -159,10 +164,10 @@
             .myProjDetail{
                 display: none;
             }
-            .myPeoDetail{
-                //width: calc(100% - 640px - 640px - 60px);
-                width: calc(100% - 640px);
-            }
+            // .myPeoDetail{
+            //     //width: calc(100% - 640px - 640px - 60px);
+            //     width: calc(100% - 640px);
+            // }
         }
     }
     &.noSide{

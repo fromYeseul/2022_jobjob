@@ -234,7 +234,8 @@
                         <div class="regiPart">
                             <h5>3. 근무환경</h5>
                             <div class="boxWrap">
-                                <div class="inputList column row">   
+                                <div class="inputList column row">  
+                                    <h3 class="mb20">근무 장소가 어디인가요?</h3> 
                                     <ul>
                                         <li>
                                             <label class="need" for="">근무방식</label>
@@ -283,7 +284,7 @@
                                             <input class="laSize" type="text" id="" maxlength="" placeholder="00"> 
                                         </li>
                                     </ul>
-                                    <h3 class="need">근무 시간을 선택해 주세요</h3>
+                                    <h3 class="need mb20">근무 시간을 선택해 주세요</h3>
                                     <ul class="gap20">
                                         <li>
                                             <div class="select">
@@ -442,7 +443,7 @@
             <h6>영업담당자</h6>
             <div class="select lowSize"><!--220829 수정 -ys-->
                 <span class="selDefault">선택</span>
-                <ul class="optionList" id="hasChk">
+                <ul class="optionList hasChk">
                     <li class="optionItem">
                         <input type="checkbox" id="optChk_1" name="aa" class="hasTxt">
                         <label for="optChk_1">apple</label>
@@ -518,15 +519,15 @@
                 },500);
             }else if(index == 1){
                 $(".regiPartWrapper").animate({
-                    scrollTop: "630", 
+                    scrollTop: "590", 
                 },500);
             }else if(index == 2){
                 $(".regiPartWrapper").animate({
-                    scrollTop: "1160", 
+                    scrollTop: "1100", 
                 },500);
             }else {
                 $(".regiPartWrapper").animate({
-                    scrollTop: "1630", 
+                    scrollTop: "1560", 
                 },500);
             }            
         })
@@ -538,13 +539,13 @@
 
             //console.log($scrollTop);
 
-            if($scrollTop < 630){
+            if($scrollTop < 590){
                 $breadCrumbs.removeClass('is-active');
                 $breadCrumbs.eq(0).addClass('is-active');
-            }else if($scrollTop < 1160){
+            }else if($scrollTop < 1100){
                 $breadCrumbs.removeClass('is-active');
                 $breadCrumbs.eq(1).addClass('is-active');
-            }else if($scrollTop < 1630){
+            }else if($scrollTop < 1560){
                 $breadCrumbs.removeClass('is-active');
                 $breadCrumbs.eq(2).addClass('is-active');
             }else{
@@ -552,8 +553,7 @@
                 $breadCrumbs.eq(3).addClass('is-active');
             }
         })
-        
-        
+                
     })
 
     
@@ -561,14 +561,14 @@
     function showFooter(){
         let regiPartWrapper = document.querySelector('.regiPartWrapper');
         let regiPart = document.querySelectorAll('.regiPart');
-        let regi3Top = regiPart[3].offsetTop;
+        //let regi3Top = regiPart[3].offsetTop;
         let toast = document.querySelector('.toast');
 
         for(let i=0; i<regiPart.length; i++){            
             regiPartWrapper.addEventListener('scroll', function(e){
                 e.preventDefault();
 
-                if(regiPartWrapper.scrollTop > regi3Top){
+                if(regiPartWrapper.scrollTop > 1560){
                     toast.classList.add('is-active');
                 }else{
                     toast.classList.remove('is-active');

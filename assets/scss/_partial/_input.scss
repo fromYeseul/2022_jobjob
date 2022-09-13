@@ -248,23 +248,6 @@ input[type=password]{
     }
 }
 
-/* 칩타입 */
-.inputObj{
-    display: inline-block;
-    padding: rem(2) rem(10);
-    color: $white;
-    background: $placeholder;
-    border-radius: rem(5);
-    &.is-active{
-        background: transparent;
-    }
-    input[type=text]{
-        height: auto;
-        padding: rem(4);
-        border:0;
-    }
-}
-
 /* 파일첨부 */
 input[type=file] {
     position: absolute;
@@ -279,7 +262,9 @@ input[type=file] {
 //칩타입, 파일업로드
 .inputGroup {
     //height: rem(50);
-    padding: rem(10) rem(16);
+    //220829
+    //padding: rem(10) rem(16);
+    padding: rem(6) rem(16);
     // margin-top: rem(5);
     // border-radius: rem(7);
     margin-top: rem(4);
@@ -289,6 +274,8 @@ input[type=file] {
         color: $placeholder;
         font-weight: 400;
         line-height: rem(29);
+        //220829
+        font-size: rem(14);
     }
 //     .selFile {     
 //         cursor: pointer;
@@ -319,6 +306,8 @@ input[type=file] {
         .drop{
             color: $placeholder;
             display: flex;
+            //220829
+            font-size: rem(14);
         }
         .list{
             li{
@@ -354,6 +343,34 @@ input[type=file] {
     // & + .selFile{
     //     margin-left: rem(15);
     // }
+    //220829
+    span{
+        font-size: rem(14);
+    }
+}
+
+
+
+/* 칩타입 */
+.inputObj{
+    display: inline-block;
+    padding: rem(2) rem(10);
+    color: $white;
+    //220829
+    line-height: rem(22);
+
+    background: $placeholder;
+    border-radius: rem(5);
+    &.is-active{
+        background: transparent;
+    }
+    input[type=text]{
+        height: auto;
+        //220829
+        //padding: rem(4);
+        padding: 0 rem(4);
+        border:0;
+    }
 }
 
 a{
@@ -641,7 +658,7 @@ input[type=radio]{
             width: 20%;
             min-width: rem(104);
             height: rem(90);
-            // margin-left: -1px;
+            margin-left: -1px;
             // margin-top: -1px;
             font-weight: 400;
             padding: rem(20) 0;
@@ -653,6 +670,11 @@ input[type=radio]{
             cursor: pointer;
             &::before{
                 display: none;
+            }
+        }        
+        &:first-child{
+            + label{
+                margin-left: 0;
             }
         }
         &:checked{

@@ -152,8 +152,8 @@ function selectBox(){
         let optionList = lb.nextElementSibling;
         let optionItems = optionList.querySelectorAll('.optionItem');
         lb.addEventListener('click', e => {        
-            // let optionList = lb.nextElementSibling;
-            // let optionItems = optionList.querySelectorAll('.optionItem');
+            optionList = lb.nextElementSibling;
+            optionItems = optionList.querySelectorAll('.optionItem');
             clickLabel(lb, optionItems);      
             
             /* 220906 수정(외부클릭시 닫힘) -ys */
@@ -272,36 +272,49 @@ function customScroll(){
 //스크롤 생성
 //호출 : myProjJob.onclick = makeScroll();
 let myProjJob = document.querySelector('.myProjJob');
-function makeScroll(){            
-    let yScroll = document.querySelector('.myProjJob .tabContWrap .yScroll');
+let yScroll = document.querySelectorAll('.myProjJob .tabContWrap .yScroll');
+let yActive = document.querySelector('.myProjJob .tabCont.is-active .yScroll');
+
+function makeScroll(){      
     
-    myProjJob.addEventListener('mousemove', function(){
-        setTimeout
-        yScroll.classList.add('is-active');
-    });
-    myProjJob.addEventListener('mouseout', function(){
-        yScroll.classList.remove('is-active');
-    });
+    /* 220913 수정(setTimeout) -ys */
+    function addScroll(){
+        setTimeout(function(){
+            for(let i=0; i<yScroll.length; i++){
+                yScroll[i].classList.add('is-active');
+            }
+        }, 500);
+    }
+    function removeScroll(){
+        setTimeout(function(){
+            for(let i=0; i<yScroll.length; i++){
+                yScroll[i].classList.remove('is-active');
+            }
+        }, 500);
+    }
 
-    myProjJob.addEventListener('wheel', function(){
-        let myProjJob_top = myProjJob.scrollTop;
-        let deltaY = event.deltaY;
+    myProjJob.addEventListener('mousemove', addScroll);
+    myProjJob.addEventListener('mouseout', removeScroll);
+    /* //220913 수정(setTimeout) -ys */
 
-        if(deltaY < 0 && myProjJob_top == 0){
-            yScroll.classList.remove('is-active');
-        }else{
-            yScroll.classList.add('is-active');
-        }
-    });
+    // myProjJob.addEventListener('wheel', function(event){
+    //     let myProjJob_top = myProjJob.scrollTop;
+    //     let deltaY = event.deltaY;
+
+    //     if(deltaY < 0 && myProjJob_top == 0){
+    //         yScroll.classList.remove('is-active');
+    //     }else{
+    //         yScroll.classList.add('is-active');
+    //     }
+    // });
 }
 //makeScroll();
 
 
 //alert 토스트팝업
 //호출 : alertClose.onclick = toastClose();
-let alertToast = document.querySelectorAll('.alertToast');
-let alertClose = document.querySelectorAll('.smClose');
 function toastClose(){
+    let alertClose = document.querySelectorAll('.smClose');
     for(let i=0; i<alertClose.length; i++){
         alertClose[i].addEventListener('click', function(){
             alertClose[i].parentNode.classList.remove('is-active');
@@ -342,6 +355,7 @@ $(function(){
     $goTop.on('click', function(e){
         e.preventDefault();                
         $('.tabCont .yScroll').animate({scrollTop : "0",}, 500);
+        $('.rPanelCont .yScroll').animate({scrollTop : "0",}, 500);
     })
 });
 

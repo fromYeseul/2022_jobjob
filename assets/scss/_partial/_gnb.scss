@@ -1,6 +1,8 @@
 
 .gnbWrapper{
-    width: rem(60);
+    //220829
+    //width: rem(60);
+    width: rem(52);
     background: linear-gradient(to bottom, $highlight, $gnbGreen);
     //border-right: 1px solid $layoutColor;
     transition: all .3s ease;
@@ -11,10 +13,16 @@
         padding: rem(20) 0;
     }  
     .navCtrlBtn{
-        width: rem(40);
-        height: rem(40);
-        padding: rem(9);
+        //220829
+        // width: rem(40);
+        // height: rem(40);
+        // padding: rem(9);
+        // margin-left: rem(9);
+        width: rem(36);
+        height: rem(36);
+        padding: rem(5) rem(8);
         margin-left: rem(9);
+
         border-radius: rem(6);
         background: $white;
         cursor: pointer;
@@ -22,7 +30,9 @@
         &::before{
             content:'';
             width: 0;
+            //220829
             height: rem(40);
+            height: rem(36);
             background: $white;
             position: absolute;
             left: -10px;
@@ -33,7 +43,9 @@
     .navWrapper{
         height: calc(100vh - 105px);
         margin-top: rem(35);
-        margin-left: rem(5);
+        //220829
+        //margin-left: rem(3);
+        margin-left: rem(3);
         overflow-y: auto;
         li{
             padding: rem(13);

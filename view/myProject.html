@@ -391,7 +391,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="boxWrap sticky">
+                        <div class="boxWrap"><!--220913 sticky 클래스 삭제 ys --> 
                             <div class="tabWrapper">
                                 <ul class="tabBtnWrap wideType">
                                     <li class="tabBtn prefix">
@@ -406,18 +406,19 @@
                                 </ul>
                                 <div class="tabContWrap">
                                     <div id="myProj-1" class="tabCont is-active">
-                                        <div class="yScroll">
-                                            <div class="hasBtn">  
-                                                <a href="#" class="button white midSize">
-                                                    <i class="ico filter"></i>
-                                                    필터
-                                                </a>     
-                                                <div class="inputIco">
-                                                    <input type="text" id="search" class="" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
-                                                    <button class="ico search"></button>
-                                                </div>
+                                        
+                                        <div class="hasBtn">  
+                                            <a href="#" class="button white midSize">
+                                                <i class="ico filter"></i>
+                                                필터
+                                            </a>     
+                                            <div class="inputIco">
+                                                <input type="text" id="search" class="" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
+                                                <button class="ico search"></button>
                                             </div>
+                                        </div>
                                             
+                                        <div class="yScroll"><!--220913 위치 수정 -ys -->
                                             <div class="listTop">                                        
                                                 <input type="checkbox" id="chkAll" class="hasTxt">
                                                 <label for="chkAll"> 0 / 4</label>
@@ -450,8 +451,8 @@
                                                                     <li>
                                                                         <span>서울 강서</span>
                                                                         <span>4년제 졸업</span>
+                                                                        <span class="memCareer">22년 4개월</span>
                                                                     </li>
-                                                                    <li class="memCareer">22년 4개월</li>
                                                                 </ul>
                                                             </div>
                                                             <div class="center">
@@ -490,8 +491,8 @@
                                                                     <li>
                                                                         <span>서울 강서</span>
                                                                         <span>4년제 졸업</span>
+                                                                        <span class="memCareer">22년 4개월</span>
                                                                     </li>
-                                                                    <li class="memCareer">22년 4개월</li>
                                                                 </ul>
                                                             </div>
                                                             <div class="center">
@@ -503,12 +504,15 @@
                                                         </div>
                                                     </li>
                                                 </ul>
-                                            </div> 
-                                        </div>    
+                                            </div>                                             
                                             
-                                        <a href="#" class="goTop">
-                                            <i class="ico top"></i>
-                                        </a>
+                                            <!--220913 위치이동 -ys -->
+                                            <a href="#" class="goTop">
+                                                <i class="ico top"></i>
+                                            </a>
+                                            <!--//220913 위치이동 -ys -->
+                                            
+                                        </div>    
 
                                         <div class="listBottom">
                                             <button class="fullSize white prefix">선택삭제</button>
@@ -516,18 +520,19 @@
                                         </div>
                                     </div>
                                     <div id="myProj-2" class="tabCont">
-                                        <div class="yScroll">
-                                            <div class="hasBtn">  
-                                                <a href="#" class="button white midSize">
-                                                    <i class="ico filter"></i>
-                                                    필터
-                                                </a>     
-                                                <div class="inputIco">
-                                                    <input type="text" id="search" class="" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
-                                                    <button class="ico search"></button>
-                                                </div>
+
+                                        <div class="hasBtn">  
+                                            <a href="#" class="button white midSize">
+                                                <i class="ico filter"></i>
+                                                필터
+                                            </a>     
+                                            <div class="inputIco">
+                                                <input type="text" id="search" class="" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
+                                                <button class="ico search"></button>
                                             </div>
+                                        </div>
                                             
+                                        <div class="yScroll"><!--220913 위치 수정 -ys -->
                                             <div class="listTop flexCenter flex">                                        
                                                 <input type="checkbox" id="chkAll2" class="hasTxt">
                                                 <label for="chkAll2"> 0 / 4</label>
@@ -624,10 +629,14 @@
                                                     </li>
                                                 </ul>
                                             </div>   
+                                            
+                                            <!--220913 위치이동 -ys -->
+                                            <a href="#" class="goTop">
+                                                <i class="ico top"></i>
+                                            </a>
+                                            <!--//220913 위치이동 -ys -->
+                                            
                                         </div>
-                                        <a href="#" class="goTop">
-                                            <i class="ico top"></i>
-                                        </a>
                                         <div class="listBottom">
                                             <button class="fullSize white prefix">이력서 다운로드</button>
                                             <button class="fullSize suffix">면접잡기</button>
@@ -651,18 +660,18 @@
                 </div>
                 <div class="rPanelCont">
                     <h4>회원검색</h4>
-                    <div class="yScroll">
-                        <div class="hasBtn">  
-                            <a href="#" class="button white midSize filter">
-                                <i class="ico filter"></i>
-                                필터
-                            </a>     
-                            <div class="inputIco">
-                                <input type="text" id="search" class="" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
-                                <button class="ico search"></button>
-                            </div>
+                    
+                    <div class="hasBtn">  
+                        <a href="#" class="button white midSize filter">
+                            <i class="ico filter"></i>
+                            필터
+                        </a>     
+                        <div class="inputIco">
+                            <input type="text" id="search" class="" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
+                            <button class="ico search"></button>
                         </div>
-                        
+                    </div>
+                    <div class="yScroll"><!--220907 위치수정 -ys -->
                         <div class="listTop">                                        
                             <input type="checkbox" id="chkAll" class="hasTxt">
                             <label for="chkAll"> 0 / 4</label>
@@ -837,8 +846,8 @@
                                                 <li>
                                                     <span>서울 강서</span>
                                                     <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
                                                 </li>
-                                                <li class="memCareer">22년 4개월</li>
                                             </ul>
                                         </div>
                                         <div class="center">
@@ -851,6 +860,12 @@
                                 </li>
                             </ul>
                         </div>
+                        
+                        <!--220913 추가 ys -->
+                        <a href="#" class="goTop">
+                            <i class="ico top"></i>
+                        </a>
+                        <!--//220913 추가 ys -->
                     </div>
 
                     <div class="listBottom pagingType">                        
@@ -913,6 +928,16 @@
                 <div class="filterList">
                     <div class="tit">학력</div>  
 
+                    <input type="radio" id="eduLv3" name="eduLevel" class="hasTxt">
+                    <label for="eduLv3">대졸이상</label>
+                    <input type="radio" id="eduLv2" name="eduLevel" class="hasTxt">
+                    <label for="eduLv2">초대졸 이상</label>
+                    <input type="radio" id="eduLv1" name="eduLevel" class="hasTxt">
+                    <label for="eduLv1">고졸 이상</label>
+                    <input type="radio" id="eduLv0" name="eduLevel" class="hasTxt">
+                    <label for="eduLv0">전체(default)</label>
+                    
+                    <!-- 220913 수정 -ys
                     <input type="checkbox" id="eduLv3" name="eduLevel" class="hasTxt">
                     <label for="eduLv3">대졸이상</label>                     
                     <input type="checkbox" id="eduLv2" name="eduLevel" class="hasTxt">
@@ -920,7 +945,7 @@
                     <input type="checkbox" id="eduLv1" name="eduLevel" class="hasTxt">
                     <label for="eduLv1">고졸 이상</label>                     
                     <input type="checkbox" id="eduLv0" name="eduLevel" class="hasTxt">
-                    <label for="eduLv0">전체(default)</label>
+                    <label for="eduLv0">전체(default)</label> -->
                 </div>      
                 
                 <div class="filterList">
@@ -944,6 +969,16 @@
                 <div class="filterList">
                     <div class="tit">평가</div>  
 
+                    <input type="radio" id="score3" name="score" class="hasTxt">
+                    <label for="score3">90점 이상</label>  
+                    <input type="radio" id="score2" name="score" class="hasTxt">
+                    <label for="score2">80점 이상</label> 
+                    <input type="radio" id="score1" name="score" class="hasTxt">
+                    <label for="score1">70점 이상</label>   
+                    <input type="radio" id="score0" name="score" class="hasTxt">
+                    <label for="score0">전체(default)</label>    
+
+                    <!-- 220913 수정 -ys
                     <input type="checkbox" id="score3" name="score" class="hasTxt">
                     <label for="score3">90점 이상</label>                     
                     <input type="checkbox" id="score2" name="score" class="hasTxt">
@@ -951,7 +986,7 @@
                     <input type="checkbox" id="score1" name="score" class="hasTxt">
                     <label for="score1">70점 이상</label>                     
                     <input type="checkbox" id="score0" name="score" class="hasTxt">
-                    <label for="score0">전체(default)</label>       
+                    <label for="score0">전체(default)</label>-->     
                 </div>             
             </div>
         </div>
