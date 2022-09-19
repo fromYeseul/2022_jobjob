@@ -1,5 +1,6 @@
 .memList{
     width: rem(280);
+    //border-right: 1px solid $layoutColor;
     .boxListWrap{    
         //220829
         // height: calc(100vh - 177px);
@@ -7,7 +8,9 @@
         //220829
     }
     .boxList{
-        height: rem(125);
+        //220829
+        // height: rem(125);
+        height: rem(110);
         .head{
             font-weight: 700;
         }
@@ -21,25 +24,30 @@
     //220829
     // padding: rem(30);
 
-    height: calc(100vh - 70px);
-    overflow-y: auto;
+    // height: calc(100vh - 90px);
+    // overflow-y: auto;
     .tableBox{
         //220829
         // height: calc(100vh - 310px);
-        max-height: calc(100vh - 310px);
+        max-height: calc(100vh - 210px);
         //220829
         margin-top: rem(30);
     }
     .boxListWrap{    
         //220829
-        max-height: calc(100vh - 226px);
+        max-height: calc(100vh - 210px);
         //220829
         margin-top: rem(10);
     }
     .tabBtnWrap{
         padding: rem(30);
+        padding-bottom: rem(0);
     }
     .tabCont{
+        //220829
+        // height: calc(100vh - 150px);
+        height: calc(100vh - 180px);
+        @include scroll_0;
         .resumeWrapper, .tableBox, .boxTop, .boxListWrap{
             padding: 0 rem(30);
         }
@@ -118,13 +126,13 @@
     .center, .suffix{
         //220829
         // padding: rem(70);
-        padding: rem(40);
+        padding: rem(40) rem(30);
         //220829
         background: $white;
         .resuInfo{
             //220829
             // width: rem(330);
-            width: rem(280);
+            width: rem(300);
             //220829
             + .resuInfo{
                 margin-top: rem(60);

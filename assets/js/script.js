@@ -5,7 +5,7 @@ function gnbNav(){
     let navCtrlBtn = document.querySelector('.navCtrlBtn');
     let navWrapper = document.querySelector('.navWrapper');
 
-    if(layoutWrapper !== null){
+    if(navWrapper !== null){
         navCtrlBtn.addEventListener('click', function(){
             layoutWrapper.classList.toggle('is-active');
         });
@@ -138,6 +138,26 @@ function tabMenu(){
     }
 }
 tabMenu();
+
+
+//리스트 선택
+function boxChk(){
+    let boxListWrap = document.querySelector('.boxListWrap');
+    let boxList = document.querySelectorAll('.boxList.listType');
+    let isActive = document.querySelectorAll('.boxList.is-active');
+
+    if(boxList !== null){
+        for(let i = 0; i<boxList.length; i++){
+            boxList[i].addEventListener('click', function(e){
+                for(let j = 0; j<boxList.length; j++){
+                    boxList[j].classList.remove('is-active');
+                }
+                boxList[i].classList.add('is-active');
+            });
+        }
+    }
+}
+boxChk();
 /*-----------//공통-----------*/
 
 
@@ -239,7 +259,7 @@ function chkAll(){
 
 
 //더보기 (마이피플)
-// 호출 : more.onclick = showMore();
+// 호출 : openMore.onclick = showMore();
 let openMore = document.querySelectorAll(".showMore");
 let btnDel = document.querySelectorAll(".square");
     
@@ -267,7 +287,7 @@ function customScroll(){
         document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     }
 }
-// customScroll();
+//customScroll();
 
 //스크롤 생성
 //호출 : myProjJob.onclick = makeScroll();

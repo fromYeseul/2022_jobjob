@@ -2,7 +2,7 @@
     width: 100%;
     //220829
     // padding: rem(30) rem(40);
-    padding: rem(20) rem(30);
+    //padding: rem(20) rem(30);
     //220829
     position: relative;
     //height: calc(100vh - 60px);
@@ -14,6 +14,9 @@
         height: calc(100vh - 200px);
         overflow-y: auto;
         //220829
+
+        padding-left: rem(180);
+        padding-right: rem(280);
     }
     .regiPart{
         //220829
@@ -24,9 +27,21 @@
             margin-top: rem(20);
             padding: rem(40);
             .inputList{
-                width: 60%;
+                width: 70%;
                 &.row{
                     width: 75%;
+                }
+                &.wide{
+                    width: rem(1340);
+                }
+                .full{
+                    input{
+                        //220829
+                        // width: rem(746);
+                        //width: rem(783);
+                        width: rem(543);
+                        //220829
+                    }
                 }
                 span{
                     font-weight: 500;
@@ -37,27 +52,17 @@
                         margin-right: 0;
                     }
                 }
-                .full{
-                    input{
-                        //220829
-                        // width: rem(746);
-                        width: rem(783);
-                        //220829
-                    }
-                }
-                &.wide{
-                    width: rem(1340);
-                }
             }
             h3{
-                + ul,
-                + textarea,
-                + table{
-                    margin-top: rem(6);
-                    + h3{
-                        margin-top: rem(30);
-                    }
-                }
+                margin-bottom: rem(6);
+                // + ul,
+                // + textarea,
+                // + table{
+                //     margin-top: rem(6);
+                //     + h3{
+                //         margin-top: rem(30);
+                //     }
+                // }
             }
             .btnType{
                 display: inline-block;

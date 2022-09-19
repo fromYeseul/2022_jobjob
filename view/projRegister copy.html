@@ -79,8 +79,8 @@
 
                             <div class="boxWrap">
                                 <div class="inputList column half">   
-                                    <ul>
-                                        <li class="full hasTooltip">
+                                    <ul class="hasTooltip">
+                                        <li class="full">
                                             <label class="need" for="project">
                                                 프로젝트 이름
                                                 <input type="checkbox" id="secretPay" name="secretPay" class="hasTxt">
@@ -94,38 +94,14 @@
                                                 <input type="radio" id="b2" name="aa" class="hasTxt btnType" checked="">
                                                 <label for="b2">운영(SM)</label>
                                             </div>
-                                            
-                                            <!--220915 추가 -ys-->
-                                            <div class="tooltip left">
-                                                <p>프로젝트 이름</p>
-                                                진행하시려는 프로젝트의 이름을 입력해 주세요. 대외비 선택 시 프로젝트가 외부에 공개되지 않습니다. 
-                                                <br>예) 쇼핑몰 홈페이지 고도화</span> 
-                                            </div>
-                                            <!--//220915 추가 -ys-->
                                         </li>
-                                        <li class="hasTooltip">
+                                        <li>
                                             <label class="need" for="">요청회사</label>
                                             <input class="full" type="text" id="" maxlength="20"> 
-                                            
-                                            <!--220915 추가 -ys-->
-                                            <div class="tooltip left">
-                                                <p>프로젝트 이름</p>
-                                                선택 시 프로젝트가 외부에 공개되지 않습니다. 
-                                                <br>예) 쇼핑몰 홈페이지 고도화</span> 
-                                            </div>
-                                            <!--//220915 추가 -ys-->
                                         </li>
-                                        <li class="hasTooltip">
-                                            <label class="need" for="">요청자 이름2222222</label>
+                                        <li>
+                                            <label class="need" for="">요청자 이름</label>
                                             <input class="full" type="text" id=""> 
-                                            
-                                            <!--220915 추가 -ys-->
-                                            <div class="tooltip left">
-                                                <p>프로젝트 이름</p>
-                                                선택 시 프로젝트가 외부에 공개되지 않습니다. 
-                                                <br>예) 쇼핑몰 홈페이지 고도화</span> 
-                                            </div>
-                                            <!--//220915 추가 -ys-->
                                         </li>
                                         <li>
                                             <label class="need" for="">요청자 이메일</label>
@@ -145,6 +121,29 @@
                                             </label>
                                             <input class="full mr0" type="date" id="" maxlength="" placeholder="프로젝트 이름을 입력하세요."  onkeydown="return false"> 
                                         </li>
+
+                                        <!--220915 추가 -ys-->
+                                        <div class="tooltip left">
+                                            <p>프로젝트 이름</p>
+                                            진행하시려는 프로젝트의 이름을 입력해 주세요. 
+                                            대외비 선택 시 프로젝트가 외부에 공개되지 않습니다. 
+                                            <br>
+                                            (예) 쇼핑몰 홈페이지 고도화
+                                        </div>
+                                        <div class="tooltip left line2">
+                                            <p>요청회사</p>
+                                            회사 이름을 입력해주세요. 
+                                        </div>
+                                        <div class="tooltip left line3">
+                                            <p>요청자 이메일</p>
+                                            요청하시는 분의 이메일 주소를 입력해주세요. 
+                                            담당자가 연락하기 위해 사용됩니다.
+                                        </div>
+                                        <div class="tooltip left line4">
+                                            <p>프로젝트 시작희망일</p>
+                                            희망하시는 프로젝트 시작일자를 선택해주세요. 구인 정보에 활용됩니다.
+                                        </div>
+                                        <!--//220915 추가 -ys-->
                                     </ul>
                                 </div>
                             </div>
@@ -158,7 +157,7 @@
                             <button class="midSize">계약 및 투입 상세정보</button>
                             <!--//220826 추가 -ys-->
                             <div class="boxWrap">
-                                <div class="inputList column row">   
+                                <div class="inputList column row hasTooltip">   
                                     <ul>
                                         <li>
                                             <label class="need" for="">직군</label>
@@ -236,6 +235,16 @@
                                             </div>
                                         </li>
                                     </ul>
+
+                                    <!--220915 추가 -ys-->
+                                    <div class="tooltip left">
+                                        <p>단가</p>
+                                        고객사로부터 제공받는 인력별 월 단가를(매출금액) 입력해주세요. 
+                                        <br>
+                                        ※ 프리랜서에게 지급하는 급여는 공고등록화면에서 입력합니다.
+                                    </div>
+                                    <!--//220915 추가 -ys-->
+
                                     <ul>
                                         <li>
                                             <label class="need" for="">투입(예정)일</label>
@@ -260,6 +269,14 @@
                                             </div>
                                         </li>
                                     </ul>
+                                    
+                                    <!--220915 추가 -ys-->
+                                    <div class="tooltip left line3">
+                                        <p>투입(예정)일</p>
+                                        투입 예정일을 선택해주세요. 추후 변경할 수 있습니다.
+                                    </div>
+                                    <!--//220915 추가 -ys-->
+
                                 </div>
                             </div>
                         </div>      
@@ -268,7 +285,7 @@
                             <div class="boxWrap">
                                 <div class="inputList column row">  
                                     <h3 class="mb20">근무 장소가 어디인가요?</h3> 
-                                    <ul>
+                                    <ul class="hasTooltip">
                                         <li>
                                             <label class="need" for="">근무방식</label>
                                             <div class="select">
@@ -315,6 +332,13 @@
 
                                             <input class="laSize" type="text" id="" maxlength="" placeholder="00"> 
                                         </li>
+                                        
+                                        <!--220915 추가 -ys-->
+                                        <div class="tooltip left">
+                                            <p>주소비공개</p>
+                                            모집공고에서 근무 장소가 비공개로 처리되며, 채용확정 후 공개됩니다.
+                                        </div>
+                                        <!--//220915 추가 -ys-->
                                     </ul>
                                     <h3 class="need mb20">근무 시간을 선택해 주세요</h3>
                                     <ul class="gap20">
@@ -413,7 +437,7 @@
                                     </ul>
                                 </div>
                                 <div class="inputList column half"> 
-                                    <ul>
+                                    <ul class="hasTooltip">
                                         <li>
                                             <h3>프로젝트 소개</h3>
                                             <textarea class="xlSize" name="" id="" rows="10"></textarea>
@@ -422,14 +446,25 @@
                                             <h3>기타 참고사항</h3>
                                             <textarea class="xlSize" name="" id="" rows="10"></textarea>
                                         </li>
-                                    </ul>
-                                </div>
-                                <div class="inputList"> 
-                                    <h3>프로젝트를 잡잡 직원과 먼저 의논하셨나요?<br>또는 추천을 받으셨나요?</h3>
-                                    <ul>
                                         <li>
+                                            <h3>프로젝트를 잡잡 직원과 먼저 의논하셨나요?<br>또는 추천을 받으셨나요?</h3>
                                             <input class="xlSize" type="text" id="" maxlength="" placeholder="직원 이름 입력">
                                         </li>
+                                        
+                                        <!--220915 추가 -ys-->
+                                        <div class="tooltip left">
+                                            <p>프로젝트 소개</p>
+                                            담당자가 파악할 수 있도록 프로젝트를 설명해주세요.
+                                        </div>
+                                        <!--//220915 추가 -ys-->
+                                        
+                                        <!--220915 추가 -ys-->
+                                        <div class="tooltip left line4">
+                                            <p>프로젝트 이름</p>
+                                            잡잡 본사 직원과 먼저 이야기를 나누셨거나, 추천 직원이 있다면 입력해주세요. 
+                                            <br>프로젝트 진행 시 해당 담당자가 우선 배정 됩니다.
+                                        </div>
+                                        <!--//220915 추가 -ys-->
                                     </ul>
                                 </div>
                             </div>

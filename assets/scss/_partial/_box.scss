@@ -3,6 +3,7 @@
 .boxListWrap{    
     // height: calc(100vh - 187px);
     @include scroll_0;    
+    background: $white;
     & + .listBottom{
         padding: rem(40) 0;
         background: $white;
@@ -122,6 +123,7 @@
     //220829
     font-size: rem(14);
     //220829
+    cursor:pointer;
     .head,
     .bottom{
         font-weight: 500;
@@ -348,11 +350,20 @@
                 .memMemo{
                     margin-top: rem(10);
                     padding: rem(5) rem(8);
+                    padding-left: rem(21);
                     background: $bgColor;
                     color: $subInfo;
                     @include ellipsis;
                     b{
                         color: $black;
+                    }
+                    &:before {
+                        content:"...";
+                        position: absolute;
+                        left: rem(20);
+                        z-index: 1;
+                        letter-spacing: 1px;
+                        line-height: rem(12);
                     }
                 }
             }   

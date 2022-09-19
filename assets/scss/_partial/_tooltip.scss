@@ -11,8 +11,9 @@
         color: $white;
         text-align: center;
         font-size: rem(12);
+        font-weight: 300;
         //font-weight: 700;
-        padding: rem(10) rem(15);
+        padding: rem(10) rem(8) ;
         border-radius: rem(4);
         background: $tooltipGray;
         &::after{
@@ -27,11 +28,40 @@
             border-width: rem(6);
             pointer-events: none;
         }
-        &.left{
+        &.type2{
             width: rem(190);
             text-align: left;
             top:-95px;
             left: -87px;
+        }
+        &.left{
+            visibility: visible;
+            width: rem(150);
+            top: 0;
+            left: -205px;
+            transform: translateY(-15%);
+            text-align: left;
+            &::after{
+                top: 50%;
+                left: 100%;
+                margin-top: -3px;
+                margin-left: 0;
+                border-top-color: transparent;
+                border-left-color: $tooltipGray;
+            }
+            &.line2{
+                top: 33%;
+            }
+            &.line3{
+                top: 55%;
+            }
+            &.line4{
+                top: 78%;
+            }
+            p{
+                font-weight: 700;
+                margin-bottom: rem(6);
+            }
         }
     }
     &:hover{

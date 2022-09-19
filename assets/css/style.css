@@ -206,6 +206,10 @@ h1, h2, h3, h4, h5, h6, p {
   margin-right: 0 !important;
 }
 
+.ml10 {
+  margin-left: 0.625rem !important;
+}
+
 .ml15 {
   margin-left: 0.9375rem !important;
 }
@@ -291,8 +295,8 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
 }
 .contWrapper .contLayout .myProjDetail {
+  padding: 1.875rem;
   width: 39.375rem;
-  padding: 1.25rem;
   padding-right: 0;
 }
 .contWrapper .contLayout .myProjDetail.nodata {
@@ -301,8 +305,8 @@ h1, h2, h3, h4, h5, h6, p {
 .contWrapper .contLayout .myProjJob {
   width: 40rem;
   height: calc(100vh - 60px);
+  padding: 1.875rem;
   overflow-y: auto;
-  padding: 1.25rem;
 }
 .contWrapper .contLayout .myProjJob .wrap.is-active .tabContWrap .yScroll {
   height: calc(100vh - 315px);
@@ -973,7 +977,7 @@ table th .select, table td .select {
 table th {
   color: #fff;
   font-weight: 500;
-  padding: 0.75rem 0;
+  padding: 0.875rem 0;
   border-top: none;
   background: #bcbcc4;
 }
@@ -1450,18 +1454,18 @@ span.button {
 .inputList.column.half ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 1.875rem;
+  column-gap: 1.25rem;
 }
 .inputList.column.half ul .full {
   grid-column: 1/3;
 }
 .inputList.column.row {
   display: grid;
-  column-gap: 1.875rem;
+  column-gap: 1.25rem;
 }
 .inputList.column.row ul {
   display: flex;
-  column-gap: 1.875rem;
+  column-gap: 1.25rem;
 }
 .inputList.column.row ul.row {
   column-gap: 0.375rem;
@@ -1729,15 +1733,23 @@ input[type=file] {
   border: 0;
 }
 
-a.download {
+a.download img {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+a.download span {
   display: block;
   margin-top: 1.875rem;
   padding: 0.9375rem 1.25rem;
   background: #fff;
   border-radius: 0.3125rem;
-}
-a.download img {
-  vertical-align: middle;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
+  cursor: pointer;
 }
 
 /* TEXTAREA */
@@ -2180,7 +2192,8 @@ input[type=radio]:checked + label::before {
   color: #fff;
   text-align: center;
   font-size: 0.75rem;
-  padding: 0.625rem 0.9375rem;
+  font-weight: 300;
+  padding: 0.625rem 0.5rem;
   border-radius: 0.25rem;
   background: #58585e;
 }
@@ -2196,11 +2209,40 @@ input[type=radio]:checked + label::before {
   border-width: 0.375rem;
   pointer-events: none;
 }
-.hasTooltip .tooltip.left {
+.hasTooltip .tooltip.type2 {
   width: 11.875rem;
   text-align: left;
   top: -95px;
   left: -87px;
+}
+.hasTooltip .tooltip.left {
+  visibility: visible;
+  width: 9.375rem;
+  top: 0;
+  left: -205px;
+  transform: translateY(-15%);
+  text-align: left;
+}
+.hasTooltip .tooltip.left::after {
+  top: 50%;
+  left: 100%;
+  margin-top: -3px;
+  margin-left: 0;
+  border-top-color: transparent;
+  border-left-color: #58585e;
+}
+.hasTooltip .tooltip.left.line2 {
+  top: 33%;
+}
+.hasTooltip .tooltip.left.line3 {
+  top: 55%;
+}
+.hasTooltip .tooltip.left.line4 {
+  top: 78%;
+}
+.hasTooltip .tooltip.left p {
+  font-weight: 700;
+  margin-bottom: 0.375rem;
 }
 .hasTooltip:hover .tooltip {
   visibility: visible;
@@ -2411,6 +2453,7 @@ input[type=radio]:checked + label::before {
 
 .boxListWrap {
   overflow-y: auto;
+  background: #fff;
 }
 .boxListWrap::-webkit-scrollbar {
   width: 0;
@@ -2490,6 +2533,7 @@ input[type=radio]:checked + label::before {
   background: #fff;
   border-radius: 0.3125rem;
   font-size: 0.875rem;
+  cursor: pointer;
 }
 .boxList .head,
 .boxList .bottom {
@@ -2690,6 +2734,7 @@ input[type=radio]:checked + label::before {
 .boxList.headType .cont .prefix .memMemo {
   margin-top: 0.625rem;
   padding: 0.3125rem 0.5rem;
+  padding-left: 1.3125rem;
   background: #f2f2f7;
   color: #878791;
   width: 90%;
@@ -2702,6 +2747,14 @@ input[type=radio]:checked + label::before {
 }
 .boxList.headType .cont .prefix .memMemo b {
   color: #29292c;
+}
+.boxList.headType .cont .prefix .memMemo:before {
+  content: "...";
+  position: absolute;
+  left: 1.25rem;
+  z-index: 1;
+  letter-spacing: 1px;
+  line-height: 0.75rem;
 }
 .boxList.headType .cont .center,
 .boxList.headType .cont .suffix {
@@ -2761,11 +2814,11 @@ h1 {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  padding-bottom: 1.25rem;
+  padding: 1.25rem 1.875rem;
 }
 .pageTit::after {
   content: "";
-  width: calc(100% + 70px);
+  width: calc(100% + 40px);
   height: 1px;
   background: #b7b7c4;
   position: absolute;
@@ -2924,7 +2977,7 @@ h6 {
   margin: 1.875rem 0 1.25rem;
 }
 .myProjDetail .boxWrap .yScroll {
-  height: calc(100vh - 520px);
+  height: calc(100vh - 540px);
 }
 .myProjDetail .boxWrap .yScroll .tit {
   margin-top: 1.25rem;
@@ -2990,7 +3043,7 @@ h6 {
   width: calc(100% - 98px);
 }
 .myProjJob .tabContWrap .yScroll {
-  height: calc(100vh - 555px);
+  height: calc(100vh - 575px);
   margin-top: 1.25rem;
   transition: height 0.3s;
   overflow-y: auto;
@@ -2999,7 +3052,7 @@ h6 {
   width: 0;
 }
 .myProjJob .tabContWrap .yScroll.is-active {
-  height: calc(100vh - 335px);
+  height: calc(100vh - 355px);
 }
 .myProjJob .tabContWrap .tabCont {
   position: relative;
@@ -3032,11 +3085,11 @@ h6 {
 }
 
 .myPeoDetail .tableBox {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 190px);
   margin-top: 1.875rem;
 }
 .myPeoDetail .boxListWrap {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 190px);
   margin-top: 1.25rem;
 }
 
@@ -3057,13 +3110,14 @@ h6 {
 
 .projRegister {
   width: 100%;
-  padding: 1.25rem 1.875rem;
   position: relative;
 }
 .projRegister .regiPartWrapper {
   overflow-y: auto;
   height: calc(100vh - 200px);
   overflow-y: auto;
+  padding-left: 11.25rem;
+  padding-right: 17.5rem;
 }
 .projRegister .regiPartWrapper::-webkit-scrollbar {
   width: 0;
@@ -3076,10 +3130,16 @@ h6 {
   padding: 2.5rem;
 }
 .projRegister .regiPart .boxWrap .inputList {
-  width: 60%;
+  width: 70%;
 }
 .projRegister .regiPart .boxWrap .inputList.row {
   width: 75%;
+}
+.projRegister .regiPart .boxWrap .inputList.wide {
+  width: 83.75rem;
+}
+.projRegister .regiPart .boxWrap .inputList .full input {
+  width: 33.9375rem;
 }
 .projRegister .regiPart .boxWrap .inputList span {
   font-weight: 500;
@@ -3088,21 +3148,8 @@ h6 {
   float: right;
   margin-right: 0;
 }
-.projRegister .regiPart .boxWrap .inputList .full input {
-  width: 48.9375rem;
-}
-.projRegister .regiPart .boxWrap .inputList.wide {
-  width: 83.75rem;
-}
-.projRegister .regiPart .boxWrap h3 + ul,
-.projRegister .regiPart .boxWrap h3 + textarea,
-.projRegister .regiPart .boxWrap h3 + table {
-  margin-top: 0.375rem;
-}
-.projRegister .regiPart .boxWrap h3 + ul + h3,
-.projRegister .regiPart .boxWrap h3 + textarea + h3,
-.projRegister .regiPart .boxWrap h3 + table + h3 {
-  margin-top: 1.875rem;
+.projRegister .regiPart .boxWrap h3 {
+  margin-bottom: 0.375rem;
 }
 .projRegister .regiPart .boxWrap .btnType {
   display: inline-block;
@@ -3131,7 +3178,7 @@ h6 {
   height: calc(100vh - 163px);
 }
 .memList .boxList {
-  height: 7.8125rem;
+  height: 6.875rem;
 }
 .memList .boxList .head {
   font-weight: 700;
@@ -3139,19 +3186,25 @@ h6 {
 
 .memDetail {
   width: 67.5rem;
-  height: calc(100vh - 70px);
-  overflow-y: auto;
 }
 .memDetail .tableBox {
-  max-height: calc(100vh - 310px);
+  max-height: calc(100vh - 210px);
   margin-top: 1.875rem;
 }
 .memDetail .boxListWrap {
-  max-height: calc(100vh - 226px);
+  max-height: calc(100vh - 210px);
   margin-top: 0.625rem;
 }
 .memDetail .tabBtnWrap {
   padding: 1.875rem;
+  padding-bottom: 0rem;
+}
+.memDetail .tabCont {
+  height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+.memDetail .tabCont::-webkit-scrollbar {
+  width: 0;
 }
 .memDetail .tabCont .resumeWrapper, .memDetail .tabCont .tableBox, .memDetail .tabCont .boxTop, .memDetail .tabCont .boxListWrap {
   padding: 0 1.875rem;
@@ -3207,11 +3260,11 @@ h6 {
   margin-top: 1.25rem;
 }
 .resume .center, .resume .suffix {
-  padding: 2.5rem;
+  padding: 2.5rem 1.875rem;
   background: #fff;
 }
 .resume .center .resuInfo, .resume .suffix .resuInfo {
-  width: 17.5rem;
+  width: 18.75rem;
 }
 .resume .center .resuInfo + .resuInfo, .resume .suffix .resuInfo + .resuInfo {
   margin-top: 3.75rem;
