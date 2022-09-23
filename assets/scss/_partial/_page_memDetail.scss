@@ -46,10 +46,11 @@
     .tabCont{
         //220829
         // height: calc(100vh - 150px);
-        height: calc(100vh - 180px);
-        @include scroll_0;
+        // height: calc(100vh - 180px);
+        // @include scroll_0;
         .resumeWrapper, .tableBox, .boxTop, .boxListWrap{
             padding: 0 rem(30);
+            background: transparent;
         }
     }
 }
@@ -60,6 +61,8 @@
     //width: rem(960);
     font-size: rem(14);
     //220829
+    margin-top: rem(30);
+    height: calc(100vh - 180px);
     .resuTop{
         text-align: right;
     }
@@ -96,13 +99,18 @@
             // width: rem(210);
             // height: rem(210);
             //margin-bottom: rem(48);
-            width: rem(160);
-            height: rem(160);
-            margin:0 auto;
-            margin-bottom: rem(30);
+            // width: rem(160);
+            // height: rem(160);
+            // margin:0 auto;
+            // margin-bottom: rem(30);
             //220829
+            text-align: center;
             img{
-                width: 100%;
+                width: rem(160);
+                height: rem(160);
+                margin:0 auto;
+                margin-bottom: rem(30);
+                // width: 100%;
                 border-radius: 50%;
             }
         }
@@ -129,6 +137,8 @@
         padding: rem(40) rem(30);
         //220829
         background: $white;
+        height: calc(100vh - 250px);
+        @include scroll_0;
         .resuInfo{
             //220829
             // width: rem(330);

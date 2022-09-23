@@ -65,6 +65,8 @@
             width: rem(630);  
             //220829     
             padding-right: 0;
+            transition: all .3s;
+
             //화면분할
             //width: calc(100% - 350px - 60px);
             // &.is-active{             
@@ -73,6 +75,12 @@
             //         display: block;
             //     }
             // }
+            .closed{
+                display: none;
+                width: rem(17);
+                height: 100%;
+                align-items: center;
+            }
             &.nodata{
                 width: calc(100% - 300px);
             }
@@ -88,16 +96,16 @@
             height: calc(100vh - 60px);
             padding: rem(30);
             overflow-y: auto;
-            .wrap{
+            // .wrap{
                 
-                &.is-active{
-                    .tabContWrap{
-                        .yScroll{
-                            height: calc(100vh - 315px);
-                        }
-                    }
-                }
-            }
+            //     &.is-active{
+            //         .tabContWrap{
+            //             .yScroll{
+            //                 height: calc(100vh - 315px);
+            //             }
+            //         }
+            //     }
+            // }
         }
 
 
@@ -160,7 +168,14 @@
                 width: 100%;
             }
             .myProjDetail{
-                display: none;
+                width: 0;
+                padding-left: rem(13);
+                .boxWrap{
+                    display: none;
+                }
+                .closed{
+                    display: flex;
+                }
             }
             // .myPeoDetail{
             //     //width: calc(100% - 640px - 640px - 60px);
@@ -211,8 +226,9 @@
         min-height: calc(100vh - 200px); //임시
         position: fixed;
         //top: rem(95);
-        top: rem(70);
-        right: rem(60);
+        //220829
+        top: rem(60);
+        right: rem(51);
     }
 }
 .filterWrapper{
@@ -331,7 +347,7 @@
         .contLayout{
             &.is-active{
                 .myProjDetail{
-                    display: block;
+                    width: rem(630);
                 }
             } 
         }

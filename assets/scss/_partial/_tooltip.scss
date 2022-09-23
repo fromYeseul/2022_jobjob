@@ -35,6 +35,7 @@
             left: -87px;
         }
         &.left{
+            display: none;
             visibility: visible;
             width: rem(150);
             top: 0;
@@ -48,6 +49,9 @@
                 margin-left: 0;
                 border-top-color: transparent;
                 border-left-color: $tooltipGray;
+            }
+            &.is-active{
+                display: block;
             }
             &.line2{
                 top: 33%;

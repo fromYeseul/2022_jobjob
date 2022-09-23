@@ -103,6 +103,7 @@
                 flex-wrap: wrap;
                 li{
                     flex: 1 1 16%;
+                    max-width: rem(260);
                 }
             }
         }
@@ -148,8 +149,10 @@
     }
     .input{             
         li{
+            display: flex;
+            align-items: center;
             margin-bottom: rem(10);
-            span{
+            >span{
                 display: inline-block;
                 width: rem(120);
                 font-size: rem(18);

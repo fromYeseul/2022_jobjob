@@ -292,6 +292,7 @@ function customScroll(){
 //스크롤 생성
 //호출 : myProjJob.onclick = makeScroll();
 let myProjJob = document.querySelector('.myProjJob');
+let ProjTabWrapper = document.querySelector('.myProjJob .tabWrapper');
 let yScroll = document.querySelectorAll('.myProjJob .tabContWrap .yScroll');
 let yActive = document.querySelector('.myProjJob .tabCont.is-active .yScroll');
 
@@ -301,6 +302,7 @@ function makeScroll(){
     function addScroll(){
         setTimeout(function(){
             for(let i=0; i<yScroll.length; i++){
+                // myProjJob.classList.add('is-active');
                 yScroll[i].classList.add('is-active');
             }
         }, 500);
@@ -308,13 +310,14 @@ function makeScroll(){
     function removeScroll(){
         setTimeout(function(){
             for(let i=0; i<yScroll.length; i++){
+                // myProjJob.classList.remove('is-active');
                 yScroll[i].classList.remove('is-active');
             }
         }, 500);
     }
 
-    myProjJob.addEventListener('mousemove', addScroll);
-    myProjJob.addEventListener('mouseout', removeScroll);
+    ProjTabWrapper.addEventListener('mouseover', addScroll);
+    ProjTabWrapper.addEventListener('mouseout', removeScroll);
     /* //220913 수정(setTimeout) -ys */
 
     // myProjJob.addEventListener('wheel', function(event){
