@@ -29,7 +29,7 @@
         & + .boxWrap{
             //220829
             //margin-top: rem(30);
-            margin-top: rem(20);
+            margin-top: rem(10);
         }
         .boxType{
             max-height: rem(180);
@@ -45,7 +45,8 @@
             //height: calc(100vh - 680px);
             //height: calc(100vh - 663px);
             //220829
-            height: calc(100vh - 540px);
+            // height: calc(100vh - 540px);
+            height: calc(100vh - 508px);
             //220829
             .tit{
                 margin-top: rem(20);
@@ -60,6 +61,11 @@
 .myProjJob{
     //width: 30%;
     //min-width: rem(616);
+    .wrap{
+        width: rem(580);
+        position: absolute;
+        bottom: rem(20);
+    }
     .boxWrap{
         margin-top: rem(10);
     }
@@ -87,12 +93,13 @@
                 &.is-active{
                     border:1px solid $mainColor;
                 }
-                &:first-child{
-                    //220829
-                    // padding: rem(30) rem(14);
-                    padding: rem(28) rem(14);
-                    //220829
-                }
+                //220928 제거 -ys
+                // &:first-child{
+                //     //220829
+                //     // padding: rem(30) rem(14);
+                //     padding: rem(28) rem(14);
+                //     //220829
+                // }
             }
             p{
                 @include sideArray;
@@ -131,7 +138,7 @@
             //height: calc(100vh - 553px);
             //padding: rem(20) rem(40);
             //220829
-            height: calc(100vh - 575px);              
+            height: calc(100vh - 553px);              
             //220829         
             margin-top: rem(20);
             transition: height .3s;
@@ -144,7 +151,7 @@
             &.is-active{
                 //220829
                 // height: calc(100vh - 315px);
-                height: calc(100vh - 355px);
+                height: calc(100vh - 337px);
                 //220829
             }
         }
@@ -176,4 +183,14 @@
             }
         }
     }
+}
+
+
+
+@media (max-width: 1919px) {
+    .myProjJob{
+        .wrap{
+            bottom: rem(10);
+        }
+    }    
 }

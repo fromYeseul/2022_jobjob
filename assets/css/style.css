@@ -169,6 +169,10 @@ h1, h2, h3, h4, h5, h6, p {
   display: block;
 }
 
+.none {
+  display: none;
+}
+
 .txtCenter {
   text-align: center;
 }
@@ -302,8 +306,8 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
 }
 .contWrapper .contLayout .myProjDetail {
-  padding: 1.875rem;
   width: 39.375rem;
+  padding: 1.25rem;
   padding-right: 0;
   transition: all 0.3s;
 }
@@ -319,7 +323,7 @@ h1, h2, h3, h4, h5, h6, p {
 .contWrapper .contLayout .myProjJob {
   width: 40rem;
   height: calc(100vh - 60px);
-  padding: 1.875rem;
+  padding: 1.25rem;
   overflow-y: auto;
 }
 .contWrapper .contLayout .myPeoList {
@@ -352,8 +356,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
 }
 .contWrapper .contLayout.is-active .myProjDetail {
-  width: 0;
-  padding-left: 0.8125rem;
+  width: 2.3125rem;
 }
 .contWrapper .contLayout.is-active .myProjDetail .boxWrap {
   display: none;
@@ -1129,6 +1132,58 @@ table .memo::before {
   font-weight: 700;
 }
 
+.pagination-div {
+  margin-top: 1.5625rem;
+}
+.pagination-div ul {
+  text-align: center;
+}
+.pagination-div ul li {
+  display: inline-block;
+  padding: 0 0.375rem;
+}
+.pagination-div ul li a {
+  color: #878791;
+  font-size: 0.875rem;
+  vertical-align: text-top;
+}
+.pagination-div ul li.active a {
+  color: #29292c;
+  font-weight: 700;
+}
+.pagination-div ul li.first, .pagination-div ul li.last {
+  margin: 0 0.1875rem;
+  width: 0.8125rem;
+  height: 1.0625rem;
+  background-image: url(../img/icoGroup.png);
+  background-position: -20px -140px;
+}
+.pagination-div ul li.first.disabled, .pagination-div ul li.last.disabled {
+  background-position: 0 -140px;
+}
+.pagination-div ul li.last {
+  background-position: -20px -160px;
+}
+.pagination-div ul li.last.disabled {
+  background-position: 0 -160px;
+}
+.pagination-div ul li.prev, .pagination-div ul li.next {
+  margin: 0 0.1875rem;
+  width: 0.75rem;
+  height: 1.0625rem;
+  background-image: url(../img/icoGroup.png);
+  background-position: -20px -100px;
+}
+.pagination-div ul li.prev.disabled, .pagination-div ul li.next.disabled {
+  background-position: 0 -100px;
+}
+.pagination-div ul li.next {
+  background-position: -20px -120px;
+}
+.pagination-div ul li.next.disabled {
+  background-position: 0 -120px;
+}
+
 .goTop {
   position: absolute;
   right: 1.875rem;
@@ -1694,6 +1749,7 @@ input[type=file] {
   margin-top: 0.25rem;
   border-radius: 0.3125rem;
   border: 1px solid #e6e6eb;
+  position: relative;
 }
 .inputGroup label {
   color: #878791;
@@ -1703,6 +1759,50 @@ input[type=file] {
 }
 .inputGroup input {
   margin-top: 0;
+}
+.inputGroup .optionList {
+  display: none;
+  max-height: 13.75rem;
+  overflow-y: auto;
+  position: absolute;
+  top: 3.125rem;
+  left: -1px;
+  width: calc(100% + 2px);
+  color: #878791;
+  padding: 0;
+  border-radius: 0.25rem;
+  border: 1px solid #e6e6eb;
+  background: #fff;
+  z-index: 10;
+}
+.inputGroup .optionList::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.inputGroup .optionList::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.inputGroup .optionList .optionItem {
+  display: block;
+  padding: 0.5rem 0.625rem;
+  margin: 0;
+}
+.inputGroup .optionList .optionItem:hover {
+  color: #29292c;
+  font-weight: 500;
+  background: #e5effa;
+}
+.inputGroup .optionList .optionItem label {
+  display: block;
+  font-weight: 400;
+  vertical-align: middle;
+}
+.inputGroup .optionList .optionItem p {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+.inputGroup .optionList.is-active {
+  display: block !important;
 }
 .inputGroup.upload {
   display: inline-block;
@@ -1714,6 +1814,7 @@ input[type=file] {
   color: #878791;
   display: flex;
   font-size: 0.875rem;
+  align-items: center;
 }
 .inputGroup.upload .list li {
   margin-bottom: 0;
@@ -1833,8 +1934,8 @@ input[type=radio] + label::before {
   content: "";
   display: inline-block;
   vertical-align: sub;
-  width: 1.0625rem;
-  height: 1.0625rem;
+  width: 1.125rem;
+  height: 1.125rem;
   vertical-align: -3px;
   background-image: url(../img/icoGroup.png);
   background-position: 0px 0px;
@@ -1854,8 +1955,8 @@ input[type=radio].bMark {
 input[type=checkbox].bMark + label,
 input[type=radio].bMark + label {
   display: inline-block;
-  width: 1.0625rem;
-  height: 1.0625rem;
+  width: 1.125rem;
+  height: 1.125rem;
   background-image: url(../img/icoGroup.png);
   background-position: 0px -40px;
   vertical-align: sub;
@@ -2308,20 +2409,20 @@ input[type=radio]:checked + label::before {
   background-position: -80px 0px;
 }
 .ico.download {
-  width: 1.0625rem;
-  height: 1.0625rem;
+  width: 1.125rem;
+  height: 1.125rem;
   background-position: -40px 0;
   cursor: pointer;
 }
 .ico.filter {
-  width: 1.0625rem;
-  height: 1.0625rem;
+  width: 1.125rem;
+  height: 1.125rem;
   background-position: -60px 0;
 }
 .ico.fileUpload {
   width: 1.25rem;
-  height: 1.375rem;
-  background-position: -200px 0;
+  height: 1.25rem;
+  background-position: -140px 0;
 }
 .ico.delete {
   width: 0.875rem;
@@ -2329,51 +2430,51 @@ input[type=radio]:checked + label::before {
   width: 14px;
   height: 14px;
   vertical-align: inherit;
-  background-position: -160px 0;
+  background-position: -60px -20px;
   cursor: pointer;
 }
 .ico.refresh {
   width: 1.25rem;
-  height: 1.0625rem;
-  background-position: -120px 0;
+  height: 1.125rem;
+  background-position: -180px 0;
 }
 .ico.setting {
-  width: 1.0625rem;
-  height: 1.0625rem;
+  width: 1.125rem;
+  height: 1.125rem;
   vertical-align: sub;
-  background-position: -280px 0;
+  background-position: -100px 0;
   cursor: pointer;
 }
 .ico.sort {
   width: 1.125rem;
   height: 0.1875rem;
-  background-position: -240px 0;
+  background-position: -120px -20px;
 }
 .ico.change {
-  width: 1.0625rem;
-  height: 1.0625rem;
-  background-position: -220px 0;
+  width: 1.25rem;
+  height: 1.125rem;
+  background-position: -160px 0;
   cursor: pointer;
 }
 .ico.more {
   width: 0.1875rem;
-  height: 1.0625rem;
-  background-position: -142px 0;
+  height: 1.125rem;
+  background-position: -100px -20px;
 }
 .ico.smClose {
   width: 0.75rem;
   height: 0.75rem;
   vertical-align: -1px;
-  background-position: -160px 0;
+  background-position: -60px -20px;
   cursor: pointer;
 }
 .ico.smClose.w {
-  background-position: -180px 0;
+  background-position: -80px -20px;
 }
 .ico.layerClose {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -100px 0;
+  background-position: -40px -20px;
 }
 .ico.plus {
   width: 1.125rem;
@@ -2386,15 +2487,15 @@ input[type=radio]:checked + label::before {
   background-position: 0 -180px;
 }
 .ico.qMark {
-  width: 1.0625rem;
-  height: 1.0625rem;
+  width: 1.125rem;
+  height: 1.125rem;
   vertical-align: -2px;
-  background-position: -80px -20px;
+  background-position: -120px 0;
 }
 .ico.top {
   width: 2.125rem;
   height: 2.125rem;
-  background-position: -40px -20px;
+  background-position: -40px -60px;
 }
 .ico.left {
   width: 0.75rem;
@@ -2414,7 +2515,7 @@ input[type=radio]:checked + label::before {
 }
 .ico.left2 {
   width: 0.625rem;
-  height: 1.0625rem;
+  height: 1.125rem;
   background-position: 0 -100px;
 }
 .ico.left2.is-active {
@@ -2422,7 +2523,7 @@ input[type=radio]:checked + label::before {
 }
 .ico.right2 {
   width: 0.625rem;
-  height: 1.0625rem;
+  height: 1.125rem;
   background-position: 0 -120px;
 }
 .ico.right2.is-active {
@@ -2430,7 +2531,7 @@ input[type=radio]:checked + label::before {
 }
 .ico.left2_dou {
   width: 0.8125rem;
-  height: 1.0625rem;
+  height: 1.125rem;
   background-position: 0 -140px;
 }
 .ico.left2_dou.is-active {
@@ -2438,7 +2539,7 @@ input[type=radio]:checked + label::before {
 }
 .ico.right2_dou {
   width: 0.8125rem;
-  height: 1.0625rem;
+  height: 1.125rem;
   background-position: 0 -160px;
 }
 .ico.right2_dou.is-active {
@@ -3017,7 +3118,7 @@ h6 {
   padding: 1.25rem 1.875rem 1.875rem;
 }
 .myProjDetail .boxWrap + .boxWrap {
-  margin-top: 1.25rem;
+  margin-top: 0.625rem;
 }
 .myProjDetail .boxWrap .boxType {
   max-height: 11.25rem;
@@ -3026,7 +3127,7 @@ h6 {
   margin: 1.875rem 0 1.25rem;
 }
 .myProjDetail .boxWrap .yScroll {
-  height: calc(100vh - 540px);
+  height: calc(100vh - 508px);
 }
 .myProjDetail .boxWrap .yScroll .tit {
   margin-top: 1.25rem;
@@ -3035,6 +3136,11 @@ h6 {
   height: 100%;
 }
 
+.myProjJob .wrap {
+  width: 36.25rem;
+  position: absolute;
+  bottom: 1.25rem;
+}
 .myProjJob .boxWrap {
   margin-top: 0.625rem;
 }
@@ -3061,9 +3167,6 @@ h6 {
 }
 .myProjJob .partList ul li.is-active {
   border: 1px solid #0460d2;
-}
-.myProjJob .partList ul li:first-child {
-  padding: 1.75rem 0.875rem;
 }
 .myProjJob .partList ul p {
   display: flex;
@@ -3092,7 +3195,7 @@ h6 {
   width: calc(100% - 98px);
 }
 .myProjJob .tabContWrap .yScroll {
-  height: calc(100vh - 575px);
+  height: calc(100vh - 553px);
   margin-top: 1.25rem;
   transition: height 0.3s;
   overflow-y: auto;
@@ -3101,7 +3204,7 @@ h6 {
   width: 0;
 }
 .myProjJob .tabContWrap .yScroll.is-active {
-  height: calc(100vh - 355px);
+  height: calc(100vh - 337px);
 }
 .myProjJob .tabContWrap .tabCont {
   position: relative;
@@ -3117,6 +3220,11 @@ h6 {
   height: calc(100vh - 356px);
 }
 
+@media (max-width: 1919px) {
+  .myProjJob .wrap {
+    bottom: 0.625rem;
+  }
+}
 .myPeoList .tabCont {
   padding: 1.25rem 1.875rem;
 }
@@ -3204,7 +3312,7 @@ h6 {
   width: 27.5rem;
   height: 2.875rem;
   margin-top: 0.625rem;
-  padding: 0.3125rem 1rem;
+  padding: 0.5625rem 1rem;
 }
 .projRegister .regiPart .boxWrap .inputGroup.wide {
   width: 37.5rem;

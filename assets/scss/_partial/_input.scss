@@ -284,6 +284,7 @@ input[type=file] {
     margin-top: rem(4);
     border-radius: rem(5);
     border:1px solid $layoutColor;
+    position: relative;
     label{
         color: $placeholder;
         font-weight: 400;
@@ -294,6 +295,59 @@ input[type=file] {
     input{
         margin-top: 0;
     }
+
+
+
+
+    .optionList {
+        display: none;
+        max-height: rem(220);
+        overflow-y: auto;
+        position: absolute; 
+        top: rem(50);
+        left: -1px;
+        width: calc(100% + 2px);
+        color: $subInfo;
+        padding: 0;
+        border-radius: rem(4);
+        border:1px solid $selOptList;
+        background: $white;
+        z-index: 10;
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-clip: padding-box;
+          border: 2px solid transparent;
+        }
+        .optionItem {
+          display: block;
+          padding: rem(8) rem(10);
+          margin: 0;      
+          &:hover {
+            color: $black;
+            font-weight: 500;
+            background: $selHover;
+          }
+          label{
+            display: block;
+            font-weight: 400;
+            vertical-align: middle;
+          }
+          p{
+            font-size: rem(12);
+            line-height: rem(14);
+          }
+        }
+        &.is-active{
+            display: block !important;
+        }
+      }
+
+
+
+
+
 //     .selFile {     
 //         cursor: pointer;
 //         position: relative;
@@ -324,6 +378,7 @@ input[type=file] {
             display: flex;
             //220829
             font-size: rem(14);
+            align-items: center;
         }
         .list{
             li{
@@ -475,8 +530,8 @@ input[type=radio]{
             // width: rem(20);
             // height: rem(20);
             vertical-align: sub;
-            width: rem(17);
-            height: rem(17);
+            width: rem(18);
+            height: rem(18);
             vertical-align: -3px;
             //220829    
             background-image: url(../img/icoGroup.png);
@@ -506,8 +561,8 @@ input[type=radio]{
             //220829
             // width: rem(20);
             // height: rem(20);
-            width: rem(17);
-            height: rem(17);
+            width: rem(18);
+            height: rem(18);
             //220829
             background-image: url(../img/icoGroup.png);
             background-position: 0px -40px;

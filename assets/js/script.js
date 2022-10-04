@@ -260,10 +260,10 @@ function chkAll(){
 
 //더보기 (마이피플)
 // 호출 : openMore.onclick = showMore();
-let openMore = document.querySelectorAll(".showMore");
-let btnDel = document.querySelectorAll(".square");
     
 function showMore(){
+    let openMore = document.querySelectorAll(".showMore");
+    let btnDel = document.querySelectorAll(".square");
     for(let i=0; i<openMore.length; i++){
         openMore[i].addEventListener("click", function(){
             btnDel[i].classList.toggle("is-active");
@@ -298,26 +298,48 @@ let yActive = document.querySelector('.myProjJob .tabCont.is-active .yScroll');
 
 function makeScroll(){      
     
-    /* 220913 수정(setTimeout) -ys */
+    /* 220928 수정 -ys */
     function addScroll(){
-        setTimeout(function(){
-            for(let i=0; i<yScroll.length; i++){
-                // myProjJob.classList.add('is-active');
-                yScroll[i].classList.add('is-active');
-            }
-        }, 500);
-    }
-    function removeScroll(){
-        setTimeout(function(){
-            for(let i=0; i<yScroll.length; i++){
-                // myProjJob.classList.remove('is-active');
-                yScroll[i].classList.remove('is-active');
-            }
-        }, 500);
-    }
+        for(let i=0; i<yScroll.length; i++){
+            yScroll[i].addEventListener('wheel', function(event){
+                let yTop = yScroll[i].scrollTop;
+                let deltaY = event.deltaY;
 
-    ProjTabWrapper.addEventListener('mouseover', addScroll);
-    ProjTabWrapper.addEventListener('mouseout', removeScroll);
+                if(deltaY > 0 && yTop === 0 ){
+                    yScroll[i].classList.add('is-active');
+                }else if(deltaY < 0 && yTop === 0){
+                    yScroll[i].classList.remove('is-active');
+                }
+            });
+            // ProjTabWrapper.addEventListener('mouseout', function(event){
+            //     yScroll[i].classList.remove('is-active');
+            // });
+        }
+    }
+    addScroll();
+    /* //220928 수정 -ys */
+
+
+    /* 220913 수정(setTimeout) -ys */
+    // function addScroll(){
+    //     setTimeout(function(){
+    //         for(let i=0; i<yScroll.length; i++){
+    //             // myProjJob.classList.add('is-active');
+    //             yScroll[i].classList.add('is-active');
+    //         }
+    //     }, 500);
+    // }
+    // function removeScroll(){
+    //     setTimeout(function(){
+    //         for(let i=0; i<yScroll.length; i++){
+    //             // myProjJob.classList.remove('is-active');
+    //             yScroll[i].classList.remove('is-active');
+    //         }
+    //     }, 500);
+    // }
+
+    // ProjTabWrapper.addEventListener('mouseover', addScroll);
+    // ProjTabWrapper.addEventListener('mouseout', removeScroll);    
     /* //220913 수정(setTimeout) -ys */
 
     // myProjJob.addEventListener('wheel', function(event){
