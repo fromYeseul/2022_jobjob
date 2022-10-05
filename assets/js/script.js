@@ -227,6 +227,9 @@ function selectBox(){
 //selectBox();
 
 
+
+
+
 // 체크박스 전체선택     //??????????????? 여러개 구별하도록 수정하기
 // 호출 : chkWrap.onclick = chkAll();
 let chkWrap = document.querySelector('.chkWrap');

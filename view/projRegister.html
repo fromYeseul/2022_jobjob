@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>프로젝트 등록</title>
     
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="hasFooter">
@@ -258,16 +259,16 @@
                                         <ul>
                                             <li>
                                                 <label class="need" for="">요구스킬</label>
-                                                <div class="inputGroup">
+                                                <!-- <div class="inputGroup autoType">
                                                     <div class="inputObj">
                                                         <span>JSP</span>
                                                         <button class="ico smClose w"></button>
                                                     </div>
                                                     <div class="inputObj is-active">
-                                                        <input type="text" placeholder="예) Java, JSP 등">
+                                                        <input type="text" autocomplete="on" placeholder="예) Java, JSP 등">
                                                     </div>
-                                                    <!--220929 추가 -ys -->
-                                                    <ul class="optionList is-active">
+                                                    220929 추가 -ys
+                                                    <ul class="optionList">
                                                         <li class="optionItem">초급</li>
                                                         <li class="optionItem">중급</li>
                                                         <li class="optionItem">고급</li>
@@ -277,7 +278,19 @@
                                                         <li class="optionItem">고급</li>
                                                         <li class="optionItem">특급</li>
                                                     </ul>
-                                                    <!--//220929 추가 -ys -->
+                                                    //220929 추가 -ys
+                                                </div> -->
+
+                                                <div class="inputGroup">
+                                                    <div class="inputObj">
+                                                        <span>JSP</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <!--221004 자동완성 -ys-->
+                                                    <div class="inputObj is-active">
+                                                        <input type="text" id="inputBox">
+                                                    </div>
+                                                    <!--//221004 자동완성 -ys-->
                                                 </div>
                                             </li>
                                         </ul>
@@ -288,7 +301,6 @@
                                             투입 예정일을 선택해주세요. 추후 변경할 수 있습니다.
                                         </div>
                                         <!--//220915 추가 -ys-->
-
                                     </div>
                                 </div>
                             </div>
@@ -577,7 +589,32 @@
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><!--221004 추가 -ys-->
     <script src="../assets/js/script.js"></script>
+
+    <script>
+        /* 221004 자동완성 -ys */
+        $(document).ready(function() {
+            var inputSource = ['java', 'javascript', 'jsp', 'photoshop', 'ajax', 'django'];
+
+            $('#inputBox').autocomplete({
+                source : inputSource,
+                minLength : 1
+            });
+            
+            var inputBox = document.querySelector('#inputBox');
+            inputBox.addEventListener("focus", downArrow);
+
+        });
+
+        function downArrow() {
+            var event = document.createEvent("Event");
+            event.initEvent("keydown", true, true);
+            event.keyCode = 40
+            document.getElementById("inputBox").dispatchEvent(event);
+        };
+        /* //221004 자동완성 -ys */
+    </script>
 
     <script>
     //스크롤이동 - 프로젝트 등록
@@ -663,5 +700,38 @@
         uploadFile();
     </script>
 
+    <!-- <script>
+        
+    function inputAuto(){        
+        let autoType = document.querySelectorAll('.inputObj.is-active');
+        let optList = document.querySelectorAll('.autoType .optionList');
+        for(let i=0; i<autoType.length; i++){         
+            autoType[i].addEventListener('click', function(e){
+                optList[i].classList.add('is-active');
+
+                let optionList_active = document.querySelector('.optionList.is-active');
+                optionList_active.addEventListener('keydown', function(){
+                    var x;
+                    switch(event.keyCode){
+                        case 37:
+                            x="좌측버튼";
+                            break;
+                        case 38:
+                            x="상단버튼";
+                            break;
+                        case 39:
+                            x="우측버튼";
+                            break;
+                        case 40:
+                            x="하단버튼";
+                            break;
+                    }
+                    console.log("입력버튼은" , x);
+                })
+            });
+        }
+    }
+    inputAuto();
+    </script> -->
 </body>
 </html>

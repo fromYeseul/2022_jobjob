@@ -1761,7 +1761,7 @@ input[type=file] {
   margin-top: 0;
 }
 .inputGroup .optionList {
-  display: none;
+  display: none !important;
   max-height: 13.75rem;
   overflow-y: auto;
   position: absolute;
@@ -2184,6 +2184,67 @@ input[type=radio]:checked + label::before {
   right: 0;
   width: 500px;
   height: 40px;
+}
+
+.ui-helper-hidden {
+  display: none;
+}
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ui-autocomplete {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  cursor: default;
+}
+
+.ui-widget-content {
+  background: #ffffff;
+}
+
+.ui-menu {
+  width: 6.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e6e6eb;
+}
+.ui-menu .ui-menu {
+  position: absolute;
+  left: 1.875rem;
+}
+.ui-menu .ui-menu-item {
+  font-size: 0.875rem;
+  margin: 0;
+  cursor: pointer;
+}
+.ui-menu .ui-menu-item:hover {
+  color: #29292c;
+  font-weight: 500;
+  background: #e5effa;
+}
+.ui-menu .ui-menu-item-wrapper {
+  position: relative;
+  padding: 0.5rem 0.625rem;
+}
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+  background: #e5effa;
 }
 
 /* SELECT */
