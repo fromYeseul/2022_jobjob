@@ -321,7 +321,8 @@ h1, h2, h3, h4, h5, h6, p {
   width: calc(100% - 300px);
 }
 .contWrapper .contLayout .myProjJob {
-  width: 40rem;
+  width: calc(100% - 930px);
+  max-width: 55.625rem;
   height: calc(100vh - 60px);
   padding: 1.25rem;
   overflow-y: auto;
@@ -630,7 +631,8 @@ header.center .center {
   width: calc(100% - 98px);
   margin-bottom: 1.875rem;
 }
-.rPanelLayer .filterWrapper {
+
+.filterWrapper {
   width: 12.5rem;
   padding: 2.5rem 1.875rem;
   height: 100%;
@@ -639,16 +641,16 @@ header.center .center {
   box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
   overflow-y: auto;
 }
-.rPanelLayer .filterWrapper::-webkit-scrollbar {
+.filterWrapper::-webkit-scrollbar {
   width: 0;
 }
-.rPanelLayer .filterWrapper .flex {
+.filterWrapper .flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-items: center;
 }
-.rPanelLayer .filterWrapper h4 {
+.filterWrapper h4 {
   margin-bottom: 0;
 }
 
@@ -1868,7 +1870,7 @@ input[type=file] {
   background: transparent;
 }
 .inputObj input[type=text] {
-  height: auto;
+  height: 1.4375rem;
   padding: 0 0.25rem;
   border: 0;
 }
@@ -3274,6 +3276,16 @@ h6 {
 .myProjJob .tabContWrap .tabCont .goTop {
   bottom: 5rem;
 }
+.myProjJob .sticky {
+  position: relative;
+}
+.myProjJob .sticky .filterWrapper {
+  position: absolute;
+  left: -205px;
+  top: 0;
+  border-radius: 0.4375rem;
+  box-shadow: -4px 4px 5px 0 rgba(0, 0, 0, 0.2);
+}
 .myProjJob.is-active .wrap {
   height: calc(100vh + 63px);
 }
@@ -3384,6 +3396,9 @@ h6 {
 .projRegister .regiPart .boxWrap .inputGroup.wide label {
   line-height: 1.25rem;
   margin-left: 0.625rem;
+}
+.projRegister .regiPart .hasTooltip {
+  cursor: default;
 }
 
 .memList {

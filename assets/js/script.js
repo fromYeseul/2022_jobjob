@@ -63,8 +63,8 @@ rightPanel();
 
 // 우측 패널 필터창
 function filterLayer(){
-    let filterWrapper = document.querySelector('.filterWrapper');
     let filter = document.querySelector('.rPanelLayer .filter');
+    let filterWrapper = document.querySelector('.rPanelLayer .filterWrapper');
 
     if(filterWrapper !== null){       
         filter.addEventListener('click', function(e){
@@ -292,6 +292,7 @@ function customScroll(){
 }
 //customScroll();
 
+
 //스크롤 생성
 //호출 : myProjJob.onclick = makeScroll();
 let myProjJob = document.querySelector('.myProjJob');
@@ -302,24 +303,38 @@ let yActive = document.querySelector('.myProjJob .tabCont.is-active .yScroll');
 function makeScroll(){      
     
     /* 220928 수정 -ys */
-    function addScroll(){
-        for(let i=0; i<yScroll.length; i++){
-            yScroll[i].addEventListener('wheel', function(event){
-                let yTop = yScroll[i].scrollTop;
-                let deltaY = event.deltaY;
+    ProjTabWrapper.addEventListener('wheel', moveScroll);
+    myProjJob.addEventListener('wheel', moveScroll);
 
-                if(deltaY > 0 && yTop === 0 ){
+    function moveScroll(event){
+
+        for(let i=0; i<yScroll.length; i++){
+                let yTop = yScroll[i].scrollTop;
+                let eDeltaY = event.deltaY;
+
+                if(eDeltaY > 0 && yTop === 0 ){
                     yScroll[i].classList.add('is-active');
-                }else if(deltaY < 0 && yTop === 0){
+                }else if(eDeltaY < 0 && yTop === 0){
                     yScroll[i].classList.remove('is-active');
                 }
-            });
+            
             // ProjTabWrapper.addEventListener('mouseout', function(event){
             //     yScroll[i].classList.remove('is-active');
             // });
+            
+            // myProjJob.addEventListener('wheel', function(event){
+            //     let yTop = yScroll[i].scrollTop;
+            //     let deltaY = event.deltaY;
+
+            //     if(deltaY > 0 && yTop === 0 ){
+            //         yScroll[i].classList.add('is-active');
+            //     }else if(deltaY < 0 && yTop === 0){
+            //         yScroll[i].classList.remove('is-active');
+            //     }
+            // });
         }
     }
-    addScroll();
+    // makeScroll();
     /* //220928 수정 -ys */
 
 
@@ -357,6 +372,23 @@ function makeScroll(){
     // });
 }
 //makeScroll();
+
+
+//직무추천 필터
+//호출 : filterBtn.onclick = openFilter();
+        
+let filterBtn = document.querySelectorAll('.tabWrapper .button');
+let myProjJobFilter = document.querySelector('.myProjJob .filterWrapper');
+
+function openFilter(){
+    for(let i=0; i<filterBtn.length; i++){
+        filterBtn[i].addEventListener('click', function(){
+            myProjJobFilter.classList.toggle('is-active');
+        })
+    }
+}
+// openFilter();
+
 
 
 //alert 토스트팝업
