@@ -400,17 +400,17 @@
                             <div class="tabWrapper">
                                 <ul class="tabBtnWrap wideType">
                                     <li class="tabBtn prefix">
-                                        <a href="#myProj-1" class="is-active">직무추천 (250)</a>
+                                        <a href="#myProj-1">직무추천 (250)</a>
                                     </li>
                                     <li class="tabBtn center">
-                                        <a href="#myProj-2">지원접수 (4)</a>
+                                        <a href="#myProj-2" class="is-active">지원접수 (4)</a>
                                     </li>
                                     <li class="tabBtn suffix">
                                         <a href="#myProj-3">투입입원 (1/4)</a>
                                     </li>
                                 </ul>
                                 <div class="tabContWrap">
-                                    <div id="myProj-1" class="tabCont is-active">
+                                    <div id="myProj-1" class="tabCont">
                                         
                                         <div class="hasBtn">  
                                             <a href="#" class="button white midSize">
@@ -728,7 +728,7 @@
                                             <button class="fullSize suffix">지원제의</button>
                                         </div>
                                     </div>
-                                    <div id="myProj-2" class="tabCont">
+                                    <div id="myProj-2" class="tabCont is-active">
 
                                         <div class="hasBtn">  
                                             <a href="#" class="button white midSize">
@@ -835,6 +835,37 @@
                                                                 지원취소 
                                                             </div>
                                                         </div>
+                                                        <!--221007 추가-ys-->
+                                                        <div class="bottom">
+                                                            <ul>
+                                                                <li>
+                                                                    <span class="comment">5/3일 면접봤고 스킬 및 태도 괜찮음</span>
+                                                                    <span>2022.12.16 오전 11:12</span>
+                                                                    <span>한아라</span>
+                                                                    <a href="#delMessage"  class="layerOpen">
+                                                                        <i class="ico smClose"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="comment">5/3일 면접잡음</span>
+                                                                    <span>2022.12.16 오전 11:12</span>
+                                                                    <span>한아라</span>
+                                                                    <a href="#delMessage"  class="layerOpen">
+                                                                        <i class="ico smClose"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="comment">장이사님 추천인력</span>
+                                                                    <span>2022.12.16 오전 11:12</span>
+                                                                    <span>한아라</span>
+                                                                    <a href="#delMessage"  class="layerOpen">
+                                                                        <i class="ico smClose"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <div class="txtCenter"><a href="#">[전체보기]</a></div>                                                                
+                                                            </ul>
+                                                        </div>
+                                                        <!--//221007 추가-ys-->
                                                     </li>
                                                     <li class="boxList headType">
                                                         <div class="head">
@@ -1571,6 +1602,19 @@
         <div class="layerDim"></div>    
     </div>
     <!--//문자보내기 팝업-->
+
+    <!--221007 컴펌팝업-->
+    <div id="delMessage" class="modalLayer center">
+        <div class="layerBox confirmType">
+            <div class="modalCont center">메모를 삭제하시겠습니까?</div>
+            <div class="modalFooter halfType">
+                <button class="fullSize white prefix layerClose">취소</button>
+                <button class="fullSize suffix layerClose">확인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//221007 컴펌팝업-->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>

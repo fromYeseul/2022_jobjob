@@ -88,16 +88,14 @@
             // line-height: rem(48);
             line-height: rem(42);
             //220829
-            text-align: center;
             font-weight: 500;
+            margin-left: -4px;
             &:first-child{
+                margin-left: 0;
                 a{
                     border-radius: rem(4) 0 0 rem(4);
                 }                
             } 
-            &:not(first-child){
-                margin-left: -4px;
-            }
             &:last-child{                
                 a{
                     border-radius: 0 rem(4) rem(4) 0;
@@ -123,6 +121,23 @@
             a{
                 width: rem(194);
                 font-size: rem(18);
+            }
+        }
+        &.smType{
+            padding: 0;
+            li{
+                line-height: rem(28);
+                font-weight: 500;
+                margin: 0;
+                a{
+                    width: rem(74);
+                    height: rem(30);
+                    font-size: rem(14);
+                    border-radius: rem(4);
+                }
+                & + li{
+                    margin-left: rem(4);
+                }
             }
         }
     }

@@ -4,7 +4,7 @@
 }
 .tableBox{
     overflow-y: auto;
-    th{
+    thead{
         position: sticky;
         top:0;
     }
@@ -20,56 +20,44 @@ table{
     //220829
     font-size: rem(14);
     //220829
-    th, td{
-        text-align: center;
-        background: $white;
-        border-top: 1px solid $tableBorder;
+    text-align: center;
+    background: $white;
+    tr{
         border-bottom: 1px solid $tableBorder;
+        &:last-child{
+            td{
+                border-bottom: 0;
+            }
+        }
         .select{
             text-align: left;
             color: $black;
         }
-    }
-    th{
-        color: $white;
-        font-weight: 500;
-        padding: rem(14) 0;
-        border-top: none;
-        background: $tableBgGray;
-    }
-    .hasDouble{
         th{
-            padding: rem(4) 0;
-        }
-    }
-    td{
-        color: $tableGray;
-        //220829
-        // padding: rem(14) 0;
-        padding: 0;
-        //220829
-        &.nodata{
-            display: table-cell;
+            color: $white;
             font-weight: 500;
-            background: transparent;
+            padding: rem(14) 0;
+            background: $tableBgGray;
         }
-        &.right{
-            text-align: right;
-        }
-        &.hasToast{
-            position: relative;
-            .alertToast{
-                top: 50%;
-                left: 100%;
-                transform: translateY(-50%);
-                min-width: rem(230);
+        td{
+            color: $tableGray;
+            padding: rem(14) 0;
+            &.nodata{
+                display: table-cell;
+                font-weight: 500;
+                background: transparent;
             }
-        }
-    }
-    tr{
-        &:last-child{
-            td{
-                border-bottom: 0;
+            &.right{
+                text-align: right;
+            }
+            &.hasToast{
+                position: relative;
+                .alertToast{
+                    top: 50%;
+                    left: 100%;
+                    transform: translateY(-50%);
+                    min-width: rem(230);
+                }
             }
         }
     }
@@ -80,9 +68,55 @@ table{
             border-bottom: 0;
         }
     }
-    &.hasInput{
+    &.noBd{
+        text-align: left;
+        tr{
+            border:0;
+            th{
+                color: $black;
+                background: transparent;
+            }
+            td{
+                padding: 0;
+            }
+        }
+    }
+    &.mixType{
+        th{
+            padding: rem(4) 0;
+        }
+        td{         
+            &:first-child{
+                border-right: 1px solid $tableBorder;
+            }
+            &.bg{
+                background: $bgColor;
+                .flex{
+                    p{
+                        color: $black;
+                        font-weight: 700;
+                        padding: rem(20);
+                        @include heightArray;
+
+                    }
+                }
+            }   
+        }
+    }
+    &.rowType{
+        text-align: left;
+        tr{
+            &:last-child{
+                border-bottom: 0;
+            }
+        }
         td{
-            padding: rem(10);
+            padding: rem(12);
+            &:first-child{
+                font-weight: 700;
+                padding: rem(12) rem(6);
+                border-right: 1px solid $tableBorder;
+            }
         }
     }
     .ellipsis{

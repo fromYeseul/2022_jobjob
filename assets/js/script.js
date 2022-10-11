@@ -110,27 +110,24 @@ function tabMenu(){
             tabBtn[i].addEventListener('click',function(e){
                 e.preventDefault();
 
+                // let tab = this.closest('.tabWrapper');
                 let tab_id = this.closest('.tabWrapper').id;
-                let tabHref = e.target.getAttribute('href');    //e의 역할?????
+                let tabHref = e.target.getAttribute('href');
                 let tabTarget = tabHref.replace('#','');
-
-                // for(let x=0; x < tabCont.length; x++){
-                //     if (tabCont[x].closest('.tabWrapper').id == tab_id){
-                //         tabCont[x].style.display='none';
-                //     }
-                // }
-                //document.getElementById(tabTarget).style.display="block";
-
-                for(let j=0; j < tabBtn.length; j++){
-                    if (tabBtn[j].closest('.tabWrapper').id == tab_id){
-                        tabBtn[j].classList.remove('is-active');
-                        tabCont[j].classList.remove('is-active');
+                
+                for(let i=0; i < tabBtn.length; i++){
+                    if (tabBtn[i].closest('.tabWrapper').id === tab_id){
+                        tabBtn[i].classList.remove('is-active');
                         e.target.classList.add('is-active');
-                        //tabCont[j].style.display='none';   //???????? 왜 remove is-active는 안되지???? ,  ???????? 왜 i로 통일은 안되지????
                     }
                 }
-                //document.getElementById(tabTarget).style.display="block";
-                document.getElementById(tabTarget).classList.add('is-active');
+
+                for(let j=0; j < tabCont.length; j++){
+                    if (tabCont[j].closest('.tabWrapper').id === tab_id){                             
+                        tabCont[j].classList.remove('is-active');
+                        document.getElementById(tabTarget).classList.add('is-active');                        
+                    }
+                }
             });
         }       
     }else{
