@@ -154,6 +154,12 @@ textarea{
             outline: 1px solid $mainColor;
         } 
     }
+    &.editType{
+        width: 100%;
+        height: rem(36);
+        padding: rem(8) 0;
+        border:0;
+    }
     &:focus{        
         outline: 1px solid $mainColor;
     }
@@ -507,7 +513,8 @@ textarea{
 .textForm{
     padding: rem(5);
     border-radius: rem(4);
-    border:1px solid $inputGray; 
+    // border:1px solid $inputGray; 
+    border:1px solid $layoutColor;
     textarea{
         padding: auto;
         outline: none;

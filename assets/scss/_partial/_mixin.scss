@@ -11,6 +11,11 @@
     justify-content: space-between;
 }
 
+@mixin stretchArray{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
 
 //flex
 //1:1
@@ -70,6 +75,18 @@
     -webkit-line-clamp: 2;
     text-align: left;
     -webkit-box-orient: vertical;
+}
+
+@mixin ellipsis-5 {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: inherit;
+    word-wrap:break-word;
+    -webkit-line-clamp: 5;
+    text-align: left;
+    -webkit-box-orient: vertical;
+    cursor: initial;
 }
 
 

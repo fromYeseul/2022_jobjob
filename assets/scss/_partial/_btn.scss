@@ -1,6 +1,9 @@
 .btnWrap{
     &.center{
         text-align: center;
+        &:before{
+            display: none;
+        }
     }
     &.right{
         text-align: right;
@@ -15,6 +18,7 @@ button,
     font-weight: 700;
     text-align: center;
     border-radius: rem(6);
+    border:1px solid $mainColor;
     background-color: $mainColor;
     cursor: pointer;
     //disable
@@ -29,6 +33,10 @@ button,
     & + button,
     & + .button{
         margin-left: rem(4);
+        &.fullSize{
+            margin-left: 0;
+            margin-top: rem(20);
+        }
     }
     //사이즈
     &.fullSize{
@@ -43,7 +51,7 @@ button,
         line-height: rem(38);
     }
     &.smSize{
-        //width: rem(74);
+        width: rem(74);
         line-height: rem(30);
         padding: 0 rem(12);
         font-weight: 400;
@@ -77,6 +85,7 @@ button,
     //디자인
     &.ico{
         background-color: inherit;
+        border: 0;
     }
     &.white{
         //width: rem(98);
@@ -114,8 +123,19 @@ button,
             cursor:not-allowed;
         }
     }
+    &.showMemo{
+        line-height: rem(24);
+        background: $bgColor;
+        border: 1px solid $bgColor;
+        &.is-active{
+            .expand{
+                transform: rotate(180deg);
+            }
+        }
+    }
     &.warning{
         background: $error;
+        border: 1px solid $error;
     }
     &.round{
         // width: rem(64);
@@ -152,11 +172,15 @@ button,
         min-width: rem(72);
         //220829
         padding: rem(3) 0;
-        color: $black;
+        color: $subInfo;
         font-weight: 400;
         background: $white;
         border-radius: 0;
         border:1px solid $selGray;
+        &:hover{
+            color: $black;
+            background: $selHover;
+        }
         &.is-active{
             display: block;
         }
@@ -207,6 +231,7 @@ span{
     padding: 0 rem(6);
     background: $bgColor;
     border-radius: rem(20);
+    border: 0;
     //border-color: $tableBgGray;
     //cursor: inherit;
 }

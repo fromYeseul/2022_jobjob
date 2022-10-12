@@ -5,6 +5,7 @@
     // padding: rem(40);
     width: rem(440);
     background: $white;
+    box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
     .tabBtnWrap{
         li{
             a{
@@ -12,7 +13,49 @@
             }
         }
     }
-    .tabContWrap{
+    .boxTop{
         padding: rem(20) rem(40);
+    }
+    .boxListWrap{
+        padding: 0;
+        height: 0;
+        @include scroll_0;
+        &.nodata{
+            height: calc(100vh - 190px);
+        }
+        &.is-active{
+            padding: rem(20) rem(40);
+            padding-top: 0;
+            height: calc(100vh - 190px);
+        }
+        li{            
+            margin-top: rem(20);
+        }
+    }
+    .boxList{
+        cursor: inherit;
+        &.headType{
+            .cont{
+                .prefix{
+                    width: 100%;
+                    ul{
+                        width: 100%;
+                    }
+                }
+                .txtCenter{
+                    margin-top: rem(10);
+                }
+            }
+        }
+        .memMemo{
+            a{
+                display: block;
+                margin-bottom: rem(4);
+                font-weight: 700;
+                text-decoration: underline;
+                // padding: rem(2) rem(4);
+                // background: $bgColor;
+            }
+        }
     }
 }

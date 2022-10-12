@@ -21,6 +21,7 @@
     }
 }
 
+//직각타입
 .boxWrap{
     background: $white;
     border-radius: rem(7);
@@ -117,6 +118,7 @@
 }
 
 
+//둥근타입
 .boxList{
     background: $white;
     border-radius: rem(5);
@@ -139,13 +141,49 @@
     }
     button,
     .button{
-        &.white{
-            border: 1px solid $btnGray;
-        }
+        // &.white{
+        //     border: 1px solid $btnGray;
+        // }
         &.round{
             min-width: rem(55);
             line-height: rem(26);
         }
+    }
+    .showMore{
+        position: absolute;
+        right: 0;
+        //220829
+        // top: -45px;
+        top: 0;
+        //220829
+        padding: 0 rem(5);
+        transform: translateX(50%);
+    }
+    .moreList{
+        position: absolute;
+        //220829
+        // top: rem(35);
+        // right: -60px;
+        top: rem(28);
+        right: -45px;
+        //220829
+        // .moreList{
+            display: none;
+            //220829
+            // min-width: rem(84);
+            min-width: rem(72);
+            //220829
+            border:1px solid $selGray;
+            .square{
+                padding: rem(3) rem(10);
+                border:0;
+                margin-left: 0;
+                text-align: left;
+            }
+            &.is-active{
+                display: block;
+            }
+        // }
     }
     &.listType{
         //margin-bottom: 1px;
@@ -177,9 +215,13 @@
         padding: rem(20) rem(25);
         //220829
         border:1px solid $layoutColor;
-        @include sideArray;
+        @include stretchArray;
         &:first-child{
             margin-top:0;
+        }
+        > .prefix,
+        > .suffix{
+            @include heightArray;
         }
         .prefix{
             //220829
@@ -254,24 +296,6 @@
             text-align: center;
             color: $subInfo;
             position: relative;
-            > .showMore{
-                position: absolute;
-                right: 0;
-                //220829
-                // top: -45px;
-                top: -27px;
-                //220829
-                padding: 0 rem(5);
-            }
-            .square{
-                position: absolute;
-                //220829
-                // top: rem(35);
-                // right: -60px;
-                top: rem(28);
-                right: -56px;
-                //220829
-            }
             .info{
                 color:$subInfo;
                 margin-bottom: rem(10);
@@ -339,6 +363,10 @@
                         vertical-align: middle;
                         margin-right: rem(10);
                     }
+                    p{
+                        color: $subInfo;
+                        font-weight: 500;
+                    }
                 }
                 .memSkill{
                     @include ellipsis;
@@ -367,6 +395,15 @@
                         z-index: 1;
                         letter-spacing: 1px;
                         line-height: rem(12);
+                    }
+                    &.editType{
+                        padding:0;
+                        background: transparent;
+                        @include ellipsis-5;
+                        width: 100%;
+                        &:before{
+                            display: none;
+                        }
                     }
                 }
             }   
@@ -425,6 +462,10 @@
             .txtCenter{
                 margin-top: 5px;
             }
+        }        
+        .showMore{
+            right: rem(15);
+            top: rem(14);
         }
         textarea, input[type=text]{
             margin-top: rem(5);

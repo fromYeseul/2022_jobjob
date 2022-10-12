@@ -177,6 +177,10 @@ h1, h2, h3, h4, h5, h6, p {
   display: none;
 }
 
+.txtLeft {
+  text-align: left;
+}
+
 .txtCenter {
   text-align: center;
 }
@@ -967,12 +971,50 @@ footer.toast button + button {
   top: 0;
   width: 27.5rem;
   background: #fff;
+  box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
 }
 .quickView .tabBtnWrap li a {
   width: 7.5rem;
 }
-.quickView .tabContWrap {
+.quickView .boxTop {
   padding: 1.25rem 2.5rem;
+}
+.quickView .boxListWrap {
+  padding: 0;
+  height: 0;
+  overflow-y: auto;
+}
+.quickView .boxListWrap::-webkit-scrollbar {
+  width: 0;
+}
+.quickView .boxListWrap.nodata {
+  height: calc(100vh - 190px);
+}
+.quickView .boxListWrap.is-active {
+  padding: 1.25rem 2.5rem;
+  padding-top: 0;
+  height: calc(100vh - 190px);
+}
+.quickView .boxListWrap li {
+  margin-top: 1.25rem;
+}
+.quickView .boxList {
+  cursor: inherit;
+}
+.quickView .boxList.headType .cont .prefix {
+  width: 100%;
+}
+.quickView .boxList.headType .cont .prefix ul {
+  width: 100%;
+}
+.quickView .boxList.headType .cont .txtCenter {
+  margin-top: 0.625rem;
+}
+.quickView .boxList .memMemo a {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .condition {
@@ -1028,6 +1070,9 @@ table {
 table tr {
   border-bottom: 1px solid #e6e6eb;
 }
+table tr.bg {
+  background: rgba(4, 96, 210, 0.02);
+}
 table tr:last-child td {
   border-bottom: 0;
 }
@@ -1049,6 +1094,10 @@ table tr td.nodata {
   display: table-cell;
   font-weight: 500;
   background: transparent;
+}
+table tr td.left {
+  text-align: left;
+  padding-left: 0.875rem;
 }
 table tr td.right {
   text-align: right;
@@ -1083,19 +1132,15 @@ table.noBd tr td {
 table.mixType th {
   padding: 0.25rem 0;
 }
+table.mixType td {
+  padding: 0.375rem 0;
+}
 table.mixType td:first-child {
   border-right: 1px solid #e6e6eb;
 }
-table.mixType td.bg {
-  background: #f2f2f7;
-}
-table.mixType td.bg .flex p {
+table.mixType td p {
   color: #29292c;
   font-weight: 700;
-  padding: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 table.rowType {
   text-align: left;
@@ -1369,6 +1414,17 @@ table .memo::before {
   width: 12.125rem;
   font-size: 1.125rem;
 }
+.tabBtnWrap.btnType.midType li {
+  line-height: 2.375rem;
+}
+.tabBtnWrap.btnType.midType li a {
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+}
+.tabBtnWrap.btnType.midType li + li {
+  margin-left: 0.25rem;
+}
 .tabBtnWrap.btnType.smType {
   padding: 0;
 }
@@ -1398,6 +1454,9 @@ table .memo::before {
 .btnWrap.center {
   text-align: center;
 }
+.btnWrap.center:before {
+  display: none;
+}
 .btnWrap.right {
   text-align: right;
 }
@@ -1409,6 +1468,7 @@ button,
   font-weight: 700;
   text-align: center;
   border-radius: 0.375rem;
+  border: 1px solid #0460d2;
   background-color: #0460d2;
   cursor: pointer;
 }
@@ -1425,6 +1485,12 @@ button + button, button + .button,
 .button + .button {
   margin-left: 0.25rem;
 }
+button + button.fullSize, button + .button.fullSize,
+.button + button.fullSize,
+.button + .button.fullSize {
+  margin-left: 0;
+  margin-top: 1.25rem;
+}
 button.fullSize,
 .button.fullSize {
   width: 100%;
@@ -1437,6 +1503,7 @@ button.lowSize,
 }
 button.smSize,
 .button.smSize {
+  width: 4.625rem;
   line-height: 1.875rem;
   padding: 0 0.75rem;
   font-weight: 400;
@@ -1467,6 +1534,7 @@ button.xlSize,
 button.ico,
 .button.ico {
   background-color: inherit;
+  border: 0;
 }
 button.white,
 .button.white {
@@ -1503,9 +1571,20 @@ button.white:disabled, button.white.disabled,
   color: #b7b7c4;
   cursor: not-allowed;
 }
+button.showMemo,
+.button.showMemo {
+  line-height: 1.5rem;
+  background: #f2f2f7;
+  border: 1px solid #f2f2f7;
+}
+button.showMemo.is-active .expand,
+.button.showMemo.is-active .expand {
+  transform: rotate(180deg);
+}
 button.warning,
 .button.warning {
   background: #ff1236;
+  border: 1px solid #ff1236;
 }
 button.round,
 .button.round {
@@ -1539,11 +1618,16 @@ button.square,
   display: none;
   min-width: 4.5rem;
   padding: 0.1875rem 0;
-  color: #29292c;
+  color: #878791;
   font-weight: 400;
   background: #fff;
   border-radius: 0;
   border: 1px solid #b7b7c4;
+}
+button.square:hover,
+.button.square:hover {
+  color: #29292c;
+  background: #e5effa;
 }
 button.square.is-active,
 .button.square.is-active {
@@ -1590,6 +1674,7 @@ span.button {
   padding: 0 0.375rem;
   background: #f2f2f7;
   border-radius: 1.25rem;
+  border: 0;
 }
 
 .point {
@@ -1716,6 +1801,15 @@ input[type=date].need:focus,
 textarea.need:focus {
   border: 0;
   outline: 1px solid #0460d2;
+}
+input[type=text].editType,
+input[type=password].editType,
+input[type=date].editType,
+textarea.editType {
+  width: 100%;
+  height: 2.25rem;
+  padding: 0.5rem 0;
+  border: 0;
 }
 input[type=text]:focus,
 input[type=password]:focus,
@@ -2641,6 +2735,11 @@ input[type=radio]:checked + label::before {
   height: 2.125rem;
   background-position: -40px -60px;
 }
+.ico.expand {
+  width: 0.75rem;
+  height: 0.375rem;
+  background: url(../img/icoSelect.png) no-repeat;
+}
 .ico.left {
   width: 0.75rem;
   height: 1.25rem;
@@ -2840,14 +2939,34 @@ input[type=radio]:checked + label::before {
   margin-top: 1rem;
   position: relative;
 }
-.boxList button.white,
-.boxList .button.white {
-  border: 1px solid #b7b7c4;
-}
 .boxList button.round,
 .boxList .button.round {
   min-width: 3.4375rem;
   line-height: 1.625rem;
+}
+.boxList .showMore {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 0.3125rem;
+  transform: translateX(50%);
+}
+.boxList .moreList {
+  position: absolute;
+  top: 1.75rem;
+  right: -45px;
+  display: none;
+  min-width: 4.5rem;
+  border: 1px solid #b7b7c4;
+}
+.boxList .moreList .square {
+  padding: 0.1875rem 0.625rem;
+  border: 0;
+  margin-left: 0;
+  text-align: left;
+}
+.boxList .moreList.is-active {
+  display: block;
 }
 .boxList.listType {
   padding: 1rem 1.25rem;
@@ -2878,11 +2997,17 @@ input[type=radio]:checked + label::before {
   padding: 1.25rem 1.5625rem;
   border: 1px solid #e6e6eb;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
 }
 .boxList.flexType:first-child {
   margin-top: 0;
+}
+.boxList.flexType > .prefix,
+.boxList.flexType > .suffix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .boxList.flexType .prefix {
   width: 8.75rem;
@@ -2941,17 +3066,6 @@ input[type=radio]:checked + label::before {
   color: #878791;
   position: relative;
 }
-.boxList.flexType .suffix > .showMore {
-  position: absolute;
-  right: 0;
-  top: -27px;
-  padding: 0 0.3125rem;
-}
-.boxList.flexType .suffix .square {
-  position: absolute;
-  top: 1.75rem;
-  right: -56px;
-}
 .boxList.flexType .suffix .info {
   color: #878791;
   margin-bottom: 0.625rem;
@@ -3007,6 +3121,10 @@ input[type=radio]:checked + label::before {
   vertical-align: middle;
   margin-right: 0.625rem;
 }
+.boxList.headType .cont .prefix .memName p {
+  color: #878791;
+  font-weight: 500;
+}
 .boxList.headType .cont .prefix .memSkill {
   width: 90%;
   overflow: hidden;
@@ -3047,6 +3165,23 @@ input[type=radio]:checked + label::before {
   z-index: 1;
   letter-spacing: 1px;
   line-height: 0.75rem;
+}
+.boxList.headType .cont .prefix .memMemo.editType {
+  padding: 0;
+  background: transparent;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: inherit;
+  word-wrap: break-word;
+  -webkit-line-clamp: 5;
+  text-align: left;
+  -webkit-box-orient: vertical;
+  cursor: initial;
+  width: 100%;
+}
+.boxList.headType .cont .prefix .memMemo.editType:before {
+  display: none;
 }
 .boxList.headType .cont .center,
 .boxList.headType .cont .suffix {
@@ -3095,6 +3230,10 @@ input[type=radio]:checked + label::before {
 }
 .boxList.headType .bottom .txtCenter {
   margin-top: 5px;
+}
+.boxList.headType .showMore {
+  right: 0.9375rem;
+  top: 0.875rem;
 }
 .boxList.headType textarea, .boxList.headType input[type=text] {
   margin-top: 0.3125rem;
@@ -3514,7 +3653,7 @@ h6 {
   margin-top: 1.875rem;
 }
 .memDetail .boxListWrap {
-  max-height: calc(100vh - 210px);
+  max-height: calc(100vh - 240px);
   margin-top: 0.625rem;
 }
 .memDetail > .tabWrapper > .tabContWrap {
@@ -3533,7 +3672,7 @@ h6 {
 
 #memDetail-2 .tableBox {
   margin-top: 0.625rem;
-  max-height: calc(100vh - 230px);
+  max-height: calc(100vh - 240px);
 }
 
 .resumeWrapper {
