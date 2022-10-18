@@ -92,7 +92,9 @@ $footerGray : $titleGray;
 .mainC{
     color: $mainColor;
 }
-
+.subInfo{
+    color: $subInfo;
+}
 
 //에러텍스트
 .error{
@@ -138,6 +140,12 @@ $footerGray : $titleGray;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.flex_2_1{
+    display: flex;
+    .prefix{flex: 1 1 60%;}
+    .suffix{flex: 2 1 40%;}
 }
 
 .block{
@@ -219,6 +227,7 @@ $footerGray : $titleGray;
 
 .mt20{margin-top: rem(20) !important;}
 .mt30{margin-top: rem(30) !important;}
+.mt50{margin-top: rem(50) !important;}
 
 .mb20{margin-bottom: rem(20) !important;}
 

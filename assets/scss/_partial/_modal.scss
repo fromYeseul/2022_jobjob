@@ -36,6 +36,16 @@
             width: rem(330);
             padding: rem(30) rem(45);
         }
+        &.fullSize{
+            width: rem(1800);
+            overflow-x: auto;
+            padding: rem(40) rem(60);
+            max-height: calc(100% - 120px);
+            .modalFooter{
+                width: 25%;
+                margin: rem(40) auto;
+            }
+        }
     }
     .layerDim{
         position: absolute;
@@ -73,6 +83,11 @@
     .flexBetween{
         color:$subInfo;
     }
+    .flex{
+        .suffix{
+            margin-left: rem(12);
+        }
+    }
 }
 .modalFooter{
     //width: 100%;
@@ -88,7 +103,10 @@
     }
     button{
         + button{
-            margin-left: rem(10);
+            &.fullSize{
+                margin-left: rem(10);
+                margin-top: 0;
+            }
         }
     }
 }

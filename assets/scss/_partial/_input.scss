@@ -129,6 +129,10 @@ textarea{
     border:1px solid $inputGray;   
     resize: none; 
     cursor: pointer;
+    &.xsSize{
+        width: rem(60);
+        height: rem(40);
+    }
     &.smSize{
         width: rem(70);
     }
@@ -686,6 +690,17 @@ input[type=radio]{
             }
         }
     }
+    &.type2{
+        input[type=radio]{
+            &:checked{
+                + label{
+                    color: $mainColor;
+                    background: $white;
+                    border: 1px solid $mainColor;
+                }
+            }
+        }
+    }
 }
 
 /* 라디오박스 */
@@ -762,43 +777,100 @@ input[type=radio]{
 
 /* 박스타입 라디오박스 */
 .boxType{
-    display: flex;
-    input[type=radio]{
-        width: 0;
-        opacity: 0;
-        position: fixed;
-        + label{
-            width: 20%;
-            min-width: rem(104);
-            height: rem(90);
-            margin-left: -1px;
-            // margin-top: -1px;
-            font-weight: 400;
-            padding: rem(20) 0;
-            border: 1px solid $layoutColor;
-            //border-left: 0;
-            text-align: center;
-            @include heightArray;
-            cursor: pointer;
-            cursor: pointer;
-            &::before{
-                display: none;
-            }
-        }        
-        &:first-child{
-            + label{
-                margin-left: 0;
-            }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li{        
+        width: 25%;
+        min-width: rem(104);
+        height: rem(90);
+        margin-left: -1px;
+        margin-top: -1px;
+        font-weight: 400;
+        // padding: rem(20) 0;
+        // border: 1px solid $layoutColor;
+        //border-left: 0;
+        text-align: center;
+        @include heightArray;
+        cursor: pointer;
+        &:nth-child(1){
+            margin-top: 0;
         }
-        &:checked{
+        &:nth-child(4n + 1){
+            margin-left: 0;
+        }
+        &:nth-child(4n),
+        &:nth-child(4n + 2),
+        &:nth-child(4n + 3){
+            margin-top: 0;
+        }
+        input{
+            width: 0;
+            opacity: 0;
+            position: fixed;
             + label{
-                color: $white;
-                font-weight: 700;
-                background: $mainColor;
-                border: 1px solid $mainColor;
+                width: 100%;
+                height: 100%;
+                padding: rem(24) 0;
+                border: 1px solid $layoutColor;
+                &::before{
+                    display: none;
+                }
+            }
+            &:checked{
+                + label{
+                    color: $white;
+                    font-weight: 700;
+                    background: $mainColor;
+                    border: 1px solid $mainColor;
+                }
             }
         }
     }
+    // input[type=radio]{
+    //     width: 0;
+    //     opacity: 0;
+    //     position: fixed;
+    //     + label{
+    //         // width: 20%;
+    //         width: 25%;
+    //         min-width: rem(104);
+    //         height: rem(90);
+    //         margin-left: -1px;
+    //         margin-top: -1px;
+    //         font-weight: 400;
+    //         padding: rem(20) 0;
+    //         border: 1px solid $layoutColor;
+    //         //border-left: 0;
+    //         text-align: center;
+    //         @include heightArray;
+    //         cursor: pointer;
+    //         &::before{
+    //             display: none;
+    //         }
+    //     }
+    //     &:nth-child(4n+1){
+    //         + label{
+    //             margin-left: 0;
+    //             margin-top: 0;
+    //         }
+    //     }        
+    //     // &:nth-child(1){
+    //     //     + label{
+    //     //         margin-left: 0;
+    //     //         margin-top: 0;
+    //     //     }
+    //     // }
+    //     &:checked{
+    //         + label{
+    //             color: $white;
+    //             font-weight: 700;
+    //             background: $mainColor;
+    //             border: 1px solid $mainColor;
+    //         }
+    //     }
+    // }
 }
 
 

@@ -6,10 +6,32 @@
     width: rem(440);
     background: $white;
     box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
+    &.fixedHeight{
+        position: relative;
+        box-shadow: none;
+        width: rem(400);
+        .tabBtnWrap{
+            padding: rem(20);
+            padding-bottom: 0;
+        }
+        .boxListWrap{
+            &.is-active{
+                padding: rem(20);
+                height: calc(100vh - 115px);
+            }
+            .boxList{
+                .moreList{
+                    right: -25px;
+                }
+            }
+        }
+    }
     .tabBtnWrap{
         li{
+            width: 30%;
             a{
-                width: rem(120);
+                display: block;
+                width: 100%;
             }
         }
     }
@@ -56,6 +78,9 @@
                 // padding: rem(2) rem(4);
                 // background: $bgColor;
             }
+        }
+        .btnWrap{
+            margin-top: rem(5);
         }
     }
 }

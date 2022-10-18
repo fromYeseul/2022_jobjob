@@ -262,7 +262,7 @@ function chkAll(){
 
 
 //더보기 (마이피플)
-// 호출 : openMore.onclick = showMore();    
+// 호출 : showMore();    
 function showMore(){
     let openMore = document.querySelectorAll(".showMore");
     let moreList = document.querySelectorAll(".moreList");
@@ -353,6 +353,7 @@ function toastClose(){
 
 
 //퀵뷰 메모 더보기
+//호출 : showMemoList();
 function showMemoList(){
     let showMemo = document.querySelector('.showMemo');
     let memoList = document.querySelector('.memoList');
@@ -361,7 +362,7 @@ function showMemoList(){
         memoList.classList.toggle('is-active');
     })
 }
-showMemoList();
+// showMemoList();
 
 //허책임님 alert 팝업
 //let removeToast;

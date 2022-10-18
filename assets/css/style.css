@@ -124,6 +124,10 @@ h1, h2, h3, h4, h5, h6, p {
   color: #0460d2;
 }
 
+.subInfo {
+  color: #878791;
+}
+
 .error {
   display: none;
   color: #ff1236;
@@ -167,6 +171,16 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.flex_2_1 {
+  display: flex;
+}
+.flex_2_1 .prefix {
+  flex: 1 1 60%;
+}
+.flex_2_1 .suffix {
+  flex: 2 1 40%;
 }
 
 .block {
@@ -243,6 +257,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .mt30 {
   margin-top: 1.875rem !important;
+}
+
+.mt50 {
+  margin-top: 3.125rem !important;
 }
 
 .mb20 {
@@ -323,7 +341,7 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
 }
 .contWrapper .contLayout .myProjDetail {
-  width: 39.375rem;
+  width: 30.9375rem;
   padding: 1.25rem;
   padding-right: 0;
   transition: all 0.3s;
@@ -338,7 +356,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: calc(100% - 300px);
 }
 .contWrapper .contLayout .myProjJob {
-  width: calc(100% - 930px);
+  width: calc(100% - 1195px);
   max-width: 55.625rem;
   height: calc(100vh - 60px);
   padding: 1.25rem;
@@ -582,17 +600,16 @@ header .center a.is-active {
 }
 header .suffix li {
   display: inline-block;
-  margin-left: 2.1875rem;
 }
 header .suffix li.userTeam {
   font-weight: 700;
-  margin-left: 0;
+  margin-right: 2.1875rem;
 }
-header .suffix li .logState {
+header .suffix li:nth-child(3), header .suffix li:nth-child(4) {
   position: relative;
   margin-left: 1rem;
 }
-header .suffix li .logState::before {
+header .suffix li:nth-child(3)::before, header .suffix li:nth-child(4)::before {
   content: "";
   width: 1px;
   height: 1rem;
@@ -804,6 +821,16 @@ footer.toast button + button {
   width: 20.625rem;
   padding: 1.875rem 2.8125rem;
 }
+.modalLayer .layerBox.fullSize {
+  width: 112.5rem;
+  overflow-x: auto;
+  padding: 2.5rem 3.75rem;
+  max-height: calc(100% - 120px);
+}
+.modalLayer .layerBox.fullSize .modalFooter {
+  width: 25%;
+  margin: 2.5rem auto;
+}
 .modalLayer .layerDim {
   position: absolute;
   width: 100%;
@@ -845,6 +872,9 @@ footer.toast button + button {
 .modalCont .flexBetween {
   color: #878791;
 }
+.modalCont .flex .suffix {
+  margin-left: 0.75rem;
+}
 
 .modalFooter {
   margin-top: 2.5rem;
@@ -874,8 +904,9 @@ footer.toast button + button {
   align-items: center;
   justify-content: center;
 }
-.modalFooter button + button {
+.modalFooter button + button.fullSize {
   margin-left: 0.625rem;
+  margin-top: 0;
 }
 
 .modalInfo {
@@ -973,8 +1004,28 @@ footer.toast button + button {
   background: #fff;
   box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
 }
+.quickView.fixedHeight {
+  position: relative;
+  box-shadow: none;
+  width: 25rem;
+}
+.quickView.fixedHeight .tabBtnWrap {
+  padding: 1.25rem;
+  padding-bottom: 0;
+}
+.quickView.fixedHeight .boxListWrap.is-active {
+  padding: 1.25rem;
+  height: calc(100vh - 115px);
+}
+.quickView.fixedHeight .boxListWrap .boxList .moreList {
+  right: -25px;
+}
+.quickView .tabBtnWrap li {
+  width: 30%;
+}
 .quickView .tabBtnWrap li a {
-  width: 7.5rem;
+  display: block;
+  width: 100%;
 }
 .quickView .boxTop {
   padding: 1.25rem 2.5rem;
@@ -1015,6 +1066,9 @@ footer.toast button + button {
   margin-bottom: 0.25rem;
   font-weight: 700;
   text-decoration: underline;
+}
+.quickView .boxList .btnWrap {
+  margin-top: 0.3125rem;
 }
 
 .condition {
@@ -1060,6 +1114,9 @@ footer.toast button + button {
   position: sticky;
   top: 0;
 }
+.tableBox + .tableBox {
+  margin-left: 2.5rem;
+}
 
 table {
   width: 100%;
@@ -1093,7 +1150,7 @@ table tr td {
 table tr td.nodata {
   display: table-cell;
   font-weight: 500;
-  background: transparent;
+  background: #f2f2f7;
 }
 table tr td.left {
   text-align: left;
@@ -1156,6 +1213,12 @@ table.rowType td:first-child {
   padding: 0.75rem 0.375rem;
   border-right: 1px solid #e6e6eb;
 }
+table.hasInput tr td {
+  padding: 0.375rem 0;
+}
+table.laSize tr td {
+  padding: 1.1875rem 0;
+}
 table .ellipsis {
   width: 90%;
   overflow: hidden;
@@ -1165,6 +1228,10 @@ table .ellipsis {
   text-align: left;
   cursor: pointer;
   padding: 0.875rem;
+}
+table button,
+table .button {
+  cursor: inherit;
 }
 table a {
   color: #0460d2;
@@ -1298,6 +1365,24 @@ table .memo::before {
   position: absolute;
   right: 1.875rem;
   bottom: 3.4375rem;
+}
+
+.bulletList {
+  margin-top: 0.625rem;
+}
+.bulletList li {
+  position: relative;
+  padding-left: 0.625rem;
+}
+.bulletList li::before {
+  content: "";
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background: #29292c;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 2px);
 }
 
 .tabWrapper.listType {
@@ -1485,12 +1570,6 @@ button + button, button + .button,
 .button + .button {
   margin-left: 0.25rem;
 }
-button + button.fullSize, button + .button.fullSize,
-.button + button.fullSize,
-.button + .button.fullSize {
-  margin-left: 0;
-  margin-top: 1.25rem;
-}
 button.fullSize,
 .button.fullSize {
   width: 100%;
@@ -1505,7 +1584,7 @@ button.smSize,
 .button.smSize {
   width: 4.625rem;
   line-height: 1.875rem;
-  padding: 0 0.75rem;
+  padding: 0 0.375rem;
   font-weight: 400;
 }
 button.midSize,
@@ -1546,12 +1625,12 @@ button.white,
 }
 button.white.lowSize,
 .button.white.lowSize {
-  width: 6.25rem;
+  min-width: 6.25rem;
   line-height: 2.125rem;
 }
 button.white.smSize,
 .button.white.smSize {
-  padding: 0 0.75rem;
+  padding: 0 0.25rem;
   line-height: 1.875rem;
 }
 button.white.laSize,
@@ -1685,8 +1764,13 @@ span.button {
   color: #fff;
   text-align: center;
   background: #ff1236;
+  border: 0;
   border-radius: 0.3125rem;
   margin-right: 0.25rem;
+  cursor: inherit;
+}
+.point.mainC {
+  background: #0460d2;
 }
 
 .inputList li {
@@ -1752,6 +1836,13 @@ textarea {
   border: 1px solid #e6e6eb;
   resize: none;
   cursor: pointer;
+}
+input[type=text].xsSize,
+input[type=password].xsSize,
+input[type=date].xsSize,
+textarea.xsSize {
+  width: 3.75rem;
+  height: 2.5rem;
 }
 input[type=text].smSize,
 input[type=password].smSize,
@@ -2244,6 +2335,11 @@ input[type=radio].chkSwitch:disabled + label {
   border: 1px solid #0460d2;
   background: #0460d2;
 }
+.btnType.type2 input[type=radio]:checked + label {
+  color: #0460d2;
+  background: #fff;
+  border: 1px solid #0460d2;
+}
 
 /* 라디오박스 */
 input[type=radio] + label::before {
@@ -2294,36 +2390,47 @@ input[type=radio]:checked + label::before {
 }
 
 /* 박스타입 라디오박스 */
-.boxType {
+.boxType ul {
   display: flex;
+  flex-wrap: wrap;
 }
-.boxType input[type=radio] {
-  width: 0;
-  opacity: 0;
-  position: fixed;
-}
-.boxType input[type=radio] + label {
-  width: 20%;
+.boxType li {
+  width: 25%;
   min-width: 6.5rem;
   height: 5.625rem;
   margin-left: -1px;
+  margin-top: -1px;
   font-weight: 400;
-  padding: 1.25rem 0;
-  border: 1px solid #e6e6eb;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  cursor: pointer;
 }
-.boxType input[type=radio] + label::before {
-  display: none;
+.boxType li:nth-child(1) {
+  margin-top: 0;
 }
-.boxType input[type=radio]:first-child + label {
+.boxType li:nth-child(4n+1) {
   margin-left: 0;
 }
-.boxType input[type=radio]:checked + label {
+.boxType li:nth-child(4n), .boxType li:nth-child(4n+2), .boxType li:nth-child(4n+3) {
+  margin-top: 0;
+}
+.boxType li input {
+  width: 0;
+  opacity: 0;
+  position: fixed;
+}
+.boxType li input + label {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem 0;
+  border: 1px solid #e6e6eb;
+}
+.boxType li input + label::before {
+  display: none;
+}
+.boxType li input:checked + label {
   color: #fff;
   font-weight: 700;
   background: #0460d2;
@@ -2422,6 +2529,39 @@ input[type=radio]:checked + label::before {
 .ui-menu .ui-state-focus,
 .ui-menu .ui-state-active {
   background: #e5effa;
+}
+
+.chkListWrap {
+  margin-top: 2.5rem;
+}
+.chkListWrap i {
+  vertical-align: middle;
+}
+.chkListWrap i.list {
+  margin-right: 0.5rem;
+}
+.chkListWrap i.delete {
+  margin-left: 0.625rem;
+  vertical-align: middle;
+}
+.chkListWrap ul {
+  margin-top: 1.875rem;
+  margin-bottom: 2.5rem;
+}
+.chkListWrap ul li {
+  margin-bottom: 0.625rem;
+}
+.chkListWrap ul input:checked + label {
+  position: relative;
+}
+.chkListWrap ul input:checked + label::after {
+  content: "";
+  width: calc(100% - 20px);
+  height: 1px;
+  background: #29292c;
+  position: absolute;
+  left: 1.375rem;
+  top: 50%;
 }
 
 /* SELECT */
@@ -2724,6 +2864,16 @@ input[type=radio]:checked + label::before {
   height: 0.125rem;
   background-position: 0 -180px;
 }
+.ico.smPlus {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-position: -60px -180px;
+}
+.ico.smMinus {
+  width: 0.75rem;
+  height: 0.125rem;
+  background-position: -40px -180px;
+}
 .ico.qMark {
   width: 1.125rem;
   height: 1.125rem;
@@ -2739,6 +2889,11 @@ input[type=radio]:checked + label::before {
   width: 0.75rem;
   height: 0.375rem;
   background: url(../img/icoSelect.png) no-repeat;
+}
+.ico.list {
+  width: 1.125rem;
+  height: 0.75rem;
+  background-position: -140px -20px;
 }
 .ico.left {
   width: 0.75rem;
@@ -3008,6 +3163,10 @@ input[type=radio]:checked + label::before {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.boxList.flexType > .prefix.colType,
+.boxList.flexType > .suffix.colType {
+  flex-direction: column;
 }
 .boxList.flexType .prefix {
   width: 8.75rem;
@@ -3420,7 +3579,7 @@ h6 {
   margin: 1.875rem 0 1.25rem;
 }
 .myProjDetail .boxWrap .yScroll {
-  height: calc(100vh - 508px);
+  height: calc(100vh - 600px);
 }
 .myProjDetail .boxWrap .yScroll .tit {
   margin-top: 1.25rem;
@@ -3488,7 +3647,7 @@ h6 {
   width: calc(100% - 98px);
 }
 .myProjJob .tabContWrap .yScroll {
-  height: calc(100vh - 553px);
+  height: calc(100vh - 573px);
   margin-top: 1.25rem;
   transition: height 0.3s;
   overflow-y: auto;
@@ -3497,7 +3656,7 @@ h6 {
   width: 0;
 }
 .myProjJob .tabContWrap .yScroll.is-active {
-  height: calc(100vh - 337px);
+  height: calc(100vh - 360px);
 }
 .myProjJob .tabContWrap .tabCont {
   position: relative;
@@ -3670,6 +3829,9 @@ h6 {
   width: 67.5rem;
 }
 
+#memDetail-2 #proj-sap {
+  width: 67.5rem;
+}
 #memDetail-2 .tableBox {
   margin-top: 0.625rem;
   max-height: calc(100vh - 240px);

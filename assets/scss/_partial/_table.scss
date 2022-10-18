@@ -8,6 +8,9 @@
         position: sticky;
         top:0;
     }
+    + .tableBox{
+        margin-left: rem(40);
+    }
 }
 
 
@@ -48,7 +51,8 @@ table{
             &.nodata{
                 display: table-cell;
                 font-weight: 500;
-                background: transparent;
+                // background: transparent;
+                background: $bgColor;
             }
             &.left{
                 text-align: left;
@@ -119,9 +123,27 @@ table{
             }
         }
     }
+    &.hasInput{
+        tr{
+            td{
+                padding: rem(6) 0;
+            } 
+        }
+    }
+    &.laSize{
+        tr{
+            td{
+                padding: rem(19) 0;
+            }
+        }
+    }
     .ellipsis{
         @include ellipsis;
         padding: rem(14);
+    }
+    button, 
+    .button{
+        cursor: inherit;
     }
     a{
         color: $mainColor;
