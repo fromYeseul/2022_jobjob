@@ -698,20 +698,24 @@
                 <div class="modalCont">
 
                     <div class="xScroll">
+                                                 
+                        <div class="tableTop">
+                            <div class="select wideSize">
+                                <span class="selDefault">10개씩</span>
+                                <ul class="optionList">
+                                    <li class="optionItem">20개씩</li>
+                                    <li class="optionItem">50개씩</li>
+                                    <li class="optionItem">100개씩</li>
+                                </ul>
+                            </div>                            
+                            <div class="">
+                                <button class="white lowSize"><i class="ico smMinus"></i> 매출행 삭제</button>
+                                <button class="white lowSize"><i class="ico smPlus"></i> 매출행 추가</button>
+                            </div>
+                        </div>
+
                         <div class="flex_1_2">
-                            <div class="prefix">                            
-                                <div class="tableTop">
-                                    <div class="select wideSize">
-                                        <span class="selDefault">10개씩</span>
-                                        <ul class="optionList">
-                                            <li class="optionItem">20개씩</li>
-                                            <li class="optionItem">50개씩</li>
-                                            <li class="optionItem">100개씩</li>
-                                        </ul>
-                                    </div>     
-                                    <h5>매출</h5>
-                                    <div class="w100"></div>    
-                                </div>
+                            <div class="prefix">   
                                 <div class="tableBox prefix">
                                     <table class="hasInput">
                                         <colgroup>
@@ -728,6 +732,9 @@
                                             <col>
                                         </colgroup>
                                         <thead>
+                                            <tr class="tableHead">
+                                                <th colspan="10">매출</th>
+                                            </tr>
                                             <tr>
                                                 <th>
                                                     <input type="checkbox" id="iphone" name="mobile">
@@ -889,16 +896,7 @@
                                 </div>
                             </div>
                             
-                            <div class="suffix">                            
-                                <div class="tableTop">
-                                    <div class="fz0"></div>    
-                                    <h5>매입</h5>
-                                    <div class="">
-                                        <button class="white lowSize"><i class="ico smMinus"></i> 매출행 삭제</button>
-                                        <button class="white lowSize"><i class="ico smPlus"></i> 매출행 추가</button>
-                                    </div>
-                                </div>
-
+                            <div class="suffix">   
                                 <div class="tableBox prefix">
                                     <table class="hasInput">
                                         
@@ -908,6 +906,9 @@
                                             <col width="100px">
                                         </colgroup>
                                         <thead>
+                                            <tr class="tableHead">
+                                                <th colspan="12">매입</th>
+                                            </tr>
                                             <tr>
                                                 <th>등급/직군</th>
                                                 <th>이름</th>
