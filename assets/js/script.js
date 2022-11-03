@@ -16,11 +16,36 @@ function gnbNav(){
         navWrapper.addEventListener('mouseleave', function(){
             layoutWrapper.classList.remove('is-hover');
         });
+
+        navList();
     }else{
         return;
     }
 }
 gnbNav();
+
+//nav 2depth
+function navList(){
+    let navLi = document.querySelectorAll('.navWrapper > ul > li');
+    let navInner = document.querySelectorAll('ul');
+
+    for(let i=0; i<navLi.length; i++){
+        navLi[i].addEventListener('click', function(){
+            let this_navInner = this.querySelector('ul');
+
+            for(let j=0; j<navLi.length; j++){
+                navLi[j].classList.remove('is-active');
+                navInner[j].classList.remove('is-active');
+            }
+
+            this.classList.toggle('is-active');
+            this_navInner.classList.toggle('is-active');
+        })
+    }
+}
+
+
+
 
 // 우측패널
 function rightPanel(){
@@ -138,10 +163,48 @@ tabMenu();
 
 
 //리스트 선택
-function boxChk(){
-    let boxListWrap = document.querySelector('.boxListWrap');
-    let boxList = document.querySelectorAll('.boxList.listType');
-    let isActive = document.querySelectorAll('.boxList.is-active');
+// function boxChk(){
+//     let listType = document.querySelectorAll('.boxList.listType');
+//     let headType = document.querySelectorAll('.boxList.headType');
+
+//     if(listType !== null){
+//         for(let i = 0; i<listType.length; i++){
+//             listType[i].addEventListener('click', function(e){
+//                 for(let j = 0; j<listType.length; j++){
+//                     listType[j].classList.remove('is-active');
+//                 }
+//                 listType[i].classList.add('is-active');
+//             });
+//         }
+//     }
+//     if(headType !== null){
+//         for(let i = 0; i<headType.length; i++){
+//             headType[i].addEventListener('click', function(e){
+//                 for(let j = 0; j<headType.length; j++){
+//                     headType[j].classList.remove('is-active');
+//                 }
+//                 headType[i].classList.add('is-active');
+//             });
+//         }
+//     }
+// }
+// boxChk();
+
+//리스트 선택 - 221019 허책임님
+function boxChk(id){
+	let boxListWrap = null;
+	let boxList = null;
+	let isActive = null;
+	
+	if (id != undefined) {
+		boxListWrap = document.querySelector('#' + id + ' .boxListWrap');
+		boxList = document.querySelectorAll('#' + id + ' .boxList.headType');
+		isActive = document.querySelectorAll('#' + id + ' .boxList.is-active');	
+	} else {
+	    boxListWrap = document.querySelector('.boxListWrap');
+    	boxList = document.querySelectorAll('.boxList.listType');
+    	isActive = document.querySelectorAll('.boxList.is-active');
+	}
 
     if(boxList !== null){
         for(let i = 0; i<boxList.length; i++){
@@ -154,12 +217,18 @@ function boxChk(){
         }
     }
 }
-boxChk();
+
+
+
 /*-----------//공통-----------*/
 
 
 
 /*-----------호출-----------*/
+
+//마이프로젝트-마이피플
+
+
 // SELECTBOX 일반태그 커스텀 (다른 영역 선택시 off, 체크박스 선택시 off x)
 // 호출 : selDefault.onclick = selectBox();
 // let selDefault = document.querySelectorAll('.selDefault');   
@@ -181,8 +250,11 @@ function selectBox(){
                 if(!(event.target.parentElement.parentElement == optionList || event.target == lb)){
                     lb.parentNode.classList.remove('is-active');
                 }
+                if(event.target == document.getElementById('saveBtn') || event.target == document.getElementById('alertCls')){
+                    lb.parentNode.classList.add('is-active');
+                }
             });
-            /* //220906 수정(외부클릭시 닫힘) -ys */ 
+            /* //220906 수정(외부클릭시 닫힘) -ys */
             
         });
         
@@ -212,6 +284,8 @@ function selectBox(){
         }
     }
 
+    
+
     /* 220902 수정(다중선택) -ys */
     const handleSelect = (selDefault, item) => {
         let hasChk = item.getElementsByTagName('input');
@@ -227,42 +301,96 @@ function selectBox(){
 //selectBox();
 
 
+document.addEventListener('click', e => {        
+    let lb = e.target;
+    let optionList = lb.nextElementSibling;
+    let optionItems = optionList.querySelectorAll('.optionItem');
+    $each()
+    if(selDefault.parentNode.classList.contains('is-active')) {                
+        lb.parentNode.classList.remove('is-active');                   
+
+    }  else {
+        e.target.parentNode.classList.add('is-active');
+    
+    }
+   
+    
+});
+
+
 
 
 
 // 체크박스 전체선택     //??????????????? 여러개 구별하도록 수정하기
 // 호출 : chkWrap.onclick = chkAll();
-let chkWrap = document.querySelector('.chkWrap');
 function chkAll(){
-    let chkAll = document.querySelector('.chkAll');
+    let chkAll = document.querySelectorAll('.chkAll');
     let chkEach = document.querySelectorAll('.chkEach');
 
-    for(let i=0; i<chkEach.length; i++){  
+    for(let i=0; i<chkAll.length; i++){  
         //전체 선택, 해제
-        chkAll.addEventListener('click', function(){
-            if(chkAll.checked == true){
-                chkEach[i].checked = true;
-            }else{
-                /*chkEach[i].checked = false;*/ //generalMember.jsp
+        chkAll[i].addEventListener('click', function(){
+            let thisParent = this.parentElement.parentElement.parentElement;
+            let childChkbox = thisParent.querySelectorAll('.chkEach');
+
+            if(chkAll[i].checked){
+                for(let j=0; j<childChkbox.length; j++){
+                    childChkbox[j].checked = true;
+                }
+            }else{                
+                for(let j=0; j<childChkbox.length; j++){
+                    childChkbox[j].checked = false;
+                }
             }            
         });
-
+    }
+    for(let k=0; k<chkEach.length; k++){
         //개별선택시 전체 선택, 해제
-        chkEach[i].addEventListener('click', function(){        
-            let chked = document.querySelectorAll('.chkEach:checked');
-            if(chked.length == chkEach.length){
-                chkAll.checked = true;
+        chkEach[k].addEventListener('click', function(){        
+            
+            let thisParent = this.parentElement.parentElement.parentElement.parentElement;
+            let allChkbox = thisParent.querySelector('.chkAll');
+            let childChkbox = thisParent.querySelectorAll('.chkEach');
+            let chked = thisParent.querySelectorAll('.chkEach:checked');
+
+            if(chked.length == childChkbox.length){
+                allChkbox.checked = true;
             }else{
-                chkAll.checked = false;
+                allChkbox.checked = false;
             }
         });
     }
 }
+// function chkAll(){
+//     let chkAll = document.querySelector('.chkAll');
+//     let chkEach = document.querySelectorAll('.chkEach');
+
+//     for(let i=0; i<chkEach.length; i++){  
+//         //전체 선택, 해제
+//         chkAll.addEventListener('click', function(){
+//             if(chkAll.checked == true){
+//                 chkEach[i].checked = true;
+//             }else{
+//                 /*chkEach[i].checked = false;*/ //generalMember.jsp
+//             }            
+//         });
+
+//         //개별선택시 전체 선택, 해제
+//         chkEach[i].addEventListener('click', function(){        
+//             let chked = document.querySelectorAll('.chkEach:checked');
+//             if(chked.length == chkEach.length){
+//                 chkAll.checked = true;
+//             }else{
+//                 chkAll.checked = false;
+//             }
+//         });
+//     }
+// }
 //chkAll();
 
 
 //더보기 (마이피플)
-// 호출 : showMore();    
+//호출 : showMore();    
 function showMore(){
     let openMore = document.querySelectorAll(".showMore");
     let moreList = document.querySelectorAll(".moreList");
@@ -276,35 +404,104 @@ function showMore(){
 //showMore();
 
 
+//체크리스트 생성하기
+//호출 : makeChkList();
+function makeChkList(){
+    let chkList = document.querySelector("#chkList");
+    let addchkList = document.querySelector("#addchkList");
+
+    addchkList.addEventListener('click', function(){
+    	let liCnt = document.querySelector("#chkList").children.length;
+		let id = 1;
+		
+		lastLi = document.querySelector("#chkList").lastElementChild;
+		
+		if(lastLi != null) id = Number(lastLi.firstElementChild.getAttribute('id')) + 1;
+
+        let createLi = document.createElement("li");
+        // createLi.setAttribute("class", "new");
+
+        //체크박스 속성
+        let createChk = document.createElement("input");
+            createChk.setAttribute("type", "checkbox");
+            createChk.setAttribute("class", "chkCustom hasTxt");
+            createChk.setAttribute("id", id);  //설정
+            createChk.setAttribute("disabled", "true");
+
+        let createLabel = document.createElement("label");
+            createLabel.setAttribute("for", id);   //설정    
+
+        //인풋박스 속성
+        let createInput = document.createElement("input");
+            createInput.setAttribute("type", "text");
+            createInput.setAttribute("class", "laSize lowSize new");
+            createInput.setAttribute("maxlength", "50");
+            createInput.setAttribute("placeholder", "내용 입력 후 엔터");
+            createInput.setAttribute("id", id);  //설정
+            
+        //닫기버튼
+        let makeDel = document.createElement("i");
+            makeDel.setAttribute("class", "ico delete");
+
+
+        //리스트 생성
+        chkList.append(createLi);
+        createLi.append(createChk);
+        createLi.append(createLabel);
+        createLi.append(createInput);
+        createInput.focus();
+        
+        //인풋입력값 등록
+        createInput.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+            let inputValue = createInput.value;
+            createLabel.innerText = inputValue;
+
+            createLi.removeChild(createInput);
+            createLi.append(makeDel);
+            
+            createChk.removeAttribute("disabled");
+            }
+        });
+
+        //삭제이벤트
+        makeDel.addEventListener('click', function(){
+            chkList.removeChild(createLi);
+        })
+    });
+}
+// makeChkList();
+
+
 //선택된 직무유형 영역 스크롤바
 //호출 : customScroll();
-function customScroll(){
-    window.onload = function(){
-        var myScroll = new IScroll('.iscroll',{
-            mouseWheel: true,
-            scrollbars: true,
-            scrollX: false,
-            scrollY: true,
-            interactiveScrollbars: true
-        });
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-    }
-}
+// function customScroll(){
+//     window.onload = function(){
+//         var myScroll = new IScroll('.iscroll',{
+//             mouseWheel: true,
+//             scrollbars: true,
+//             scrollX: false,
+//             scrollY: true,
+//             interactiveScrollbars: true
+//         });
+//         document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+//     }
+// }
 //customScroll();
 
 
 //스크롤 생성
-//호출 : myProjJob.onclick = makeScroll();
-let myProjJob = document.querySelector('.myProjJob');
-let ProjTabWrapper = document.querySelector('.myProjJob .tabWrapper');
-let yScroll = document.querySelectorAll('.myProjJob .tabContWrap .yScroll');
-let yActive = document.querySelector('.myProjJob .tabCont.is-active .yScroll');
+//호출 : myProjDetail.onclick = makeScroll();
+let myProjDetail = document.querySelector('.myProjDetail');
+let ProjDTabWrapper = document.querySelector('.myProjDetail .tabWrapper');
+let yScroll = document.querySelectorAll('.myProjDetail .tabContWrap .yScroll');
+// let yActive = document.querySelector('.myProjDetail .tabCont.is-active .yScroll');
 
 function makeScroll(){      
     
     /* 220928 수정 -ys */
-    ProjTabWrapper.addEventListener('wheel', moveScroll);
-    myProjJob.addEventListener('wheel', moveScroll);
+    ProjDTabWrapper.addEventListener('wheel', moveScroll);
+    //myProjDetail.addEventListener('wheel', moveScroll);
 
     function moveScroll(event){
 
@@ -322,21 +519,27 @@ function makeScroll(){
 }
 //makeScroll();
 
+//직무추천테이블 active
+//호출 : trToggle();
+function trToggle(){
+    let trToggle = document.query
+}
+
 
 //직무추천 필터
 //호출 : filterBtn.onclick = openFilter();        
-let filterBtn = document.querySelectorAll('.tabWrapper .button');
-let myProjJobFilter = document.querySelector('.myProjJob .filterWrapper');
+let filterBtn = document.querySelectorAll('.tabWrapper button.filter');
+let myProjJobFilter = document.querySelector('.myProjDetail .filterWrapper');
 
 function openFilter(){
     for(let i=0; i<filterBtn.length; i++){
         filterBtn[i].addEventListener('click', function(){
+            // this.querySelector('.filter').classList.toggle('is-active');
             myProjJobFilter.classList.toggle('is-active');
         })
     }
 }
 // openFilter();
-
 
 
 //alert 토스트팝업
@@ -363,6 +566,46 @@ function showMemoList(){
     })
 }
 // showMemoList();
+
+
+//투입상세정보팝업 드래그앤드롭
+//호출 : dragDrop();
+function dragDrop(){
+    const dragTr = document.querySelectorAll(".dragTr");
+    
+    dragTr.forEach(dragTr => {
+        dragTr.addEventListener("dragover", () => {
+            dragTr.classList.add("is-active");
+        });
+
+        // dragTr.addEventListener("dragenter", () => {
+        //     dragTr.classList.add("is-active");
+        // });
+
+        dragTr.addEventListener("dragleave", () => {
+            dragTr.classList.remove("is-active");
+        });
+    });
+}
+// dragDrop();
+
+
+//투입상세정보팝업 펼침
+// 호출 : showTable();
+function showTable(){
+    let flex_1_2 = document.querySelector('.flex_1_2');
+    let open = document.querySelector('.open');
+    let none = document.querySelectorAll('td.none');
+
+    none.forEach(none =>{
+        open.addEventListener('click', () => {
+            flex_1_2.classList.toggle('is-active');
+            none.classList.toggle('none');
+        });
+    })
+}
+//showTable();
+
 
 //허책임님 alert 팝업
 //let removeToast;

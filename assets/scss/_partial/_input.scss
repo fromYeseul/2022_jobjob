@@ -129,6 +129,10 @@ textarea{
     border:1px solid $inputGray;   
     resize: none; 
     cursor: pointer;
+    &.xxsSize{
+        width: rem(40);
+        height: rem(35);
+    }
     &.xsSize{
         width: rem(60);
         height: rem(40);
@@ -182,9 +186,29 @@ input[type=date]{
     position: relative;
     //220829
     // padding: rem(13) rem(16);
-    padding: rem(11) rem(16);
+    padding: rem(11) rem(16);    
+    &.editType{
+        width: 72%;
+        border:0;
+        &:focus{        
+            outline: 0;
+        }
+        &::after{
+            right:0;
+        }
+    }
+    &.smType{
+        width: rem(80);
+        padding: rem(8) rem(3);
+        &::after{
+            width: 0;
+        }
+    }
     &::-webkit-calendar-picker-indicator {
         background: transparent;
+        width: 100%;
+        position: absolute;
+        right: 0;
         z-index: 1;
     }
     &::after{
@@ -727,7 +751,7 @@ input[type=radio]{
         opacity: 0;
         position: fixed;
         + label{
-            width: rem(86);
+            min-width: rem(86);
             //220829
             // line-height: rem(50);
             line-height: rem(44);
@@ -779,14 +803,15 @@ input[type=radio]{
 .boxType{
     ul{
         display: flex;
-        flex-wrap: wrap;
+        //flex-wrap: wrap;
     }
     li{        
-        width: 25%;
-        min-width: rem(104);
-        height: rem(90);
+        // width: 25%;
+        // min-width: rem(104);
+        min-width: rem(110);
+        height: rem(100);
         margin-left: -1px;
-        margin-top: -1px;
+        // margin-top: -1px;
         font-weight: 400;
         // padding: rem(20) 0;
         // border: 1px solid $layoutColor;
@@ -795,16 +820,17 @@ input[type=radio]{
         @include heightArray;
         cursor: pointer;
         &:nth-child(1){
-            margin-top: 0;
-        }
-        &:nth-child(4n + 1){
+            // margin-top: 0;
             margin-left: 0;
         }
-        &:nth-child(4n),
-        &:nth-child(4n + 2),
-        &:nth-child(4n + 3){
-            margin-top: 0;
-        }
+        // &:nth-child(4n + 1){
+        //     margin-left: 0;
+        // }
+        // &:nth-child(4n),
+        // &:nth-child(4n + 2),
+        // &:nth-child(4n + 3){
+        //     margin-top: 0;
+        // }
         input{
             width: 0;
             opacity: 0;
@@ -812,7 +838,8 @@ input[type=radio]{
             + label{
                 width: 100%;
                 height: 100%;
-                padding: rem(24) 0;
+                padding: rem(16) 0;
+                font-weight: 400;
                 border: 1px solid $layoutColor;
                 &::before{
                     display: none;

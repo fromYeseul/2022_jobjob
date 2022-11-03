@@ -81,11 +81,13 @@
                                 <div class="inputList column half">   
                                     <ul class="hasTooltip">
                                         <li class="full">
-                                            <label class="need" for="project">
-                                                프로젝트 이름
-                                                <input type="checkbox" id="secretPay" name="secretPay" class="hasTxt">
-                                                <label for="secretPay">대외비로 진행</label>
-                                            </label>
+                                            <!--221102 위치수정, 클래스추가 -ys-->
+                                            <input type="checkbox" id="secretPay" name="secretPay" class="hasTxt">
+                                            <label class="float_r" for="secretPay">대외비로 진행</label>
+                                            <!--//221102 위치수정, 클래스추가 -ys-->
+                                                                                        
+                                            <!--221102 클래스추가 -ys-->
+                                            <label class="need over_h" for="project">프로젝트 이름</label>
                                             <input class="need" type="text" id="project" maxlength="50" placeholder="프로젝트 이름"> 
                                                 
                                             <div class="btnType">                                            
@@ -112,13 +114,15 @@
                                             <input class="full" type="text" id="" maxlength="11" placeholder="- 를 제외한 숫자만 입력하세요."> 
                                         </li>
                                         <li>
-                                            <label class="need" for="">
-                                                프로젝트 시작희망일
+                                            <!--221102 위치수정, 클래스추가 -ys-->
                                                 <!--220915 추가 -ys -->
                                                 <input type="checkbox" id="projDate" name="projDate" class="hasTxt">
-                                                <label for="projDate">미정</label>
+                                                <label class="float_r" for="projDate">미정</label>
                                                 <!--//220915 추가 -ys -->
-                                            </label>
+                                            <!--//221102 위치수정, 클래스추가 -ys-->   
+
+                                            <!--221102 클래스추가 -ys-->
+                                            <label class="need over_h" for="">프로젝트 시작희망일</label>
                                             <input class="full mr0" type="date" id="" maxlength="" placeholder="프로젝트 이름을 입력하세요."  onkeydown="return false"> 
                                         </li>
 
@@ -582,7 +586,7 @@
             <h6>이 프로젝트를</h6>
             <button class="white lowSize">삭제</button>
             <button class="white lowSize">임시저장</button>
-            <button class="midSize">저장</button>
+            <button class="midSize" id="saveBtn">저장</button>
         </div>
     </div>
     <!--//플로팅메뉴-->

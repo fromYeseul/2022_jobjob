@@ -53,22 +53,32 @@
             //padding: rem(30);
             //220829
             // width: rem(350);
-            width: rem(300);
+            width: rem(320);
             //220829
             background: $bgColor;
             border-right: 1px solid $layoutColor;
             position: relative;
+            transition: all .3s;
+            .closed{
+                display: none;
+                //width: rem(17);
+                height: 100%;
+                padding-left: rem(18);
+                align-items: center;
+                // opacity: .3;
+            }
         }
         .myProjDetail{
             //220829
             // width: calc(100% - 350px - 700px); 
             // padding: rem(30);      
             // width: rem(630); 
-            width: rem(495);  
-            padding: rem(20);    
+            width: calc(100% - 680px);
+            padding: rem(15);    
+            overflow-y: auto;
             //220829     
-            padding-right: 0;
-            transition: all .3s;
+            //padding-right: 0;
+            //transition: all .3s;
 
             //화면분할
             //width: calc(100% - 350px - 60px);
@@ -78,42 +88,9 @@
             //         display: block;
             //     }
             // }
-            .closed{
-                display: none;
-                width: rem(17);
-                height: 100%;
-                align-items: center;
-                // opacity: .3;
-            }
             &.nodata{
                 width: calc(100% - 300px);
             }
-        }
-        .myProjJob{
-            //화면분할
-            //display: none;
-            //220829
-            // width: rem(700);
-            //width: rem(640);
-            // width: calc(100% - 930px);
-            width: calc(100% - 1195px);
-            max-width: rem(890);
-            //220829
-            //height: calc(100vh - 88px);
-            // padding: rem(30);
-            height: calc(100vh - 60px);
-            padding: rem(20);
-            overflow-y: auto;
-            // .wrap{
-                
-            //     &.is-active{
-            //         .tabContWrap{
-            //             .yScroll{
-            //                 height: calc(100vh - 315px);
-            //             }
-            //         }
-            //     }
-            // }
         }
 
 
@@ -175,19 +152,17 @@
             &.noResize{
                 width: 100%;
             }
-            .myProjDetail{
+            .myProjList{
                 width: rem(37);
-                .boxWrap{
+                border-right: 0;
+                .boxListWrap,
+                .listBottom{
                     display: none;
                 }
                 .closed{
                     display: flex;
                 }
             }
-            // .myPeoDetail{
-            //     //width: calc(100% - 640px - 640px - 60px);
-            //     width: calc(100% - 640px);
-            // }
         }
     }
     &.noSide{
@@ -275,6 +250,7 @@
 
 // GNB 클릭, 마우스오버 이벤트
 .layoutWrapper{
+    &.is-hover,
     &.is-active{
         .gnbWrapper{
             //220829
@@ -282,25 +258,72 @@
             width: rem(180);
             //220829
             background-image: linear-gradient(to bottom, $highlight, $gnbGreen);
+            .navCtrlBtn{
+                width: calc(100% - 24px);
+                height: rem(40);
+                padding: rem(10);
+                text-align: right;
+                position: relative;
+                &::before{
+                    width: rem(15);
+                    height: rem(40);
+                }
+                .ctrlBtn{
+                    width: rem(14);
+                    height: rem(22);
+                    background-position: 0px -60px !important;
+                }
+            } 
         }
-        .navCtrlBtn{
-            width: calc(100% - 24px);
-            text-align: right;
-            position: relative;
-            &::before{
-                width: rem(15);
-            }
-            .ctrlBtn{
-                width: rem(14);
-                height: rem(22);
-                background-position: 0px -60px !important;
-            }
-        }    
         .navWrapper{
+            > ul{
+                > li{                    
+                    &::before{
+                        content:'';
+                        width: 1px;
+                        height: 6px;
+                        background: white;
+                        position: absolute;
+                        top: 24px;
+                        right: rem(18);
+                        transform: rotate(45deg);
+                    }
+                    &::after{
+                        content:'';
+                        width: 6px;
+                        height: 1px;
+                        background: white;
+                        position: absolute;
+                        top: 22px;
+                        right: rem(15);
+                        transform: rotate(45deg);
+                    }                           
+                    &.is-active{
+                        &::before{
+                            top: 21px;
+                            right: 22px;
+                            transform: rotate(135deg);
+                        }
+                        &::after{
+                            top: 24px;
+                            transform: rotate(135deg);
+                        }
+                    }   
+                }
+            }
+            li{
+                ul{
+                    &.is-active{
+                        display: block;
+                    }
+                }
+            }
             .menuTxt{
                 display: inline-block;
             }
         }
+    }
+    &.is-active{   
         .contWrapper{
             width: calc(100% - 205px);
             //220829
@@ -308,36 +331,49 @@
             padding-left: rem(180);
             //220829
             //left: 205px;
+            .myProjList{
+                width: rem(300);
+            }
+            .myProjDetail{
+                width: calc(100% - 640px);
+                .wrap{
+                    width: calc(100% - 670px);
+                }
+            }
+            .quickView{
+                &.fixedHeight{
+                    width: rem(340);
+                }
+            }
         }   
-    }   
-    &.is-hover{
-        .gnbWrapper{
-            //220829
-            //width: rem(205);
-            width: rem(180);
-            //220829
-            background-image: linear-gradient(to bottom, $highlight, $gnbGreen);
-        }
-        .navCtrlBtn{
-            width: calc(100% - 24px);
-            text-align: right;
-            background: $white;
-            &::before{
-                width: rem(15);
-            }
-            .ctrlBtn{
-                width: rem(14);
-                height: rem(22);
-                background-position: 0px -30px;
-            }
-        }    
-        .navWrapper{
-            .menuTxt{
-                display: inline-block;
-            }
-        }
-    }   
+    }       
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 1919px) {

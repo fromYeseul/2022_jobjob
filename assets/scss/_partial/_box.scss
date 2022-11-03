@@ -8,9 +8,16 @@
         padding: rem(40) 0;
         background: $white;
     }
-    .nodata{
-        height: 100%;
-        //background: $white;
+    >ul{
+        >li{
+            margin-top: rem(20);
+            &.listType{
+                margin-top: 0;
+            }
+            &.tableTypeBox{
+                margin-top: 10px;
+            }
+        }
     }
 }
 
@@ -36,27 +43,8 @@
             @include sideArray; 
         }
         .head{
-            //220829
-            // padding-bottom: rem(20);
-            padding-bottom: rem(15);
-            //220829
             position: relative;
-            &::after{
-                content:'';
-                //220829
-                // width: calc(100% + 80px);
-                width: calc(100% + 60px);
-                //220829
-                height: 1px;
-                background: $layoutColor;
-                position: absolute;
-                left: -30px;
-                bottom: 0;
-            }
             .prefix{
-                font-weight: 500;
-            }           
-            .suffix{
                 color: $subInfo;
                 font-size: rem(14);
                 span{
@@ -70,17 +58,17 @@
                             background: $subInfo;
                             position: absolute;
                             top:50%;
-                            left: -4px;
+                            left: -6px;
                             transform: translateY(-40%);
                         }
                     }
                 }
-            }
+            }          
         }
         .cont{
             //220829
             // margin: rem(30) 0;
-            margin-top: rem(20);
+            margin-top: rem(10);
             //220829
             position: relative;
             // .flexCenter{
@@ -118,6 +106,22 @@
 }
 
 
+
+.headTypeBox,
+.tableTypeBox{
+    display: flex;
+    width: 100%;
+    &.center{
+        align-items: center;
+    }
+    label{
+        & + .boxList{
+            margin-left: rem(8);
+            width: calc(100% - 26px);
+        }
+    }
+}
+
 //둥근타입
 .boxList{
     background: $white;
@@ -138,6 +142,16 @@
         margin-top: rem(16);
         //220829
         position: relative;
+    }      
+    .memSkill{
+        @include ellipsis;
+    }
+    .photo{
+        width: rem(40);
+        height: rem(40);
+        border-radius: rem(12);
+        vertical-align: middle;
+        margin-right: rem(10);
     }
     button,
     .button{
@@ -196,7 +210,7 @@
         .cont{       
             .prefix{
                 width: 70%;            
-                @include ellipsis-double;
+                @include ellipsis-2;
             }
             .suffix{
                 position: absolute;
@@ -311,7 +325,7 @@
         }
     }
     &.headType{
-        margin-top: rem(20);
+        // margin-top: rem(20);
         border:1px solid $layoutColor;
         &:first-child{
             margin-top: rem(10);
@@ -322,10 +336,14 @@
             //border-radius: rem(5) rem(5) 0 0;
             //220829    
             // padding: rem(5) rem(20);
-            padding: rem(6) rem(8) rem(6) rem(14);
+            // padding: rem(6) rem(8) rem(6) rem(14);
+            padding: rem(6) rem(8);
             //220829    
             .prefix{
                 font-weight: 400; 
+                .score{
+                    margin-left: rem(10);
+                }
             }
             .suffix{
                 line-height: 1;
@@ -357,22 +375,13 @@
                     margin-right: rem(10);
                 }
                 .memName{
+                    display: flex;
                     color: $black;
                     font-weight: 700;
-                    .photo{
-                        width: rem(40);
-                        height: rem(40);
-                        border-radius: rem(12);
-                        vertical-align: middle;
-                        margin-right: rem(10);
-                    }
                     p{
                         color: $subInfo;
                         font-weight: 500;
                     }
-                }
-                .memSkill{
-                    @include ellipsis;
                 }
                 .memPay{
                     color: $black;
@@ -451,7 +460,7 @@
                     color: $mainColor;
                 }
                 
-            }
+            }     
         }
         .bottom{            
             display: block;
@@ -485,6 +494,32 @@
             //     border:1px solid $mainColor;
             //     border-top:0;
             // }
+        }
+    }
+    &.tableType{
+        border:1px solid $layoutColor;
+        //border-radius: 0;
+        .cont{       
+            margin-top: 0;
+            @include sideArray;
+            font-size: rem(14);
+            padding: rem(14);       
+            text-align: center;
+            position: relative;
+            .memName{
+                width: 14%;
+                text-align: left;
+            }
+            .memSkill{
+                width: 30%;
+            } 
+        }      
+        textarea, input[type=text]{
+            margin-top: rem(5);
+            padding: rem(7);
+        }
+        &.is-active{            
+            border:1px solid $mainColor;
         }
     }
 }
@@ -558,7 +593,7 @@
 //             position: relative;
 //             .prefix{
 //                 width: 78%;
-//                 @include ellipsis-double;
+//                 @include ellipsis-2;
 //             }
 //             .suffix{
 //                 color: $subInfo;

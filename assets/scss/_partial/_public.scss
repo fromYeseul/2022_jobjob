@@ -130,6 +130,7 @@ $footerGray : $titleGray;
 }
 .flexCenter{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 .flexEnd{
@@ -144,8 +145,18 @@ $footerGray : $titleGray;
 
 .flex_2_1{
     display: flex;
-    .prefix{flex: 1 1 60%;}
-    .suffix{flex: 2 1 40%;}
+    >.prefix{flex: 1 1 60%;}
+    >.suffix{flex: 2 1 40%;}
+}
+.flex_1_2{
+    display: flex;
+    .prefix{flex: 1 1 40%;}
+    .suffix{flex: 2 1 60%;}
+    
+    //투입상세정보 팝업 (table 확장)
+    &.is-active{
+        width: 120%;
+    }
 }
 
 .block{
@@ -159,6 +170,9 @@ $footerGray : $titleGray;
 }
 .txtCenter{
     text-align: center;
+}
+.txtRight{
+    text-align: right;
 }
 .float_l{
     float: left;
@@ -191,6 +205,10 @@ $footerGray : $titleGray;
 //     }
 // }
 
+.over_h{
+    overflow: hidden;
+}
+
 .xScroll{
     overflow-x: auto;
 }
@@ -222,16 +240,24 @@ $footerGray : $titleGray;
 .mr0{margin-right: 0 !important;}
 .mr10{margin-right: rem(10) !important;}
 
+.ml5{margin-left: rem(5) !important;}
 .ml10{margin-left: rem(10) !important;}
 .ml15{margin-left: rem(15) !important;}
+.ml40{margin-left: rem(40) !important;}
 
+.mt0{margin-top: 0 !important;}
+.mt10{margin-top: rem(10) !important;}
 .mt20{margin-top: rem(20) !important;}
 .mt30{margin-top: rem(30) !important;}
 .mt50{margin-top: rem(50) !important;}
 
+.mb5{margin-bottom: rem(5) !important;}
+.mb10{margin-bottom: rem(10) !important;}
 .mb20{margin-bottom: rem(20) !important;}
 
+.w100{width: rem(100);}
 .h100{height: 100%;}
 .lh50{line-height: rem(50);}
+.fz0{font-size: 0;}
 
 .p0-30{padding: 0 rem(30);}

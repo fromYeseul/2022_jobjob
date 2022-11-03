@@ -54,6 +54,16 @@
       transform: translateY(-40%); 
       right: rem(10); 
     }
+    &.low{
+      line-height: rem(35);
+      padding-left: rem(6);
+      & + .optionList{
+        top: rem(40);
+      }
+      &::before{
+        right: rem(8); 
+      }
+    }
   }
   .optionList {
     display: none !important;
@@ -119,6 +129,9 @@
     .optionList {
       top: rem(40);
     }
+  }
+  &.xsSize{
+    width: rem(70);
   }
   &.smSize{
     width: rem(86);

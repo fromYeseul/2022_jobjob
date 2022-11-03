@@ -1,0 +1,86 @@
+.quickView{
+    position: absolute;
+    right: 0;
+    top: 0;
+    // padding: rem(40);
+    width: rem(440);
+    background: $white;
+    box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
+    &.fixedHeight{
+        position: relative;
+        box-shadow: none;
+        width: rem(400);
+        .tabBtnWrap{
+            padding: rem(20);
+            padding-bottom: 0;
+        }
+        .boxListWrap{
+            &.is-active{
+                padding: rem(20);
+                height: calc(100vh - 115px);
+            }
+            .boxList{
+                .moreList{
+                    right: -25px;
+                }
+            }
+        }
+    }
+    .tabBtnWrap{
+        li{
+            width: 30%;
+            a{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    .boxTop{
+        padding: rem(20) rem(40);
+    }
+    .boxListWrap{
+        padding: 0;
+        height: 0;
+        @include scroll_0;
+        &.nodata{
+            height: calc(100vh - 190px);
+        }
+        &.is-active{
+            padding: rem(20) rem(40);
+            padding-top: 0;
+            height: calc(100vh - 190px);
+        }
+        li{            
+            margin-top: rem(20);
+        }
+    }
+    .boxList{
+        cursor: inherit;
+        &.headType{
+            .cont{
+                .prefix{
+                    width: 100%;
+                    ul{
+                        width: 100%;
+                    }
+                }
+                .txtCenter{
+                    margin-top: rem(10);
+                }
+            }
+        }
+        .memMemo{
+            a{
+                display: block;
+                margin-bottom: rem(4);
+                font-weight: 700;
+                text-decoration: underline;
+                // padding: rem(2) rem(4);
+                // background: $bgColor;
+            }
+        }
+        .btnWrap{
+            margin-top: rem(5);
+        }
+    }
+}

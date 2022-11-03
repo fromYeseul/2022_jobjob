@@ -1,0 +1,213 @@
+.memList{
+    width: rem(280);
+    //border-right: 1px solid $layoutColor;
+    .boxListWrap{    
+        //220829
+        // height: calc(100vh - 177px);
+        height: calc(100vh - 163px);
+        //220829
+    }
+    .boxList{
+        //220829
+        // height: rem(125);
+        height: rem(110);
+        .head{
+            font-weight: 700;
+        }
+    }
+}
+
+.memDetail{
+    //220829
+    width: calc(100% - 280px);
+    // width: rem(1080);
+    //220829
+    // padding: rem(30);
+    padding: rem(30);
+
+    // height: calc(100vh - 90px);
+    // overflow-y: auto;
+    .tableBox{
+        //220829
+        // height: calc(100vh - 310px);
+        max-height: calc(100vh - 210px);
+        //220829
+        margin-top: rem(30);
+    }
+    .boxListWrap{    
+        //220829
+        max-height: calc(100vh - 240px);
+        //220829
+        margin-top: rem(10);
+    }
+    .tabBtnWrap{
+        // padding: rem(30);
+        // padding-bottom: rem(0);
+    }
+    >.tabWrapper{
+        >.tabContWrap{
+            margin-top: rem(30);
+        }
+    }
+    .tabCont{
+        //220829
+        // height: calc(100vh - 150px);
+        // height: calc(100vh - 180px);
+        // @include scroll_0;
+        .resumeWrapper, .tableBox, .boxTop, .boxListWrap{
+            // padding: 0 rem(30);
+            padding-right: rem(30);
+            background: transparent;
+        }
+    }
+}
+
+
+#memDetail-1,
+#memDetail-3,
+#memDetail-4{
+    width: rem(1080);
+}
+#memDetail-2{
+    #proj-sap{
+        width: rem(1080);
+    }
+    .tableBox{
+        margin-top: rem(10);
+        max-height: calc(100vh - 240px);
+    }
+}
+
+.resumeWrapper{
+    //220829
+    // width: rem(1210);
+    //width: rem(960);
+    font-size: rem(14);
+    //220829
+    height: calc(100vh - 180px);
+    .resuTop{
+        text-align: right;
+    }
+}
+.resume{
+    display: flex;
+    //220829
+    // width: rem(1210);
+    //width: rem(960);
+    //220829
+    margin-top: rem(8);
+    //height: rem(756);
+    ul{
+        li{
+            margin: 6px 0;
+            b{
+                margin-right: rem(6);
+            }
+        }
+    }
+    >.prefix{
+        //220829
+        // width: rem(350);
+        // padding: rem(70) rem(40);
+        width: rem(330);
+        padding: rem(40) rem(50);
+        //220829
+        background: $beige;
+        height: calc(100vh - 250px);
+        @include scroll_0;
+        .profile{
+            //220829
+            // width: rem(210);
+            // height: rem(210);
+            //margin-bottom: rem(48);
+            // width: rem(160);
+            // height: rem(160);
+            // margin:0 auto;
+            // margin-bottom: rem(30);
+            //220829
+            text-align: center;
+            margin-bottom: rem(30);
+            img{
+                width: rem(130);
+                height: rem(130);
+                margin:rem(10) auto 0;
+                // width: 100%;
+                border-radius: 50%;
+            }
+        }
+        .info{
+            > div{
+                & + div{
+                    margin-top: rem(30);
+                    padding-top: rem(30);
+                    border-top:1px solid $titleGray;
+                }
+            }
+        }
+        h5{
+            span{
+                margin-left: rem(6);
+                font-size: rem(16);
+                letter-spacing: -0.71px;
+                color: $subGray;
+            }
+        }
+        .bottom{
+            b{
+                display: block;
+                margin-top: rem(24);
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    >.suffix{
+        //220829
+        // padding: rem(70);
+        padding: rem(40) rem(50);
+        //220829
+        // width: rem(690);
+        width: calc(100% - 330px);
+        background: $white;
+        height: calc(100vh - 250px);
+        @include scroll_0;
+        .resuInfo{
+            //220829
+            // width: rem(330);
+            //220829
+            + .resuInfo{
+                margin-top: rem(40);
+            }
+            h5{
+                padding-bottom: rem(14);
+                color: $beigeTit;
+                border-bottom: 1px solid $titleGray;
+            }
+            .cont{
+                margin-top: rem(15);
+                b{
+                    margin-right: rem(20);
+                }
+            }
+            &.flexBetween{
+                .prefix{
+                    flex: 2 1 0;
+                    margin-right: rem(50);
+                }
+                .suffix{
+                    flex: 1 1 0;
+                }
+                .tabBtnWrap{
+                    float: right;
+                }
+            }
+        }
+        table{
+            margin-top: rem(10);
+            th{
+                padding-top: 0;
+            }
+        }
+    }
+}

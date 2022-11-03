@@ -159,6 +159,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .flexCenter {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -176,11 +177,24 @@ h1, h2, h3, h4, h5, h6, p {
 .flex_2_1 {
   display: flex;
 }
-.flex_2_1 .prefix {
+.flex_2_1 > .prefix {
   flex: 1 1 60%;
 }
-.flex_2_1 .suffix {
+.flex_2_1 > .suffix {
   flex: 2 1 40%;
+}
+
+.flex_1_2 {
+  display: flex;
+}
+.flex_1_2 .prefix {
+  flex: 1 1 40%;
+}
+.flex_1_2 .suffix {
+  flex: 2 1 60%;
+}
+.flex_1_2.is-active {
+  width: 120%;
 }
 
 .block {
@@ -199,12 +213,20 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
 }
 
+.txtRight {
+  text-align: right;
+}
+
 .float_l {
   float: left;
 }
 
 .float_r {
   float: right;
+}
+
+.over_h {
+  overflow: hidden;
 }
 
 .xScroll {
@@ -243,12 +265,28 @@ h1, h2, h3, h4, h5, h6, p {
   margin-right: 0.625rem !important;
 }
 
+.ml5 {
+  margin-left: 0.3125rem !important;
+}
+
 .ml10 {
   margin-left: 0.625rem !important;
 }
 
 .ml15 {
   margin-left: 0.9375rem !important;
+}
+
+.ml40 {
+  margin-left: 2.5rem !important;
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.mt10 {
+  margin-top: 0.625rem !important;
 }
 
 .mt20 {
@@ -263,8 +301,20 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 3.125rem !important;
 }
 
+.mb5 {
+  margin-bottom: 0.3125rem !important;
+}
+
+.mb10 {
+  margin-bottom: 0.625rem !important;
+}
+
 .mb20 {
   margin-bottom: 1.25rem !important;
+}
+
+.w100 {
+  width: 6.25rem;
 }
 
 .h100 {
@@ -273,6 +323,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .lh50 {
   line-height: 3.125rem;
+}
+
+.fz0 {
+  font-size: 0;
 }
 
 .p0-30 {
@@ -335,32 +389,25 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
 }
 .contWrapper .contLayout .myProjList {
-  width: 18.75rem;
+  width: 20rem;
   background: #f2f2f7;
   border-right: 1px solid #e6e6eb;
   position: relative;
-}
-.contWrapper .contLayout .myProjDetail {
-  width: 30.9375rem;
-  padding: 1.25rem;
-  padding-right: 0;
   transition: all 0.3s;
 }
-.contWrapper .contLayout .myProjDetail .closed {
+.contWrapper .contLayout .myProjList .closed {
   display: none;
-  width: 1.0625rem;
   height: 100%;
+  padding-left: 1.125rem;
   align-items: center;
+}
+.contWrapper .contLayout .myProjDetail {
+  width: calc(100% - 680px);
+  padding: 0.9375rem;
+  overflow-y: auto;
 }
 .contWrapper .contLayout .myProjDetail.nodata {
   width: calc(100% - 300px);
-}
-.contWrapper .contLayout .myProjJob {
-  width: calc(100% - 1195px);
-  max-width: 55.625rem;
-  height: calc(100vh - 60px);
-  padding: 1.25rem;
-  overflow-y: auto;
 }
 .contWrapper .contLayout .myPeoList {
   width: 33.75rem;
@@ -391,13 +438,15 @@ h1, h2, h3, h4, h5, h6, p {
 .contWrapper .contLayout.is-active.noResize {
   width: 100%;
 }
-.contWrapper .contLayout.is-active .myProjDetail {
+.contWrapper .contLayout.is-active .myProjList {
   width: 2.3125rem;
+  border-right: 0;
 }
-.contWrapper .contLayout.is-active .myProjDetail .boxWrap {
+.contWrapper .contLayout.is-active .myProjList .boxListWrap,
+.contWrapper .contLayout.is-active .myProjList .listBottom {
   display: none;
 }
-.contWrapper .contLayout.is-active .myProjDetail .closed {
+.contWrapper .contLayout.is-active .myProjList .closed {
   display: flex;
 }
 .contWrapper.noSide {
@@ -459,49 +508,76 @@ h1, h2, h3, h4, h5, h6, p {
   cursor: pointer;
 }
 
-.layoutWrapper.is-active .gnbWrapper {
+.layoutWrapper.is-hover .gnbWrapper, .layoutWrapper.is-active .gnbWrapper {
   width: 11.25rem;
   background-image: linear-gradient(to bottom, #009ce0, #89c895);
 }
-.layoutWrapper.is-active .navCtrlBtn {
+.layoutWrapper.is-hover .gnbWrapper .navCtrlBtn, .layoutWrapper.is-active .gnbWrapper .navCtrlBtn {
   width: calc(100% - 24px);
+  height: 2.5rem;
+  padding: 0.625rem;
   text-align: right;
   position: relative;
 }
-.layoutWrapper.is-active .navCtrlBtn::before {
+.layoutWrapper.is-hover .gnbWrapper .navCtrlBtn::before, .layoutWrapper.is-active .gnbWrapper .navCtrlBtn::before {
   width: 0.9375rem;
+  height: 2.5rem;
 }
-.layoutWrapper.is-active .navCtrlBtn .ctrlBtn {
+.layoutWrapper.is-hover .gnbWrapper .navCtrlBtn .ctrlBtn, .layoutWrapper.is-active .gnbWrapper .navCtrlBtn .ctrlBtn {
   width: 0.875rem;
   height: 1.375rem;
   background-position: 0px -60px !important;
 }
-.layoutWrapper.is-active .navWrapper .menuTxt {
+.layoutWrapper.is-hover .navWrapper > ul > li::before, .layoutWrapper.is-active .navWrapper > ul > li::before {
+  content: "";
+  width: 1px;
+  height: 6px;
+  background: white;
+  position: absolute;
+  top: 24px;
+  right: 1.125rem;
+  transform: rotate(45deg);
+}
+.layoutWrapper.is-hover .navWrapper > ul > li::after, .layoutWrapper.is-active .navWrapper > ul > li::after {
+  content: "";
+  width: 6px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 22px;
+  right: 0.9375rem;
+  transform: rotate(45deg);
+}
+.layoutWrapper.is-hover .navWrapper > ul > li.is-active::before, .layoutWrapper.is-active .navWrapper > ul > li.is-active::before {
+  top: 21px;
+  right: 22px;
+  transform: rotate(135deg);
+}
+.layoutWrapper.is-hover .navWrapper > ul > li.is-active::after, .layoutWrapper.is-active .navWrapper > ul > li.is-active::after {
+  top: 24px;
+  transform: rotate(135deg);
+}
+.layoutWrapper.is-hover .navWrapper li ul.is-active, .layoutWrapper.is-active .navWrapper li ul.is-active {
+  display: block;
+}
+.layoutWrapper.is-hover .navWrapper .menuTxt, .layoutWrapper.is-active .navWrapper .menuTxt {
   display: inline-block;
 }
 .layoutWrapper.is-active .contWrapper {
   width: calc(100% - 205px);
   padding-left: 11.25rem;
 }
-.layoutWrapper.is-hover .gnbWrapper {
-  width: 11.25rem;
-  background-image: linear-gradient(to bottom, #009ce0, #89c895);
+.layoutWrapper.is-active .contWrapper .myProjList {
+  width: 18.75rem;
 }
-.layoutWrapper.is-hover .navCtrlBtn {
-  width: calc(100% - 24px);
-  text-align: right;
-  background: #fff;
+.layoutWrapper.is-active .contWrapper .myProjDetail {
+  width: calc(100% - 640px);
 }
-.layoutWrapper.is-hover .navCtrlBtn::before {
-  width: 0.9375rem;
+.layoutWrapper.is-active .contWrapper .myProjDetail .wrap {
+  width: calc(100% - 670px);
 }
-.layoutWrapper.is-hover .navCtrlBtn .ctrlBtn {
-  width: 0.875rem;
-  height: 1.375rem;
-  background-position: 0px -30px;
-}
-.layoutWrapper.is-hover .navWrapper .menuTxt {
-  display: inline-block;
+.layoutWrapper.is-active .contWrapper .quickView.fixedHeight {
+  width: 21.25rem;
 }
 
 @media (max-width: 1919px) {
@@ -529,7 +605,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 2.25rem;
   height: 2.25rem;
   padding: 0.3125rem 0.5rem;
-  margin-left: 0.5625rem;
+  margin-left: 0.5rem;
   border-radius: 0.375rem;
   background: #fff;
   cursor: pointer;
@@ -549,19 +625,52 @@ h1, h2, h3, h4, h5, h6, p {
 .gnbWrapper .navWrapper {
   height: calc(100vh - 105px);
   margin-top: 2.1875rem;
-  margin-left: 0.1875rem;
   overflow-y: auto;
 }
-.gnbWrapper .navWrapper li {
-  padding: 0.8125rem;
+.gnbWrapper .navWrapper > ul > li {
+  position: relative;
 }
-.gnbWrapper .navWrapper li.is-active .menuTxt {
-  font-weight: 700;
+.gnbWrapper .navWrapper > ul > li.is-active > a {
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+.gnbWrapper .navWrapper > ul > li.is-active > a::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.gnbWrapper .navWrapper li a {
+  display: block;
+  padding: 0.625rem 0.8125rem;
+  padding-left: 0.9375rem;
+}
+.gnbWrapper .navWrapper li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.gnbWrapper .navWrapper li ul {
+  display: none;
+}
+.gnbWrapper .navWrapper li ul li {
+  padding: 0;
+  font-size: 0.875rem;
+  position: relative;
+}
+.gnbWrapper .navWrapper li ul li a {
+  padding-left: 2.125rem;
 }
 .gnbWrapper .navWrapper .menuTxt {
   display: none;
   color: #fff;
   margin-left: 0.875rem;
+  vertical-align: middle;
+  position: relative;
+}
+.gnbWrapper .navWrapper .depth2 {
+  color: #fff;
   vertical-align: middle;
 }
 
@@ -708,10 +817,14 @@ header.center .center {
 }
 .filterList .tit {
   font-weight: 700;
+  margin-bottom: 0.625rem;
 }
 .filterList label {
   display: block !important;
   margin-top: 0.625rem;
+}
+.filterList label:first-child {
+  margin-top: 0;
 }
 
 .defaultBox {
@@ -733,7 +846,7 @@ header.center .center {
 }
 
 .nodata {
-  height: auto;
+  height: 100%;
   color: #878791;
   display: flex;
   align-items: center;
@@ -821,11 +934,16 @@ footer.toast button + button {
   width: 20.625rem;
   padding: 1.875rem 2.8125rem;
 }
+.modalLayer .layerBox.filterType {
+  min-width: 12.5rem;
+  width: fit-content;
+  padding: 1.875rem;
+}
 .modalLayer .layerBox.fullSize {
   width: 112.5rem;
   overflow-x: auto;
   padding: 2.5rem 3.75rem;
-  max-height: calc(100% - 120px);
+  max-height: calc(100% - 100px);
 }
 .modalLayer .layerBox.fullSize .modalFooter {
   width: 25%;
@@ -852,6 +970,12 @@ footer.toast button + button {
 .modalHeader .layerClose {
   float: right;
 }
+.modalHeader .tit {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.125rem;
+}
 
 .modalCont {
   margin-top: 0.625rem;
@@ -872,8 +996,25 @@ footer.toast button + button {
 .modalCont .flexBetween {
   color: #878791;
 }
-.modalCont .flex .suffix {
+.modalCont .suffix {
   margin-left: 0.75rem;
+}
+.modalCont .flex_1_2 {
+  padding-bottom: 1.875rem;
+}
+.modalCont .tableTop {
+  margin-top: 1.875rem;
+  height: 2.875rem;
+}
+.modalCont table {
+  table-layout: inherit;
+}
+.modalCont .tabType input[type=radio] + label {
+  width: auto;
+  padding: 0 0.625rem;
+}
+.modalCont .filterList {
+  margin-top: 0;
 }
 
 .modalFooter {
@@ -1000,14 +1141,14 @@ footer.toast button + button {
   position: absolute;
   right: 0;
   top: 0;
-  width: 27.5rem;
+  width: 25rem;
   background: #fff;
   box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
 }
 .quickView.fixedHeight {
   position: relative;
   box-shadow: none;
-  width: 25rem;
+  width: 22.5rem;
 }
 .quickView.fixedHeight .tabBtnWrap {
   padding: 1.25rem;
@@ -1020,6 +1161,10 @@ footer.toast button + button {
 .quickView.fixedHeight .boxListWrap .boxList .moreList {
   right: -25px;
 }
+.quickView .tabBtnWrap {
+  padding: 1.25rem 1.5625rem;
+  padding-bottom: 0;
+}
 .quickView .tabBtnWrap li {
   width: 30%;
 }
@@ -1028,7 +1173,7 @@ footer.toast button + button {
   width: 100%;
 }
 .quickView .boxTop {
-  padding: 1.25rem 2.5rem;
+  padding: 1.25rem 1.5625rem;
 }
 .quickView .boxListWrap {
   padding: 0;
@@ -1042,9 +1187,9 @@ footer.toast button + button {
   height: calc(100vh - 190px);
 }
 .quickView .boxListWrap.is-active {
-  padding: 1.25rem 2.5rem;
+  padding: 1.25rem 1.5625rem;
   padding-top: 0;
-  height: calc(100vh - 190px);
+  height: calc(100vh - 180px);
 }
 .quickView .boxListWrap li {
   margin-top: 1.25rem;
@@ -1110,7 +1255,7 @@ footer.toast button + button {
 .tableBox {
   overflow-y: auto;
 }
-.tableBox thead {
+.tableBox thead.sticky {
   position: sticky;
   top: 0;
 }
@@ -1132,6 +1277,13 @@ table tr.bg {
 }
 table tr:last-child td {
   border-bottom: 0;
+}
+table tr.is-active {
+  background: #f2f2f7;
+}
+table tr.dragTr {
+  height: 3.875rem;
+  cursor: move;
 }
 table tr .select {
   text-align: left;
@@ -1213,8 +1365,77 @@ table.rowType td:first-child {
   padding: 0.75rem 0.375rem;
   border-right: 1px solid #e6e6eb;
 }
+table.chkType {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+table.chkType tr th {
+  padding: 0;
+  padding-bottom: 5px;
+  background: transparent;
+  color: #29292c;
+  border-bottom: 1px solid #e6e6eb;
+}
+table.chkType tr th a {
+  color: #29292c;
+  position: relative;
+}
+table.chkType tr th a::after {
+  content: "";
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background: #e6e6eb;
+  position: absolute;
+  top: 1.375rem;
+  left: calc(50% - 4px);
+}
+table.chkType tr th a.is-active::after {
+  background: rgba(4, 96, 210, 0.7);
+}
+table.chkType tbody tr {
+  box-shadow: 0 0 2px #e6e6eb;
+  box-shadow: 0 0 2px #bfbfbf;
+  background: #fff;
+}
+table.chkType tbody tr td {
+  padding: 0.875rem 0;
+}
+table.chkType tbody tr td:first-child {
+  border-left: 1px solid #e6e6eb;
+}
+table.chkType tbody tr td:last-child {
+  border-right: 1px solid #e6e6eb;
+}
+table.chkType tbody tr.is-active {
+  box-shadow: 0 0 3px #0460d2;
+  box-shadow: 0 0 3px #0053b9;
+}
+table.chkType tbody tr.is-active td:first-child {
+  position: relative;
+}
+table.chkType tbody tr.is-active td:first-child::before {
+  content: "";
+  width: 3px;
+  height: calc(100% + 2px);
+  background: #0460d2;
+  position: absolute;
+  left: 0;
+  top: -1px;
+}
+table.chkType tbody tr.is-active td:last-child {
+  border-right: 1px solid #0460d2;
+}
+table.chkType .photo {
+  margin-left: 0.9375rem;
+}
 table.hasInput tr td {
-  padding: 0.375rem 0;
+  padding: 0.375rem 0.1875rem;
+}
+table.hasInput tfoot td {
+  padding: 1.125rem;
+  background: #f2f2f7;
+  border-bottom: 0;
 }
 table.laSize tr td {
   padding: 1.1875rem 0;
@@ -1229,8 +1450,14 @@ table .ellipsis {
   cursor: pointer;
   padding: 0.875rem;
 }
-table button,
-table .button {
+table .photo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  vertical-align: middle;
+  margin-right: 0.625rem;
+}
+table .round {
   cursor: inherit;
 }
 table a {
@@ -1252,6 +1479,9 @@ table .memo::before {
   left: 0;
   transform: translateY(-50%);
 }
+table .inputIco {
+  width: calc(100% - 116px);
+}
 
 .listTop.flex {
   display: flex;
@@ -1264,6 +1494,13 @@ table .memo::before {
 }
 .listTop label {
   margin-right: 1rem;
+}
+.listTop .flexBetween {
+  color: #878791;
+  font-size: 0.875rem;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e6e6eb;
 }
 
 .listBottom {
@@ -1363,7 +1600,7 @@ table .memo::before {
 
 .goTop {
   position: absolute;
-  right: 1.875rem;
+  right: 0;
   bottom: 3.4375rem;
 }
 
@@ -1449,7 +1686,7 @@ table .memo::before {
 }
 .tabBtnWrap.wideType {
   display: flex;
-  padding: 0 1.875rem;
+  padding: 0 1.25rem;
   padding-top: 1.4375rem;
 }
 .tabBtnWrap.wideType .prefix {
@@ -1575,10 +1812,20 @@ button.fullSize,
   width: 100%;
   line-height: 2.875rem;
 }
+button.fullSize.lowSize,
+.button.fullSize.lowSize {
+  width: 100%;
+  line-height: 2.375rem;
+}
 button.lowSize,
 .button.lowSize {
   width: 8.125rem;
   line-height: 2.375rem;
+}
+button.xsSize,
+.button.xsSize {
+  width: 2.8125rem;
+  height: 2.1875rem;
 }
 button.smSize,
 .button.smSize {
@@ -1595,7 +1842,7 @@ button.midSize,
 }
 button.midSize.low,
 .button.midSize.low {
-  line-height: 2.25rem;
+  line-height: 2.125rem;
 }
 button.laSize,
 .button.laSize {
@@ -1837,6 +2084,13 @@ textarea {
   resize: none;
   cursor: pointer;
 }
+input[type=text].xxsSize,
+input[type=password].xxsSize,
+input[type=date].xxsSize,
+textarea.xxsSize {
+  width: 2.5rem;
+  height: 2.1875rem;
+}
 input[type=text].xsSize,
 input[type=password].xsSize,
 input[type=date].xsSize,
@@ -1926,8 +2180,28 @@ input[type=date] {
   position: relative;
   padding: 0.6875rem 1rem;
 }
+input[type=date].editType {
+  width: 72%;
+  border: 0;
+}
+input[type=date].editType:focus {
+  outline: 0;
+}
+input[type=date].editType::after {
+  right: 0;
+}
+input[type=date].smType {
+  width: 5rem;
+  padding: 0.5rem 0.1875rem;
+}
+input[type=date].smType::after {
+  width: 0;
+}
 input[type=date]::-webkit-calendar-picker-indicator {
   background: transparent;
+  width: 100%;
+  position: absolute;
+  right: 0;
   z-index: 1;
 }
 input[type=date]::after {
@@ -2359,7 +2633,7 @@ input[type=radio]:checked + label::before {
   position: fixed;
 }
 .tabType input[type=radio] + label {
-  width: 5.375rem;
+  min-width: 5.375rem;
   line-height: 2.75rem;
   text-align: center;
   color: #b7b7c4;
@@ -2392,14 +2666,11 @@ input[type=radio]:checked + label::before {
 /* 박스타입 라디오박스 */
 .boxType ul {
   display: flex;
-  flex-wrap: wrap;
 }
 .boxType li {
-  width: 25%;
-  min-width: 6.5rem;
-  height: 5.625rem;
+  min-width: 6.875rem;
+  height: 6.25rem;
   margin-left: -1px;
-  margin-top: -1px;
   font-weight: 400;
   text-align: center;
   display: flex;
@@ -2408,13 +2679,7 @@ input[type=radio]:checked + label::before {
   cursor: pointer;
 }
 .boxType li:nth-child(1) {
-  margin-top: 0;
-}
-.boxType li:nth-child(4n+1) {
   margin-left: 0;
-}
-.boxType li:nth-child(4n), .boxType li:nth-child(4n+2), .boxType li:nth-child(4n+3) {
-  margin-top: 0;
 }
 .boxType li input {
   width: 0;
@@ -2424,7 +2689,8 @@ input[type=radio]:checked + label::before {
 .boxType li input + label {
   width: 100%;
   height: 100%;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
+  font-weight: 400;
   border: 1px solid #e6e6eb;
 }
 .boxType li input + label::before {
@@ -2600,6 +2866,16 @@ input[type=radio]:checked + label::before {
   transform: translateY(-40%);
   right: 0.625rem;
 }
+.select .selDefault.low {
+  line-height: 2.1875rem;
+  padding-left: 0.375rem;
+}
+.select .selDefault.low + .optionList {
+  top: 2.5rem;
+}
+.select .selDefault.low::before {
+  right: 0.5rem;
+}
 .select .optionList {
   display: none !important;
   max-height: 13.75rem;
@@ -2655,6 +2931,9 @@ input[type=radio]:checked + label::before {
 }
 .select.lowSize .optionList {
   top: 2.5rem;
+}
+.select.xsSize {
+  width: 4.375rem;
 }
 .select.smSize {
   width: 5.375rem;
@@ -2796,6 +3075,17 @@ input[type=radio]:checked + label::before {
   width: 1.125rem;
   height: 1.125rem;
   background-position: -60px 0;
+  position: relative;
+}
+.ico.filter.is-active:after {
+  content: "";
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -40px -160px;
+  background-image: url(../img/icoGroup.png);
+  position: absolute;
+  bottom: -3px;
+  right: -8px;
 }
 .ico.fileUpload {
   width: 1.25rem;
@@ -2880,6 +3170,11 @@ input[type=radio]:checked + label::before {
   vertical-align: -2px;
   background-position: -120px 0;
 }
+.ico.qMark2 {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -160px -20px;
+}
 .ico.top {
   width: 2.125rem;
   height: 2.125rem;
@@ -2889,6 +3184,11 @@ input[type=radio]:checked + label::before {
   width: 0.75rem;
   height: 0.375rem;
   background: url(../img/icoSelect.png) no-repeat;
+}
+.ico.sel_g {
+  width: 0.9375rem;
+  height: 0.375rem;
+  background: url(../img/icoSelect_g.png) no-repeat;
 }
 .ico.list {
   width: 1.125rem;
@@ -3010,8 +3310,14 @@ input[type=radio]:checked + label::before {
   padding: 2.5rem 0;
   background: #fff;
 }
-.boxListWrap .nodata {
-  height: 100%;
+.boxListWrap > ul > li {
+  margin-top: 1.25rem;
+}
+.boxListWrap > ul > li.listType {
+  margin-top: 0;
+}
+.boxListWrap > ul > li.tableTypeBox {
+  margin-top: 10px;
 }
 
 .boxTop {
@@ -3035,45 +3341,47 @@ input[type=radio]:checked + label::before {
   justify-content: space-between;
 }
 .boxWrap.headType .head {
-  padding-bottom: 0.9375rem;
   position: relative;
 }
-.boxWrap.headType .head::after {
-  content: "";
-  width: calc(100% + 60px);
-  height: 1px;
-  background: #e6e6eb;
-  position: absolute;
-  left: -30px;
-  bottom: 0;
-}
 .boxWrap.headType .head .prefix {
-  font-weight: 500;
-}
-.boxWrap.headType .head .suffix {
   color: #878791;
   font-size: 0.875rem;
 }
-.boxWrap.headType .head .suffix span:nth-child(2) {
+.boxWrap.headType .head .prefix span:nth-child(2) {
   margin-left: 0.625rem;
   position: relative;
 }
-.boxWrap.headType .head .suffix span:nth-child(2)::before {
+.boxWrap.headType .head .prefix span:nth-child(2)::before {
   content: "";
   width: 1px;
   height: 0.875rem;
   background: #878791;
   position: absolute;
   top: 50%;
-  left: -4px;
+  left: -6px;
   transform: translateY(-40%);
 }
 .boxWrap.headType .cont {
-  margin-top: 1.25rem;
+  margin-top: 0.625rem;
   position: relative;
 }
 .boxWrap.headType .bottom .prefix {
   color: #878791;
+}
+
+.headTypeBox,
+.tableTypeBox {
+  display: flex;
+  width: 100%;
+}
+.headTypeBox.center,
+.tableTypeBox.center {
+  align-items: center;
+}
+.headTypeBox label + .boxList,
+.tableTypeBox label + .boxList {
+  margin-left: 0.5rem;
+  width: calc(100% - 26px);
 }
 
 .boxList {
@@ -3093,6 +3401,22 @@ input[type=radio]:checked + label::before {
 .boxList .cont {
   margin-top: 1rem;
   position: relative;
+}
+.boxList .memSkill {
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
+  cursor: pointer;
+}
+.boxList .photo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  vertical-align: middle;
+  margin-right: 0.625rem;
 }
 .boxList button.round,
 .boxList .button.round {
@@ -3133,8 +3457,8 @@ input[type=radio]:checked + label::before {
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: inherit;
   word-wrap: break-word;
+  white-space: inherit;
   -webkit-line-clamp: 2;
   text-align: left;
   -webkit-box-orient: vertical;
@@ -3233,7 +3557,6 @@ input[type=radio]:checked + label::before {
   margin: 10px auto;
 }
 .boxList.headType {
-  margin-top: 1.25rem;
   border: 1px solid #e6e6eb;
 }
 .boxList.headType:first-child {
@@ -3242,10 +3565,13 @@ input[type=radio]:checked + label::before {
 .boxList.headType .head {
   color: #878791;
   background: #e6e6eb;
-  padding: 0.375rem 0.5rem 0.375rem 0.875rem;
+  padding: 0.375rem 0.5rem;
 }
 .boxList.headType .head .prefix {
   font-weight: 400;
+}
+.boxList.headType .head .prefix .score {
+  margin-left: 0.625rem;
 }
 .boxList.headType .head .suffix {
   line-height: 1;
@@ -3270,28 +3596,13 @@ input[type=radio]:checked + label::before {
   margin-right: 0.625rem;
 }
 .boxList.headType .cont .prefix .memName {
+  display: flex;
   color: #29292c;
   font-weight: 700;
-}
-.boxList.headType .cont .prefix .memName .photo {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 0.75rem;
-  vertical-align: middle;
-  margin-right: 0.625rem;
 }
 .boxList.headType .cont .prefix .memName p {
   color: #878791;
   font-weight: 500;
-}
-.boxList.headType .cont .prefix .memSkill {
-  width: 90%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  white-space: nowrap;
-  text-align: left;
-  cursor: pointer;
 }
 .boxList.headType .cont .prefix .memPay {
   color: #29292c;
@@ -3405,6 +3716,33 @@ input[type=radio]:checked + label::before {
   color: #fff;
   background: #0460d2;
 }
+.boxList.tableType {
+  border: 1px solid #e6e6eb;
+}
+.boxList.tableType .cont {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  padding: 0.875rem;
+  text-align: center;
+  position: relative;
+}
+.boxList.tableType .cont .memName {
+  width: 14%;
+  text-align: left;
+}
+.boxList.tableType .cont .memSkill {
+  width: 30%;
+}
+.boxList.tableType textarea, .boxList.tableType input[type=text] {
+  margin-top: 0.3125rem;
+  padding: 0.4375rem;
+}
+.boxList.tableType.is-active {
+  border: 1px solid #0460d2;
+}
 
 h1 {
   font-size: 3.375rem;
@@ -3468,6 +3806,11 @@ h2 button {
 h3 {
   font-size: 1.125rem;
   letter-spacing: -0.71px;
+}
+h3 .dNear {
+  margin-right: 0.625rem;
+  font-size: 0.875rem;
+  vertical-align: 2px;
 }
 
 h4 {
@@ -3563,132 +3906,96 @@ h6 {
   font-size: 0.875rem;
 }
 
+.myProjDetail {
+  overflow-y: auto;
+}
+.myProjDetail::-webkit-scrollbar {
+  width: 0;
+}
+.myProjDetail .wrap {
+  width: calc(100% - 710px);
+  position: absolute;
+  bottom: 20px;
+}
 .myProjDetail .boxWrap {
-  padding: 1.875rem;
+  padding: 1.25rem 1.5625rem;
+  padding-bottom: 0.9375rem;
 }
 .myProjDetail .boxWrap.headType {
-  padding: 1.25rem 1.875rem 1.875rem;
+  padding: 1.25rem;
 }
-.myProjDetail .boxWrap + .boxWrap {
+.myProjDetail .boxWrap.suffix {
+  margin-left: 0.625rem;
+}
+.myProjDetail .boxWrap.suffix h3 {
+  text-align: center;
+}
+.myProjDetail .boxWrap.suffix .yScroll {
+  padding-right: 0.625rem;
+}
+.myProjDetail .boxWrap.sticky {
   margin-top: 0.625rem;
+  padding: 0;
+  font-size: 1rem;
+  position: relative;
+}
+.myProjDetail .boxWrap.sticky .tabContWrap {
+  padding: 1.25rem;
+  padding-top: 0;
+}
+.myProjDetail .boxWrap.sticky .yScroll {
+  height: calc(100vh - 510px);
+  margin-top: 0;
+  transition: height 0.3s;
+  overflow-y: auto;
+}
+.myProjDetail .boxWrap.sticky .yScroll::-webkit-scrollbar {
+  width: 0;
+}
+.myProjDetail .boxWrap.sticky .yScroll.is-active {
+  height: calc(100vh - 245px);
+}
+.myProjDetail .boxWrap.sticky .filterWrapper {
+  padding: 1.875rem 1.5625rem;
+  position: absolute;
+  left: auto;
+  right: -205px;
+  top: -1px;
+  z-index: 10;
+  border-radius: 0.4375rem;
+  box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.1);
 }
 .myProjDetail .boxWrap .boxType {
-  max-height: 11.25rem;
-  overflow-y: auto;
-  flex-wrap: wrap;
-  margin: 1.875rem 0 1.25rem;
+  width: 37.5rem;
+  max-height: 7.5rem;
+  margin-top: 1.875rem;
+  padding-bottom: 0.625rem;
+  overflow-x: auto;
 }
 .myProjDetail .boxWrap .yScroll {
-  height: calc(100vh - 600px);
+  height: calc(100vh - 765px);
+  margin-top: 1rem;
 }
 .myProjDetail .boxWrap .yScroll .tit {
-  margin-top: 1.25rem;
+  margin-top: 1rem;
+}
+.myProjDetail .boxWrap .yScroll .tit:first-child {
+  margin-top: 0;
+}
+.myProjDetail .boxWrap .boxList {
+  width: 100%;
+  color: #878791;
+}
+.myProjDetail .boxWrap .bottom {
+  margin-top: 0.9375rem;
+  text-align: right;
 }
 .myProjDetail .nodata {
   height: 100%;
 }
 
-.myProjJob .wrap {
-  width: 36.25rem;
-  position: absolute;
-  bottom: 1.25rem;
-}
-.myProjJob .boxWrap {
-  margin-top: 0.625rem;
-}
-.myProjJob .partList {
-  height: 10.5rem;
-  padding: 0.625rem 0.5rem 0;
-}
-.myProjJob .partList ul {
-  padding-right: 0.3125rem;
-  padding-bottom: 0.625rem;
-  display: flex;
-  flex-wrap: wrap;
-}
-.myProjJob .partList ul li {
-  width: 29.5%;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin: 0.5625rem;
-  padding: 0.75rem 0.875rem;
-  border-radius: 0.3125rem;
-  border: 1px solid #e6e6eb;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-.myProjJob .partList ul li.is-active {
-  border: 1px solid #0460d2;
-}
-.myProjJob .partList ul p {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-items: center;
-}
-.myProjJob .partList ul p .partWrap,
-.myProjJob .partList ul p .memNum {
-  font-weight: 700;
-}
-.myProjJob .partList ul p .label {
-  width: 2.75rem;
-  font-weight: 400;
-}
-.myProjJob .partList ul p .deadline {
-  font-size: 0.875rem;
-}
-.myProjJob .partList ul p + p {
-  margin-top: 0.625rem;
-}
-.myProjJob .tabBtnWrap {
-  font-size: 1rem;
-}
-.myProjJob .tabContWrap .inputIco {
-  width: calc(100% - 98px);
-}
-.myProjJob .tabContWrap .yScroll {
-  height: calc(100vh - 573px);
-  margin-top: 1.25rem;
-  transition: height 0.3s;
-  overflow-y: auto;
-}
-.myProjJob .tabContWrap .yScroll::-webkit-scrollbar {
-  width: 0;
-}
-.myProjJob .tabContWrap .yScroll.is-active {
-  height: calc(100vh - 360px);
-}
-.myProjJob .tabContWrap .tabCont {
-  position: relative;
-  padding: 1.25rem 1.875rem;
-}
-.myProjJob .tabContWrap .tabCont .goTop {
-  bottom: 5rem;
-}
-.myProjJob .sticky {
-  position: relative;
-}
-.myProjJob .sticky .filterWrapper {
-  position: absolute;
-  left: -205px;
-  top: 0;
-  border-radius: 0.4375rem;
-  box-shadow: -4px 4px 5px 0 rgba(0, 0, 0, 0.2);
-}
-.myProjJob.is-active .wrap {
-  height: calc(100vh + 63px);
-}
-.myProjJob.is-active .tabContWrap .yScroll {
-  height: calc(100vh - 356px);
-}
-
-@media (max-width: 1919px) {
-  .myProjJob .wrap {
-    bottom: 0.625rem;
-  }
-}
 .myPeoList .tabCont {
-  padding: 1.25rem 1.875rem;
+  padding: 1.25rem;
 }
 .myPeoList .yScroll {
   height: calc(100vh - 233px);
@@ -3716,8 +4023,22 @@ h6 {
 .genMember .tableTop {
   margin-top: 1.875rem;
 }
+.genMember .tableBox {
+  overflow-y: initial;
+}
 .genMember .tableBox td.nodata {
   height: 13.75rem;
+}
+.genMember .tableBox .tooltip {
+  visibility: visible;
+  top: auto;
+  bottom: 4.375rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.genMember .tableBox .tooltip hr {
+  opacity: 0.5;
+  margin-top: 0.125rem;
 }
 
 .projReqList .tableTop {
