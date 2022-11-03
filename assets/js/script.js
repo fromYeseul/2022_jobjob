@@ -305,7 +305,7 @@ document.addEventListener('click', e => {
     let lb = e.target;
     let optionList = lb.nextElementSibling;
     let optionItems = optionList.querySelectorAll('.optionItem');
-    $each()
+
     if(selDefault.parentNode.classList.contains('is-active')) {                
         lb.parentNode.classList.remove('is-active');                   
 
@@ -521,9 +521,9 @@ function makeScroll(){
 
 //직무추천테이블 active
 //호출 : trToggle();
-function trToggle(){
-    let trToggle = document.query
-}
+// function trToggle(){
+//     let trToggle = document.query
+// }
 
 
 //직무추천 필터
@@ -596,11 +596,19 @@ function showTable(){
     let flex_1_2 = document.querySelector('.flex_1_2');
     let open = document.querySelector('.open');
     let none = document.querySelectorAll('td.none');
+    let theadActive = document.querySelector('.suffix .tableHead th')
+
+    // document.getElementById("myTd").colSpan = "1";
 
     none.forEach(none =>{
         open.addEventListener('click', () => {
             flex_1_2.classList.toggle('is-active');
             none.classList.toggle('none');
+            if(theadActive.colspan = "12"){
+                theadActive.colSpan = "13";
+            }else{
+                theadActive.colSpan = "12";
+            }
         });
     })
 }
