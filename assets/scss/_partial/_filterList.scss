@@ -1,0 +1,40 @@
+
+.filterWrapper{
+    .filterTop{
+        @include sideArray;
+    }
+}
+.filterList{
+    margin-top: rem(30);
+    .tit{
+        font-weight: 700;
+        margin-bottom: rem(10);
+    }
+    label{
+        display: block !important;
+        margin-top: rem(10);
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    .listBox{
+        .prefix,
+        .suffix{
+            max-height: rem(400);
+            overflow-y: scroll;
+        }
+        .prefix{
+            width: 33%;
+        }
+        .suffix{
+            width: 67%;
+            .listType{
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    width: 50%;                    
+                }
+            }
+        }
+    }
+}

@@ -53,13 +53,19 @@
                 padding-top: 0;
             }
             .yScroll{
-                height: calc(100vh - 510px);
+                height: calc(100vh - 530px);
                 margin-top: 0;
                 transition: height 0.3s;                
                 @include scroll_0;
                 &.is-active{
-                    height: calc(100vh - 245px);
+                    height: calc(100vh - 260px);
                 }
+                .tableBox{
+                    overflow-y: visible;
+                }
+            }
+            .listBottom{
+                padding-top: rem(10) ;
             }
             .filterWrapper{
                 padding: rem(30) rem(25);
@@ -85,7 +91,7 @@
             overflow-x: auto;
         }
         .yScroll{
-            height: calc(100vh - 765px);
+            height: calc(100vh - 815px);
             margin-top: rem(16);
             //220829
             .tit{
@@ -99,7 +105,7 @@
             width: 100%;
             color: $subInfo;
         }
-        .bottom{
+        >.bottom{
             margin-top: rem(15);
             text-align: right;
         }

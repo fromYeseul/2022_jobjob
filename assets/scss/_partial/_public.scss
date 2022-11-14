@@ -143,6 +143,11 @@ $footerGray : $titleGray;
     justify-content: space-between;
 }
 
+.flex_1_1{
+    display: flex;
+    >.prefix{flex: 1 1 50%;}
+    >.suffix{flex: 2 1 50%;}
+}
 .flex_2_1{
     display: flex;
     >.prefix{flex: 1 1 60%;}
@@ -260,4 +265,6 @@ $footerGray : $titleGray;
 .lh50{line-height: rem(50);}
 .fz0{font-size: 0;}
 
+.p0{padding: 0 !important;}
+.p0-10{padding: 0 rem(10) !important;}
 .p0-30{padding: 0 rem(30);}

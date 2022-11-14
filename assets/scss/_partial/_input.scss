@@ -134,7 +134,7 @@ textarea{
         height: rem(35);
     }
     &.xsSize{
-        width: rem(60);
+        width: rem(65);
         height: rem(40);
     }
     &.smSize{
@@ -197,11 +197,12 @@ input[type=date]{
             right:0;
         }
     }
-    &.smType{
-        width: rem(80);
-        padding: rem(8) rem(3);
+    &.smSize{
+        width: rem(115);
+        padding: rem(8);
         &::after{
-            width: 0;
+            // width: 0;
+            right: rem(10);
         }
     }
     &::-webkit-calendar-picker-indicator {
@@ -529,6 +530,7 @@ a{
 /* TEXTAREA */
 textarea{
     width: 100%;
+    vertical-align: middle;
     & + .counter{
         color: $subInfo;
         text-align: right;
@@ -674,7 +676,9 @@ input[type=radio]{
         opacity: 0;
         position: fixed;
         + label{
+            display: inline-block !important;
             //width: rem(80);
+            min-width: rem(65);
             line-height: rem(44);
             padding: 0 rem(25);
             margin-right: rem(5);
@@ -722,6 +726,38 @@ input[type=radio]{
                     background: $white;
                     border: 1px solid $mainColor;
                 }
+            }
+        }
+    }
+    &.lowSize{
+        input[type=radio]{
+         + label{
+            line-height: rem(40);
+            padding: 0 rem(16);
+         }
+        }
+    }
+}
+
+/* 리스트타입 */
+.listType{
+    input[type=checkbox]{
+        width: 0;
+        opacity: 0;
+        position: fixed;
+        + label{
+            height: rem(50);
+            padding: rem(12) rem(14);
+            margin-top: 0;
+            border:1px solid $layoutColor;
+            &::before{
+                display: none;
+            }
+        }
+        &:checked{
+            + label{
+                color: $mainColor;
+                border: 1px solid $mainColor;
             }
         }
     }
@@ -785,6 +821,7 @@ input[type=radio]{
         input[type=radio]{
             + label{
                 width: rem(72);
+                min-width: rem(60);
                 line-height: rem(32);
                 margin-right: -2px;            
             }            
@@ -806,31 +843,17 @@ input[type=radio]{
         //flex-wrap: wrap;
     }
     li{        
-        // width: 25%;
-        // min-width: rem(104);
         min-width: rem(110);
         height: rem(100);
-        margin-left: -1px;
-        // margin-top: -1px;
         font-weight: 400;
-        // padding: rem(20) 0;
-        // border: 1px solid $layoutColor;
-        //border-left: 0;
         text-align: center;
         @include heightArray;
         cursor: pointer;
         &:nth-child(1){
-            // margin-top: 0;
-            margin-left: 0;
+            label{
+                border-left: 0;
+            }
         }
-        // &:nth-child(4n + 1){
-        //     margin-left: 0;
-        // }
-        // &:nth-child(4n),
-        // &:nth-child(4n + 2),
-        // &:nth-child(4n + 3){
-        //     margin-top: 0;
-        // }
         input{
             width: 0;
             opacity: 0;
@@ -841,6 +864,7 @@ input[type=radio]{
                 padding: rem(16) 0;
                 font-weight: 400;
                 border: 1px solid $layoutColor;
+                border-right: 0;
                 &::before{
                     display: none;
                 }

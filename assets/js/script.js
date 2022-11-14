@@ -142,6 +142,7 @@ function tabMenu(){
                 
                 for(let i=0; i < tabBtn.length; i++){
                     if (tabBtn[i].closest('.tabWrapper').id === tab_id){
+
                         tabBtn[i].classList.remove('is-active');
                         e.target.classList.add('is-active');
                     }
@@ -240,10 +241,19 @@ function selectBox(){
         //220907 변수 위치 수정
         let optionList = lb.nextElementSibling;
         let optionItems = optionList.querySelectorAll('.optionItem');
+
+        /* 221107 저장버튼으로 active추가했을 때 -ys */
+        optionItems.forEach(opt => {
+            opt.addEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+        /* //221107 저장버튼으로 active추가했을 때 -ys */
+
         lb.addEventListener('click', e => {        
             optionList = lb.nextElementSibling;
             optionItems = optionList.querySelectorAll('.optionItem');
-            clickLabel(lb, optionItems);      
+            clickLabel(lb, optionItems); 
             
             /* 220906 수정(외부클릭시 닫힘) -ys */
             document.addEventListener('click', function(event){
@@ -284,38 +294,22 @@ function selectBox(){
         }
     }
 
-    
-
-    /* 220902 수정(다중선택) -ys */
+    /* 221104 수정(마이피플 - 투입확정) -ys */
     const handleSelect = (selDefault, item) => {
         let hasChk = item.getElementsByTagName('input');
         if(hasChk.length >= 1){
             selDefault.innerHTML = item.textContent;
-        }else{
-            selDefault.innerHTML = item.textContent;
-            selDefault.parentNode.classList.remove('is-active');
+        }        
+        else{
+        	if(selDefault.getAttribute('data-confirmyn') != "Y") {
+        		selDefault.innerHTML = item.textContent;
+            	selDefault.parentNode.classList.remove('is-active');
+        	}	            
         }            
     }
-    /* //220902 수정(다중선택) -ys */
+    /* //221104 수정(마이피플 - 투입확정) -ys */
 }
 //selectBox();
-
-
-document.addEventListener('click', e => {        
-    let lb = e.target;
-    let optionList = lb.nextElementSibling;
-    let optionItems = optionList.querySelectorAll('.optionItem');
-
-    if(selDefault.parentNode.classList.contains('is-active')) {                
-        lb.parentNode.classList.remove('is-active');                   
-
-    }  else {
-        e.target.parentNode.classList.add('is-active');
-    
-    }
-   
-    
-});
 
 
 

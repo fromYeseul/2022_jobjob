@@ -1,7 +1,7 @@
 .tabWrapper{
     &.listType{
         display: flex;
-        .tabBtnWrap{
+        >.tabBtnWrap{
             display: block;
             width: rem(250);
             min-height: 100vh;
@@ -14,28 +14,28 @@
                 padding: rem(20) rem(16);
                 border-bottom:1px solid $layoutColor;
             }
-        }
-        .tabContWrap{
-            width: calc(100% - 250px);
-        }
-        .tabBtn{
-            font-size: rem(16);
-            text-align: left;
-            border-bottom:1px solid $layoutColor;
-            a{
-                display: block;
-                width: rem(250);
-                padding: rem(15) rem(25);
-                &.is-active{
-                    border-bottom: 0;
-                    border-left: 3px solid $mainColor;
+            .tabBtn{
+                font-size: rem(16);
+                text-align: left;
+                border-bottom:1px solid $layoutColor;
+                a{
+                    display: block;
+                    width: rem(250);
+                    padding: rem(15) rem(25);
+                    &.is-active{
+                        border-bottom: 0;
+                        border-left: 3px solid $mainColor;
+                    }
                 }
             }
         }
-        .tabCont{
-            max-height: 100vh;
-            overflow-y: auto;
-            padding: rem(30) rem(50);
+        >.tabContWrap{
+            width: calc(100% - 250px);
+            >.tabCont{
+                max-height: 100vh;
+                overflow-y: auto;
+                padding: rem(30) rem(50);
+            }
         }
     }
 }

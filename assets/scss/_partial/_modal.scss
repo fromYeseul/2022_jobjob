@@ -37,9 +37,16 @@
             padding: rem(30) rem(45);
         }
         &.filterType{
-            min-width: rem(200);
-            width:fit-content;
+            // min-width: rem(200);
+            // width:fit-content;
+            width: rem(270);
             padding: rem(30);
+            .modalCont{
+                margin-top: 0;
+            }
+            &.laSize{
+                width: rem(560);
+            }
         }
         &.fullSize{
             width: rem(1800);
@@ -61,6 +68,12 @@
         background: rgba(0,0,0,0.5);
         z-index: 5;
     }
+    .tit{
+        font-size: rem(18);
+        font-weight: 700;
+        text-align: left;
+        line-height: rem(18);
+    }
 }
 
 .modalHeader{
@@ -68,12 +81,6 @@
     @include clear_float;
     .layerClose{
         float: right;
-    }
-    .tit{
-        font-size: rem(18);
-        font-weight: 700;
-        text-align: left;
-        line-height: rem(18);
     }
 }
 .modalCont{
@@ -83,6 +90,12 @@
         .select{
             margin:0 auto;
             text-align: left;
+        }
+    }
+    h5{
+        text-align: center;
+        & + .filterList{
+            margin-top: rem(10);
         }
     }
     .tabBtnWrap{
@@ -117,6 +130,15 @@
     }  
     .filterList{
         margin-top: 0;
+        .btnType{
+            display: flex;
+            justify-content: space-between;            
+            input[type=radio]{
+                + label{
+                    margin-right: 0;
+                }
+            }
+        }
     }
 }
 .modalFooter{

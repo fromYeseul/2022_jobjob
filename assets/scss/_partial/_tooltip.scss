@@ -16,6 +16,7 @@
         padding: rem(10) rem(8) ;
         border-radius: rem(4);
         background: $tooltipGray;
+        z-index: 10;
         &::after{
             content: " ";
             position: absolute;
@@ -32,7 +33,9 @@
             width: rem(190);
             text-align: left;
             top:-95px;
-            left: -87px;
+            // left: -87px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         &.left{
             display: none;
@@ -67,6 +70,20 @@
                 margin-bottom: rem(6);
             }
         }
+        &.bottom{
+            top: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            &::after{
+                top: -12px;
+                border-top-color: transparent;
+                border-bottom-color: $tooltipGray;
+            }
+        }
+    }
+    .ellipsis{
+        padding: 0 rem(10);
+        text-align: center;
     }
     &:hover{
         .tooltip{

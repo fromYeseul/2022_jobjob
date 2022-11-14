@@ -166,10 +166,10 @@
                                         <ul>
                                             <li>
                                                 <label class="need" for="">직군</label>
-                                                <div class="select">
+                                                <div class="select is-active">
                                                     <span class="selDefault">선택</span>
                                                     <ul class="optionList">
-                                                        <!-- <li class="optionItem">PM</li>
+                                                        <li class="optionItem">PM</li>
                                                         <li class="optionItem">개발</li>
                                                         <li class="optionItem">기획</li>
                                                         <li class="optionItem">디자인</li>
@@ -179,7 +179,7 @@
                                                         <li class="optionItem">QA</li>
                                                         <li class="optionItem">네트워크/서버</li>
                                                         <li class="optionItem">SAP컨설팅</li>
-                                                        <li class="optionItem">ABAP</li> -->
+                                                        <li class="optionItem">ABAP</li>
                                                     </ul>
                                                 </div>
                                             </li>
@@ -595,10 +595,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>221004 추가 -ys -->
     <script src="../assets/js/script.js"></script>
+    <!-- <script src="../assets/js/layerPopup.js"></script>
+    <script src="../assets/js/validator.js"></script> -->
+
     <script scr="../assets/js/jquery-ui.js"></script>
 
     <script>
-        /* 221004 자동완성 -ys */
+        /* 221004 자동완성 -ys 
         $(document).ready(function() {
             var inputSource = ['java', 'javascript', 'jsp', 'photoshop', 'ajax', 'django'];
 
@@ -619,6 +622,12 @@
             document.getElementById("inputBox").dispatchEvent(event);
         };
         /* //221004 자동완성 -ys */
+
+        // $("#saveBtn").click(function () { 
+        // 	const essentialArr = ['프로젝트 이름','요청회사','요청자 이름','요청자 이메일','연락처','프로젝트 시작희망일' ,'직군','직무','등급','모집인원','단가','투입(예정)일','종료(예정)일','근무방식','시/도','군/구'];
+        // 	validatorContainsCheck(essentialArr);
+        //  });
+        //  validatorContainsCheck();
     </script>
 
     <script>

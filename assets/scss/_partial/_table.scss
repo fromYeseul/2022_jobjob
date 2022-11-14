@@ -10,9 +10,9 @@
             top:0;
         }
     }
-    + .tableBox{
-        margin-left: rem(40);
-    }
+    // + .tableBox{
+    //     margin-left: rem(40);
+    // }
 }
 
 
@@ -49,6 +49,11 @@ table{
                 font-size: rem(16);
                 font-weight: 700;
                 padding: rem(10) 0;
+            }
+            & + tr{
+                th{
+                    padding: rem(6) 0;
+                }
             }
         }
         .select{
@@ -162,6 +167,8 @@ table{
                         position: absolute;
                         top: rem(22);
                         left: calc(50% - 4px);
+                        // top: -2px;
+                        // right: -7px;
                     }
                     &.is-active{
                         &::after{
@@ -185,6 +192,9 @@ table{
                     // }
                 }
             }
+        }
+        thead{
+            height: rem(53);
         }
         tbody{
             tr{
@@ -226,6 +236,16 @@ table{
         .photo{
             margin-left: rem(15);
         }
+        .tooltip{
+            top: -70%;
+        }
+        &.hasInput{
+            tr{
+                td{
+                    padding: rem(6) 0;
+                } 
+            }
+        }
     }
     &.hasInput{
         tr{
@@ -251,6 +271,15 @@ table{
     .ellipsis{
         @include ellipsis;
         padding: rem(14);
+        .dNear{
+            font-size: rem(12);
+        }
+        .dNear,
+        .label{
+            & + a{
+                margin-left: rem(5);
+            }
+        }
     }
     .photo{
         width: rem(40);
@@ -263,9 +292,9 @@ table{
     // .button{
     //     cursor: inherit;
     // }
-    .round{
-        cursor: inherit;
-    }
+    // .round{
+    //     cursor: inherit;
+    // }
     a{
         color: $mainColor;
         cursor: pointer;
@@ -335,6 +364,11 @@ table{
     }
     &.pagingType{
         justify-content: center;
+    }
+    &.half{
+        width: 50%;
+        margin-left: 50%;
+        padding-top: rem(10);
     }
     button{
         font-size: rem(16);
