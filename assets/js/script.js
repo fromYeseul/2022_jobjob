@@ -44,6 +44,24 @@ function navList(){
     }
 }
 
+//header - mypeople, myproject
+function headerPage(){
+    let hPage = document.querySelectorAll('header .center a');
+
+    if(hPage !== null){
+        for(let i=0; i<hPage.length; i++){
+            hPage[i].addEventListener('click', function(){
+                for(let j=0; j<hPage.length; j++){
+                    hPage[j].classList.remove('is-active');
+                }
+                this.classList.add('is-active');
+                console.log(this);
+            })
+        }
+    }
+}
+headerPage();
+
 
 
 
