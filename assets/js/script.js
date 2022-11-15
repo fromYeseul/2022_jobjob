@@ -513,7 +513,7 @@ function makeScroll(){
     
     /* 220928 수정 -ys */
     ProjDTabWrapper.addEventListener('wheel', moveScroll);
-    //myProjDetail.addEventListener('wheel', moveScroll);
+    myProjDetail.addEventListener('wheel', moveScroll);
 
     function moveScroll(event){
 
@@ -565,6 +565,21 @@ function toastClose(){
     }
 }
 //toastClose();
+
+
+//마이프로젝트 메모보이기
+//호출 : showMemo();
+function showMemo(){
+    let memoBtn = document.querySelectorAll('a.memoBtn');
+    let myProjDetail = document.querySelector('.myProjDetail');
+
+    for(let i=0; i<memoBtn.length; i++){
+        memoBtn[i].addEventListener('click', function(){
+            myProjDetail.classList.toggle('is-active');        
+        })
+    }
+}
+// /showMemo();
 
 
 //퀵뷰 메모 더보기

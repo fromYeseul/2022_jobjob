@@ -427,7 +427,7 @@
                                                                 ASP, JSP, Java, Linux, Oracle, UNIX, Maria, SQLite, Mongo, Ember, Redi,                                       
                                                                 ASP, JSP, Java, Linux, Oracle, UNIX, Maria, SQLite, Mongo, Ember, Redi                                       
                                                             </td>
-                                                            <td><a href="#" class="button round">메모(3)</a></td>
+                                                            <td><a href="#" class="button round memoBtn">메모(3)</a></td>
                                                             <td class="hasTooltip">
                                                                 <span class="eHigh">22/05/01<br>제안완료</span>                                                         
                                                                 <div class="tooltip">
@@ -462,7 +462,7 @@
                                                             <td class="ellipsis">
                                                                 ASP, JSP, Java,                                       
                                                             </td>
-                                                            <td><a href="#" class="button round">메모(3)</a></td>
+                                                            <td><a href="#" class="button round memoBtn">메모(3)</a></td>
                                                             <td>
                                                                 제안불가<br>(부회원)     
                                                             </td>
@@ -1571,9 +1571,8 @@
                         <!--//221114 수정 -ys-->
                     </div>
                 </section>
-                <!--항상 열린상태 quickView-->
                 <!--221013 추가 -ys-->
-                <section class="quickView fixedHeight is-active">
+                <section class="quickView">
                     <div class="tabWrapper" id="tab01">
                         <ul class="tabBtnWrap">
                             <li class="tabBtn">
@@ -1721,8 +1720,7 @@
                         </div>
                     </div>
                 </section>     
-                <!--//221013 추가 -ys-->
-                <!--//항상 열린상태 quickView-->        
+                <!--//221013 추가 -ys-->       
             </section>
         </section>
 
@@ -2286,7 +2284,7 @@
                 <div class="filterList mt50">
                     <div class="listBox flex">
                         <div class="prefix">
-                            <ul class="chkWrap listType">
+                            <ul class="chkWrap boxListType">
                                 <li>
                                     <input type="checkbox" id="aSeoul">
                                     <label for="aSeoul">서울 <span class="eHigh">(3개 선택)</span></label>
@@ -2422,6 +2420,7 @@
         makeScroll();
         openFilter();
         chkAll();
+        showMemo();
         // trToggle();
     </script>
 

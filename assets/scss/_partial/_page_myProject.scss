@@ -115,4 +115,33 @@
     .nodata{
         height: 100%;
     }
+    & + .quickView{
+        width: 0;
+        position: fixed;
+        top: rem(60);
+        right: -360px;
+        box-shadow: none;
+        transition:all .3s;
+        .tabBtnWrap{
+            padding: rem(20);
+            padding-bottom: 0;
+        }
+        .boxListWrap{
+            &.is-active{
+                padding: rem(20);
+                height: calc(100vh - 115px);
+            }
+            .boxList{
+                .moreList{
+                    right: -25px;
+                }
+            }
+        }
+    }
+    &.is-active{
+        + .quickView{
+            width: rem(360);
+            right: rem(52);
+        }
+    }
 }
