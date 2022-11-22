@@ -10,7 +10,11 @@
 
 </head>
 <body>
-
+    <% 
+    request.setAttribute("dateType1", "20220101");
+    request.setAttribute("dateType2", "2022-01-01");
+    request.setAttribute("dateType3", "2022.01.01");
+    %>
     <section class="layoutWrapper">
         <header>
             <div class="prefix">
@@ -722,13 +726,13 @@
                                             <col width="30px">
                                             <col>
                                             <col>
-                                            <col>
+                                            <col width="120px">
                                             <col>
 
                                             <col>
                                             <col>
-                                            <col width="16%">
-                                            <col width="16%">
+                                            <col width="100px">
+                                            <col width="100px">
                                             <col>
                                         </colgroup>
                                         <thead>
@@ -771,27 +775,46 @@
                                                     <div class="select xsSize">
                                                         <span class="selDefault low">선택</span>
                                                         <ul class="optionList">
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
+                                                            <li class="optionItem">개발(SAP)</li>
+                                                            <li class="optionItem">컨설팅(SAP)</li>
                                                             <li class="optionItem">선택</li>
                                                         </ul>
                                                     </div>
                                                 </td>
                                                 <td rowspan="2">
                                                     <div class="select">
-                                                        <span class="selDefault low">선택</span>
+                                                        <span class="selDefault low">JAVA 개발</span>
                                                         <ul class="optionList">
+                                                            <li class="optionItem">.NET 개발</li>
+                                                            <li class="optionItem">Mobile 개발</li>
                                                             <li class="optionItem">선택</li>
+                                                            <li class="optionItem">.NET 개발</li>
+                                                            <li class="optionItem">Mobile 개발</li>
                                                             <li class="optionItem">선택</li>
+                                                            <li class="optionItem">.NET 개발</li>
+                                                            <li class="optionItem">Mobile 개발</li>
+                                                            <li class="optionItem">선택</li>
+                                                            <li class="optionItem">.NET 개발</li>
+                                                            <li class="optionItem">Mobile 개발</li>
                                                             <li class="optionItem">선택</li>
                                                         </ul>
                                                     </div>
                                                 </td>
-                                                <td rowspan="2">22.09.01</td>
-                                                <td rowspan="2">22.09.01</td>
-                                                <td rowspan="2">3</td>
-                                                <td rowspan="2">100,000,000</td>
-                                                <td rowspan="2">100,000,000</td>
+                                                <td rowspan="2">
+                                                    <input type="date" class="editType">
+                                                </td>
+                                                <td rowspan="2">
+                                                    <input type="date" class="editType">
+                                                </td>
+                                                <td rowspan="2">
+                                                    <input type="text" class="editType" placeholder="0/0">
+                                                </td>
+                                                <td rowspan="2">
+                                                    <input type="text" class="editType txtRight" placeholder="1,000,000">
+                                                </td>
+                                                <td rowspan="2">
+                                                    <input type="text" class="editType txtRight" placeholder="1,000,000">
+                                                </td>
                                                 <td rowspan="2">-</td>
                                             </tr>                         
                                             <tr draggable="true" class="dragTr"></tr>
@@ -836,8 +859,12 @@
                                                 <td>22.09.01</td>
                                                 <td>22.09.01</td>
                                                 <td>3</td>
-                                                <td>100,000,000</td>
-                                                <td>100,000,000</td>
+                                                <td>
+                                                    <input type="text" class="editType txtRight" placeholder="1,000,000">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="editType txtRight" placeholder="1,000,000">
+                                                </td>
                                                 <td>-</td>
                                             </tr>                          
                                             <tr draggable="true" class="dragTr">
@@ -901,9 +928,20 @@
                                     <table class="hasInput">
                                         
                                         <colgroup>
+                                            <col width="80px">
                                             <col>
+                                            <col width="80px">
+                                            <col>
+                                            <col>
+
+                                            <col width="60px">
+                                            <col width="100px">
                                             <col>
                                             <col width="100px">
+                                            <col>
+
+                                            <col width="60px">
+                                            <col>
                                         </colgroup>
                                         <thead>
                                             <tr class="tableHead">
@@ -1063,6 +1101,19 @@
         showTable();
         chkAll();
         selectBox();
+
+    </script>
+    <script>
+        function getYmd10() {
+            //yyyy-mm-dd 포맷 날짜 생성
+            var d = new Date();
+            var editType = document.querySelector('input.editType').value;
+            console.log(editType);
+            
+            return d.getFullYear() + "-" + ((d.getMonth() + 1) > 9 ? (d.getMonth() + 1).toString() : "0" + (d.getMonth() + 1)) + "-" + (d.getDate() > 9 ? d.getDate().toString() : "0" + d.getDate().toString());
+        }
+        console.log(getYmd10());
+        // console.log(editType);
     </script>
 </body>
 </html>

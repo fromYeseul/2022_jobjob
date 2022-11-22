@@ -209,7 +209,9 @@
                                                             </ul>
                                                         </div>
                                                         <div class="center">
-                                                            <a href="#" class="button round" target="_blank">메모(3)</a>
+                                                            <!--221122 class 추가 -ys -->
+                                                            <a href="#" class="button round memoBtn">메모(3)</a>
+                                                            <!--//221122 class 추가 -ys -->
                                                         </div>
                                                         <div class="suffix">
                                                             <button class="button white smSize">목록삭제</button>  
@@ -753,6 +755,156 @@
                         </ul>
                     </div>
                 </section>
+                <!--221122 추가 -ys -->
+                <section class="quickView fixedHeight">
+                    <div class="tabWrapper" id="tab01">
+                        <ul class="tabBtnWrap">
+                            <li class="tabBtn">
+                                <a href="#quick-1" class="">평가 (3)</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#quick-2" class="is-active">메모 (3)</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#quick-3">컨텍이력 (3)</a>
+                            </li>
+                        </ul>
+                        <div class="tabContWrap">
+                            <div id="quick-1" class="tabCont">평가 aaa</div>
+                            <div id="quick-2" class="tabCont is-active">
+                                <!-- 항상열린상태 화면에서는 버튼없음
+                                <div class="boxTop">
+                                    <button class="fullSize showMemo">
+                                        <i class="ico expand"></i>
+                                    </button>
+                                </div> 
+                                -->
+                                
+                                <div class="boxListWrap memoList is-active">
+    
+                                    <button class="fullSize">메모 작성</button>
+                                    
+    
+                                    <ul>
+                                        <li>
+                                            <div class="textForm">
+                                                <textarea name="" id="" rows="3"></textarea>
+                                                <div class="btnWrap right">
+                                                    <button class="smSize white">취소</button>
+                                                    <button class="smSize">등록</button>
+                                                </div>  
+                                            </div>
+                                        </li>
+                                        <li class="boxList headType">
+                                            <div class="cont">
+                                                <div class="prefix">
+                                                    <ul>
+                                                        <li class="memName flex">
+                                                            <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                            <div class="">
+                                                                <span>홍길순(여/29)</span>
+                                                                <span>개발</span>
+                                                                <p>2021. 12. 31  오후 3:30</p>
+                                                            </div>
+    
+                                                            <div class="showMore">
+                                                                <a href="#" class="ico more"></a>
+                                                                <div class="moreList is-active">
+                                                                    <button class="square is-active">수정</button>
+                                                                    <button class="square is-active">삭제</button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="memMemo editType">
+                                                            <a href="#">[ CJ프레시웨이 온리원푸드넷 UIUX 개선 2차 ]</a>
+                                                            전반적으로 무난함. 고객사 평가도 무난함.<br>
+                                                            어떤 프로젝트에 들어가도 평타 침.<br>
+                                                            주말 근무 요청은 절대 하지 말 것.<br>
+                                                            평일 근무 요청은 전반적으로 무난함. 고객사 평가도 무난함.
+                                                            어떤 프로젝트에 들어가도 평타 침. 주말 근무 요청은 절대 하지 말 것.
+                                                            평일 근무 요청은
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="boxList headType">
+                                            <div class="cont">
+                                                <div class="prefix">
+                                                    <ul>
+                                                        <li class="memName flex">
+                                                            <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                            <div class="">
+                                                                <span>홍길순(여/29)</span>
+                                                                <span>개발</span>
+                                                                <p>2021. 12. 31  오후 3:30</p>
+                                                            </div>
+    
+                                                            <div class="showMore">
+                                                                <a href="#" class="ico more"></a>
+                                                                <div class="moreList">
+                                                                    <button class="square is-active">수정</button>
+                                                                    <button class="square is-active">삭제</button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="memMemo editType">
+                                                            전반적으로 무난함. 고객사 평가도 무난함.<br>
+                                                            어떤 프로젝트에 들어가도 평타 침.<br>
+                                                            주말 근무 요청은 절대 하지 말 것.<br>
+                                                            평일 근무 요청은 전반적으로 무난함. 고객사 평가도 무난함.
+                                                            어떤 프로젝트에 들어가도 평타 침. 주말 근무 요청은 절대 하지 말 것.
+                                                            평일 근무 요청은
+                                                        </li>
+                                                        <li>
+                                                            <textarea name="" id="" rows="3"></textarea>
+                                                            <div class="btnWrap center">
+                                                                <button class="smSize white">취소</button>
+                                                                <button class="smSize">저장</button>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="boxList headType">
+                                            <div class="cont">
+                                                <div class="prefix">
+                                                    <ul>
+                                                        <li class="memName flex">
+                                                            <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                            <div class="">
+                                                                <span>홍길순(여/29)</span>
+                                                                <span>개발</span>
+                                                                <p>2021. 12. 31  오후 3:30</p>
+                                                            </div>
+    
+                                                            <div class="showMore">
+                                                                <a href="#" class="ico more"></a>
+                                                                <div class="moreList">
+                                                                    <button class="square is-active">수정</button>
+                                                                    <button class="square is-active">삭제</button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="memMemo editType">
+                                                            전반적으로 무난함. 고객사 평가도 무난함.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--데이터 없을 때-->
+                                <!-- <div class="boxListWrap nodata">등록된 메모가 없습니다.</div> -->
+                                <!--//데이터 없을 때-->
+                            </div>
+                            <div id="quick-3" class="tabCont">컨택이력</div>
+                        </div>
+                    </div>
+                </section>
+                <!--//221122 추가 -ys -->
             </section>
         </section>
 
@@ -1084,6 +1236,7 @@
     <script>
         selectBox();
         showMore();
+        showMemo();
     </script>
 </body>
 </html>

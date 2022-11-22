@@ -60,7 +60,7 @@ function headerPage(){
         }
     }
 }
-headerPage();
+//headerPage();
 
 
 
@@ -567,19 +567,24 @@ function toastClose(){
 //toastClose();
 
 
-//마이프로젝트 메모보이기
+//마이프로젝트, 마이피플 메모보이기
 //호출 : showMemo();
 function showMemo(){
     let memoBtn = document.querySelectorAll('a.memoBtn');
-    let myProjDetail = document.querySelector('.myProjDetail');
+    // let myProjDetail = document.querySelector('.myProjDetail');
+    // let myPeoDetail = document.querySelector('.myPeoDetail');
+    let quickView = document.querySelector('.quickView');
 
     for(let i=0; i<memoBtn.length; i++){
         memoBtn[i].addEventListener('click', function(){
-            myProjDetail.classList.toggle('is-active');        
+            // myProjDetail.classList.add('is-active');        
+            // myPeoDetail.classList.add('is-active');        
+            quickView.classList.add('is-active');        
+
         })
     }
 }
-// /showMemo();
+//showMemo();
 
 
 //퀵뷰 메모 더보기

@@ -49,13 +49,21 @@
             }
         }
         &.fullSize{
-            width: rem(1800);
+            width: auto;
+            max-width: rem(1800);
             overflow-x: auto;
             padding: rem(40) rem(60);
             max-height: calc(100% - 100px);
             .modalFooter{
                 width: 25%;
                 margin: rem(40) auto;
+            }
+            .flex_1_2{
+                width: rem(1668);
+                //투입상세정보 팝업 (table 확장)
+                &.is-active{
+                    width: rem(1800);
+                }
             }
         }
     }

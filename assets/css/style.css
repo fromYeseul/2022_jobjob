@@ -203,9 +203,6 @@ h1, h2, h3, h4, h5, h6, p {
 .flex_1_2 .suffix {
   flex: 2 1 60%;
 }
-.flex_1_2.is-active {
-  width: 110%;
-}
 
 .block {
   display: block;
@@ -431,12 +428,12 @@ h1, h2, h3, h4, h5, h6, p {
   width: calc(100% - 680px);
 }
 .contWrapper .contLayout .myPeoList {
-  width: 33.75rem;
+  width: 31.25rem;
   background: #fff;
   border-right: 1px solid #e6e6eb;
 }
 .contWrapper .contLayout .myPeoDetail {
-  width: 60rem;
+  width: 59.6875rem;
   padding: 1.875rem 0;
 }
 .contWrapper .contLayout .myPeoDetail .boxListWrap {
@@ -945,7 +942,8 @@ footer.toast button + button {
   width: 35rem;
 }
 .modalLayer .layerBox.fullSize {
-  width: 112.5rem;
+  width: auto;
+  max-width: 112.5rem;
   overflow-x: auto;
   padding: 2.5rem 3.75rem;
   max-height: calc(100% - 100px);
@@ -953,6 +951,12 @@ footer.toast button + button {
 .modalLayer .layerBox.fullSize .modalFooter {
   width: 25%;
   margin: 2.5rem auto;
+}
+.modalLayer .layerBox.fullSize .flex_1_2 {
+  width: 104.25rem;
+}
+.modalLayer .layerBox.fullSize .flex_1_2.is-active {
+  width: 112.5rem;
 }
 .modalLayer .layerDim {
   position: absolute;
@@ -1162,6 +1166,30 @@ footer.toast button + button {
   width: 25rem;
   background: #fff;
   box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.quickView.fixedHeight {
+  width: 0;
+  position: fixed;
+  top: 60px;
+  right: -360px;
+  box-shadow: none;
+  border-left: 1px solid #e6e6eb;
+  transition: all 0.3s;
+}
+.quickView.fixedHeight.is-active {
+  width: 22.5rem;
+  right: 3.25rem;
+}
+.quickView.fixedHeight .tabBtnWrap {
+  padding: 1.25rem;
+  padding-bottom: 0;
+}
+.quickView.fixedHeight .boxListWrap.is-active {
+  padding: 1.25rem;
+  height: calc(100vh - 115px);
+}
+.quickView.fixedHeight .boxListWrap .boxList .moreList {
+  right: -25px;
 }
 .quickView .tabBtnWrap {
   padding: 1.25rem 1.5625rem;
@@ -2208,14 +2236,14 @@ input[type=date] {
   padding: 0.6875rem 1rem;
 }
 input[type=date].editType {
-  width: 72%;
+  width: 84%;
   border: 0;
 }
 input[type=date].editType:focus {
   outline: 0;
 }
 input[type=date].editType::after {
-  right: 0;
+  right: -20px;
 }
 input[type=date].smSize {
   width: 7.1875rem;
@@ -2957,6 +2985,7 @@ input[type=radio]:checked + label::before {
 .select .optionList .optionItem {
   display: block;
   padding: 0.5rem 0.625rem;
+  padding-right: 0.25rem;
   margin: 0;
 }
 .select .optionList .optionItem:hover {
@@ -4073,29 +4102,6 @@ h6 {
 .myProjDetail .nodata {
   height: 100%;
 }
-.myProjDetail + .quickView {
-  width: 0;
-  position: fixed;
-  top: 3.75rem;
-  right: -360px;
-  box-shadow: none;
-  transition: all 0.3s;
-}
-.myProjDetail + .quickView .tabBtnWrap {
-  padding: 1.25rem;
-  padding-bottom: 0;
-}
-.myProjDetail + .quickView .boxListWrap.is-active {
-  padding: 1.25rem;
-  height: calc(100vh - 115px);
-}
-.myProjDetail + .quickView .boxListWrap .boxList .moreList {
-  right: -25px;
-}
-.myProjDetail.is-active + .quickView {
-  width: 22.5rem;
-  right: 3.25rem;
-}
 
 .myPeoList .tabCont {
   padding: 1.25rem;
@@ -4117,6 +4123,10 @@ h6 {
   height: calc(100vh - 190px);
   margin-top: 1.25rem;
   background: transparent;
+}
+.myPeoDetail.is-active + .quickView {
+  width: 22.5rem;
+  right: 3.25rem;
 }
 
 .genMember .condition .chkWrap {
