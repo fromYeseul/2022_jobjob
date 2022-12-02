@@ -11,7 +11,7 @@ function gnbNav(){
         });
     
         navWrapper.addEventListener('mouseenter', function(){
-            layoutWrapper.classList.add('is-hover');
+            layoutWrapper.classList.add('is-hover');            
         });
         navWrapper.addEventListener('mouseleave', function(){
             layoutWrapper.classList.remove('is-hover');
@@ -71,7 +71,7 @@ function rightPanel(){
     let rPanelLayer = document.querySelector('.rPanelLayer');
     let rClose = document.querySelector('.rClose');
     let contLayout = document.querySelector('.contLayout');
-    let filterWrapper = document.querySelector('.filterWrapper');
+    let filterWrapper = document.querySelector('.rPanelLayer .filterWrapper');
 
     if(rPanelList !== null){
         for(let i=0; i<rPanelList.length; i++){
@@ -79,7 +79,7 @@ function rightPanel(){
                 rPanelLayer.classList.toggle('is-active');
                 contLayout.classList.toggle('is-active');
                 filterWrapper.classList.remove('is-active');                                       
-    
+
                 let windowWidth = window.innerWidth;
                 if(windowWidth <= 1200){
                     rPanelLayer.classList.toggle('layerType');
@@ -245,6 +245,23 @@ function boxChk(id){
 
 /*-----------호출-----------*/
 
+//rowspan타입 테이블 마우스 오버- 회원상세
+function tableHover(){
+    let trHover = document.querySelectorAll('.rowSpanType tr:nth-child(odd)');
+
+    for(let i=0; i<trHover.length; i++){
+        let bg = trHover[i].nextElementSibling;
+        trHover[i].addEventListener('mouseover', function(){
+            bg.classList.add('is-active');
+        });
+        trHover[i].addEventListener('mouseout', function(){
+            bg.classList.remove('is-active');
+        })
+    }
+}
+//tableHover();
+
+
 //마이프로젝트-마이피플
 
 
@@ -256,41 +273,46 @@ function selectBox(){
     let selDefault = document.querySelectorAll('.selDefault');   
     
     selDefault.forEach(function(lb){
-        //220907 변수 위치 수정
-        let optionList = lb.nextElementSibling;
-        let optionItems = optionList.querySelectorAll('.optionItem');
-
-        /* 221107 저장버튼으로 active추가했을 때 -ys */
-        optionItems.forEach(opt => {
-            opt.addEventListener('click', () => {
-                handleSelect(lb, opt)
-            })
-        })
-        /* //221107 저장버튼으로 active추가했을 때 -ys */
-
-        lb.addEventListener('click', e => {        
-            optionList = lb.nextElementSibling;
-            optionItems = optionList.querySelectorAll('.optionItem');
-            clickLabel(lb, optionItems); 
-            
-            /* 220906 수정(외부클릭시 닫힘) -ys */
-            document.addEventListener('click', function(event){
-                if(!(event.target.parentElement.parentElement == optionList || event.target == lb)){
-                    lb.parentNode.classList.remove('is-active');
-                }
-                if(event.target == document.getElementById('saveBtn') || event.target == document.getElementById('alertCls')){
-                    lb.parentNode.classList.add('is-active');
-                }
-            });
-            /* //220906 수정(외부클릭시 닫힘) -ys */
-            
-        });
         
-        /* 220907 수정(옵션없을때) -ys */
-        if(optionItems.length == 0){
-            lb.parentNode.classList.add("disable");
-        }
-        /* //220907 수정(옵션없을때) -ys */
+            if (lb.classList.contains('is-active')) return;
+
+            //220907 변수 위치 수정
+            let optionList = lb.nextElementSibling;
+            let optionItems = optionList.querySelectorAll('.optionItem');
+
+            /* 221107 저장버튼으로 active추가했을 때 -ys */
+            optionItems.forEach(opt => {
+                opt.addEventListener('click', () => {
+                    handleSelect(lb, opt)
+                })
+            })
+            /* //221107 저장버튼으로 active추가했을 때 -ys */
+
+            lb.addEventListener('click', e => {        
+                optionList = lb.nextElementSibling;
+                optionItems = optionList.querySelectorAll('.optionItem');
+                clickLabel(lb, optionItems); 
+                
+                /* 220906 수정(외부클릭시 닫힘) -ys */
+                document.addEventListener('click', function(event){
+                    if(!(event.target.parentElement.parentElement == optionList || event.target == lb)){
+                        lb.parentNode.classList.remove('is-active');
+                    }
+                    if(event.target == document.getElementById('saveBtn') || event.target == document.getElementById('alertCls')){
+                        lb.parentNode.classList.add('is-active');
+                    }
+                });
+                /* //220906 수정(외부클릭시 닫힘) -ys */
+                
+            });
+            
+            /* 220907 수정(옵션없을때) -ys */
+            if(optionItems.length == 0){
+                lb.parentNode.classList.add("disable");
+            }
+            /* //220907 수정(옵션없을때) -ys */
+            
+            lb.classList.add('is-active');
     });
 
 
@@ -401,8 +423,10 @@ function chkAll(){
 //chkAll();
 
 
+
+
 //더보기 (마이피플)
-//호출 : showMore();    
+//호출 : showMore(); 
 function showMore(){
     let openMore = document.querySelectorAll(".showMore");
     let moreList = document.querySelectorAll(".moreList");
@@ -504,7 +528,7 @@ function makeChkList(){
 
 //스크롤 생성
 //호출 : myProjDetail.onclick = makeScroll();
-let myProjDetail = document.querySelector('.myProjDetail');
+let myProjDetail_bottom = document.querySelector('.myProjDetail .wrapBottom');
 let ProjDTabWrapper = document.querySelector('.myProjDetail .tabWrapper');
 let yScroll = document.querySelectorAll('.myProjDetail .tabContWrap .yScroll');
 // let yActive = document.querySelector('.myProjDetail .tabCont.is-active .yScroll');
@@ -513,7 +537,8 @@ function makeScroll(){
     
     /* 220928 수정 -ys */
     ProjDTabWrapper.addEventListener('wheel', moveScroll);
-    myProjDetail.addEventListener('wheel', moveScroll);
+    myProjDetail_bottom.addEventListener('wheel', moveScroll);
+
 
     function moveScroll(event){
 
@@ -571,23 +596,34 @@ function toastClose(){
 //호출 : showMemo();
 function showMemo(){
     let memoBtn = document.querySelectorAll('a.memoBtn');
-    // let myProjDetail = document.querySelector('.myProjDetail');
-    // let myPeoDetail = document.querySelector('.myPeoDetail');
+    let quick_close = document.querySelectorAll('.quickView .close');
     let quickView = document.querySelector('.quickView');
 
     for(let i=0; i<memoBtn.length; i++){
-        memoBtn[i].addEventListener('click', function(){
-            // myProjDetail.classList.add('is-active');        
-            // myPeoDetail.classList.add('is-active');        
-            quickView.classList.add('is-active');        
-
+        memoBtn[i].addEventListener('click', function(){  
+            quickView.classList.add('is-active');    
         })
     }
+    quick_close[0].addEventListener('click', function(){  
+        quickView.classList.remove('is-active');    
+    })
 }
 //showMemo();
 
 
-//퀵뷰 메모 더보기
+//메모작성
+//호출 : makeMemo();
+function makeMemo(){
+    let addMemo = document.querySelector('.addMemo');
+    let textForm = document.querySelector('.textForm');
+    addMemo.addEventListener('click', function(){
+        textForm.classList.add('is-active');
+    })
+}
+//makeMemo();
+
+
+//퀵뷰 메모리스트 더보기
 //호출 : showMemoList();
 function showMemoList(){
     let showMemo = document.querySelector('.showMemo');
@@ -598,6 +634,19 @@ function showMemoList(){
     })
 }
 // showMemoList();
+
+
+//textarea height 자동
+function autoTextarea(){
+    let autoHeight = document.querySelectorAll('textarea.autoHeight');
+    for(let i=0; i<autoHeight.length; i++){
+        autoHeight[i].onkeyup = function(){
+            autoHeight[i].style.height = "1px";
+            autoHeight[i].style.height = (autoHeight[i].scrollHeight)+"px";
+        }
+    }
+}
+//autoTextarea();
 
 
 //투입상세정보팝업 드래그앤드롭

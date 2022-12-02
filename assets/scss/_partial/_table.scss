@@ -10,6 +10,9 @@
             top:0;
         }
     }
+    &.noScroll{
+        overflow-y: initial;
+    }
     // + .tableBox{
     //     margin-left: rem(40);
     // }
@@ -27,15 +30,22 @@ table{
     //220829
     text-align: center;
     background: $white;
+    
     tr{
         border-bottom: 1px solid $tableBorder;
         &.bg{
             background: rgba($mainColor, 0.02);
+            &.is-active{
+                background: $mainColor;
+            }
         }
         &:last-child{
             td{
                 border-bottom: 0;
             }
+        }
+        &:hover{
+            background: $mainColor;
         }
         &.is-active{
             background: $bgColor;
@@ -207,9 +217,6 @@ table{
         }
         thead{
             height: rem(53);
-        }
-        .photo{
-            margin-left: rem(15);
         }
         .tooltip{
             top: -70%;

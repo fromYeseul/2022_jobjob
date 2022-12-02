@@ -21,9 +21,13 @@
     // transition: all .3s;
     @include scroll_0;
     .wrap{
-        width: calc(100% - 710px);
+        //width: calc(100% - 710px);
+        width: calc(100% - 350px);
         position: absolute;
         bottom: rem(15);
+        > div{
+            padding-right: rem(360);
+        }
     }
     .boxWrap{
         //220829
@@ -67,7 +71,7 @@
             }
             .listBottom{
                 padding-top: rem(10);
-                border-top: 1px solid $layoutColor;
+                // border-top: 1px solid $layoutColor;
             }
             .filterWrapper{
                 padding: rem(30) rem(25);

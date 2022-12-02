@@ -156,8 +156,7 @@ $footerGray : $titleGray;
 .flex_1_2{
     display: flex;
     .prefix{flex: 1 1 40%;}
-    .suffix{flex: 2 1 60%;}
-    
+    .suffix{flex: 2 1 60%;}    
 }
 
 .block{
@@ -181,7 +180,17 @@ $footerGray : $titleGray;
 .float_r{
     float: right;
 }
-
+.ellipsis-5 {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: inherit;
+    word-wrap:break-word;
+    -webkit-line-clamp: 5;
+    text-align: left;
+    -webkit-box-orient: vertical;
+    cursor: initial;
+}
 // .leftEllipsis{
 //     display: inline-block;
 //     width: 22px;

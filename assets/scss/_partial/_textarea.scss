@@ -1,0 +1,46 @@
+/* TEXTAREA */
+textarea{
+    width: 100%;
+    vertical-align: middle;
+    font-size: rem(14);
+    padding: rem(8) rem(10);
+    border-radius: rem(4);
+    border:1px solid $inputGray;   
+    resize: none; 
+    &::placeholder{
+        color: $placeholder;
+        font-size: rem(14);
+    }
+    &:focus{        
+        outline: 1px solid $mainColor;
+    }
+    & + .counter{
+        color: $subInfo;
+        text-align: right;
+    }
+    &.oneLine{
+        padding: rem(7);
+    }
+    &.autoHeight{
+        height: rem(36);
+    }
+}
+.textForm{
+    display: none;
+    padding: rem(5);
+    border-radius: rem(4);
+    border:1px solid $layoutColor;
+    &.is-active{
+        display: block;
+    }
+    textarea{
+        padding: auto;
+        outline: none;
+        border: 0;        
+        @include scroll_0;    
+        transition: all .3s;
+    }
+    & + .btnWrap{
+        margin-top: rem(10);
+    }
+}

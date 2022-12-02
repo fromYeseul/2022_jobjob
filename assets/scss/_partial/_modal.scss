@@ -59,10 +59,12 @@
                 margin: rem(40) auto;
             }
             .flex_1_2{
+                // width: 100%;
                 width: rem(1668);
                 //투입상세정보 팝업 (table 확장)
                 &.is-active{
-                    width: rem(1800);
+                    // width: 120%;
+                    width: rem(2000);
                 }
             }
         }
@@ -119,7 +121,7 @@
         margin-left: rem(12);
     }
     .flex_1_2{
-        padding-bottom: rem(30);
+        padding-bottom: rem(45);
     }
     .tableTop{
         margin-top: rem(30);
@@ -127,6 +129,11 @@
     }
     table{
         table-layout: inherit;
+        .select{
+            .optionList{
+                max-height: rem(110);
+            }
+        }
     }
     .tabType{
         input[type=radio]{

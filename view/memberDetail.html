@@ -525,7 +525,7 @@
                                                         <th>기타</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
+                                                <tbody class="rowSpanType">
                                                     <tr>
                                                         <td rowspan="2">10</td>
                                                         <td class="left">CJ프레시웨이 온리원푸드넷<br>UIUX 개선 2차</td>
@@ -1948,6 +1948,7 @@
         showMore();
         //221013 추가 -ys
         showMemoList();
+        tableHover();
         
         // for(let j=0; j < tabBtn.length; j++){
         //             if (tabBtn[j].closest('.tabWrapper').id === tab_id){
@@ -1957,6 +1958,11 @@
         //                 document.getElementById(tabTarget).classList.add('is-active');
         //             }
         //         }
+
+        console.log(score);
+        score=80;
+        var score;
+        console.log(score);
     </script>
 </body>
 </html>

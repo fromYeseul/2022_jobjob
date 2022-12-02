@@ -16,7 +16,40 @@
         transition:all .3s;
         &.is-active{
             width: rem(360);
-            right: rem(52);
+            right: rem(52);  
+        }
+        .tabWrapper{
+            position: relative;
+            // .onlyIco{
+            //     width: rem(20);
+            //     height: rem(55);
+            //     border:0;
+            //     background: transparent;
+            //     position: absolute;
+            //     top: 7%;
+            //     left: -13px;
+            //     background-image: url(../img/icoClose.png);
+            // }
+            .onlyIco{
+                position: absolute;
+                top: 38%;
+                left: -10px;
+                width: rem(17);
+                height: rem(60);
+                border-right: rem(11) solid $white;
+                &::after{
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-top: 8px solid transparent;
+                    border-bottom: 8px solid transparent;
+                    border-left: 8px solid #e6e6eb;
+                    position: absolute;
+                    top: 50%;
+                    left: rem(6);
+                    transform: translateY(-50%);
+                }
+            }
         }
         .tabBtnWrap{
             padding: rem(20);

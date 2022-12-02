@@ -249,13 +249,13 @@
             background-image: linear-gradient(to bottom, $highlight, $gnbGreen);
             .navCtrlBtn{
                 width: calc(100% - 24px);
-                height: rem(40);
-                padding: rem(10);
+                height: rem(36);
+                padding: rem(6) rem(10);
                 text-align: right;
                 position: relative;
                 &::before{
                     width: rem(15);
-                    height: rem(40);
+                    height: rem(36);
                 }
                 .ctrlBtn{
                     width: rem(14);
@@ -327,6 +327,9 @@
                 width: calc(100% - 640px);
                 .wrap{
                     width: calc(100% - 670px);
+                    > div{
+                        padding-right: 0;
+                    }
                 }
             }
             .quickView{

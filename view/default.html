@@ -10,11 +10,6 @@
 
 </head>
 <body>
-    <% 
-    request.setAttribute("dateType1", "20220101");
-    request.setAttribute("dateType2", "2022-01-01");
-    request.setAttribute("dateType3", "2022.01.01");
-    %>
     <section class="layoutWrapper">
         <header>
             <div class="prefix">
@@ -481,620 +476,659 @@
     </section>
 
     
-        <!--221013 추가 -ys-->
-        <div id="showLevel" class="modalLayer center is-active">
-            <div class="layerBox fullSize">
-                <div class="modalHeader">
-                    <button class="ico layerClose"></button>
-                    <h2>등급보기설정</h2>
+    <!--221013 추가 -ys-->
+    <div id="showLevel" class="modalLayer center is-active">
+        <div class="layerBox fullSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h2>등급보기설정</h2>
+            </div>
+            <div class="modalCont">
+
+                <div class="tableTop">
+                    <div class="btnType">                                            
+                        <input type="radio" id="aa1" name="aa" class="hasTxt btnType" checked="">
+                        <label for="aa1">[비삼성] WEB/SAP (선택)</label>
+                        <input type="radio" id="aa2" name="aa" class="hasTxt btnType">
+                        <label for="aa2">[삼성] WEB</label>
+                        <input type="radio" id="aa3" name="aa" class="hasTxt btnType">
+                        <label for="aa3">[삼성] SAP</label>
+                    </div>
+                    <span class="subInfo">[기준 : 개월 수]</span>
                 </div>
-                <div class="modalCont">
 
-                    <div class="tableTop">
-                        <div class="btnType">                                            
-                            <input type="radio" id="aa1" name="aa" class="hasTxt btnType" checked="">
-                            <label for="aa1">[비삼성] WEB/SAP (선택)</label>
-                            <input type="radio" id="aa2" name="aa" class="hasTxt btnType">
-                            <label for="aa2">[삼성] WEB</label>
-                            <input type="radio" id="aa3" name="aa" class="hasTxt btnType">
-                            <label for="aa3">[삼성] SAP</label>
-                        </div>
-                        <span class="subInfo">[기준 : 개월 수]</span>
+                <div class="tableTop">
+                    <div class="btnType type2">                                            
+                        <input type="radio" id="bb1" name="bb" class="hasTxt btnType" checked="">
+                        <label for="bb1">[비삼성] WEB/SAP <button class="button point mainC">선택</button></label>
+                        <input type="radio" id="bb2" name="bb" class="hasTxt btnType">
+                        <label for="bb2">[삼성] WEB</label>
+                        <input type="radio" id="bb3" name="bb" class="hasTxt btnType">
+                        <label for="bb3">[삼성] SAP</label>
+                    </div>         
+                    <span class="subInfo">[기준 : 개월 수]</span>
+                </div>
+
+                <div class="flex_2_1">
+                    <div class="tableBox prefix">
+                        <table class="hasInput">
+                            <colgroup>
+                                <col width="100px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>비자격증</th>
+                                    <th>기준단가</th>
+                                    <th>고졸</th>
+                                    <th>전졸</th>
+                                    <th>대졸</th>
+                                    <th>석사</th>
+                                    <th>박사</th>
+                                </tr>
+                            </thead>
+                            <tbody>                            
+                                <tr>
+                                    <td>초급</td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                </tr>                 
+                                <tr>
+                                    <td>초급</td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                </tr>                        
+                                <tr>
+                                    <td>초급</td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                </tr>                        
+                                <tr>
+                                    <td>초급</td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                </tr>                           
+                                <tr>
+                                    <td>초급</td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                </tr>                 
+                                <tr>
+                                    <td>초급</td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                </tr>                        
+                                <tr>
+                                    <td>초급</td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                </tr>                        
+                                <tr>
+                                    <td>초급</td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                    <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
+                                </tr>        
+                            </tbody>
+                        </table>
                     </div>
-
-                    <div class="tableTop">
-                        <div class="btnType type2">                                            
-                            <input type="radio" id="bb1" name="bb" class="hasTxt btnType" checked="">
-                            <label for="bb1">[비삼성] WEB/SAP <button class="button point mainC">선택</button></label>
-                            <input type="radio" id="bb2" name="bb" class="hasTxt btnType">
-                            <label for="bb2">[삼성] WEB</label>
-                            <input type="radio" id="bb3" name="bb" class="hasTxt btnType">
-                            <label for="bb3">[삼성] SAP</label>
-                        </div>         
-                        <span class="subInfo">[기준 : 개월 수]</span>
-                    </div>
-
-                    <div class="flex_2_1">
-                        <div class="tableBox prefix">
-                            <table class="hasInput">
-                                <colgroup>
-                                    <col width="100px">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>비자격증</th>
-                                        <th>기준단가</th>
-                                        <th>고졸</th>
-                                        <th>전졸</th>
-                                        <th>대졸</th>
-                                        <th>석사</th>
-                                        <th>박사</th>
-                                    </tr>
-                                </thead>
-                                <tbody>                            
-                                    <tr>
-                                        <td>초급</td>
-                                        <td><input type="text"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                    </tr>                 
-                                    <tr>
-                                        <td>초급</td>
-                                        <td><input type="text"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                    </tr>                        
-                                    <tr>
-                                        <td>초급</td>
-                                        <td><input type="text"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                    </tr>                        
-                                    <tr>
-                                        <td>초급</td>
-                                        <td><input type="text"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                    </tr>                           
-                                    <tr>
-                                        <td>초급</td>
-                                        <td><input type="text"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                    </tr>                 
-                                    <tr>
-                                        <td>초급</td>
-                                        <td><input type="text"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                    </tr>                        
-                                    <tr>
-                                        <td>초급</td>
-                                        <td><input type="text"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                    </tr>                        
-                                    <tr>
-                                        <td>초급</td>
-                                        <td><input type="text"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                        <td><input type="text" class="xsSize"> ~ <input type="text" class="xsSize"></td>
-                                    </tr>        
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="tableBox suffix">
-                            <table class="laSize">
-                                <thead>
-                                    <tr>
-                                        <th>자격증</th>
-                                        <th>정보처리산업기사</th>
-                                        <th>정보처리기사</th>
-                                        <th>정보처리기술사</th>
-                                    </tr>
-                                </thead>
-                                <tbody>                            
-                                    <tr>
-                                        <td>초급</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                    </tr>                             
-                                    <tr>
-                                        <td>초급</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                    </tr>                               
-                                    <tr>
-                                        <td>초급</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                    </tr>                              
-                                    <tr>
-                                        <td>초급</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                    </tr>                         
-                                    <tr>
-                                        <td>초급</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                    </tr>                             
-                                    <tr>
-                                        <td>초급</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                    </tr>                               
-                                    <tr>
-                                        <td>초급</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                    </tr>                              
-                                    <tr>
-                                        <td>초급</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                        <td>from ~ to</td>
-                                    </tr>       
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <h6 class="mt50">참고사항</h6>
-                    <div class="bulletList">
-                        <ul>
-                            <li>선택된 보기 방식으로 모든 화면의 등급표시가 변경됩니다.</li>
-                            <li>정보처리기사, 정보처리산업기사 보유 시, 자격증 경력으로 자동계산됩니다.</li>
-                            <li>정보처리기술사 자격증 보유자는 경력과 상관없이 ‘특급’으로 처리됩니다.</li>
-                            <li>등급산정이 불가능한 회원은 ‘등급없음’으로 표시됩니다.</li>
-                        </ul>
+                    <div class="tableBox suffix">
+                        <table class="laSize">
+                            <thead>
+                                <tr>
+                                    <th>자격증</th>
+                                    <th>정보처리산업기사</th>
+                                    <th>정보처리기사</th>
+                                    <th>정보처리기술사</th>
+                                </tr>
+                            </thead>
+                            <tbody>                            
+                                <tr>
+                                    <td>초급</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                </tr>                             
+                                <tr>
+                                    <td>초급</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                </tr>                               
+                                <tr>
+                                    <td>초급</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                </tr>                              
+                                <tr>
+                                    <td>초급</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                </tr>                         
+                                <tr>
+                                    <td>초급</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                </tr>                             
+                                <tr>
+                                    <td>초급</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                </tr>                               
+                                <tr>
+                                    <td>초급</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                </tr>                              
+                                <tr>
+                                    <td>초급</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                    <td>from ~ to</td>
+                                </tr>       
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                    
-                <div class="modalFooter">
-                    <button class="fullSize white prefix">닫기</button>
-                    <button class="fullSize suffix">저장</button>
+
+                <h6 class="mt50">참고사항</h6>
+                <div class="bulletList">
+                    <ul>
+                        <li>선택된 보기 방식으로 모든 화면의 등급표시가 변경됩니다.</li>
+                        <li>정보처리기사, 정보처리산업기사 보유 시, 자격증 경력으로 자동계산됩니다.</li>
+                        <li>정보처리기술사 자격증 보유자는 경력과 상관없이 ‘특급’으로 처리됩니다.</li>
+                        <li>등급산정이 불가능한 회원은 ‘등급없음’으로 표시됩니다.</li>
+                    </ul>
                 </div>
             </div>
-            <div class="layerDim"></div>
+                
+            <div class="modalFooter">
+                <button class="fullSize white prefix">닫기</button>
+                <button class="fullSize suffix">저장</button>
+            </div>
         </div>
-        <!--//221013 추가 -ys-->
+        <div class="layerDim"></div>
+    </div>
+    <!--//221013 추가 -ys-->
 
-        
-        <!--221017 추가 -ys-->
-        <div id="investDetail" class="modalLayer center is-active">
-            <div class="layerBox fullSize">
-                <div class="modalHeader">
-                    <button class="ico layerClose"></button>
-                    <h2>[프로젝트] 투입상세정보</h2>
-                </div>
-                <div class="modalCont">
-
-                    <div class="xScroll">
-                                                 
-                        <div class="tableTop">
-                            <div class="select wideSize">
-                                <span class="selDefault">10개씩</span>
-                                <ul class="optionList">
-                                    <li class="optionItem">20개씩</li>
-                                    <li class="optionItem">50개씩</li>
-                                    <li class="optionItem">100개씩</li>
-                                </ul>
-                            </div>                            
-                            <div class="">
-                                <button class="white lowSize"><i class="ico smMinus"></i> 매출행 삭제</button>
-                                <button class="white lowSize"><i class="ico smPlus"></i> 매출행 추가</button>
-                            </div>
-                        </div>
-
-                        <div class="flex_1_2">
-                            <div class="prefix">   
-                                <div class="tableBox prefix">
-                                    <table class="hasInput">
-                                        <colgroup>
-                                            <col width="30px">
-                                            <col>
-                                            <col>
-                                            <col width="120px">
-                                            <col>
-
-                                            <col>
-                                            <col>
-                                            <col width="100px">
-                                            <col width="100px">
-                                            <col>
-                                        </colgroup>
-                                        <thead>
-                                            <tr class="tableHead">
-                                                <th colspan="10">매출</th>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <input type="checkbox" id="iphone" name="mobile">
-                                                    <label for="iphone"></label>
-                                                </th>
-                                                <th>등급</th>
-                                                <th>직군</th>
-                                                <th>직무</th>
-                                                <th>투입</th>
-                                                <th>종료</th>
-                                                <th>M/M</th>
-                                                <th>매출단가</th>
-                                                <th>총 매출</th>
-                                                <th>병합</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="dragBox">                            
-                                            <tr draggable="true" class="dragTr">
-                                                <td rowspan="2">
-                                                    <input type="checkbox" id="iphone" name="mobile">
-                                                    <label for="iphone"></label>
-                                                </td>
-                                                <td rowspan="2">
-                                                    <div class="select xsSize">
-                                                        <span class="selDefault low">선택</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td rowspan="2">
-                                                    <div class="select xsSize">
-                                                        <span class="selDefault low">선택</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">개발(SAP)</li>
-                                                            <li class="optionItem">컨설팅(SAP)</li>
-                                                            <li class="optionItem">선택</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td rowspan="2">
-                                                    <div class="select">
-                                                        <span class="selDefault low">JAVA 개발</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">.NET 개발</li>
-                                                            <li class="optionItem">Mobile 개발</li>
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">.NET 개발</li>
-                                                            <li class="optionItem">Mobile 개발</li>
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">.NET 개발</li>
-                                                            <li class="optionItem">Mobile 개발</li>
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">.NET 개발</li>
-                                                            <li class="optionItem">Mobile 개발</li>
-                                                            <li class="optionItem">선택</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td rowspan="2">
-                                                    <input type="date" class="editType">
-                                                </td>
-                                                <td rowspan="2">
-                                                    <input type="date" class="editType">
-                                                </td>
-                                                <td rowspan="2">
-                                                    <input type="text" class="editType" placeholder="0/0">
-                                                </td>
-                                                <td rowspan="2">
-                                                    <input type="text" class="editType txtRight" placeholder="1,000,000">
-                                                </td>
-                                                <td rowspan="2">
-                                                    <input type="text" class="editType txtRight" placeholder="1,000,000">
-                                                </td>
-                                                <td rowspan="2">-</td>
-                                            </tr>                         
-                                            <tr draggable="true" class="dragTr"></tr>
-
-
-
-                                            <tr draggable="true" class="dragTr">
-                                                <td>
-                                                    <input type="checkbox" id="iphone" name="mobile">
-                                                    <label for="iphone"></label>
-                                                </td>
-                                                <td>
-                                                    <div class="select xsSize">
-                                                        <span class="selDefault low">선택</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="select xsSize">
-                                                        <span class="selDefault low">선택</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="select">
-                                                        <span class="selDefault low">선택</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>22.09.01</td>
-                                                <td>22.09.01</td>
-                                                <td>3</td>
-                                                <td>
-                                                    <input type="text" class="editType txtRight" placeholder="1,000,000">
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="editType txtRight" placeholder="1,000,000">
-                                                </td>
-                                                <td>-</td>
-                                            </tr>                          
-                                            <tr draggable="true" class="dragTr">
-                                                <td>
-                                                    <input type="checkbox" id="iphone" name="mobile">
-                                                    <label for="iphone"></label>
-                                                </td>
-                                                <td>
-                                                    <div class="select xsSize">
-                                                        <span class="selDefault low">선택</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="select xsSize">
-                                                        <span class="selDefault low">선택</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="select">
-                                                        <span class="selDefault low">선택</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                            <li class="optionItem">선택</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>22.09.01</td>
-                                                <td>22.09.01</td>
-                                                <td>3</td>
-                                                <td>100,000,000</td>
-                                                <td>100,000,000</td>
-                                                <td>-</td>
-                                            </tr>          
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <td colspan="6">합계</td>
-                                                <td>3</td>
-                                                <td>100,000,000</td>
-                                                <td>100,000,000</td>
-                                                <td></td>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-                            </div>
-                            
-                            <div class="suffix">   
-                                <div class="tableBox prefix">
-                                    <table class="hasInput">
-                                        
-                                        <colgroup>
-                                            <col width="80px">
-                                            <col>
-                                            <col width="80px">
-                                            <col>
-                                            <col>
-
-                                            <col width="60px">
-                                            <col width="100px">
-                                            <col>
-                                            <col width="100px">
-                                            <col>
-
-                                            <col width="60px">
-                                            <col>
-                                        </colgroup>
-                                        <thead>
-                                            <tr class="tableHead">
-                                                <th colspan="12">매입</th>
-                                            </tr>
-                                            <tr>
-                                                <th>등급/직군</th>
-                                                <th>이름</th>
-                                                <th>소속</th>
-                                                <th>실투입</th>
-                                                <th>종료</th>
-                                                <th>M/M</th>
-                                                <th>매입단가</th>
-                                                <th>총 매입</th>
-                                                <th>상태</th>
-                                                <th>수익률</th>
-                                                <th>병합</th>
-                                                <th colspan="2">비고</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="dragBox">                            
-                                            <tr draggable="true" class="dragTr">
-                                                <td>고급/개발</td>
-                                                <td>
-                                                    <div class="select xsSize">
-                                                        <span class="selDefault low">홍길금</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">홍길금</li>
-                                                            <li class="optionItem">홍길금</li>
-                                                            <li class="optionItem">홍길금</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>에코</td>
-                                                <td>22.12.01</td>
-                                                <td>22.09.01</td>
-                                                <td>3.75</td>
-                                                <td>100,000,000</td>
-                                                <td>100,000,000</td>
-                                                <td>
-                                                    <div class="select xsSize">
-                                                        <span class="selDefault low">상태</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">투입</li>
-                                                            <li class="optionItem">종료</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>자동계산</td>
-                                                <td>-</td>
-                                                <td class="none">2020. 02. 15 조기철수 예정</td><!--221020 가려지는 비고 클래스추가 -ys-->
-                                                <td rowspan="3">
-                                                    <span class="open">[펼침]</span>
-                                                </td>
-                                            </tr>                        
-                                            <tr draggable="true" class="dragTr">
-                                                <td>고급/개발</td>
-                                                <td>
-                                                    <div class="select xsSize">
-                                                        <span class="selDefault low">홍길금</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">홍길금</li>
-                                                            <li class="optionItem">홍길금</li>
-                                                            <li class="optionItem">홍길금</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>에코</td>
-                                                <td>22.12.01</td>
-                                                <td>22.09.01</td>
-                                                <td>3.75</td>
-                                                <td>100,000,000</td>
-                                                <td>100,000,000</td>
-                                                <td>
-                                                    <div class="select xsSize">
-                                                        <span class="selDefault low">상태</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">투입</li>
-                                                            <li class="optionItem">종료</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>자동계산</td>
-                                                <td>-</td>
-                                                <td class="none">2020. 02. 15 조기철수 예정</td>
-                                            </tr>                            
-                                            <tr draggable="true" class="dragTr">
-                                                <td>고급/개발</td>
-                                                <td>
-                                                    <div class="select xsSize">
-                                                        <span class="selDefault low">홍길금</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">홍길금</li>
-                                                            <li class="optionItem">홍길금</li>
-                                                            <li class="optionItem">홍길금</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>에코</td>
-                                                <td>22.12.01</td>
-                                                <td>22.09.01</td>
-                                                <td>3.75</td>
-                                                <td>100,000,000</td>
-                                                <td>100,000,000</td>
-                                                <td>
-                                                    <div class="select xsSize">
-                                                        <span class="selDefault low">상태</span>
-                                                        <ul class="optionList">
-                                                            <li class="optionItem">투입</li>
-                                                            <li class="optionItem">종료</li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>자동계산</td>
-                                                <td>-</td>
-                                                <td class="none">2020. 02. 15 조기철수 예정</td>
-                                            </tr>              
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <td colspan="5">합계</td>
-                                                <td>3</td>
-                                                <td>100,000,000</td>
-                                                <td>100,000,000</td>
-                                                <td>-</td>
-                                                <td colspan="4"></td>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h6 class="mt50">유의사항</h6>
-                    <div class="bulletList">
-                        <ul>
-                            <li>매출/매입을 N:N으로 매칭하려면 마우스로 그리드를 클릭 후 Drag&Drop 하세요.</li>
-                            <li>특정 투입인원의 단가변경 또는 소속변경으로 중복 입력하는 경우, 기존 투입 정보는 ‘종료’로 자동으로 변경됩니다.</li>
-                            <li>종료된 프로젝트는 투입 종료일 외 수정불가합니다.</li>
+    
+    <!--221017 추가 -ys-->
+    <div id="investDetail" class="modalLayer center is-active">
+        <div class="layerBox fullSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h2>[프로젝트] 투입상세정보</h2>
+            </div>
+            <div class="modalCont">
+                <div class="tableTop">
+                    <div class="select wideSize">
+                        <span class="selDefault">10개씩</span>
+                        <ul class="optionList">
+                            <li class="optionItem">20개씩</li>
+                            <li class="optionItem">50개씩</li>
+                            <li class="optionItem">100개씩</li>
                         </ul>
+                    </div>                            
+                    <div class="">
+                        <button class="white lowSize"><i class="ico smMinus"></i> 매출행 삭제</button>
+                        <!-- <button class="white lowSize"><i class="ico smPlus"></i> 매출행 추가</button> -->
+                        <button class="white lowSize" id="addRowBtn" style="cursor: pointer;"><i class="ico smPlus"></i> 매출행 추가</button>
                     </div>
                 </div>
-                    
-                <div class="modalFooter">
-                    <button class="fullSize white prefix">닫기</button>
-                    <button class="fullSize suffix">저장</button>
+                <div class="xScroll"><!--221129 위치이동 -ys -->
+                    <div class="flex_1_2">
+                        <div class="prefix">   
+                            <div class="tableBox noScroll prefix">
+                                <table class="hasInput" id="salesTable">
+                                    <colgroup>
+                                        <col width="30px">
+                                        <col>
+                                        <col>
+                                        <col width="120px">
+                                        <col>
+
+                                        <col>
+                                        <col>
+                                        <col width="100px">
+                                        <col width="100px">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr class="tableHead">
+                                            <th colspan="10">매출</th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox" id="iphone" name="mobile">
+                                                <label for="iphone"></label>
+                                            </th>
+                                            <th>등급</th>
+                                            <th>직군</th>
+                                            <th>직무</th>
+                                            <th>투입</th>
+                                            <th>종료</th>
+                                            <th>M/M</th>
+                                            <th>매출단가</th>
+                                            <th>총 매출</th>
+                                            <th>병합</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="dragBox">                            
+                                        <tr draggable="true" class="dragTr">
+                                            <td rowspan="2">
+                                                <input type="checkbox" id="iphone" name="mobile">
+                                                <label for="iphone"></label>
+                                            </td>
+                                            <td rowspan="2">
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2">
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">개발(SAP)</li>
+                                                        <li class="optionItem">컨설팅(SAP)</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2">
+                                                <div class="select">
+                                                    <span class="selDefault low">JAVA 개발</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">.NET 개발</li>
+                                                        <li class="optionItem">Mobile 개발</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">.NET 개발</li>
+                                                        <li class="optionItem">Mobile 개발</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">.NET 개발</li>
+                                                        <li class="optionItem">Mobile 개발</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">.NET 개발</li>
+                                                        <li class="optionItem">Mobile 개발</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="date" class="editType">
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="date" class="editType">
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td rowspan="2">-</td>
+                                        </tr>                         
+                                        <tr draggable="true" class="dragTr"></tr>
+
+
+
+                                        <tr draggable="true" class="dragTr">
+                                            <td>
+                                                <input type="checkbox" id="iphone" name="mobile">
+                                                <label for="iphone"></label>
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>22.09.01</td>
+                                            <td>22.09.01</td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>-</td>
+                                        </tr>                          
+                                        <tr draggable="true" class="dragTr">
+                                            <td>
+                                                <input type="checkbox" id="iphone" name="mobile">
+                                                <label for="iphone"></label>
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>22.09.01</td>
+                                            <td>22.09.01</td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>-</td>
+                                        </tr>          
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="6">합계</td>
+                                            <td>3</td>
+                                            <td>100,000,000</td>
+                                            <td>100,000,000</td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="suffix">   
+                            <div class="tableBox noScroll prefix">
+                                <table class="hasInput" id="purchaseTable">
+                                    
+                                    <colgroup>
+                                        <col width="80px">
+                                        <col>
+                                        <col width="60px">
+                                        <col>
+                                        <col>
+
+                                        <col width="60px">
+                                        <col width="100px">
+                                        <col width="100px">
+                                        <col>
+                                        <col>
+
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr class="tableHead">
+                                            <th colspan="12">매입</th>
+                                        </tr>
+                                        <tr>
+                                            <th>등급/직군</th>
+                                            <th>이름</th>
+                                            <th>소속</th>
+                                            <th>실투입</th>
+                                            <th>종료</th>
+                                            <th>M/M</th>
+                                            <th>매입단가</th>
+                                            <th>총 매입</th>
+                                            <th>상태</th>
+                                            <th>수익률</th>
+                                            <th>병합</th>
+                                            <th colspan="2">비고</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="dragBox">                            
+                                        <tr draggable="true" class="dragTr">
+                                            <td>고급/개발</td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">홍길금</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">홍길금</li>
+                                                        <li class="optionItem">홍길금</li>
+                                                        <li class="optionItem">홍길금</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>에코</td>
+                                            <td>
+                                                <input type="date" class="editType">
+                                            </td>
+                                            <td>
+                                                <input type="date" class="editType">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="3.75">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">상태</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">투입</li>
+                                                        <li class="optionItem">종료</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>자동계산</td>
+                                            <td>-</td>
+                                            <td class="none">2020. 02. 15 조기철수 예정</td><!--221020 가려지는 비고 클래스추가 -ys-->
+                                            <td rowspan="3">
+                                                <span class="open">[펼침]</span>
+                                            </td>
+                                        </tr>                        
+                                        <tr draggable="true" class="dragTr">
+                                            <td>고급/개발</td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">홍길금</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">홍길금</li>
+                                                        <li class="optionItem">홍길금</li>
+                                                        <li class="optionItem">홍길금</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>에코</td>
+                                            <td>22.12.01</td>
+                                            <td>22.09.01</td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="3.75">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">상태</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">투입</li>
+                                                        <li class="optionItem">종료</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>자동계산</td>
+                                            <td>-</td>
+                                            <td class="none">2020. 02. 15 조기철수 예정</td>
+                                        </tr>                            
+                                        <tr draggable="true" class="dragTr">
+                                            <td>고급/개발</td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">홍길금</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">홍길금</li>
+                                                        <li class="optionItem">홍길금</li>
+                                                        <li class="optionItem">홍길금</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>에코</td>
+                                            <td>22.12.01</td>
+                                            <td>22.09.01</td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="3.75">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">상태</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">투입</li>
+                                                        <li class="optionItem">종료</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>자동계산</td>
+                                            <td>-</td>
+                                            <td class="none">2020. 02. 15 조기철수 예정</td>
+                                        </tr>              
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="5">합계</td>
+                                            <td>3</td>
+                                            <td>100,000,000</td>
+                                            <td>100,000,000</td>
+                                            <td>-</td>
+                                            <td colspan="4"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="mt50">유의사항</h6>
+                <div class="bulletList">
+                    <ul>
+                        <li>매출/매입을 N:N으로 매칭하려면 마우스로 그리드를 클릭 후 Drag&Drop 하세요.</li>
+                        <li>특정 투입인원의 단가변경 또는 소속변경으로 중복 입력하는 경우, 기존 투입 정보는 ‘종료’로 자동으로 변경됩니다.</li>
+                        <li>종료된 프로젝트는 투입 종료일 외 수정불가합니다.</li>
+                    </ul>
                 </div>
             </div>
-            <div class="layerDim"></div>
+                
+            <div class="modalFooter">
+                <button class="fullSize white prefix">닫기</button>
+                <button class="fullSize suffix">저장</button>
+            </div>
         </div>
-        <!--//221017 추가 -ys-->
+        <div class="layerDim"></div>
+    </div>
+    <!--//221017 추가 -ys-->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/salesPurchase.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>
         dragDrop();
@@ -1108,11 +1142,9 @@
             //yyyy-mm-dd 포맷 날짜 생성
             var d = new Date();
             var editType = document.querySelector('input.editType').value;
-            console.log(editType);
-            
+
             return d.getFullYear() + "-" + ((d.getMonth() + 1) > 9 ? (d.getMonth() + 1).toString() : "0" + (d.getMonth() + 1)) + "-" + (d.getDate() > 9 ? d.getDate().toString() : "0" + d.getDate().toString());
         }
-        console.log(getYmd10());
         // console.log(editType);
     </script>
 </body>
