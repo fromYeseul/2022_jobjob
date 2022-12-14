@@ -285,16 +285,31 @@
                                                     //220929 추가 -ys
                                                 </div> -->
 
+
                                                 <div class="inputGroup">
                                                     <div class="inputObj">
                                                         <span>JSP</span>
                                                         <button class="ico smClose w"></button>
                                                     </div>
+                                                    <div class="inputObj">
+                                                        <span>Java</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>javascript</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
                                                     <!--221004 자동완성 -ys-->
                                                     <div class="inputObj is-active">
-                                                        <input type="text" id="inputBox">
+                                                        <input type="text" class="midSize" id="inputBox" placeholder="(예) Java, JSP"><!--221213 클래스 추가 -ys -->
                                                     </div>
                                                     <!--//221004 자동완성 -ys-->
+                                                </div>
+
+                                                
+                                                <div class="alertToast is-active" id="toast01">
+                                                    중요 프로젝트로 설정되었습니다.
+                                                    <i class="ico smClose w"></i>
                                                 </div>
                                             </li>
                                         </ul>
@@ -593,7 +608,7 @@
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>221004 추가 -ys -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>221004 추가 -ys
     <script src="../assets/js/script.js"></script>
     <!-- <script src="../assets/js/layerPopup.js"></script>
     <script src="../assets/js/validator.js"></script> -->
@@ -601,7 +616,7 @@
     <script scr="../assets/js/jquery-ui.js"></script>
 
     <script>
-        /* 221004 자동완성 -ys 
+        /* 221004 자동완성 -ys */
         $(document).ready(function() {
             var inputSource = ['java', 'javascript', 'jsp', 'photoshop', 'ajax', 'django'];
 
@@ -612,6 +627,10 @@
             
             var inputBox = document.querySelector('#inputBox');
             inputBox.addEventListener("focus", downArrow);
+
+            $( ".ui-menu" ).autocomplete({
+                appendTo: "#inputBox"
+            });
 
         });
 

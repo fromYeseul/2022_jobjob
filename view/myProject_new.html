@@ -1523,7 +1523,7 @@
                                         <input type="date" class="smSize"> 부터
                                         <input type="date" class="smSize mt10"> 까지
 
-                                        <div class="flex_1_2 mt10">
+                                        <div class="flex_2_3 mt10">
                                             <button class="fullSize white prefix">삭제</button>
                                             <button class="fullSize suffix">적용</button>
                                         </div>
@@ -1608,7 +1608,7 @@
                                                 <textarea name="" class="autoHeight" id="test" value="aaa"></textarea>
                                                 <!--//221123 추가 -ys -->
                                                 <div class="btnWrap right">
-                                                    <button class="smSize white">취소</button>
+                                                    <button class="smSize white cancel">취소</button>
                                                     <button class="smSize">등록</button>
                                                 </div>  
                                             </div>
@@ -2278,7 +2278,7 @@
     <!--//221110 학력 팝업-->
     
     <!--221110 거주지 팝업-->
-    <div id="memArea" class="modalLayer center">
+    <div id="memArea" class="modalLayer center is-active">
         <div class="layerBox filterType laSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -2329,7 +2329,7 @@
                             </ul>
                         </div>
                         <div class="suffix">    
-                            <ul class="chkWrap listType">
+                            <ul class="chkWrap boxListType listType">
                                 <li>
                                     <input type="checkbox" id="seoulAll" class="chkAll">
                                     <label for="seoulAll">서울전지역</label>
@@ -2428,6 +2428,7 @@
         showMemo();
         // trToggle();
         autoTextarea();
+        makeMemo();
     </script>
 </body>
 </html>

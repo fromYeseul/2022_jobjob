@@ -30,6 +30,7 @@
 	background: #ffffff;
 }
 .ui-menu {
+    position: absolute;
     width: rem(100);
     border-radius: rem(4);
     border: 1px solid $inputGray;
@@ -45,6 +46,9 @@
             color: $black;
             font-weight: 500;
             background: $selHover;
+        }
+        &.disabled{
+            color:red;
         }
      }
     .ui-menu-item-wrapper {

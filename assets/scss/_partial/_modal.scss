@@ -67,6 +67,10 @@
                     width: rem(2000);
                 }
             }
+            .flex_2_1{
+                width: 100%;
+                min-width: rem(1668);
+            }
         }
     }
     .layerDim{
@@ -219,6 +223,7 @@
     color: $white;
     text-align: left;
     padding: rem(5) rem(10);
+    padding-right: rem(30);
     background: $tooltipGray;
     border-radius: rem(5);
     display: none;
@@ -226,7 +231,7 @@
         position: absolute;
         top: 50%;
         right: rem(10);
-        transform: translateY(-50%);
+        transform: translateY(-5px);
     }
     &.is-active{
         display: block;
@@ -239,5 +244,6 @@
     }
     input{
         margin:0 2px;
+        text-align: center;
     }
 }

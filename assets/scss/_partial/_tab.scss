@@ -84,10 +84,7 @@
         padding: 0;
         //text-align: left;
         li{
-            //220829
-            // line-height: rem(48);
             line-height: rem(42);
-            //220829
             font-weight: 500;
             margin-left: -4px;
             &:first-child{
@@ -103,11 +100,7 @@
             }
             a{
                 width: rem(96);
-                //220829
-                // height: rem(50);
                 height: rem(44);
-                //220829
-                color: $cancel;
                 background-color: $white;
                 border: 1px solid $inputGray;
                 &.is-active{                    
@@ -152,6 +145,26 @@
                     margin-left: rem(4);
                 }
             }
+        }
+        &.borderType{
+            li{
+                line-height: rem(48);
+                & + li{
+                    margin-left: rem(4);
+                }
+                a{
+                    width: auto;
+                    height: rem(48);
+                    padding: 0 rem(20);
+                    background-color: $white;
+                    border-radius: rem(4);
+                    &.is-active{                    
+                        color: $mainColor;
+                        border: 1px solid $mainColor;
+                    }
+                }
+            }
+        
         }
     }
 }

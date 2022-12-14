@@ -36,16 +36,13 @@ table{
         &.bg{
             background: rgba($mainColor, 0.02);
             &.is-active{
-                background: $mainColor;
+                background: $bgColor;
             }
         }
         &:last-child{
             td{
                 border-bottom: 0;
             }
-        }
-        &:hover{
-            background: $bgColor;
         }
         &.is-active{
             background: $bgColor;
@@ -78,7 +75,8 @@ table{
         }
         td{
             color: $tableGray;
-            padding: rem(14) 0;
+            // padding: rem(14) 0;
+            padding: rem(8) 0;
             &.nodata{
                 display: table-cell;
                 font-weight: 500;
@@ -100,6 +98,13 @@ table{
                     transform: translateY(-50%);
                     min-width: rem(230);
                 }
+            }
+        }
+    }
+    tbody{
+        tr{
+            &:hover{
+                background: $bgColor;
             }
         }
     }
@@ -256,7 +261,8 @@ table{
     }
     .ellipsis{
         @include ellipsis;
-        padding: rem(14);
+        // padding: rem(14);
+        padding: rem(8) rem(14);
         .dNear{
             font-size: rem(12);
         }
@@ -302,6 +308,9 @@ table{
     }
     .inputIco{
         width: calc(100% - 116px);
+    }
+    input{
+        background: transparent;
     }
 }
 

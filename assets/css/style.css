@@ -204,6 +204,16 @@ h1, h2, h3, h4, h5, h6, p {
   flex: 2 1 65%;
 }
 
+.flex_2_3 {
+  display: flex;
+}
+.flex_2_3 .prefix {
+  flex: 1 1 40%;
+}
+.flex_2_3 .suffix {
+  flex: 2 1 60%;
+}
+
 .block {
   display: block;
 }
@@ -978,6 +988,10 @@ footer.toast button + button {
 .modalLayer .layerBox.fullSize .flex_1_2.is-active {
   width: 125rem;
 }
+.modalLayer .layerBox.fullSize .flex_2_1 {
+  width: 100%;
+  min-width: 104.25rem;
+}
 .modalLayer .layerDim {
   position: absolute;
   width: 100%;
@@ -1136,6 +1150,7 @@ footer.toast button + button {
   color: #fff;
   text-align: left;
   padding: 0.3125rem 0.625rem;
+  padding-right: 1.875rem;
   background: #58585e;
   border-radius: 0.3125rem;
   display: none;
@@ -1144,7 +1159,7 @@ footer.toast button + button {
   position: absolute;
   top: 50%;
   right: 0.625rem;
-  transform: translateY(-50%);
+  transform: translateY(-5px);
 }
 .alertToast.is-active {
   display: block;
@@ -1155,6 +1170,7 @@ footer.toast button + button {
 }
 #showLevel input {
   margin: 0 2px;
+  text-align: center;
 }
 
 .floatingWrapper {
@@ -1181,7 +1197,7 @@ footer.toast button + button {
 }
 .floatingWrapper button {
   display: block;
-  width: 6.25rem;
+  width: 6.25rem !important;
   margin: 0.8125rem auto;
 }
 .floatingWrapper button:last-child {
@@ -1398,13 +1414,10 @@ table tr.bg {
   background: rgba(4, 96, 210, 0.02);
 }
 table tr.bg.is-active {
-  background: #0460d2;
+  background: #f2f2f7;
 }
 table tr:last-child td {
   border-bottom: 0;
-}
-table tr:hover {
-  background: #f2f2f7;
 }
 table tr.is-active {
   background: #f2f2f7;
@@ -1433,7 +1446,7 @@ table tr th {
 }
 table tr td {
   color: #878791;
-  padding: 0.875rem 0;
+  padding: 0.5rem 0;
 }
 table tr td.nodata {
   display: table-cell;
@@ -1455,6 +1468,9 @@ table tr td.hasToast .alertToast {
   left: 100%;
   transform: translateY(-50%);
   min-width: 14.375rem;
+}
+table tbody tr:hover {
+  background: #f2f2f7;
 }
 table tfoot td {
   padding: 1.125rem;
@@ -1559,7 +1575,7 @@ table .ellipsis {
   white-space: nowrap;
   text-align: left;
   cursor: pointer;
-  padding: 0.875rem;
+  padding: 0.5rem 0.875rem;
 }
 table .ellipsis .dNear {
   font-size: 0.75rem;
@@ -1596,6 +1612,9 @@ table .memo::before {
 }
 table .inputIco {
   width: calc(100% - 116px);
+}
+table input {
+  background: transparent;
 }
 
 .listTop.flex {
@@ -1843,7 +1862,6 @@ table .inputIco {
 .tabBtnWrap.btnType li a {
   width: 6rem;
   height: 2.75rem;
-  color: #b7b7c4;
   background-color: #fff;
   border: 1px solid #e6e6eb;
 }
@@ -1883,6 +1901,23 @@ table .inputIco {
 }
 .tabBtnWrap.btnType.smType li + li {
   margin-left: 0.25rem;
+}
+.tabBtnWrap.btnType.borderType li {
+  line-height: 3rem;
+}
+.tabBtnWrap.btnType.borderType li + li {
+  margin-left: 0.25rem;
+}
+.tabBtnWrap.btnType.borderType li a {
+  width: auto;
+  height: 3rem;
+  padding: 0 1.25rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
+.tabBtnWrap.btnType.borderType li a.is-active {
+  color: #0460d2;
+  border: 1px solid #0460d2;
 }
 
 .tabContWrap .tabCont {
@@ -2142,6 +2177,7 @@ span.button {
 
 .inputList li {
   margin-bottom: 1.25rem;
+  position: relative;
 }
 .inputList li > label {
   display: block;
@@ -2245,6 +2281,11 @@ input[type=password].lowSize,
 input[type=date].lowSize {
   height: 2.25rem;
 }
+input[type=text].midSize,
+input[type=password].midSize,
+input[type=date].midSize {
+  width: 6.25rem;
+}
 input[type=text].laSize,
 input[type=password].laSize,
 input[type=date].laSize {
@@ -2271,6 +2312,7 @@ input[type=date].editType {
   width: 100%;
   height: 2.25rem;
   padding: 0.5rem 0;
+  padding-left: 0.25rem;
   border: 0;
   color: #878791;
 }
@@ -2284,6 +2326,12 @@ input[type=password].editType::placeholder,
 input[type=date].editType::placeholder {
   color: #b7b7c4;
 }
+input[type=text].editType.xsSize,
+input[type=password].editType.xsSize,
+input[type=date].editType.xsSize {
+  width: 3.75rem;
+  height: 2.5rem;
+}
 input[type=text] + .btnType,
 input[type=password] + .btnType,
 input[type=date] + .btnType {
@@ -2293,6 +2341,7 @@ input[type=date] + .btnType {
 input[type=date] {
   position: relative;
   padding: 0.6875rem 1rem;
+  width: 8.75rem;
 }
 input[type=date].editType {
   width: 84%;
@@ -2513,11 +2562,14 @@ input[type=file] {
   color: #fff;
   line-height: 1.375rem;
   vertical-align: top;
+  margin: 0.125rem;
   background: #878791;
   border-radius: 0.3125rem;
+  position: relative;
 }
 .inputObj.is-active {
   background: transparent;
+  padding: 0.125rem;
 }
 .inputObj input[type=text] {
   height: 1.4375rem;
@@ -2571,6 +2623,9 @@ textarea.oneLine {
 }
 textarea.autoHeight {
   height: 2.25rem;
+}
+textarea.wideSize {
+  width: 27.5rem;
 }
 
 .textForm {
@@ -2630,6 +2685,7 @@ textarea.autoHeight {
 }
 
 .ui-menu {
+  position: absolute;
   width: 6.25rem;
   border-radius: 0.25rem;
   border: 1px solid #e6e6eb;
@@ -2647,6 +2703,9 @@ textarea.autoHeight {
   color: #29292c;
   font-weight: 500;
   background: #e5effa;
+}
+.ui-menu .ui-menu-item.disabled {
+  color: red;
 }
 .ui-menu .ui-menu-item-wrapper {
   position: relative;
@@ -2881,7 +2940,7 @@ input[type=radio]:checked + label::before {
 }
 .tabType.smSize input[type=checkbox] + label,
 .tabType.smSize input[type=radio] + label {
-  width: 3.9375rem;
+  width: 4.5rem;
   min-width: 3.75rem;
   line-height: 2rem;
   margin-right: -2px;
@@ -2912,7 +2971,7 @@ input[type=radio]:checked + label::before {
 .boxType li input + label {
   width: 100%;
   height: 100%;
-  padding: 1rem 0;
+  padding: 1rem 0.625rem;
   font-weight: 400;
   border: 1px solid #e6e6eb;
   border-right: 0;
@@ -4108,6 +4167,9 @@ h6 {
 .myProjDetail .boxWrap.headType {
   padding: 1.25rem;
 }
+.myProjDetail .boxWrap.prefix {
+  width: 31.25rem;
+}
 .myProjDetail .boxWrap.suffix {
   margin-left: 0.625rem;
 }
@@ -4157,7 +4219,6 @@ h6 {
   box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.1);
 }
 .myProjDetail .boxWrap .boxType {
-  width: 37.5rem;
   max-height: 7.5rem;
   margin-top: 1.875rem;
   padding-bottom: 0.625rem;
@@ -4287,9 +4348,9 @@ h6 {
 }
 .projRegister .regiPart .boxWrap .inputGroup {
   width: 27.5rem;
-  height: 2.875rem;
+  min-height: 2.875rem;
   margin-top: 0.625rem;
-  padding: 0.5625rem 1rem;
+  padding: 0.4375rem 0.875rem;
 }
 .projRegister .regiPart .boxWrap .inputGroup.wide {
   width: 37.5rem;
@@ -4300,6 +4361,11 @@ h6 {
 .projRegister .regiPart .boxWrap .inputGroup.wide label {
   line-height: 1.25rem;
   margin-left: 0.625rem;
+}
+.projRegister .regiPart .boxWrap .alertToast {
+  top: -170px;
+  left: 48%;
+  transform: translateX(-50%);
 }
 .projRegister .regiPart .hasTooltip {
   cursor: default;

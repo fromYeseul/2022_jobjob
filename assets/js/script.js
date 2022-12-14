@@ -143,6 +143,8 @@ function layerPop(){
 }
 layerPop();
 
+$(document).on("click", layerPop());
+
 // 탭메뉴(여러개 확인하기!!)
 function tabMenu(){
     let tabBtn = document.querySelectorAll('.tabBtnWrap a');
@@ -244,6 +246,23 @@ function boxChk(id){
 
 
 /*-----------호출-----------*/
+
+//등급보기설정 '선택'추가
+function addText(){
+    let levelTab = document.querySelectorAll('#levelTable .tabBtn a');
+    let addActive = document.createElement('span');
+        addActive.setAttribute('class', 'point mainC');
+        addActive.innerHTML = '선택';
+
+    for(let i=0; i<levelTab.length; i++){
+        levelTab[0].append(addActive);
+        levelTab[i].addEventListener('click', function(){
+            //this.classList.add('is-active');
+            this.append(addActive);
+        })
+    }
+}
+// addText();
 
 //rowspan타입 테이블 마우스 오버- 회원상세
 function tableHover(){
@@ -364,7 +383,7 @@ function chkAll(){
     for(let i=0; i<chkAll.length; i++){  
         //전체 선택, 해제
         chkAll[i].addEventListener('click', function(){
-            let thisParent = this.parentElement.parentElement.parentElement;
+            let thisParent = this.parentElement.parentElement;
             let childChkbox = thisParent.querySelectorAll('.chkEach');
 
             if(chkAll[i].checked){
@@ -382,7 +401,7 @@ function chkAll(){
         //개별선택시 전체 선택, 해제
         chkEach[k].addEventListener('click', function(){        
             
-            let thisParent = this.parentElement.parentElement.parentElement.parentElement;
+            let thisParent = this.parentElement.parentElement;
             let allChkbox = thisParent.querySelector('.chkAll');
             let childChkbox = thisParent.querySelectorAll('.chkEach');
             let chked = thisParent.querySelectorAll('.chkEach:checked');
@@ -615,9 +634,13 @@ function showMemo(){
 //호출 : makeMemo();
 function makeMemo(){
     let addMemo = document.querySelector('.addMemo');
+    let cancel = document.querySelector('.cancel');
     let textForm = document.querySelector('.textForm');
     addMemo.addEventListener('click', function(){
         textForm.classList.add('is-active');
+    })
+    cancel.addEventListener('click', function(){
+        textForm.classList.remove('is-active');
     })
 }
 //makeMemo();

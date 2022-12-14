@@ -485,123 +485,450 @@
             </div>
             <div class="modalCont">
 
-                <div class="tableTop">
-                    <div class="btnType type2">                                            
-                        <input type="radio" id="bb1" name="bb" class="hasTxt btnType" checked="">
-                        <label for="bb1">[비삼성] WEB/SAP <button class="button point mainC">선택</button></label>
-                        <input type="radio" id="bb2" name="bb" class="hasTxt btnType">
-                        <label for="bb2">[삼성] WEB</label>
-                        <input type="radio" id="bb3" name="bb" class="hasTxt btnType">
-                        <label for="bb3">[삼성] SAP</label>
-                    </div>         
-                    <span class="subInfo">[기준 : 개월 수]</span>
-                </div>
+                <div class="tabWrapper" id="levelTable">
+                    <div class="tableTop">                   
+                        <ul class="tabBtnWrap btnType borderType">                        
+                            <li class="tabBtn prefix">
+                                <a href="#noSamsung" class="is-active">
+                                    [비삼성] WEB/SAP 
+                                </a>
+                            </li>
+                            <li class="tabBtn center">
+                                <a href="#samsungWeb">
+                                    [삼성] WEB
+                                </a>
+                            </li>
+                            <li class="tabBtn suffix">
+                                <a href="#samsungSap">
+                                    [삼성] SAP
+                                </a>
+                            </li>
+                        </ul> 
+                        <span class="subInfo">[기준 : 개월 수]</span>
+                    </div>
+                    <div class="tabContWrap">
+                        <div id="noSamsung" class="tabCont">                                        
+                            <div class="xScroll">
+                                <div class="flex_2_1">
+                                    <div class="tableBox prefix">
+                                        <table class="hasInput">
+                                            <colgroup>
+                                                <col width="12%">
+                                                <col width="8%">
 
-                <div class="flex_2_1">
-                    <div class="tableBox prefix">
-                        <table class="hasInput">
-                            <colgroup>
-                                <col width="100px">
-                                <col width="150px">
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                                <col>
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>비자격증</th>
-                                    <th>기준단가</th>
-                                    <th>고졸</th>
-                                    <th>전졸</th>
-                                    <th>대졸</th>
-                                    <th>석사</th>
-                                    <th>박사</th>
-                                </tr>
-                            </thead>
-                            <tbody>                            
-                                <tr>
-                                    <td>초급</td>
-                                    <td><input type="text" class="full"></td>
-                                    <td><input type="text" class="xsSize" maxlength="3"> ~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><input type="text" class="xsSize" maxlength="3"> ~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><input type="text" class="xsSize" maxlength="3"> ~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><input type="text" class="xsSize" maxlength="3"> ~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><input type="text" class="xsSize" maxlength="3"> ~ <input type="text" class="xsSize" maxlength="3"></td>
-                                </tr>                 
-                                <tr>
-                                    <td>중급</td>
-                                    <td><input type="text" class="full"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                </tr>                        
-                                <tr>
-                                    <td>고급</td>
-                                    <td><input type="text" class="full"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                </tr>                        
-                                <tr>
-                                    <td>특급</td>
-                                    <td><input type="text" class="full"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> M + 1 </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                </tr>            
-                            </tbody>
-                        </table>
+                                                <col width="16%">
+                                                <col width="16%">
+                                                <col width="16%">
+                                                <col width="16%">
+                                                <col width="16%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>비삼성</th>
+                                                    <th>기준단가</th>
+                                                    <th>고졸</th>
+                                                    <th>전졸</th>
+                                                    <th>대졸</th>
+                                                    <th>석사</th>
+                                                    <th>박사</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>                            
+                                                <tr>
+                                                    <td>초급</td>
+                                                    <td><input type="text" class="" value="6,500,000"></td>
+                                                    <td><input type="text" class="xsSize" maxlength="3" value="36"> ~ <input type="text" class="xsSize" maxlength="3" value="143"></td>
+                                                    <td><input type="text" class="xsSize" maxlength="3" value=""> ~ <input type="text" class="xsSize" maxlength="3" value="107"></td>
+                                                    <td><input type="text" class="xsSize" maxlength="3" value=""> ~ <input type="text" class="xsSize" maxlength="3" value="71"></td>
+                                                    <td><input type="text" class="xsSize" maxlength="3" value=""> ~ <input type="text" class="xsSize" maxlength="3" value="35"></td>
+                                                    <td>-</td>
+                                                </tr>                 
+                                                <tr>
+                                                    <td>중급</td>
+                                                    <td><input type="text" class="" value="7,800,000"></td>
+                                                    <td><span class="w65">144</span> ~ <input type="text" class="xsSize" maxlength="3" value="179"></td>
+                                                    <td><span class="w65">108</span> ~ <input type="text" class="xsSize" maxlength="3" value="143"></td>
+                                                    <td><span class="w65">72</span> ~ <input type="text" class="xsSize" maxlength="3" value="107"></td>
+                                                    <td><span class="w65">36</span> ~ <input type="text" class="xsSize" maxlength="3" value="71"></td>
+                                                    <td>-</td>
+                                                </tr>                        
+                                                <tr>
+                                                    <td>고급</td>
+                                                    <td><input type="text" class="" value="8,500,000"></td>
+                                                    <td><span class="w65">180</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">144</span> ~ <input type="text" class="xsSize" maxlength="3" value="179"></td>
+                                                    <td><span class="w65">108</span> ~ <input type="text" class="xsSize" maxlength="3" value="143"></td>
+                                                    <td><span class="w65">72</span> ~ <input type="text" class="xsSize" maxlength="3" value="107"></td>
+                                                    <td><span class="w65"></span> ~ <input type="text" class="xsSize" maxlength="3" value="35"></td>
+                                                </tr>                        
+                                                <tr>
+                                                    <td>특급</td>
+                                                    <td><input type="text" class="" value="9,500,000"></td>
+                                                    <td>-</td>
+                                                    <td><span class="w65">180</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">144</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">108</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">36</span> ~ <span class="w65"></span></td>
+                                                </tr>            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tableBox suffix">
+                                        <table class="hasInput">
+                                            <colgroup>
+                                                <col width="100px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>자격증</th>
+                                                    <th>정보처리산업기사</th>
+                                                    <th>정보처리기사</th>
+                                                    <th>정보처리기술사</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>                            
+                                                <tr>
+                                                    <td>초급</td>
+                                                    <td><span class="w65"></span> ~ <input type="text" class="xsSize" maxlength="3" value="83"></td>
+                                                    <td><span class="w65"></span> ~ <input type="text" class="xsSize" maxlength="3" value="47"></td>
+                                                    <td><span class="w65">-</span></td>
+                                                </tr>                             
+                                                <tr>
+                                                    <td>중급</td>
+                                                    <td><span class="w65">84</span> ~ <input type="text" class="xsSize" maxlength="3" value="119"></td>
+                                                    <td><span class="w65">48</span> ~ <input type="text" class="xsSize" maxlength="3" value="84"></td>
+                                                    <td><span class="w65">-</span></td>
+                                                </tr>                               
+                                                <tr>
+                                                    <td>고급</td>
+                                                    <td><span class="w65">120</span> ~ <input type="text" class="xsSize" maxlength="3" value="155"></td>
+                                                    <td><span class="w65">85</span> ~ <input type="text" class="xsSize" maxlength="3" value="119"></td>
+                                                    <td><span class="w65">-</span></td>
+                                                </tr>                              
+                                                <tr>
+                                                    <td>특급</td>
+                                                    <td><span class="w65">156</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">120</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">-</span></td>
+                                                </tr>      
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="samsungWeb" class="tabCont is-active">
+                            <div class="xScroll">
+                                <div class="flex_2_1">
+                                    <div class="tableBox prefix">
+                                        <table class="hasInput">
+                                            <colgroup>
+                                                <col width="12%">
+                                                <col width="8%">
+
+                                                <col width="16%">
+                                                <col width="16%">
+                                                <col width="16%">
+                                                <col width="16%">
+                                                <col width="16%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>WEB</th>
+                                                    <th>기준단가</th>
+                                                    <th>고졸</th>
+                                                    <th>전졸</th>
+                                                    <th>대졸</th>
+                                                    <th>석사</th>
+                                                    <th>박사</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>                            
+                                                <tr>
+                                                    <td>초급1</td>
+                                                    <td><input type="text" class="" value="5,100,000"></td>
+                                                    <td><input type="text" class="xsSize" maxlength="3" value="36"> ~ <input type="text" class="xsSize" maxlength="3" value="60"></td>
+                                                    <td><span class="w65"></span> ~ <input type="text" class="xsSize" maxlength="3" value="36"></td>
+                                                    <td><span class="w65"></span> ~ <input type="text" class="xsSize" maxlength="3" value="12"></td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                          
+                                                <tr>
+                                                    <td>초급2</td>
+                                                    <td><input type="text" class="" value="5,800,000"></td>
+                                                    <td><span class="w65">60</span> ~ <input type="text" class="xsSize" maxlength="3" value="120"></td>
+                                                    <td><span class="w65">37</span> ~ <input type="text" class="xsSize" maxlength="3" value="84"></td>
+                                                    <td><span class="w65">13</span> ~ <input type="text" class="xsSize" maxlength="3" value="36"></td>
+                                                    <td><span class="w65"></span> ~ <input type="text" class="xsSize" maxlength="3" value="12"></td>
+                                                    <td>-</td>
+                                                </tr>                 
+                                                <tr>
+                                                    <td>중급</td>
+                                                    <td><input type="text" class="" value="6,500,000"></td>
+                                                    <td><span class="w65">121</span> ~ <input type="text" class="xsSize" maxlength="3" value="144"></td>
+                                                    <td><span class="w65">85</span> ~ <input type="text" class="xsSize" maxlength="3" value="108"></td>
+                                                    <td><span class="w65">37</span> ~ <input type="text" class="xsSize" maxlength="3" value="72"></td>
+                                                    <td><span class="w65">13</span> ~ <input type="text" class="xsSize" maxlength="3" value="36"></td>
+                                                    <td>-</td>
+                                                </tr>                        
+                                                <tr>
+                                                    <td>고급1</td>
+                                                    <td><input type="text" class="" value="7,200,000"></td>
+                                                    <td><span class="w65">145</span> ~ <input type="text" class="xsSize" maxlength="3" value="168"></td>
+                                                    <td><span class="w65">109</span> ~ <input type="text" class="xsSize" maxlength="3" value="132"></td>
+                                                    <td><span class="w65">73</span> ~ <input type="text" class="xsSize" maxlength="3" value="96"></td>
+                                                    <td><span class="w65">37</span> ~ <input type="text" class="xsSize" maxlength="3" value="60"></td>
+                                                    <td>-</td>
+                                                </tr>                      
+                                                <tr>
+                                                    <td>고급2</td>
+                                                    <td><input type="text" class="" value="7,900,000"></td>
+                                                    <td><span class="w65">169</span> ~ <input type="text" class="xsSize" maxlength="3" value="180"></td>
+                                                    <td><span class="w65">133</span> ~ <input type="text" class="xsSize" maxlength="3" value="144"></td>
+                                                    <td><span class="w65">97</span> ~ <input type="text" class="xsSize" maxlength="3" value="108"></td>
+                                                    <td><span class="w65">61</span> ~ <input type="text" class="xsSize" maxlength="3" value="72"></td>
+                                                    <td>-</td>
+                                                </tr>                        
+                                                <tr>
+                                                    <td>특급1</td>
+                                                    <td><input type="text" class="" value="8,600,000"></td>
+                                                    <td><span class="w65">181</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">145</span> ~ <input type="text" class="xsSize" maxlength="3" value="180"></td>
+                                                    <td><span class="w65">109</span> ~ <input type="text" class="xsSize" maxlength="3" value="144"></td>
+                                                    <td><span class="w65">73</span> ~ <input type="text" class="xsSize" maxlength="3" value="108"></td>
+                                                    <td><span class="w65"></span> ~ <input type="text" class="xsSize" maxlength="3" value="36"></td>
+                                                </tr>                        
+                                                <tr>
+                                                    <td>특급2</td>
+                                                    <td><input type="text" class="" value="9,300,000"></td>
+                                                    <td>-</td>
+                                                    <td><span class="w65">181</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">145</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">109</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">37</span> ~ <span class="w65"></span></td>
+                                                </tr>            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tableBox suffix">
+                                        <table class="hasInput">
+                                            <colgroup>
+                                                <col width="100px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>자격증</th>
+                                                    <th>정보처리산업기사</th>
+                                                    <th>정보처리기사</th>
+                                                    <th>정보처리기술사</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>                            
+                                                <tr>
+                                                    <td>초급1</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                         
+                                                <tr>
+                                                    <td>초급2</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                              
+                                                <tr>
+                                                    <td>중급</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                               
+                                                <tr>
+                                                    <td>고급1</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                                
+                                                <tr>
+                                                    <td>고급2</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                              
+                                                <tr>
+                                                    <td>특급1</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                               
+                                                <tr>
+                                                    <td>특급2</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>      
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="samsungSap" class="tabCont">                            
+                            <div class="xScroll">
+                                <div class="flex_2_1">
+                                    <div class="tableBox prefix">
+                                        <table class="hasInput">
+                                            <colgroup>
+                                                <col width="12%">
+                                                <col width="8%">
+
+                                                <col width="16%">
+                                                <col width="16%">
+                                                <col width="16%">
+                                                <col width="16%">
+                                                <col width="16%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>SAP</th>
+                                                    <th>기준단가</th>
+                                                    <th>고졸</th>
+                                                    <th>전졸</th>
+                                                    <th>대졸</th>
+                                                    <th>석사</th>
+                                                    <th>박사</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>                            
+                                                <tr>
+                                                    <td>초급1</td>
+                                                    <td><input type="text" class="" value="5,100,000"></td>
+                                                    <td><span class="w65"></span> ~ <input type="text" class="xsSize" maxlength="3" value="12"></td>
+                                                    <td><span class="w65"></span> ~ <input type="text" class="xsSize" maxlength="3" value="12"></td>
+                                                    <td><span class="w65"></span> ~ <input type="text" class="xsSize" maxlength="3" value="12"></td>
+                                                    <td><span class="w65"></span> ~ <input type="text" class="xsSize" maxlength="3" value="12"></td>
+                                                    <td><span class="w65"></span> ~ <input type="text" class="xsSize" maxlength="3" value="12"></td>
+                                                </tr>                          
+                                                <tr>
+                                                    <td>초급2</td>
+                                                    <td><input type="text" class="" value="5,800,000"></td>
+                                                    <td><span class="w65">13</span> ~ <input type="text" class="xsSize" maxlength="3" value="36"></td>
+                                                    <td><span class="w65">13</span> ~ <input type="text" class="xsSize" maxlength="3" value="36"></td>
+                                                    <td><span class="w65">13</span> ~ <input type="text" class="xsSize" maxlength="3" value="36"></td>
+                                                    <td><span class="w65">13</span> ~ <input type="text" class="xsSize" maxlength="3" value="36"></td>
+                                                    <td><span class="w65">13</span> ~ <input type="text" class="xsSize" maxlength="3" value="36"></td>
+                                                </tr>                 
+                                                <tr>
+                                                    <td>중급</td>
+                                                    <td><input type="text" class="" value="6,500,000"></td>
+                                                    <td><span class="w65">37</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">37</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">37</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">37</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">37</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                </tr>                        
+                                                <tr>
+                                                    <td>고급1</td>
+                                                    <td><input type="text" class="" value="7,200,000"></td>
+                                                    <td><span class="w65">73</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">73</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">73</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">73</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">73</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                </tr>                      
+                                                <tr>
+                                                    <td>고급2</td>
+                                                    <td><input type="text" class="" value="7,900,000"></td>
+                                                    <td><span class="w65">97</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">97</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">97</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">97</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">97</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                </tr>                        
+                                                <tr>
+                                                    <td>특급1</td>
+                                                    <td><input type="text" class="" value="8,600,000"></td>
+                                                    <td><span class="w65">109</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">109</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">109</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">109</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                    <td><span class="w65">109</span> ~ <input type="text" class="xsSize" maxlength="3"></td>
+                                                </tr>                        
+                                                <tr>
+                                                    <td>특급2</td>
+                                                    <td><input type="text" class="" value="9,300,000"></td>
+                                                    <td><span class="w65">145</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">145</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">145</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">145</span> ~ <span class="w65"></span></td>
+                                                    <td><span class="w65">145</span> ~ <span class="w65"></span></td>
+                                                </tr>            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tableBox suffix">
+                                        <table class="hasInput">
+                                            <colgroup>
+                                                <col width="100px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>자격증</th>
+                                                    <th>정보처리산업기사</th>
+                                                    <th>정보처리기사</th>
+                                                    <th>정보처리기술사</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>                            
+                                                <tr>
+                                                    <td>초급1</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                         
+                                                <tr>
+                                                    <td>초급2</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                              
+                                                <tr>
+                                                    <td>중급</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                               
+                                                <tr>
+                                                    <td>고급1</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                                
+                                                <tr>
+                                                    <td>고급2</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                              
+                                                <tr>
+                                                    <td>특급1</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>                               
+                                                <tr>
+                                                    <td>특급2</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>      
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tableBox suffix">
-                        <table class="hasInput">
-                            <colgroup>
-                                <col width="100px">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>자격증</th>
-                                    <th>정보처리산업기사</th>
-                                    <th>정보처리기사</th>
-                                    <th>정보처리기술사</th>
-                                </tr>
-                            </thead>
-                            <tbody>                            
-                                <tr>
-                                    <td>초급</td>
-                                    <td><input type="text" class="xsSize" maxlength="3"> ~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><input type="text" class="xsSize" maxlength="3"> ~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><input type="text" class="xsSize" maxlength="3"> ~ <input type="text" class="xsSize" maxlength="3"></td>
-                                </tr>                             
-                                <tr>
-                                    <td>중급</td>
-                                    <td><span class="w65"> from </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> from </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> from </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                </tr>                               
-                                <tr>
-                                    <td>고급</td>
-                                    <td><span class="w65"> from </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> from </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> from </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                </tr>                              
-                                <tr>
-                                    <td>특급</td>
-                                    <td><span class="w65"> from </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> from </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                    <td><span class="w65"> from </span>~ <input type="text" class="xsSize" maxlength="3"></td>
-                                </tr>      
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                </div>       
 
                 <h6 class="mt50">참고사항</h6>
                 <div class="bulletList">
@@ -625,7 +952,7 @@
 
     
     <!--221017 추가 -ys-->
-    <div id="investDetail" class="modalLayer center">
+    <div id="investDetail" class="modalLayer center is-active">
         <div class="layerBox fullSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -877,17 +1204,17 @@
                                     <colgroup>
                                         <col width="80px">
                                         <col>
-                                        <col width="60px">
+                                        <col width="50px">
                                         <col>
                                         <col>
 
-                                        <col width="60px">
-                                        <col width="100px">
-                                        <col width="100px">
+                                        <col width="30px">
+                                        <col width="90px">
+                                        <col width="90px">
                                         <col>
-                                        <col>
+                                        <col width="70px">
 
-                                        <col>
+                                        <col width="40px">
                                         <col>
                                         <col>
                                     </colgroup>
@@ -1072,17 +1399,10 @@
         showTable();
         chkAll();
         selectBox();
-
+        addText();
     </script>
     <script>
-        function getYmd10() {
-            //yyyy-mm-dd 포맷 날짜 생성
-            var d = new Date();
-            var editType = document.querySelector('input.editType').value;
-
-            return d.getFullYear() + "-" + ((d.getMonth() + 1) > 9 ? (d.getMonth() + 1).toString() : "0" + (d.getMonth() + 1)) + "-" + (d.getDate() > 9 ? d.getDate().toString() : "0" + d.getDate().toString());
-        }
-        // console.log(editType);
+        
     </script>
 </body>
 </html>

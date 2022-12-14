@@ -2,6 +2,7 @@
 .inputList{
     li{
         margin-bottom: rem(20);
+        position: relative;
         > label{
             display: block;
         }
@@ -97,6 +98,9 @@ input[type=date]{
     &.lowSize{
         height: rem(36);
     }
+    &.midSize{
+        width: rem(100);
+    }
     &.laSize{
         width: rem(360);
     }
@@ -113,6 +117,7 @@ input[type=date]{
         width: 100%;
         height: rem(36);
         padding: rem(8) 0;
+        padding-left: rem(4);
         border:0;
         color: $tableGray;
         &:focus{
@@ -120,6 +125,10 @@ input[type=date]{
         }
         &::placeholder{
             color: $cancel;
+        }
+        &.xsSize{
+            width: rem(60);
+            height: rem(40);
         }
     }
     & + .btnType{
@@ -129,7 +138,8 @@ input[type=date]{
 
 input[type=date]{
     position: relative;
-    padding: rem(11) rem(16);    
+    padding: rem(11) rem(16);
+    width: rem(140);    
     &.editType{
         width: 84%;
         border:0;
@@ -361,11 +371,13 @@ input[type=file] {
     color: $white;
     line-height: rem(22);
     vertical-align: top;
-
+    margin: rem(2);
     background: $placeholder;
     border-radius: rem(5);
+    position: relative;
     &.is-active{
         background: transparent;
+        padding: rem(2);
     }
     input[type=text]{
         height: rem(23);
