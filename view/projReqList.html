@@ -64,9 +64,10 @@
                             <li>
                                 <p class="condiTit">의뢰목록</p>
                                 <div class="tabType">
-                                    <input type="radio" id="allReq" name="reqCharge" value="allReq" checked>
+                                    <input type="hidden" id="reqChargeCd" name="reqChargeCd" value="allReq">
+                                    <input type="radio" id="allReq" name="reqCharge" value="allReq">
                                     <label for="allReq">모든 의뢰</label>
-                                    <input type="radio" id="myReq" name="reqCharge" value="myReq">
+                                    <input type="radio" id="myReq" name="reqCharge" value="myReq" checked>
                                     <label for="myReq">내 담당만</label>
                                 </div>
                             </li>
@@ -197,7 +198,7 @@
                                         <input type="checkbox" id="reqChk_9" class="bMark" name="bMark">
                                         <label for="reqChk_9"></label>
                                         <div class="alertToast is-active" id="toast02">
-                                            중요 프로젝트로 설정되었습니다.
+                                            중요 프로젝트에서 해제되었습니다.
                                             <i class="ico smClose w"></i>
                                         </div>
                                     </td>

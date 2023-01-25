@@ -12,23 +12,30 @@
         }
     }
     ul{
-        margin-top: rem(30);
-        margin-bottom: rem(40);
+        margin-top: rem(20);
+        margin-bottom: rem(30);
         li{
             margin-bottom: rem(10);
+            span{
+                font-weight: 400;
+                font-size: rem(14);
+            }
         }
         input{
             &:checked{
                 + label{
-                    position: relative;
-                    &::after{
-                        content:'';
-                        width: calc(100% - 20px);
-                        height: 1px;
-                        background: $black;
-                        position: absolute;
-                        left: rem(22);
-                        top: 50%;
+                    + span{
+                        position: relative;
+                        display: inline-block;
+                        &::after{
+                            content:'';
+                            width: calc(100% + 4px);
+                            height: 1px;
+                            background: $black;
+                            position: absolute;
+                            left: -2px;
+                            top: 50%;
+                        }
                     }
                 }
             }

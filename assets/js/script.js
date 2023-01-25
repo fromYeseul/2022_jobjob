@@ -4,16 +4,23 @@ function gnbNav(){
     let layoutWrapper = document.querySelector('.layoutWrapper');
     let navCtrlBtn = document.querySelector('.navCtrlBtn');
     let navWrapper = document.querySelector('.navWrapper');
+    let gnb = document.querySelector('.gnb');
 
     if(navWrapper !== null){
         navCtrlBtn.addEventListener('click', function(){
             layoutWrapper.classList.toggle('is-active');
         });
     
-        navWrapper.addEventListener('mouseenter', function(){
+        // navWrapper.addEventListener('mouseenter', function(){
+        //     layoutWrapper.classList.add('is-hover');            
+        // });
+        // navWrapper.addEventListener('mouseleave', function(){
+        //     layoutWrapper.classList.remove('is-hover');
+        // });
+        gnb.addEventListener('mouseenter', function(){
             layoutWrapper.classList.add('is-hover');            
         });
-        navWrapper.addEventListener('mouseleave', function(){
+        gnb.addEventListener('mouseleave', function(){
             layoutWrapper.classList.remove('is-hover');
         });
 
@@ -27,22 +34,27 @@ gnbNav();
 //nav 2depth
 function navList(){
     let navLi = document.querySelectorAll('.navWrapper > ul > li');
-    let navInner = document.querySelectorAll('ul');
+    let navInner = document.querySelectorAll('.navWrapper > ul > li > ul');
 
     for(let i=0; i<navLi.length; i++){
         navLi[i].addEventListener('click', function(){
             let this_navInner = this.querySelector('ul');
 
-            for(let j=0; j<navLi.length; j++){
-                navLi[j].classList.remove('is-active');
+            for(let j=0; j<navInner.length; j++){
                 navInner[j].classList.remove('is-active');
             }
-
+            for(let i=0; i<navLi.length; i++){
+                navLi[i].classList.remove('is-active');
+            }
+            
             this.classList.toggle('is-active');
-            this_navInner.classList.toggle('is-active');
+            if(this_navInner != undefined){
+                this_navInner.classList.toggle('is-active');
+            }            
         })
     }
 }
+
 
 //header - mypeople, myproject
 function headerPage(){
@@ -247,15 +259,29 @@ function boxChk(id){
 
 /*-----------호출-----------*/
 
-//등급보기설정 '선택'추가
-function addText(){
-    let levelTab = document.querySelectorAll('#levelTable .tabBtn a');
+//등급보기설정 '선택'추가 - spring 참고
+function addText(grd_grp_cd){
+    var idx = 0;
+    switch(grd_grp_cd) {
+        case "GRD_GRP_001" : idx=0; break;
+        case "GRD_GRP_002" : idx=1; break;
+        case "GRD_GRP_003" : idx=2; break;
+    }
+    
+    let levelTab = document.querySelectorAll('#levelTable .tabBtn a');			
+    let levelCont = document.querySelectorAll('#levelTable .tabContWrap .tabCont');
+    
     let addActive = document.createElement('span');
         addActive.setAttribute('class', 'point mainC');
         addActive.innerHTML = '선택';
 
     for(let i=0; i<levelTab.length; i++){
-        levelTab[0].append(addActive);
+        
+        
+        levelTab[idx].append(addActive);
+        levelTab[idx].classList.add('is-active');
+        levelCont[idx].classList.add('is-active');
+        
         levelTab[i].addEventListener('click', function(){
             //this.classList.add('is-active');
             this.append(addActive);
@@ -263,6 +289,179 @@ function addText(){
     }
 }
 // addText();
+
+
+//등급보기 다음 input focus
+// function inputFocus(){
+//     var formCtr = document.querySelectorAll('#showLevel tr input:not(input[type=hidden])');
+
+//     for(let i=0; i<formCtr.length; i++){
+//         //input 이벤트, 숫자외 입력x
+//         formCtr[i].addEventListener('input', function(e){
+//             this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+//         });
+
+//         //마우스이벤트
+//         formCtr[i].addEventListener('keydown', function(e){
+//             var keyCode = e.keyCode;
+//             //var len = formCtr[i + 1].value.length; 
+
+//             if(!(48 < keyCode && keyCode < 57) || !(96 < keyCode && keyCode < 105)){
+//                 this.value=this.value.replace(/[^0-9]/g,'');
+//             }            
+
+//             //숫자외 입력x
+//             // if(!(48 < keyCode && keyCode < 57) || !(96 < keyCode && keyCode < 105)){
+//             //     formCtr[i].value=formCtr[i].value.replace(/[^0-9]/g,'');
+//             // }
+
+
+//             if(keyCode == 13){
+//                 formCtr[i+1].focus();      
+//                 chkInput();
+//             }else if(keyCode == 9){
+//                 chkInput();
+//             }
+//         })
+
+//         //클릭이벤트
+//         formCtr[i].addEventListener('focusout', e => {
+//             chkInput();
+//         })
+        
+//         function chkInput(){
+
+//             var thisTr = formCtr[i].parentNode.parentNode;
+//             var thisTd = formCtr[i].parentNode;
+//             var standardPay = formCtr[i].className;
+//             var tdIndex = thisTd.cellIndex;
+//             var thisSpan = thisTd.getElementsByTagName('span')[0];
+
+//             var nextTr = thisTr.nextElementSibling;
+//             var nextTd = nextTr.children[tdIndex];
+//             var nextSpan = nextTd.getElementsByTagName('span')[0];
+            
+//             var inputVal = Number(formCtr[i].value);
+
+//             if(standardPay == 'xsSize'){     
+//                 //input 2개일때
+//                 if(thisTd.getElementsByTagName('input').length  == 2){                    
+//                     if(formCtr[i] == thisTd.getElementsByTagName('input')[0]){
+//                         // return;
+//                         // if(inputVal > Number(formCtr[i+1].value)){ 
+//                         //     formCtr[i+1].value = inputVal + 1;
+//                         //     //nextSpan.innerText = Number(formCtr[i+1].value) + 10;
+//                         // }
+//                         // from일 때 로직 추가
+//                         if(Number(formCtr[i].value) > Number(formCtr[i+1].value)){ 
+//                             formCtr[i+1].value = formCtr[i].value;
+//                             nextSpan.innerText = Number(formCtr[i+1].value) + 1;
+//                         }
+
+//                     }else if(formCtr[i] == thisTd.getElementsByTagName('input')[1]){
+//                         if(inputVal < Number(formCtr[i-1].value)){ 
+//                             formCtr[i].value = formCtr[i-1].value;
+//                         }
+//                     }  
+//                 //span 1개, input 1개일때
+//                 }else if(thisSpan != null && formCtr[i].value < thisSpan.innerText){
+//                     formCtr[i].value = thisSpan.innerText;                    
+//                 }
+
+//                 //input이 0일때, 999일때
+//                 if(inputVal === 0 || inputVal === null){
+//                     nextSpan.innerText = null
+//                 }else if(inputVal === 999){
+//                     nextSpan.innerText = 999;
+//                 }else if(inputVal !== 0){
+//                     nextSpan.innerText = inputVal + 1;
+//                 }
+//             }         
+//         }
+//     }
+// }
+
+//등급보기 다음 input focus
+function inputFocus(){
+    var formCtr = document.querySelectorAll('#showLevel tr input:not(input[type=hidden])');
+
+    for(let i=0; i<formCtr.length; i++){
+        //마우스이벤트
+        formCtr[i].addEventListener('keydown', function(e){
+            var keyCode = e.keyCode;
+            //var len = formCtr[i + 1].value.length; 
+
+            //숫자외 입력x
+            if(!(48 < keyCode && keyCode < 57) || !(96 < keyCode && keyCode < 105)){
+                console.log(this.value);
+                this.value=this.value.replace(/[^0-9]/g,'');
+                //this.value=this.value.replace( /[a-z|ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g,'');
+                console.log(this.value);
+                console.log('----------');
+            }
+
+
+            if(keyCode == 13){
+                formCtr[i+1].focus();      
+                chkInput();
+            }else if(keyCode == 9){
+                chkInput();
+            }
+        })
+
+        //클릭이벤트
+        formCtr[i].addEventListener('focusout', e => {
+            chkInput();
+        })
+        
+        function chkInput(){
+
+            var thisTr = formCtr[i].parentNode.parentNode;
+            var thisTd = formCtr[i].parentNode;
+            var standardPay = formCtr[i].className;
+            var tdIndex = thisTd.cellIndex;
+            var thisSpan = thisTd.getElementsByTagName('span')[0];
+
+            var nextTr = thisTr.nextElementSibling;
+            var nextTd = nextTr.children[tdIndex];
+            var nextSpan = nextTd.getElementsByTagName('span')[0];
+            
+            var inputVal = Number(formCtr[i].value);
+
+            if(standardPay == 'xxsSize'){     
+                //input 2개일때
+                if(thisTd.getElementsByTagName('input').length  == 2){                    
+                    if(formCtr[i] == thisTd.getElementsByTagName('input')[0]){
+                        // return;
+                        if(inputVal > Number(formCtr[i+1].value)){ 
+                            formCtr[i+1].value = inputVal + 1;
+                            //nextSpan.innerText = Number(formCtr[i+1].value) + 10;
+                        }
+                    }else if(formCtr[i] == thisTd.getElementsByTagName('input')[1]){
+                        if(inputVal < Number(formCtr[i-1].value)){ 
+                            formCtr[i].value = formCtr[i-1].value;
+                        }
+                    }  
+                //span 1개, input 1개일때
+                }else if(thisSpan != null && formCtr[i].value < thisSpan.innerText){
+                    formCtr[i].value = thisSpan.innerText;                    
+                }
+
+                //input이 0일때, 999일때
+                if(inputVal == 0 || inputVal == null || inputVal == ''){                    
+		            formCtr[i].value = 0;
+                    nextSpan.innerText = 0;
+                }else if(inputVal === 999){
+                    nextSpan.innerText = 999;
+                }else if(inputVal !== 0){
+                    nextSpan.innerText = inputVal + 1;
+                }
+            }         
+        }
+    }
+}
+// inputFocus();
+
 
 //rowspan타입 테이블 마우스 오버- 회원상세
 function tableHover(){
@@ -288,14 +487,12 @@ function tableHover(){
 // 호출 : selDefault.onclick = selectBox();
 // let selDefault = document.querySelectorAll('.selDefault');   
 function selectBox(){ 
-    //221011 위치수정 -ys
     let selDefault = document.querySelectorAll('.selDefault');   
     
     selDefault.forEach(function(lb){
         
             if (lb.classList.contains('is-active')) return;
 
-            //220907 변수 위치 수정
             let optionList = lb.nextElementSibling;
             let optionItems = optionList.querySelectorAll('.optionItem');
 
@@ -317,9 +514,9 @@ function selectBox(){
                     if(!(event.target.parentElement.parentElement == optionList || event.target == lb)){
                         lb.parentNode.classList.remove('is-active');
                     }
-                    if(event.target == document.getElementById('saveBtn') || event.target == document.getElementById('alertCls')){
-                        lb.parentNode.classList.add('is-active');
-                    }
+                    // if(event.target == document.getElementById('saveBtn') || event.target == document.getElementById('alertCls')){
+                    //     lb.parentNode.classList.add('is-active');
+                    // }
                 });
                 /* //220906 수정(외부클릭시 닫힘) -ys */
                 
@@ -446,20 +643,32 @@ function chkAll(){
 
 //더보기 (마이피플)
 //호출 : showMore(); 
-function showMore(){
-    let openMore = document.querySelectorAll(".showMore");
-    let moreList = document.querySelectorAll(".moreList");
+// function showMore(){
+//     let openMore = document.querySelectorAll(".showMore");
+//     let moreList = document.querySelectorAll(".moreList");
+//     for(let i=0; i<openMore.length; i++){
+//         openMore[i].addEventListener("click", function(){
+//             // e.preventDefault(e);
+//             moreList[i].classList.toggle("is-active");
+//         });
+//     }
+// }
+
+function showMore(ulId){
+    let openMore = document.querySelectorAll("#" + ulId +" .showMore");
+    let moreList = document.querySelectorAll("#" + ulId +" .moreList");
     for(let i=0; i<openMore.length; i++){
-        openMore[i].addEventListener("click", function(){
-            // e.preventDefault(e);
+        openMore[i].addEventListener("click", function(e){
+            e.preventDefault(e);
             moreList[i].classList.toggle("is-active");
-        });
+       });
     }
 }
+
 //showMore();
 
 
-//체크리스트 생성하기
+//체크리스트 생성하기 230118 수정
 //호출 : makeChkList();
 function makeChkList(){
     let chkList = document.querySelector("#chkList");
@@ -470,6 +679,8 @@ function makeChkList(){
 		let id = 1;
 		
 		lastLi = document.querySelector("#chkList").lastElementChild;
+        
+        if(lastLi.lastElementChild.classList.contains('new')) return;	//여러개 한번에 추가 못하게
 		
 		if(lastLi != null) id = Number(lastLi.firstElementChild.getAttribute('id')) + 1;
 
@@ -484,7 +695,11 @@ function makeChkList(){
             createChk.setAttribute("disabled", "true");
 
         let createLabel = document.createElement("label");
-            createLabel.setAttribute("for", id);   //설정    
+            createLabel.setAttribute("for", id);   //설정   
+            
+        //텍스트
+        let createSpan = document.createElement("span"); 
+            createSpan.setAttribute("class", "listTxt");
 
         //인풋박스 속성
         let createInput = document.createElement("input");
@@ -503,6 +718,7 @@ function makeChkList(){
         chkList.append(createLi);
         createLi.append(createChk);
         createLi.append(createLabel);
+        createLi.append(createSpan);
         createLi.append(createInput);
         createInput.focus();
         
@@ -510,12 +726,13 @@ function makeChkList(){
         createInput.addEventListener("keyup", function (event) {
         if (event.keyCode === 13) {
             let inputValue = createInput.value;
-            createLabel.innerText = inputValue;
+            createSpan.innerText = inputValue;
 
             createLi.removeChild(createInput);
             createLi.append(makeDel);
             
             createChk.removeAttribute("disabled");
+            // 데이터 저장 : addChkList(id, inputValue);
             }
         });
 
@@ -590,7 +807,7 @@ let myProjJobFilter = document.querySelector('.myProjDetail .filterWrapper');
 function openFilter(){
     for(let i=0; i<filterBtn.length; i++){
         filterBtn[i].addEventListener('click', function(){
-            // this.querySelector('.filter').classList.toggle('is-active');
+            //this.querySelector('.filter').classList.toggle('is-active');
             myProjJobFilter.classList.toggle('is-active');
         })
     }
@@ -658,15 +875,45 @@ function showMemoList(){
 }
 // showMemoList();
 
+//퀵뷰 메모 더보기/접기
+function memoFold(){
+    
+    let memMemo = document.querySelectorAll('.quickView .memMemo.editType');
+
+    for(let i=0; i<memMemo.length; i++){
+        console.log(memMemo[i].offsetHeight);
+        if(memMemo[i].offsetHeight > 90){
+            let foldBtnLi = memMemo[i].nextElementSibling;
+            let foldBtn = foldBtnLi.firstElementChild;
+
+            foldBtnLi.classList.add('is-active');
+            foldBtn.addEventListener('click', function(){
+                let memMemo = this.parentNode.previousElementSibling;
+    
+                if(memMemo.classList.contains('is-active')){
+                    this.innerText = '[더보기]';
+                    memMemo.classList.remove('is-active');
+                }else{                
+                    this.innerText = '[접기]';
+                    memMemo.classList.add('is-active');
+                }
+            })
+        }
+    }
+}
+//memoFold();
+
 
 //textarea height 자동
 function autoTextarea(){
     let autoHeight = document.querySelectorAll('textarea.autoHeight');
-    for(let i=0; i<autoHeight.length; i++){
-        autoHeight[i].onkeyup = function(){
-            autoHeight[i].style.height = "1px";
-            autoHeight[i].style.height = (autoHeight[i].scrollHeight)+"px";
-        }
+    if(autoHeight != undefined){        
+        for(let i=0; i<autoHeight.length; i++){
+            autoHeight[i].onkeyup = function(){
+                autoHeight[i].style.height = "1px";
+                autoHeight[i].style.height = (autoHeight[i].scrollHeight)+"px";
+            }
+        }    
     }
 }
 //autoTextarea();
@@ -761,7 +1008,7 @@ $(function(){
 function uploadFile(){
     if(window.FileReader) { 
         addEventHandler(window, 'load', function() {
-        var drop   = document.getElementsByClassName('drop')[0];
+        var drop   = document.getElementsByClassName('upload')[0];
         var list   = document.getElementsByClassName('list')[0];
         var list_ul = document.getElementsByClassName('list_ul')[0];
 
@@ -893,3 +1140,77 @@ $(".chkWrap").on("click", ".chkEach", function() {
 
     $("#chkAll").prop("checked", is_checked);
 });*/
+
+
+
+// sesstion stroage - 페이지 이동시 gnb 유지
+// window.sStorage = window.sessionStorage || (function() {
+// // window.sStorage = (function() {
+//     var winObj = opener || window;  //opener가 있으면 팝업창으로 열렸으므로 부모 창을 사용
+//     var data = JSON.parse(winObj.top.name || '{}');
+//     var fn = {
+//     length : Object.keys(data).length,
+//     setItem : function(key, value) {
+//         data[key]  = value + '';
+//         winObj.top.name = JSON.stringify(data);
+//         fn.length++;
+//     },
+//     getItem : function(key) {
+//         return data[key] || null;
+//     },
+//     key : function(idx) {
+//         return Object.keys(data)[idx] || null;  //Object.keys() 는 IE9 이상을 지원하므로 IE8 이하 브라우저 환경에선 수정되어야함
+//     },
+//     removeItem : function(key) {
+//         delete data[key];
+//         winObj.top.name = JSON.stringify(data);
+//         fn.length--;
+//     },
+//     clear : function() {
+//         winObj.top.name = '{}';
+//         fn.length = 0;
+//     }
+//     };
+//     return fn;
+// })();
+
+// function setLeftFixYN() {
+//     var leftOpenYN = window.sStorage.getItem("leftFixYN");
+//     //console.log('member', leftOpenYN);
+    
+//     if(leftOpenYN == 'true') {
+//         $(".layoutWrapper").addClass('is-active');
+//         console.log(leftOpenYN, 'true');
+//     }
+//     else {
+//         $(".layoutWrapper").removeClass('is-active');
+//         console.log(leftOpenYN, 'false');
+//     }
+// }
+// setLeftFixYN();
+
+// function goPage(page) {
+//     sStorage.clear();
+//     sStorage.setItem("leftFixYN", 'false');
+//     var leftFixYN = $(".layoutWrapper").hasClass('is-active');
+//     sStorage.setItem("leftFixYN", leftFixYN);
+    
+//     location.href=page;
+// }
+
+function chkList(){
+    let chkListInput = document.querySelectorAll('#memArea .prefix li input');
+    let chkListLabel = chkListInput.nextElementSibling;    
+    let chkLi = chkListInput.parentElement;
+
+    for(let i=0; i<chkListInput.length; i++){
+        chkListInput[i].addEventListener('click', function(){
+            alert('aa');            
+        })
+    }
+    console.log(chkLi);
+    console.log(chkListInput);
+    console.log(chkListInput.length);
+    console.log(chkListLabel);
+}
+//chkList();

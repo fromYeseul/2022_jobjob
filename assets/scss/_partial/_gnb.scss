@@ -28,7 +28,7 @@
         cursor: pointer;
         position: relative;
         &::before{
-            content:'';
+            //content:'';
             width: 0;
             //220829
             height: rem(40);
@@ -61,15 +61,19 @@
                             left: 0;
                             top: 0;
                         }
+                        span{
+                            opacity: 1;
+                        }
                     }
-                    // li{
-                    //     &.is-active{
-                    //         a{
-                    //             background: rgba(255,255,255,0.3);
-                    //         }
-                    //     }
-                    // }
-                }     
+                }  
+                li{
+                    &.is-active{
+                        background: rgba(255,255,255,0.1);
+                        span{
+                            opacity: 1;
+                        }
+                    }
+                }   
             }
         }
         li{
@@ -77,25 +81,16 @@
                 display: block;
                 padding: rem(10) rem(13);
                 padding-left: rem(15);
+                span{
+                    opacity: .8;
+                }
                 &:hover{
                     background: rgba(255,255,255,0.1);
+                    span{
+                        opacity: 1;
+                    }
                 }
             }
-            // padding: rem(6);
-            // padding-right: rem(8);
-            // &.is-active{
-            //     .menuTxt{
-            //         font-weight: 700;
-            //     }
-            // }
-            // a{
-            //     display: block;
-            //     padding: rem(7);
-            //     border-radius: 4px;
-            //     &:hover{
-            //         background: rgba(255,255,255,0.2);
-            //     }
-            // }
             ul{
                 display: none;
                 li{
@@ -105,31 +100,6 @@
                     a{
                         padding-left: rem(34);
                     }
-                    // &::before{
-                    //     content:'';
-                    //     width: 2px;
-                    //     height: 100%;
-                    //     background: white;
-                    //     opacity: .3;
-                    //     position: absolute;
-                    //     top: 0;
-                    //     left: rem(18);
-                    // }
-                    // &:first-child{
-                    //     &::before{
-                    //         height: 65%;
-                    //         top:35%;
-                    //     }
-                    // }
-                    // &:last-child{
-                    //     &::before{
-                    //         height: 70%;
-                    //         top:0;
-                    //     }
-                    // }
-                    // a{
-                    //     margin-left: rem(34);
-                    // }
                 }
             }
         }

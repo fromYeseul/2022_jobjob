@@ -88,6 +88,10 @@
     .resuTop{
         text-align: right;
     }
+    .resuBox{    
+        height: calc(100vh - 250px);
+        @include scroll_0;
+    }
 }
 .resume{
     display: flex;
@@ -113,8 +117,8 @@
         padding: rem(40) rem(50);
         //220829
         background: $beige;
-        height: calc(100vh - 250px);
-        @include scroll_0;
+        // height: calc(100vh - 250px);
+        // @include scroll_0;
         .profile{
             //220829
             // width: rem(210);
@@ -170,8 +174,8 @@
         // width: rem(690);
         width: calc(100% - 330px);
         background: $white;
-        height: calc(100vh - 250px);
-        @include scroll_0;
+        // height: calc(100vh - 250px);
+        // @include scroll_0;
         .resuInfo{
             //220829
             // width: rem(330);
@@ -207,6 +211,13 @@
             margin-top: rem(10);
             th{
                 padding-top: 0;
+            }
+        }
+    }
+    table{
+        tr{
+            &:hover{
+                background: transparent ; 
             }
         }
     }

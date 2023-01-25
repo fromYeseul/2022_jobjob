@@ -66,16 +66,16 @@
                         <h2 id="test">프로젝트 요청등록</h2>
                         <div class="breadCrumb">
                             <ul class="flex">
-                                <li class="is-active" id="clickOne"><a href="#">기본정보</a></li>
-                                <li id="clickTwo"><a href="#">모집인원</a></li>
-                                <li id="clickThree"><a href="#">근무환경</a></li>
-                                <li id="clickFour"><a href="#">추가정보</a></li>
+                                <li class="is-active" id="#"><a href="#regi0">기본정보</a></li>
+                                <li id="#"><a href="#regi1">모집인원</a></li>
+                                <li id="#"><a href="#regi2">근무환경</a></li>
+                                <li id="#"><a href="#regi3">추가정보</a></li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="regiPartWrapper">         
-                        <div class="regiPart">
+                        <div class="regiPart" id="regi0">
                             <h5>1. 프로젝트 기본정보</h5>
                             <div class="boxWrap">
                                 <div class="inputList column half">   
@@ -88,7 +88,7 @@
                                                                                         
                                             <!--221102 클래스추가 -ys-->
                                             <label class="need over_h" for="project">프로젝트 이름</label>
-                                            <input class="need" type="text" id="project" maxlength="50" placeholder="프로젝트 이름"> 
+                                            <input class="need" type="text" id="project" maxlength="50" placeholder="프로젝트 이름" value="프로젝트 이름" disabled> 
                                                 
                                             <div class="btnType">                                            
                                                 <input type="radio" id="b1" name="aa" class="hasTxt btnType">
@@ -99,7 +99,7 @@
                                         </li>
                                         <li>
                                             <label class="need" for="">요청회사</label>
-                                            <input class="full" type="text" id="" maxlength="20"> 
+                                            <input class="full" type="text" id="" maxlength="20" value="프로젝트 이름" disabled> 
                                         </li>
                                         <li>
                                             <label class="need" for="">요청자 이름</label>
@@ -123,7 +123,7 @@
 
                                             <!--221102 클래스추가 -ys-->
                                             <label class="need over_h" for="">프로젝트 시작희망일</label>
-                                            <input class="full mr0" type="date" id="" maxlength="" placeholder="프로젝트 이름을 입력하세요."  onkeydown="return false"> 
+                                            <input class="full mr0" type="date" id="" maxlength="" placeholder="프로젝트 이름을 입력하세요."  onkeydown="return false" disabled> 
                                         </li>
 
                                         <!--220915 추가 -ys-->
@@ -134,16 +134,16 @@
                                             <br>
                                             (예) 쇼핑몰 홈페이지 고도화
                                         </div>
-                                        <div class="tooltip left line2">
+                                        <div class="tooltip left line2 is-active">
                                             <p>요청회사</p>
                                             회사 이름을 입력해주세요. 
                                         </div>
-                                        <div class="tooltip left line3">
+                                        <div class="tooltip left line3 is-active">
                                             <p>요청자 이메일</p>
                                             요청하시는 분의 이메일 주소를 입력해주세요. 
                                             담당자가 연락하기 위해 사용됩니다.
                                         </div>
-                                        <div class="tooltip left line4">
+                                        <div class="tooltip left line4 is-active">
                                             <p>프로젝트 시작희망일</p>
                                             희망하시는 프로젝트 시작일자를 선택해주세요. 구인 정보에 활용됩니다.
                                         </div>
@@ -152,21 +152,25 @@
                                 </div>
                             </div>
                         </div>  
-                        <div class="regiPart">
+                        <div class="regiPart" id="regi1">
                             <h5>2. 모집인원</h5>
                             <div class="h5_sub">
                                 모집하는 인력의 업무 포지션과 경력, 인건비를 입력해주세요.<br>그리고 각 직무에 해당하는 업무 내용과 주요 필수 요건이 있다면 입력해 주세요.
                             </div>
-                            <!--220826 추가 -ys-->
-                            <button class="midSize">계약 및 투입 상세정보</button>
-                            <!--//220826 추가 -ys-->
+                            <!--221222 추가 -ys-->
+                            <div class="flex mt20">
+                                <button class="midSize low">계약 및 투입 상세정보</button>
+                                <button class="onlyIco"><i class="ico pull"></i></button>
+                                <button class="onlyIco"><i class="ico push"></i></button>
+                            </div>
+                            <!--//221222 추가 -ys-->
                             <div class="">
                                 <div class="boxWrap">
                                     <div class="inputList column row hasTooltip">   
                                         <ul>
                                             <li>
                                                 <label class="need" for="">직군</label>
-                                                <div class="select is-active">
+                                                <div class="select need">
                                                     <span class="selDefault">선택</span>
                                                     <ul class="optionList">
                                                         <li class="optionItem">PM</li>
@@ -185,7 +189,7 @@
                                             </li>
                                             <li>
                                                 <label class="need" for="project">직무</label>
-                                                <div class="select wideSize">
+                                                <div class="select wideSize disable">
                                                     <span class="selDefault">선택</span>
                                                     <ul class="optionList">
                                                         <li class="optionItem">열람</li>
@@ -218,13 +222,13 @@
                                             </li>
                                             <li>
                                                 <label class="need" for="">단가</label>
-                                                <input class="" type="text" id="" maxlength="" placeholder=""> 
+                                                <input class="midSize" type="text" id="" maxlength="" placeholder=""><!--221222 추가 -ys-->
                                                 <span>만원</span>
                                             </li>
                                         </ul>
                                         <ul class="row">
                                             <li>
-                                                <textarea class="wideSize" name="" id="" rows=""></textarea>
+                                                <textarea class="wideSize" name="" id="" rows="" disabled>gggggggggggggg</textarea>
                                             </li>
                                             <li class="flexBetween">
                                                 <button class="onlyIco">
@@ -242,7 +246,7 @@
                                         </ul>
 
                                         <!--220915 추가 -ys-->
-                                        <div class="tooltip left">
+                                        <div class="tooltip left is-active">
                                             <p>단가</p>
                                             고객사로부터 제공받는 인력별 월 단가를(매출금액) 입력해주세요. 
                                             <br>
@@ -286,7 +290,7 @@
                                                 </div> -->
 
 
-                                                <div class="inputGroup">
+                                                <div class="inputGroup need">
                                                     <div class="inputObj">
                                                         <span>JSP</span>
                                                         <button class="ico smClose w"></button>
@@ -315,7 +319,7 @@
                                         </ul>
                                         
                                         <!--220915 추가 -ys-->
-                                        <div class="tooltip left line3">
+                                        <div class="tooltip left line3 is-active">
                                             <p>투입(예정)일</p>
                                             투입 예정일을 선택해주세요. 추후 변경할 수 있습니다.
                                         </div>
@@ -324,7 +328,7 @@
                                 </div>
                             </div>
                         </div>      
-                        <div class="regiPart">
+                        <div class="regiPart" id="regi2">
                             <h5>3. 근무환경</h5>
                             <div class="boxWrap">
                                 <div class="inputList column row">  
@@ -378,14 +382,14 @@
                                         </li>
                                         
                                         <!--220915 추가 -ys-->
-                                        <div class="tooltip left">
+                                        <div class="tooltip left is-active">
                                             <p>주소비공개</p>
                                             모집공고에서 근무 장소가 비공개로 처리되며, 채용확정 후 공개됩니다.
                                         </div>
                                         <!--//220915 추가 -ys-->
                                     </ul>
                                     <h3 class="need mb20 mt30">근무 시간을 선택해 주세요</h3><!--220920 클래스 추가 -ys-->
-                                    <ul class="gap20">
+                                    <ul class="hasTooltip gap20">
                                         <li>
                                             <div class="select">
                                                 <span class="selDefault">09시</span>
@@ -445,19 +449,24 @@
                                             <input type="checkbox" id="pay" name="pay" class="hasTxt">
                                             <label for="pay" class="lh50">협의</label>
                                         </li>
+                                        
+                                        <div class="tooltip left is-active">
+                                            <p>주소비공개</p>
+                                            모집공고에서 근무 장소가 비공개로 처리되며, 채용확정 후 공개됩니다.
+                                        </div>
                                     </ul>
                                 </div>
                             </div>
                         </div>        
-                        <div class="regiPart">
+                        <div class="regiPart" id="regi3">
                             <h5>4. 추가정보</h5>
                             <div class="boxWrap">
                                 <div class="inputList">   
                                     <div class="h5_sub">
                                         프로젝트와 관련된 자료를 첨부해 주세요.<br>첨부하신 자료는 외부로 공유되지 않으며 프로젝트 분석과 인력 매칭을 위해서만 사용됩니다.
                                     </div>
-                                    <ul>
-                                        <li class="flexEnd">
+                                    <ul class="hasTooltip">
+                                        <li class=""><!--230116 클래스 삭제 -ys -->
                                             <!--220824 수정 -ys -->
                                             <div class="uploadBox">
                                                 <div class="inputGroup upload wide">
@@ -473,11 +482,23 @@
                                                     </div>
                                                 </div>
                                             
-                                                <label for="cycleDocument22" class="">또는 직접선택</label>
+                                                <label for="cycleDocument22" class="">직접선택</label>
                                                 <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="" />
                                             </div>
                                             <!--//220824 수정 -ys -->
+
+                                            
+                                            <!--230116 수정 -ys -->
+                                            <p class="error is-active">실행가능한 파일은 보안의 이유로 첨부하실 수 없습니다.</p>
+                                            <p class="error is-active">파일은 최대 5개까지 첨부할 수 있습니다.</p>
+                                            <p class="error is-active">파일은 최대 100mb까지 첨부할 수 있습니다.</p>
+                                            <!--//230116 수정 -ys -->
                                         </li>
+                                        
+                                        <div class="tooltip left is-active">
+                                            <p>주소비공개</p>
+                                            모집공고에서 근무 장소가 비공개로 처리되며, 채용확정 후 공개됩니다.
+                                        </div>
                                     </ul>
                                 </div>
                                 <div class="inputList column half"> 
@@ -496,14 +517,14 @@
                                         </li>
                                         
                                         <!--220915 추가 -ys-->
-                                        <div class="tooltip left">
+                                        <div class="tooltip left is-active">
                                             <p>프로젝트 소개</p>
                                             담당자가 파악할 수 있도록 프로젝트를 설명해주세요.
                                         </div>
                                         <!--//220915 추가 -ys-->
                                         
                                         <!--220915 추가 -ys-->
-                                        <div class="tooltip left line4">
+                                        <div class="tooltip left line4 is-active">
                                             <p>프로젝트 이름</p>
                                             잡잡 본사 직원과 먼저 이야기를 나누셨거나, 추천 직원이 있다면 입력해주세요. 
                                             <br>프로젝트 진행 시 해당 담당자가 우선 배정 됩니다.
@@ -515,7 +536,7 @@
                         </div>     
                     </div>     
 
-                    <footer class="toast">
+                    <footer class="toast is-active">
                         <h5>이 프로젝트의 진행 여부를 판단하세요.</h5>
                         <div class="suffix">
                             <button class="xlSize">공고등록</button>
@@ -523,7 +544,6 @@
                             <button class="warning xlSize">진행불가</button>
                         </div>
                     </footer>
-
 
                 </section>
                 
@@ -601,45 +621,51 @@
             <h6>이 프로젝트를</h6>
             <button class="white lowSize">삭제</button>
             <button class="white lowSize">임시저장</button>
-            <button class="midSize" id="saveBtn">저장</button>
+            <!-- <button class="midSize" id="saveBtn">저장</button> -->
+            <button class="lowSize" id="saveBtn">저장</button><!--230102 추가 -ys-->
+            <button class="lowSize" id="saveBtn">저장</button>
         </div>
     </div>
     <!--//플로팅메뉴-->
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>221004 추가 -ys
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><!--221004 추가 -ys-->
     <script src="../assets/js/script.js"></script>
     <!-- <script src="../assets/js/layerPopup.js"></script>
     <script src="../assets/js/validator.js"></script> -->
 
-    <script scr="../assets/js/jquery-ui.js"></script>
+    <!-- <script scr="../assets/js/jquery-ui.js"></script> -->
 
     <script>
         /* 221004 자동완성 -ys */
-        $(document).ready(function() {
-            var inputSource = ['java', 'javascript', 'jsp', 'photoshop', 'ajax', 'django'];
+        // $(document).ready(function() {
+        //     var inputSource = ['java', 'javascript', 'jsp', 'photoshop', 'ajax', 'django'];
 
-            $('#inputBox').autocomplete({
-                source : inputSource,
-                minLength : 1
-            });
+        //     $('#inputBox').autocomplete({
+        //         source : inputSource,
+        //         minLength : 1
+        //     });
             
-            var inputBox = document.querySelector('#inputBox');
-            inputBox.addEventListener("focus", downArrow);
+        //     var inputBox = document.querySelector('#inputBox');
+        //     inputBox.addEventListener("focus", downArrow);
 
-            $( ".ui-menu" ).autocomplete({
-                appendTo: "#inputBox"
-            });
+        //     $( ".ui-menu" ).autocomplete({
+        //         appendTo: "#inputBox"
+        //     });
 
-        });
+        //     //221215 스크롤시 자동완성 사라짐 -ys 
+        //     $('.regiPartWrapper').scroll(function() {
+        //         $('.ui-menu').css('display', 'none');
+        //     });
+        // });
 
-        function downArrow() {
-            var event = document.createEvent("Event");
-            event.initEvent("keydown", true, true);
-            event.keyCode = 40
-            document.getElementById("inputBox").dispatchEvent(event);
-        };
+        // function downArrow() {
+        //     var event = document.createEvent("Event");
+        //     event.initEvent("keydown", true, true);
+        //     event.keyCode = 40
+        //     document.getElementById("inputBox").dispatchEvent(event);
+        // };
         /* //221004 자동완성 -ys */
 
         // $("#saveBtn").click(function () { 
@@ -650,61 +676,28 @@
     </script>
 
     <script>
-    //스크롤이동 - 프로젝트 등록
-    $(function(){
 
-        var $breadCrumbs = $('.breadCrumb li');
+    function regiScroll(){        
+        let regiPartWrapper = document.querySelector('.regiPartWrapper');
+        let breadCrumbs = document.querySelectorAll('.breadCrumb li');
+        
+        regiPartWrapper.addEventListener('scroll',function(){
 
-        $breadCrumbs.on('click', function(e){
-            e.preventDefault();
+            for(let i=0; i<breadCrumbs.length; i++){
+                breadCrumbs[i].classList.remove('is-active');
+                let target = document.getElementById('regi' + i).getBoundingClientRect().top;
+                if(target <150){
+                    for(let j=0; j<breadCrumbs.length; j++){
+                        breadCrumbs[j].classList.remove('is-active');
+                    }
+                    breadCrumbs[i].classList.add('is-active');
+                }
 
-            $breadCrumbs.removeClass('is-active');
-            $(this).addClass('is-active');
-
-            var index = $(this).index();
-
-            if(index == 0){
-                $(".regiPartWrapper").animate({
-                    scrollTop: "0", 
-                },500);
-            }else if(index == 1){
-                $(".regiPartWrapper").animate({
-                    scrollTop: "590", 
-                },500);
-            }else if(index == 2){
-                $(".regiPartWrapper").animate({
-                    scrollTop: "1100", 
-                },500);
-            }else {
-                $(".regiPartWrapper").animate({
-                    scrollTop: "1560", 
-                },500);
-            }            
-        })
-
-        var $Wrapper = $('.regiPartWrapper');
-
-        $Wrapper.scroll(function(){            
-            var $scrollTop = $('.regiPartWrapper').scrollTop();
-
-            //console.log($scrollTop);
-
-            if($scrollTop < 590){
-                $breadCrumbs.removeClass('is-active');
-                $breadCrumbs.eq(0).addClass('is-active');
-            }else if($scrollTop < 1100){
-                $breadCrumbs.removeClass('is-active');
-                $breadCrumbs.eq(1).addClass('is-active');
-            }else if($scrollTop < 1560){
-                $breadCrumbs.removeClass('is-active');
-                $breadCrumbs.eq(2).addClass('is-active');
-            }else{
-                $breadCrumbs.removeClass('is-active');
-                $breadCrumbs.eq(3).addClass('is-active');
             }
-        })
-                
-    })
+        });
+    }
+    regiScroll();
+
 
     
     //푸터보이기
@@ -725,7 +718,8 @@
                 }
             })
         }
-    }showFooter();
+    }
+    //showFooter();
     </script>
 
     <script>

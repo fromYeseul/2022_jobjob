@@ -14,34 +14,55 @@ textarea{
     &:focus{        
         outline: 1px solid $mainColor;
     }
+    &:read-only{
+        background: $lightGray;
+    }
+    &:disabled{
+        color: $inputGray;
+        background: transparent;
+    }
     & + .counter{
+        font-size: rem(14);
         color: $subInfo;
         text-align: right;
+        margin-top: rem(10);
     }
     &.oneLine{
         padding: rem(7);
     }
     &.autoHeight{
-        height: rem(36);
+        min-height: rem(72);
     }
     &.wideSize{
         width: rem(440);
     }
+    &.need{
+        border:1px solid $error;
+    }
 }
 .textForm{
     display: none;
-    padding: rem(5);
-    border-radius: rem(4);
-    border:1px solid $layoutColor;
+    margin-top: rem(10);
+    //padding: rem(5);
+    //border-radius: rem(4);
+    //border:1px solid $layoutColor;
     &.is-active{
         display: block;
     }
     textarea{
-        padding: auto;
-        outline: none;
-        border: 0;        
+        //padding: auto;
+        //outline: none;
+        //border: 0;    
+        border:1px solid $layoutColor;    
         @include scroll_0;    
         transition: all .3s;
+    }
+    .btnWrap{
+        margin-top: rem(10);
+        .cancel{
+            color: $black;
+            border: 1px solid $inputGray;
+        }
     }
     & + .btnWrap{
         margin-top: rem(10);

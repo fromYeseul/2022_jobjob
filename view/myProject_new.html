@@ -10,7 +10,7 @@
 </head>
 <body>
     <section class="layoutWrapper">
-        <header>
+        <!-- <header>
             <div class="prefix">
                 <a href="#" class="logo">
                     <img src="../assets/img/icoLogo.png" alt="">
@@ -27,6 +27,27 @@
                         <a href="#">내정보 수정</a>
                         <a href="#" class="logState">로그아웃</a>
                     </li>
+                </ul>
+            </div>
+        </header> -->
+
+        <header>
+            <div class="prefix">
+                <a href="/" class="logo">
+                 <img src="../assets/img/icoLogo.png" alt="">
+             </a>
+            </div>
+            <div class="center title">
+                <h5 id="projDetailNm"> 공고값 테스트 - 고양시 덕양구 공고값 테스트 - 고양시 덕양구 공고값 테스트 - 고양시 덕양구 공고값 테스트 - 고양시 덕양구 공고값 테스트 - 고양시 덕양구 공고값 테스트 - 고양시 덕양구 공고값 테스트 - 고양시 덕양구 </h5>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <!--221013 수정 -ys-->
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li><a href="#showLevel" class="layerOpen">등급보기설정</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                    <!--//221013 수정 -ys-->
                 </ul>
             </div>
         </header>
@@ -223,6 +244,12 @@
                                         <span>영업(미지정)</span>
                                         <span>소싱(김진곤, 한아라)</span>
                                     </span>
+                                    <!--230104 추가 -ys-->
+                                    <div class="suffix">
+                                        <a href="#" class="button white midSize disabled">채용완료</a>
+                                        <!-- <a href="#" class="button white midSize">채용완료</a> -->
+                                    </div>
+                                    <!--//230104 추가 -ys-->
                                 </div>
                                 <div class="cont">
                                     <h3>                                        
@@ -318,17 +345,17 @@
                                 <div class="tabWrapper">
                                     <ul class="tabBtnWrap wideType">
                                         <li class="tabBtn prefix">
-                                            <a href="#myProj-1" class="is-active">직무추천 (250)</a>
+                                            <a href="#myProj-1">직무추천 (250)</a>
                                         </li>
                                         <li class="tabBtn center">
-                                            <a href="#myProj-2">지원접수 (4)</a>
+                                            <a href="#myProj-2" class="is-active">지원접수 (4)</a>
                                         </li>
                                         <li class="tabBtn suffix">
                                             <a href="#myProj-3">투입입원 (1/4)</a>
                                         </li>
                                     </ul>
                                     <div class="tabContWrap">
-                                        <div id="myProj-1" class="tabCont is-active">                                            
+                                        <div id="myProj-1" class="tabCont">                                            
                                             <div class="yScroll">
                                                 <!-- <div class="tableTop">    
                                                     <div class=""></div>            
@@ -344,11 +371,11 @@
                                                 <div class="tableBox">                              
                                                     <table class="chkType">
                                                         <colgroup>
-                                                            <col width="55px;">
-                                                            <col width="13%">
+                                                            <col width="60px;">
+                                                            <col width="12%">
                                                             <col width="30px;">
                                                             <col>
-                                                            <col>
+                                                            <col width="60px;">
 
                                                             <col width="80px">
                                                             <col>
@@ -362,7 +389,7 @@
                                                             <tr>
                                                                 <th>
                                                                     <input type="checkbox" id="chkAll2" class="hasTxt">
-                                                                    <label for="chkAll2">0/40</label>
+                                                                    <label for="chkAll2">40/40</label>
                                                                 </th>
                                                                 <th>
                                                                     <a href="#memScore"class="layerOpen is-active">90점 이상</a>
@@ -390,7 +417,7 @@
                                                                             <input type="text" id="search" class="laSize" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
                                                                             <button class="ico search"></button>
                                                                         </div>   
-                                                                        <button class="white filter"><i class="ico filter is-active"></i></button>
+                                                                        <button class="white filter"><i class="ico filter"></i></button>
                                                                         <button class="white"><i class="ico refresh"></i></button>
                                                                     </div>
                                                                 </th>
@@ -784,6 +811,11 @@
                                                                 </td>
                                                             </tr>
                                                         </tbody>
+                                                        <tbody>
+                                                            <tr class="nodata">
+                                                                <td colspan="11">결과없음</td>
+                                                            </tr>
+                                                        </tbody>
                                                     </table>
                                                 </div>
                                                 <!--220913 위치이동 -ys -->
@@ -830,14 +862,14 @@
                                                 </div>
                                             </div>                                        
                                         </div>
-                                        <div id="myProj-2" class="tabCont">                                            
+                                        <div id="myProj-2" class="tabCont is-active">                                            
                                             <div class="yScroll">
                                                 
                                                 <div class="tableBox">                              
                                                     <table class="chkType hasInput">
                                                         <colgroup>
-                                                            <col width="55px">
-                                                            <col width="15%">
+                                                            <col width="60px;">
+                                                            <col width="12%">
                                                             <col width="30px;">
                                                             <col width="50px;">
                                                             <col width="100px;">
@@ -883,6 +915,246 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox" id="ttt1">
+                                                                    <label for="ttt1"></label>
+                                                                </td>
+                                                                <td class="txtLeft">
+                                                                    <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                                    <span class="eHigh">special 100.0</span>
+                                                                </td>
+                                                                <td>
+                                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                                    <label for="bMark_a"></label>
+                                                                </td>
+                                                                <td class="hasTooltip">
+                                                                    에코<br>
+                                                                    <p class="ellipsis">라이트브레인</p>                                                                
+                                                                    <div class="tooltip bottom">
+                                                                        라이트브레인                        
+                                                                    </div>     
+                                                                </td>
+                                                                <td>김길동(남)<br>81세</td>
+                                                                <td>
+                                                                    개발<br>
+                                                                    <span class="eHigh">22년 4개월</span>
+                                                                </td>
+                                                                <td>4년제<br>졸업</td>
+                                                                <td>서울<br>강서</td>
+                                                                <td>협의</td>
+                                                                <td>
+                                                                    <textarea name="" id="" maxlength="50" placeholder="saaaa" readonly="readonly">ddddddddddddd</textarea>
+                                                                </td>
+                                                                <td>22/04/04<br>관리자 등록</td>
+                                                                <td>
+                                                                    <div class="select smSize">
+                                                                        <span class="selDefault">전체</span>
+                                                                        <ul class="optionList">
+                                                                            <li class="optionItem">열람</li>
+                                                                            <li class="optionItem">추천검토</li>
+                                                                            <li class="optionItem">인터뷰</li>
+                                                                            <li class="optionItem">최종합격</li>
+                                                                            <li class="optionItem">불합격</li>
+                                                                            <li class="optionItem">투입확정</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox" id="ttt2">
+                                                                    <label for="ttt2"></label>
+                                                                </td>
+                                                                <td class="txtLeft">
+                                                                    <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                                    <span class="eHigh">0.0</span>
+                                                                </td>
+                                                                <td>
+                                                                    <input type="checkbox" id="bMark_b" class="bMark" name="bMark">
+                                                                    <label for="bMark_b"></label>
+                                                                </td>                                                            
+                                                                <td class="hasTooltip">
+                                                                    에코<br>
+                                                                    <p class="ellipsis">라이트브레인</p>                                                                
+                                                                    <div class="tooltip bottom">
+                                                                        라이트브레인                        
+                                                                    </div>     
+                                                                </td>
+                                                                <td>김길동(남)<br>81세</td>
+                                                                <td>개발<br>22년 4개월</td>
+                                                                <td>4년제<br>졸업</td>
+                                                                <td>서울<br>강서</td>
+                                                                <td>협의</td>
+                                                                <td>
+                                                                    <textarea name="" id="" maxlength="50" placeholder="메모입력"></textarea>
+                                                                </td>
+                                                                <td>22/04/04<br>관리자 등록</td>
+                                                                <td>
+                                                                    <div class="select smSize">
+                                                                        <span class="selDefault">전체</span>
+                                                                        <ul class="optionList">
+                                                                            <li class="optionItem">열람</li>
+                                                                            <li class="optionItem">추천검토</li>
+                                                                            <li class="optionItem">인터뷰</li>
+                                                                            <li class="optionItem">최종합격</li>
+                                                                            <li class="optionItem">불합격</li>
+                                                                            <li class="optionItem">투입확정</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox" id="ttt3">
+                                                                    <label for="ttt3"></label>
+                                                                </td>
+                                                                <td class="txtLeft">
+                                                                    <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                                    <span class="eHigh">special 90.0</span>
+                                                                </td>
+                                                                <td>
+                                                                    <input type="checkbox" id="bMark_c" class="bMark" name="bMark">
+                                                                    <label for="bMark_c"></label>
+                                                                </td>
+                                                                <td class="hasTooltip">
+                                                                    에코<br>
+                                                                    <p class="ellipsis">-</p>         
+                                                                </td>
+                                                                <td>김길동(남)<br>81세</td>
+                                                                <td>개발<br>22년 4개월</td>
+                                                                <td>4년제<br>졸업</td>
+                                                                <td>서울<br>강서</td>
+                                                                <td>협의</td>
+                                                                <td>
+                                                                    <textarea name="" id="" maxlength="50" placeholder="메모입력"></textarea>
+                                                                </td>
+                                                                <td>22/04/04<br>관리자 등록</td>
+                                                                <td>
+                                                                    <div class="select smSize">
+                                                                        <span class="selDefault">전체</span>
+                                                                        <ul class="optionList">
+                                                                            <li class="optionItem">열람</li>
+                                                                            <li class="optionItem">추천검토</li>
+                                                                            <li class="optionItem">인터뷰</li>
+                                                                            <li class="optionItem">최종합격</li>
+                                                                            <li class="optionItem">불합격</li>
+                                                                            <li class="optionItem">투입확정</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox" id="ttt4">
+                                                                    <label for="ttt4"></label>
+                                                                </td>
+                                                                <td class="txtLeft">
+                                                                    <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                                    <span class="eHigh">special 100.0</span>
+                                                                </td>
+                                                                <td>
+                                                                    <input type="checkbox" id="bMark_e" class="bMark" name="bMark">
+                                                                    <label for="bMark_e"></label>
+                                                                </td>
+                                                                <td>에코</td>
+                                                                <td>김길동(남)<br>81세</td>
+                                                                <td>개발<br>22년 4개월</td>
+                                                                <td>4년제<br>졸업</td>
+                                                                <td>서울<br>강서</td>
+                                                                <td>협의</td>
+                                                                <td>
+                                                                    <textarea name="" id="" maxlength="50" placeholder="메모입력"></textarea>
+                                                                </td>
+                                                                <td>22/04/04<br>관리자 등록</td>
+                                                                <td>
+                                                                    <div class="select smSize">
+                                                                        <span class="selDefault">전체</span>
+                                                                        <ul class="optionList">
+                                                                            <li class="optionItem">열람</li>
+                                                                            <li class="optionItem">추천검토</li>
+                                                                            <li class="optionItem">인터뷰</li>
+                                                                            <li class="optionItem">최종합격</li>
+                                                                            <li class="optionItem">불합격</li>
+                                                                            <li class="optionItem">투입확정</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox" id="ttt5">
+                                                                    <label for="ttt5"></label>
+                                                                </td>
+                                                                <td class="txtLeft">
+                                                                    <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                                    <span class="eHigh">special 100.0</span>
+                                                                </td>
+                                                                <td>
+                                                                    <input type="checkbox" id="bMark_f" class="bMark" name="bMark">
+                                                                    <label for="bMark_f"></label>
+                                                                </td>
+                                                                <td>에코</td>
+                                                                <td>김길동(남)<br>81세</td>
+                                                                <td>개발<br>22년 4개월</td>
+                                                                <td>4년제<br>졸업</td>
+                                                                <td>서울<br>강서</td>
+                                                                <td>협의</td>
+                                                                <td>
+                                                                    <textarea name="" id="" maxlength="50" placeholder="메모입력"></textarea>
+                                                                </td>
+                                                                <td>22/04/04<br>관리자 등록</td>
+                                                                <td>
+                                                                    <div class="select smSize">
+                                                                        <span class="selDefault">전체</span>
+                                                                        <ul class="optionList">
+                                                                            <li class="optionItem">열람</li>
+                                                                            <li class="optionItem">추천검토</li>
+                                                                            <li class="optionItem">인터뷰</li>
+                                                                            <li class="optionItem">최종합격</li>
+                                                                            <li class="optionItem">불합격</li>
+                                                                            <li class="optionItem">투입확정</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox" id="ttt6">
+                                                                    <label for="ttt6"></label>
+                                                                </td>
+                                                                <td class="txtLeft">
+                                                                    <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                                    <span class="eHigh">special 100.0</span>
+                                                                </td>
+                                                                <td>
+                                                                    <input type="checkbox" id="bMark_c" class="bMark" name="bMark">
+                                                                    <label for="bMark_c"></label>
+                                                                </td>
+                                                                <td>에코</td>
+                                                                <td>김길동(남)<br>81세</td>
+                                                                <td>개발<br>22년 4개월</td>
+                                                                <td>4년제<br>졸업</td>
+                                                                <td>서울<br>강서</td>
+                                                                <td>협의</td>
+                                                                <td>
+                                                                    <textarea name="" id="" maxlength="50" placeholder="메모입력"></textarea>
+                                                                </td>
+                                                                <td>22/04/04<br>관리자 등록</td>
+                                                                <td>
+                                                                    <div class="select smSize">
+                                                                        <span class="selDefault">전체</span>
+                                                                        <ul class="optionList">
+                                                                            <li class="optionItem">열람</li>
+                                                                            <li class="optionItem">추천검토</li>
+                                                                            <li class="optionItem">인터뷰</li>
+                                                                            <li class="optionItem">최종합격</li>
+                                                                            <li class="optionItem">불합격</li>
+                                                                            <li class="optionItem">투입확정</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
                                                             <tr>
                                                                 <td>
                                                                     <input type="checkbox" id="ttt1">
@@ -1110,7 +1382,7 @@
                                                                 </td>
                                                                 <td>22/04/04<br>관리자 등록</td>
                                                                 <td>
-                                                                    <div class="select smSize">
+                                                                    <div class="select smSize upper"><!--221221 추가 ys-->
                                                                         <span class="selDefault">전체</span>
                                                                         <ul class="optionList">
                                                                             <li class="optionItem">열람</li>
@@ -1175,16 +1447,18 @@
                                                 <div class="tableBox">                              
                                                     <table class="chkType hasInput">
                                                         <colgroup>
-                                                            <col width="55px;">
-                                                            <col width="15%">
+                                                            <col width="60px;">
+                                                            <col width="12%">
                                                             <col width="30px;">
                                                             <col width="50px;">
-                                                            <col width="100px;">
+                                                            <col width="80px;">
+
+                                                            <col>                    
                                                             <col>
-                    
                                                             <col>
+                                                            <col width="70px;">
                                                             <col>
-                                                            <col>
+                                                            
                                                             <col width="16%">
                                                             <col>
                                                             <col width="10%">
@@ -1214,7 +1488,8 @@
                                                                 </th>
                                                                 <th>
                                                                     <a href="#memArea"class="layerOpen">거주지역</a>
-                                                                </th>    
+                                                                </th> 
+                                                                <th>실투입기간</th>    
                                                                 <th>희망단가</th>    
                                                                 <th>메모</th>    
                                                                 <th>지원일</th>    
@@ -1249,6 +1524,7 @@
                                                                 </td>
                                                                 <td>4년제<br>졸업</td>
                                                                 <td>서울<br>강서</td>
+                                                                <td>28년 12개월</td>
                                                                 <td>협의</td>
                                                                 <td>
                                                                     <textarea name="" id="" maxlength="50" placeholder="메모입력"></textarea>
@@ -1292,6 +1568,7 @@
                                                                 <td>개발<br>22년 4개월</td>
                                                                 <td>4년제<br>졸업</td>
                                                                 <td>서울<br>강서</td>
+                                                                <td>미입력</td>
                                                                 <td>협의</td>
                                                                 <td>
                                                                     <textarea name="" id="" maxlength="50" placeholder="메모입력"></textarea>
@@ -1332,6 +1609,7 @@
                                                                 <td>개발<br>22년 4개월</td>
                                                                 <td>4년제<br>졸업</td>
                                                                 <td>서울<br>강서</td>
+                                                                <td>미입력</td>
                                                                 <td>협의</td>
                                                                 <td>
                                                                     <textarea name="" id="" maxlength="50" placeholder="메모입력"></textarea>
@@ -1369,6 +1647,7 @@
                                                                 <td>개발<br>22년 4개월</td>
                                                                 <td>4년제<br>졸업</td>
                                                                 <td>서울<br>강서</td>
+                                                                <td>미입력</td>
                                                                 <td>협의</td>
                                                                 <td>
                                                                     <textarea name="" id="" maxlength="50" placeholder="메모입력"></textarea>
@@ -1406,6 +1685,7 @@
                                                                 <td>개발<br>22년 4개월</td>
                                                                 <td>4년제<br>졸업</td>
                                                                 <td>서울<br>강서</td>
+                                                                <td>미입력</td>
                                                                 <td>협의</td>
                                                                 <td>
                                                                     <textarea name="" id="" maxlength="50" placeholder="메모입력"></textarea>
@@ -1443,6 +1723,7 @@
                                                                 <td>개발<br>22년 4개월</td>
                                                                 <td>4년제<br>졸업</td>
                                                                 <td>서울<br>강서</td>
+                                                                <td>미입력</td>
                                                                 <td>협의</td>
                                                                 <td>
                                                                     <textarea name="" id="" maxlength="50" placeholder="메모입력"></textarea>
@@ -1523,10 +1804,12 @@
                                         <input type="date" class="smSize"> 부터
                                         <input type="date" class="smSize mt10"> 까지
 
+                                        <!-- 230104 버튼수정 -ys-->
                                         <div class="flex_2_3 mt10">
                                             <button class="fullSize white prefix">삭제</button>
-                                            <button class="fullSize suffix">적용</button>
+                                            <button class="fullSize lowSize suffix">적용</button>
                                         </div>
+                                        <!-- //230104 버튼수정 -ys-->
                                     </div>       
                     
                                     <div class="filterList">
@@ -1551,7 +1834,9 @@
                                             <input type="text" class="xsSize">
                                         </div>
                                         
-                                        <button class="fullSize mt10">적용</button>
+                                        <!-- 230104 버튼수정 -ys-->
+                                        <button class="fullSize lowSize mt10">적용</button>
+                                        <!-- //230104 버튼수정 -ys-->
                                     </div>      
                                     
                                     <button class="fullSize white mt30">닫기</button>
@@ -1567,13 +1852,16 @@
                             <div class="suffix flex">
                                 <button class="fullSize white prefix">선택삭제</button>
                                 <button class="fullSize suffix">지원제의</button>
+                                
+                                <button class="fullSize prefix">+ 직접등록</button>
+                                <button class="fullSize suffix">투입상세정보</button>
                             </div>
                         </div>
                         <!--//221114 수정 -ys-->
                     </div>
                 </section>
                 <!--221013 추가 -ys-->
-                <section class="quickView fixedHeight">
+                <section class="quickView fixedHeight is-active">
                     <div class="tabWrapper" id="tab01">
                         <ul class="tabBtnWrap">
                             <li class="tabBtn">
@@ -1607,12 +1895,13 @@
                                                 <!--221123 추가 -ys -->
                                                 <textarea name="" class="autoHeight" id="test" value="aaa"></textarea>
                                                 <!--//221123 추가 -ys -->
-                                                <div class="btnWrap right">
+                                                <div class="btnWrap center"><!--230105 클래스 추가-ys-->
                                                     <button class="smSize white cancel">취소</button>
                                                     <button class="smSize">등록</button>
                                                 </div>  
                                             </div>
                                         </li>
+
                                         <li class="boxList headType">
                                             <div class="cont">
                                                 <div class="prefix">
@@ -1627,7 +1916,7 @@
     
                                                             <div class="showMore">
                                                                 <a href="#" class="ico more"></a>
-                                                                <div class="moreList is-active">
+                                                                <div class="moreList">
                                                                     <button class="square is-active">수정</button>
                                                                     <button class="square is-active">삭제</button>
                                                                 </div>
@@ -1642,6 +1931,11 @@
                                                             어떤 프로젝트에 들어가도 평타 침. 주말 근무 요청은 절대 하지 말 것.
                                                             평일 근무 요청은
                                                         </li>
+                                                        <!--230103 추가 -ys-->
+                                                        <li class="txtRight">
+                                                            <button class="fold txtType">[더보기]</button>
+                                                        </li>
+                                                        <!--//230103 추가 -ys-->
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1667,20 +1961,20 @@
                                                             </div>
                                                         </li>
                                                         <li class="memMemo editType">
-                                                            전반적으로 무난함. 고객사 평가도 무난함.<br>
-                                                            어떤 프로젝트에 들어가도 평타 침.<br>
-                                                            주말 근무 요청은 절대 하지 말 것.<br>
-                                                            평일 근무 요청은 전반적으로 무난함. 고객사 평가도 무난함.
-                                                            어떤 프로젝트에 들어가도 평타 침. 주말 근무 요청은 절대 하지 말 것.
-                                                            평일 근무 요청은
+                                                            고객사 평가도 무난함전반적으로 무난함. 
+                                                            고객사 평가도 무난함
+                                                            고객사 평가도 무난함전반적으로 무난함. 
+                                                            고객사 평가도 무난함
+                                                            고객사 평가도 무난함전반적으로 무난함. 
+                                                            고객사 평가도 무난함전반적으로 무난함. 
+                                                            고객사 평가도 무난함전반적으로 무난함. 
+                                                            고객사 평가도 무난함전반적으로 무난함. 
                                                         </li>
-                                                        <li>
-                                                            <textarea name="" id="" rows="3"></textarea>
-                                                            <div class="btnWrap center">
-                                                                <button class="smSize white">취소</button>
-                                                                <button class="smSize">저장</button>
-                                                            </div>
+                                                        <!--230103 추가 -ys-->
+                                                        <li class="txtRight">
+                                                            <button class="fold txtType">[더보기]</button>
                                                         </li>
+                                                        <!--//230103 추가 -ys-->
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1706,11 +2000,25 @@
                                                             </div>
                                                         </li>
                                                         <li class="memMemo editType">
-                                                            전반적으로 무난함. 고객사 평가도 무난함.
+                                                            고객사 평가도 무난함전반적으로 무난함. 
+                                                            고객사 평가도 무난함
+                                                            고객사 평가도 무난함전반적으로 무난함. 
+                                                            고객사 평가도 무난함
+                                                            고객사 평가도 무난함전반적으로 무난함. 
+                                                            
+                                                            고객사 평가도 무난함전반적으로 무난함. 
                                                         </li>
+                                                        <!--230103 추가 -ys-->
+                                                        <li class="txtRight">
+                                                            <button class="fold txtType">[더보기]</button>
+                                                        </li>
+                                                        <!--//230103 추가 -ys-->
                                                     </ul>
                                                 </div>
                                             </div>
+                                        </li>
+                                        <li class="yScroll is-active">
+                                            등록된 메모가 없습니다.
                                         </li>
                                     </ul>
                                 </div>
@@ -2140,7 +2448,7 @@
     </div>
     <!--//문자보내기 팝업-->
 
-    <!--221007 컴펌팝업-->
+    <!--221007 컨펌팝업-->
     <div id="delMessage" class="modalLayer center">
         <div class="layerBox confirmType">
             <div class="modalCont center">메모를 삭제하시겠습니까?</div>
@@ -2151,7 +2459,7 @@
         </div>        
         <div class="layerDim"></div>    
     </div>
-    <!--//221007 컴펌팝업-->
+    <!--//221007 컨펌팝업-->
 
 
 
@@ -2278,7 +2586,7 @@
     <!--//221110 학력 팝업-->
     
     <!--221110 거주지 팝업-->
-    <div id="memArea" class="modalLayer center is-active">
+    <div id="memArea" class="modalLayer center">
         <div class="layerBox filterType laSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -2289,120 +2597,93 @@
                 <div class="filterList mt50">
                     <div class="listBox flex">
                         <div class="prefix">
-                            <ul class="chkWrap boxListType">
-                                <li>
+                            <div class="chkWrap boxListType">
                                     <input type="checkbox" id="aSeoul">
                                     <label for="aSeoul">서울 <span class="eHigh">(3개 선택)</span></label>
-                                </li>
-                                <li>
+
                                     <input type="checkbox" id="aGyeonggi">
                                     <label for="aGyeonggi">경기</label>
-                                </li>
-                                <li>
+
                                     <input type="checkbox" id="aIncheon">
-                                    <label for="chk_2">인천</label>
-                                </li>
-                                <li>
+                                    <label for="aIncheon">인천</label>
+
                                     <input type="checkbox" id="aDaejeon">
                                     <label for="aDaejeon">대전</label>  
-                                </li>
-                                <li>
+                                    
                                     <input type="checkbox" id="aDaegu">
                                     <label for="aDaegu">대구</label>   
-                                </li>
-                                <li>
+                                      
                                     <input type="checkbox" id="aBusan">
                                     <label for="aBusan">부산</label>
-                                </li>
-                                <li>
+                                        
                                     <input type="checkbox" id="aUlsan">
                                     <label for="aUlsan">울산</label>
-                                </li>
-                                <li>
+                                        
                                     <input type="checkbox" id="aJeju">
                                     <label for="aJeju">제주</label>   
-                                </li>
-                                <li>
+                                     
                                     <input type="checkbox" id="aJeju">
-                                    <label for="aJeju">제주</label>   
-                                </li>
-                            </ul>
+                                    <label for="aJeju">제주</label>  
+                                       
+                            </div>
                         </div>
                         <div class="suffix">    
-                            <ul class="chkWrap boxListType listType">
-                                <li>
+                            <div class="chkWrap boxListType listType">
                                     <input type="checkbox" id="seoulAll" class="chkAll">
                                     <label for="seoulAll">서울전지역</label>
-                                </li>
-                                <li>
+                                    
                                     <input type="checkbox" id="seoul_a" class="chkEach" checked="">
                                     <label for="seoul_a">강남구</label>
-                                </li>
-                                <li>
+                                    
                                     <input type="checkbox" id="seoul_b" class="chkEach">
                                     <label for="seoul_b">강동구</label>
-                                </li>
-                                <li>
+                                    
                                     <input type="checkbox" id="seoul_c" class="chkEach">
                                     <label for="seoul_c">강북구</label>  
-                                </li>
-                                <li>
+                                    
                                     <input type="checkbox" id="seoul_d" class="chkEach">
                                     <label for="seoul_d">강서구</label>  
-                                </li>
-                                <li>
+                                    
                                     <input type="checkbox" id="seoul_e" class="chkEach">
-                                    <label for="seoul_e">관악구</label>   
-                                </li>
-                                <li>
+                                    <label for="seoul_e">관악구</label> 
+                                    
                                     <input type="checkbox" id="seoul_f" class="chkEach">
                                     <label for="seoul_f">광진구</label>  
-                                </li>
-                                <li>
+                                    
                                     <input type="checkbox" id="seoul_g" class="chkEach">
                                     <label for="seoul_g">강남구</label>
-                                </li>
-                                <li>
+                                    
                                     <input type="checkbox" id="seoul_h" class="chkEach">
                                     <label for="seoul_h">강동구</label>
-                                </li>
-                                <li>
+                                    
                                     <input type="checkbox" id="seoul_i" class="chkEach">
                                     <label for="seoul_i">강북구</label>  
-                                </li>
-                                <li>
+                                    
                                     <input type="checkbox" id="seoul_j" class="chkEach">
-                                    <label for="seoul_j">강서구</label>     
-                                </li>
-                                <li>
+                                    <label for="seoul_j">강서구</label> 
+                                    
                                     <input type="checkbox" id="seoul_k" class="chkEach">
-                                    <label for="seoul_k">관악구</label>   
-                                </li>
-                                <li>
+                                    <label for="seoul_k">관악구</label> 
+                                    
                                     <input type="checkbox" id="seoul_l" class="chkEach">
-                                    <label for="seoul_l">광진구</label>  
-                                </li>
-                                <li>
+                                    <label for="seoul_l">광진구</label> 
+                                    
                                     <input type="checkbox" id="seoul_m" class="chkEach">
-                                    <label for="seoul_m">강북구</label>  
-                                </li>
-                                <li>
+                                    <label for="seoul_m">강북구</label>
+                                    
                                     <input type="checkbox" id="seoul_n" class="chkEach">
-                                    <label for="seoul_n">강서구</label>   
-                                </li>
-                                <li>
+                                    <label for="seoul_n">강서구</label>  
+                                    
                                     <input type="checkbox" id="seoul_o" class="chkEach">
-                                    <label for="seoul_o">관악구</label>   
-                                </li>
-                                <li>
+                                    <label for="seoul_o">관악구</label> 
+                                     
                                     <input type="checkbox" id="seoul_p" class="chkEach">
-                                    <label for="seoul_p">광진구</label>  
-                                </li>
-                                <li>
+                                    <label for="seoul_p">광진구</label> 
+                                    
                                     <input type="checkbox" id="seoul_p" class="chkEach">
                                     <label for="seoul_p"></label>  
-                                </li>
-                            </ul>           
+                                    
+                            </div>           
                         </div>
                     </div>
                 </div>
@@ -2424,11 +2705,14 @@
         showMore();
         makeScroll();
         openFilter();
-        chkAll();
+        chkAll(); 
         showMemo();
         // trToggle();
         autoTextarea();
         makeMemo();
+
+        boxChk();
+        memoFold();
     </script>
 </body>
 </html>

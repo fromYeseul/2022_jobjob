@@ -43,7 +43,7 @@ table{
             td{
                 border-bottom: 0;
             }
-        }
+        }     
         &.is-active{
             background: $bgColor;
         }
@@ -77,11 +77,14 @@ table{
             color: $tableGray;
             // padding: rem(14) 0;
             padding: rem(8) 0;
+            height: rem(53);
             &.nodata{
                 display: table-cell;
+                height: rem(220);
                 font-weight: 500;
                 // background: transparent;
-                background: $bgColor;
+                //background: $bgColor;
+                background: transparent;
             }
             &.left{
                 text-align: left;
@@ -96,7 +99,7 @@ table{
                     top: 50%;
                     left: 100%;
                     transform: translateY(-50%);
-                    min-width: rem(230);
+                    min-width: rem(235);
                 }
             }
         }
@@ -105,6 +108,11 @@ table{
         tr{
             &:hover{
                 background: $bgColor;
+            }       
+            &:has(.nodata){
+                &:hover{
+                    background:transparent;
+                }
             }
         }
     }
@@ -119,12 +127,16 @@ table{
         text-align: left;
         tr{
             border:0;
+            &:hover{
+                background: transparent;
+            }
             th{
                 color: $black;
                 background: transparent;
             }
             td{
                 padding: 0;
+                height: auto;
             }
         }
     }
@@ -278,7 +290,8 @@ table{
         height: rem(40);
         border-radius: rem(12);
         vertical-align: middle;
-        margin-right: rem(10);
+        // margin-right: rem(10);
+        margin-right: rem(2);
     }
     // button, 
     // .button{

@@ -167,6 +167,22 @@ input[type=radio]{
          }
         }
     }
+    &.need{
+        input[type=radio]{
+            + label{
+                border:0;
+                box-shadow: 0px 0px 3px $error;
+            } 
+        }
+        &:focus{
+            input[type=radio]{
+                + label{
+                    border: 1px solid $mainColor;
+                    box-shadow: 0px 0px 3px $mainColor;
+                }
+            }
+        }
+    }
 }
 
 /* 리스트타입 */
@@ -228,10 +244,20 @@ input[type=radio]{
             &::before{
                 display: none;
             }
-            &:nth-child(2){
+            // &:nth-child(2){
+            //     border-radius: rem(4) 0 0 rem(4);
+            // } 
+            // &:last-child{
+            //     border-radius: 0 rem(4) rem(4) 0;
+            // }
+        }
+        &:first-child{
+            + label{
                 border-radius: rem(4) 0 0 rem(4);
-            } 
-            &:last-child{
+            }
+        }
+        &:last-child{
+            + label{
                 border-radius: 0 rem(4) rem(4) 0;
             }
         }

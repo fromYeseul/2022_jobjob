@@ -77,6 +77,18 @@
     -webkit-box-orient: vertical;
 }
 
+@mixin ellipsis-4 {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: inherit;
+    word-wrap:break-word;
+    -webkit-line-clamp: 4;
+    text-align: left;
+    -webkit-box-orient: vertical;
+    cursor: initial;
+}
+
 @mixin ellipsis-5 {
     display: -webkit-box;
     overflow: hidden;

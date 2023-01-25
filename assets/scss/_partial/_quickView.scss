@@ -95,6 +95,18 @@
         }
         li{            
             margin-top: rem(20);
+            &:first-child{
+                margin-top: 0;
+            }
+            &.yScroll{
+                display: none;
+                align-items: center;
+                justify-content: center;
+                height: calc(100vh - 330px);
+                &.is-active{
+                    display: flex;
+                }
+            }
         }
     }
     .boxList{
@@ -118,8 +130,16 @@
                 margin-bottom: rem(4);
                 font-weight: 700;
                 text-decoration: underline;
+                @include ellipsis;
                 // padding: rem(2) rem(4);
                 // background: $bgColor;
+            }
+        }
+        .txtRight{
+            margin-top: 0;
+            display: none;
+            &.is-active{
+                display: block;
             }
         }
         .btnWrap{

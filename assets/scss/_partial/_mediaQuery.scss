@@ -1,0 +1,101 @@
+  
+@media (min-width : 2200px){
+    //마이프로젝트에서 우측패널 오픈시 
+    //프로젝트 정보 사라지지 않음
+    .contWrapper{
+        .contLayout{
+            &.is-active{
+                .myProjDetail{
+                    width: rem(630);
+                }
+            } 
+        }
+    } 
+}
+
+@media (max-width: 1919px) {
+    .contWrapper{
+        .contLayout{
+            .projReqList,
+            .genMember,
+            .projProgList{
+                height: calc(100vh - 70px);
+            }
+        }
+    }
+    .contLayout{
+        //min-height: calc(100vh - 80px) !important;
+        //min-height: calc(100vh - 70px) !important;
+        height: calc(100vh - 70px) !important;
+    }    
+    .myProjList{
+        .boxListWrap{    
+            height: calc(100vh - 174px);
+        }
+    }
+    .myPeoList{
+        .yScroll{
+            height: calc(100vh - 243px);    
+        }
+    }
+    .myProjDetail{
+        .boxWrap{
+            &.sticky{
+                .yScroll{
+                    height: calc(100vh - 540px);
+                }
+            }
+        }
+    } 
+    .memList{
+        .boxListWrap{
+            height: calc(100vh - 173px);
+        }
+    } 
+    .quickView{
+        .boxListWrap{
+            &.is-active{
+                height: calc(100vh - 190px);
+            }
+        }
+        &.fixedHeight{
+            .boxListWrap{
+                &.is-active{
+                    height: calc(100vh - 125px);
+                }
+            }
+        }
+    }
+    .rPanelLayer{
+        .rPanelBox{
+            height: calc(100vh - 70px);
+        }
+    }
+    .filterWrapper{
+        height: calc(100% - 9px);
+    }
+    // .myProjJob{
+    //     .wrap{
+    //         bottom: rem(10);
+    //     }
+    // }    
+}
+
+@media (max-width: 1200px) {
+    header{
+        min-width: rem(960);
+        .prefix,
+        .center,
+        .suffix{
+            flex: initial;
+            &.title{
+                flex: initial;
+                max-width: rem(250);
+            }
+        }
+        .center{
+            margin-left: 0;
+        }
+    }
+}
+

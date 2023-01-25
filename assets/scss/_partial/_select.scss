@@ -118,14 +118,7 @@
   }
   &.lowSize{
     width: rem(100);
-    //220829
-    // line-height: rem(40);
-    //line-height: rem(36);
-    //220829
     .selDefault{
-      //220829
-      // line-height: rem(38);
-      //220829
       line-height: rem(34);
     }
     .optionList {
@@ -153,6 +146,17 @@
   }
   &.wideSize{
     width: rem(180);
+  }  
+  &.upper{
+    .optionList{
+      top:auto;
+      bottom: rem(50);
+    }
+    &.smSize{
+      .optionList{
+        bottom: rem(32);
+      }
+    }
   }
   //체크박스를 가진 select
   label{
@@ -163,6 +167,9 @@
   }
   & + .select{
     margin-left: rem(10);
+  }
+  &.need{
+    border: 1px solid $error; 
   }
   &.is-active{
     border: 1px solid $mainColor;
@@ -180,10 +187,14 @@
   &.disable{
     color: $inputGray;
     pointer-events: none;
+    //background: $inputGray;
     .selDefault{
       &::before{
         background: url(../img/icoSelect_dis.png) no-repeat;
       }
     }
+  }
+  &:focus{
+    border: 1px solid $mainColor;
   }
 }

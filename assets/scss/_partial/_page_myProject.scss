@@ -116,4 +116,21 @@
     .nodata{
         height: 100%;
     }
+    table{
+        tr{
+            &.nodata{
+                display: table-row;
+                background: transparent;
+                td{
+                    height: rem(340);   
+                }
+            }
+        }
+        //요청 추가 -ys
+        // textarea{
+        //     &::placeholder{
+        //         color: $inputGray;
+        //     }
+        // }
+    }
 }

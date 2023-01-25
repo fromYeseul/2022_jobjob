@@ -47,21 +47,26 @@
             .prefix{
                 color: $subInfo;
                 font-size: rem(14);
-                span{
-                    &:nth-child(2){
-                        margin-left: rem(10);
-                        position: relative;
-                        &::before{
-                            content:'';
-                            width: 1px;
-                            height: rem(14);
-                            background: $subInfo;
-                            position: absolute;
-                            top:50%;
-                            left: -6px;
-                            transform: translateY(-40%);
-                        }
+                @include ellipsis;
+                span{                    
+                    margin-left: rem(10);
+                    position: relative;
+                    &::before{
+                        content:'';
+                        width: 1px;
+                        height: rem(14);
+                        background: $subInfo;
+                        position: absolute;
+                        top:50%;
+                        left: -6px;
+                        transform: translateY(-40%);
                     }
+                    &:first-child{
+                        margin-left: 0;
+                        &::before{
+                            display: none;
+                        }
+                    }                    
                 }
             }          
         }
@@ -111,6 +116,7 @@
 .tableTypeBox{
     display: flex;
     width: 100%;
+    position: relative;
     &.center{
         align-items: center;
     }
@@ -118,6 +124,11 @@
         & + .boxList{
             margin-left: rem(8);
             width: calc(100% - 26px);
+        }
+    }
+    .button{
+        &.round{
+            padding:0 rem(3);
         }
     }
 }
@@ -298,6 +309,8 @@
                 color: $titleGray;
                 .prefix{
                     width:auto;
+                    @include ellipsis;
+                    width: 70%;
                     span{
                         margin-right: rem(24);
                     }
@@ -327,6 +340,7 @@
     &.headType{
         // margin-top: rem(20);
         border:1px solid $layoutColor;
+        position: relative;
         &:first-child{
             margin-top: rem(10);
         }
@@ -390,23 +404,28 @@
                 .memCareer{
                     color: $highlight;
                 }
+                .memGrd{
+                    color: $highlight;
+                }
                 .memMemo{
                     margin-top: rem(10);
                     padding: rem(5) rem(8);
-                    padding-left: rem(21);
                     background: $bgColor;
                     color: $subInfo;
                     @include ellipsis;
                     b{
                         color: $black;
                     }
-                    &:before {
-                        content:"...";
-                        position: absolute;
-                        left: rem(20);
-                        z-index: 1;
-                        letter-spacing: 1px;
-                        line-height: rem(12);
+                    &.is-active{
+                        padding-left: rem(21);
+                        &:before {
+                            content:"...";
+                            position: absolute;
+                            left: rem(20);
+                            z-index: 1;
+                            letter-spacing: 1px;
+                            line-height: rem(12);
+                        }
                     }
                     &.editType{
                         padding:0;
@@ -415,6 +434,9 @@
                         width: 100%;
                         &:before{
                             display: none;
+                        }                        
+                        &.is-active{
+                            -webkit-line-clamp: initial;
                         }
                     }
                 }
@@ -494,6 +516,11 @@
             //     border:1px solid $mainColor;
             //     border-top:0;
             // }
+        }        
+        .alertToast{
+            top: -10px;
+            left: 48%;
+            transform: translateX(-50%);
         }
     }
     &.tableType{

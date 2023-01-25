@@ -19,8 +19,10 @@
         position: relative;
         overflow-y: auto;
         width: rem(570);
-        max-height: 80%;
-        padding: rem(40);
+        // max-height: 80%;
+        max-height: 95%;
+        // padding: rem(40);
+        padding: rem(30);
         top:50%;
         left: 50%;
         transform: translate(-50%,-50%);
@@ -31,6 +33,10 @@
         &.smSize{
             width: rem(380);
             padding: rem(45);
+            .modalHeader{
+                margin-top: -16px;
+                margin-right: -16px;
+            }
         }
         &.confirmType{
             width: rem(330);
@@ -41,6 +47,10 @@
             // width:fit-content;
             width: rem(270);
             padding: rem(30);
+            .modalHeader{
+                margin-top: -8px;
+                margin-right: -12px;
+            }
             .modalCont{
                 margin-top: 0;
             }
@@ -48,19 +58,34 @@
                 width: rem(560);
             }
         }
-        &.fullSize{
+        &.laSize{
             width: auto;
-            max-width: rem(1800);
+            max-width: rem(1450);
             overflow-x: auto;
-            padding: rem(40) rem(60);
+            padding: rem(40) rem(38);
             max-height: calc(100% - 100px);
             .modalFooter{
-                width: 25%;
+                width: rem(240);
+                margin: rem(20) auto;
+                margin-bottom: 0;
+            }
+            .flex_2_1{
+                width: 100%;
+                min-width: rem(1350);
+            }
+        }
+        &.fullSize{
+            width: auto;
+            max-width: rem(1880);
+            overflow-x: auto;
+            padding: rem(40) rem(38);
+            max-height: calc(100% - 100px);
+            .modalFooter{
+                width: rem(240);
                 margin: rem(40) auto;
             }
             .flex_1_2{
-                // width: 100%;
-                width: rem(1668);
+                width: rem(1790);
                 //투입상세정보 팝업 (table 확장)
                 &.is-active{
                     // width: 120%;
@@ -69,7 +94,7 @@
             }
             .flex_2_1{
                 width: 100%;
-                min-width: rem(1668);
+                min-width: rem(1790);
             }
         }
     }
@@ -96,13 +121,17 @@
     .layerClose{
         float: right;
     }
+    h3{
+        margin-bottom: rem(20);
+    }
 }
 .modalCont{
     margin-top: rem(10);
     &.center{
         text-align: center;
         .select{
-            margin:0 auto;
+            // margin:0 auto;
+            margin:rem(10) auto;
             text-align: left;
         }
     }
@@ -119,7 +148,16 @@
         margin-top: rem(30);
     }
     .flexBetween{
+        font-size: rem(14);
         color:$subInfo;
+        margin-top: rem(10);
+        label{
+            font-weight: 400;
+            // font-size: rem(14);
+            & + .hasTooltip{
+                margin-left: rem(3);
+            }
+        }
     }
     .suffix{
         margin-left: rem(12);
@@ -163,7 +201,8 @@
 .modalFooter{
     //width: 100%;
     //background: $white;
-    margin-top: rem(40);
+    // margin-top: rem(40);
+    margin-top: rem(30);
     @include flex_1_2;
     &.halfType{
         @include flex_1_1;
@@ -239,11 +278,28 @@
 }
 
 #showLevel{
-    .w65{
+    .tabCont{
+        overflow-y: auto;
+        height: 360px;
+    }
+    .empty{
         display: inline-block;
+        width: rem(40);
     }
     input{
         margin:0 2px;
         text-align: center;
+    }
+}
+
+#investDetail{
+    .flex{
+        .prefix{flex: 1 1 45%;}
+        .suffix{flex: 2 1 55%;}    
+    }
+    .ellipsis{
+        width: rem(100);
+        display: inline-block;
+        line-height: rem(49);
     }
 }

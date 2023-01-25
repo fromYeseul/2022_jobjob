@@ -304,10 +304,9 @@
                                             </div>   
                                         </div>
                                         <div class="boxListWrap">            
-                                            <ul>
-                                                
+                                            <ul>                                                
                                                 <!--221021 수정 -->
-                                                <li class="headTypeBox">                                                            
+                                                <li class="headTypeBox">                                            
                                                     <input type="checkbox" id="aa1" class="chkEach">
                                                     <label for="aa1"></label>
 
@@ -347,6 +346,14 @@
                                                                 <button class="button white smSize">목록삭제</button>  
                                                             </div>
                                                         </div>
+
+                                                        
+                                                        <!--230104 추가- ys -->
+                                                        <div class="alertToast is-active" id="toast01">
+                                                            중요 프로젝트로 설정되었습니다.
+                                                            <i class="ico smClose w"></i>
+                                                        </div>        
+                                                        <!--//230104 추가- ys -->        
                                                     </div>
                                                 </li>
                                                 <!--//221021 수정 -->
@@ -478,6 +485,15 @@
                         </div>
                     </div>
                 </section>
+                <!-- <section class="myPeoDetail">
+                    <div class="default">
+                        <div class="defaultBox">
+                            <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">                  
+                            <p class="notify">시스템 오류 및 개선 문의</p>
+                            <p>홍길동  abc@echoit.co.kr</p>
+                        </div>
+                    </div>
+                </section> -->
                 <section class="myPeoDetail">
                     <div class="notify">
                         <p>홍길동님은 2022.04.03에 프로젝트 투입입니다.</p>
@@ -513,7 +529,7 @@
                                             CJ프레시웨이 온리원 푸드넷 CJ프레시웨이 온리원 푸드넷CJ프레시웨이 온리원 푸드넷CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포
                                         </span>
                                         <span class="suffix dNear">임박</span>
-                                        </span>
+                                        
                                     </div>
 
                                     <div class="cont">
@@ -580,7 +596,7 @@
                                             CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포
                                         </span>
                                         <span class="suffix dNear">임박</span>
-                                        </span>
+                                        
                                     </div>
 
                                     <div class="cont">
@@ -633,14 +649,14 @@
                                 </li>
                                 <li>
                                     <input type="checkbox" class="chkCustom hasTxt" id="chk2" name="chkList">
-                                    <label for="chk2">출근정보 안내하기</label>
+                                    <label for="chk2"></label>
+                                    <span class="listTxt">출근정보 안내하기</span>
                                     <i class="ico delete"></i>
                                 </li>
                                 <li>
                                     <input type="checkbox" class="chkCustom hasTxt" id="chk3" name="chkList">
                                     <label for="chk3"></label>
-                                    <input type="text" class="laSize lowSize" maxlength="50" placeholder="내용 입력 후 엔터"
-                                     onkeyup="">
+                                    <input type="text" class="laSize lowSize" maxlength="50" placeholder="내용 입력 후 엔터" onkeyup="">
                                 </li>
                             </ul>
                             <button class="lowSize" id="addchkList">+ 항목 추가</button>

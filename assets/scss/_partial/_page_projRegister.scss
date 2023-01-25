@@ -13,16 +13,18 @@
         // height: calc(100vh - 220px);
         height: calc(100vh - 200px);
         overflow-y: auto;
+        scroll-behavior:smooth;
         //220829
 
         padding-left: rem(180);
         padding-right: rem(280);
+        transition: all 0.3s;
     }
     .regiPart{
-        //220829
-        // padding-top: rem(70);
         padding-top: rem(50);
-        //220829
+        &:last-child{
+            padding-bottom: rem(30);
+        }
         .boxWrap{
             margin-top: rem(20);
             padding: rem(40);
@@ -67,8 +69,12 @@
             .btnType{
                 display: inline-block;
             }
+            .uploadBox{
+                display: flex;
+                align-items: end;
+            }
             .inputGroup{
-                width: rem(440);
+                width: rem(400);
                 //220829
                 // height: rem(50);
                 // padding: rem(10) rem(16);
@@ -87,9 +93,10 @@
                 }
             }
             .alertToast{
-                top: -170px;
-                left: 48%;
-                transform: translateX(-50%);
+                // top: -160px;
+                // left: 42%;
+                //transform: translateX(-50%);
+                transform: translateY(50%);
             }
         }
         .hasTooltip{

@@ -21,6 +21,7 @@ $gnbGreen : #89c895;
 $black : #29292c;
 $gray : #828286;
 $subGray : #8f8f8f;
+$lightGray : #fbfbfb;
 $white : #fff;
 $beige : #e4e3dc;
 $beigeTit : #7e7b63;
@@ -155,8 +156,8 @@ $footerGray : $titleGray;
 }
 .flex_1_2{
     display: flex;
-    .prefix{flex: 1 1 35%;}
-    .suffix{flex: 2 1 65%;}    
+    >.prefix{flex: 1 1 35%;}
+    >.suffix{flex: 2 1 65%;}    
 }
 .flex_2_3{
     display: flex;
@@ -184,6 +185,16 @@ $footerGray : $titleGray;
 }
 .float_r{
     float: right;
+}
+
+.ellipsis{
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space:nowrap;
+    text-align: left;
+    cursor:pointer;
 }
 .ellipsis-5 {
     display: -webkit-box;

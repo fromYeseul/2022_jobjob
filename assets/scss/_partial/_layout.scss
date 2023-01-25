@@ -27,12 +27,9 @@
     min-width: rem(1920);
     //min-width: rem(1600);
     width: 100%;
-    //220829
-    // padding-left: rem(60);
-    // padding-right: rem(60);
     padding-left: rem(52);
     padding-right: rem(52);
-    //220829
+    transition: all .3s;
     .contLayout{
         display: flex;
         //220829
@@ -55,7 +52,8 @@
             // width: rem(350);
             width: rem(320);
             //220829
-            background: $bgColor;
+            // background: $bgColor;
+            background: $white;
             border-right: 1px solid $layoutColor;
             position: relative;
             transition: all .3s;
@@ -70,6 +68,7 @@
         }
         .myProjDetail{
             // width: calc(100% - 680px);
+            transition: all .3s;
             width: calc(100% - 320px);
             padding: rem(15);    
             overflow-y: auto;
@@ -242,10 +241,7 @@
     &.is-hover,
     &.is-active{
         .gnbWrapper{
-            //220829
-            //width: rem(205);
             width: rem(180);
-            //220829
             background-image: linear-gradient(to bottom, $highlight, $gnbGreen);
             .navCtrlBtn{
                 width: calc(100% - 24px);
@@ -260,7 +256,7 @@
                 .ctrlBtn{
                     width: rem(14);
                     height: rem(22);
-                    background-position: 0px -60px !important;
+                    background-position: 0px -30px !important;
                 }
             } 
         }
@@ -298,6 +294,12 @@
                             transform: rotate(135deg);
                         }
                     }   
+                    &.noDepth{
+                        &::before,
+                        &::after{
+                            display: none;
+                        }
+                    }
                 }
             }
             li{
@@ -313,6 +315,13 @@
         }
     }
     &.is-active{   
+        .gnbWrapper{
+            .navCtrlBtn{
+                .ctrlBtn{
+                    background-position: 0px -60px !important;
+                }
+            } 
+        }
         .contWrapper{
             width: calc(100% - 205px);
             //220829
@@ -321,20 +330,44 @@
             //220829
             //left: 205px;
             .myProjList{
-                width: rem(300);
+                width: rem(280);
             }
             .myProjDetail{
-                width: calc(100% - 640px);
+                width: calc(100% - 600px);
                 .wrap{
-                    width: calc(100% - 670px);
+                    // width: calc(100% - 670px);
+                    width: calc(100% - 400px);
                     > div{
-                        padding-right: 0;
+                        //padding-right: 0;
+                        padding-right: rem(232);
                     }
+                }
+            }
+            .projRegister{
+                .regiPartWrapper{
+                    padding-right: rem(153);
                 }
             }
             .quickView{
                 &.fixedHeight{
-                    width: rem(340);
+                    width: rem(325);
+                    //width: 0;
+                }
+            }
+            footer{
+                &.is-active{
+                    width: calc(100% + 180px);
+                    left: -180px;
+                }
+            }
+            &.noSide{
+                padding-left: 0;
+            }
+            .contLayout{
+                &.is-active{
+                    .myProjList{
+                        width: rem(37);
+                    }
                 }
             }
         }   
@@ -368,23 +401,3 @@
 
 
 
-@media (max-width: 1919px) {
-    .contLayout{
-        //min-height: calc(100vh - 80px) !important;
-        min-height: calc(100vh - 70px) !important;
-    }    
-}
-  
-@media (min-width : 2200px){
-    //마이프로젝트에서 우측패널 오픈시 
-    //프로젝트 정보 사라지지 않음
-    .contWrapper{
-        .contLayout{
-            &.is-active{
-                .myProjDetail{
-                    width: rem(630);
-                }
-            } 
-        }
-    } 
-}

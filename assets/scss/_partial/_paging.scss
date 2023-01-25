@@ -23,12 +23,14 @@
 }
 
 .pagination-div{
-    margin-top: rem(25);
+    // margin-top: rem(25); 230102 삭제-ys
     ul{
         text-align: center;
         li{
             display: inline-block;
             padding: 0 rem(6);
+            vertical-align: middle;
+            cursor: pointer;
             a{
                 color : $disable;
                 font-size: rem(14);
@@ -39,6 +41,9 @@
                     color: $black;
                     font-weight: 700;
                 }
+            }
+            &.disabled{
+                cursor:default;
             }
             &.first,
             &.last{

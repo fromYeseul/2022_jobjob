@@ -7,11 +7,13 @@
             display: block;
         }
     }
-    .need{
-        position: relative;
-        &::after{
-            content:'*';
-            margin-left: rem(4);
+    label{
+        &.need{
+            position: relative;
+            &::after{
+                content:'*';
+                margin-left: rem(4);
+            }
         }
     }
     input{
@@ -72,6 +74,11 @@ input[type=date]{
         color: $placeholder;
         font-size: rem(14);
     }
+    &:disabled{
+        color: $inputGray;
+        //pointer-events: none;
+        background: transparent;
+    }
     &:focus{        
         outline: 1px solid $mainColor;
     }
@@ -100,6 +107,12 @@ input[type=date]{
     }
     &.midSize{
         width: rem(100);
+    }
+    &.mid-laSize{
+        width: rem(140);
+        &.low{
+            height: rem(36);
+        }
     }
     &.laSize{
         width: rem(360);
@@ -247,6 +260,7 @@ input[type=file] {
 
 //칩타입, 파일업로드
 .inputGroup {
+    min-height: rem(46);
     padding: rem(8) rem(10);
     margin-top: rem(4);
     border-radius: rem(5);
@@ -261,9 +275,9 @@ input[type=file] {
     input{
         margin-top: 0;
     }
-
-
-
+    &.need{
+        border: 1px solid $error;
+    }
 
     .optionList {
         display: none !important;
@@ -313,7 +327,8 @@ input[type=file] {
     //파일업로드
     &.upload{
         display: inline-block;
-        width: calc(100% - 132px);line-height: rem(28);
+        width: calc(100% - 132px);
+        line-height: rem(26);
         vertical-align: bottom;
         .drop{
             color: $placeholder;
@@ -339,7 +354,7 @@ input[type=file] {
         vertical-align: text-bottom;
         @include ellipsis;
         cursor: initial;
-        width: 70%;
+        width: 65%;
     }
     & + label{
         min-width: rem(90);
@@ -352,9 +367,10 @@ input[type=file] {
         text-align: center;
         border-radius: rem(6);
         background-color: $mainColor;
+        cursor: pointer;
     }
     span{
-        font-size: rem(14);
+        font-size: rem(13);
     }
 }
 
@@ -367,10 +383,11 @@ input[type=file] {
 /* 칩타입 */
 .inputObj{
     display: inline-block;
-    padding: rem(2) rem(10);
+    // padding: rem(2) rem(10);
+    padding: rem(1) rem(6);
     color: $white;
     line-height: rem(22);
-    vertical-align: top;
+    // vertical-align: top;
     margin: rem(2);
     background: $placeholder;
     border-radius: rem(5);
@@ -380,9 +397,17 @@ input[type=file] {
         padding: rem(2);
     }
     input[type=text]{
+        width: rem(150);
         height: rem(23);
         padding: 0 rem(4);
         border:0;
+    }
+    .ico{
+        margin-left: rem(3);
+    }
+    span{
+        font-size: rem(13);
+        line-height: rem(22);
     }
 }
 
