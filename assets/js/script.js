@@ -170,20 +170,22 @@ function tabMenu(){
                 // let tab = this.closest('.tabWrapper');
                 let tab_id = this.closest('.tabWrapper').id;
                 let tabHref = e.target.getAttribute('href');
-                let tabTarget = tabHref.replace('#','');
-                
-                for(let i=0; i < tabBtn.length; i++){
-                    if (tabBtn[i].closest('.tabWrapper').id === tab_id){
+                if(tabHref != null ){
+                    let tabTarget = tabHref.replace('#','');
+                    
+                    for(let i=0; i < tabBtn.length; i++){
+                        if (tabBtn[i].closest('.tabWrapper').id === tab_id){
 
-                        tabBtn[i].classList.remove('is-active');
-                        e.target.classList.add('is-active');
+                            tabBtn[i].classList.remove('is-active');
+                            e.target.classList.add('is-active');
+                        }
                     }
-                }
 
-                for(let j=0; j < tabCont.length; j++){
-                    if (tabCont[j].closest('.tabWrapper').id === tab_id){                             
-                        tabCont[j].classList.remove('is-active');
-                        document.getElementById(tabTarget).classList.add('is-active');                        
+                    for(let j=0; j < tabCont.length; j++){
+                        if (tabCont[j].closest('.tabWrapper').id === tab_id){                             
+                            tabCont[j].classList.remove('is-active');
+                            document.getElementById(tabTarget).classList.add('is-active');                        
+                        }
                     }
                 }
             });
@@ -290,96 +292,6 @@ function addText(grd_grp_cd){
 }
 // addText();
 
-
-//등급보기 다음 input focus
-// function inputFocus(){
-//     var formCtr = document.querySelectorAll('#showLevel tr input:not(input[type=hidden])');
-
-//     for(let i=0; i<formCtr.length; i++){
-//         //input 이벤트, 숫자외 입력x
-//         formCtr[i].addEventListener('input', function(e){
-//             this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
-//         });
-
-//         //마우스이벤트
-//         formCtr[i].addEventListener('keydown', function(e){
-//             var keyCode = e.keyCode;
-//             //var len = formCtr[i + 1].value.length; 
-
-//             if(!(48 < keyCode && keyCode < 57) || !(96 < keyCode && keyCode < 105)){
-//                 this.value=this.value.replace(/[^0-9]/g,'');
-//             }            
-
-//             //숫자외 입력x
-//             // if(!(48 < keyCode && keyCode < 57) || !(96 < keyCode && keyCode < 105)){
-//             //     formCtr[i].value=formCtr[i].value.replace(/[^0-9]/g,'');
-//             // }
-
-
-//             if(keyCode == 13){
-//                 formCtr[i+1].focus();      
-//                 chkInput();
-//             }else if(keyCode == 9){
-//                 chkInput();
-//             }
-//         })
-
-//         //클릭이벤트
-//         formCtr[i].addEventListener('focusout', e => {
-//             chkInput();
-//         })
-        
-//         function chkInput(){
-
-//             var thisTr = formCtr[i].parentNode.parentNode;
-//             var thisTd = formCtr[i].parentNode;
-//             var standardPay = formCtr[i].className;
-//             var tdIndex = thisTd.cellIndex;
-//             var thisSpan = thisTd.getElementsByTagName('span')[0];
-
-//             var nextTr = thisTr.nextElementSibling;
-//             var nextTd = nextTr.children[tdIndex];
-//             var nextSpan = nextTd.getElementsByTagName('span')[0];
-            
-//             var inputVal = Number(formCtr[i].value);
-
-//             if(standardPay == 'xsSize'){     
-//                 //input 2개일때
-//                 if(thisTd.getElementsByTagName('input').length  == 2){                    
-//                     if(formCtr[i] == thisTd.getElementsByTagName('input')[0]){
-//                         // return;
-//                         // if(inputVal > Number(formCtr[i+1].value)){ 
-//                         //     formCtr[i+1].value = inputVal + 1;
-//                         //     //nextSpan.innerText = Number(formCtr[i+1].value) + 10;
-//                         // }
-//                         // from일 때 로직 추가
-//                         if(Number(formCtr[i].value) > Number(formCtr[i+1].value)){ 
-//                             formCtr[i+1].value = formCtr[i].value;
-//                             nextSpan.innerText = Number(formCtr[i+1].value) + 1;
-//                         }
-
-//                     }else if(formCtr[i] == thisTd.getElementsByTagName('input')[1]){
-//                         if(inputVal < Number(formCtr[i-1].value)){ 
-//                             formCtr[i].value = formCtr[i-1].value;
-//                         }
-//                     }  
-//                 //span 1개, input 1개일때
-//                 }else if(thisSpan != null && formCtr[i].value < thisSpan.innerText){
-//                     formCtr[i].value = thisSpan.innerText;                    
-//                 }
-
-//                 //input이 0일때, 999일때
-//                 if(inputVal === 0 || inputVal === null){
-//                     nextSpan.innerText = null
-//                 }else if(inputVal === 999){
-//                     nextSpan.innerText = 999;
-//                 }else if(inputVal !== 0){
-//                     nextSpan.innerText = inputVal + 1;
-//                 }
-//             }         
-//         }
-//     }
-// }
 
 //등급보기 다음 input focus
 function inputFocus(){
@@ -491,7 +403,7 @@ function selectBox(){
     
     selDefault.forEach(function(lb){
         
-            if (lb.classList.contains('is-active')) return;
+            //if (lb.classList.contains('is-active')) return;
 
             let optionList = lb.nextElementSibling;
             let optionItems = optionList.querySelectorAll('.optionItem');
@@ -506,7 +418,7 @@ function selectBox(){
 
             lb.addEventListener('click', e => {        
                 optionList = lb.nextElementSibling;
-                optionItems = optionList.querySelectorAll('.optionItem');
+                optionItems = optionList.querySelectorAll(':scope > .optionItem');
                 clickLabel(lb, optionItems); 
                 
                 /* 220906 수정(외부클릭시 닫힘) -ys */
@@ -567,7 +479,31 @@ function selectBox(){
 }
 //selectBox();
 
-
+//제이쿼리 selectbox	 
+function selectJQ(){	
+	$(document).on("click", ".select", function(e) {
+	
+	    $('.select').not($(this)).removeClass('is-active');
+	    $(this).toggleClass('is-active');
+	
+	    //옵션선택시
+	    $('.optionItem').on('click', function(){
+	        if($(this).closest('.optionList').hasClass('hasChk')){
+	            $(this).closest('.optionList').prev().text($(this).text());
+	        }else{                    
+	            $(this).closest('.select').removeClass('is-active');
+	            $(this).closest('.optionList').prev().text($(this).text());
+	        }
+	    });
+	    
+	    //외부영역 선택시 닫힘
+	    $(document).on("click", function(e){              
+	        if(!($(e.target).parents().is('.select'))){
+	            $('.select').removeClass('is-active');
+	        };
+	    });
+	});
+}   
 
 
 
@@ -680,7 +616,8 @@ function makeChkList(){
 		
 		lastLi = document.querySelector("#chkList").lastElementChild;
         
-        if(lastLi.lastElementChild.classList.contains('new')) return;	//여러개 한번에 추가 못하게
+        // if(lastLi.lastElementChild.classList.contains('new')) return;	//여러개 한번에 추가 못하게
+		$("#addchkList").attr("disabled", "true"); //여러개 한번에 추가 못하게
 		
 		if(lastLi != null) id = Number(lastLi.firstElementChild.getAttribute('id')) + 1;
 
@@ -851,14 +788,19 @@ function showMemo(){
 //호출 : makeMemo();
 function makeMemo(){
     let addMemo = document.querySelector('.addMemo');
-    let cancel = document.querySelector('.cancel');
+    let cancel = document.querySelector('.textForm .cancel');
     let textForm = document.querySelector('.textForm');
-    addMemo.addEventListener('click', function(){
-        textForm.classList.add('is-active');
-    })
-    cancel.addEventListener('click', function(){
-        textForm.classList.remove('is-active');
-    })
+    if(addMemo != null){
+		addMemo.addEventListener('click', function(){
+	        textForm.classList.add('is-active');
+	    })
+	}
+    if(cancel != null){
+		cancel.addEventListener('click', function(){
+	        textForm.classList.remove('is-active');
+	    })
+	}
+    
 }
 //makeMemo();
 
@@ -875,6 +817,7 @@ function showMemoList(){
 }
 // showMemoList();
 
+
 //퀵뷰 메모 더보기/접기
 function memoFold(){
     
@@ -883,12 +826,12 @@ function memoFold(){
     for(let i=0; i<memMemo.length; i++){
         console.log(memMemo[i].offsetHeight);
         if(memMemo[i].offsetHeight > 90){
-            let foldBtnLi = memMemo[i].nextElementSibling;
+            let foldBtnLi = memMemo[i].parentNode.querySelector('.txtRight');
             let foldBtn = foldBtnLi.firstElementChild;
 
             foldBtnLi.classList.add('is-active');
             foldBtn.addEventListener('click', function(){
-                let memMemo = this.parentNode.previousElementSibling;
+                let memMemo = this.parentNode.parentNode.querySelector('.memMemo.editType');
     
                 if(memMemo.classList.contains('is-active')){
                     this.innerText = '[더보기]';
@@ -909,9 +852,11 @@ function autoTextarea(){
     let autoHeight = document.querySelectorAll('textarea.autoHeight');
     if(autoHeight != undefined){        
         for(let i=0; i<autoHeight.length; i++){
-            autoHeight[i].onkeyup = function(){
+            autoHeight[i].onkeypress = function(){
+                console.log('aaa' + autoHeight[i].scrollHeight)
                 autoHeight[i].style.height = "1px";
                 autoHeight[i].style.height = (autoHeight[i].scrollHeight)+"px";
+                console.log('bbb' + autoHeight[i].scrollHeight)
             }
         }    
     }

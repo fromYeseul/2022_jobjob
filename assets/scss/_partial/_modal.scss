@@ -176,6 +176,21 @@
                 max-height: rem(110);
             }
         }
+        // .select{
+        //     .optionList{
+        //         overflow-y: initial;
+        //         .yScroll{
+        //             max-height: rem(110);
+        //             &::-webkit-scrollbar-track {
+        //               background-color: transparent;
+        //             }
+        //             &::-webkit-scrollbar-thumb {
+        //               background-clip: padding-box;
+        //               border: 2px solid transparent;
+        //             }
+        //         }
+        //     }
+        // }
     }
     .tabType{
         input[type=radio]{
@@ -240,7 +255,7 @@
     .list{
         color: $subInfo;
         li{
-            margin-left: rem(12);
+            // margin-left: rem(12);
             margin-top: rem(14);
             position: relative;
             &::before{
@@ -264,8 +279,10 @@
     padding: rem(5) rem(10);
     padding-right: rem(30);
     background: $tooltipGray;
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 20%);
     border-radius: rem(5);
     display: none;
+    z-index: 1;
     .ico{
         position: absolute;
         top: 50%;
@@ -302,4 +319,19 @@
         display: inline-block;
         line-height: rem(49);
     }
+    // table{
+    //     &.hasInput{
+    //         tr{
+    //             td{
+    //                 height: rem(40);
+    //                 //padding: rem(3);
+    //             }
+    //         }
+    //     }
+    // }
+    // .selDefault{
+    //     &.low{
+    //         line-height: rem(28);
+    //     }
+    // }
 }

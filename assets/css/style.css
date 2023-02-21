@@ -780,6 +780,7 @@ header .center {
   flex: 1 1 30%;
   margin-top: -10px;
   margin-left: 10.625rem;
+  text-align: center;
 }
 header .center a {
   padding: 0.3125rem 0.25rem;
@@ -1220,7 +1221,6 @@ footer.toast button + button {
   color: #878791;
 }
 .modalInfo .list li {
-  margin-left: 0.75rem;
   margin-top: 0.875rem;
   position: relative;
 }
@@ -1241,8 +1241,10 @@ footer.toast button + button {
   padding: 0.3125rem 0.625rem;
   padding-right: 1.875rem;
   background: #58585e;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   border-radius: 0.3125rem;
   display: none;
+  z-index: 1;
 }
 .alertToast .ico {
   position: absolute;
@@ -1356,11 +1358,7 @@ footer.toast button + button {
   padding-bottom: 0;
 }
 .quickView.fixedHeight .boxListWrap.is-active {
-  padding: 1.25rem;
-  height: calc(100vh - 115px);
-}
-.quickView.fixedHeight .boxListWrap .boxList .moreList {
-  right: -25px;
+  height: calc(100vh - 180px);
 }
 .quickView .tabBtnWrap {
   padding: 1.25rem 1.5625rem;
@@ -1440,7 +1438,7 @@ footer.toast button + button {
   display: block;
 }
 .quickView .boxList .btnWrap {
-  margin-top: 0.3125rem;
+  margin-top: 0.75rem;
 }
 
 .filterWrapper .filterTop {
@@ -1459,6 +1457,7 @@ footer.toast button + button {
 .filterList label {
   display: block !important;
   margin-top: 0.625rem;
+  font-weight: 400;
 }
 .filterList label:first-child {
   margin-top: 0;
@@ -1551,7 +1550,6 @@ table tr.is-active {
   background: #f2f2f7;
 }
 table tr.dragTr {
-  height: 3.875rem;
   cursor: move;
 }
 table tr.tableHead th {
@@ -1832,7 +1830,7 @@ table input {
 .pagination-div ul li a {
   color: #878791;
   font-size: 0.875rem;
-  vertical-align: text-top;
+  vertical-align: baseline;
 }
 .pagination-div ul li.active a {
   color: #29292c;
@@ -1892,17 +1890,16 @@ table input {
 }
 .bulletList li {
   position: relative;
-  padding-left: 0.625rem;
+  margin-left: 0.75rem;
 }
 .bulletList li::before {
   content: "";
-  width: 0.25rem;
-  height: 0.25rem;
-  border-radius: 50%;
-  background: #29292c;
+  width: 5px;
+  height: 1px;
+  background: #878791;
   position: absolute;
-  left: 0;
-  top: calc(50% - 2px);
+  top: 0.75rem;
+  left: -9px;
 }
 
 .tabWrapper.listType {
@@ -2502,6 +2499,7 @@ input[type=text].editType:focus,
 input[type=password].editType:focus,
 input[type=date].editType:focus {
   color: #29292c;
+  background: #fff;
 }
 input[type=text].editType::placeholder,
 input[type=password].editType::placeholder,
@@ -2834,6 +2832,10 @@ textarea.need {
   border: 1px solid #ff1236;
 }
 
+.counter span {
+  vertical-align: -1px;
+}
+
 .textForm {
   display: none;
   margin-top: 0.625rem;
@@ -3089,6 +3091,9 @@ input[type=radio].chkSwitch:disabled + label {
   border: 0;
   box-shadow: 0px 0px 3px #ff1236;
 }
+.btnType.need:focus {
+  outline: none;
+}
 .btnType.need:focus input[type=radio] + label {
   border: 1px solid #0460d2;
   box-shadow: 0px 0px 3px #0460d2;
@@ -3285,7 +3290,11 @@ input[type=radio]:checked + label::before {
   background: #fff;
   border-radius: 0.25rem;
   border: 1px solid #e6e6eb;
-  cursor: pointer;
+}
+.select.disabled {
+  color: #b7b7c4;
+  background: #fbfbfb;
+  pointer-events: none;
 }
 .select .selDefault {
   display: block;
@@ -3300,6 +3309,7 @@ input[type=radio]:checked + label::before {
   text-align: left;
   cursor: pointer;
   width: 100%;
+  cursor: pointer;
 }
 .select .selDefault::before {
   content: "";
@@ -3348,11 +3358,20 @@ input[type=radio]:checked + label::before {
   padding: 0.5rem 0.625rem;
   padding-right: 0.25rem;
   margin: 0;
+  cursor: pointer;
 }
 .select .optionList .optionItem:hover {
   color: #29292c;
   font-weight: 500;
   background: #e5effa;
+}
+.select .optionList .optionItem.disabled {
+  color: #b7b7c4;
+  background: #fbfbfb;
+  pointer-events: none;
+}
+.select .optionList .optionItem.disabled:hover {
+  background: transparent;
 }
 .select .optionList .optionItem label {
   display: block;
@@ -3499,6 +3518,9 @@ input[type=radio]:checked + label::before {
 }
 .hasTooltip .tooltip.left.is-active {
   display: block;
+}
+.hasTooltip .tooltip.left.line1 {
+  top: 5%;
 }
 .hasTooltip .tooltip.left.line2 {
   top: 33%;
@@ -3937,7 +3959,7 @@ input[type=radio]:checked + label::before {
 .boxList .moreList {
   position: absolute;
   top: 1.75rem;
-  right: -45px;
+  right: -25px;
   display: none;
   min-width: 4.5rem;
   border: 1px solid #b7b7c4;
@@ -3955,6 +3977,7 @@ input[type=radio]:checked + label::before {
   padding: 1rem 1.25rem;
   border-radius: 0;
   border-bottom: 1px solid #f2f2f7;
+  position: relative;
 }
 .boxList.listType .cont .prefix {
   width: 70%;
@@ -3974,6 +3997,10 @@ input[type=radio]:checked + label::before {
 }
 .boxList.listType.is-active {
   border: 1px solid #0460d2;
+}
+.boxList.listType .alertToast {
+  top: 2.5rem;
+  left: 15%;
 }
 .boxList.flexType {
   margin-top: 1.25rem;
@@ -4537,6 +4564,11 @@ h6 {
 .myProjDetail table tr.nodata td {
   height: 21.25rem;
 }
+.myProjDetail .wrapBottom .hasTooltip .ellipsis {
+  width: 100%;
+  padding: 0 0.25rem;
+  font-size: 0.75rem;
+}
 
 .myPeoList .tabCont {
   padding: 1.25rem;
@@ -4691,7 +4723,7 @@ h6 {
   padding: 1.875rem;
 }
 .memDetail .tableBox {
-  max-height: calc(100vh - 210px);
+  height: calc(100vh - 210px);
   margin-top: 1.875rem;
 }
 .memDetail .boxListWrap {
@@ -4793,13 +4825,24 @@ h6 {
 }
 .resume > .suffix .resuInfo .cont {
   margin-top: 0.9375rem;
+  line-height: 1.8;
 }
 .resume > .suffix .resuInfo .cont b {
   margin-right: 1.25rem;
 }
+.resume > .suffix .resuInfo .cont table td:nth-child(2) {
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
+  cursor: pointer;
+  display: block;
+  cursor: initial;
+}
 .resume > .suffix .resuInfo.flexBetween .prefix {
   flex: 2 1 0;
-  margin-right: 3.125rem;
 }
 .resume > .suffix .resuInfo.flexBetween .suffix {
   flex: 1 1 0;
@@ -4858,6 +4901,12 @@ h6 {
   }
   .filterWrapper {
     height: calc(100% - 9px);
+  }
+}
+@media (max-width: 1600px) {
+  header .center.title {
+    flex: initial;
+    max-width: 30rem;
   }
 }
 @media (max-width: 1200px) {

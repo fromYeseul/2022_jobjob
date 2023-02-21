@@ -30,7 +30,7 @@
     .tableBox{
         //220829
         // height: calc(100vh - 310px);
-        max-height: calc(100vh - 210px);
+        height: calc(100vh - 210px);
         //220829
         margin-top: rem(30);
     }
@@ -190,14 +190,25 @@
             }
             .cont{
                 margin-top: rem(15);
+                line-height: 1.8;
                 b{
                     margin-right: rem(20);
+                }
+                table{
+                    td{
+                        &:nth-child(2){
+                            @include ellipsis;
+                            display: block;
+                            cursor: initial;
+                        }
+                    }
                 }
             }
             &.flexBetween{
                 .prefix{
                     flex: 2 1 0;
-                    margin-right: rem(50);
+                    // 이력서 선호조건 보일때 추가하기
+                    //margin-right: rem(50);
                 }
                 .suffix{
                     flex: 1 1 0;
