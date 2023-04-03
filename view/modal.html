@@ -11,16 +11,17 @@
 
 <body>
     <!--레이어팝업-->
-    <a href="#layer01" class="layerOpen">팝업오픈 버튼(메일/문자보내기)</a>
+    <!-- <a href="#layer01" class="layerOpen">팝업오픈 버튼(메일/문자보내기)</a> -->
+    <button type="button" aria-controls="layer01" class="midSize layerOpen">팝업오픈 버튼(메일/문자보내기)</button>
 
-    <div id="layer01" class="modalLayer center is-active">
+    <div id="layer01" class="modalLayer center">
         <div class="layerBox">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
             </div>
             <div class="modalCont">
                 <div class="tabWrapper">
-                    <ul class="tabBtnWrap btnType wideType">
+                    <ul class="tabBtnWrap btnType wideSize">
                         <li class="tabBtn">
                             <a href="#offer_message" class="is-active">문자</a>
                         </li>
@@ -70,7 +71,7 @@
                                     </li>
                                     <li>
                                         <textarea name="" id="" rows="13"></textarea>
-                                        <p class="counter">글자 수 50자</p>
+                                        <p class="counter">글자 수 <span>50</span>자</p>
                                     </li>
                                 </ul>
                             </div>
@@ -117,7 +118,7 @@
                                         <textarea name="" id="" rows="13"></textarea>
                                         
                                         <!--220901 추가 -ys-->
-                                        <div class="flexBetween">
+                                        <div class="flexBw">
                                             <div class="prefix">
                                                 <input type="checkbox" id="talkAlarm" name="aa" class="hasTxt" checked="">
                                                 <label for="talkAlarm">카카오톡 알림도 함께 보내기</label>
@@ -136,7 +137,7 @@
                                                 </span>
                                             </div>
 
-                                            <p class="counter">글자 수 50자</p>
+                                            <p class="counter">글자 수 <span>50</span>자</p>
                                         </div>     
                                         <!--//220901 추가 -ys-->                                   
                                     </li>
@@ -147,8 +148,8 @@
                 </div>
             </div>
             <div class="modalFooter">
-                    <button class="fullSize white prefix">닫기</button>
-                    <button class="fullSize suffix">문자보내기</button>
+                    <button class="white prefix">닫기</button>
+                    <button class="suffix">문자보내기</button>
             </div>
         </div>        
         <div class="layerDim"></div>    
@@ -159,16 +160,17 @@
 
     
     <!--레이어팝업 - 컨펌-->
-    <a href="#layer02" class="layerOpen">컨펌팝업오픈(버튼 하나)</a>
+    <!-- <a href="#layer02" class="layerOpen">컨펌팝업오픈(버튼 하나)</a> -->
+    <button type="button" aria-controls="layer02" class="midSize layerOpen">컨펌팝업오픈(버튼 하나)</button>
 
-    <div id="layer02" class="modalLayer center">
+    <div id="layer02" class="modalLayer center is-active">
         <div class="layerBox confirmType">
-            <div class="modalHeader"><h3>안내사항</h3></div>
+            <div class="modalHeader"><h4>안내사항</h4></div>
             <div class="modalCont">
                 지원접수 및 투입이력은 회원개인 정보와 연동됩니다. 따라서 관리자 직접 추가 시 삭제가 불가합니다.
             </div>
             <div class="modalFooter">
-                <button class="fullSize layerClose">취소</button>
+                <button class="layerClose">취소</button>
             </div>
         </div>        
         <div class="layerDim"></div>    
@@ -180,14 +182,15 @@
 
 
     <!--레이어팝업 - 컨펌-->
-    <a href="#layer03" class="layerOpen">컨펌팝업오픈(버튼 둘)</a>
+    <!-- <a href="#layer03" class="layerOpen">컨펌팝업오픈(버튼 둘)</a> -->
+    <button type="button" aria-controls="layer03" class="midSize layerOpen">컨펌팝업오픈(버튼 둘)</button>
 
-    <div id="layer03" class="modalLayer center">
+    <div id="layer03" class="modalLayer center is-active">
         <div class="layerBox confirmType">
             <div class="modalCont center">메모를 삭제하시겠습니까?</div>
             <div class="modalFooter halfType">
-                <button class="fullSize white prefix layerClose">취소</button>
-                <button class="fullSize suffix layerClose">확인</button>
+                <button class="white layerClose">취소</button>
+                <button class="layerClose">확인</button>
             </div>
         </div>        
         <div class="layerDim"></div>    

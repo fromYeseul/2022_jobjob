@@ -26,7 +26,10 @@
                     <!--221013 수정 -ys-->
                     <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
                     <li><a href="#">내정보 수정</a></li>
-                    <li><a href="#showLevel" class="layerOpen">등급보기설정</a></li>
+                    <li>
+                        <!-- <a href="#showLevel" class="layerOpen">등급보기설정</a> -->
+                        <span aria-controls="showLevel" class="layerOpen">등급보기설정</a>
+                    </li>
                     <li><a href="#">로그아웃</a></li>
                     <!--//221013 수정 -ys-->
                 </ul>
@@ -82,8 +85,10 @@
                 <div class="default">
                     <div class="defaultBox">
                         <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">                  
-                        <p class="notify">시스템 오류 및 개선 문의</p>
-                        <p>홍길동  abc@echoit.co.kr</p>
+                        <div class="notify">
+                            <p>시스템 오류 및 개선 문의</p>
+                            <span>홍길동  abc@echoit.co.kr</span>
+                        </div>
                     </div>
                 </div>
                 <!--//기본화면-->
@@ -97,7 +102,7 @@
                     <button class="ico layerClose rClose"></button>
                 </div>
                 <div class="rPanelCont">
-                        <h4>회원검색</h4>
+                        <h2>회원검색</h2>
                         <div class="hasBtn">  
                             <a href="#" class="button white midSize filter">
                                 <i class="ico filter"></i>
@@ -118,7 +123,7 @@
                             <input type="checkbox" id="chkLevel" class="hasTxt">
                             <label for="chkLevel" class="mr0"> 등급으로 보기</label>
 
-                            <i class="ico setting"></i>
+                            <i class="ico setting layerOpen" aria-controls="showLevel"></i>
                         </div>
                     
                         <div class="boxListWrap">            
@@ -391,7 +396,7 @@
             </div>
             <div class="filterWrapper">
                 <div class="filterTop">
-                    <h4>필터</h4>
+                    <h2>필터</h2>
                     <a href="#" class="ico refresh"></a>
                 </div>                        
                 
@@ -496,7 +501,8 @@
 
                 <div class="tabWrapper" id="levelTable">
                     <div class="tableTop">                   
-                        <ul class="tabBtnWrap btnType borderType">                        
+                        <!-- <ul class="tabBtnWrap btnType borderType">                         -->
+                        <ul class="tabBtnWrap bdType">                        
                             <li class="tabBtn prefix">
                                 <a href="#noSamsung" class="is-active">
                                     [비삼성] WEB/SAP 
@@ -939,7 +945,7 @@
                     </div>
                 </div>       
 
-                <h6 class="mt50">참고사항</h6>
+                <h5 class="mt50">유의사항</h5>
                 <div class="bulletList">
                     <ul>
                         <li>선택된 보기 방식으로 모든 화면의 등급표시가 변경됩니다.</li>
@@ -951,8 +957,8 @@
             </div>
                 
             <div class="modalFooter">
-                <button class="fullSize white prefix">닫기</button>
-                <button class="fullSize suffix">저장</button>
+                <button class="white prefix">닫기</button>
+                <button class="suffix">저장</button>
             </div>
         </div>
         <div class="layerDim"></div>
@@ -979,9 +985,9 @@
                         </ul>
                     </div>                            
                     <div class="">
-                        <button class="white lowSize"><i class="ico smMinus"></i> 매출행 삭제</button>
+                        <button class="white mid-lowSize"><i class="ico smMinus"></i> 매출행 삭제</button>
                         <!-- <button class="white lowSize"><i class="ico smPlus"></i> 매출행 추가</button> -->
-                        <button class="white lowSize" id="addRowBtn"><i class="ico smPlus"></i> 매출행 추가</button>
+                        <button class="white mid-lowSize" id="addRowBtn"><i class="ico smPlus"></i> 매출행 추가</button>
                     </div>
                 </div>
                 <div class="xScroll"><!--221129 위치이동 -ys -->
@@ -1022,7 +1028,7 @@
                                             <th>병합</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="dragBox">                            
+                                    <tbody class="dragBox">     
                                         <tr draggable="true" class="dragTr">
                                             <td rowspan="2">
                                                 <input type="checkbox" id="iphone" name="mobile">
@@ -1042,42 +1048,29 @@
                                                 <div class="select xsSize">
                                                     <span class="selDefault low">선택</span>
                                                     <ul class="optionList">
-                                                        <li class="optionItem">개발(SAP)</li>
-                                                        <li class="optionItem">컨설팅(SAP)</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
                                                         <li class="optionItem">선택</li>
                                                     </ul>
                                                 </div>
                                             </td>
                                             <td rowspan="2">
                                                 <div class="select">
-                                                    <span class="selDefault low">JAVA 개발</span>
+                                                    <span class="selDefault low">선택</span>
                                                     <ul class="optionList">
-                                                        <li class="optionItem">.NET 개발</li>
-                                                        <li class="optionItem">Mobile 개발</li>
                                                         <li class="optionItem">선택</li>
-                                                        <li class="optionItem">.NET 개발</li>
-                                                        <li class="optionItem">Mobile 개발</li>
                                                         <li class="optionItem">선택</li>
-                                                        <li class="optionItem">.NET 개발</li>
-                                                        <li class="optionItem">Mobile 개발</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">.NET 개발</li>
-                                                        <li class="optionItem">Mobile 개발</li>
                                                         <li class="optionItem">선택</li>
                                                     </ul>
                                                 </div>
                                             </td>
-                                            <td rowspan="2">
-                                                <input type="date" class="editType">
-                                            </td>
-                                            <td rowspan="2">
-                                                <input type="date" class="editType">
-                                            </td>
+                                            <td rowspan="2">22.09.01</td>
+                                            <td rowspan="2">22.09.01</td>
                                             <td rowspan="2">
                                                 <input type="text" class="editType txtCenter" placeholder="0/0">
                                             </td>
                                             <td rowspan="2">
-                                                <input type="text" class="editType txtCenter" placeholder="100,100,000,000">
+                                                <input type="text" class="editType txtCenter" placeholder="100,000,000">
                                             </td>
                                             <td rowspan="2">
                                                 <input type="text" class="editType txtCenter" placeholder="100,100,000,000">
@@ -1086,62 +1079,8 @@
                                                 <!--221220 태그 수정 -ys-->
                                                 <button class="txtType">[해제]</button>
                                             </td>
-                                        </tr>                         
-                                        <tr draggable="true" class="dragTr"></tr>
-
-
-
-                                        <tr draggable="true" class="dragTr">
-                                            <td>
-                                                <input type="checkbox" id="iphone" name="mobile">
-                                                <label for="iphone"></label>
-                                            </td>
-                                            <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="select">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>22.09.01</td>
-                                            <td>22.09.01</td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="0/0">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="100,000,000">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="100,100,000,000">
-                                            </td>
-                                            <td>
-                                                <!--221220 태그 수정 -ys-->
-                                                <button class="txtType">[펼침]</button>
-                                            </td>
                                         </tr>                          
+                                        <tr draggable="true" class="dragTr"></tr>
                                         <tr draggable="true" class="dragTr">
                                             <td>
                                                 <input type="checkbox" id="iphone" name="mobile">
@@ -1198,7 +1137,300 @@
                                                 <input type="text" class="editType txtCenter" placeholder="1,000,000">
                                             </td>
                                             <td>-</td>
-                                        </tr>          
+                                        </tr>                         
+                                        <tr draggable="true" class="dragTr">
+                                            <td>
+                                                <input type="checkbox" id="iphone" name="mobile">
+                                                <label for="iphone"></label>
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>22.09.01</td>
+                                            <td>22.09.01</td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>-</td>
+                                        </tr>                         
+                                        <tr draggable="true" class="dragTr">
+                                            <td>
+                                                <input type="checkbox" id="iphone" name="mobile">
+                                                <label for="iphone"></label>
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>22.09.01</td>
+                                            <td>22.09.01</td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>-</td>
+                                        </tr>                         
+                                        <tr draggable="true" class="dragTr">
+                                            <td>
+                                                <input type="checkbox" id="iphone" name="mobile">
+                                                <label for="iphone"></label>
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>22.09.01</td>
+                                            <td>22.09.01</td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>-</td>
+                                        </tr>                         
+                                        <tr draggable="true" class="dragTr">
+                                            <td>
+                                                <input type="checkbox" id="iphone" name="mobile">
+                                                <label for="iphone"></label>
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>22.09.01</td>
+                                            <td>22.09.01</td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>-</td>
+                                        </tr>                         
+                                        
+                                        
+                                        <tr draggable="true" class="dragTr">
+                                            <td rowspan="2">
+                                                <input type="checkbox" id="iphone" name="mobile">
+                                                <label for="iphone"></label>
+                                            </td>
+                                            <td rowspan="2">
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2">
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">선택</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">개발(SAP)</li>
+                                                        <li class="optionItem">컨설팅(SAP)</li>
+                                                        <li class="optionItem">선택</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2">
+                                                <div class="select">
+                                                    <span class="selDefault low">fruits</span>
+                                                    <ul class="optionList">
+                                                        <div class="yScroll"><!--230201 추가-->
+                                                            <li class="optionItem">apple</li>
+                                                            <li class="optionItem">banana</li>
+                                                            <li class="optionItem">carrot</li>
+                                                            <li class="optionItem">mango</li>
+                                                            <li class="optionItem">grape</li>
+                                                        </div>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="date" class="editType">
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="date" class="editType">
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="text" class="editType txtCenter" placeholder="100,100,000,000">
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="text" class="editType txtCenter" placeholder="100,100,000,000">
+                                            </td>
+                                            <td rowspan="2">
+                                                <!--221220 태그 수정 -ys-->
+                                                <button class="txtType">[해제]</button>
+                                            </td>
+                                        </tr>                         
+                                        <tr draggable="true" class="dragTr"></tr>
+
+
+   
                                     </tbody>
                                     <tfoot>
                                         <tr>
@@ -1394,7 +1626,7 @@
                         </div>
                     </div>
                 </div>
-                <h6 class="mt50">유의사항</h6>
+                <h5 class="mt50">유의사항</h5>
                 <div class="bulletList">
                     <ul>
                         <li>매출/매입을 N:N으로 매칭하려면 마우스로 그리드를 클릭 후 Drag&Drop 하세요.</li>
@@ -1404,8 +1636,8 @@
                 </div>
             </div>
             <div class="modalFooter">
-                <button class="fullSize white prefix">닫기</button>
-                <button class="fullSize suffix">저장</button>
+                <button class="white prefix">닫기</button>
+                <button class="suffix">저장</button>
             </div>
 
         </div>
@@ -1422,7 +1654,8 @@
         dragDrop();
         showTable();
         chkAll();
-        selectBox();
+        //selectBox();
+        selectJQ();
         addText();
         inputFocus();   //221215 추가 -ys
     </script>

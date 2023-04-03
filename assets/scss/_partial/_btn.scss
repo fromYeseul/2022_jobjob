@@ -13,7 +13,10 @@
 
 button, 
 .button{
-    display: inline-block;
+    display: inline-block;  //다른태그에서 필요
+    width: 100%;
+    line-height: rem(46);
+    // height: rem(48);
     color: $white;
     font-weight: 700;
     text-align: center;
@@ -35,54 +38,61 @@ button,
         margin-left: rem(4);
     }
     //사이즈
-    &.fullSize{
-        width: 100%;
-        line-height: rem(46);
-        &.lowSize{
-            width: 100%;
-            line-height: rem(38);
-        }
+    // &.fullSize{
+    //     width: 100%;
+    //     line-height: rem(46);
+    //     &.lowSize{
+    //         width: 100%;
+    //         line-height: rem(38);
+    //     }
+    // }
+    &.auto{
+        width: auto;
     }
     &.lowSize{
-        width: rem(130);
-        line-height: rem(38);
+        // width: rem(130);
+        // line-height: rem(38);
+        line-height: rem(34);
     }
-    &.xsSize{
-        width: rem(45);
-        height: rem(35)
-    }
+    // &.xsSize{
+    //     width: rem(45);
+    //     height: rem(35)
+    // }
     &.smSize{
-        width: rem(74);
-        line-height: rem(30);
+        min-width: rem(70);
+        width: auto;
+        line-height: rem(28);
         // padding: 0 rem(12);
         padding: 0 rem(6);
         font-weight: 400;
     }
     &.midSize{
         min-width: rem(90);
-        line-height: rem(50);
+        width: auto;
+        //line-height: rem(50);
         padding: 0 rem(15);
-        &.low{
-            //220829
-            // line-height: rem(40);
-            line-height: rem(34);
-            //220829
-        }
+        // &.low{
+        //     line-height: rem(34);
+        // }
     }
     &.laSize{
-        //220829
-        // min-width: rem(130);
-        // line-height: rem(55);
         min-width: rem(120);
-        line-height: rem(48);
-        //220829
+        width: auto;
+        //line-height: rem(48);
         padding: 0 rem(20);
         font-size: rem(18);
     }
     &.xlSize{
-        width: rem(160);
+        min-width: rem(160);
+        width: auto;
         line-height: rem(54);
         font-size: rem(18);
+    }
+    &.mid-lowSize{
+        min-width: rem(90);
+        width: auto;
+        line-height: rem(34);
+        padding: 0 rem(15);
     }
     //디자인
     &.ico{
@@ -91,35 +101,31 @@ button,
     }
     &.white{
         //width: rem(98);
-        line-height: rem(34);
-        padding: 0 rem(15);
+        //line-height: rem(34);
+        //padding: 0 rem(15);
         color: $black;
         background-color: $white;
         border: 1px solid $inputGray;
-        &.lowSize{
-            //220829
-            // width: rem(130);
-            // line-height: rem(38);
-            min-width: rem(100);
-            line-height: rem(34);
-            //220829
-        }
-        &.smSize{
-            //width: rem(74);
-            // padding: 0 rem(12);
-            padding: 0 rem(4);
-            line-height: rem(30);
-            //border: 1px solid $gray;
-        }
-        &.laSize{
-            line-height: rem(55);
-        }
-        &.xlSize{
-            width: rem(160);
-            line-height: rem(54);
-            font-size: rem(18);
-            font-weight: 700;
-        }
+        // &.lowSize{
+        //     min-width: rem(100);
+        //     line-height: rem(34);
+        // }
+        // &.smSize{
+        //     //width: rem(74);
+        //     // padding: 0 rem(12);
+        //     padding: 0 rem(4);
+        //     line-height: rem(30);
+        //     //border: 1px solid $gray;
+        // }
+        // &.laSize{
+        //     line-height: rem(55);
+        // }
+        // &.xlSize{
+        //     width: rem(160);
+        //     line-height: rem(54);
+        //     font-size: rem(18);
+        //     font-weight: 700;
+        // }
         &:disabled,
         &.disabled{
             color: $cancel;
@@ -137,6 +143,7 @@ button,
         }
     }
     &.warning{
+        width: auto;
         background: $error;
         border: 1px solid $error;
     }
@@ -145,6 +152,7 @@ button,
         // height: rem(32);
         //min-width: rem(64);
         min-width: rem(44);
+        width: auto;
         padding: 0 rem(7);
         //line-height: rem(30);
         line-height: rem(24);
@@ -160,14 +168,21 @@ button,
             border: 1px solid $layoutColor;
         }
     }
-    &.onlyIco{
-        width: rem(40);
-        height: rem(40);
-        background-color: $white;
-        border: 1px solid $inputGray;
+    &.hasIco{
         @include heightArray;
     }
+    &.onlyIco{
+        // width: rem(40);
+        // height: rem(40);
+        width: rem(48);
+        //height: rem(48);
+        background-color: $white;
+        border: 1px solid $inputGray;
+        //@include heightArray;
+    }
     &.txtType{
+        width: auto;
+        line-height: initial;
         font-weight: 400;
         color: $subInfo;
         background: transparent;
@@ -176,11 +191,10 @@ button,
     //마이피플 더보기 삭제
     &.square{
         display: none;
-        //220829
-        // min-width: rem(84);
         min-width: rem(72);
-        //220829
-        padding: rem(3) 0;
+        width: auto;
+        //padding: rem(3) 0;
+        line-height: rem(26);
         color: $subInfo;
         font-weight: 400;
         background: $white;
@@ -231,10 +245,7 @@ span{
     min-width: rem(44);
     line-height: rem(22);
     color: $systemGray;
-    //220829
-    // font-size: rem(14);
     font-size: rem(12);
-    //220829
     font-weight: 400;
     text-align: center;
     padding: 0 rem(6);
@@ -246,14 +257,9 @@ span{
 }
 .point{
     display: inline-block;
-    //220829
-    // width: rem(44);
-    // line-height: rem(24);
-    // font-size: rem(14);
     min-width: rem(40);
     line-height: rem(22);
     font-size: rem(12);
-    //220829
     color: $white;
     text-align: center;
     background: $delay;

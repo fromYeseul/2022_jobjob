@@ -135,6 +135,7 @@ input[type=date]{
         color: $tableGray;
         &:focus{
             color: $black;
+            background: $white;
         }
         &::placeholder{
             color: $cancel;
@@ -225,6 +226,7 @@ input[type=password]{
 
 /* INPUT + 버튼 */
 .hasBtn{
+    display: flex;
     input{
         padding-left: rem(10);
         & + button{
@@ -333,7 +335,6 @@ input[type=file] {
         .drop{
             color: $placeholder;
             display: flex;
-            //220829
             font-size: rem(14);
             align-items: center;
         }

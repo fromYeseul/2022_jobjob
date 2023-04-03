@@ -1,33 +1,29 @@
 .tabWrapper{
     &.listType{
         display: flex;
-        >.tabBtnWrap{
+         >.tabBtnWrap{
             display: block;
             width: rem(250);
             min-height: 100vh;
             max-height: 100vh;
             overflow-y: auto;
-            padding: 0;
-            border-bottom: 0;
             box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
             h2{
                 padding: rem(20) rem(16);
                 border-bottom:1px solid $layoutColor;
             }
             .tabBtn{
-                font-size: rem(16);
-                text-align: left;
-                border-bottom:1px solid $layoutColor;
                 a{
-                    display: block;
-                    width: rem(250);
-                    padding: rem(15) rem(25);
+                    display: inline-block;
+                    width: 100%;
+                    padding: 5px 20px;
+                    border: 0;
+                    border-bottom: 1px solid $layoutColor;
+                    text-align: left;
                     &.is-active{
-                        border-bottom: 0;
+                        color: $black;
+                        background: $white;
                         border-left: 3px solid $mainColor;
-                    }
-                    &:after{
-                        display: none;
                     }
                 }
             }
@@ -44,146 +40,114 @@
 }
 
 
-.tabBtnWrap{
-    @include sideArray;
-    padding: 0 rem(50);
-    padding-top: rem(30);
-    border-bottom:1px solid $tabGray;    
-    li{
-        display: inline-block;
+.tabBtnWrap{  
+    display: flex;
+    .tabBtn{
         text-align: center;
+        line-height: rem(42);
+        margin-left: -1px;
+        &:first-child{
+            margin-left: 0;
+            a{
+                border-radius: rem(4) 0 0 rem(4);
+            }                
+        } 
+        &:last-child{                
+            a{
+                border-radius: 0 rem(4) rem(4) 0;
+            }                
+        }
         a{
             display: inline-block;
+            width: rem(96);
             color: $cancel; 
-            //220829
-            //font-weight: 700;
             font-weight: 500;
-            //220829
-            padding-bottom: rem(7);
-            &.is-active{
-                color: $black;
-                //220829
-                // border-bottom: 3px solid $black;
-                //border-bottom: 2px solid $black;
-                //220829
-                position: relative;
-                &::after{
-                    content:'';
-                    width: 100%;
-                    height: 2px;
-                    background: $black;
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                }
+            border: 1px solid $inputGray;
+            &.is-active{                    
+                color: $white;
+                background-color: $mainColor;
+                border: 1px solid $mainColor;
             }
         }
     }
-    &.wideType{
-        @include flex_1_1;
-        //220829
-        // padding: 0 rem(45);
-        // padding-top: rem(33);
-        padding: 0 rem(20);
-        padding-top: rem(23);
-        //220829
+    &.wideSize{
         a{
-            display: block;
+            width: rem(190);
         }
     }
-    &.btnType{        
-        display: block;
-        border: 0;
-        padding: 0;
-        //text-align: left;
-        li{
-            line-height: rem(42);
-            font-weight: 500;
-            margin-left: -4px;
-            &:first-child{
-                margin-left: 0;
-                a{
-                    border-radius: rem(4) 0 0 rem(4);
-                }                
-            } 
-            &:last-child{                
-                a{
-                    border-radius: 0 rem(4) rem(4) 0;
-                }                
-            }
+    &.underType{        
+        justify-content: space-between;
+        padding: 0 rem(20);
+        border-bottom:1px solid $tabGray; 
+        .tabBtn{
             a{
-                width: rem(96);
-                height: rem(44);
-                background-color: $white;
-                border: 1px solid $inputGray;
+                width: auto;
+                border: 0;
+                position: relative;
                 &.is-active{                    
-                    color: $white;
-                    background-color: $mainColor;
-                    border: 1px solid $mainColor;
-                }
-                &:after{
-                    display: none;
-                }
-            }
-        }
-        &.wideType{
-            a{
-                width: rem(194);
-                font-size: rem(18);
-            }
-        }
-        &.midType{
-            li{
-                line-height: rem(38);
-                a{
-                    width: rem(80);
-                    height: rem(40);
-                    border-radius: rem(4);
-                }
-                & + li{
-                    margin-left: rem(4);
-                }
-            }
-        }
-        &.smType{
-            padding: 0;
-            li{
-                line-height: rem(28);
-                font-weight: 500;
-                margin: 0;
-                a{
-                    width: rem(74);
-                    height: rem(30);
-                    font-size: rem(14);
-                    border-radius: rem(4);
-                }
-                & + li{
-                    margin-left: rem(4);
-                }
-            }
-        }
-        &.borderType{
-            li{
-                line-height: rem(48);
-                & + li{
-                    margin-left: rem(4);
-                }
-                a{
-                    width: auto;
-                    height: rem(48);
-                    padding: 0 rem(20);
+                    color: $black;
                     background-color: $white;
-                    border-radius: rem(4);
-                    &.is-active{                    
-                        color: $mainColor;
-                        border: 1px solid $mainColor;
+                    &:after{
+                        content: "";
+                        width: 100%;
+                        height: 2px;
+                        background: $black;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
                     }
                 }
             }
-        
+        }
+        &.midSize{
+            .tabBtn{
+                a{
+                    padding: 0 rem(10);
+                }
+            }
+        }
+        &.wideSize{   
+            .tabBtn{
+                flex: 1 1 30%;     
+                a{
+                    width: 100%;
+                }
+            }   
+        }
+    }
+    &.btnType{
+        .tabBtn{            
+            margin-right: rem(10);
+            a{
+                border-radius: rem(4);
+            }    
+        }
+        &.smSize{
+            li{
+                line-height: rem(30);
+                a{
+                    width: rem(74);
+                    font-size: rem(14);
+                }
+            }
+        }
+    }
+    &.bdType{
+        .tabBtn{
+            margin-right: rem(10);
+            a{
+                width: auto;
+                padding: 0 rem(10);
+                background-color: $white;
+                border-radius: rem(4);
+                &.is-active{                    
+                    color: $mainColor;
+                }
+            }
         }
     }
 }
+
 .tabContWrap{
     .tabCont{
         display: none;

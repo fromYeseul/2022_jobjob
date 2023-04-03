@@ -1,0 +1,23 @@
+
+//토스트
+.alertToast{
+    position: absolute;
+    color: $white;
+    text-align: left;
+    padding: rem(5) rem(10);
+    padding-right: rem(30);
+    background: $tooltipGray;
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 20%);
+    border-radius: rem(5);
+    display: none;
+    z-index: 1;
+    .ico{
+        position: absolute;
+        top: 50%;
+        right: rem(10);
+        transform: translateY(-5px);
+    }
+    &.is-active{
+        display: block;
+    }
+}

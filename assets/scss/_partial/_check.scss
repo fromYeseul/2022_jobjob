@@ -2,9 +2,11 @@
 input[type=checkbox],
 input[type=radio]{
     display: none;
+    cursor: pointer;
     position: relative;
     + label{
         display: inline-block;
+        cursor: pointer;
         position: relative;
         &::before{
             content:'';
@@ -40,8 +42,7 @@ input[type=radio]{
             height: rem(18);
             background-image: url(../img/icoGroup.png);
             background-position: 0px -40px;
-            vertical-align: sub;
-            cursor: pointer;
+            // vertical-align: sub;
             &::before{
                 display: none;
             }
@@ -102,7 +103,7 @@ input[type=radio]{
     }
 }
 
-/* 버튼타입 */
+/* 버튼타입 체크박스 */
 .btnType{
     input[type=checkbox],
     input[type=radio]{
@@ -148,24 +149,34 @@ input[type=radio]{
             }
         }
     }
-    &.type2{
+    // &.type2{
+    //     input[type=radio]{
+    //         &:checked{
+    //             + label{
+    //                 color: $mainColor;
+    //                 background: $white;
+    //                 border: 1px solid $mainColor;
+    //             }
+    //         }
+    //     }
+    // }
+    // &.lowSize{
+    //     input[type=radio]{
+    //      + label{
+    //         line-height: rem(40);
+    //         padding: 0 rem(16);
+    //      }
+    //     }
+    // }
+    &.smSize{
+        input[type=checkbox],
         input[type=radio]{
-            &:checked{
-                + label{
-                    color: $mainColor;
-                    background: $white;
-                    border: 1px solid $mainColor;
-                }
+            + label{
+                min-width: auto;
+                line-height: rem(24);
+                padding: 0 rem(5);
             }
-        }
-    }
-    &.lowSize{
-        input[type=radio]{
-         + label{
-            line-height: rem(40);
-            padding: 0 rem(16);
-         }
-        }
+        }        
     }
     &.need{
         input[type=radio]{
@@ -175,6 +186,7 @@ input[type=radio]{
             } 
         }
         &:focus{
+            outline: none;
             input[type=radio]{
                 + label{
                     border: 1px solid $mainColor;
@@ -185,7 +197,7 @@ input[type=radio]{
     }
 }
 
-/* 리스트타입 */
+/* 리스트타입 체크박스 */
 .boxListType{
     input[type=checkbox]{
         width: 0;
@@ -225,9 +237,10 @@ input[type=radio]{
     }  
 }
 
-/* 탭타입 라디오박스 */
+/* 탭타입 */
 .tabType{
     display: flex;
+    input[type=check],
     input[type=radio]{
         width: 0;
         opacity: 0;
@@ -256,7 +269,7 @@ input[type=radio]{
                 border-radius: rem(4) 0 0 rem(4);
             }
         }
-        &:last-child{
+        &:nth-last-child(2){
             + label{
                 border-radius: 0 rem(4) rem(4) 0;
             }
@@ -278,6 +291,16 @@ input[type=radio]{
                 min-width: rem(60);
                 line-height: rem(32);
                 margin-right: -2px;            
+            }        
+        }
+    }
+    &.autoSize{
+        input[type=checkbox],
+        input[type=radio]{
+            + label{
+                line-height: rem(35);
+                padding: 0 rem(6);
+                min-width: max-content;      
             }        
         }
     }

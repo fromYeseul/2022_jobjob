@@ -1,16 +1,9 @@
 .myProjList{
     .boxListWrap{    
-        //height: calc(100vh - 187px);
-    //220829
-        // height: calc(100vh - 177px);
         height: calc(100vh - 164px);
-        //220829
     }
     .boxList{
-        //220829
-        // height: rem(130);
         height: rem(115);
-        //220829
     }
     .nodata{
         font-size: rem(14);
@@ -30,11 +23,8 @@
         }
     }
     .boxWrap{
-        //220829
-        // padding: rem(20) rem(40) rem(30);   
         padding: rem(20) rem(25);   
         padding-bottom: rem(15);
-        //220829
         &.headType{
             padding: rem(20);
         }
@@ -43,7 +33,7 @@
         }
         &.suffix{
             margin-left: rem(10);
-            h3{
+            h4{
                 text-align: center;
             }
             .yScroll{                
@@ -56,6 +46,9 @@
             padding: 0;
             font-size: rem(16);
             position: relative;
+            .tabBtnWrap{
+                padding-top: rem(8);
+            }
             .tabContWrap{
                 padding: rem(20);
                 padding-top: 0;
@@ -72,19 +65,21 @@
                     overflow-y: visible;
                 }
             }
-            .listBottom{
-                padding-top: rem(10);
-                // border-top: 1px solid $layoutColor;
-            }
             .filterWrapper{
-                padding: rem(30) rem(25);
-                position: absolute;
                 left: auto;
                 right: -205px;
                 top: -1px;
-                z-index: 10;
-                border-radius: 0.4375rem;
-                box-shadow: 4px 4px 5px 0 rgb(0 0 0 / 10%);
+                font-size: rem(14);
+            }
+            th{
+                position: relative;
+                .filterWrapper{
+                    min-width: rem(130);
+                    top: rem(50);
+                    left: 50%;
+                    right: auto;
+                    transform: translateX(-50%);
+                }
             }
         }
         .boxType{              
@@ -96,7 +91,6 @@
         .yScroll{
             height: calc(100vh - 815px);
             margin-top: rem(16);
-            //220829
             .tit{
                 margin-top: rem(16);
                 &:first-child{
@@ -126,11 +120,23 @@
                 }
             }
         }
+        th{
+            position: relative;
+        }
         //요청 추가 -ys
         // textarea{
         //     &::placeholder{
         //         color: $inputGray;
         //     }
         // }
+    }
+    .wrapBottom{
+        .hasTooltip{
+            .ellipsis{
+                width: 100%;
+                padding: 0 rem(4);
+                font-size: rem(12);
+            }
+        }
     }
 }

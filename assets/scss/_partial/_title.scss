@@ -3,6 +3,11 @@ h1{
     font-size: rem(54);
     letter-spacing: -1.93px;
 }
+.h1_sub{
+    font-size: rem(14);
+    font-weight: 500;
+    color: $titleGray;
+}
 
 //페이지 타이틀
 .pageTit{
@@ -11,10 +16,7 @@ h1{
     padding: rem(20) rem(30);
     &::after{
         content:'';
-        //220829
-        // width: calc(100% + 80px);
         width: calc(100% + 40px);
-        //220829
         height: 1px;
         background: $titleGray;
         position: absolute;
@@ -22,10 +24,7 @@ h1{
         bottom: 0;
     }
     .breadCrumb{
-        //220829
-        // font-size: rem(24);
         font-size: rem(20);
-        //220829
         font-weight: 700;
         li{
             margin-left: rem(55);
@@ -58,26 +57,38 @@ h1{
         }
     }
 }
+
+//페이지 타이틀
+//모달 타이틀
 h2{    
-    //220829
-    // font-size: rem(32);
     font-size: rem(28);
-    //220829
     letter-spacing: -1.14px;
     button{
         margin-left: rem(20);
-        //220829
         vertical-align: 2px;
-        //220829
     }
 }
 
-//페이지 영역타이틀
+//영역타이틀
 h3{
-    //220829
-    // font-size: rem(20);
+    font-size: rem(20);
+    letter-spacing: -0.86px;
+    + h3{
+        margin-left: rem(27);
+    }
+    + .h3_sub{
+        margin-top: rem(12);
+    }
+}
+
+.h3_sub{
+    color: $subInfo;
+}
+
+//페이지 영역타이틀
+//컨펌 모달 타이틀
+h4{
     font-size: rem(18);
-    //220829
     letter-spacing: -0.71px;
     .dNear{
         margin-right: rem(10);
@@ -87,36 +98,34 @@ h3{
 }
 
 //모달 타이틀
-h4{
-    text-align: center;
-    font-size: rem(28);
-    letter-spacing: -1px;
-    margin-bottom: rem(26);
-}
+// h4{
+//     text-align: center;
+//     font-size: rem(28);
+//     letter-spacing: -1px;
+//     margin-bottom: rem(26);
+// }
 
 //회원상세 타이틀
+// h5{
+//     font-size: rem(20);
+//     letter-spacing: -0.86px;
+//     + h5{
+//         margin-left: rem(27);
+//     }
+//     + .h5_sub{
+//         color: $subInfo;
+//         margin-top: rem(12);
+//         // + button{
+//         //     margin-top: rem(20);
+//         // }
+//     }
+// }
+
+//블록메뉴 타이틀
 h5{
-    //220829
-    // font-size: rem(24);
-    font-size: rem(20);
-    //220829
-    letter-spacing: -0.86px;
-    + h5{
-        margin-left: rem(27);
-    }
-    + .h5_sub{
-        color: $subInfo;
-        margin-top: rem(12);
-        + button{
-            margin-top: rem(20);
-        }
-    }
+    font-size: rem(16);
 }
 
-//플록메뉴 타이틀
 h6{
-    //220829
-    // font-size: rem(18);
-    font-size: rem(16);
-    //220829
+    font-size: rem(14);
 }

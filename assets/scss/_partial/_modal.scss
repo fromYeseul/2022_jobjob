@@ -1,3 +1,7 @@
+.layerOpen{
+    cursor: pointer;
+}
+
 .modalLayer{
     position: absolute;
     display: none;
@@ -19,34 +23,32 @@
         position: relative;
         overflow-y: auto;
         width: rem(570);
-        // max-height: 80%;
         max-height: 95%;
-        // padding: rem(40);
         padding: rem(30);
         top:50%;
         left: 50%;
         transform: translate(-50%,-50%);
         background: $white;
         border-radius: rem(4);
-        border:1px solid $layoutColor;
         z-index: 10;
-        &.smSize{
-            width: rem(380);
-            padding: rem(45);
-            .modalHeader{
-                margin-top: -16px;
-                margin-right: -16px;
-            }
-        }
         &.confirmType{
             width: rem(330);
             padding: rem(30) rem(45);
+            .modalFooter{
+                @include flex_1_1;
+                button{        
+                    flex: 1 1 0;
+                }
+            }
         }
         &.filterType{
-            // min-width: rem(200);
-            // width:fit-content;
             width: rem(270);
-            padding: rem(30);
+
+            top: 20px;
+            left: 0;
+            transform: inherit;
+            box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+
             .modalHeader{
                 margin-top: -8px;
                 margin-right: -12px;
@@ -56,6 +58,14 @@
             }
             &.laSize{
                 width: rem(560);
+            }
+        }
+        &.smSize{
+            width: rem(380);
+            padding: rem(45);
+            .modalHeader{
+                margin-top: -16px;
+                margin-right: -16px;
             }
         }
         &.laSize{
@@ -135,19 +145,23 @@
             text-align: left;
         }
     }
-    h5{
+    h2{
+        text-align: center;
+        margin-bottom: rem(26);
+    }
+    h3{
         text-align: center;
         & + .filterList{
             margin-top: rem(10);
         }
     }
     .tabBtnWrap{
-        text-align: center;
+        justify-content: center;
     }
     .inputList{
         margin-top: rem(30);
     }
-    .flexBetween{
+    .flexBw{
         font-size: rem(14);
         color:$subInfo;
         margin-top: rem(10);
@@ -176,6 +190,21 @@
                 max-height: rem(110);
             }
         }
+        // .select{
+        //     .optionList{
+        //         overflow-y: initial;
+        //         .yScroll{
+        //             max-height: rem(110);
+        //             &::-webkit-scrollbar-track {
+        //               background-color: transparent;
+        //             }
+        //             &::-webkit-scrollbar-thumb {
+        //               background-clip: padding-box;
+        //               border: 2px solid transparent;
+        //             }
+        //         }
+        //     }
+        // }
     }
     .tabType{
         input[type=radio]{
@@ -199,26 +228,33 @@
     }
 }
 .modalFooter{
-    //width: 100%;
-    //background: $white;
-    // margin-top: rem(40);
     margin-top: rem(30);
-    @include flex_1_2;
-    &.halfType{
-        @include flex_1_1;
-    }
-    &.pagingType{
-        padding: rem(40);
-        @include heightArray;
-    }
-    button{
+    @include flex_2_3;  //기본 2:3
+    // &.pagingType{
+    //     padding: rem(40);
+    //     //@include heightArray;
+    // }
+    button{        
+        flex: 2 1 0;
         + button{
-            &.fullSize{
-                margin-left: rem(10);
-                margin-top: 0;
-            }
+            flex: 3 1 0;
+            margin-left: rem(10);
         }
     }
+    // button{
+    //     + button{
+    //         margin-left: rem(10);
+    //     }
+    // }
+    // &.flex_2_3{
+    //     button{        
+    //         flex: 2 1 0;
+    //         + button{
+    //             flex: 3 1 0;
+    //             margin-left: rem(10);
+    //         }
+    //     }
+    // }
 }
 .modalInfo{
     font-size: rem(14);
@@ -240,7 +276,7 @@
     .list{
         color: $subInfo;
         li{
-            margin-left: rem(12);
+            // margin-left: rem(12);
             margin-top: rem(14);
             position: relative;
             &::before{
@@ -256,26 +292,7 @@
     }
 }
 
-//토스트팝업
-.alertToast{
-    position: absolute;
-    color: $white;
-    text-align: left;
-    padding: rem(5) rem(10);
-    padding-right: rem(30);
-    background: $tooltipGray;
-    border-radius: rem(5);
-    display: none;
-    .ico{
-        position: absolute;
-        top: 50%;
-        right: rem(10);
-        transform: translateY(-5px);
-    }
-    &.is-active{
-        display: block;
-    }
-}
+
 
 #showLevel{
     .tabCont{
@@ -302,4 +319,19 @@
         display: inline-block;
         line-height: rem(49);
     }
+    // table{
+    //     &.hasInput{
+    //         tr{
+    //             td{
+    //                 height: rem(40);
+    //                 //padding: rem(3);
+    //             }
+    //         }
+    //     }
+    // }
+    // .selDefault{
+    //     &.low{
+    //         line-height: rem(28);
+    //     }
+    // }
 }

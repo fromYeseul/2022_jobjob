@@ -2,14 +2,9 @@
     width: rem(280);
     //border-right: 1px solid $layoutColor;
     .boxListWrap{    
-        //220829
-        // height: calc(100vh - 177px);
         height: calc(100vh - 163px);
-        //220829
     }
     .boxList{
-        //220829
-        // height: rem(125);
         height: rem(110);
         .head{
             font-weight: 700;
@@ -18,26 +13,17 @@
 }
 
 .memDetail{
-    //220829
     width: calc(100% - 280px);
-    // width: rem(1080);
-    //220829
-    // padding: rem(30);
     padding: rem(30);
 
     // height: calc(100vh - 90px);
     // overflow-y: auto;
     .tableBox{
-        //220829
-        // height: calc(100vh - 310px);
-        max-height: calc(100vh - 210px);
-        //220829
+        height: calc(100vh - 210px);
         margin-top: rem(30);
     }
     .boxListWrap{    
-        //220829
         max-height: calc(100vh - 240px);
-        //220829
         margin-top: rem(10);
     }
     .tabBtnWrap{
@@ -50,9 +36,6 @@
         }
     }
     .tabCont{
-        //220829
-        // height: calc(100vh - 150px);
-        // height: calc(100vh - 180px);
         // @include scroll_0;
         .resumeWrapper, .tableBox, .boxTop, .boxListWrap{
             // padding: 0 rem(30);
@@ -79,11 +62,7 @@
 }
 
 .resumeWrapper{
-    //220829
-    // width: rem(1210);
-    //width: rem(960);
     font-size: rem(14);
-    //220829
     height: calc(100vh - 180px);
     .resuTop{
         text-align: right;
@@ -95,10 +74,6 @@
 }
 .resume{
     display: flex;
-    //220829
-    // width: rem(1210);
-    //width: rem(960);
-    //220829
     margin-top: rem(8);
     //height: rem(756);
     ul{
@@ -110,25 +85,12 @@
         }
     }
     >.prefix{
-        //220829
-        // width: rem(350);
-        // padding: rem(70) rem(40);
         width: rem(330);
         padding: rem(40) rem(50);
-        //220829
         background: $beige;
         // height: calc(100vh - 250px);
         // @include scroll_0;
         .profile{
-            //220829
-            // width: rem(210);
-            // height: rem(210);
-            //margin-bottom: rem(48);
-            // width: rem(160);
-            // height: rem(160);
-            // margin:0 auto;
-            // margin-bottom: rem(30);
-            //220829
             text-align: center;
             margin-bottom: rem(30);
             img{
@@ -148,7 +110,7 @@
                 }
             }
         }
-        h5{
+        h3{
             span{
                 margin-left: rem(6);
                 font-size: rem(16);
@@ -167,37 +129,41 @@
         }
     }
     >.suffix{
-        //220829
-        // padding: rem(70);
         padding: rem(40) rem(50);
-        //220829
-        // width: rem(690);
         width: calc(100% - 330px);
         background: $white;
         // height: calc(100vh - 250px);
         // @include scroll_0;
         .resuInfo{
-            //220829
-            // width: rem(330);
-            //220829
             + .resuInfo{
                 margin-top: rem(40);
             }
-            h5{
+            h3{
                 padding-bottom: rem(14);
                 color: $beigeTit;
                 border-bottom: 1px solid $titleGray;
             }
             .cont{
                 margin-top: rem(15);
+                line-height: 1.8;
                 b{
                     margin-right: rem(20);
                 }
+                table{
+                    td{
+                        &:nth-child(2){
+                            @include ellipsis;
+                            display: block;
+                            cursor: initial;
+                        }
+                    }
+                }
             }
-            &.flexBetween{
+            &.flexBw{
                 .prefix{
                     flex: 2 1 0;
-                    margin-right: rem(50);
+                    // 이력서 선호조건 보일때 추가하기
+                    //margin-right: rem(50);
                 }
                 .suffix{
                     flex: 1 1 0;

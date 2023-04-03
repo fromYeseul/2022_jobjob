@@ -76,7 +76,7 @@
                     
                     <div class="regiPartWrapper">         
                         <div class="regiPart" id="regi0">
-                            <h5>1. 프로젝트 기본정보</h5>
+                            <h3>1. 프로젝트 기본정보</h3>
                             <div class="boxWrap">
                                 <div class="inputList column half">   
                                     <ul class="hasTooltip">
@@ -153,13 +153,13 @@
                             </div>
                         </div>  
                         <div class="regiPart" id="regi1">
-                            <h5>2. 모집인원</h5>
-                            <div class="h5_sub">
+                            <h3>2. 모집인원</h3>
+                            <div class="h3_sub">
                                 모집하는 인력의 업무 포지션과 경력, 인건비를 입력해주세요.<br>그리고 각 직무에 해당하는 업무 내용과 주요 필수 요건이 있다면 입력해 주세요.
                             </div>
                             <!--221222 추가 -ys-->
                             <div class="flex mt20">
-                                <button class="midSize low">계약 및 투입 상세정보</button>
+                                <button class="midSize">계약 및 투입 상세정보</button>
                                 <button class="onlyIco"><i class="ico pull"></i></button>
                                 <button class="onlyIco"><i class="ico push"></i></button>
                             </div>
@@ -230,7 +230,7 @@
                                             <li>
                                                 <textarea class="wideSize" name="" id="" rows="" disabled>gggggggggggggg</textarea>
                                             </li>
-                                            <li class="flexBetween">
+                                            <li class="flexBw">
                                                 <button class="onlyIco">
                                                     <i class="ico refresh"></i>
                                                 </button>
@@ -247,10 +247,11 @@
 
                                         <!--220915 추가 -ys-->
                                         <div class="tooltip left is-active">
-                                            <p>단가</p>
-                                            고객사로부터 제공받는 인력별 월 단가를(매출금액) 입력해주세요. 
+                                            <p>직군</p>
+                                            모집하려는 업무 직군을 선택해주세요. 
                                             <br>
-                                            ※ 프리랜서에게 지급하는 급여는 공고등록화면에서 입력합니다.
+                                            (예) 개발, 기획, 디자인, 퍼블리싱
+
                                         </div>
                                         <!--//220915 추가 -ys-->
 
@@ -329,10 +330,10 @@
                             </div>
                         </div>      
                         <div class="regiPart" id="regi2">
-                            <h5>3. 근무환경</h5>
+                            <h3>3. 근무환경</h3>
                             <div class="boxWrap">
                                 <div class="inputList column row">  
-                                    <h3 class="mb20">근무 장소가 어디인가요?</h3> 
+                                    <h4 class="mb20">근무 장소가 어디인가요?</h4> 
                                     <ul class="hasTooltip">
                                         <li>
                                             <label class="need" for="">근무방식</label>
@@ -388,8 +389,8 @@
                                         </div>
                                         <!--//220915 추가 -ys-->
                                     </ul>
-                                    <h3 class="need mb20 mt30">근무 시간을 선택해 주세요</h3><!--220920 클래스 추가 -ys-->
-                                    <ul class="hasTooltip gap20">
+                                    <h4 class="need mb20 mt30">근무 시간을 선택해 주세요</h4><!--220920 클래스 추가 -ys-->
+                                    <ul class="gap20">
                                         <li>
                                             <div class="select">
                                                 <span class="selDefault">09시</span>
@@ -420,7 +421,7 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li class="lh50">~</li>
+                                        <li class="lh30">~</li>
                                         <li>
                                             <div class="select">
                                                 <span class="selDefault">18시</span>
@@ -447,25 +448,20 @@
                                         </li>
                                         <li>                                                                         
                                             <input type="checkbox" id="pay" name="pay" class="hasTxt">
-                                            <label for="pay" class="lh50">협의</label>
+                                            <label for="pay" class="lh30">협의</label>
                                         </li>
-                                        
-                                        <div class="tooltip left is-active">
-                                            <p>주소비공개</p>
-                                            모집공고에서 근무 장소가 비공개로 처리되며, 채용확정 후 공개됩니다.
-                                        </div>
                                     </ul>
                                 </div>
                             </div>
                         </div>        
                         <div class="regiPart" id="regi3">
-                            <h5>4. 추가정보</h5>
+                            <h3>4. 추가정보</h3>
                             <div class="boxWrap">
                                 <div class="inputList">   
-                                    <div class="h5_sub">
+                                    <div class="h3_sub">
                                         프로젝트와 관련된 자료를 첨부해 주세요.<br>첨부하신 자료는 외부로 공유되지 않으며 프로젝트 분석과 인력 매칭을 위해서만 사용됩니다.
                                     </div>
-                                    <ul class="hasTooltip">
+                                    <ul>
                                         <li class=""><!--230116 클래스 삭제 -ys -->
                                             <!--220824 수정 -ys -->
                                             <div class="uploadBox">
@@ -494,30 +490,25 @@
                                             <p class="error is-active">파일은 최대 100mb까지 첨부할 수 있습니다.</p>
                                             <!--//230116 수정 -ys -->
                                         </li>
-                                        
-                                        <div class="tooltip left is-active">
-                                            <p>주소비공개</p>
-                                            모집공고에서 근무 장소가 비공개로 처리되며, 채용확정 후 공개됩니다.
-                                        </div>
                                     </ul>
                                 </div>
                                 <div class="inputList column half"> 
                                     <ul class="hasTooltip">
                                         <li>
-                                            <h3>프로젝트 소개</h3>
+                                            <h4>프로젝트 소개</h4>
                                             <textarea class="xlSize" name="" id="" rows="10"></textarea>
                                         </li>
                                         <li>
-                                            <h3>기타 참고사항</h3>
+                                            <h4>기타 참고사항</h4>
                                             <textarea class="xlSize" name="" id="" rows="10"></textarea>
                                         </li>
                                         <li>
-                                            <h3>프로젝트를 잡잡 직원과 먼저 의논하셨나요?<br>또는 추천을 받으셨나요?</h3>
+                                            <h4>프로젝트를 잡잡 직원과 먼저 의논하셨나요?<br>또는 추천을 받으셨나요?</h4>
                                             <input class="xlSize" type="text" id="" maxlength="" placeholder="직원 이름 입력">
                                         </li>
                                         
                                         <!--220915 추가 -ys-->
-                                        <div class="tooltip left is-active">
+                                        <div class="tooltip left line1 is-active">
                                             <p>프로젝트 소개</p>
                                             담당자가 파악할 수 있도록 프로젝트를 설명해주세요.
                                         </div>
@@ -525,7 +516,7 @@
                                         
                                         <!--220915 추가 -ys-->
                                         <div class="tooltip left line4 is-active">
-                                            <p>프로젝트 이름</p>
+                                            <p>추천인 정보</p>
                                             잡잡 본사 직원과 먼저 이야기를 나누셨거나, 추천 직원이 있다면 입력해주세요. 
                                             <br>프로젝트 진행 시 해당 담당자가 우선 배정 됩니다.
                                         </div>
@@ -537,7 +528,7 @@
                     </div>     
 
                     <footer class="toast is-active">
-                        <h5>이 프로젝트의 진행 여부를 판단하세요.</h5>
+                        <h3>이 프로젝트의 진행 여부를 판단하세요.</h3>
                         <div class="suffix">
                             <button class="xlSize">공고등록</button>
                             <button class="white xlSize">공고수정</button>
@@ -555,7 +546,7 @@
     <!--플로팅메뉴-->
     <div class="floatingWrapper">
         <div class="floating">
-            <h6>이 프로젝트의 상태를</h6>
+            <h5>이 프로젝트의 상태를</h5>
             <div class="select lowSize"><!--220829 수정 -ys-->
                 <span class="selDefault">선택</span>
                 <ul class="optionList">
@@ -571,7 +562,7 @@
                     <li class="optionItem">종료</li>
                 </ul>
             </div>
-            <h6>영업담당자</h6>
+            <h5>영업담당자</h5>
             <div class="select lowSize"><!--220829 수정 -ys-->
                 <span class="selDefault">선택</span>
                 <ul class="optionList hasChk"><!--220920 추가 -ys-->
@@ -593,7 +584,7 @@
                     </li>
                 </ul>
             </div>
-            <h6>소싱담당자</h6>
+            <h5>소싱담당자</h5>
             <div class="select lowSize"><!--220829 수정 -ys-->
                 <span class="selDefault">선택</span>
                 <ul class="optionList hasChk"><!--220920 추가 -ys-->
@@ -618,7 +609,7 @@
             </div>
         </div>
         <div class="floating">
-            <h6>이 프로젝트를</h6>
+            <h5>이 프로젝트를</h5>
             <button class="white lowSize">삭제</button>
             <button class="white lowSize">임시저장</button>
             <!-- <button class="midSize" id="saveBtn">저장</button> -->

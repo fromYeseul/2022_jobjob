@@ -64,7 +64,7 @@
                             <li>
                                 <p class="condiTit">의뢰목록</p>
                                 <div class="tabType">
-                                    <input type="hidden" id="reqChargeCd" name="reqChargeCd" value="allReq">
+                                    <!-- <input type="hidden" id="reqChargeCd" name="reqChargeCd" value="allReq"> -->
                                     <input type="radio" id="allReq" name="reqCharge" value="allReq">
                                     <label for="allReq">모든 의뢰</label>
                                     <input type="radio" id="myReq" name="reqCharge" value="myReq" checked>
@@ -118,14 +118,14 @@
                         </div>
 
                         
-                        <button class="white">
+                        <button class="white mid-lowSize">
                             <i class="ico download"></i>
                             엑셀저장
                         </button>
                     </div>
                         
                     <div class="tableBox">    
-                        <table class="colType">
+                        <table class="hasInput">
                             <colgroup>
                                 <col width="56px;">
                                 <col width="66px;">
@@ -178,11 +178,17 @@
                                     <!--//221124 추가 -ys-->
                                     <td>김기쁨</td>
                                     <td><a href="#" class="button round order">접수</a></td>
-                                    <td><a href="#sales_admin" class="layerOpen">영업 담당 팝업</a></td>
-                                    <td><a href="#sourcing_admin" class="layerOpen">소싱 담당 팝업</a></td>
+                                    <td>
+                                        <!-- <a href="#sales_admin" class="layerOpen">영업 담당 팝업</a> -->
+                                        <span aria-controls="sales_admin" class="layerOpen">영업 담당 팝업</span>
+                                    </td>
+                                    <td>
+                                        <!-- <a href="#sourcing_admin" class="layerOpen">소싱 담당 팝업</a> -->
+                                        <span aria-controls="sourcing_admin" class="layerOpen">소싱 담당 팝업</span>
+                                    </td>
                                     <td>5명</td>
                                     <td class="ellipsis">
-                                        <span class="button label">SM</span>
+                                        <span class="label">SM</span>
                                         <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                     </td>
                                     <!--221012 추가 -ys-->
@@ -212,7 +218,7 @@
                                     <td><a href="#sourcing_admin" class="layerOpen">한아라</a></td>
                                     <td>5명</td>
                                     <td class="ellipsis">
-                                        <span class="button label">SM</span>
+                                        <span class="label">SM</span>
                                         <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                     </td>
                                     <td class="memo">상암사옥</td>
@@ -252,7 +258,7 @@
                                     <td><a href="#sourcing_admin" class="layerOpen">한아라</a></td>
                                     <td>5명</td>
                                     <td class="ellipsis">
-                                        <span class="button label">SM</span>
+                                        <span class="label">SM</span>
                                         <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                     </td>
                                     <td class="memo">상암사옥</td>
@@ -272,7 +278,7 @@
                                     <td><a href="#sourcing_admin" class="layerOpen">한아라</a></td>
                                     <td>5명</td>
                                     <td class="ellipsis">
-                                        <span class="button label">SM</span>
+                                        <span class="label">SM</span>
                                         <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                     </td>
                                     <td class="memo">상암사옥</td>
@@ -292,7 +298,7 @@
                                     <td><a href="#sourcing_admin" class="layerOpen">한아라</a></td>
                                     <td>5명</td>
                                     <td class="ellipsis">
-                                        <span class="button label">SM</span>
+                                        <span class="label">SM</span>
                                         <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                     </td>
                                     <td class="memo">상암사옥</td>
@@ -312,7 +318,7 @@
                                     <td><a href="#sourcing_admin" class="layerOpen">한아라</a></td>
                                     <td>5명</td>
                                     <td class="ellipsis">
-                                        <span class="button label">SM</span>
+                                        <span class="label">SM</span>
                                         <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                     </td>
                                     <td class="memo">상암사옥</td>
@@ -332,7 +338,7 @@
                                     <td><a href="#sourcing_admin" class="layerOpen">한아라</a></td>
                                     <td>5명</td>
                                     <td class="ellipsis">
-                                        <span class="button label">SM</span>
+                                        <span class="label">SM</span>
                                         <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                     </td>
                                     <td class="memo">상암사옥</td>
@@ -352,7 +358,7 @@
                                     <td><a href="#sourcing_admin" class="layerOpen">한아라</a></td>
                                     <td>5명</td>
                                     <td class="ellipsis">
-                                        <span class="button label">SM</span>
+                                        <span class="label">SM</span>
                                         <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                     </td>
                                     <td class="memo">상암사옥</td>
@@ -372,7 +378,7 @@
                                     <td><a href="#sourcing_admin" class="layerOpen">한아라</a></td>
                                     <td>5명</td>
                                     <td class="ellipsis">
-                                        <span class="button label">SM</span>
+                                        <span class="label">SM</span>
                                         <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                     </td>
                                     <td class="memo">상암사옥</td>
@@ -428,7 +434,7 @@
                     <button class="ico layerClose rClose"></button>
                 </div>
                 <div class="rPanelCont">
-                    <h4>회원검색</h4>
+                    <h2>회원검색</h2>
                     <div class="yScroll">
                         <div class="hasBtn">  
                             <a href="#" class="button white midSize filter">
@@ -671,7 +677,7 @@
             </div>
             <div class="filterWrapper">
                 <div class="filterTop">
-                    <h4>필터</h4>
+                    <h2>필터</h2>
                     <a href="#" class="ico refresh"></a>
                 </div>                   
                 
@@ -751,7 +757,7 @@
             </div>
 
             <div class="modalCont center">
-                <h4>영업 담당자 지정</h4>
+                <h2>영업 담당자 지정</h2>
                             
                 <p>프로젝트 추천 직원 : 홍길동</p>
                 <div class="select wideSize">
@@ -766,7 +772,7 @@
                 
             </div>
             <div class="modalFooter">
-                <button class="fullSize">저장</button>
+                <button class="">저장</button>
             </div>
 
             <div class="modalInfo">
@@ -786,14 +792,14 @@
 
     
     <!--소싱 담당자 지정 레이어 팝업-->
-    <div id="sourcing_admin" class="modalLayer center">
+    <div id="sourcing_admin" class="modalLayer center is-active">
         <div class="layerBox smSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
             </div>
 
             <div class="modalCont center">
-                <h4>소싱 담당자 지정</h4>
+                <h2>소싱 담당자 지정</h2>
                             
                 <div class="select wideSize">
                     <span class="selDefault">fruits</span>
@@ -820,7 +826,7 @@
                 
             </div>
             <div class="modalFooter">
-                <button class="fullSize">저장</button>
+                <button class="">저장</button>
             </div>
 
             <div class="modalInfo">

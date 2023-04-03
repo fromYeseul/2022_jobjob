@@ -33,18 +33,20 @@
   background: $white;
   border-radius: rem(4);
   border: 1px solid $inputGray;
-  cursor: pointer;
+  &.disabled{
+    color: $cancel;
+    background: $lightGray;
+    pointer-events: none;
+  }
   .selDefault{
     display: block;
     //text-align: left;
     font-weight: 500;
-    //220829
-    // line-height: rem(48);
     line-height: rem(44);
-    //220829
     padding-left: rem(10);
     @include ellipsis;
     width: 100%;
+    cursor: pointer;
     &::before{
       content: '';
       width: rem(12);
@@ -91,11 +93,20 @@
       display: block;
       padding: rem(8) rem(10);
       padding-right: rem(4);
-      margin: 0;      
+      margin: 0;     
+      cursor: pointer; 
       &:hover {
         color: $black;
         font-weight: 500;
         background: $selHover;
+      }
+      &.disabled{
+        color: $cancel;
+        background: $lightGray;
+        pointer-events: none;
+        &:hover{
+          background: transparent;
+        }
       }
       label{
         display: block;

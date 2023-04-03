@@ -17,9 +17,9 @@
             </a>
         </div>
         <div class="center title">
-            <!-- <h5>홍길동(여/29) WEB/개발</h5>
-            <h5>22년 12개월(특급)</h5> -->
-            <h5>CJ프레시웨이 온리원푸드넷 UI UX 고도화 - 마포구 (~4/30)</h5>
+            <!-- <h3>홍길동(여/29) WEB/개발</h3>
+            <h3>22년 12개월(특급)</h3> -->
+            <h3>CJ프레시웨이 온리원푸드넷 UI UX 고도화 - 마포구 (~4/30)</h3>
         </div>
         <div class="suffix"></div>
     </header>
@@ -31,6 +31,10 @@
                     <ul>
                         <!--boxList-->
                         <li class="boxList listType is-active">
+                            <div class="alertToast is-active" id="toast01">
+                                관심 회원에서 해제되었습니다.
+                                <i class="ico smClose w"></i>
+                            </div>
                             <div class="head">
                                 <span class="prefix">
                                     <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
@@ -169,7 +173,7 @@
             </section>
             <section class="memDetail">
                 <div class="tabWrapper" id="yes">
-                    <ul class="tabBtnWrap btnType">
+                    <ul class="tabBtnWrap">
                         <li class="tabBtn">
                             <a href="#memDetail-1" class="is-active">기본정보</a>
                         </li>
@@ -188,10 +192,10 @@
                             <div class="resumeWrapper">
 
                                 <div class="resuTop">    
-                                    <button class="white midSize low float_l">이력서 다운로드</button>
-                                    <button class="midSize low">스페셜 지정</button>
-                                    <button class="warning midSize low">스페셜 해제</button>
-                                    <button class="white midSize low">강제탈퇴</button>
+                                    <button class="white mid-lowSize float_l">이력서 다운로드</button>
+                                    <button class="mid-lowSize">스페셜 지정</button>
+                                    <button class="mid-lowSize warning">스페셜 해제</button>
+                                    <button class="white mid-lowSize">강제탈퇴</button>
                                 </div>
 
                                 <div class="resuBox"><!--221223 추가 -ys-->
@@ -199,13 +203,13 @@
                                         <!--221007 수정 -ys-->
                                         <div class="prefix">
                                             <div class="profile">
-                                                <h5>정회원</h5>
+                                                <h3>정회원</h3>
                                                 <img src="../assets/img/sample.png">                                            
                                                 <p class="mainC">Special</p>
                                             </div>
                                             <div class="info">
                                                 <div class="top">
-                                                    <h5>김미영 <span>KIM MI YEONG</span></h5>
+                                                    <h3>김미영 <span>KIM MI YEONG</span></h3>
                                                     <p>(ID) my.kim@echoit.co.kr</p>
                                                 </div>
                                                 <div class="mid">
@@ -241,12 +245,12 @@
 
                                         <div class="suffix">
                                             <!--221007 수정 -ys-->
-                                            <div class="resuInfo flexBetween">
+                                            <div class="resuInfo flexBw">
                                                 <div class="prefix">
                                                     <div class="tabWrapper" id="memSkill">
-                                                        <h5>
+                                                        <h3>
                                                             보유스킬
-                                                            <ul class="tabBtnWrap btnType smType">
+                                                            <ul class="tabBtnWrap btnType smSize">
                                                                 <li class="tabBtn">
                                                                     <a href="#skill-web" class="is-active">WEB</a>
                                                                 </li>
@@ -254,7 +258,7 @@
                                                                     <a href="#skill-sap">SAP</a>
                                                                 </li>
                                                             </ul>
-                                                        </h5>
+                                                        </h3>
                                                         <div class="tabContWrap">
                                                             <div id="skill-web" class="tabCont is-active">
                                                                 <table class="rowType">
@@ -281,7 +285,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="suffix">
-                                                    <h5>선호조건</h5>
+                                                    <h3>선호조건</h3>
                                                     <div class="cont">
                                                         <ul>
                                                             <li><b>선호업무</b>SI</li>
@@ -298,7 +302,7 @@
                                             
                                             <!-- 221007 추가 -ys -->
                                             <div class="resuInfo">
-                                                <h5>학력사항</h5>
+                                                <h3>학력사항</h3>
                                                 <div class="cont">
                                                     <table class="noBd">
                                                         <thead>
@@ -323,7 +327,7 @@
                                             <!-- //221007 추가 -ys -->
 
                                             <div class="resuInfo">
-                                                <h5>회사경력</h5>
+                                                <h3>회사경력</h3>
                                                 <div class="cont">
                                                     <!-- 221007 수정 -ys
                                                     <ul>
@@ -365,7 +369,7 @@
                                                 </div>
                                             </div>
                                             <div class="resuInfo">
-                                                <h5>자격사항</h5>
+                                                <h3>자격사항</h3>
                                                 <div class="cont">
                                                     <!-- 221007 수정 -ys
                                                     <ul>
@@ -406,7 +410,7 @@
 
                                             <!-- 221007 추가 -ys -->
                                             <div class="resuInfo">
-                                                <h5>교육정보</h5>
+                                                <h3>교육정보</h3>
                                                 <div class="cont">
                                                     <table class="noBd">
                                                         <colgroup>  
@@ -440,7 +444,7 @@
                                             <!-- //221007 추가 -ys -->
 
                                             <div class="resuInfo">
-                                                <h5>남기고 싶은 말</h5>
+                                                <h3>남기고 싶은 말</h3>
                                                 <div class="cont">
                                                     안녕하세요. 개발자 김미영입니다. 개발자 김미영입니다. 잘 부탁드립니다.
                                                     안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
@@ -484,7 +488,7 @@
                         <div id="memDetail-2" class="tabCont">  
                             <!--221007 추가 -ys-->
                             <div class="tabWrapper" id="memProj">
-                                <ul class="tabBtnWrap btnType midType"><!--221012 class 수정 -ys-->
+                                <ul class="tabBtnWrap btnType midSize"><!--221012 class 수정 -ys-->
                                     <li class="tabBtn">
                                         <a href="#proj-web" class="is-active">WEB(10)</a>
                                     </li>
@@ -492,7 +496,7 @@
                                         <a href="#proj-sap">SAP(4)</a>
                                     </li>
                                     <li>
-                                        <h6>WEB 경력 15년 1개월</h6>
+                                        <h5>WEB 경력 15년 1개월</h5>
                                     </li>
                                 </ul>
                                 <div class="tabContWrap">
@@ -750,7 +754,7 @@
                                     <div id="proj-sap" class="tabCont">
                                         <div class="tableBox">         
                                             <!--221013 수정 -ys-->                     
-                                            <table class="colType">
+                                            <table class="">
                                                 <colgroup>
                                                     <col width="56px;">
                                                     <col>
@@ -1157,7 +1161,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1170,7 +1174,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1183,7 +1187,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1196,7 +1200,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1209,7 +1213,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1222,7 +1226,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1235,7 +1239,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1248,7 +1252,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1261,7 +1265,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1274,7 +1278,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1287,7 +1291,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1300,7 +1304,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1313,7 +1317,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1326,7 +1330,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1339,7 +1343,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1352,7 +1356,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1365,7 +1369,7 @@
                                             <td>10</td>
                                             <td>22.04.21</td>
                                             <td class="ellipsis">
-                                                <span class="button label">SM</span>
+                                                <span class="label">SM</span>
                                                 <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                             </td>
                                             <td>개발</td>
@@ -1418,7 +1422,7 @@
                         </div>
                         <div id="memDetail-4" class="tabCont">    
                             <div class="boxTop">
-                                <button class="midSize white">+ 직무추천 추가</button>
+                                <button class="white mid-lowSize">+ 직무추천 추가</button>
                             </div>
                             
                             <div class="boxListWrap">    
@@ -1445,7 +1449,7 @@
                                         <div class="center">                                            
                                             <div class="head">
                                                 <span class="prefix">
-                                                    <span class="button label">SM</span>
+                                                    <span class="label">SM</span>
                                                     CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포 CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포
                                                 </span>
                                                 <span class="suffix dNear">임박</span>
@@ -1469,13 +1473,15 @@
                                                     <span>소싱  한아라</span>
                                                 </span>
                                                 <span>
-                                                    <a href="#" class="button white midSize" target="_blank">상세보기</a>
+                                                    <a href="#" class="button white mid-lowSize" target="_blank">상세보기</a>
                                                 </span>
                                             </div>
                                         </div>
 
                                         <div class="suffix">
-                                            <a href="#layer_offer" class="button midSize low layerOpen">제안하기</a>   
+                                            <!-- <a href="#layer_offer" class="button midSize lowSize layerOpen">제안하기aa</a>    -->
+                                            <button type="button" aria-controls="layer_offer" class="mid-lowSize layerOpen">제안하기aa</button>
+
                                             <div class="showMore">
                                                 <a href="#" class="ico more"></a>
                                                 <!--221012 수정 -ys-->
@@ -1508,7 +1514,7 @@
                                         <div class="center">                                            
                                             <div class="head">
                                                 <span class="prefix">
-                                                    <span class="button label">SM</span>
+                                                    <span class="label">SM</span>
                                                     CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포
                                                 </span>
                                                 <span class="suffix dNear">임박</span>
@@ -1532,7 +1538,7 @@
                                                     <span>소싱  한아라</span>
                                                 </span>
                                                 <span>
-                                                    <a href="#" class="button white midSize" target="_blank">상세보기</a>
+                                                    <a href="#" class="button white mid-lowSize" target="_blank">상세보기</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -1570,7 +1576,7 @@
                                         <div class="center">                                            
                                             <div class="head">
                                                 <span class="prefix">
-                                                    <span class="button label">SM</span>
+                                                    <span class="label">SM</span>
                                                     CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포
                                                 </span>
                                                 <span class="suffix dNear">임박</span>
@@ -1594,13 +1600,14 @@
                                                     <span>소싱  한아라</span>
                                                 </span>
                                                 <span>
-                                                    <a href="#" class="button white midSize" target="_blank">상세보기</a>
+                                                    <a href="#" class="button white mid-lowSize" target="_blank">상세보기</a>
                                                 </span>
                                             </div>
                                         </div>
 
                                         <div class="suffix">
-                                            <a href="#layer_offer" class="button midSize low layerOpen">제안하기</a>   
+                                            <!-- <a href="#layer_offer" class="button midSize lowSize layerOpen">제안하기</a>    -->
+                                            <button type="button" aria-controls="layer_offer" class="mid-lowSize layerOpen">제안하기</button>  
                                             <div class="showMore">
                                                 <a href="#" class="ico more"></a>
                                                 <!--221012 수정 -ys-->
@@ -1632,7 +1639,7 @@
                                         <div class="center">                                            
                                             <div class="head">
                                                 <span class="prefix">
-                                                    <span class="button label">SM</span>
+                                                    <span class="label">SM</span>
                                                     CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포
                                                 </span>
                                                 <span class="suffix dNear">임박</span>
@@ -1656,13 +1663,14 @@
                                                     <span>소싱  한아라</span>
                                                 </span>
                                                 <span>
-                                                    <a href="#" class="button white midSize" target="_blank">상세보기</a>
+                                                    <a href="#" class="button white mid-lowSize" target="_blank">상세보기</a>
                                                 </span>
                                             </div>
                                         </div>
 
                                         <div class="suffix">
-                                            <a href="#layer_offer" class="button midSize low layerOpen">제안하기</a>   
+                                            <!-- <a href="#layer_offer" class="button midSize lowSize layerOpen">제안하기</a>    -->
+                                            <button type="button" aria-controls="layer_offer" class="mid-lowSize layerOpen">제안하기</button>   
                                             <div class="showMore">
                                                 <a href="#" class="ico more"></a>
                                                 <!--221012 수정 -ys-->
@@ -1694,7 +1702,7 @@
                                         <div class="center">                                            
                                             <div class="head">
                                                 <span class="prefix">
-                                                    <span class="button label">SM</span>
+                                                    <span class="label">SM</span>
                                                     CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포
                                                 </span>
                                                 <span class="suffix dNear">임박</span>
@@ -1718,13 +1726,14 @@
                                                     <span>소싱  한아라</span>
                                                 </span>
                                                 <span>
-                                                    <a href="#" class="button white midSize" target="_blank">상세보기</a>
+                                                    <a href="#" class="button white mid-lowSize" target="_blank">상세보기</a>
                                                 </span>
                                             </div>
                                         </div>
 
                                         <div class="suffix">
-                                            <a href="#layer_offer" class="button midSize low layerOpen">제안하기</a>   
+                                            <!-- <a href="#layer_offer" class="button midSize lowSize layerOpen">제안하기</a>    -->
+                                            <button type="button" aria-controls="layer_offer" class="mid-lowSize layerOpen">제안하기</button>    
                                             <div class="showMore">
                                                 <a href="#" class="ico more"></a>
                                                 <!--221012 수정 -ys-->
@@ -1756,7 +1765,7 @@
                                         <div class="center">                                            
                                             <div class="head">
                                                 <span class="prefix">
-                                                    <span class="button label">SM</span>
+                                                    <span class="label">SM</span>
                                                     CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포
                                                 </span>
                                                 <span class="suffix dNear">임박</span>
@@ -1780,13 +1789,14 @@
                                                     <span>소싱  한아라</span>
                                                 </span>
                                                 <span>
-                                                    <a href="#" class="button white midSize" target="_blank">상세보기</a>
+                                                    <a href="#" class="button white mid-lowSize" target="_blank">상세보기</a>
                                                 </span>
                                             </div>
                                         </div>
 
                                         <div class="suffix">
-                                            <a href="#layer_offer" class="button midSize low layerOpen">제안하기</a>   
+                                            <!-- <a href="#layer_offer" class="button midSize lowSize layerOpen">제안하기</a>    -->
+                                            <button type="button" aria-controls="layer_offer" class="mid-lowSize layerOpen">제안하기</button>    
                                             <div class="showMore">
                                                 <a href="#" class="ico more"></a>
                                                 <!--221012 수정 -ys-->
@@ -1806,7 +1816,7 @@
             <!--221012 추가 -ys-->
             <section class="quickView">
                 <div class="tabWrapper" id="tab01">
-                    <ul class="tabBtnWrap">
+                    <ul class="tabBtnWrap underType">
                         <li class="tabBtn">
                             <a href="#quick-1">평가 (3)</a>
                         </li>
@@ -1821,14 +1831,14 @@
                         <div id="quick-1" class="tabCont">평가 aaa</div>
                         <div id="quick-2" class="tabCont is-active">
                             <div class="boxTop">
-                                <button class="fullSize showMemo">
+                                <button class="showMemo">
                                     <i class="ico expand"></i>
                                 </button>
                             </div>
                             
                             <div class="boxListWrap memoList is-active">
 
-                                <button class="fullSize">메모 작성</button>
+                                <button class="">메모 작성</button>
                                 
 
                                 <ul>

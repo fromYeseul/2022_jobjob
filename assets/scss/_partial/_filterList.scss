@@ -1,23 +1,78 @@
 
 .filterWrapper{
+    display:none;
+
+    position: absolute;
+    width: rem(200);
+    height: 100%;
+    padding: rem(40) rem(30);
+    
+    background: $white;
+    border: 1px solid $layoutColor;
+    box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    @include scroll_0;
+    &.is-active{
+        display: block;
+    }
+    &.smSize{
+        padding: rem(30) rem(25);
+        border-radius: rem(6);
+        box-shadow: 4px 4px 5px 0 rgb(0 0 0 / 10%);
+    }
+    &.autoSize{
+        padding: rem(16) rem(12);
+        width: auto;
+        height: auto;
+        text-align: left;
+        border-radius: rem(6);
+        box-shadow: 4px 4px 5px 0 rgb(0 0 0 / 10%);
+        .filterList{
+            margin-top: 0;
+        }
+    }
+    .flex{
+        @include sideArray;
+        align-items: center;
+    }
+    h4{
+        margin-bottom: 0;
+    }
+
     .filterTop{
         @include sideArray;
+        margin-bottom: rem(30);
     }
 }
 .filterList{
-    margin-top: rem(30);
+//     margin-top: rem(10);
+//     margin-bottom: rem(30);
+    & + .filterList{
+        margin-top: rem(30);
+    }
     .tit{
+        font-weight: 700;
+        margin-bottom: rem(10);
+    }
+    h6{
         font-weight: 700;
         margin-bottom: rem(10);
     }
     label{
         display: block !important;
-        margin-top: rem(10);
-        &:first-child{
-            margin-top: 0;
-        }
+        font-weight: 400;
+        line-height: rem(25);
+        // & + input{
+        //     & + label{
+        //         margin-top: rem(10);
+        //     }
+        // }
+        // &:first-child{
+        //     margin-top: 0;
+        // }
     }
     .listBox{
+        display: flex;
         .prefix,
         .suffix{
             max-height: rem(400);
@@ -31,101 +86,101 @@
             .listType{
                 display: flex;
                 flex-wrap: wrap;
-                li{
-                    width: 50%;                    
-                }
-                // label{
+                // li{
                 //     width: 50%;                    
                 // }
+                label{
+                    width: 50%;                    
+                }
             }
         }
     }
 }
 
 //거주지 선택 필터 border제거
-// #memArea{
-//     .filterList{
-//         .prefix{
-//             input[type=checkbox]{
-//                 + label{
-//                     + input{
-//                         + label{
-//                             border-top: transparent;
-//                         }
-//                         &:checked{
-//                             + label{
-//                                 border-top: 1px solid $mainColor;
-//                             }
-//                         }
-//                     }
-//                 }
-//                 &:checked{
-//                     + label{
-//                         + input{
-//                             &:checked{
-//                                 + label{
-//                                     border-top: transparent;
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//         .suffix{
-//             input[type=checkbox]{
-//                 + label{
-//                     border-top: transparent;
-//                     &:nth-child(4n){
-//                         border-left: transparent;
-//                     }
-//                 }
-//                 &:first-child,
-//                 &:nth-child(3){
-//                     + label{
-//                         border-top: 1px solid $layoutColor;
-//                     }                    
-//                 }
-//                 //우측열
-//                 &:nth-child(4n+1){
-//                     &:checked{
-//                         + label{
-//                             + input{
-//                                 &:checked{
-//                                     + label{
-//                                         border-left: transparent;
-//                                     }
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 }
-//                 //좌측열
-//                 &:nth-child(4n-1){
-//                     &:checked{
-//                         + label{
-//                             border-left: 1px solid $mainColor;
-//                         }
-//                     }
-//                 }
+#memArea{
+    .filterList{
+        .prefix{
+            input[type=checkbox]{
+                + label{
+                    + input{
+                        + label{
+                            border-top: transparent;
+                        }
+                        &:checked{
+                            + label{
+                                border-top: 1px solid $mainColor;
+                            }
+                        }
+                    }
+                }
+                &:checked{
+                    + label{
+                        + input{
+                            &:checked{
+                                + label{
+                                    border-top: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .suffix{
+            input[type=checkbox]{
+                + label{
+                    border-top: transparent;
+                    &:nth-child(4n){
+                        border-left: transparent;
+                    }
+                }
+                &:first-child,
+                &:nth-child(3){
+                    + label{
+                        border-top: 1px solid $layoutColor;
+                    }                    
+                }
+                //우측열
+                &:nth-child(4n+1){
+                    &:checked{
+                        + label{
+                            + input{
+                                &:checked{
+                                    + label{
+                                        border-left: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                //좌측열
+                &:nth-child(4n-1){
+                    &:checked{
+                        + label{
+                            border-left: 1px solid $mainColor;
+                        }
+                    }
+                }
 
-//                 &:nth-child(2n+1){
-//                     &:checked{
-//                         + label{
-//                             border-top: 1px solid $mainColor;
-//                             + input{
-//                                 + label{
-//                                     + input{
-//                                         + label{
-//                                             border-top: transparent;
-//                                         }
-//                                     }
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+                &:nth-child(2n+1){
+                    &:checked{
+                        + label{
+                            border-top: 1px solid $mainColor;
+                            + input{
+                                + label{
+                                    + input{
+                                        + label{
+                                            border-top: transparent;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

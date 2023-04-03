@@ -32,27 +32,14 @@
     transition: all .3s;
     .contLayout{
         display: flex;
-        //220829
-        // min-height: calc(100vh - 70px);
-        //min-height: calc(100vh - 60px);
         height: calc(100vh - 60px);
-        //220829
         background: $bgColor;
         width: 100%;
         position: relative;
 
         //마이프로젝트
         .myProjList{
-            //width: 10%;
-            //min-width: rem(307);    
-            //height: calc(100vh - 96px);
-            //overflow-y: auto;
-            //padding: rem(30);
-            //220829
-            // width: rem(350);
             width: rem(320);
-            //220829
-            // background: $bgColor;
             background: $white;
             border-right: 1px solid $layoutColor;
             position: relative;
@@ -83,20 +70,12 @@
 
         //마이피플
         .myPeoList{
-            //220829
-            // width: rem(640);
-            // width: rem(540);
             width: rem(500);
-            //220829
             background: $white;
             border-right: 1px solid $layoutColor;
         }
         .myPeoDetail{
-            //width: calc(100% - 640px - 60px);
-            //220829
-            // width: calc(100% - 640px);
             width: rem(955);
-            //220829
             padding: rem(30) 0;  
             .boxListWrap{
                 padding:0  rem(30) ;  
@@ -124,10 +103,7 @@
         }
 
         &.is-active{
-            //220829    
-            // width: calc(100% - 640px);
             //width: calc(100% - 560px);
-            //220829    
             // .myProjDetail{
             //     width: 45%;
             //     width: calc(100% - 350px - 640px - 60px);
@@ -172,22 +148,15 @@
     transition: all .3s ease;
     //position: relative;
     position: fixed;
-    //220829    
-    // top: rem(70);
-    // right: rem(59);
     height: calc(100vh - 70px);
     top: rem(60);
     right: rem(51);
     height: calc(100vh - 60px);
-    //220829    
     .rPanelBox{
         display: none;
     }   
     &.is-active{
-        //220829    
-        // width: rem(640); 
         width: rem(560); 
-        //220829    
         .rPanelBox{
             display: block;
         }   
@@ -195,38 +164,17 @@
     &.layerType{
         min-height: calc(100vh - 200px); //임시
         position: fixed;
-        //top: rem(95);
-        //220829
         top: rem(60);
         right: rem(51);
     }
 }
-.filterWrapper{
-    display:none;
-    position: absolute;
-    //220829    
-    // left: -229px;
-    left: -199px;
-    //220829    
-    top: -1px;
-    &.is-active{
-        display: block;
-    }
-}
 .rPanel{            
-    //220829    
-    // width: rem(60);
-    // height: calc(100vh - 70px);
     width: rem(52);
     height: calc(100vh - 60px);
-    //220829
     padding: rem(20) rem(15);
     position: fixed;
     right: 0;
-    //220829    
-    // top: rem(70);
     top: rem(60);
-    //220829    
     background: $white;
     border-left: 1px solid $layoutColor;
     li{
@@ -324,11 +272,7 @@
         }
         .contWrapper{
             width: calc(100% - 205px);
-            //220829
-            // padding-left: rem(205);
             padding-left: rem(180);
-            //220829
-            //left: 205px;
             .myProjList{
                 width: rem(280);
             }

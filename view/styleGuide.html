@@ -17,34 +17,34 @@
             <h2>Style Guide</h2>
             <ul class="">
                 <li class="tabBtn">
-                    <a href="#style-color">Color</a>
+                    <a href="#style-color">Color (완료)</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-font">Font</a>
+                    <a href="#style-font">Font (완료)</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-icon">Icon</a>
+                    <a href="#style-icon">Icon (230316 완료)</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-text">Text</a>
+                    <a href="#style-text">Text (230316 완료)</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-button">Button</a>
+                    <a href="#style-button">Button (230316 완료)</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-input">Input / Select</a>
+                    <a href="#style-input" class="is-active">Input / Select</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-chk" class="is-active">Check / Radio</a>
+                    <a href="#style-chk">Check / Radio (230323 완료)</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-table">Table / Paging</a>
+                    <a href="#style-table">Table / Paging (230320 완료)</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-tab">Tab</a>
+                    <a href="#style-tab">Tab (230321 완료)</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-tooltip">Tooltip</a>
+                    <a href="#style-tooltip">Tooltip (230321 완료)</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-modal">Modal</a>
@@ -130,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            <div id="style-icon" class="tabCont">
+            <div id="style-icon" class="tabCont"> <!--아이콘 수정 완료 230316-->
                 <h2>Icon</h2>
                 <div class="icon">
                     <div class="clip mt20"><span>Logo</span></div>
@@ -190,19 +190,23 @@
                     </div>             
                 </div>
             </div>
-            <div id="style-text" class="tabCont">              
+            <div id="style-text" class="tabCont">        <!--텍스트 수정 완료 230316-->      
                 <h2>Text</h2>
                 <div class="text">
                     <div class="clip mt20"><span>Title</span></div>
                     <hr> 
                     <div class="title">
                         <ul>
-                            <li><span>h1</span><h1>타이틀입니다.</h1></li>
-                            <li><span>h2</span><h2>타이틀입니다.</h2></li>
-                            <li><span>h3</span><h3>타이틀입니다.</h3></li>
-                            <li><span>h4</span><h4>타이틀입니다.</h4></li>
-                            <li><span>h5</span><h5>타이틀입니다.</h5></li>
-                            <li><span>h6</span><h6>타이틀입니다.</h6></li>
+                            <li><span>h1</span><span class="size">font-size: 54px</span><h1>타이틀입니다.</h1></li>
+                            <li><span>h2</span><span class="size">font-size: 28px</span><h2>타이틀입니다.</h2></li>
+                            <li><span>h3</span><span class="size">font-size: 20px</span><h3>타이틀입니다.</h3></li>
+                            <li>
+                                <span>h3_sub</span><span class="size"></span>
+                                <div class="h3_sub">h3 타이틀 서브입니다. (프로젝트 등록화면)</div>
+                            </li>
+                            <li><span>h4</span><span class="size">font-size: 18px</span><h4>타이틀입니다.</h4></li>
+                            <li><span>h5</span><span class="size">font-size: 16px</span><h5>타이틀입니다.</h5></li>
+                            <li><span>h6</span><span class="size">font-size: 14px</span><h6>타이틀입니다.</h6></li>
                         </ul>
                     </div>
 
@@ -221,32 +225,37 @@
                     <span class="point">중요</span>
                 </div>
             </div>
-            <div id="style-button" class="tabCont">     
+            <div id="style-button" class="tabCont">     <!--버튼 수정 완료 230316-->
                 <h2>Button</h2>
                 <div class="btn">
                     <div class="clip mt20"><span>Default Button</span></div>    
                     <div class="default">          
                         <ul>
+                            <!-- <li>
+                                <span>xsSize</span>
+                                <span class="size">xsSize</span>
+                                <button class="xsSize">button</button>
+                            </li> -->
                             <li>
                                 <span>smSize</span>
-                                <span class="size">smSize</span>
+                                <span class="size">min 70px * 30px</span>
                                 <button class="smSize">button</button>
                             </li>
                             <li>
-                                <span>lowSize</span>
-                                <span class="size">130px * 38px</span>                            
-                                <button class="lowSize">button</button>
-                            </li>
-                            <li>
                                 <span>midSize</span>
-                                <span class="size">min 90px * 50px</span>
+                                <span class="size">min 90px * 48px</span>
                                 <button class="midSize">button</button>
                             </li>
                             <li>
+                                <span>mid-lowSize</span>
+                                <span class="size">min 90px * 36px</span>
+                                <button class="mid-lowSize">button</button>
+                            </li>
+                            <!-- <li>
                                 <span>midSize low</span>
                                 <span class="size">min 90px * 36px</span>
                                 <button class="midSize low">button</button>
-                            </li>
+                            </li> -->
                             <li>
                                 <span>laSize</span>
                                 <span class="size">min 120px * 48px</span>
@@ -254,15 +263,22 @@
                             </li>
                             <li>
                                 <span>xlSize</span>
-                                <span class="size">160px * 54px</span>
+                                <span class="size">min 160px * 54px</span>
                                 <button class="xlSize">button</button>
                             </li>
                             <li>
-                                <span>fullSize</span>
-                                <span class="size">100%</span>
+                                <span>lowSize</span>
+                                <span class="size">auto * 36px</span>    
+                            </li>
+                            <li>                        
+                                <button class="lowSize">button</button>
                             </li>
                             <li>
-                                <button class="fullSize">button</button>
+                                <span>default</span>
+                                <span class="size">100% * 48px</span>
+                            </li>
+                            <li>
+                                <button class="">button</button>
                             </li>
                         </ul>               
                     </div>   
@@ -271,6 +287,52 @@
                     <div class="white">
                         <ul>
                             <li>
+                                <span>smSize</span>
+                                <span class="size">min 70px * 30px</span>
+                                <button class="white smSize">button</button>
+                            </li>
+                            <li>
+                                <span>midSize</span>
+                                <span class="size">min 90px * 48px</span>
+                                <button class="white midSize">button</button>
+                            </li>
+                            <li>
+                                <span>mid-lowSize</span>
+                                <span class="size">min 90px * 36px</span>
+                                <button class="white mid-lowSize">button</button>
+                            </li>
+                            <!-- <li>
+                                <span>midSize low</span>
+                                <span class="size">min 90px * 36px</span>
+                                <button class="midSize low">button</button>
+                            </li> -->
+                            <li>
+                                <span>laSize</span>
+                                <span class="size">min 120px * 48px</span>
+                                <button class="white laSize">button</button>
+                            </li>
+                            <li>
+                                <span>xlSize</span>
+                                <span class="size">min 160px * 54px</span>
+                                <button class="white xlSize">button</button>
+                            </li>
+                            <li>
+                                <span>lowSize</span>
+                                <span class="size">auto * 36px</span>    
+                            </li>
+                            <li>                        
+                                <button class="white lowSize">button</button>
+                            </li>
+                            <li>
+                                <span>white</span>
+                                <span class="size">100% * 48px</span>
+                            </li>
+                            <li>
+                                <button class="white">button</button>
+                            </li>
+
+
+                            <!-- <li>
                                 <span>white</span>
                                 <span class="size">p 15px * 34px</span>
                                 <button class="white">button</button>
@@ -294,7 +356,7 @@
                                 <span>xlSize</span>
                                 <span class="size">160px * 54px</span>
                                 <button class="white xlSize">button</button>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     
@@ -303,8 +365,8 @@
                         <ul>
                             <li>
                                 <span>warning</span>
-                                <span class="size">160px * 54px</span>
-                                <button class="warning xlSize">button</button>
+                                <span class="size">min 160px * 54px</span>
+                                <button class="warning xlSize">warning</button>
                             </li>
                         </ul>
                     </div>
@@ -313,33 +375,65 @@
                     <div class="roung">
                         <ul>
                             <li>
-                                <button class="round">button</button>
-                                <button class="round order">button</button>
-                                <button class="round cancel">button</button>
-                                <button class="round checking">button</button>
-                                <button class="round short">button</button>
-                                <button class="round reject">button</button>
+                                <span>round</span>
+                                <span class="size">min 44px * 24px</span>
+
+                                <button class="round">round</button>
+                                <button class="round order">order</button>
+                                <button class="round cancel">cancel</button>
+                                <button class="round checking">checking</button>
+                                <button class="round short">short</button>
+                                <button class="round reject">reject</button>
                             </li>
                         </ul>
                     </div>
                                     
                     <div class="clip"><span>Icon Button</span></div>
                     <div class="icon">
-                        <button class="white">
-                            <i class="ico download"></i>엑셀저장
-                        </button>                
-                        <button class="onlyIco"><i class="ico refresh"></i></button>
-                        <button class="onlyIco"><i class="ico minus"></i></button>
-                        <button class="onlyIco"><i class="ico plus"></i></button>
-                        <button class="onlyIco"><i class="ico top"></i></button>
-                        <button class="onlyIco"><i class="ico bottom"></i></button>
+                        <ul>
+                            <li>
+                                <span style="width:150px;">icon text(low)</span>
+                                <span class="size">min 90px * 36px</span>
+
+                                <button class="white mid-lowSize">
+                                    <i class="ico download"></i>엑셀저장   
+                                </button>      
+                            </li>         
+                            <li>
+                                <span style="width:150px;">icon text(default)</span>
+                                <span class="size">min 120px * 48px</span>
+        
+                                <button class="white laSize">
+                                    <i class="ico download"></i>엑셀저장   
+                                </button>    
+                            </li>            
+                            <li>
+                                <span style="width:150px;">only icon</span>
+                                <span class="size">min 48px * 48px</span>
+
+                                <button class="white laSize">
+                                    <i class="ico download"></i>엑셀저장   
+                                </button>    
+                                <button class="onlyIco"><i class="ico refresh"></i></button>
+                                <button class="onlyIco"><i class="ico minus"></i></button>
+                                <button class="onlyIco"><i class="ico plus"></i></button>
+                                <button class="onlyIco"><i class="ico top"></i></button>
+                                <button class="onlyIco"><i class="ico bottom"></i></button>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="clip"><span>ETC Button</span></div>
-                    <button class="square is-active">더보기</button>
-                </div>
+                    <div class="clip"><span>ETC Button</span></div>  
+                        <ul>
+                            <li>
+                                <span >square</span>
+                                <span class="size">min 120px * 48px</span>
+                                <button class="square is-active">더보기</button>
+                            </li>
+                        </ul>
+                    </div>
             </div>
-            <div id="style-input" class="tabCont">
+            <div id="style-input" class="tabCont is-active">
                 <h2>Input / Select</h2>
                 <div class="input">
                     <div class="clip mt20"><span>Input</span></div>   
@@ -350,6 +444,12 @@
                                 <span class="size">lowSize</span>
                                 <label for="lowSize">label</label>
                                 <input class="lowSize" type="text" id="lowSize" maxlength="" placeholder="placeholder">
+                            </li>
+                            <li>
+                                <span>xxsSize</span>
+                                <span class="size">xxsSize</span>
+                                <label for="xxsSize">label</label>
+                                <input class="xxsSize" type="text" id="xxsSize" maxlength="" placeholder="placeholder">
                             </li>
                             <li>
                                 <span>xsSize</span>
@@ -651,7 +751,7 @@
                     </div>      
                 </div>
             </div>
-            <div id="style-chk" class="tabCont is-active">
+            <div id="style-chk" class="tabCont">  <!--라디오, 체크박스 수정 완료 230323-->
                 <h2>Check / Radio</h2>
                 <div class="input">
                     <div class="clip mt20"><span>Check</span></div>   
@@ -707,11 +807,21 @@
                     <div class="">
                         <ul>
                             <li>
+                                <span>default size</span>
                                 <div class="btnType">
                                     <input type="checkbox" id="b1" name="aa" class="hasTxt">
                                     <label for="b1">samsung</label>
                                     <input type="checkbox" id="b2" name="aa" class="hasTxt" checked="">
                                     <label for="b2">apple</label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>samll size</span>
+                                <div class="btnType smSize">
+                                    <input type="checkbox" id="b11" name="aa" class="hasTxt">
+                                    <label for="b11">samsung</label>
+                                    <input type="checkbox" id="b21" name="aa" class="hasTxt" checked="">
+                                    <label for="b21">apple</label>
                                 </div>
                             </li>
                         </ul>
@@ -761,8 +871,17 @@
                         <ul>
                             <li>
                                 <span>default</span>
-                                <input type="radio" id="banana" name="fruits" value="apple" checked="">
+                                <input type="radio" id="banana" name="fruits" value="banana" checked="">
                                 <label for="banana"></label>
+                                <input type="radio" id="apple" name="fruits" value="apple" checked="">
+                                <label for="apple"></label>
+                            </li>
+                            <li>
+                                <span>text</span>
+                                <input type="radio" id="banana11" name="fruit" value="banana" class="hasTxt" checked="">
+                                <label for="banana11">banana</label>
+                                <input type="radio" id="apple11" name="fruit" value="apple" class="hasTxt" checked="">
+                                <label for="apple11">apple</label>
                             </li>
                         </ul>
                     </div>
@@ -777,6 +896,24 @@
                                     <label for="americano">아메리카노</label>
                                     <input type="radio" id="latte" name="coffee" value="latte">
                                     <label for="latte">라떼</label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>small size</span>
+                                <div class="tabType smSize">
+                                    <input type="radio" id="americano1" name="coffee1" value="americano1" checked="">
+                                    <label for="americano1">아아</label>
+                                    <input type="radio" id="latte1" name="coffee1" value="latte1">
+                                    <label for="latte1">라떼</label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>auto size</span>
+                                <div class="tabType autoSize">
+                                    <input type="radio" id="americano2" name="coffee2" value="americano2" checked="">
+                                    <label for="americano2">아메리카노</label>
+                                    <input type="radio" id="latte2" name="coffee2" value="latte2">
+                                    <label for="latte2">라떼</label>
                                 </div>
                             </li>
                         </ul>
@@ -853,7 +990,7 @@
                     </div>
                 </div>
             </div>
-            <div id="style-table" class="tabCont">                
+            <div id="style-table" class="tabCont">    <!--테이블 수정 완료 230320--> 
                 <h2>Table / Paging</h2>
                 <div class="">
                     <div class="clip mt20"><span>Table top</span></div>   
@@ -866,7 +1003,7 @@
                                 <li class="optionItem">100개씩</li>
                             </ul>
                         </div>                        
-                        <button class="white">
+                        <button class="white mid-lowSize">
                             <i class="ico download"></i>
                             엑셀저장
                         </button>
@@ -874,7 +1011,7 @@
                     
                     <div class="clip"><span>Table</span></div>   
                     <div class="tableBox">    
-                        <table class="colType">
+                        <table class="">
                             <colgroup>
                                 <col width="56px;">
                                 <col width="66px;">
@@ -929,7 +1066,7 @@
                                     <td><a href="#sourcing_admin" class="layerOpen">소싱 담당 팝업</a></td>
                                     <td>5명</td>
                                     <td class="ellipsis">
-                                        <span class="button label">SM</span>
+                                        <span class="label">SM</span>
                                         <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>                                        
                                     </td>
                                     <!--221012 추가 -ys-->
@@ -941,10 +1078,11 @@
                             </tbody>
                         </table>
                     </div>
+
                     
                     <div class="clip"><span>Table nodata</span></div>
                     <div class="tableBox">
-                        <table class="colType">
+                        <table class="">
                             <colgroup>
                                 <col width="56px;">
                                 <col width="66px;">
@@ -991,18 +1129,18 @@
                         </table>
                     </div>
 
-                    <div class="clip"><span>Paging</span></div>
+                    <div class="clip"><span>Number Paging</span></div>
                     <div class="listBottom pagingType">                        
-                        <div class="paging">
+                        <div class="paging numType">
                             <ul>
-                                <li class="pagingDouble">
+                                <li>
                                     <a href="#">
-                                        <span class="ico left2_dou"></span>
+                                        <span class="ico pagingFirst"></span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <span class="ico left2"></span>
+                                        <span class="ico pagingLeft"></span>
                                     </a>
                                 </li>
                                 <li class="is-active">1</li>
@@ -1017,62 +1155,117 @@
                                 <li>10</li>
                                 <li>
                                     <a href="#">
-                                        <span class="ico right2 is-active"></span>
+                                        <span class="ico pagingRight is-active"></span>
                                     </a>
                                 </li>
-                                <li class="pagingDouble">
+                                <li>
                                     <a href="#">
-                                        <span class="ico right2_dou is-active"></span>
+                                        <span class="ico pagingLast is-active"></span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="clip"><span>List Paging</span></div>
+
+                    <!-- <div class="pagination-div">
+                        <nav>
+                            <ul class="pagination">
+                                <li class="page-item first disabled">
+                                    <a href="#" class="page-link"></a>
+                                </li>
+                                <li class="page-item prev disabled">
+                                    <a href="#" class="page-link"></a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href="#" class="page-link">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">4</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">5</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">6</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">7</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">8</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">9</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">10</a>
+                                </li>
+                                <li class="page-item next is-active">
+                                    <a href="#" class="page-link"></a>
+                                </li>
+                                <li class="page-item last is-active">
+                                    <a href="#" class="page-link"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div> -->
+
+
+
+
+                    <div class="clip"><span>Paging</span></div>
                     <div class="listBottom pagingType">                        
                         <div class="paging">
                             <ul>
                                 <li><a href="#">
-                                    <span class="ico left"></span>
+                                    <span class="ico pagingLeft"></span>
                                 </a></li>
                                 <li>
                                     3개 중 <span class="is-active">1-3</span>
                                 </li>
                                 <li><a href="#">
-                                    <span class="ico right is-active"></span>
+                                    <span class="ico pagingRight is-active"></span>
                                 </a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="style-tab" class="tabCont">   
+            <div id="style-tab" class="tabCont">   <!--탭 수정 완료 230321-->
                 <h2>Tab</h2>
                 <div class="">
+
+                    <!--기본탭-->
                     <div class="clip mt20"><span>Tab</span></div>   
                     <div class="tabWrapper" id="style-tab01">
                         <ul class="tabBtnWrap">
-                            <li class="tabBtn">
-                                <a href="#tab-01" class="is-active">menu1</a>
+                            <li class="tabBtn prefix">
+                                <a href="#tab-01" class="is-active">menu-w1</a>
                             </li>
-                            <li class="tabBtn">
-                                <a href="#tab-02">menu2</a>
+                            <li class="tabBtn center">
+                                <a href="#tab-02">menu-w2</a>
                             </li>
-                            <li class="tabBtn">
-                                <a href="#tab-03">menu3</a>
+                            <li class="tabBtn suffix">
+                                <a href="#tab-03">menu-w3</a>
                             </li>
                         </ul>
                         <div class="tabContWrap">
-                            <div id="tab-01" class="tabCont is-active">aaa</div>
-                            <div id="tab-02" class="tabCont">bbb</div>
-                            <div id="tab-03" class="tabCont">ccc</div>
+                            <div id="tab-01" class="tabCont is-active">aa</div>
+                            <div id="tab-02" class="tabCont">bb</div>
+                            <div id="tab-03" class="tabCont">cc</div>
                         </div>
                     </div>
-
+                    
                     <div class="clip"><span>Wide Tab</span></div>   
                     <div class="tabWrapper" id="style-tab02">
-                        <ul class="tabBtnWrap wideType">
+                        <ul class="tabBtnWrap wideSize">
                             <li class="tabBtn prefix">
                                 <a href="#tab-01-w" class="is-active">menu-w1</a>
                             </li>
@@ -1089,58 +1282,86 @@
                             <div id="tab-03-w" class="tabCont">cc</div>
                         </div>
                     </div>
-                    
-                    <div class="clip"><span>BtnType Tab</span></div>   
+
+
+
+                    <!--언더라인탭-->
+                    <div class="clip"><span>Underbar Tab</span></div>   
                     <div class="tabWrapper" id="style-tab03">
+                        <ul class="tabBtnWrap underType">
+                            <li class="tabBtn">
+                                <a href="#tab-01-u" class="is-active">menu1</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#tab-02-u">menu2</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#tab-03-u">menu3</a>
+                            </li>
+                        </ul>
+                        <div class="tabContWrap">
+                            <div id="tab-01-u" class="tabCont is-active">aaa</div>
+                            <div id="tab-02-u" class="tabCont">bbb</div>
+                            <div id="tab-03-u" class="tabCont">ccc</div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="clip"><span>Mid Underbar Tab</span></div>   
+                    <div class="tabWrapper" id="style-tab04">
+                        <ul class="tabBtnWrap underType midSize">
+                            <li class="tabBtn">
+                                <a href="#tab-01-u-m" class="is-active">menu1</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#tab-02-u-m">menu2</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#tab-03-u-m">menu3</a>
+                            </li>
+                        </ul>
+                        <div class="tabContWrap">
+                            <div id="tab-01-u-m" class="tabCont is-active">aaa</div>
+                            <div id="tab-02-u-m" class="tabCont">bbb</div>
+                            <div id="tab-03-u-m" class="tabCont">ccc</div>
+                        </div>
+                    </div>
+
+                    <div class="clip"><span>Wide Underbar Tab</span></div>   
+                    <div class="tabWrapper" id="style-tab05">
+                        <ul class="tabBtnWrap underType wideSize">
+                            <li class="tabBtn prefix">
+                                <a href="#tab-01-u-w" class="is-active">menu-w1</a>
+                            </li>
+                            <li class="tabBtn center">
+                                <a href="#tab-02-u-w">menu-w2</a>
+                            </li>
+                            <li class="tabBtn suffix">
+                                <a href="#tab-03-u-w">menu-w3</a>
+                            </li>
+                        </ul>
+                        <div class="tabContWrap">
+                            <div id="tab-01-u-w" class="tabCont is-active">aa</div>
+                            <div id="tab-02-u-w" class="tabCont">bb</div>
+                            <div id="tab-03-u-w" class="tabCont">cc</div>
+                        </div>
+                    </div>
+
+
+
+                    
+                    <!--버튼탭-->
+                    <div class="clip"><span>BtnType Tab</span></div>   
+                    <div class="tabWrapper" id="style-tab06">
                         <ul class="tabBtnWrap btnType">
                             <li class="tabBtn prefix">
-                                <a href="#tab-01-b" class="is-active">menu-w1</a>
+                                <a href="#tab-01-b-m" class="is-active">menu1</a>
                             </li>
                             <li class="tabBtn center">
-                                <a href="#tab-02-b">menu-w2</a>
+                                <a href="#tab-02-b-m">menu2</a>
                             </li>
                             <li class="tabBtn suffix">
-                                <a href="#tab-03-b">menu-w3</a>
-                            </li>
-                        </ul>
-                        <div class="tabContWrap">
-                            <div id="tab-01-b" class="tabCont is-active">aa</div>
-                            <div id="tab-02-b" class="tabCont">bb</div>
-                            <div id="tab-03-b" class="tabCont">cc</div>
-                        </div>
-                    </div>
-                    
-                    <div class="clip"><span>BtnType Tab</span></div>   
-                    <div class="tabWrapper" id="style-tab04">
-                        <ul class="tabBtnWrap btnType wideType">
-                            <li class="tabBtn prefix">
-                                <a href="#tab-01-b-w" class="is-active">menu-w1</a>
-                            </li>
-                            <li class="tabBtn center">
-                                <a href="#tab-02-b-w">menu-w2</a>
-                            </li>
-                            <li class="tabBtn suffix">
-                                <a href="#tab-03-b-w">menu-w3</a>
-                            </li>
-                        </ul>
-                        <div class="tabContWrap">
-                            <div id="tab-01-b-w" class="tabCont is-active">aa</div>
-                            <div id="tab-02-b-w" class="tabCont">bb</div>
-                            <div id="tab-03-b-w" class="tabCont">cc</div>
-                        </div>
-                    </div>
-                    
-                    <div class="clip"><span>BtnType Tab</span></div>   
-                    <div class="tabWrapper" id="style-tab05">
-                        <ul class="tabBtnWrap btnType midType">
-                            <li class="tabBtn prefix">
-                                <a href="#tab-01-b-m" class="is-active">menu-w1</a>
-                            </li>
-                            <li class="tabBtn center">
-                                <a href="#tab-02-b-m">menu-w2</a>
-                            </li>
-                            <li class="tabBtn suffix">
-                                <a href="#tab-03-b-m">menu-w3</a>
+                                <a href="#tab-03-b-m">menu3</a>
                             </li>
                         </ul>
                         <div class="tabContWrap">
@@ -1150,17 +1371,17 @@
                         </div>
                     </div>
                     
-                    <div class="clip"><span>BtnType Tab</span></div>   
-                    <div class="tabWrapper" id="style-tab06">
-                        <ul class="tabBtnWrap btnType smType">
+                    <div class="clip"><span>Small BtnType Tab</span></div>   
+                    <div class="tabWrapper" id="style-tab07">
+                        <ul class="tabBtnWrap btnType smSize">
                             <li class="tabBtn prefix">
-                                <a href="#tab-01-b-s" class="is-active">menu-w1</a>
+                                <a href="#tab-01-b-s" class="is-active">menu-s1</a>
                             </li>
                             <li class="tabBtn center">
-                                <a href="#tab-02-b-s">menu-w2</a>
+                                <a href="#tab-02-b-s">menu-s2</a>
                             </li>
                             <li class="tabBtn suffix">
-                                <a href="#tab-03-b-s">menu-w3</a>
+                                <a href="#tab-03-b-s">menu-s3</a>
                             </li>
                         </ul>
                         <div class="tabContWrap">
@@ -1170,23 +1391,27 @@
                         </div>
                     </div>
                     
-                    <div class="clip"><span>BtnType Tab</span></div>   
-                    <div class="tabWrapper" id="style-tab07">
-                        <ul class="tabBtnWrap btnType borderType">
+
+
+
+                    <!--테투리 버튼탭-->
+                    <div class="clip"><span>Border Tab</span></div>   
+                    <div class="tabWrapper" id="style-tab08">
+                        <ul class="tabBtnWrap bdType">
                             <li class="tabBtn prefix">
-                                <a href="#tab-01-b-b" class="is-active">menu-w1</a>
+                                <a href="#tab-01-bo" class="is-active">menu1</a>
                             </li>
                             <li class="tabBtn center">
-                                <a href="#tab-02-b-b">menu-w2</a>
+                                <a href="#tab-02-bo">menu2</a>
                             </li>
                             <li class="tabBtn suffix">
-                                <a href="#tab-03-b-b">menu-w3</a>
+                                <a href="#tab-03-bo">menu3</a>
                             </li>
                         </ul>
                         <div class="tabContWrap">
-                            <div id="tab-01-b-b" class="tabCont is-active">aa</div>
-                            <div id="tab-02-b-b" class="tabCont">bb</div>
-                            <div id="tab-03-b-b" class="tabCont">cc</div>
+                            <div id="tab-01-bo" class="tabCont is-active">aa</div>
+                            <div id="tab-02-bo" class="tabCont">bb</div>
+                            <div id="tab-03-bo" class="tabCont">cc</div>
                         </div>
                     </div>
                 </div>
@@ -1243,47 +1468,53 @@
                     </span>
                 </div>
             </div>
-            <div id="style-modal" class="tabCont">                
+            <div id="style-modal" class="tabCont">    <!--모달 수정 완료 230322-->          
                 <h2>Tab</h2>
                 <div class="">
                     <div class="clip mt20"><span>1Button Modal</span></div>  
-                    <a href="#style-1button" class="button white layerOpen">컨펌팝업오픈(버튼 하나)</a>
+                    <!-- <a href="#style-1button" class="button white layerOpen">컨펌팝업오픈(버튼 하나)</a> -->
+                    <button type="button" aria-controls="style-1button" class="midSize layerOpen">컨펌팝업오픈(버튼 하나)</button>
+
                     <div id="style-1button" class="modalLayer center">
                         <div class="layerBox confirmType">
-                            <div class="modalHeader"><h3>안내사항</h3></div>
+                            <div class="modalHeader"><h4>안내사항</h4></div>
                             <div class="modalCont">
                                 지원접수 및 투입이력은 회원개인 정보와 연동됩니다. 따라서 관리자 직접 추가 시 삭제가 불가합니다.
                             </div>
                             <div class="modalFooter">
-                                <button class="fullSize layerClose">취소</button>
+                                <button class="layerClose">취소</button>
                             </div>
                         </div>        
                         <div class="layerDim"></div>    
                     </div>
 
                     <div class="clip"><span>2Button Modal</span></div>  
-                    <a href="#style-2button" class="button white layerOpen">컨펌팝업오픈(버튼 둘)</a>
+                    <!-- <a href="#style-2button" class="button white layerOpen">컨펌팝업오픈(버튼 둘)</a> -->
+                    <button type="button" aria-controls="style-2button" class="midSize layerOpen">컨펌팝업오픈(버튼 둘)</button>
+
                     <div id="style-2button" class="modalLayer center">
                         <div class="layerBox confirmType">
                             <div class="modalCont center">메모를 삭제하시겠습니까?</div>
-                            <div class="modalFooter halfType">
-                                <button class="fullSize white prefix layerClose">취소</button>
-                                <button class="fullSize suffix layerClose">확인</button>
+                            <div class="modalFooter">
+                                <button class="white layerClose">취소</button>
+                                <button class="layerClose">확인</button>
                             </div>
                         </div>        
                         <div class="layerDim"></div>    
                     </div>
 
                     <div class="clip"><span>Modal</span></div>  
-                    <a href="#style-send" class="button white layerOpen">팝업오픈 버튼(메일/문자보내기)</a>
+                    <!-- <a href="#style-send" class="button white layerOpen">팝업오픈 버튼(메일/문자보내기)</a> -->
+                    <button type="button" aria-controls="style-send" class="midSize layerOpen">팝업오픈 버튼(메일/문자보내기)</button>
+
                     <div id="style-send" class="modalLayer center">
                         <div class="layerBox">
                             <div class="modalHeader">
                                 <button class="ico layerClose"></button>
                             </div>
                             <div class="modalCont">
-                                <div class="tabWrapper">
-                                    <ul class="tabBtnWrap btnType wideType">
+                                <div class="tabWrapper" id="contact-modal">
+                                    <ul class="tabBtnWrap wideSize">
                                         <li class="tabBtn">
                                             <a href="#style-message" class="is-active">문자</a>
                                         </li>
@@ -1380,7 +1611,7 @@
                                                         <textarea name="" id="" rows="13"></textarea>
                                                         
                                                         <!--220901 추가 -ys-->
-                                                        <div class="flexBetween">
+                                                        <div class="flexBw">
                                                             <div class="prefix">
                                                                 <input type="checkbox" id="talkAlarm" name="aa" class="hasTxt" checked="">
                                                                 <label for="talkAlarm">카카오톡 알림도 함께 보내기</label>
@@ -1406,18 +1637,20 @@
                                 </div>
                             </div>
                             <div class="modalFooter">
-                                <button class="fullSize white prefix">닫기</button>
-                                <button class="fullSize suffix">문자보내기</button>
+                                <button class="white layerClose">닫기</button>
+                                <button class="">문자보내기</button>
                             </div>
                         </div>        
                         <div class="layerDim"></div>    
                     </div>
+
+
                 </div>
             </div>
-            <div id="style-quickView" class="tabCont" style="height: 100vh;">
+            <div id="style-quickView" class="tabCont" style="height: 100vh;"><!--style 빼고 사용하세요.-->
                 <section class="quickView">
                     <div class="tabWrapper" id="tab01">
-                        <ul class="tabBtnWrap">
+                        <ul class="tabBtnWrap underType">
                             <li class="tabBtn">
                                 <a href="#quick-1">평가 (3)</a>
                             </li>
@@ -1432,14 +1665,14 @@
                             <div id="quick-1" class="tabCont">평가 aaa</div>
                             <div id="quick-2" class="tabCont is-active">
                                 <div class="boxTop">
-                                    <button class="fullSize showMemo">
+                                    <button class="showMemo">
                                         <i class="ico expand"></i>
                                     </button>
                                 </div>
                                 
                                 <div class="boxListWrap memoList is-active">
     
-                                    <button class="fullSize">메모 작성</button>
+                                    <button class="">메모 작성</button>
                                     
     
                                     <ul>
@@ -1573,7 +1806,9 @@
     <script>
         selectBox();
         toastClose();
-        checkAll();
+        //checkAll();
+        addText();
+        showMore();
     </script>
 </body>
 </html>

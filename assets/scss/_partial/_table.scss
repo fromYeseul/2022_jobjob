@@ -25,9 +25,7 @@
 
 table{
     width: 100%;
-    //220829
     font-size: rem(14);
-    //220829
     text-align: center;
     background: $white;
     
@@ -48,7 +46,7 @@ table{
             background: $bgColor;
         }
         &.dragTr{
-            height: rem(62);
+            //height: rem(62); 1줄당 31px
             cursor: move;
         }
         &.tableHead{
@@ -71,7 +69,12 @@ table{
             color: $white;
             font-weight: 500;
             padding: rem(14) 0;
-            background: $tableBgGray;
+            background: $tableBgGray;            
+            span{
+                &.layerOpen{
+                    color: $black;
+                }
+            }
         }
         td{
             color: $tableGray;
@@ -181,9 +184,11 @@ table{
                 background: transparent;
                 color: $black;
                 border-bottom: 1px solid $layoutColor;
-                a{
-                    color: $black;
+                // a{
+                span{
+                    //color: $black;
                     position: relative;
+                    cursor: pointer;
                     &::after{
                         content:'';    
                         //원형                    
@@ -304,6 +309,12 @@ table{
         color: $mainColor;
         cursor: pointer;
     }
+    span{
+        &.layerOpen{
+            color: $mainColor;
+            cursor: pointer;
+        }
+    }
     .memo{
         padding: rem(16);
         position: relative;
@@ -346,7 +357,7 @@ table{
     //     float: right;
     //     margin-top: -5px;
     // }
-    .flexBetween{
+    .flexBw{
         color: $tableGray;
         font-size: rem(14);
         align-items: center;
@@ -357,19 +368,12 @@ table{
 
 .listBottom{
     width: 100%;
-    //220913
-    //padding: rem(30) rem(40);
-    padding-top: rem(25);
-    //box-shadow: -5px -5px 10px rgba(0,0,0,0.1);
-    //position: absolute;
-    //bottom: 0;
-    @include flex_1_2;
-    //220829
+    padding-top: rem(20);
+    @include flex_2_3;
     font-size: rem(14);
-    //220829
-    .suffix{
-        margin-left: rem(10);
-    }
+    // .suffix{
+    //     margin-left: rem(10);
+    // }
     &.pagingType{
         justify-content: center;
     }
