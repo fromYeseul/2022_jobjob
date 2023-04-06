@@ -1371,13 +1371,13 @@ footer.toast button + button {
 .quickView .boxList {
   cursor: inherit;
 }
-.quickView .boxList.headType .cont .prefix {
+.quickView .boxList.headType .cont .prefix, .quickView .boxList.memoBox .cont .prefix {
   width: 100%;
 }
-.quickView .boxList.headType .cont .prefix ul {
+.quickView .boxList.headType .cont .prefix ul, .quickView .boxList.memoBox .cont .prefix ul {
   width: 100%;
 }
-.quickView .boxList.headType .cont .txtCenter {
+.quickView .boxList.headType .cont .txtCenter, .quickView .boxList.memoBox .cont .txtCenter {
   margin-top: 0.625rem;
 }
 .quickView .boxList .memMemo a {
@@ -1521,6 +1521,22 @@ footer.toast button + button {
 }
 #memArea .filterList .suffix input[type=checkbox]:nth-child(2n+1):checked + label + input + label + input + label {
   border-top: transparent;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.loading img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* 테이블 검색 조건 */
@@ -1843,6 +1859,7 @@ table input {
 }
 .listBottom.pagingType {
   justify-content: center;
+  border-top: 1px solid #f2f2f7;
 }
 .listBottom.flex {
   padding-top: 0.625rem;
@@ -1943,6 +1960,7 @@ table input {
   display: flex;
 }
 .tabBtnWrap .tabBtn {
+  background: #fff;
   text-align: center;
   line-height: 2.625rem;
   margin-left: -1px;
@@ -2255,15 +2273,14 @@ span.button {
 
 .point {
   display: inline-block;
-  min-width: 2.5rem;
-  line-height: 1.375rem;
+  min-width: 1.875rem;
+  line-height: 1.125rem;
   font-size: 0.75rem;
   color: #fff;
   text-align: center;
   background: #ff1236;
   border: 0;
   border-radius: 0.3125rem;
-  margin-right: 0.25rem;
   cursor: inherit;
 }
 .point.mainC {
@@ -2444,6 +2461,11 @@ input[type=date].editType.xsSize {
   width: 3.75rem;
   height: 2.5rem;
 }
+input[type=text] + input,
+input[type=password] + input,
+input[type=date] + input {
+  margin-top: 0.625rem;
+}
 input[type=text] + .btnType,
 input[type=password] + .btnType,
 input[type=date] + .btnType {
@@ -2525,6 +2547,7 @@ input[type=password] {
 /* INPUT + 버튼 */
 .hasBtn {
   display: flex;
+  align-items: center;
 }
 .hasBtn input {
   padding-left: 0.625rem;
@@ -2892,6 +2915,31 @@ input[type=radio]:checked + label::before {
 }
 input[type=checkbox].hasTxt + label::before,
 input[type=radio].hasTxt + label::before {
+  margin-right: 0.375rem;
+}
+input[type=checkbox] + input[type=hidden] + label,
+input[type=radio] + input[type=hidden] + label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+input[type=checkbox] + input[type=hidden] + label::before,
+input[type=radio] + input[type=hidden] + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: sub;
+  width: 1.125rem;
+  height: 1.125rem;
+  vertical-align: -3px;
+  background-image: url(../img/icoGroup.png);
+  background-position: 0px 0px;
+}
+input[type=checkbox]:checked + input[type=hidden] + label::before,
+input[type=radio]:checked + input[type=hidden] + label::before {
+  background-position: -20px 0;
+}
+input[type=checkbox].hasTxt + input[type=hidden] + label::before,
+input[type=radio].hasTxt + input[type=hidden] + label::before {
   margin-right: 0.375rem;
 }
 input[type=checkbox].bMark,
@@ -3772,7 +3820,6 @@ input[type=radio]:checked + label::before {
 .boxListWrap + .listBottom {
   padding: 1.25rem 0;
   background: #fff;
-  border-top: 1px solid #f2f2f7;
 }
 .boxListWrap > ul > li {
   margin-top: 1.25rem;
@@ -3808,7 +3855,6 @@ input[type=radio]:checked + label::before {
   position: relative;
 }
 .boxWrap.headType .head .prefix {
-  color: #878791;
   font-size: 0.875rem;
   width: 90%;
   overflow: hidden;
@@ -3818,25 +3864,28 @@ input[type=radio]:checked + label::before {
   text-align: left;
   cursor: pointer;
 }
-.boxWrap.headType .head .prefix span {
-  margin-left: 0.625rem;
+.boxWrap.headType .head .prefix p > span {
+  color: #878791;
+}
+.boxWrap.headType .head .prefix p > span.dNear {
+  margin-right: 0.625rem;
+}
+.boxWrap.headType .head .prefix p > span:last-child {
+  margin-left: 0.375rem;
   position: relative;
 }
-.boxWrap.headType .head .prefix span::before {
+.boxWrap.headType .head .prefix p > span:last-child::before {
   content: "";
   width: 1px;
-  height: 0.875rem;
+  height: 0.75rem;
   background: #878791;
   position: absolute;
   top: 50%;
-  left: -6px;
+  left: -4px;
   transform: translateY(-40%);
 }
-.boxWrap.headType .head .prefix span:first-child {
-  margin-left: 0;
-}
-.boxWrap.headType .head .prefix span:first-child::before {
-  display: none;
+.boxWrap.headType .head .prefix h4 {
+  margin-top: 0.375rem;
 }
 .boxWrap.headType .cont {
   margin-top: 0.625rem;
@@ -4054,28 +4103,28 @@ input[type=radio]:checked + label::before {
 .boxList.flexType .suffix .txtCenter .select {
   margin: 10px auto;
 }
-.boxList.headType {
+.boxList.headType, .boxList.memoBox {
   border: 1px solid #e6e6eb;
   position: relative;
 }
-.boxList.headType:first-child {
+.boxList.headType:first-child, .boxList.memoBox:first-child {
   margin-top: 0.625rem;
 }
-.boxList.headType .head {
+.boxList.headType .head, .boxList.memoBox .head {
   color: #878791;
   background: #e6e6eb;
   padding: 0.375rem 0.5rem;
 }
-.boxList.headType .head .prefix {
+.boxList.headType .head .prefix, .boxList.memoBox .head .prefix {
   font-weight: 400;
 }
-.boxList.headType .head .prefix .score {
+.boxList.headType .head .prefix .score, .boxList.memoBox .head .prefix .score {
   margin-left: 0.625rem;
 }
-.boxList.headType .head .suffix {
+.boxList.headType .head .suffix, .boxList.memoBox .head .suffix {
   line-height: 1;
 }
-.boxList.headType .cont {
+.boxList.headType .cont, .boxList.memoBox .cont {
   margin-top: 0;
   border-top: 0;
   display: flex;
@@ -4084,36 +4133,36 @@ input[type=radio]:checked + label::before {
   font-size: 0.875rem;
   padding: 0.875rem;
 }
-.boxList.headType .cont .prefix {
+.boxList.headType .cont .prefix, .boxList.memoBox .cont .prefix {
   width: 60%;
   color: #878791;
 }
-.boxList.headType .cont .prefix ul {
+.boxList.headType .cont .prefix ul, .boxList.memoBox .cont .prefix ul {
   width: 96%;
 }
-.boxList.headType .cont .prefix span {
+.boxList.headType .cont .prefix span, .boxList.memoBox .cont .prefix span {
   margin-right: 0.625rem;
 }
-.boxList.headType .cont .prefix .memName {
+.boxList.headType .cont .prefix .memName, .boxList.memoBox .cont .prefix .memName {
   display: flex;
   color: #29292c;
   font-weight: 700;
 }
-.boxList.headType .cont .prefix .memName p {
+.boxList.headType .cont .prefix .memName p, .boxList.memoBox .cont .prefix .memName p {
   color: #878791;
   font-weight: 500;
 }
-.boxList.headType .cont .prefix .memPay {
+.boxList.headType .cont .prefix .memPay, .boxList.memoBox .cont .prefix .memPay {
   color: #29292c;
   font-weight: 500;
 }
-.boxList.headType .cont .prefix .memCareer {
+.boxList.headType .cont .prefix .memCareer, .boxList.memoBox .cont .prefix .memCareer {
   color: #009ce0;
 }
-.boxList.headType .cont .prefix .memGrd {
+.boxList.headType .cont .prefix .memGrd, .boxList.memoBox .cont .prefix .memGrd {
   color: #009ce0;
 }
-.boxList.headType .cont .prefix .memMemo {
+.boxList.headType .cont .prefix .memMemo, .boxList.memoBox .cont .prefix .memMemo {
   margin-top: 0.625rem;
   padding: 0.3125rem 0.5rem;
   background: #f2f2f7;
@@ -4126,13 +4175,13 @@ input[type=radio]:checked + label::before {
   text-align: left;
   cursor: pointer;
 }
-.boxList.headType .cont .prefix .memMemo b {
+.boxList.headType .cont .prefix .memMemo b, .boxList.memoBox .cont .prefix .memMemo b {
   color: #29292c;
 }
-.boxList.headType .cont .prefix .memMemo.is-active {
+.boxList.headType .cont .prefix .memMemo.is-active, .boxList.memoBox .cont .prefix .memMemo.is-active {
   padding-left: 1.3125rem;
 }
-.boxList.headType .cont .prefix .memMemo.is-active:before {
+.boxList.headType .cont .prefix .memMemo.is-active:before, .boxList.memoBox .cont .prefix .memMemo.is-active:before {
   content: "...";
   position: absolute;
   left: 1.25rem;
@@ -4140,7 +4189,7 @@ input[type=radio]:checked + label::before {
   letter-spacing: 1px;
   line-height: 0.75rem;
 }
-.boxList.headType .cont .prefix .memMemo.editType {
+.boxList.headType .cont .prefix .memMemo.editType, .boxList.memoBox .cont .prefix .memMemo.editType {
   padding: 0;
   background: transparent;
   display: -webkit-box;
@@ -4154,14 +4203,15 @@ input[type=radio]:checked + label::before {
   cursor: initial;
   width: 100%;
 }
-.boxList.headType .cont .prefix .memMemo.editType:before {
+.boxList.headType .cont .prefix .memMemo.editType:before, .boxList.memoBox .cont .prefix .memMemo.editType:before {
   display: none;
 }
-.boxList.headType .cont .prefix .memMemo.editType.is-active {
+.boxList.headType .cont .prefix .memMemo.editType.is-active, .boxList.memoBox .cont .prefix .memMemo.editType.is-active {
   -webkit-line-clamp: initial;
 }
 .boxList.headType .cont .center,
-.boxList.headType .cont .suffix {
+.boxList.headType .cont .suffix, .boxList.memoBox .cont .center,
+.boxList.memoBox .cont .suffix {
   text-align: center;
   font-size: 0.875rem;
   display: flex;
@@ -4169,16 +4219,17 @@ input[type=radio]:checked + label::before {
   justify-content: center;
 }
 .boxList.headType .cont .center button,
-.boxList.headType .cont .suffix button {
+.boxList.headType .cont .suffix button, .boxList.memoBox .cont .center button,
+.boxList.memoBox .cont .suffix button {
   font-size: 0.875rem;
 }
-.boxList.headType .cont .center {
+.boxList.headType .cont .center, .boxList.memoBox .cont .center {
   margin-left: 0;
   padding: 0 0.875rem;
   font-weight: 500;
   position: relative;
 }
-.boxList.headType .cont .center::before {
+.boxList.headType .cont .center::before, .boxList.memoBox .cont .center::before {
   content: "";
   width: 1px;
   height: 5.625rem;
@@ -4188,42 +4239,42 @@ input[type=radio]:checked + label::before {
   top: 50%;
   transform: translateY(-50%);
 }
-.boxList.headType .cont .suffix {
+.boxList.headType .cont .suffix, .boxList.memoBox .cont .suffix {
   width: 5rem;
   color: #878791;
 }
-.boxList.headType .cont .suffix.clear {
+.boxList.headType .cont .suffix.clear, .boxList.memoBox .cont .suffix.clear {
   color: #0460d2;
 }
-.boxList.headType .bottom {
+.boxList.headType .bottom, .boxList.memoBox .bottom {
   display: block;
   padding: 0.875rem;
   padding-top: 0;
   font-weight: 400;
   color: #878791;
 }
-.boxList.headType .bottom .comment {
+.boxList.headType .bottom .comment, .boxList.memoBox .bottom .comment {
   color: #29292c;
 }
-.boxList.headType .bottom .txtCenter {
+.boxList.headType .bottom .txtCenter, .boxList.memoBox .bottom .txtCenter {
   margin-top: 5px;
 }
-.boxList.headType .showMore {
+.boxList.headType .showMore, .boxList.memoBox .showMore {
   right: 0.9375rem;
   top: 0.875rem;
 }
-.boxList.headType textarea, .boxList.headType input[type=text] {
+.boxList.headType textarea, .boxList.headType input[type=text], .boxList.memoBox textarea, .boxList.memoBox input[type=text] {
   margin-top: 0.3125rem;
   padding: 0.4375rem;
 }
-.boxList.headType.is-active {
+.boxList.headType.is-active, .boxList.memoBox.is-active {
   border: 1px solid #0460d2;
 }
-.boxList.headType.is-active .head {
+.boxList.headType.is-active .head, .boxList.memoBox.is-active .head {
   color: #fff;
   background: #0460d2;
 }
-.boxList.headType .alertToast {
+.boxList.headType .alertToast, .boxList.memoBox .alertToast {
   top: -10px;
   left: 48%;
   transform: translateX(-50%);
@@ -4374,10 +4425,6 @@ h6 {
   border-radius: 0.875rem;
   background: #fff;
 }
-.loginBox input {
-  height: 2.75rem;
-  margin-bottom: 0.625rem;
-}
 .loginBox button {
   margin-top: 2rem;
   font-size: 1.125rem;
@@ -4444,7 +4491,7 @@ h6 {
 }
 .myProjDetail .boxWrap.suffix .yScroll {
   padding-right: 0.625rem;
-  height: 8.125rem;
+  height: 6.875rem;
 }
 .myProjDetail .boxWrap.sticky {
   margin-top: 0.625rem;
@@ -4460,7 +4507,7 @@ h6 {
   padding-top: 0;
 }
 .myProjDetail .boxWrap.sticky .yScroll {
-  height: calc(100vh - 530px);
+  height: calc(100vh - 514px);
   margin-top: 0;
   transition: height 0.3s;
   overflow-y: auto;
@@ -4493,7 +4540,7 @@ h6 {
 .myProjDetail .boxWrap .boxType {
   max-height: 7.5rem;
   margin-top: 1.875rem;
-  padding-bottom: 0.625rem;
+  padding-bottom: 0.375rem;
   overflow-x: auto;
 }
 .myProjDetail .boxWrap .yScroll {
@@ -4644,8 +4691,8 @@ h6 {
 .projRegister .regiPart .boxWrap .inputList.wide {
   width: 83.75rem;
 }
-.projRegister .regiPart .boxWrap .inputList .full input {
-  width: 42.1875rem;
+.projRegister .regiPart .boxWrap .inputList .full input[type=text] {
+  width: calc(100% - 253px);
 }
 .projRegister .regiPart .boxWrap .inputList span {
   font-weight: 500;
@@ -4861,7 +4908,7 @@ h6 {
     height: calc(100vh - 70px) !important;
   }
   .myProjList .boxListWrap {
-    height: calc(100vh - 174px);
+    height: calc(100vh - 134px);
   }
   .myPeoList .yScroll {
     height: calc(100vh - 243px);
@@ -5065,12 +5112,6 @@ h6 {
 }
 .styleguide .input .inputGroup li {
   margin-bottom: 0;
-}
-.styleguide .input .inputGroup span {
-  display: inherit;
-  width: auto;
-  line-height: normal;
-  font-size: 0.875rem;
 }
 
 /*# sourceMappingURL=style.css.map */

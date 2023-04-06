@@ -31,6 +31,7 @@ function gnbNav(){
 }
 gnbNav();
 
+
 //nav 2depth
 function navList(){
     let navLi = document.querySelectorAll('.navWrapper > ul > li');
@@ -75,8 +76,6 @@ function headerPage(){
 //headerPage();
 
 
-
-
 // 우측패널
 function rightPanel(){
     let rPanelList = document.querySelectorAll('.rPanel > ul > li');
@@ -116,6 +115,7 @@ function rightPanel(){
 }
 rightPanel();
 
+
 // 우측 패널 필터창
 function filterLayer(){
     let filter = document.querySelector('.rPanelLayer .filter');
@@ -131,6 +131,7 @@ function filterLayer(){
     }
 }
 filterLayer();
+
 
 // 레이어팝업(여러개ok) - overflow, 외부영역선택시 close 추가해보기, 닫기버튼 확인
 function layerPop(){
@@ -159,6 +160,7 @@ function layerPop(){
 layerPop();
 
 $(document).on("click", layerPop());
+
 
 // 탭메뉴(여러개 확인하기!!)
 function tabMenu(){
@@ -201,60 +203,61 @@ tabMenu();
 
 
 //리스트 선택
-// function boxChk(){
-//     let listType = document.querySelectorAll('.boxList.listType');
-//     let headType = document.querySelectorAll('.boxList.headType');
+function boxChk(){
+    let listType = document.querySelectorAll('.boxList.listType');
+    let headType = document.querySelectorAll('.boxList.headType');
 
-//     if(listType !== null){
-//         for(let i = 0; i<listType.length; i++){
-//             listType[i].addEventListener('click', function(e){
-//                 for(let j = 0; j<listType.length; j++){
-//                     listType[j].classList.remove('is-active');
-//                 }
-//                 listType[i].classList.add('is-active');
-//             });
-//         }
-//     }
-//     if(headType !== null){
-//         for(let i = 0; i<headType.length; i++){
-//             headType[i].addEventListener('click', function(e){
-//                 for(let j = 0; j<headType.length; j++){
-//                     headType[j].classList.remove('is-active');
-//                 }
-//                 headType[i].classList.add('is-active');
-//             });
-//         }
-//     }
-// }
-// boxChk();
-
-//리스트 선택 - 221019 허책임님
-function boxChk(id){
-	let boxListWrap = null;
-	let boxList = null;
-	let isActive = null;
-	
-	if (id != undefined) {
-		boxListWrap = document.querySelector('#' + id + ' .boxListWrap');
-		boxList = document.querySelectorAll('#' + id + ' .boxList.headType');
-		isActive = document.querySelectorAll('#' + id + ' .boxList.is-active');	
-	} else {
-	    boxListWrap = document.querySelector('.boxListWrap');
-    	boxList = document.querySelectorAll('.boxList.listType');
-    	isActive = document.querySelectorAll('.boxList.is-active');
-	}
-
-    if(boxList !== null){
-        for(let i = 0; i<boxList.length; i++){
-            boxList[i].addEventListener('click', function(e){
-                for(let j = 0; j<boxList.length; j++){
-                    boxList[j].classList.remove('is-active');
+    if(listType !== null){
+        for(let i = 0; i<listType.length; i++){
+            listType[i].addEventListener('click', function(e){
+                for(let j = 0; j<listType.length; j++){
+                    listType[j].classList.remove('is-active');
                 }
-                boxList[i].classList.add('is-active');
+                listType[i].classList.add('is-active');
+            });
+        }
+    }
+    if(headType !== null){
+        for(let i = 0; i<headType.length; i++){
+            headType[i].addEventListener('click', function(e){
+                for(let j = 0; j<headType.length; j++){
+                    headType[j].classList.remove('is-active');
+                }
+                headType[i].classList.add('is-active');
             });
         }
     }
 }
+boxChk();
+
+
+//리스트 선택 - 221019 허책임님
+// function boxChk(id){
+// 	let boxListWrap = null;
+// 	let boxList = null;
+// 	let isActive = null;
+	
+// 	if (id != undefined) {
+// 		boxListWrap = document.querySelector('#' + id + ' .boxListWrap');
+// 		boxList = document.querySelectorAll('#' + id + ' .boxList.headType');
+// 		isActive = document.querySelectorAll('#' + id + ' .boxList.is-active');	
+// 	} else {
+// 	    boxListWrap = document.querySelector('.boxListWrap');
+//     	boxList = document.querySelectorAll('.boxList.listType');
+//     	isActive = document.querySelectorAll('.boxList.is-active');
+// 	}
+
+//     if(boxList !== null){
+//         for(let i = 0; i<boxList.length; i++){
+//             boxList[i].addEventListener('click', function(e){
+//                 for(let j = 0; j<boxList.length; j++){
+//                     boxList[j].classList.remove('is-active');
+//                 }
+//                 boxList[i].classList.add('is-active');
+//             });
+//         }
+//     }
+// }
 
 
 
@@ -293,7 +296,7 @@ function addText(grd_grp_cd){
         })
     }
 }
-// addText();
+//addText();
 
 
 //등급보기 다음 input focus
@@ -482,6 +485,7 @@ function selectBox(){
 }
 //selectBox();
 
+
 //제이쿼리 selectbox	 
 function selectJQ(){	
 	$(document).on("click", ".select", function(e) {
@@ -507,7 +511,7 @@ function selectJQ(){
 	    });
 	});
 }   
-
+//selectJQ();
 
 
 // 체크박스 전체선택     //??????????????? 여러개 구별하도록 수정하기
@@ -582,27 +586,29 @@ function chkAll(){
 
 //더보기 (마이피플)
 //호출 : showMore(); 
-// function showMore(){
-//     let openMore = document.querySelectorAll(".showMore");
-//     let moreList = document.querySelectorAll(".moreList");
-//     for(let i=0; i<openMore.length; i++){
-//         openMore[i].addEventListener("click", function(){
-//             // e.preventDefault(e);
-//             moreList[i].classList.toggle("is-active");
-//         });
-//     }
-// }
-
-function showMore(ulId){
-    let openMore = document.querySelectorAll("#" + ulId +" .showMore");
-    let moreList = document.querySelectorAll("#" + ulId +" .moreList");
+function showMore(){
+    let openMore = document.querySelectorAll(".showMore");
+    let moreList = document.querySelectorAll(".moreList");
     for(let i=0; i<openMore.length; i++){
-        openMore[i].addEventListener("click", function(e){
-            e.preventDefault(e);
+        openMore[i].addEventListener("click", function(){
+            // e.preventDefault(e);
             moreList[i].classList.toggle("is-active");
-       });
+        });
     }
 }
+//showMore();
+
+
+// function showMore(ulId){
+//     let openMore = document.querySelectorAll("#" + ulId +" .showMore");
+//     let moreList = document.querySelectorAll("#" + ulId +" .moreList");
+//     for(let i=0; i<openMore.length; i++){
+//         openMore[i].addEventListener("click", function(e){
+//             e.preventDefault(e);
+//             moreList[i].classList.toggle("is-active");
+//        });
+//     }
+// }
 
 //showMore();
 
@@ -894,7 +900,7 @@ function autoTextarea(){
         }    
     }
 }
-//autoTextarea();
+autoTextarea();
 
 
 //투입상세정보팝업 드래그앤드롭

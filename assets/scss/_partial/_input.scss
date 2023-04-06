@@ -145,6 +145,9 @@ input[type=date]{
             height: rem(40);
         }
     }
+    & + input{
+        margin-top: rem(10);
+    }
     & + .btnType{
         margin-left: rem(10);
     }
@@ -227,6 +230,7 @@ input[type=password]{
 /* INPUT + 버튼 */
 .hasBtn{
     display: flex;
+    align-items: center;
     input{
         padding-left: rem(10);
         & + button{

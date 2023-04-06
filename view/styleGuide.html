@@ -17,7 +17,7 @@
             <h2>Style Guide</h2>
             <ul class="">
                 <li class="tabBtn">
-                    <a href="#style-color">Color</a>
+                    <a href="#style-color" class="is-active">Color</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-font">Font</a>
@@ -32,7 +32,7 @@
                     <a href="#style-button">Button</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-input" class="is-active">Input / Select (230403정리중)</a>
+                    <a href="#style-input">Input / Select</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-chk">Check / Radio</a>
@@ -57,7 +57,7 @@
         <!--//list-->
         <!--content-->
         <div class="tabContWrap">
-            <div id="style-color" class="tabCont">
+            <div id="style-color" class="tabCont is-active">
                 <h2>Color</h2>
                 <div class="">
                     <div class="clip mt20"><span>Primary Color</span></div>
@@ -437,7 +437,7 @@
                         </ul>
                     </div>
             </div>
-            <div id="style-input" class="tabCont is-active">
+            <div id="style-input" class="tabCont">
                 <h2>Input / Select</h2>
                 <div class="input">
                     <div class="clip mt20"><span>Input</span></div>   
@@ -514,6 +514,9 @@
                     <div class="icon">
                         <ul>
                             <li>
+                                <span>left icon</span>
+                                <span class="size">left icon</span>
+
                                 <label for="search">검색</label>
                                 <div class="inputIco">
                                     <i class="ico search"></i>
@@ -521,6 +524,9 @@
                                 </div>
                             </li>
                             <li>
+                                <span>right icon</span>
+                                <span class="size">right icon</span>
+                                
                                 <label for="search">검색</label>
                                 <div class="inputIco">
                                     <input type="text" class="" maxlength="" placeholder="검색어를 입력하세요.">
@@ -528,15 +534,20 @@
                                 </div>
                             </li>
                             <li>
+                                <span>error message</span>
+                                <span class="size">error message</span>
+                                
                                 <label for="search">아이디</label>
                                 <div class="inputIco">
-                                    <i class="ico search"></i>
-                                    <input type="text" class="" maxlength="" placeholder="검색어를 입력하세요.">
+                                    <input type="text" class="" maxlength="" placeholder="아이디를 입력하세요.">
                                     <button class="ico search"></button>
                                 </div>
                                 <p class="error is-active">* 아이디가 틀렸습니다.</p>
                             </li>
                             <li>
+                                <span>password type</span>
+                                <span class="size">password type</span>
+                                
                                 <label for="pw">비밀번호</label>
                                 <div class="inputIco">
                                     <form action="">
@@ -553,6 +564,9 @@
                     <div class="">
                         <ul>
                             <li>
+                                <span>우 버튼</span>
+                                <span class="size">우측 버튼</span>
+                                
                                 <div class="hasBtn">
                                     <label for="project2">검색</label>
                                     <input type="text" id="project2" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
@@ -560,6 +574,9 @@
                                 </div>
                             </li>
                             <li>
+                                <span>우 아이콘/버튼</span>
+                                <span class="size">우측 아이콘/버튼</span>
+                                
                                 <div class="hasBtn">         
                                     <label for="search">검색</label>
                                     <div class="inputIco">
@@ -570,6 +587,9 @@
                                 </div> 
                             </li>
                             <li>
+                                <span>좌 버튼</span>
+                                <span class="size">좌측 버튼</span>
+                                
                                 <div class="hasBtn">
                                     <label for="project3">검색</label>
                                     <button class="midSize">검색</button>
@@ -577,6 +597,9 @@
                                 </div>
                             </li>
                             <li>
+                                <span>좌 버튼/우 아이콘</span>
+                                <span class="size">좌 버튼/우 아이콘</span>
+                                
                                 <div class="hasBtn">         
                                     <label for="search">검색</label>
                                     <button class="midSize">검색</button>
@@ -608,14 +631,28 @@
 
                     <div class="clip"><span>DATE</span></div> 
                     <div class="">
-                        <input type="date">
-                        <input type="date" class="smSize">
-                        <input type="date" class="editType">
+                        <ul>
+                            <li>
+                                <span>default</span>
+                                <span class="size">width 140px</span>
+                                <input type="date">
+                            </li>
+                            <li>
+                                <span>smSize</span>
+                                <span class="size">width 115px</span>
+                                <input type="date" class="smSize">
+                            </li>
+                            <li>
+                                <span>editType</span>
+                                <span class="size">width 84%</span>
+                                <input type="date" class="editType">
+                            </li>
+                        </ul>
                     </div>
                     
                     
 
-                    <div class="clip"><span>파일첨부(ing)</span></div> 
+                    <div class="clip"><span>파일첨부(no working)</span></div> 
                     <div class="">
                         <div class="inputGroup">
                             <label for="fileUpload">여기에 첨부 파일을 끌어오세요. 또는 </label>
@@ -630,7 +667,7 @@
                         </div>  
                     </div>
 
-                    <div class="clip"><span>다중 파일첨부(ing)</span></div> 
+                    <div class="clip"><span>다중 파일첨부(no working)</span></div> 
                     <div class="">
                         <div class="uploadBox">
                             <div class="inputGroup upload">
@@ -651,24 +688,13 @@
                         <p class="counter">글자 수 50자</p>
                     </div>
 
-                    <div class="clip"><span>select / select(+chkckbox)</span></div> 
+                    <div class="clip"><span>select</span></div> 
                     <div class="input">
                         <ul>
                             <li>
-                                <span>lowSize</span>
-                                <span class="size">lowSize</span>
-                                <div class="select lowSize">
-                                    <span class="selDefault">10개씩</span>
-                                    <ul class="optionList">
-                                        <li class="optionItem">20개씩</li>
-                                        <li class="optionItem">50개씩</li>
-                                        <li class="optionItem">100개씩</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
                                 <span>xsSize</span>
-                                <span class="size">xsSize</span>
+                                <span class="size">70px * 34px</span>
+
                                 <div class="select xsSize">
                                     <span class="selDefault">10개씩</span>
                                     <ul class="optionList">
@@ -680,7 +706,8 @@
                             </li>
                             <li>
                                 <span>smSize</span>
-                                <span class="size">smSize</span>
+                                <span class="size">86px * 28px</span>
+                                
                                 <div class="select smSize">
                                     <span class="selDefault">10개씩</span>
                                     <ul class="optionList">
@@ -692,7 +719,7 @@
                             </li>
                             <li>
                                 <span>default</span>
-                                <span class="size">default</span>
+                                <span class="size">100px * 44px</span>
                                 <div class="select">
                                     <span class="selDefault">10개씩</span>
                                     <ul class="optionList">
@@ -703,9 +730,10 @@
                                 </div>
                             </li>
                             <li>
-                                <span>laSize</span>
-                                <span class="size">laSize</span>
-                                <div class="select laSize">
+                                <span>lowSize</span>
+                                <span class="size">100px * 34px</span>
+
+                                <div class="select lowSize">
                                     <span class="selDefault">10개씩</span>
                                     <ul class="optionList">
                                         <li class="optionItem">20개씩</li>
@@ -714,9 +742,21 @@
                                     </ul>
                                 </div>
                             </li>
+                            <!-- <li>
+                                <span>laSize</span>
+                                <span class="size">130px * 44px</span>
+                                <div class="select laSize">
+                                    <span class="selDefault">10개씩</span>
+                                    <ul class="optionList">
+                                        <li class="optionItem">20개씩</li>
+                                        <li class="optionItem">50개씩</li>
+                                        <li class="optionItem">100개씩</li>
+                                    </ul>
+                                </div>
+                            </li> -->
                             <li>
                                 <span>wideSize</span>
-                                <span class="size">wideSize</span>
+                                <span class="size">180px * 44px</span>
                                 <div class="select wideSize">
                                     <span class="selDefault">10개씩</span>
                                     <ul class="optionList">
@@ -732,27 +772,36 @@
                     
 
                     <div class="clip"><span>select(+chkckbox)</span></div> 
-                    <div class="select">
-                        <span class="selDefault">선택</span>
-                        <ul class="optionList hasChk">
-                            <li class="optionItem">
-                                <input type="checkbox" id="optChk_1" name="aa" class="hasTxt">
-                                <label for="optChk_1">apple</label>
-                            </li>                    
-                            <li class="optionItem">
-                                <input type="checkbox" id="optChk_2" name="aa" class="hasTxt">
-                                <label for="optChk_2">banana</label>
-                            </li>
-                            <li class="optionItem">
-                                <input type="checkbox" id="optChk_3" name="aa" class="hasTxt">
-                                <label for="optChk_3">grape</label>
-                            </li>
-                            <li class="optionItem">
-                                <input type="checkbox" id="optChk_4" name="aa" class="hasTxt">
-                                <label for="optChk_4">mango</label>
+                    <div class="">
+                        <ul>
+                            <li>
+                                <span>default</span>
+                                <span class="size">100px * 44px</span>
+
+                                <div class="select">
+                                    <span class="selDefault">선택</span>
+                                    <ul class="optionList hasChk">
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_1" name="aa" class="hasTxt">
+                                            <label for="optChk_1">apple</label>
+                                        </li>                    
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_2" name="aa" class="hasTxt">
+                                            <label for="optChk_2">banana</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_3" name="aa" class="hasTxt">
+                                            <label for="optChk_3">grape</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_4" name="aa" class="hasTxt">
+                                            <label for="optChk_4">mango</label>
+                                        </li>
+                                    </ul>
+                                </div>      
                             </li>
                         </ul>
-                    </div>      
+                    </div>
                 </div>
             </div>
             <div id="style-chk" class="tabCont">  <!--라디오, 체크박스 수정 완료 230323-->
@@ -1694,7 +1743,7 @@
                                                 <div class="prefix">
                                                     <ul>
                                                         <li class="memName flex">
-                                                            <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                            <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                             <div class="">
                                                                 <span>홍길순(여/29)</span>
                                                                 <span>개발</span>
@@ -1727,7 +1776,7 @@
                                                 <div class="prefix">
                                                     <ul>
                                                         <li class="memName flex">
-                                                            <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                            <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                             <div class="">
                                                                 <span>홍길순(여/29)</span>
                                                                 <span>개발</span>
@@ -1766,7 +1815,7 @@
                                                 <div class="prefix">
                                                     <ul>
                                                         <li class="memName flex">
-                                                            <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                            <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                             <div class="">
                                                                 <span>홍길순(여/29)</span>
                                                                 <span>개발</span>

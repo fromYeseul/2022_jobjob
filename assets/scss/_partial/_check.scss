@@ -4,6 +4,17 @@ input[type=radio]{
     display: none;
     cursor: pointer;
     position: relative;
+
+    // appearance: none;
+    // width: 18px;
+    // height: 18px;
+    // background-image: url(../img/icoGroup.png);
+    // background-position: 0px 0px;
+    // vertical-align: -2px;
+    // &:checked{
+    //     background-position: -20px 0;
+    // }
+
     + label{
         display: inline-block;
         cursor: pointer;
@@ -32,7 +43,47 @@ input[type=radio]{
                 margin-right: rem(6);
             }
         }
+    }   
+    
+    //input hidden 이 들어갈때
+    + input[type=hidden]{
+        + label{
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            &::before{
+                content:'';
+                display: inline-block;
+                vertical-align: sub;
+                width: rem(18);
+                height: rem(18);
+                vertical-align: -3px;
+                background-image: url(../img/icoGroup.png);
+                background-position: 0px 0px;
+            }
+        }
+    }
+    &:checked{
+        + input[type=hidden]{
+            + label{
+                &::before{
+                    background-position: -20px 0;
+                }
+            }
+        }
+
+    }        
+    &.hasTxt{
+        + input[type=hidden]{
+            + label{
+                &::before{
+                    margin-right: rem(6);
+                }
+            }
+        }
+    
     }    
+
     // 북마크
     &.bMark{
         display:none;

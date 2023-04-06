@@ -8,7 +8,6 @@
         // padding: rem(40) 0;
         padding: rem(20) 0;
         background: $white;
-        border-top:1px solid $bgColor;
     }
     >ul{
         >li{
@@ -45,29 +44,52 @@
         .head{
             position: relative;
             .prefix{
-                color: $subInfo;
+                // color: $subInfo;
                 font-size: rem(14);
                 @include ellipsis;
-                span{                    
-                    margin-left: rem(10);
-                    position: relative;
-                    &::before{
-                        content:'';
-                        width: 1px;
-                        height: rem(14);
-                        background: $subInfo;
-                        position: absolute;
-                        top:50%;
-                        left: -6px;
-                        transform: translateY(-40%);
-                    }
-                    &:first-child{
-                        margin-left: 0;
-                        &::before{
-                            display: none;
+                p{
+                    > span{          
+                        color: $subInfo;
+                        &.dNear{
+                            margin-right: rem(10);
                         }
-                    }                    
-                }
+                        &:last-child{
+                            margin-left: rem(6);
+                            position: relative;
+                            &::before{
+                                content:'';
+                                width: 1px;
+                                height: rem(12);
+                                background: $subInfo;
+                                position: absolute;
+                                top:50%;
+                                left: -4px;
+                                transform: translateY(-40%);
+                            }
+                        }
+                        // margin-left: rem(10);
+                        // position: relative;
+                        // &::before{
+                        //     content:'';
+                        //     width: 1px;
+                        //     height: rem(14);
+                        //     background: $subInfo;
+                        //     position: absolute;
+                        //     top:50%;
+                        //     left: -6px;
+                        //     transform: translateY(-40%);
+                        // }
+                        // &:first-child{
+                        //     margin-left: 0;
+                        //     &::before{
+                        //         display: none;
+                        //     }
+                        // }                    
+                    }
+                }    
+                h4{
+                    margin-top: rem(6);
+                }            
             }          
         }
         .cont{
@@ -302,7 +324,8 @@
             }
         }
     }
-    &.headType{
+    &.headType,
+    &.memoBox{
         // margin-top: rem(20);
         border:1px solid $layoutColor;
         position: relative;
