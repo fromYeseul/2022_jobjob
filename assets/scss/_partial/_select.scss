@@ -21,6 +21,53 @@
 //     }
 // }
 
+select{
+  padding: 0 5px;
+  padding-right: 10px;
+  width: rem(100);
+  height: 46px;
+  border-radius: 5px;
+  border:1px solid $inputGray;
+  //appearance: none;
+  &:focus{
+    border: 1px solid $mainColor;
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+  option{
+    // zoom: 1.2;
+    &:disabled{
+      display: none;
+      color: $error;
+    }
+  }
+  &.xsSize{
+    width: rem(70);
+    height: rem(36);
+  }
+  &.lowSize{
+    height: rem(36);
+  }
+  &.wideSize{
+    width: rem(180);
+  } 
+  &.full{
+    width: 100%;
+  }
+}
+
+//datepicker select 초기화
+.ui-datepicker-title{
+  select{
+    padding: initial;
+    height: initial;
+    border-radius: initial;
+    border: initial;
+  }
+}
+
+
 
 
 .select {

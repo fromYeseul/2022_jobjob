@@ -1,0 +1,62 @@
+.memRegister{
+    .regiPartWrapper{
+        height: calc(100vh - 140px);
+        button{
+            &.round{
+                width: rem(66);
+                vertical-align: text-bottom;
+                // margin-bottom: rem(6);
+                line-height: rem(30);
+                i{
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+    .hasTooltip{
+        .tooltip{
+            &.left{
+                left: -165px;
+            }
+        }
+    }
+    // .profile{
+    //     & + .inputList{
+    //         margin-left: rem(30);
+    //     }
+    // }
+    .inputList{
+        .flexCenter{
+            li{
+                margin-bottom: rem(10);
+                & + li{
+                    margin-left: rem(10);
+                }
+            }
+            // & + .flexCenter{
+            //     margin-top: rem(10);
+            // }
+        }
+    }
+    .flexEnd{
+        & + .flexEnd{
+            margin-top: -20px;
+        }
+        & + .flexCenter{
+            margin-top: -20px;
+        }
+    }
+
+    //연-월-일 placeholder 제거
+    // input[type=month],   
+    // input[type=date]{   
+    //     &::-webkit-datetime-edit{
+    //         display: none;
+    //     }  
+    //     &::before{
+    //         content: attr(data-placeholder);
+    //         width: 100%;
+    //         color: $placeholder;
+    //     }
+    // }
+}

@@ -17,7 +17,7 @@
             <h2>Style Guide</h2>
             <ul class="">
                 <li class="tabBtn">
-                    <a href="#style-color" class="is-active">Color</a>
+                    <a href="#style-color">Color</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-font">Font</a>
@@ -32,10 +32,16 @@
                     <a href="#style-button">Button</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-input">Input / Select</a>
+                    <a href="#style-input">Input</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#style-select">Select</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-chk">Check / Radio</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#style-range" class="is-active">Range Slider</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-table">Table / Paging</a>
@@ -57,7 +63,7 @@
         <!--//list-->
         <!--content-->
         <div class="tabContWrap">
-            <div id="style-color" class="tabCont is-active">
+            <div id="style-color" class="tabCont">
                 <h2>Color</h2>
                 <div class="">
                     <div class="clip mt20"><span>Primary Color</span></div>
@@ -438,8 +444,10 @@
                     </div>
             </div>
             <div id="style-input" class="tabCont">
-                <h2>Input / Select</h2>
+                <h2>Input</h2>
+
                 <div class="input">
+
                     <div class="clip mt20"><span>Input</span></div>   
                     <div class="input">
                         <ul>
@@ -480,6 +488,12 @@
                                 <input class="need" type="text" id="default" maxlength="" placeholder="placeholder">
                             </li>
                             <li>
+                                <span>midSize</span>
+                                <span class="size">midSize</span>
+                                <label for="midSize">label</label>
+                                <input class="midSize" type="text" id="laSize" maxlength="" placeholder="placeholder">
+                            </li>
+                            <li>
                                 <span>laSize</span>
                                 <span class="size">laSize</span>
                                 <label for="laSize">label</label>
@@ -490,6 +504,12 @@
                                 <span class="size">wideSize</span>
                                 <label for="wideSize">label</label>
                                 <input class="wideSize" type="text" id="wideSize" maxlength="" placeholder="placeholder">
+                            </li>
+                            <li>
+                                <span>xlSize</span>
+                                <span class="size">xlSize</span>
+                                <label for="xlSize">label</label>
+                                <input class="xlSize" type="text" id="xlSize" maxlength="" placeholder="placeholder">
                             </li>
                             <li>
                                 <span>full</span>
@@ -687,8 +707,93 @@
                         <textarea name="" id="" rows="10"></textarea>
                         <p class="counter">글자 수 50자</p>
                     </div>
+                </div>
+            </div>
+            <div id="style-select" class="tabCont">
+                <h2>Select</h2>
 
-                    <div class="clip"><span>select</span></div> 
+                <div class="input">
+                    
+                    <div class="clip mt20"><span>select (select 태그)</span></div> 
+                    <div class="input">
+                        <ul>
+                            <li>
+                                <span>xsSize</span>
+                                <span class="size">70px * 36px</span>
+
+                                <select class="xsSize" name="" id="">
+                                    <option value="">선택</option>
+                                    <option value="dog" disabled>선택1</option>
+                                    <option value="cat">선택2</option>
+                                    <option value="hamster">선택3</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>default</span>
+                                <span class="size">100px * 46px</span>
+
+                                <select name="" id="">
+                                    <option value="">choose</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="hamster">Hamster</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="hamster">Hamster</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="hamster">Hamster</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="hamster">Hamster</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="hamster">Hamster</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="hamster">Hamster</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="hamster">Hamster</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="hamster">Hamster</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>lowSize</span>
+                                <span class="size">100px * 36px</span>
+
+                                <select class="lowSize" name="" id="">
+                                    <option value="">choose</option>
+                                    <option value="dog" disabled>Dog</option>
+                                    <option value="cat">Cat</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>wideSize</span>
+                                <span class="size">180px * 46px</span>
+
+                                <select class="wideSize" name="" id="">
+                                    <option value="">choose</option>
+                                    <option value="dog" disabled>Dog</option>
+                                    <option value="cat">Cat</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>full</span>
+                                <span class="size">auto * 46px</span>
+
+                                <select name="" id="" class="full">
+                                    <option value="">choose</option>
+                                    <option value="dog" disabled>Dog</option>
+                                    <option value="cat">Cat</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="clip"><span>select (ul/li 커스텀)</span></div> 
                     <div class="input">
                         <ul>
                             <li>
@@ -863,6 +968,7 @@
                                 <span>default size</span>
                                 <div class="btnType">
                                     <input type="checkbox" id="b1" name="aa" class="hasTxt">
+                                    <input type="hidden">
                                     <label for="b1">samsung</label>
                                     <input type="checkbox" id="b2" name="aa" class="hasTxt" checked="">
                                     <label for="b2">apple</label>
@@ -872,6 +978,7 @@
                                 <span>samll size</span>
                                 <div class="btnType smSize">
                                     <input type="checkbox" id="b11" name="aa" class="hasTxt">
+                                    <input type="hidden">
                                     <label for="b11">samsung</label>
                                     <input type="checkbox" id="b21" name="aa" class="hasTxt" checked="">
                                     <label for="b21">apple</label>
@@ -891,7 +998,8 @@
                                     <input type="checkbox" id="chk_1" class="chkEach" checked="">
                                     <label for="chk_1">에코</label>
                                     
-                                    <input type="checkbox" id="chk_2" class="chkEach">
+                                    <input type="checkbox" id="chk_2" class="chkEach" checked="">
+                                    <input type="hidden">
                                     <label for="chk_2">협력</label>
                                     
                                     <input type="checkbox" id="chk_3" class="chkEach">
@@ -952,6 +1060,15 @@
                                 </div>
                             </li>
                             <li>
+                                <span>mid size</span>
+                                <div class="tabType midSize">
+                                    <input type="radio" id="americano1" name="coffee111" value="americano1" checked="">
+                                    <label for="americano1">아아</label>
+                                    <input type="radio" id="latte1" name="coffee111" value="latte1">
+                                    <label for="latte1">라떼</label>
+                                </div>
+                            </li>
+                            <li>
                                 <span>small size</span>
                                 <div class="tabType smSize">
                                     <input type="radio" id="americano1" name="coffee1" value="americano1" checked="">
@@ -972,6 +1089,39 @@
                         </ul>
                     </div>
                     
+                    <div class="clip"><span>Radio buttontype</span></div>   
+                    <div class="">
+                        <ul>
+                            <li>
+                                <span>default</span>
+                                <div class="btnType">
+                                    <input type="radio" id="americano333" name="coffee333" value="americano" checked="">
+                                    <label for="americano333">아메리카노</label>
+                                    <input type="radio" id="latte333" name="coffee333" value="latte">
+                                    <label for="latte333">라떼</label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>lowSize</span>
+                                <div class="btnType low">
+                                    <input type="radio" id="americano333" name="coffee333" value="americano" checked="">
+                                    <label for="americano333">아메리카노</label>
+                                    <input type="radio" id="latte333" name="coffee333" value="latte">
+                                    <label for="latte333">라떼</label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>smSize</span>
+                                <div class="btnType smSize">
+                                    <input type="radio" id="americano333" name="coffee333" value="americano" checked="">
+                                    <label for="americano333">아메리카노</label>
+                                    <input type="radio" id="latte333" name="coffee333" value="latte">
+                                    <label for="latte333">라떼</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                                        
                     <div class="clip"><span>star score (수정필요)</span></div>   
                     <div class="">
                         <ul>
@@ -1040,6 +1190,57 @@
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="style-range" class="tabCont is-active" style="overflow-x: hidden;">
+                <h2>Range Slider</h2>
+                <div class="">
+                    <div class="clip mt20"><span>Range Slider - single</span></div>
+                    <div class="rangeSlider single" style="width:500px;">                    
+                        <input type="range" id="distanceTo" min="0" max="50" value = "37">
+                        
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb right"></div>
+                        </div>
+                        
+                        <div class="marking">
+                            <ul>
+                                <li>0</li>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>30</li>
+                                <li>40</li>
+                                <li>50</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="clip mt20"><span>Range Slider - multi</span></div>
+                    <div class="rangeSlider multi" style="width:500px;">
+                        <!-- 진짜 슬라이더 -->
+                        <input type="range" id="careerLeft" min="0" max="100" value="25" />
+                        <input type="range" id="careerRight" min="0" max="100" value="75" />
+                    
+                        <!-- 커스텀 슬라이더 -->
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb left"></div>
+                            <div class="thumb right"></div>
+                        </div>
+
+                        <div class="marking">
+                            <ul>
+                                <li>0</li>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>30</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1862,6 +2063,9 @@
         //checkAll();
         addText();
         showMore();
+        rangeSlider();
+        rangeSliderMulti();
+        rangeSlider();
     </script>
 </body>
 </html>

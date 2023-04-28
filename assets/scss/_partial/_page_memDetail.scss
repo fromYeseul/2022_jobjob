@@ -90,17 +90,6 @@
         background: $beige;
         // height: calc(100vh - 250px);
         // @include scroll_0;
-        .profile{
-            text-align: center;
-            margin-bottom: rem(30);
-            img{
-                width: rem(130);
-                height: rem(130);
-                margin:rem(10) auto 0;
-                // width: 100%;
-                border-radius: 50%;
-            }
-        }
         .info{
             > div{
                 & + div{
@@ -109,13 +98,14 @@
                     border-top:1px solid $titleGray;
                 }
             }
-        }
-        h3{
-            span{
-                margin-left: rem(6);
-                font-size: rem(16);
-                letter-spacing: -0.71px;
-                color: $subGray;
+            h3{
+                display: inline-block;
+                & + span{
+                    margin-left: rem(6);
+                    font-size: rem(16);
+                    letter-spacing: -0.71px;
+                    color: $subGray;
+                }
             }
         }
         .bottom{
@@ -143,6 +133,13 @@
                 color: $beigeTit;
                 border-bottom: 1px solid $titleGray;
             }
+            .tabCont{
+                padding: 6px 0;
+                .yScroll{
+                    width: 100%;
+                    height: rem(160);
+                }
+            }
             .cont{
                 margin-top: rem(15);
                 line-height: 1.8;
@@ -163,7 +160,7 @@
                 .prefix{
                     flex: 2 1 0;
                     // 이력서 선호조건 보일때 추가하기
-                    //margin-right: rem(50);
+                    margin-right: rem(20);
                 }
                 .suffix{
                     flex: 1 1 0;

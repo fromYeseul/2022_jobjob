@@ -401,16 +401,95 @@
                                                                 </th>
                                                                 <th>
                                                                     <!-- <a href="#memScore"class="layerOpen is-active">90점 이상</a> -->
-                                                                    <span aria-controls="memScore" class="layerOpen is-active">90점 이상</span>
+                                                                    <span aria-controls="a_memScore" class="filter">90점 이상</span>
+
+                                                                    <div id="a_memScore" class="filterWrapper autoSize">
+                                                                        <div class="filterList">
+                                                                            <div class="tabType autoSize">
+                                                                                <input type="radio" id="bb1" name="aa" class="hasTxt">
+                                                                                <label for="bb1">전체</label>
+                                                                                <input type="radio" id="bb2" name="aa" class="hasTxt" checked="">
+                                                                                <label for="bb2">스페셜회원</label>
+                                                                            </div>
+                                                        
+                                                                            <div class="mt20">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <input type="radio" id="score90" name="score" value="score90" class="hasTxt">
+                                                                                        <label for="score90">90점 이상</label>  
+                                                                                    </li>
+                                                                                    <li>                 
+                                                                                        <input type="radio" id="score80" name="score" value="score80" class="hasTxt">
+                                                                                        <label for="score80">80점 이상</label>   
+                                                                                    </li>
+                                                                                    <li>               
+                                                                                        <input type="radio" id="score70" name="score" value="score70" class="hasTxt">
+                                                                                        <label for="score90">70점 이상</label>   
+                                                                                    </li>
+                                                                                    <li>                  
+                                                                                        <input type="radio" id="scoreAll" name="score" value="scoreAll" class="hasTxt"  checked="">
+                                                                                        <label for="scoreAll">전체</label>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>       
                                                                 </th>
                                                                 <th></th>
                                                                 <th>
                                                                     <!-- <a href="#memGroup"class="layerOpen">소속</a> -->
-                                                                    <span aria-controls="memGroup" class="layerOpen">소속</span>
+                                                                    <span aria-controls="a_memGroup" class="filter">소속</span>
+
+                                                                    <div id="a_memGroup" class="filterWrapper autoSize">
+                                                                        <div class="filterList">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="bb1" name="aa" class="hasTxt">
+                                                                                    <label for="bb1">전체</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="bb2" name="aa" class="hasTxt" checked="">
+                                                                                    <label for="bb2">에코</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="bb1" name="aa" class="hasTxt">
+                                                                                    <label for="bb1">협력</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="bb2" name="aa" class="hasTxt" checked="">
+                                                                                    <label for="bb2">대행</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="checkbox" id="bb1" name="aa" class="hasTxt">
+                                                                                    <label for="bb1">프리</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>    
+                                                                    </div>
                                                                 </th>
                                                                 <th>
                                                                     <!-- <a href="#memGender"class="layerOpen">성별/나이</a> -->
-                                                                    <span aria-controls="memGender" class="layerOpen">성별/나이</span>
+                                                                    <span aria-controls="a_memGender" class="filter">성별/나이</span>
+
+                                                                    <div id="a_memGender" class="filterWrapper autoSize">
+                                                                        <div class="filterList">
+                                                                            <div class="tabType autoSize">
+                                                                                <input type="radio" id="gender" name="gender" class="hasTxt">
+                                                                                <label for="gender">전체</label>
+                                                                                <input type="radio" id="male" name="gender" class="hasTxt" checked="">
+                                                                                <label for="male">남자</label>
+                                                                                <input type="radio" id="female" name="gender" class="hasTxt" checked="">
+                                                                                <label for="female">여자</label>
+                                                                            </div>
+                                                        
+                                                                            <div class="flexBw mt20">
+                                                                                <input type="text" class="xxsSize">
+                                                                                ~
+                                                                                <input type="text" class="xxsSize">
+                                                                            </div>
+                                                                            <button class="lowSize mt10">적용</button>
+                                                                        </div> 
+                                                                    </div>
                                                                 </th>
                                                                 <th>
                                                                     <input type="checkbox" id="level" class="hasTxt">
@@ -418,7 +497,30 @@
                                                                 </th>        
                                                                 <th>
                                                                     <!-- <a href="#memEdu"class="layerOpen">학력</a> -->
-                                                                    <span aria-controls="memEdu" class="layerOpen">학력</span>
+                                                                    <span aria-controls="a_memEdu" class="filter">학력</span>
+
+                                                                    <div id="a_memEdu" class="filterWrapper autoSize">
+                                                                        <div class="filterList">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="radio" id="eduLv3" name="eduLevel" class="hasTxt">
+                                                                                    <label for="eduLv3">대졸이상</label>  
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="radio" id="eduLv2" name="eduLevel" class="hasTxt">
+                                                                                    <label for="eduLv2">초대졸 이상</label> 
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="radio" id="eduLv1" name="eduLevel" class="hasTxt">
+                                                                                    <label for="eduLv1">고졸 이상</label>  
+                                                                                </li>
+                                                                                <li>                     
+                                                                                    <input type="radio" id="eduLv0" name="eduLevel" class="hasTxt" checked="">
+                                                                                    <label for="eduLv0">전체</label>
+                                                                                </li>
+                                                                            </ul>                                
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
                                                                 <th>
                                                                     <!-- <a href="#memArea"class="layerOpen">거주지역</a> -->
@@ -2511,7 +2613,7 @@
 
 
 
-    <!--221110 평가 팝업-->
+    <!--221110 평가 팝업--
     <div id="memScore" class="modalLayer center">
         <div class="layerBox filterType">
             <div class="modalHeader">
@@ -2521,7 +2623,7 @@
                 <h3>평가</h3>                  
 
                 <div class="filterList">
-                    <div class="btnType smSize">
+                    <div class="tabType">
                         <input type="radio" id="bb1" name="aa" class="hasTxt">
                         <label for="bb1">전체</label>
                         <input type="radio" id="bb2" name="aa" class="hasTxt" checked="">
@@ -2543,9 +2645,9 @@
         </div>        
         <div class="layerDim"></div>    
     </div>
-    <!--//221110 평가 팝업-->
+    !--//221110 평가 팝업-->
     
-    <!--221110 소속 팝업-->
+    <!--221110 소속 팝업--
     <div id="memGroup" class="modalLayer center">
         <div class="layerBox filterType">
             <div class="modalHeader">
@@ -2570,10 +2672,10 @@
         </div>        
         <div class="layerDim"></div>    
     </div>
-    <!--//221110 소속 팝업-->
+    !--//221110 소속 팝업-->
     
-    <!--221110 성별 팝업-->
-    <div id="memGender" class="modalLayer center">
+    <!--221110 성별 팝업--
+    <div id="memGender" class="modalLayer center is-active">
         <div class="layerBox filterType">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -2582,7 +2684,7 @@
                 <h3>성별/나이</h3>              
 
                 <div class="filterList">
-                    <div class="btnType smSize">
+                    <div class="tabType smSize">
                         <input type="radio" id="gender" name="gender" class="hasTxt">
                         <label for="gender">전체</label>
                         <input type="radio" id="male" name="gender" class="hasTxt" checked="">
@@ -2604,9 +2706,9 @@
         </div>        
         <div class="layerDim"></div>    
     </div>
-    <!--//221110 성별 팝업-->    
+    !--//221110 성별 팝업-->    
     
-    <!--221110 학력 팝업-->
+    <!--221110 학력 팝업--
     <div id="memEdu" class="modalLayer center">
         <div class="layerBox filterType">
             <div class="modalHeader">
@@ -2631,11 +2733,11 @@
         </div>        
         <div class="layerDim"></div>    
     </div>
-    <!--//221110 학력 팝업-->
+    !--//221110 학력 팝업-->
     
     <!--221110 거주지 팝업-->
     <div id="memArea" class="modalLayer center">
-        <div class="layerBox filterType laSize">
+        <div class="layerBox">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
             </div>
@@ -2744,6 +2846,8 @@
         <div class="layerDim"></div>    
     </div>
     <!--//221110 거주지 팝업-->
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>
     

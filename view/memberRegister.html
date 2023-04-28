@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원등록</title>
+    
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="hasFooter">
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="center">
+                <a href="#" class="is-active">My Project</a>
+                <a href="#">My People</a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam">
+                        <a href="#">시스템통합사업본부 홍길동</a>
+                    </li>
+                    <li>
+                        <a href="#">내정보 수정</a>
+                        <a href="#" class="logState">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="is-active"><a href="#"><i class="ico home"></i><span class="menuTxt">홈</span><i></i></a></li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span><i></i></a></li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span><i></i></a></li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span><i></i></a></li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span><i></i></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span><i></i></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span><i></i></a></li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span><i></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>   
+        
+        <section class="contWrapper noRight"><!--우측패널 없는 페이지-->
+            <section class="contLayout">
+                
+                <section class="memRegister">
+
+                    <div class="pageTit">
+                        <h2 id="test">회원등록</h2>
+                        <div class="breadCrumb">
+                            <ul class="flex">
+                                <li class="is-active" id="#"><a href="#memRegi0">기본정보</a></li>
+                                <li id="#"><a href="#memRegi1">직무/스킬</a></li>
+                                <li id="#"><a href="#memRegi2">근무경력</a></li>
+                                <li id="#"><a href="#memRegi3">프로젝트경력</a></li>
+                                <li id="#"><a href="#memRegi4">선호조건, 기타</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="regiPartWrapper">        
+                        <div class="regiPart" id="memRegi0">
+                            <h3>1. 기본정보</h3>
+                            
+                            <div class="boxWrap hasTooltip">                                
+                                <div class="inputList">   
+                                    <ul class="grid g_3_3">
+                                        <li class="r1_3">
+                                            <div class="profile">
+                                                <i class="ico delete"></i>
+                                                <img src="../assets/img/sample.png">                                            
+                                                <p class="mt20"><b>2023-04-13 14:33</b><br>[카카오가입]</p>
+                                                <button class="mid-lowSize warning">강제탈퇴</button>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <h6 class="need">소속</h6>
+                                            <div class="tabType mt10">
+                                                <input type="radio" id="belong1" name="belong" value="belong1" checked="">
+                                                <label for="belong1">에코</label>
+                                                <input type="radio" id="belong2" name="belong" value="belong2">
+                                                <label for="belong2">협력</label>
+                                                <input type="radio" id="belong3" name="belong" value="belong3">
+                                                <label for="belong3">대행</label>
+                                                <input type="radio" id="belong4" name="belong" value="belong4">
+                                                <label for="belong4">프리</label>
+                                            </div>
+                                        </li>
+                                        <li><!-- 숨김처리 : is-hidden 클래스 추가 -ys -->
+                                            <ul class="flexBw">
+                                                <li>
+                                                    <label class="need" for="">소속회사명</label>
+                                                    <input class="" type="text" id="" placeholder="소속회사명 입력"> 
+                                                </li>
+                                                <li>
+                                                    <label class="need" for="">사업자번호</label>
+                                                    <input class="" type="text" id="" placeholder="숫자만 입력"> 
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>                    
+                                            <label class="need" for="memNm">이름</label>
+                                            <input class="" type="text" id="memNm" placeholder="홍길동(필수)">                                         
+                                            <input class="" type="text" id="memNm_Eng" placeholder="영문(선택)">                                                                                     
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">생년월일</label>
+                                            <input class="full" type="text" id="" placeholder="850926-1******"> 
+                                        </li>
+
+                                        <li>
+                                            <label class="need" for="">휴대폰 번호</label>
+                                            <input class="full" type="text" id="" placeholder="- 를 제외한 숫자만 입력하세요."> 
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">이메일</label>
+                                            <input class="full" type="text" id="" maxlength="" placeholder="이메일 주소"> 
+                                        </li>
+                                    </ul>
+                                </div>                                
+
+                                <div class="tooltip left is-active">
+                                    <p>회원등록 말풍선 가이드</p>
+                                    추후 제공 합니다.
+                                    <br>
+                                    (예) 쇼핑몰 홈페이지 고도화
+                                </div>
+                                <div class="tooltip left line2 is-active">
+                                    <p>회원등록 말풍선 가이드</p>
+                                    추후 제공 합니다.
+                                </div>
+                                <div class="tooltip left line3 is-active">
+                                    <p>말풍선 가이드</p>
+                                    추후 제공 합니다.
+                                </div>
+                                <div class="tooltip left line4 is-active">
+                                    <p>말풍선 가이드</p>
+                                    추후 제공 합니다.
+                                </div>
+                            </div>
+
+                            <h3>2. 학력사항</h3>
+                            <div class="h3_sub">
+                                입학순서와 상관 없이 학력사항을 입력해주세요.
+                            </div>
+                            <div class="boxWrap">
+                                <div class="inputList">   
+                                    <h6 class="need">대학/대학원</h6>
+                                    <ul class="flexCenter">
+                                        <li>
+                                            <select class="wideSize" name="" id="" >
+                                                <option value="">대학/대학원</option>
+                                                <option value="univ2">대학(2,3년)</option>
+                                                <option value="univ4">대학(4년)</option>
+                                                <option value="master">대학원(석사)</option>
+                                                <option value="doctor">대학원(박사)</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <select class="wideSize" name="" id="">
+                                                <option value="">대학/대학원</option>
+                                                <option value="graduation0">졸업</option>
+                                                <option value="graduation1">재학</option>
+                                                <option value="graduation2">휴학</option>
+                                                <option value="graduation3">수료</option>
+                                                <option value="graduation4">중퇴</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <input class="" type="text" id="" placeholder="학교명 입력"> 
+                                        </li>
+                                        <li>
+                                            <input class="" type="text" id="" placeholder="전공 입력"> 
+                                        </li>
+                                        <li>
+                                            <input class="" type="month" id="" data-placeholder="입학월"> 
+                                        </li>
+                                        <li>
+                                            <input class="" type="month" id="" data-placeholder="졸업월"> 
+                                        </li>
+                                        <li>
+                                            <button class="round">
+                                                <i class="ico delete_bin"></i> 삭제
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <ul class="flexCenter">
+                                        <li>
+                                            <select class="wideSize" name="" id="" >
+                                                <option value="">대학/대학원</option>
+                                                <option value="univ2">대학(2,3년)</option>
+                                                <option value="univ4">대학(4년)</option>
+                                                <option value="master">대학원(석사)</option>
+                                                <option value="doctor">대학원(박사)</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <select class="wideSize" name="" id="">
+                                                <option value="">대학/대학원</option>
+                                                <option value="graduation0">졸업</option>
+                                                <option value="graduation1">재학</option>
+                                                <option value="graduation2">휴학</option>
+                                                <option value="graduation3">수료</option>
+                                                <option value="graduation4">중퇴</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <input class="" type="text" id="" placeholder="학교명 입력"> 
+                                        </li>
+                                        <li>
+                                            <input class="" type="text" id="" placeholder="전공 입력"> 
+                                        </li>
+                                        <li>
+                                            <input class="" type="month" id=""> 
+                                            <!-- <input class="" type="month" id="" data-placeholder="입학월">  -->
+                                        </li>
+                                        <li>
+                                            <input class="" type="month" id=""> 
+                                            <!-- <input class="" type="month" id="" data-placeholder="졸업월">  -->
+                                        </li>
+                                        <li>
+                                            <button class="round">
+                                                <i class="ico delete_bin"></i> 삭제
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="midSize">추가</button>
+                            </div>
+                        </div>   
+
+                        <div class="regiPart" id="memRegi1">
+                            <h3>3. 직무/스킬</h3>
+                            <div class="h3_sub">전문 직무를 선택해주세요.</div>
+                            <div class="boxWrap">
+                                <div class="inputList">   
+                                    <ul class="grid g_2_2">
+                                        <li>
+                                            <button class="midSize layerOpen" aria-controls="spcJob">전문직무 선택</button>
+                                        </li>
+                                        <li>
+                                            <input class="xlSize" type="text" id="" placeholder="스킬/경험 추가">
+                                            <div class="autoList is-active">
+                                                <ul>
+                                                    <li>JSP</li>
+                                                    <li>Javascript</li>
+                                                    <li>AJAX</li>
+                                                    <li>JSP</li>
+                                                    <li>Javascript</li>
+                                                    <li>AJAX</li>
+                                                    <li>JSP</li>
+                                                    <li>Javascript</li>
+                                                    <li>AJAX</li>
+                                                </ul>
+                                            </div>                                            
+                                        </li>
+                                        <li>
+                                            <div class="inputGroup laSize">
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="inputGroup laSize">
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="alertToast" id="toast01">
+                                                스킬은 최대 20개까지 입력할 수 있습니다.
+                                                <i class="ico smClose w"></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <h3>4. 자격사항</h3>
+                            <div class="boxWrap">
+                                <div class="inputList">   
+                                    <h6 class="need">자격사항/교육</h6>
+                                    <ul class="flexCenter">
+                                        <li>
+                                            <select class="wideSize" name="" id="" >
+                                                <option value="univ2">교육</option>
+                                                <option value="univ2">자격증</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <input class="laSize" type="text" id="" placeholder="교육명"> 
+                                        </li>
+                                        <li>
+                                            <input class="" type="text" id="" placeholder="주관사"> 
+                                        </li>
+                                        <li>
+                                            <input class="" type="date" id="">
+                                            <!-- <input class="" type="date" id="" data-placeholder="시작일"> -->
+                                        </li>
+                                        <li>
+                                            <input class="" type="date" id=""> 
+                                            <!-- <input class="" type="date" id="" data-placeholder="종료일">  -->
+                                        </li>
+                                        <li>
+                                            <button class="round">
+                                                <i class="ico delete_bin"></i> 삭제
+                                            </button>
+                                        </li>
+                                    </ul>  
+                                    <ul class="flexCenter">
+                                        <li>
+                                            <select class="wideSize" name="" id="" >
+                                                <option value="univ2">자격증</option>
+                                                <option value="univ2">교육</option>
+                                            </select>
+                                        </li>
+                                        <li class="hasList">
+                                            <input class="laSize" type="text" id="" placeholder="자격증명"> 
+                                            <div class="autoList is-active">
+                                                <ul>
+                                                    <li>
+                                                        <div class="prefix">세무<span>정보</span>처리(TAT)2급 (국가..)</div>
+                                                        <div class="suffix">한국공인회계사회</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix"><span>정보</span>기술자격(ITQ)파워포인트</div>
+                                                        <div class="suffix">한국생선성본부(KPC)</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix">ERP 물류<span>정보</span>관리사 2급</div>
+                                                        <div class="suffix">한국생선성본부(KPC)</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix"><span>정보</span>처리기사</div>
+                                                        <div class="suffix">과학기술정보통신부</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix"><span>정보</span>기술자격(ITQ)MS Word</div>
+                                                        <div class="suffix">한국생선성본부(KPC)</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix"><span>정보</span>기술자격(ITQ) 아래한글</div>
+                                                        <div class="suffix">과학기술정보통신부</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix"><span>정보</span>보안기사</div>
+                                                        <div class="suffix">과학기술정보통신부</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix">세무<span>정보</span>처리(TAT)2급 (국가..)</div>
+                                                        <div class="suffix">한국공인회계사회</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix"><span>정보</span>기술자격(ITQ)파워포인트</div>
+                                                        <div class="suffix">한국생선성본부(KPC)</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix">ERP 물류<span>정보</span>관리사 2급</div>
+                                                        <div class="suffix">한국생선성본부(KPC)</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix"><span>정보</span>처리기사</div>
+                                                        <div class="suffix">과학기술정보통신부</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix"><span>정보</span>기술자격(ITQ)MS Word</div>
+                                                        <div class="suffix">한국생선성본부(KPC)</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix"><span>정보</span>기술자격(ITQ) 아래한글</div>
+                                                        <div class="suffix">과학기술정보통신부</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="prefix"><span>정보</span>보안기사</div>
+                                                        <div class="suffix">과학기술정보통신부</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <input class="" type="text" id="" placeholder="인증사"> 
+                                        </li>
+                                        <li>
+                                            <input class="" type="month" id="" data-placeholder="취득월"> 
+                                        </li>
+                                        <li>
+                                            <button class="round">
+                                                <i class="ico delete_bin"></i> 삭제
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="midSize">추가</button>
+                            </div>
+                            
+                            <h3>5. 포트폴리오/웹사이트</h3>
+                            <div class="boxWrap">
+                                <div class="inputList column row">   
+                                    <ul>
+                                        <li class="">
+                                            <h4>포트폴리오(선택)</h4>
+                                            <div class="uploadBox">
+                                                <div class="inputGroup upload laSize">
+                                                    <div class="drop">
+                                                        <i class="ico fileUpload"></i>
+                                                        <label for="fileUpload">
+                                                            본인의 포트폴리오 자료를 여기에 첨부해 주세요.<br>
+                                                            (파일 최대 5개, 100MB 이하)                                                      
+                                                        </label>
+                                                    </div>
+                                                    <div class="list">
+                                                        <ul class="list_ul">
+                                                            <li><div class="prefix">test.pdf</div><i class="ico delete"></i></li>
+                                                            <li><div class="prefix">testt esttestte stesttetestt esttestte sttesttetestt esttestte sttesttetestt estteste sttesttet.pdf</div><i class="ico delete"></i></li>
+                                                            <li><div class="prefix">test.pdf</div><i class="ico delete"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                                <label for="cycleDocument22" class="">직접선택</label>
+                                                <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="" />
+                                            </div>
+
+                                            <p class="error is-active">실행가능한 파일은 보안의 이유로 첨부하실 수 없습니다.</p>
+                                            <p class="error is-active">파일은 최대 5개까지 첨부할 수 있습니다.</p>
+                                            <p class="error is-active">파일은 최대 100mb까지 첨부할 수 있습니다.</p>
+                                        </li>
+                                        <li>
+                                            <h4>웹사이트</h4>
+                                            <div class="">
+                                                <ul class="block">
+                                                    <li>
+                                                        <input type="text" class="laSize mr5" maxlength="50" placeholder="포트폴리오 링크 GitHub 주소">
+                                                        <button class="onlyIco smSize">
+                                                            <i class="ico minus"></i>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <input type="text" class="laSize mr5" maxlength="50" placeholder="포트폴리오 링크 GitHub 주소">
+                                                        <button class="onlyIco smSize">
+                                                            <i class="ico minus"></i>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <input type="text" class="laSize mr5" maxlength="50" placeholder="포트폴리오 링크 GitHub 주소">
+                                                        <button class="onlyIco smSize">
+                                                            <i class="ico minus"></i>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <input type="text" class="laSize mr5" maxlength="50" placeholder="포트폴리오 링크 GitHub 주소">
+                                                        <button class="onlyIco smSize">
+                                                            <i class="ico minus"></i>
+                                                        </button>
+                                                        <button class="onlyIco smSize">
+                                                            <i class="ico plus"></i>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>     
+
+                        <div class="regiPart" id="memRegi2">
+                            <h3>6. 근무경력</h3>
+                            <div class="h3_sub">4대 보험 가입 이력이 있는 직장에서 근무한 경력을 입력해주세요.</div>
+                            <div class="boxWrap">
+                                <h6 class="need">회사정보</h6>
+                                <div class="inputList">   
+                                    <ul class="grid g_6_2">
+                                        <li class="c1_2">
+                                            <input class="full" type="text" id="default" maxlength="" placeholder="회사명 입력">
+                                        </li>
+                                        <li>
+                                            <input class="" type="text" id="default" maxlength="" placeholder="직위">
+                                        </li>
+                                        <li class="r1_2 c4_4">
+                                            <div class="inputGroup laSize mt0">
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>                              
+                                            <button class="midSize layerOpen" aria-controls="spcJob">전문직무 선택</button>
+                                        </li>
+                                        <li class="flexCenter">
+                                            <button class="round">
+                                                <i class="ico delete_bin"></i> 삭제
+                                            </button>
+                                        </li> 
+                                        <li>
+                                            <input class="" type="month" id="" maxlength="">
+                                        </li>
+                                        <li>
+                                            <input class="" type="month" id="" maxlength="">
+                                        </li>
+                                        <li class="flexCenter">
+                                            <input type="checkbox" id="onJob" name="onJob" class="hasTxt">
+                                            <label for="onJob" class="">재직중</label>
+                                        </li>                                           
+                                    </ul>  
+                                </div>
+                                <button class="midSize mt10">추가</button>
+                            </div>                       
+                        </div>
+
+
+                        <div class="regiPart" id="memRegi3">
+                            <h3>7. 프로젝트경력</h3>
+                            <div class="h3_sub">순서와 상관없이 프로젝트 경력을 모두 입력해 주세요. </div>
+                            
+                            <div class="boxWrap">
+                                <h6 class="need">프로젝트 수행이력</h6>
+                                <div class="inputList">   
+                                    <ul class="grid g_6_4">
+                                        <li>
+                                            <div class="tabType midSize">
+                                                <input type="radio" id="WEB" name="projType" value="WEB" checked="">
+                                                <label for="WEB">WEB</label>
+                                                <input type="radio" id="SAP" name="projType" value="SAP">
+                                                <label for="SAP">SAP</label>
+                                            </div>
+                                        </li>
+                                        <li class="c2_3">
+                                            <input class="full" type="text" id="default" maxlength="" placeholder="프로젝트명">
+                                        </li>
+                                        <li class="c4_4 r1_2">
+                                            <div class="inputGroup laSize">
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Javascript</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Xabc</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Javascript</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Xabc</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Javascript</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Xabc</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Javascript</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Xabc</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="">                              
+                                            <button class="midSize layerOpen" aria-controls="spcJob">전문직무 선택</button>
+                                        </li>
+                                        <li class="">
+                                            <button class="round mt10">
+                                                <i class="ico delete_bin"></i> 삭제
+                                            </button>
+                                        </li>    
+                                        <li class="c1_2">
+                                            <input class="full" type="text" id="" maxlength="" placeholder="고객사명">
+                                        </li>
+                                        <li>
+                                            <input class="" type="text" id="" maxlength="" placeholder="산업분야">
+                                        </li>
+                                        <li></li>
+                                        <li></li>
+                                        <li>
+                                            <input class="" type="month" id="" maxlength="">
+                                        </li>
+                                        <li>
+                                            <input class="" type="month" id="" maxlength="">
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="onJob" name="onJob" class="hasTxt">
+                                            <label for="onJob" class="mt10">재직중</label>
+                                        </li>       
+                                        <li class="c4_4 r3_4">
+                                            <textarea name="" id="" class="laSize" cols="30" rows="5" placeholder="상세업무"></textarea>
+                                        </li>       
+                                        <li class="c5_6">
+                                            <input class="" type="text" id="" maxlength="" placeholder="매입단가(원)">
+                                        </li>                                   
+                                    </ul>  
+                                </div>
+                                <button class="midSize">추가</button>
+                            </div>
+                        </div>
+
+
+                        <div class="regiPart" id="memRegi4">
+                            <h3>8. 선호조건</h3>
+                            <div class="h3_sub">선호 조건을 모두 입력하시면 프로젝트 매칭 확률이 높아집니다.</div>
+                            <div class="boxWrap">
+                                <div class="inputList w90p">   
+                                    <ul class="grid g_6_3">
+                                        <li>
+                                            <select class="wideSize" name="" id="">
+                                                <option value="">SI, SM 모두 가능 </option>
+                                                <option value="univ2">SI</option>
+                                                <option value="univ4">SM</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <select class="wideSize" name="" id="">
+                                                <option value="">상주, 비상주 모두 가능</option>
+                                                <option value="graduation0">상주</option>
+                                                <option value="graduation1">비상주</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <input class="" type="text" id="" placeholder="희망급여(만원)"> 
+                                        </li>
+                                        <li class="c4_6">
+                                            <div class="inputGroup fullSize">
+                                                <div class="inputObj">
+                                                    <span>선릉역</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>강남역</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>신사역</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj is-active">
+                                                    <input type="text" class="midSize" id="inputBox" placeholder="선호 위치 또는 지하철역">
+                                                </div>
+                                            </div>
+                                        </li>
+                                    
+                                        <li class="c1_2 mt10">
+                                            <h6>선호직무</h6>
+                                            <button class="midSize layerOpen" aria-controls="spcJob">전문직무 선택</button>
+                                        </li>
+                                        <li class="c3_4 flexEnd">
+                                            <input class="full" type="text" id="" placeholder="스킬/경험 추가">
+                                            <div class="autoList">
+                                                <ul>
+                                                    <li>JSP</li>
+                                                    <li>Javascript</li>
+                                                    <li>AJAX</li>
+                                                    <li>JSP</li>
+                                                    <li>Javascript</li>
+                                                    <li>AJAX</li>
+                                                    <li>JSP</li>
+                                                    <li>Javascript</li>
+                                                    <li>AJAX</li>
+                                                </ul>
+                                            </div>                                            
+                                        </li>
+                                        <li class="c5_6 r2_3 mt10">
+                                            <h6>남기고 싶은 말</h6>
+                                            <textarea name="" id="" rows="4" placeholder="- 직무와 관련된 자신의 장점 &#10;- 검색되지 않은 추가 스킬&#10;- 기타 본인에 대한 소개 입력"></textarea>
+                                        </li>
+                                        <li class="c1_2 mt10">
+                                            <div class="inputGroup">
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="c3_4 mt10">
+                                            <div class="inputGroup">
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj">
+                                                    <span>Java</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="alertToast" id="toast01">
+                                                스킬은 최대 20개까지 입력할 수 있습니다.
+                                                <i class="ico smClose w"></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                </section>
+                
+            </section>
+        </section>
+    </section>
+
+    <!--플로팅메뉴-->
+    <div class="floatingWrapper bottom">
+        <div class="floating">
+            <button class="white lowSize">목록으로</button>
+            <button class="lowSize" id="saveBtn">저장후 다음</button>
+        </div>
+    </div>
+    <!--//플로팅메뉴-->
+
+    <!--전문직무 선택 팝업-->
+    <div id="spcJob" class="modalLayer center is-active">
+        <div class="layerBox">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont"> 
+                <h3>전문직무 선택</h3>                
+
+                <div class="filterList mt50">
+                    <div class="listBox">
+                        <div class="prefix">
+                            <div class="chkWrap boxListType">
+                                <input type="radio" id="jGroup1" name="jGroup">
+                                <label for="jGroup1">개발</label>
+
+                                <input type="radio" id="jGroup2" name="jGroup">
+                                <label for="jGroup2">개발(SAP)</label>
+
+                                <input type="radio" id="jGroup3" name="jGroup">
+                                <label for="jGroup3">컨설팅</label>
+
+                                <input type="radio" id="jGroup4" name="jGroup">
+                                <label for="jGroup4">컨설팅(SAP)</label>  
+                                
+                                <input type="radio" id="jGroup5" name="jGroup">
+                                <label for="jGroup5">기획</label>   
+                                    
+                                <input type="radio" id="jGroup6" name="jGroup">
+                                <label for="jGroup6">디자인</label>
+                                    
+                                <input type="radio" id="jGroup7" name="jGroup">
+                                <label for="jGroup7">디자인</label>
+                                    
+                                <input type="radio" id="jGroup8" name="jGroup">
+                                <label for="jGroup8">디자인</label>   
+                                    
+                                <input type="radio" id="jGroup9" name="jGroup">
+                                <label for="jGroup9">디자인</label>                                         
+                            </div>
+                        </div>
+                        <div class="suffix">    
+                            <div class="chkWrap boxListType listType">                                
+                                <input type="checkbox" id="duty1" checked="">
+                                <label for="duty1">FI</label>
+                                
+                                <input type="checkbox" id="duty2">
+                                <label for="duty2">AA</label>
+                                
+                                <input type="checkbox" id="duty3">
+                                <label for="duty3">CO</label>  
+                                
+                                <input type="checkbox" id="duty4">
+                                <label for="duty4">TR</label>  
+                                
+                                <input type="checkbox" id="duty5">
+                                <label for="duty5">SD</label> 
+                                
+                                <input type="checkbox" id="duty6">
+                                <label for="duty6">LE</label>  
+                                
+                                <input type="checkbox" id="duty7">
+                                <label for="duty7">AA</label>
+                                
+                                <input type="checkbox" id="duty8">
+                                <label for="duty8">CO</label>
+                                
+                                <input type="checkbox" id="duty9">
+                                <label for="duty9">TR</label>                                       
+                            </div>           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listBottom">
+                    <button class="white prefix" disabled="">선택초기화</button>
+                    <button class="suffix">저장</button>
+                </div>
+
+                <div class="alertToast is-active" id="toast01">
+                    최대 20개까지 선택할 수 있습니다.
+                    <i class="ico smClose w"></i>
+                </div>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//전문직무 선택 팝업-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        function regiScroll(){        
+            let regiPartWrapper = document.querySelector('.regiPartWrapper');
+            let breadCrumbs = document.querySelectorAll('.breadCrumb li');
+            
+            regiPartWrapper.addEventListener('scroll',function(){
+
+                for(let i=0; i<breadCrumbs.length; i++){
+                    breadCrumbs[i].classList.remove('is-active');
+                    let target = document.getElementById('memRegi' + i).getBoundingClientRect().top;
+                    if(target <150){
+                        for(let j=0; j<breadCrumbs.length; j++){
+                            breadCrumbs[j].classList.remove('is-active');
+                        }
+                        breadCrumbs[i].classList.add('is-active');
+                    }
+
+                }
+            });
+        }
+        regiScroll();    
+    </script>
+
+    <script>
+        selectBox();
+    </script>
+</body>
+</html>

@@ -928,24 +928,41 @@ function dragDrop(){
 //투입상세정보팝업 펼침
 // 호출 : showTable();
 function showTable(){
-    let flex_1_2 = document.querySelector('.flex_1_2');
+    let flex_2_3 = document.querySelector('.flex_2_3');
     let open = document.querySelector('.open');
     let none = document.querySelectorAll('td.none');
     let theadActive = document.querySelector('.suffix .tableHead th')
 
     // document.getElementById("myTd").colSpan = "1";
 
-    none.forEach(none =>{
-        open.addEventListener('click', () => {
-            flex_1_2.classList.toggle('is-active');
-            none.classList.toggle('none');
-            if(theadActive.colspan = "12"){
-                theadActive.colSpan = "13";
-            }else{
-                theadActive.colSpan = "12";
+    // none.forEach(none =>{
+    //     open.addEventListener('click', () => {
+    //         flex_1_2.classList.toggle('is-active');
+    //         none.classList.toggle('none');
+    //         if(theadActive.colspan = "12"){
+    //             theadActive.colSpan = "13";
+    //         }else{
+    //             theadActive.colSpan = "12";
+    //         }
+    //     });
+    // })   
+    
+    
+    open.addEventListener('click', () => {
+        flex_2_3.classList.toggle('is-active');
+        
+        if(theadActive.colspan = "12"){
+            theadActive.colSpan = "13";
+            for(let i=0; i<none.length; i++){
+                none[i].classList.remove('none');
             }
-        });
-    })
+        }else{
+            theadActive.colSpan = "12";
+            for(let i=0; i<none.length; i++){
+                none[i].classList.add('none');
+            }
+        }
+    });
 }
 //showTable();
 
@@ -971,6 +988,80 @@ function showTable(){
 //     toast.classList.add("is-active"),
 //         toast.innerHTML = "<i class='ico smClose w'></i>" + message;
 // }
+
+
+//range slide : 마이프로젝트-직무추천 세부설정 / 230427 추가 -ys
+//회사까지의 거리
+function rangeSlider(){
+    const comDistance = document.getElementById("comDistance");
+
+    const distanceTo = document.getElementById("distanceTo");
+
+    const thumbRight = document.querySelector(".single .slider > .thumb.right");
+    const range = document.querySelector(".single .slider > .range");
+
+    const setRightValue = () => {
+        const _this = distanceTo;
+        const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
+        
+        // input, thumb 같이 움직이도록
+        const percent = ((_this.value - min) / (max - min)) * 100;
+        thumbRight.style.right = 100 - percent + "%";
+        range.style.right = 100 - percent + "%";
+        
+        comDistance.value = Math.round(percent * 0.5);
+    };
+
+    distanceTo.addEventListener("input", setRightValue);
+}
+
+//보유경력
+function rangeSliderMulti(){
+    const careerLeft = document.getElementById("careerLeft");
+    const careerRight = document.getElementById("careerRight");
+
+    const careerFrom = document.getElementById("careerFrom");
+    const careerTo = document.getElementById("careerTo");
+
+
+    const thumbLeft = document.querySelector(".multi .slider > .thumb.left");
+    const thumbRight = document.querySelector(".multi .slider > .thumb.right");
+    const range = document.querySelector(".multi .slider > .range");
+
+    const setLeftValue = () => {
+        const _this = careerLeft;
+        const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
+        
+        // 교차되지 않게, 1을 빼준 건 완전히 겹치기보다는 어느 정도 간격을 남겨두기 위해.
+        _this.value = Math.min(parseInt(_this.value), parseInt(careerRight.value) - 1);
+        
+        // input, thumb 같이 움직이도록
+        const percent = ((_this.value - min) / (max - min)) * 100;
+        thumbLeft.style.left = percent + "%";
+        range.style.left = percent + "%";
+
+        careerFrom.value = Math.round(percent * 0.3);
+    };
+
+    const setRightValue = () => {
+        const _this = careerRight;
+        const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
+        
+        // 교차되지 않게, 1을 더해준 건 완전히 겹치기보다는 어느 정도 간격을 남겨두기 위해.
+        _this.value = Math.max(parseInt(_this.value), parseInt(careerLeft.value) + 1);
+        
+        // input, thumb 같이 움직이도록
+        const percent = ((_this.value - min) / (max - min)) * 100;
+        thumbRight.style.right = 100 - percent + "%";
+        range.style.right = 100 - percent + "%";
+        
+        careerTo.value = Math.round(percent * 0.3);
+    };
+
+    careerLeft.addEventListener("input", setLeftValue);
+    careerRight.addEventListener("input", setRightValue);
+}
+
 
 /*-----------//호출-----------*/
 

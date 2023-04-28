@@ -94,7 +94,7 @@
                 width: rem(240);
                 margin: rem(40) auto;
             }
-            .flex_1_2{
+            .flex_2_3{
                 width: rem(1790);
                 //투입상세정보 팝업 (table 확장)
                 &.is-active{
@@ -137,6 +137,7 @@
 }
 .modalCont{
     margin-top: rem(10);
+    position: relative;
     &.center{
         text-align: center;
         .select{
@@ -225,6 +226,11 @@
                 }
             }
         }
+    }
+    .alertToast{
+        bottom: 5%;
+        left: 48%;
+        transform: translate(-50%, -50%);
     }
 }
 .modalFooter{
@@ -338,7 +344,9 @@
     .ellipsis{
         width: rem(100);
         display: inline-block;
-        line-height: rem(49);
+        //line-height: rem(49);
+        line-height: rem(33);
+        padding: 0 rem(14);
     }
     // table{
     //     &.hasInput{

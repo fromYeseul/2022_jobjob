@@ -183,6 +183,34 @@ input[type=radio]{
                 border: 1px solid $mainColor;
             }
         }
+
+        //input hidden 이 들어갈때
+        + input[type=hidden]{
+            + label{
+                display: inline-block !important;
+                min-width: rem(65);
+                line-height: rem(44);
+                padding: 0 rem(25);
+                margin-right: rem(5);
+                text-align: center;
+                color: $titleGray;
+                font-weight: 500;
+                background: $white;
+                border-radius: rem(5);
+                border: 1px solid $inputGray;
+                &::before{
+                    display: none;
+                }
+            }
+        }
+        &:checked{
+            + input[type=hidden]{
+                + label{
+                    color: $mainColor;
+                    border: 1px solid $mainColor;
+                }
+            }    
+        } 
     }
     input[type=radio]{
         + label{
@@ -197,6 +225,26 @@ input[type=radio]{
                 color: $white;
                 border: 1px solid $mainColor;
                 background: $mainColor;
+            }
+        }
+
+        //input hidden 이 들어갈때
+        + input[type=hidden]{
+            + label{
+                line-height: rem(47);
+                margin-right: rem(10);
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        &:checked{
+            + input[type=hidden]{
+                + label{
+                    color: $white;
+                    border: 1px solid $mainColor;
+                    background: $mainColor;
+                }
             }
         }
     }
@@ -219,6 +267,23 @@ input[type=radio]{
     //      }
     //     }
     // }
+    &.low{
+        input[type=checkbox],
+        input[type=radio]{
+            + label{
+                line-height: rem(40);
+                padding: 0 rem(10);
+            }
+            
+            //input hidden 이 들어갈때
+            + input[type=hidden]{
+                + label{
+                    line-height: rem(40);
+                    padding: 0 rem(10);
+                }
+            }
+        }       
+    }
     &.smSize{
         input[type=checkbox],
         input[type=radio]{
@@ -227,7 +292,16 @@ input[type=radio]{
                 line-height: rem(24);
                 padding: 0 rem(5);
             }
-        }        
+            
+            //input hidden 이 들어갈때
+            + input[type=hidden]{
+                + label{
+                    min-width: auto;
+                    line-height: rem(24);
+                    padding: 0 rem(5);
+                }
+            }
+        }          
     }
     &.need{
         input[type=radio]{
@@ -245,11 +319,20 @@ input[type=radio]{
                 }
             }
         }
+        
+        //input hidden 이 들어갈때
+        + input[type=hidden]{
+            + label{
+                border:0;
+                box-shadow: 0px 0px 3px $error;
+            }
+        }
     }
 }
 
 /* 리스트타입 체크박스 */
 .boxListType{
+    input[type=radio],
     input[type=checkbox]{
         width: 0;
         opacity: 0;
@@ -297,6 +380,7 @@ input[type=radio]{
         opacity: 0;
         position: fixed;
         + label{
+            margin-left: -1px;
             min-width: rem(86);
             line-height: rem(44);
             text-align: center;
@@ -330,6 +414,14 @@ input[type=radio]{
                 color: $white;
                 background-color: $mainColor;
                 border: 1px solid $mainColor;
+            }
+        }
+    }
+    &.midSize{
+        input[type=check],
+        input[type=radio]{
+            + label{
+                min-width: rem(70);
             }
         }
     }

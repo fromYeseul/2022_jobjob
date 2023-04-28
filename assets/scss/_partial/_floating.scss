@@ -1,9 +1,14 @@
 /* 프로젝트 등록 플로팅 */
 .floatingWrapper{
+    width: rem(185);
     position: fixed;
     right: rem(80);
     top: 50%;
     transform: translateY(-45%);
+    &.bottom{
+        top:auto;
+        bottom: 0;
+    }
     .floating{
         padding: rem(24);
         text-align: center;

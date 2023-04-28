@@ -117,8 +117,10 @@
         }
     }
     &.btnType{
-        .tabBtn{            
-            margin-right: rem(10);
+        .tabBtn{   
+            & + .tabBtn{
+                margin-left: rem(10);
+            }         
             a{
                 border-radius: rem(4);
             }    

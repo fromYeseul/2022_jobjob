@@ -35,13 +35,16 @@
         @include sideArray;
         align-items: center;
     }
-    h4{
+    h2, h4{
         margin-bottom: 0;
     }
-
-    .filterTop{
-        @include sideArray;
-        margin-bottom: rem(30);
+}
+.filterTop{
+    @include sideArray;
+    margin-bottom: rem(30);
+    &.flex{
+        justify-content: inherit;
+        margin-bottom: rem(10);
     }
 }
 .filterList{
@@ -98,7 +101,8 @@
 }
 
 //거주지 선택 필터 border제거
-#memArea{
+#memArea,
+#spcJob{
     .filterList{
         .prefix{
             input[type=checkbox]{

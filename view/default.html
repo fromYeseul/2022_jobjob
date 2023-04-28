@@ -491,7 +491,7 @@
     
     <!--230104 전체수정 -ys-->
         <!--221013 추가 -ys-->
-    <div id="showLevel" class="modalLayer center">
+    <div id="showLevel" class="modalLayer center is-active">
         <div class="layerBox laSize"><!--230104 수정 -ys-->
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -551,12 +551,12 @@
                                             <tbody>                            
                                                 <tr>
                                                     <td>초급</td>
-                                                    <td><input type="text" class="mid-laSize low" maxlength="10" value="6,500,000,000"></td>
-                                                    <td><input type="text" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
-                                                    <td><input type="text" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
-                                                    <td><input type="text" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
-                                                    <td><input type="text" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
-                                                    <td><input type="text" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                                    <td><input type="number" class="mid-laSize low" maxlength="10" value="6,500,000,000"></td>
+                                                    <td><input type="number" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                                    <td><input type="number" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                                    <td><input type="number" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                                    <td><input type="number" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                                    <td><input type="number" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
                                                 </tr>                 
                                                 <tr>
                                                     <td>중급</td>
@@ -968,7 +968,7 @@
 
     
     <!--221017 추가 -ys-->
-    <div id="investDetail" class="modalLayer center">
+    <div id="investDetail" class="modalLayer center is-active">
         <div class="layerBox fullSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -991,7 +991,7 @@
                     </div>
                 </div>
                 <div class="xScroll"><!--221129 위치이동 -ys -->
-                    <div class="flex"><!--230119 수정 -ys -->
+                    <div class="flex_2_3"><!--230119 수정 -ys -->
                         <div class="prefix">   
                             <div class="tableBox noScroll"><!--230119 클래스 제거 -ys -->
                                 <table class="hasInput" id="salesTable">
@@ -1489,8 +1489,8 @@
                                     </thead>
                                     <tbody class="dragBox">                            
                                         <tr draggable="true" class="dragTr">
-                                            <td>고급/개발</td>
-                                            <td>
+                                            <td rowspan="2">고급/개발</td>
+                                            <td rowspan="2">
                                                 <div class="select xsSize">
                                                     <span class="selDefault low">홍길금</span>
                                                     <ul class="optionList">
@@ -1501,25 +1501,25 @@
                                                 </div>
                                             </td>
                                             <!-- <td>에코에코에코에코에코</td> -->
-                                            <td class="ellipsis" title="에코에코에코"><!--230119 수정 -ys -->
+                                            <td  rowspan="2" class="ellipsis" title="에코에코에코"><!--230119 수정 -ys -->
                                                 대외비 에코에코에코에코에코 에코에코에코에코에코
                                             </td>
-                                            <td>
+                                            <td rowspan="2">
                                                 <input type="date" class="editType">
                                             </td>
-                                            <td>
+                                            <td rowspan="2">
                                                 <input type="date" class="editType">
                                             </td>
-                                            <td>
+                                            <td rowspan="2">
                                                 <input type="text" class="editType txtCenter" placeholder="3.75">
                                             </td>
-                                            <td>
+                                            <td rowspan="2">
                                                 <input type="text" class="editType txtCenter" placeholder="88,000,000,000">
                                             </td>
-                                            <td>
+                                            <td rowspan="2">
                                                 <input type="text" class="editType txtCenter" placeholder="68,000,000,000">
                                             </td>
-                                            <td>
+                                            <td rowspan="2">
                                                 <div class="select xsSize">
                                                     <span class="selDefault low">상태</span>
                                                     <ul class="optionList">
@@ -1528,14 +1528,55 @@
                                                     </ul>
                                                 </div>
                                             </td>
-                                            <td>자동계산</td>
-                                            <td>-</td>
-                                            <td class="none">2020. 02. 15 조기철수 예정</td><!--221020 가려지는 비고 클래스추가 -ys-->
-                                            <td rowspan="3">
+                                            <td rowspan="2">자동계산</td>
+                                            <td rowspan="2">-</td>
+                                            <td rowspan="2" class="none">2020. 02. 15 조기철수 예정</td><!--221020 가려지는 비고 클래스추가 -ys-->
+                                            <td rowspan="4">
                                                 <!--221220 태그 수정 -ys-->
                                                 <button class="txtType open">[펼침]</button>
                                             </td>
-                                        </tr>                        
+                                        </tr>   
+                                        <tr class="dragTr"></tr>                     
+                                        <tr draggable="true" class="dragTr">
+                                            <td rowspan="2">고급/개발</td>
+                                            <td rowspan="2">
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">홍길금</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">홍길금</li>
+                                                        <li class="optionItem">홍길금</li>
+                                                        <li class="optionItem">홍길금</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2">
+                                                <div class="ellipsis">에코 에코 에코 에코</div><!--230410 수정 -->
+                                            </td>
+                                            <td rowspan="2">22.12.01</td>
+                                            <td rowspan="2">22.09.01</td>
+                                            <td rowspan="2">
+                                                <input type="text" class="editType txtCenter" placeholder="3.75">
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="text" class="editType txtCenter" placeholder="88,000,000,000">
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="text" class="editType txtCenter" placeholder="80,000,000,000">
+                                            </td>
+                                            <td rowspan="2">
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">상태</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">투입</li>
+                                                        <li class="optionItem">종료</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td rowspan="2">자동계산</td>
+                                            <td rowspan="2">-</td>
+                                            <td rowspan="2" class="none">2020. 02. 15 조기철수 예정</td>
+                                        </tr>  
+                                        <tr class="dragTr"></tr>                          
                                         <tr draggable="true" class="dragTr">
                                             <td>고급/개발</td>
                                             <td>
@@ -1548,17 +1589,19 @@
                                                     </ul>
                                                 </div>
                                             </td>
-                                            <td>에코</td>
+                                            <td>
+                                                <div class="ellipsis">에코 에코 에코 에코</div>
+                                            </td>
                                             <td>22.12.01</td>
                                             <td>22.09.01</td>
                                             <td>
                                                 <input type="text" class="editType txtCenter" placeholder="3.75">
                                             </td>
                                             <td>
-                                                <input type="text" class="editType txtCenter" placeholder="88,000,000,000">
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
                                             </td>
                                             <td>
-                                                <input type="text" class="editType txtCenter" placeholder="80,000,000,000">
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
                                             </td>
                                             <td>
                                                 <div class="select xsSize">
@@ -1572,7 +1615,7 @@
                                             <td>자동계산</td>
                                             <td>-</td>
                                             <td class="none">2020. 02. 15 조기철수 예정</td>
-                                        </tr>                            
+                                        </tr>                           
                                         <tr draggable="true" class="dragTr">
                                             <td>고급/개발</td>
                                             <td>
@@ -1585,7 +1628,87 @@
                                                     </ul>
                                                 </div>
                                             </td>
-                                            <td>에코</td>
+                                            <td>
+                                                <div class="ellipsis">에코 에코 에코 에코</div>
+                                            </td>
+                                            <td>22.12.01</td>
+                                            <td>22.09.01</td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="3.75">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">상태</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">투입</li>
+                                                        <li class="optionItem">종료</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>자동계산</td>
+                                            <td>-</td>
+                                            <td class="none">2020. 02. 15 조기철수 예정</td>
+                                        </tr>                           
+                                        <tr draggable="true" class="dragTr">
+                                            <td>고급/개발</td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">홍길금</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">홍길금</li>
+                                                        <li class="optionItem">홍길금</li>
+                                                        <li class="optionItem">홍길금</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="ellipsis">에코 에코 에코 에코</div>
+                                            </td>
+                                            <td>22.12.01</td>
+                                            <td>22.09.01</td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="3.75">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
+                                            </td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">상태</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">투입</li>
+                                                        <li class="optionItem">종료</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>자동계산</td>
+                                            <td>-</td>
+                                            <td class="none">2020. 02. 15 조기철수 예정</td>
+                                        </tr>                           
+                                        <tr draggable="true" class="dragTr">
+                                            <td>고급/개발</td>
+                                            <td>
+                                                <div class="select xsSize">
+                                                    <span class="selDefault low">홍길금</span>
+                                                    <ul class="optionList">
+                                                        <li class="optionItem">홍길금</li>
+                                                        <li class="optionItem">홍길금</li>
+                                                        <li class="optionItem">홍길금</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="ellipsis">에코 에코 에코 에코</div>
+                                            </td>
                                             <td>22.12.01</td>
                                             <td>22.09.01</td>
                                             <td>

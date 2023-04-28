@@ -408,7 +408,10 @@
                                 <div class="tabWrapper">
                                     <ul class="tabBtnWrap underType wideSize">
                                         <li class="tabBtn prefix">
-                                            <a href="#myProj-1" class="is-active">직무추천 (250)</a>
+                                            <a href="#myProj-1" class="is-active">직무추천 (250) 
+                                                <!--230427 추가 -ys -->
+                                                <span aria-controls="recomDetail" class="layerOpen addSet">[설정]</span>
+                                            </a>
                                         </li>
                                         <li class="tabBtn center">
                                             <a href="#myProj-2">지원접수 (4)</a>
@@ -2273,8 +2276,9 @@
 
                         <div class="boxListWrap">            
                             <ul>
+                                <!--230427 draggable 추가 -ys -->
                                 <!--boxList-->
-                                <li class="boxList headType is-active"> 
+                                <li draggable="true" class="boxList headType is-active"> 
                                     <div class="head">
                                         <span class="prefix">90.0 Special</span>
                                         <p class="suffix">
@@ -2312,7 +2316,7 @@
                                 </li>
                                 <!--//boxList-->
                                 
-                                <li class="boxList headType">
+                                <li draggable="true" class="boxList headType">
                                     <div class="head">
                                         <span class="prefix">90.0 Special</span>
                                         <p class="suffix">
@@ -2346,7 +2350,7 @@
                                     </div>
                                 </li>
                                 
-                                <li class="boxList headType">
+                                <li draggable="true" class="boxList headType">
                                     <div class="head">
                                         <span class="prefix">90.0 Special</span>
                                         <p class="suffix">
@@ -2380,7 +2384,7 @@
                                     </div>
                                 </li>
                                 
-                                <li class="boxList headType">
+                                <li draggable="true" class="boxList headType">
                                     <div class="head">
                                         <span class="prefix">90.0 Special</span>
                                         <p class="suffix">
@@ -2414,7 +2418,7 @@
                                     </div>
                                 </li>
                                 
-                                <li class="boxList headType">
+                                <li draggable="true" class="boxList headType">
                                     <div class="head">
                                         <span class="prefix">90.0 Special</span>
                                         <p class="suffix">
@@ -2899,11 +2903,234 @@
         <div class="layerDim"></div>    
     </div>
     <!--//221110 거주지 팝업-->
+
+
+    <!--230427 직무추천 상세설정 팝업-->
+    <div id="recomDetail" class="modalLayer center">
+        <div class="layerBox">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont">
+                <h3>직무추천 세부설정</h3>    
+
+                <div class="filterList">
+                    <div class="filterTop flex">
+                        <h4 class="">가용일자</h4>  
+                        <button class="round ml10">초기화</button>
+                    </div>
+                    <input type="date" class="smSize"> 부터
+                    <input type="date" class="smSize"> 까지
+                </div>
+
+                <div class="filterList">
+                    <div class="filterTop flex">
+                        <h4>선호업무</h4>
+                    </div>
+                    <div class="btnType low block">
+                        <input type="radio" id="workAll" name="workType" value="workAll" checked="">
+                        <label for="workAll">전체</label>
+                        <input type="radio" id="workSI" name="workType" value="workSI">
+                        <label for="workSI">SI</label>
+                        <input type="radio" id="workSM" name="workType" value="workSM">
+                        <label for="workSM">SM</label>
+                    </div>
+                </div>
+
+                <div class="filterList">
+                    <div class="filterTop flex">
+                        <h4 class="">보유경력</h4>  
+                        <div class="ml10">
+                            <input type="text" class="xxsSize txtCenter" value="8" id="careerFrom">
+                            ~
+                            <input type="text" class="xxsSize txtCenter" value="22" id="careerTo">
+                            년
+                        </div>
+                        <button class="round ml10">초기화</button>
+                    </div>
+
+                    <div class="rangeSlider multi">
+                        <!-- 진짜 슬라이더 -->
+                        <input type="range" id="careerLeft" min="0" max="100" value="25" />
+                        <input type="range" id="careerRight" min="0" max="100" value="75" />
+                    
+                        <!-- 커스텀 슬라이더 -->
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb left"></div>
+                            <div class="thumb right"></div>
+                        </div>
+
+                        <div class="marking">
+                            <ul>
+                                <li>0</li>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>30</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="filterList">
+                    <div class="filterTop flex">
+                        <h4 class="">키워드 적용</h4>     
+                        <span>(경력, 보유스킬, 메모 등)</span>
+                        <button class="round ml10">초기화</button>
+                    </div>
+                    <div class="inputGroup">
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filterList">
+                    <div class="filterTop flex">
+                        <h4 class="">회사까지거리</h4>           
+                        <div class="ml10">
+                            <input type="text" class="xxsSize txtCenter" id="comDistance" value = "37">
+                            km
+                        </div>
+                        <button class="round ml10">초기화</button>
+                    </div>
+
+                    <div class="rangeSlider single">                    
+                        <input type="range" id="distanceTo" min="0" max="50" value = "37">
+                        
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb right"></div>
+                        </div>
+                        
+                        <div class="marking">
+                            <ul>
+                                <li>0</li>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>30</li>
+                                <li>40</li>
+                                <li>50</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subInfo txtRight">
+                    <input type="checkbox" id="jobDefault" name="jobDefault" class="hasTxt">
+                    <label for="jobDefault">이 설정으로 해당 직무의 기본값 변경</label>
+                </div>
+
+                <div class="listBottom">
+                    <button class="white prefix">전체초기화</button>
+                    <button class="suffix">저장</button>
+                </div>
+            </div>
+        </div>
+        <div class="layerDim"></div>  
+    </div>
+    <!--//230427 직무추천 상세설정 팝업-->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>
     
     <script>
-
         $(document).on("click", ".select", function(e) {
 
             $('.select').not($(this)).removeClass('is-active');
@@ -2941,6 +3168,10 @@
 
         boxChk();
         memoFold();
+
+        //230427 추가 -ys
+        rangeSliderMulti();
+        rangeSlider();
     </script>
 </body>
 </html>
