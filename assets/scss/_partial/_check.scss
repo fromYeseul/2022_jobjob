@@ -267,6 +267,28 @@ input[type=radio]{
     //      }
     //     }
     // }
+    &.full{
+        width: 100%;
+        input[type=checkbox],
+        input[type=radio]{
+            + label{
+                width: 100%;
+                margin-bottom: rem(10);
+                margin-right: 0;
+            }
+            
+            //input hidden 이 들어갈때
+            + input[type=hidden]{
+                + label{
+                    // line-height: rem(40);
+                    // padding: 0 rem(10);
+                    width: 100%;
+                    margin-bottom: rem(10);
+                    margin-right: 0;
+                }
+            }
+        } 
+    }
     &.low{
         input[type=checkbox],
         input[type=radio]{
