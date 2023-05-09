@@ -173,7 +173,7 @@
             </section>
             <section class="memDetail">
                 <div class="tabWrapper" id="yes">
-                    <ul class="tabBtnWrap">
+                    <ul class="tabBtnWrap" id="test">
                         <li class="tabBtn">
                             <a href="#memDetail-1" class="is-active">기본정보</a>
                         </li>
@@ -263,7 +263,7 @@
                                                         <div class="tabContWrap">
                                                             <div id="skill-web" class="tabCont is-active">
                                                                 <div class="yScroll">
-                                                                    보유스킬 adefdgd 
+                                                                    보유스킬adefdgd보유스킬adefdgd보유스킬adefdg보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgd보유스킬adefdgdd 
                                                                 </div>
                                                             </div>
                                                             <div id="skill-sap" class="tabCont">
@@ -496,7 +496,7 @@
                                     <li class="tabBtn">
                                         <a href="#proj-sap">SAP(4)</a>
                                     </li>
-                                    <li>
+                                    <li class="ml10"><!--230502 class 추가 -ys-->
                                         <h5>WEB 경력 15년 1개월</h5>
                                     </li>
                                 </ul>
@@ -1839,7 +1839,7 @@
                             
                             <div class="boxListWrap memoList is-active">
 
-                                <button class="">메모 작성</button>
+                                <button class="addMemo">메모 작성</button>
                                 
 
                                 <ul>
@@ -1847,7 +1847,7 @@
                                         <div class="textForm">
                                             <textarea name="" id="" rows="3"></textarea>
                                             <div class="btnWrap right">
-                                                <button class="smSize white">취소</button>
+                                                <button class="smSize white cancel">취소</button>
                                                 <button class="smSize">등록</button>
                                             </div>  
                                         </div>
@@ -1977,7 +1977,7 @@
         showMemoList();
         tableHover();
         memoFold();
-        
+        makeMemo();
         // for(let j=0; j < tabBtn.length; j++){
         //             if (tabBtn[j].closest('.tabWrapper').id === tab_id){
         //                 tabBtn[j].classList.remove('is-active');

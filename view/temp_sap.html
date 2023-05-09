@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAP TEMP</title>
+    <style>
+        header img{width: 100%;}
+
+        .tableWrap{padding:10px;}
+        .flex{display: flex;}
+        .flex table + table{margin-left:10px;}
+        table{
+            table-layout: fixed;
+            border-collapse: collapse;
+            
+            width: 100%;
+        }
+        table tr{}
+        table tr td,
+        table tr th{
+            padding: 4px 10px;
+            height: 30px;
+            border: 1px solid #000;
+        }
+
+        table tr td{}
+        table.noBorder tr th,
+        table.noBorder tr td{border:0;}
+        table tr td.right{text-align: right;}
+        table tr td.center{text-align: center;}
+        table tr th{text-align: center;}
+        table tr th.left{text-align: left;}
+
+        label + input[type="checkbox"]{margin-left: 15px;}
+    </style>
+</head>
+<body>
+    
+    <header><img src="/assets/img/temSap.jpg" alt=""></header>
+    
+
+    <div class="tableWrap">
+        <table class="noBorder">
+            <colgroup>
+                <col width="20%">
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>■ 컨설팅 전문 영역</th>
+                    <td>
+                        <input type="checkbox" id="모듈" name="major">
+                        <label for="모듈">모듈 프로세스 컨설턴트</label>
+                        
+                        <input type="checkbox" id="기술/개발" name="major">
+                        <label for="기술/개발">기술/개발 컨설턴트</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>■ 컨설팅 경험 분야</th>
+                    <td>                        
+                        <input type="checkbox" id="FI" name="exp">
+                        <label for="FI">FI</label>
+                        
+                        <input type="checkbox" id="AA" name="exp">
+                        <label for="AA">AA</label>
+                                                
+                        <input type="checkbox" id="CO" name="exp">
+                        <label for="CO">CO</label>
+                        
+                        <input type="checkbox" id="TR" name="exp">
+                        <label for="TR">TR</label>
+                                                
+                        <input type="checkbox" id="SD" name="exp">
+                        <label for="SD">SD</label>
+                        
+                        <input type="checkbox" id="MM" name="exp">
+                        <label for="MM">MM</label>
+                        
+                        <input type="checkbox" id="HR" name="exp">
+                        <label for="HR">HR</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="5"></th>
+                    <td>
+                        <input type="checkbox" id="PS" name="exp">
+                        <label for="PS">PS</label>
+                                                
+                        <input type="checkbox" id="PM" name="exp">
+                        <label for="PM">PM</label>
+                        
+                        <input type="checkbox" id="QM" name="exp">
+                        <label for="QM">QM</label>
+                                                
+                        <input type="checkbox" id="WM" name="exp">
+                        <label for="WM">WM</label>
+                        
+                        <input type="checkbox" id="수출입" name="exp">
+                        <label for="수출입">수출입</label>                        
+                        
+                        <input type="checkbox" id="LES" name="exp">
+                        <label for="LES">LES</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>   
+                        <input type="checkbox" id="BW" name="exp">
+                        <label for="BW">BW</label>
+                        
+                        <input type="checkbox" id="SEM" name="exp">
+                        <label for="SEM">SEM</label>                       
+                        
+                        <input type="checkbox" id="CRM" name="exp">
+                        <label for="CRM">CRM</label>
+                                                
+                        <input type="checkbox" id="SCM" name="exp">
+                        <label for="SCM">SCM</label>
+                        
+                        <input type="checkbox" id="SRM" name="exp">
+                        <label for="SRM">SRM</label>
+                                                
+                        <input type="checkbox" id="PLM" name="exp">
+                        <label for="PLM">PLM</label>
+                        
+                        <input type="checkbox" id="EBP" name="exp">
+                        <label for="EBP">EBP</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="E-procurement" name="exp">
+                        <label for="E-procurement">E-procurement</label>
+                        
+                        <input type="checkbox" id="Archiving" name="exp">
+                        <label for="Archiving">Archiving</label>
+
+                        <input type="checkbox" id="Interface" name="exp">
+                        <label for="Interface">Interface</label>
+                                                
+                        <input type="checkbox" id="Workflow" name="exp">
+                        <label for="Workflow">Workflow</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="Groupware" name="exp">
+                        <label for="Groupware">Groupware</label>
+
+                        <input type="checkbox" id="KM" name="exp">
+                        <label for="KM">KM</label>
+                        
+                        <input type="checkbox" id="Firm-Banking" name="exp">
+                        <label for="Firm-Banking">Firm Banking</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="SIMS" name="exp">
+                        <label for="SIMS">SIMS</label>
+
+                        <input type="checkbox" id="BSP" name="exp">
+                        <label for="BSP">BSP</label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--기본인적사항-->
+    <div class="tableWrap">
+        <table>
+            <colgroup> 
+                <col width="20%">
+                <col>
+                <col width="20%">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="4" class="left">I. 기본 인적 사항</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>성명</th>
+                    <td></td>
+                    <th>성별</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>생년월일</th>
+                    <td></td>
+                    <th>연락처</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td></td>
+                    <th>Email</th>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!--프로젝트 경력-->
+    <div class="tableWrap">
+        <table>
+            <colgroup> 
+                <col width="15%">
+                <col>
+                <col width="15%">
+                <col>
+                <col width="15%">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="6" class="left">II. 프로젝트 경력</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>SAP 경력</th>
+                    <td class="right"> 년</td>
+                    <th>Non-SAP경력</th>
+                    <td class="right"> 년</td>
+                    <th>경력 총계</th>
+                    <td class="right"> 년</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--프로젝트 요약-->
+    <div class="tableWrap">
+        <table>
+            <colgroup>
+                <col width="8%">
+                <col>
+                <col>
+                <col>
+                <col>
+
+                <col width="30%">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="7" class="left">III. 프로젝트 요약</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>순번</th>
+                    <th>고객 명</th>
+                    <th>산업분야</th>
+                    <th colspan="2">기간(From ~ To)</th>
+                    <th>프로젝트 명</th>
+                    <th>역할</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+    
+    <header><img src="/assets/img/temSap.jpg" alt=""></header>
+    
+    <!--SAP Knowledge-->
+    <div class="tableWrap">
+        <table>
+            <thead>
+                <tr>
+                    <th class="left">IV. SAP Knowledge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!--프로젝트 상세-->
+    <div class="tableWrap">
+        <table>
+            <colgroup> 
+                <col width="8%">
+                <col>
+                <col>
+                <col width="30%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="4" class="left">V. 프로젝트 상세</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>순번</th>
+                    <th>고객 명</th>
+                    <th>프로젝트 명</th>
+                    <th>상세 구현 내용</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!--회사근무 경력-->
+    <div class="tableWrap">
+        <table>
+            <colgroup> 
+                <col>
+                <col>
+                <col width="50%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="3" class="left">VI. 회사 근무 경력</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th colspan="2">기간 (From ~ To)</th>
+                    <th>회          사          명</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        
+    
+    <header><img src="/assets/img/temSap.jpg" alt=""></header>
+
+    <!--학력-->
+    <div class="tableWrap">
+        <table>
+            <colgroup> 
+                <col width="40%">
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="3" class="left">VII. 학력</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="right">고등학교</td>
+                    <td class="right">년 &nbsp; &nbsp; &nbsp; &nbsp;월</td>
+                    <td>졸업유무</td>
+                </tr>
+                <tr>
+                    <td class="right">대학교 &nbsp; &nbsp; &nbsp; &nbsp;학과</td>
+                    <td class="right">년 &nbsp; &nbsp; &nbsp; &nbsp;월</td>
+                    <td>졸업유무 (졸업/재학중/휴학)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--교육수료-->
+    <div class="tableWrap">
+        <table>
+            <colgroup>
+                <col>
+                <col>
+                <col width="40%">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="4" class="left">VIII. 교육 수료</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th colspan="2">기간 (From ~ To)</th>
+                    <th>교 육 내 용</th>
+                    <th>주관사 (기관)</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--자격증-->
+    <div class="tableWrap">
+        <table>
+            <colgroup>
+                <col>
+                <col width="50%">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="3" class="left">IX. 자격증</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>취득 년 월</th>
+                    <th>자 격 분 야</th>
+                    <th>주관사 (기관)</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--외국어 능력-->
+    <div class="tableWrap">
+        <table>
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col width="30%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="4" class="left">X. 외국어 능력</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>언어</th>
+                    <th>공인기관(Authority)</th>
+                    <th>점수(Score)</th>
+                    <th>레벨(LEVEL)</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="center">상, 중, 하   /   1급, 2급, 3급</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--비자-->
+    <div class="tableWrap">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2" class="left">■ 비자(VISA)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>국가 (Country)</th>
+                    <th>유효 기간(Valid – To)</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--보유기술-->
+    <div class="tableWrap">
+        <table>
+            <colgroup>
+                <col width="30%">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="2" class="left">■ 보유 기술</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="left">SAP  관 련  기 술</th>
+                    <td>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">Non-SAP 관련 기술</th>
+                    <td>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

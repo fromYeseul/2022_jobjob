@@ -162,11 +162,11 @@ layerPop();
 $(document).on("click", layerPop());
 
 
-// 탭메뉴(여러개 확인하기!!)
-function tabMenu(){
-    let tabBtn = document.querySelectorAll('.tabBtnWrap a');
-    let tabCont = document.querySelectorAll('.tabContWrap > div'); 
+// 탭메뉴
+let tabBtn = document.querySelectorAll('.tabBtnWrap a');
+let tabCont = document.querySelectorAll('.tabContWrap > div'); 
 
+function tabMenu(){
     if(tabBtn !== null){        
         for(let i=0; i < tabBtn.length; i++){
             tabBtn[i].addEventListener('click',function(e){
@@ -863,7 +863,7 @@ function memoFold(){
     let memMemo = document.querySelectorAll('.quickView .memMemo.editType');
 
     for(let i=0; i<memMemo.length; i++){
-        console.log(memMemo[i].offsetHeight);
+        //console.log(memMemo[i].offsetHeight);
         if(memMemo[i].offsetHeight > 90){
             let foldBtnLi = memMemo[i].parentNode.querySelector('.txtRight');
             let foldBtn = foldBtnLi.firstElementChild;
@@ -1061,6 +1061,39 @@ function rangeSliderMulti(){
     careerLeft.addEventListener("input", setLeftValue);
     careerRight.addEventListener("input", setRightValue);
 }
+
+//카운팅 - 메뉴관리
+function counting(){
+    let countUp = document.querySelectorAll('.countUp');
+    let countDown = document.querySelectorAll('.countDown');
+    let countInput = document.querySelectorAll('.countInput');            
+
+    for(let i=0; i<countInput.length; i++){                  
+        if(Number(countInput[i].value) >= 30){   //30의 값을 확인하는 방법?
+            countUp[i].disabled = true;
+        }else if(Number(countInput[i].value) == 1){
+            countDown[i].disabled = true;
+        }
+        
+        countUp[i].addEventListener('click', function(){
+            countInput[i].value = Number(countInput[i].value) + 1;  
+            countDown[i].disabled = false;         
+
+            if(Number(countInput[i].value) >= 30){   //30의 값을 확인하는 방법?
+                countUp[i].disabled = true;
+            }
+        });
+        countDown[i].addEventListener('click', function(){                
+            countInput[i].value = Number(countInput[i].value) - 1; 
+            countUp[i].disabled = false;         
+            
+            if(Number(countInput[i].value) == 1){
+                countDown[i].disabled = true;
+            }
+        })
+    }
+}
+//counting();
 
 
 /*-----------//호출-----------*/

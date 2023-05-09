@@ -1,0 +1,152 @@
+table{
+    &.tree{
+        table-layout: fixed;
+    }
+}
+.tree{
+    text-align: left;
+    tr{
+        border-bottom: 0;
+        &:hover{
+            background: none;
+        }
+        .treegrid-expander {
+            display: inline-block;
+            // margin-right: rem(14);
+            // width: rem(18);
+            position: relative;
+            &::after{
+                content: ' ';
+                display: inline-block;
+                width: rem(18);
+                height: rem(18);
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+                background-image: url(/assets/img/icoGroup.png);
+                z-index: 1;
+            }
+        }
+        &.depth1{
+            .rootCont{
+                margin-left: rem(25);
+                width: calc(100% - 25px);
+                height: rem(50);
+                &::before{
+                    display: none;
+                }
+            }
+        }
+        &.depth2{
+            .treegrid-expander {
+                &::after{
+                    left: rem(25);
+                }
+            }
+            .rootCont{
+                margin-left: rem(55);
+                width: calc(100% - 55px);
+                height: rem(40);
+                &::before{
+                    display: block;
+                }
+            }
+        }
+        &.depth3{
+            .treegrid-expander {
+                &::after{
+                    left: rem(50);
+                }
+            }
+            .rootCont{
+                margin-left: rem(80);
+                width: calc(100% - 80px);
+            }     
+        }               
+        &.depth4{
+            .treegrid-expander {
+                &::after{
+                    display: none;
+                }
+            }
+            .rootCont{
+                margin-left: rem(105);
+                width: calc(100% - 105px);
+            }
+        }
+        &.noDepth{
+            .treegrid-expander {
+                &::after{
+                    display: none;
+                }
+            }
+        }
+        .rootCont{
+            @include sideArray;
+            margin-left: rem(40);
+            width: calc(100% - 40px);
+            height: rem(40);
+            padding: rem(6) rem(10);
+            border-radius: rem(4);
+            border: 1px solid $inputGray;
+            position: relative;
+            &::before{
+                content:'';
+                display: inline-block;
+                width: rem(45);
+                height: rem(55);
+                border-left: 1px solid $inputGray;
+                border-bottom: 1px solid $inputGray;
+                position: absolute;
+                top: -36px;
+                left: -47px;
+                z-index: 0;
+            }
+            &.disabled{
+                background: $bgColor;
+                button{
+                    background: $bgColor;
+                }
+                span{
+                    cursor:not-allowed;
+                }
+            }
+            span{
+                cursor: pointer;
+                @include ellipsis;
+                width: 70%;
+            }
+        }
+    }
+    .treegrid-container{
+        display: flex;
+    }
+}
+.treegrid-expander-collapsed::after {background-position: -80px -180px;}    //+
+.treegrid-expander-expanded::after {background-position: -100px -180px;}    //-
+
+
+
+tr.loading>td>.treegrid-container>.treegrid-expander::after {
+	background: url('../images/loader.gif') center center no-repeat;
+	border: 0;
+	height: 16px;
+	margin-left: -8px;
+	margin-top: -8px;
+	width: 16px;
+}
+.treegrid-move-indicator {
+	border: 5px solid transparent;
+	border-left-color: #000;
+	display: none;
+	width: 0;
+	height: 0;
+	position: absolute;
+	margin-top: -5px;
+	margin-left: -6px;
+}
+.treegrid-container.dragging {
+	margin-left: 0 !important;
+	position: absolute;
+}

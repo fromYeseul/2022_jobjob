@@ -87,7 +87,21 @@
                 height: 100%;
             }
         }
-    }    
+    }  
+    &.flex{
+        li{
+            display: flex;
+            align-items: center;
+            margin-bottom: rem(10);
+            label{
+                min-width: rem(120);
+                text-align: left;
+            }
+            input{
+                margin-top: 0;
+            }
+        }
+    }  
     .block{
         li{
             margin-bottom: rem(6);
@@ -280,10 +294,13 @@ input[type=password]{
 .hasBtn{
     display: flex;
     align-items: center;
+    &.full{
+        width: 100%;
+    }
     input{
         padding-left: rem(10);
         & + button{
-            margin-left: rem(4);
+            margin-left: rem(10);
         }
     }
     .button,

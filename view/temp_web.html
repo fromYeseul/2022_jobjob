@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB TEMP</title>
+    <style>
+        h1{
+            padding: 10px;
+            text-align: center;
+            border: 2px solid #000;
+        }
+        h3{
+            padding: 6px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        .tableWrap{padding:10px;}
+        .flex{display: flex;}
+        .flex table + table{margin-left:10px;}
+        table{
+            table-layout: fixed;
+            border-collapse: collapse;
+            
+            width: 100%;
+        }
+        table tr{}
+        table tr td,
+        table tr th{
+            padding: 4px 10px;
+            height: 30px;
+            border: 1px solid #000;
+        }
+        table tr td{}
+        table tr th{text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>개 인 이 력 카 드</h1>
+
+    <!-- 성명 -->
+    <div class="tableWrap">
+        <table>
+            <tbody>
+                <tr>
+                    <th>성명</th>
+                    <td colspan="2"></td>
+                    <th>생년월일</th>
+                    <td colspan="2"></td>
+                    <th>성별</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>소속회사</th>
+                    <td colspan="3"></td>
+                    <th>입사일</th>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <th>부서</th>
+                    <td></td>
+
+                    <th>직위</th>
+                    <td></td>
+
+                    <th>경력</th>
+                    <td></td>
+
+                    <th>기술등급</th>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 전화 -->
+    <div class="tableWrap">
+        <table>
+            <colgroup>
+                <col width="15%;">   
+                <col>        
+                <col>        
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>전화</th>
+                    <td>(유선)</td>
+                    <td>(무선)</td>
+                </tr>
+                <tr>
+                    <th>E - Mail</th>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td colspan="2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- 졸업, 자격증 -->
+    <div class="tableWrap flex">
+        <table>
+            <tbody>
+                <tr>
+                    <td>고등학교 졸업 0000 년  00 월</td>
+                </tr>
+                <tr>
+                    <td>대학교 졸업 0000 년  00 월</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>자격증명</th>
+                    <th>취득일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 경력 -->
+    <div class="tableWrap">
+        <table>
+            <colgroup>
+                <col>        
+                <col>        
+                <col width="15%;">   
+                <col>        
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>회사명</th>
+                    <th>기간</th>
+                    <th>직위</th>
+                    <th>담당업무</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- 교육, 기술 -->
+    <div class="tableWrap flex">
+        <table>
+            <thead>
+                <tr>
+                    <th>교육명</th>
+                    <th>시작일</th>
+                    <th>종료일</th>
+                    <th>기관</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>사용기술</th>
+                    <th>숙련도</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <h3>SKILL INVENTORY</h3>
+    <div class="tableWrap">
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">프로젝트명<br>(업무명)</th>
+                    <th rowspan="2">참여기간</th>
+                    <th rowspan="2">고객사</th>
+                    <th rowspan="2">근무회사</th>
+                    <th rowspan="2">역 할</th>
+                    
+                    <th colspan="7">개발환경</th>
+                </tr>
+                <tr>
+                    <th>기종</th>
+                    <th>OS</th>
+                    <th>언어</th>
+                    <th>DBMS</th>
+
+                    <th>TOOL</th>
+                    <th>통신</th>
+                    <th>기타</th>
+                </tr>
+            </thead>    
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--기타-->
+    <div class="tableWrap">
+        <table>
+            <colgroup>
+                <col width="30%">
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td>
+                        기타<br>(활용가능한 S/W 및 기법, FrameWork)
+                    </td>
+                    <td>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

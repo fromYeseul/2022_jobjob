@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴관리</title>
+    
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="">
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li>
+                        <span aria-controls="showLevel" class="layerOpen">등급보기설정
+                    </span></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="is-active"><a href="#"><i class="ico home"></i><span class="menuTxt">홈</span><i></i></a></li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span><i></i></a></li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span><i></i></a></li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span><i></i></a></li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span><i></i></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span><i></i></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span><i></i></a></li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span><i></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>   
+        
+        <section class="contWrapper noRight"><!--우측패널 없는 페이지-->
+            <section class="contLayout" style="position: relative;">
+                
+                <section class="menuAdmin">
+                    <div class="pageTit">
+                        <h2>메뉴관리</h2>
+                    </div>
+                    
+                    <div class="regiPartWrapper noInfo">        
+                        <div class="regiPart">
+                            <h3>메뉴등록</h3>                            
+                            <div class="boxWrap">    
+                                <div class="infoList">
+                                    <ul>
+                                        <li>
+                                            <h6 class="need">메뉴위치</h6>
+                                            <div class="tabType">
+                                                <input type="radio" id="menuAdmin" name="menuPosi" value="menuAdmin" checked="">
+                                                <label for="menuAdmin">어드민</label>
+                                                <input type="radio" id="menuFront" name="menuPosi" value="menuFront">
+                                                <label for="menuFront">프론트</label>
+                                            </div>
+                                            <select name="" id="" class="full">
+                                                <option value="">choose</option>
+                                                <option value="dog" disabled="">Dog</option>
+                                                <option value="cat">Cat</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <h6 class="need">메뉴명</h6>
+                                            <div class="hasBtn full">
+                                                <input type="text" class="full" id="project2" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+                                                <button class="midSize layerOpen" aria-controls="menu-confirm">등록</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>             
+                            </div>
+                        </div>      
+
+                        <div class="regiPart">
+                            <h3>메뉴목록</h3>
+                            <div class="boxWrap">
+                                <div class="tableTop">
+                                    <div class="">
+                                    </div>
+            
+                                    <div class="">
+                                        <button class="white mid-lowSize layerOpen" aria-controls="del-confirm">삭제</button>  
+                                        <button class="mid-lowSize layerOpen" aria-controls="copy-confirm">복사</button>   
+                                    </div>                    
+                                </div>
+
+                                <div class="tableBox">    
+                                    <table class="">
+                                        <colgroup>
+                                            <col width="56px;">   
+                                            <col width="16%;"> 
+                                            <col>    
+                                            <col width="14%;">    
+                                            <col width="5%;">    
+            
+                                            <col width="5%;">    
+                                            <col width="16%;">    
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox" id="gg">
+                                                    <label for="gg"></label>
+                                                </th>
+                                                <th>메뉴위치</th>
+                                                <th>메뉴명</th>
+                                                <th>노출순서</th>
+                                                <th>사용여부</th>
+                                                <th>등록자</th>
+                                                <th>수정일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="gg">
+                                                    <label for="gg"></label>
+                                                </td>
+                                                <td>어드민 > GNB</td>
+                                                <td class="left"><a href="#" class="layerOpen" aria-controls="menu-detail">홈</a></td>
+                                                <td>
+                                                    <div class="countBox">
+                                                        <button class="onlyIco countUp"><i class="ico top"></i></button>
+                                                        <input type="text" value="1" class="countInput" readonly>
+                                                        <button class="onlyIco countDown"><i class="ico bottom"></i></button>
+                                                    </div>
+                                                </td>
+                                                <td>사용</td>
+                                                <td>관리자</td>
+                                                <td>yyyy.mm.dd hH:mm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="gg">
+                                                    <label for="gg"></label>
+                                                </td>
+                                                <td>어드민 > GNB</td>
+                                                <td class="left"><a href="#">회원</a></td>
+                                                <td>
+                                                    <div class="countBox">
+                                                        <button class="onlyIco countUp"><i class="ico top"></i></button>
+                                                        <input type="text" value="30" class="countInput" readonly>
+                                                        <button class="onlyIco countDown"><i class="ico bottom"></i></button>
+                                                    </div>
+                                                </td>
+                                                <td>사용</td>
+                                                <td>관리자</td>
+                                                <td>yyyy.mm.dd hH:mm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="gg">
+                                                    <label for="gg"></label>
+                                                </td>
+                                                <td>어드민 > GNB</td>
+                                                <td class="left"><a href="#">프로젝트</a></td>
+                                                <td>
+                                                    <div class="countBox">
+                                                        <button class="onlyIco countUp"><i class="ico top"></i></button>
+                                                        <input type="text" value="20" class="countInput" readonly>
+                                                        <button class="onlyIco countDown"><i class="ico bottom"></i></button>
+                                                    </div>
+                                                </td>
+                                                <td>사용</td>
+                                                <td>관리자</td>
+                                                <td>yyyy.mm.dd hH:mm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="gg">
+                                                    <label for="gg"></label>
+                                                </td>
+                                                <td>어드민 > GNB</td>
+                                                <td class="left"><a href="#">매입/매출관리</a></td>
+                                                <td>
+                                                    <div class="countBox">
+                                                        <button class="onlyIco countUp"><i class="ico top"></i></button>
+                                                        <input type="text" value="15" class="countInput" readonly>
+                                                        <button class="onlyIco countDown"><i class="ico bottom"></i></button>
+                                                    </div>
+                                                </td>
+                                                <td>사용</td>
+                                                <td>관리자</td>
+                                                <td>yyyy.mm.dd hH:mm</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="nodata" colspan="7">검색 결과가 없습니다.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>                       
+                        </div>
+                    </div>     
+                </section>
+                
+            </section>
+        </section>
+    </section>
+
+    <!--메뉴상세 팝업-->
+    <div id="menu-detail" class="modalLayer center is-active">
+        <div class="layerBox mid-laSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h2>메뉴 상세</h2>
+            </div>
+            <div class="modalCont center">
+                <div class="divideBox">
+                    <div class="left">
+                        <h5>어드민 > GNB</h5>
+                        <div class="tableBox">
+                            <table class="tree">
+                                <tbody>
+                                    <tr class="treegrid-1 depth1 expanded"><!--첫번째 항상 열림 expanded-->
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>프로젝트 프로젝트프 로젝트프로젝트프로 젝트프로젝트프로젝 트프로젝트</span>
+                                                <i class="ico smPlus"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-2 treegrid-parent-1 depth2 noDepth">
+                                        <td>
+                                            <div class="rootCont disabled"><!--비활성화클래스 disabled-->
+                                                <span>(미사용) 수주 프로젝트</span>
+                                                <div class="suffix">
+                                                    <button class="onlyIco smSize"><i class="ico up"></i></button>
+                                                    <button class="onlyIco smSize"><i class="ico down"></i></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-2 treegrid-parent-1 depth2 noDepth">
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>의뢰 프로젝트의뢰 프로젝트의뢰 프로젝트의뢰 프로젝트의뢰 프로젝트</span>                                            
+                                                <div class="suffix">
+                                                    <button class="onlyIco smSize"><i class="ico up"></i></button>
+                                                    <button class="onlyIco smSize"><i class="ico down"></i></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-2 treegrid-parent-1 depth2 noDepth">
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>진행 프로젝트</span>
+                                                <div class="suffix">
+                                                    <button class="onlyIco smSize"><i class="ico up"></i></button>
+                                                    <button class="onlyIco smSize"><i class="ico down"></i></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+            
+                                    <tr class="treegrid-5 depth1 noDepth"><!--위치설정 depth1, 하위메뉴 없을 때 noDepth-->
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>이벤트/배너</span>
+                                                <i class="ico smPlus"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    
+                                    <tr class="treegrid-3 depth1">
+                                        <td>
+                                            <div class="rootCont disabled">
+                                                <span>(미사용) 홈페이지</span>
+                                                <i class="ico smPlus"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-4 treegrid-parent-3 depth2 noDepth">
+                                        <td>
+                                            <div class="rootCont disabled">
+                                                <span>(미사용) 배너 관리</span>
+                                                <div class="suffix">
+                                                    <button class="onlyIco smSize"><i class="ico up"></i></button>
+                                                    <button class="onlyIco smSize"><i class="ico down"></i></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-4 treegrid-parent-3 depth2 noDepth">
+                                        <td>
+                                            <div class="rootCont disabled">
+                                                <span>(미사용) 배너 관리</span>
+                                                <div class="suffix">
+                                                    <button class="onlyIco smSize"><i class="ico up"></i></button>
+                                                    <button class="onlyIco smSize"><i class="ico down"></i></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-4 treegrid-parent-3 depth2 noDepth">
+                                        <td>
+                                            <div class="rootCont disabled">
+                                                <span>(미사용) 공지 관리</span>
+                                                <div class="suffix">
+                                                    <button class="onlyIco smSize"><i class="ico up"></i></button>
+                                                    <button class="onlyIco smSize"><i class="ico down"></i></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <h5>메뉴상세 조회</h5>
+
+                        <div class="inputList flex">   
+                            <ul>
+                                <li>
+                                    <label for="">메뉴레벨</label>
+                                    Level 1
+                                </li>
+                                <li>
+                                    <label class="need" for="">사용여부</label>
+                                    <div class="tabType midSize">
+                                        <input type="radio" id="americano1" name="coffee111" value="americano1" checked="">
+                                        <label for="americano1">사용</label>
+                                        <input type="radio" id="latte1" name="coffee111" value="latte1">
+                                        <label for="latte1">미사용</label>
+                                    </div>
+                                </li>
+
+                                <li>                    
+                                    <label class="need" for="menuNm">메뉴명</label>
+                                    <input type="text" id="menuNm" placeholder="프로젝트">                                                                                   
+                                </li>
+                                <li>
+                                    <label class="need" for="menuURI">메뉴URI</label>
+                                    <input type="text" class="full" id="menuURI" placeholder="메뉴URI를 입력하세요.">
+                                </li>
+
+                                <li>
+                                    <label for="">비고</label>
+                                    <textarea name="" id="" cols="70" rows="4" placeholder="내용 입력"></textarea> 
+                                </li>
+                                <li class="history">
+                                    <ul>
+                                        <li>
+                                            <p>수정</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>수정</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>수정</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>수정</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>최초등록</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="modalFooter">
+                            <button class="white prefix layerOpen" aria-controls="del-confirm">삭제</button>
+                            <button class="suffix">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//메뉴상세 팝업-->
+
+
+    <!--동일메뉴명 팝업-->
+    <div id="menu-confirm" class="modalLayer center">
+        <div class="layerBox confirmType">
+            <div class="modalHeader"><h4>안내사항</h4></div>
+            <div class="modalCont center">
+                동일한 메뉴명이 존재합니다.
+            </div>
+            <div class="modalFooter">
+                <button class="layerClose">확인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//동일메뉴명 팝업-->
+
+    <!--복사 팝업-->
+    <div id="copy-confirm" class="modalLayer center">
+        <div class="layerBox confirmType">
+            <div class="modalHeader"><h4>안내사항</h4></div>
+            <div class="modalCont center">
+                선택하신 메뉴를 복사하시겠습니까?
+            </div>
+            <div class="modalFooter">
+                <button class="white layerClose">취소</button>
+                <button class="layerClose">확인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//복사 팝업-->
+    
+    <!--삭제 팝업-->
+    <div id="del-confirm" class="modalLayer center">
+        <div class="layerBox confirmType">
+            <div class="modalHeader"><h4>안내사항</h4></div>
+            <div class="modalCont center">
+                메뉴 삭제 시<br>하위에 속한 메뉴도 삭제됩니다.<br>정말 삭제하시겠습니까?
+            </div>
+            <div class="modalFooter">
+                <button class="white layerClose">취소</button>
+                <button class="layerClose">확인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//삭제 팝업-->
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/jquery.treegrid.min.js"></script>
+
+    <script>        
+        counting();
+        $('.tree').treegrid();
+    </script>
+</body>
+</html>

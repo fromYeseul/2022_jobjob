@@ -24,3 +24,79 @@
         }
     }
 }
+
+
+//시스템관리
+.infoList{
+    > ul{
+        > li{
+            display: flex;
+            align-items: center;
+            & + li{
+                margin-top: rem(10);
+            }
+        }
+    }   
+    &.listType{
+        > ul{
+            > li{
+                display: block;
+                & + li{
+                    margin-top: rem(30);
+                }
+            }
+        }
+        .tit{
+            width: auto;
+        }
+    }
+    h6,
+    .tit{
+        min-width: rem(120);
+        font-size: rem(14);
+        font-weight: 500;
+        .txtType{
+            float: right;
+            color: $mainColor;
+        }
+    }
+    .info{
+        color: $subInfo;
+        &.attached{
+            cursor: pointer;
+        }
+        // a{
+        //     color: $mainColor;
+        //     text-decoration: underline;
+        // }
+        button{
+            margin-left: rem(10);
+        }
+    }
+    .infoBox{
+        margin-top: rem(10);
+    }
+    .tabType{
+        & + select{
+            margin-left: rem(10);
+        }
+    }
+}
+.infoBox{
+    padding: rem(4);
+    border-radius: rem(4);
+    border:1px solid $inputGray;
+    .info{
+        display: flex;
+        align-items: center;
+        padding: rem(6);
+        color: $black;
+        i{
+            margin-right: rem(6);
+        }
+    }
+    .yScroll{
+        max-height: rem(200);
+        padding: rem(6);
+    }
+}

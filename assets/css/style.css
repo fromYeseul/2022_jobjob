@@ -521,7 +521,7 @@ h1, h2, h3, h4, h5, h6, p {
 .contWrapper .contLayout .myPeoDetail .tabBtnWrap {
   padding: 0 1.875rem;
 }
-.contWrapper .contLayout .projReqList, .contWrapper .contLayout .genMember, .contWrapper .contLayout .projProgList {
+.contWrapper .contLayout .projReqList, .contWrapper .contLayout .genMember, .contWrapper .contLayout .projProgList, .contWrapper .contLayout .sendHistory {
   height: calc(100vh - 60px);
   padding: 1.875rem 2.5rem;
   overflow-y: auto;
@@ -1096,7 +1096,7 @@ footer.toast button + button {
 }
 .modalLayer .layerBox.confirmType {
   width: 20.625rem;
-  padding: 1.875rem 2.8125rem;
+  padding: 1.875rem 2.5rem;
 }
 .modalLayer .layerBox.confirmType .modalFooter {
   display: flex;
@@ -1129,6 +1129,10 @@ footer.toast button + button {
 .modalLayer .layerBox.smSize .modalHeader {
   margin-top: -16px;
   margin-right: -16px;
+}
+.modalLayer .layerBox.mid-laSize {
+  width: 62.5rem;
+  padding: 2.5rem 1.875rem;
 }
 .modalLayer .layerBox.laSize {
   width: auto;
@@ -1270,6 +1274,9 @@ footer.toast button + button {
   bottom: 5%;
   left: 48%;
   transform: translate(-50%, -50%);
+}
+.modalCont .divideBox {
+  margin-top: 1.875rem;
 }
 
 .modalFooter {
@@ -2054,6 +2061,68 @@ table input {
   left: -9px;
 }
 
+.infoList > ul > li {
+  display: flex;
+  align-items: center;
+}
+.infoList > ul > li + li {
+  margin-top: 0.625rem;
+}
+.infoList.listType > ul > li {
+  display: block;
+}
+.infoList.listType > ul > li + li {
+  margin-top: 1.875rem;
+}
+.infoList.listType .tit {
+  width: auto;
+}
+.infoList h6,
+.infoList .tit {
+  min-width: 7.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.infoList h6 .txtType,
+.infoList .tit .txtType {
+  float: right;
+  color: #0460d2;
+}
+.infoList .info {
+  color: #878791;
+}
+.infoList .info.attached {
+  cursor: pointer;
+}
+.infoList .info button {
+  margin-left: 0.625rem;
+}
+.infoList .infoBox {
+  margin-top: 0.625rem;
+}
+.infoList .tabType + select {
+  margin-left: 0.625rem;
+}
+
+.infoBox {
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e6e6eb;
+}
+.infoBox .info {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem;
+  color: #29292c;
+}
+.infoBox .info i {
+  margin-right: 0.375rem;
+}
+.infoBox .yScroll {
+  max-height: 12.5rem;
+  padding: 0.375rem;
+}
+
 .tabWrapper.listType {
   display: flex;
 }
@@ -2093,6 +2162,7 @@ table input {
 
 .tabBtnWrap {
   display: flex;
+  align-items: center;
 }
 .tabBtnWrap .tabBtn {
   background: #fff;
@@ -2341,9 +2411,21 @@ button.onlyIco.xsSize,
 }
 button.onlyIco.smSize,
 .button.onlyIco.smSize {
+  padding: 0;
+  width: 1.5625rem;
+  min-width: auto;
+  line-height: 1.5rem;
+}
+button.onlyIco.midSize,
+.button.onlyIco.midSize {
+  padding: 0;
   width: 2.5rem;
   min-width: auto;
   line-height: 2.5rem;
+}
+button.onlyIco:disabled,
+.button.onlyIco:disabled {
+  opacity: 0.5;
 }
 button.txtType,
 .button.txtType {
@@ -2492,6 +2574,18 @@ span.button {
 }
 .inputList.column.row textarea {
   height: 100%;
+}
+.inputList.flex li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.625rem;
+}
+.inputList.flex li label {
+  min-width: 7.5rem;
+  text-align: left;
+}
+.inputList.flex li input {
+  margin-top: 0;
 }
 .inputList .block li {
   margin-bottom: 0.375rem;
@@ -2767,11 +2861,14 @@ input[type=password] {
   display: flex;
   align-items: center;
 }
+.hasBtn.full {
+  width: 100%;
+}
 .hasBtn input {
   padding-left: 0.625rem;
 }
 .hasBtn input + button {
-  margin-left: 0.25rem;
+  margin-left: 0.625rem;
 }
 .hasBtn .button,
 .hasBtn button {
@@ -3671,7 +3768,7 @@ input[type=radio]:checked + label::before {
 select {
   padding: 0 5px;
   padding-right: 10px;
-  width: 6.25rem;
+  min-width: 6.25rem;
   height: 46px;
   border-radius: 5px;
   border: 1px solid #e6e6eb;
@@ -3896,6 +3993,8 @@ select.full {
   display: block;
   position: absolute;
   top: -155%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 6.25rem;
   color: #fff;
   text-align: center;
@@ -4084,6 +4183,172 @@ select.full {
   font-size: 0.875rem;
 }
 
+.countBox {
+  display: flex;
+  height: 40px;
+}
+.countBox button {
+  width: 38px;
+  height: 38px;
+  line-height: 2.25rem;
+}
+.countBox input {
+  width: 50px;
+  height: 38px;
+  text-align: center;
+  background: #fff;
+  margin: 0 0.1875rem;
+}
+.countBox input:focus {
+  outline: inherit;
+}
+
+table.tree {
+  table-layout: fixed;
+}
+
+.tree {
+  text-align: left;
+}
+.tree tr {
+  border-bottom: 0;
+}
+.tree tr:hover {
+  background: none;
+}
+.tree tr .treegrid-expander {
+  display: inline-block;
+  position: relative;
+}
+.tree tr .treegrid-expander::after {
+  content: " ";
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  background-image: url(/assets/img/icoGroup.png);
+  z-index: 1;
+}
+.tree tr.depth1 .rootCont {
+  margin-left: 1.5625rem;
+  width: calc(100% - 25px);
+  height: 3.125rem;
+}
+.tree tr.depth1 .rootCont::before {
+  display: none;
+}
+.tree tr.depth2 .treegrid-expander::after {
+  left: 1.5625rem;
+}
+.tree tr.depth2 .rootCont {
+  margin-left: 3.4375rem;
+  width: calc(100% - 55px);
+  height: 2.5rem;
+}
+.tree tr.depth2 .rootCont::before {
+  display: block;
+}
+.tree tr.depth3 .treegrid-expander::after {
+  left: 3.125rem;
+}
+.tree tr.depth3 .rootCont {
+  margin-left: 5rem;
+  width: calc(100% - 80px);
+}
+.tree tr.depth4 .treegrid-expander::after {
+  display: none;
+}
+.tree tr.depth4 .rootCont {
+  margin-left: 6.5625rem;
+  width: calc(100% - 105px);
+}
+.tree tr.noDepth .treegrid-expander::after {
+  display: none;
+}
+.tree tr .rootCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2.5rem;
+  width: calc(100% - 40px);
+  height: 2.5rem;
+  padding: 0.375rem 0.625rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e6e6eb;
+  position: relative;
+}
+.tree tr .rootCont::before {
+  content: "";
+  display: inline-block;
+  width: 2.8125rem;
+  height: 3.4375rem;
+  border-left: 1px solid #e6e6eb;
+  border-bottom: 1px solid #e6e6eb;
+  position: absolute;
+  top: -36px;
+  left: -47px;
+  z-index: 0;
+}
+.tree tr .rootCont.disabled {
+  background: #f2f2f7;
+}
+.tree tr .rootCont.disabled button {
+  background: #f2f2f7;
+}
+.tree tr .rootCont.disabled span {
+  cursor: not-allowed;
+}
+.tree tr .rootCont span {
+  cursor: pointer;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
+  cursor: pointer;
+  width: 70%;
+}
+.tree .treegrid-container {
+  display: flex;
+}
+
+.treegrid-expander-collapsed::after {
+  background-position: -80px -180px;
+}
+
+.treegrid-expander-expanded::after {
+  background-position: -100px -180px;
+}
+
+tr.loading > td > .treegrid-container > .treegrid-expander::after {
+  background: url("../images/loader.gif") center center no-repeat;
+  border: 0;
+  height: 16px;
+  margin-left: -8px;
+  margin-top: -8px;
+  width: 16px;
+}
+
+.treegrid-move-indicator {
+  border: 5px solid transparent;
+  border-left-color: #000;
+  display: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+  margin-top: -5px;
+  margin-left: -6px;
+}
+
+.treegrid-container.dragging {
+  margin-left: 0 !important;
+  position: absolute;
+}
+
 .ico {
   display: inline-block;
   vertical-align: middle;
@@ -4115,6 +4380,11 @@ select.full {
   position: absolute;
   bottom: -4px;
   right: -8px;
+}
+.ico.file {
+  width: 1rem;
+  height: 1.125rem;
+  background-position: -80px -40px;
 }
 .ico.fileUpload {
   width: 1.25rem;
@@ -4218,6 +4488,16 @@ select.full {
   width: 2.125rem;
   height: 2.125rem;
   background-position: -80px -60px;
+}
+.ico.up {
+  width: 0.8125rem;
+  height: 0.5625rem;
+  background-position: -120px -180px;
+}
+.ico.down {
+  width: 0.8125rem;
+  height: 0.5625rem;
+  background-position: -140px -180px;
 }
 .ico.pull {
   width: 1.125rem;
@@ -4768,6 +5048,9 @@ select.full {
 .boxList.headType .cont .suffix.clear, .boxList.memoBox .cont .suffix.clear {
   color: #0460d2;
 }
+.boxList.headType .cont .suffix.colType, .boxList.memoBox .cont .suffix.colType {
+  flex-direction: column;
+}
 .boxList.headType .bottom, .boxList.memoBox .bottom {
   display: block;
   padding: 0.875rem;
@@ -4827,6 +5110,72 @@ select.full {
 }
 .boxList.tableType.is-active {
   border: 1px solid #0460d2;
+}
+
+.divideBox {
+  display: flex;
+  font-size: 0.875rem;
+}
+.divideBox > div {
+  padding: 1.25rem;
+  border-radius: 0.375rem;
+  border: 1px solid #b7b7c4;
+}
+.divideBox > div.left {
+  width: 40%;
+}
+.divideBox > div.right {
+  width: 60%;
+  margin-left: -1px;
+}
+.divideBox h5 {
+  margin-bottom: 0.625rem;
+  text-align: left;
+  color: #84816a;
+}
+.divideBox .left .tableBox {
+  height: 34.375rem;
+  padding-right: 0.625rem;
+}
+.divideBox .right .inputList {
+  margin-top: 0;
+  height: 29.375rem;
+}
+.divideBox .right .inputList > ul > li {
+  min-height: 2.875rem;
+}
+.divideBox li.history {
+  display: block;
+  margin-top: 1.25rem;
+  padding-right: 0.625rem;
+  height: 7.5rem;
+  overflow-y: auto;
+}
+.divideBox li.history li p {
+  text-align: left;
+  font-weight: 500;
+  min-width: 7.5rem;
+}
+.divideBox li.history li .flexBw {
+  margin-top: 0;
+  flex-grow: 1;
+  color: #878791;
+}
+.divideBox li.history li .flexBw span {
+  font-weight: 400;
+}
+.divideBox .modalFooter {
+  padding-left: 15.625rem;
+  position: relative;
+}
+.divideBox .modalFooter::before {
+  content: "";
+  width: calc(100% + 40px);
+  height: 1px;
+  background: #b7b7c4;
+  position: absolute;
+  top: -20px;
+  left: -20px;
 }
 
 h1 {
@@ -4956,6 +5305,84 @@ h6 {
 }
 .profile button {
   margin-top: 1.25rem;
+}
+
+.projRegister,
+.memRegister {
+  width: 100%;
+  position: relative;
+}
+
+.projRegister .inputList {
+  width: 70%;
+}
+
+.regiPartWrapper {
+  overflow-y: auto;
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding-left: 11.25rem;
+  padding-right: 17.5rem;
+  transition: all 0.3s;
+}
+.regiPartWrapper::-webkit-scrollbar {
+  width: 0;
+}
+.regiPartWrapper.noInfo {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.regiPart {
+  padding-top: 3.125rem;
+}
+.regiPart:last-child {
+  padding-bottom: 3.125rem;
+}
+.regiPart .boxWrap {
+  margin-top: 1.25rem;
+  padding: 2.5rem;
+}
+.regiPart .boxWrap .inputList .full input[type=text] {
+  width: calc(100% - 253px);
+}
+.regiPart .boxWrap .inputList span {
+  font-weight: 500;
+}
+.regiPart .boxWrap .inputList label label {
+  float: right;
+  margin-right: 0;
+}
+.regiPart .boxWrap h4 {
+  margin-bottom: 0.375rem;
+}
+.regiPart .boxWrap h6 {
+  font-weight: 500;
+  margin-bottom: 0.625rem;
+}
+.regiPart .boxWrap h6.need {
+  position: relative;
+}
+.regiPart .boxWrap h6.need::after {
+  content: "*";
+  margin-left: 0.25rem;
+}
+.regiPart .boxWrap .btnType {
+  display: inline-block;
+}
+.regiPart .boxWrap .uploadBox {
+  display: flex;
+  align-items: end;
+}
+.regiPart .boxWrap .alertToast {
+  transform: translateY(50%);
+}
+.regiPart .boxWrap + h3 {
+  padding-top: 3.125rem;
+}
+.regiPart .hasTooltip {
+  cursor: default;
 }
 
 .login {
@@ -5205,80 +5632,6 @@ h6 {
   margin-top: 1.875rem;
 }
 
-.projRegister,
-.memRegister {
-  width: 100%;
-  position: relative;
-}
-
-.projRegister .inputList {
-  width: 70%;
-}
-
-.regiPartWrapper {
-  overflow-y: auto;
-  height: calc(100vh - 200px);
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  padding-left: 11.25rem;
-  padding-right: 17.5rem;
-  transition: all 0.3s;
-}
-.regiPartWrapper::-webkit-scrollbar {
-  width: 0;
-}
-
-.regiPart {
-  padding-top: 3.125rem;
-}
-.regiPart:last-child {
-  padding-bottom: 3.125rem;
-}
-.regiPart .boxWrap {
-  margin-top: 1.25rem;
-  padding: 2.5rem;
-}
-.regiPart .boxWrap .inputList .full input[type=text] {
-  width: calc(100% - 253px);
-}
-.regiPart .boxWrap .inputList span {
-  font-weight: 500;
-}
-.regiPart .boxWrap .inputList label label {
-  float: right;
-  margin-right: 0;
-}
-.regiPart .boxWrap h4 {
-  margin-bottom: 0.375rem;
-}
-.regiPart .boxWrap h6 {
-  font-weight: 500;
-  margin-bottom: 0.625rem;
-}
-.regiPart .boxWrap h6.need {
-  position: relative;
-}
-.regiPart .boxWrap h6.need::after {
-  content: "*";
-  margin-left: 0.25rem;
-}
-.regiPart .boxWrap .btnType {
-  display: inline-block;
-}
-.regiPart .boxWrap .uploadBox {
-  display: flex;
-  align-items: end;
-}
-.regiPart .boxWrap .alertToast {
-  transform: translateY(50%);
-}
-.regiPart .boxWrap + h3 {
-  padding-top: 3.125rem;
-}
-.regiPart .hasTooltip {
-  cursor: default;
-}
-
 .projProgList .tableTop {
   margin-top: 1.875rem;
 }
@@ -5445,7 +5798,6 @@ h6 {
 .memRegister .regiPartWrapper button.round {
   width: 4.125rem;
   vertical-align: text-bottom;
-  line-height: 1.875rem;
 }
 .memRegister .regiPartWrapper button.round i {
   margin-right: 3px;
@@ -5464,6 +5816,42 @@ h6 {
 }
 .memRegister .flexEnd + .flexCenter {
   margin-top: -20px;
+}
+
+.sendHistory {
+  position: relative;
+}
+.sendHistory .tableTop {
+  margin-top: 1.875rem;
+}
+
+.sendHisDetail {
+  position: relative;
+}
+.sendHisDetail .boxWrap > div {
+  width: 50%;
+}
+
+.menuAdmin .boxWrap > div {
+  width: 60%;
+}
+
+.commonCode .regiPartWrapper {
+  height: calc(100vh - 140px);
+}
+.commonCode .boxWrap > div {
+  width: 70%;
+}
+.commonCode .left .tableBox {
+  margin: 1.25rem 0;
+  height: 31.875rem;
+  padding-right: 1.25rem;
+}
+.commonCode .right .inputList {
+  height: 33.125rem;
+}
+.commonCode .hasBtn input {
+  width: 100%;
 }
 
 @media (min-width: 2200px) {

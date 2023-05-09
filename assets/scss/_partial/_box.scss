@@ -445,7 +445,9 @@
                 &.clear{
                     color: $mainColor;
                 }
-                
+                &.colType{
+                    flex-direction: column;
+                }
             }     
         }
         .bottom{            
@@ -514,6 +516,97 @@
         }
     }
 }
+
+
+
+
+.divideBox{
+    display: flex;
+    // min-height: rem(600);
+    // overflow-y: auto;
+    font-size: rem(14);
+    > div{
+        padding: rem(20);
+        // max-height: rem(630);
+        // overflow-y: auto;
+        border-radius: rem(6);
+        border: 1px solid $boxGray;
+        &.left{
+            width: 40%;
+        }
+        &.right{
+            width: 60%;
+            margin-left: -1px;
+        }
+    }
+    h5{
+        margin-bottom: rem(10);
+        text-align: left;
+        color: $titGreen;
+    }
+    .left{
+        .tableBox{
+            height: rem(550);
+            padding-right: rem(10);
+        }
+    }
+    .right{
+        .inputList{
+            margin-top: 0;
+            height: rem(470);
+            > ul{
+                > li{
+                    min-height: rem(46);
+                }
+            }
+        }
+    }
+    li{
+        &.history{
+            display: block;
+            margin-top: rem(20);
+            padding-right: rem(10);
+            height: rem(120);
+            overflow-y: auto;
+            li{
+                //min-height: auto;
+                p{
+                    text-align: left;
+                    font-weight: 500;
+                    min-width: rem(120);
+                }
+                .flexBw{
+                    margin-top: 0;
+                    flex-grow: 1;
+                    color:$subInfo;
+                    span{
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    
+    .modalFooter{
+        padding-left: rem(250);
+        position: relative;
+        &::before{
+            content:'';
+            width: calc(100% + 40px);
+            height: 1px;
+            background: $boxGray;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+        }
+    }
+}
+
+
+
+
+
+
 
 
 
