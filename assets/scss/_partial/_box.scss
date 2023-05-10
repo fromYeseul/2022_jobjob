@@ -555,8 +555,12 @@
             margin-top: 0;
             height: rem(470);
             > ul{
+                flex-basis: 100%;
                 > li{
                     min-height: rem(46);
+                    &.nodata{
+                        @include heightArray;
+                    }
                 }
             }
         }
