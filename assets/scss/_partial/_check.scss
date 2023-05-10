@@ -50,7 +50,7 @@ input[type=radio]{
         + label{
             display: inline-block;
             cursor: pointer;
-            position: relative;
+            position: relative;            
             &::before{
                 content:'';
                 display: inline-block;
@@ -107,8 +107,9 @@ input[type=radio]{
     // 토글스위치
     &.chkSwitch{
         display: inline-block;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+        // -webkit-appearance: none;
+        // -moz-appearance: none;
+        // appearance: none;
         width: rem(38);  
         height: rem(21);  
         border: 1px solid $gray;
@@ -164,7 +165,7 @@ input[type=radio]{
         + label{
             display: inline-block !important;
             min-width: rem(65);
-            line-height: rem(44);
+            line-height: rem(42);
             padding: 0 rem(25);
             margin-right: rem(5);
             text-align: center;
@@ -380,12 +381,13 @@ input[type=radio]{
         opacity: 0;
         position: fixed;
         + label{
+            font-size:rem(15);
             margin-left: -1px;
             min-width: rem(86);
-            line-height: rem(44);
+            line-height: rem(42);
             text-align: center;
             color: $titleGray;
-            font-weight: 500;
+            font-weight: 400;
             background: $white;
             border: 1px solid $inputGray;
             cursor:pointer;
@@ -412,6 +414,7 @@ input[type=radio]{
         &:checked{
             + label{
                 color: $white;
+                font-size:rem(15);
                 background-color: $mainColor;
                 border: 1px solid $mainColor;
             }

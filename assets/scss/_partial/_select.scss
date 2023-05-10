@@ -76,7 +76,7 @@ select{
   display: inline-block;
   width: rem(100);
   font-size: rem(14);
-  font-weight: 500;
+  font-weight: 400;
   text-align: left !important;
   background: $white;
   border-radius: rem(4);
@@ -89,8 +89,8 @@ select{
   .selDefault{
     display: block;
     //text-align: left;
-    font-weight: 500;
-    line-height: rem(44);
+    font-weight: 400;
+    line-height: rem(42);
     padding-left: rem(10);
     @include ellipsis;
     width: 100%;
@@ -106,7 +106,7 @@ select{
       right: rem(10); 
     }
     &.low{
-      line-height: rem(35);
+      line-height: rem(34);
       padding-left: rem(6);
       & + .optionList{
         top: rem(40);
@@ -145,7 +145,7 @@ select{
       cursor: pointer; 
       &:hover {
         color: $black;
-        font-weight: 500;
+        font-weight: 400;
         background: $selHover;
       }
       &.disabled{
@@ -178,7 +178,7 @@ select{
   &.lowSize{
     width: rem(100);
     .selDefault{
-      line-height: rem(34);
+      line-height: rem(36);
     }
     .optionList {
       top: rem(40);
