@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>권한관리</title>
+    
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="hasFooter">
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li>
+                        <span aria-controls="showLevel" class="layerOpen">등급보기설정
+                    </span></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="is-active"><a href="#"><i class="ico home"></i><span class="menuTxt">홈</span><i></i></a></li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span><i></i></a></li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span><i></i></a></li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span><i></i></a></li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span><i></i></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span><i></i></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span><i></i></a></li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span><i></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>   
+        
+        <section class="contWrapper noRight"><!--우측패널 없는 페이지-->
+            <section class="contLayout">
+                
+                <section class="rightAdmin">
+                    <div class="pageTit">
+                        <h2>권한관리</h2>
+                    </div>
+                    
+                    <div class="regiPartWrapper noInfo">        
+                        <div class="regiPart">
+                            <h3>메뉴등록</h3>                            
+                            <div class="boxWrap">  
+                                
+
+                                <div class="infoList">
+                                    <ul>
+                                        <li>
+                                            <h6>메뉴위치</h6>
+                                            <div class="tabType">
+                                                <input type="radio" id="echoit" name="userType" value="menuAdmin" checked="">
+                                                <label for="echoit">에코아이티</label>
+                                                <input type="radio" id="coComp" name="userType" value="menuFront">
+                                                <label for="coComp">협력사</label>
+                                            </div>
+                                            <div class="hasBtn">
+                                                <input type="text" class="xlSize" maxlength="" placeholder="역할그룹 검색">
+                                                <button class="midSize">검색</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+
+                                <div class="divideBox">
+                                    <div class="left">
+                                        <h5>역할그룹</h5>
+
+                                        <div class="btnType full">
+                                            <input type="radio" id="role1" name="roleGroup" value="role1" checked="">
+                                            <label for="role1">영업관리자</label>
+                                            
+                                            <input type="radio" id="role2" name="roleGroup" value="role2">
+                                            <label for="role2">영업담당</label>
+                                            
+                                            <input type="radio" id="role3" name="roleGroup" value="role3" checked="">
+                                            <label for="role3">소싱관리자</label>
+                                            
+                                            <input type="radio" id="role4" name="roleGroup" value="role4">
+                                            <label for="role4">소싱담당</label>
+                                            
+                                            <input type="radio" id="role5" name="roleGroup" value="role5" checked="">
+                                            <label for="role5">시스템관리자</label>
+                                            
+                                            <input type="radio" id="role6" name="roleGroup" value="role6">
+                                            <label for="role6">시스템담당</label>
+                                            
+                                            <input type="radio" id="role7" name="roleGroup" value="role7">
+                                            <label for="role7">일반</label>
+                                        </div>
+                                        <button class="white full">+ Lv1 공통코드 추가</button>
+                                    </div>
+                                    <div class="right">
+                                        <h5>메뉴/화면권한</h5>
+                
+                                        <div class="inputList flex">   
+                                            <ul>
+                                                <li>
+                                                    <label class="need" for="">사용여부</label>
+                                                    <div class="hasBtn">
+                                                        <input type="text" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+                                                        <button class="midSize">검색</button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                
+                                        <div class="tableBox">
+                                            <table>
+                                                <colgroup>
+                                                    <col width="10%">
+                                                    <col width="20%">
+                                                    <col>
+                                                    <col width="10%">
+                                                    <col>
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <input type="checkbox" id="chkAll" class="chkAll">
+                                                            <label for="chkAll"></label>
+                                                        </th>
+                                                        <th>1Depth</th>
+                                                        <th>2Depth</th>
+                                                        <th>
+                                                            <input type="checkbox" id="chkAll" class="chkAll">
+                                                            <label for="chkAll"></label>
+                                                        </th>
+                                                        <th>3Depth</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" id="chk_1" class="chkEach" checked="">
+                                                            <label for="chkAll"></label>
+                                                        </td>
+                                                        <td class="txtLeft">홈</td>
+                                                        <td class="txtLeft">My Project</td>
+                                                        <td>
+                                                            <input type="checkbox" id="chk_1" class="chkEach" checked="">
+                                                            <label for="chkAll"></label>
+                                                        </td>
+                                                        <td class="txtLeft">
+                                                            My Project
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" id="chk_1" class="chkEach">
+                                                            <label for="chkAll"></label>
+                                                        </td>
+                                                        <td>홈</td>
+                                                        <td>My Project</td>
+                                                        <td>
+                                                            <input type="checkbox" id="chk_1" class="chkEach">
+                                                            <label for="chkAll"></label>
+                                                        </td>
+                                                        <td>
+                                                            My Project
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>           
+                            </div>
+                        </div>     
+                    </div>     
+                </section>                
+            </section>
+        </section>
+    </section>
+
+
+    <!--동일메뉴명 팝업-->
+    <div id="menu-confirm" class="modalLayer center">
+        <div class="layerBox confirmType">
+            <div class="modalHeader"><h4>안내사항</h4></div>
+            <div class="modalCont center">
+                동일한 메뉴명이 존재합니다.
+            </div>
+            <div class="modalFooter">
+                <button class="layerClose">확인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//동일메뉴명 팝업-->
+
+    <!--복사 팝업-->
+    <div id="copy-confirm" class="modalLayer center">
+        <div class="layerBox confirmType">
+            <div class="modalHeader"><h4>안내사항</h4></div>
+            <div class="modalCont center">
+                선택하신 메뉴를 복사하시겠습니까?
+            </div>
+            <div class="modalFooter">
+                <button class="white layerClose">취소</button>
+                <button class="layerClose">확인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//복사 팝업-->
+    
+    <!--삭제 팝업-->
+    <div id="del-confirm" class="modalLayer center">
+        <div class="layerBox confirmType">
+            <div class="modalHeader"><h4>안내사항</h4></div>
+            <div class="modalCont center">
+                하위에 속한 모든 코드도 삭제됩니다.<br>삭제하시겠습니까?
+            </div>
+            <div class="modalFooter">
+                <button class="white layerClose">취소</button>
+                <button class="layerClose">확인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//삭제 팝업-->
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/jquery.treegrid.min.js"></script>
+
+    <script>        
+        counting();
+        $('.tree').treegrid();
+    </script>
+</body>
+</html>

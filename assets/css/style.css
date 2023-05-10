@@ -889,7 +889,9 @@ header.center .center {
   background-position: -120px 0px;
 }
 .rPanel i.mail {
-  background-position: -120px -30px;
+
+  background-position: -120px -40px;
+
 }
 
 .rPanelLayer {
@@ -1588,7 +1590,7 @@ footer.toast button + button {
 }
 .filterTop.flex {
   justify-content: inherit;
-  margin-bottom: 0.625rem;
+  margin-bottom: 1.25rem;
 }
 
 .filterList + .filterList {
@@ -2106,7 +2108,7 @@ table input {
 .infoList .infoBox {
   margin-top: 0.625rem;
 }
-.infoList .tabType + select {
+.infoList .tabType + .hasBtn, .infoList .tabType + select {
   margin-left: 0.625rem;
 }
 
@@ -3549,6 +3551,21 @@ input[type=radio].chkSwitch:disabled + label {
   color: #fff;
   border: 1px solid #0460d2;
   background: #0460d2;
+}
+.btnType.full {
+  width: 100%;
+}
+.btnType.full input[type=checkbox] + label,
+.btnType.full input[type=radio] + label {
+  width: 100%;
+  margin-bottom: 0.625rem;
+  margin-right: 0;
+}
+.btnType.full input[type=checkbox] + input[type=hidden] + label,
+.btnType.full input[type=radio] + input[type=hidden] + label {
+  width: 100%;
+  margin-bottom: 0.625rem;
+  margin-right: 0;
 }
 .btnType.low input[type=checkbox] + label,
 .btnType.low input[type=radio] + label {
@@ -5881,6 +5898,31 @@ h6 {
 }
 .commonCode .hasBtn input {
   width: 100%;
+}
+
+.rightAdmin .boxWrap > div {
+  width: 70%;
+}
+.rightAdmin .divideBox {
+  margin-top: 1.875rem;
+}
+.rightAdmin .divideBox .left {
+  width: 30%;
+  min-width: 300px;
+}
+.rightAdmin .divideBox .right {
+  width: 70%;
+}
+.rightAdmin .left .btnType {
+  height: 30.625rem;
+  overflow-y: auto;
+}
+.rightAdmin .right .inputList {
+  height: auto;
+}
+.rightAdmin .right .tableBox {
+  height: 30rem;
+  overflow-y: auto;
 }
 
 @media (min-width: 2200px) {
