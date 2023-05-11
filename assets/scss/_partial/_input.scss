@@ -96,6 +96,11 @@
             label{
                 min-width: rem(120);
                 text-align: left;
+                & + input,
+                & + select,
+                & + .select{
+                    margin-top: 0;
+                }
             }
             input{
                 margin-top: 0;
@@ -127,6 +132,14 @@ input[type=date]{
         color: $placeholder;
         font-size: rem(14);
     }
+    &:read-only{
+        color: $inputGray;
+        background: $bgColor;
+        &:focus{        
+            border: 1px solid $inputGray;
+            outline: 0;
+        } 
+    }
     &:disabled{
         color: $inputGray;
         //pointer-events: none;
@@ -153,6 +166,9 @@ input[type=date]{
     }
     &.smSize{
         width: rem(70);
+    }
+    &.sm-midSize{
+        width: rem(140);
     }
     &.lowSize{
         height: rem(36);

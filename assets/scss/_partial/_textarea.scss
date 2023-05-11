@@ -15,7 +15,12 @@ textarea{
         outline: 1px solid $mainColor;
     }
     &:read-only{
-        background: $lightGray;
+        color: $inputGray;
+        background: $bgColor;
+        &:focus{        
+            border: 1px solid $inputGray;
+            outline: 0;
+        } 
     }
     &:disabled{
         color: $inputGray;

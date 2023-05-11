@@ -174,29 +174,32 @@ button,
         @include heightArray;
     }
     &.onlyIco{
-        // width: rem(40);
+        // width: rem(40); 
         // height: rem(40);
         width: rem(48);
-        //height: rem(48);
+        height: rem(46);
         background-color: $white;
         border: 1px solid $inputGray;
-        //@include heightArray;
+        @include heightArray;
         &.xsSize{
             width: rem(20);
             min-width: auto;
             line-height: rem(20);
+            height: rem(22);
         }
         &.smSize{
             padding: 0;
             width: rem(25);
             min-width: auto;
             line-height: rem(24);
+            height: rem(26);
         }
         &.midSize{
             padding: 0;
             width: rem(40);
             min-width: auto;
             line-height: rem(40);
+            height: rem(42);
         }
         &:disabled{
             opacity: .5;

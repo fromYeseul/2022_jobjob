@@ -38,10 +38,10 @@
                     <a href="#style-select">Select</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-chk">Check / Radio</a>
+                    <a href="#style-chk" class="is-active">Check / Radio</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-range" class="is-active">Range Slider</a>
+                    <a href="#style-range">Range Slider</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-table">Table / Paging</a>
@@ -512,6 +512,12 @@
                                 <input class="smSize" type="text" id="smSize" maxlength="" placeholder="placeholder">
                             </li>
                             <li>
+                                <span>sm-midSize</span>
+                                <span class="size">sm-midSize</span>
+                                <label for="smSize">label</label>
+                                <input class="sm-midSize" type="text" id="" maxlength="" placeholder="placeholder">
+                            </li>
+                            <li>
                                 <span>default</span>
                                 <span class="size">default</span>
                                 <label for="default">label</label>
@@ -945,7 +951,7 @@
                     </div>
                 </div>
             </div>
-            <div id="style-chk" class="tabCont">  <!--라디오, 체크박스 수정 완료 230323-->
+            <div id="style-chk" class="tabCont is-active">  <!--라디오, 체크박스 수정 완료 230323-->
                 <h2>Check / Radio</h2>
                 <div class="input">
                     <div class="clip mt20"><span>Check</span></div>   
@@ -1124,6 +1130,21 @@
                             </li>
                         </ul>
                     </div>
+
+                    <div class="clip"><span>Radio tabtype (disabled)</span></div>   
+                    <div class="">
+                        <ul>
+                            <li>
+                                <span>default</span>
+                                <div class="tabType">
+                                    <input type="radio" id="ttt1" name="ttt" value="americano" disabled checked="">
+                                    <label for="ttt1">아메리카노</label>
+                                    <input type="radio" id="ttt2" name="ttt" value="latte" disabled>
+                                    <label for="ttt2">라떼</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                     
                     <div class="clip"><span>Radio buttontype</span></div>   
                     <div class="">
@@ -1238,7 +1259,7 @@
                     </div>
                 </div>
             </div>
-            <div id="style-range" class="tabCont is-active" style="overflow-x: hidden;">
+            <div id="style-range" class="tabCont" style="overflow-x: hidden;">
                 <h2>Range Slider</h2>
                 <div class="">
                     <div class="clip mt20"><span>Range Slider - single</span></div>
