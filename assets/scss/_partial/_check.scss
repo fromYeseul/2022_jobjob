@@ -36,7 +36,7 @@ input[type=radio]{
                 background-position: -20px 0;
             }
         }
-    }        
+    }         
     &.hasTxt{
         + label{
             &::before{
@@ -433,6 +433,12 @@ input[type=radio]{
                 border-radius: 0 rem(4) rem(4) 0;
             }
         }
+        &:disabled{
+            + label{
+                    background:transparent;
+                    cursor: not-allowed;
+            }
+        } 
         &:checked{
             + label{
                 color: $white;

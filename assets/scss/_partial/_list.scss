@@ -74,7 +74,7 @@
         }
     }
     .infoBox{
-        margin-top: rem(10);
+        margin-top: rem(10);        
     }
     .tabType{
         & + .hasBtn,
@@ -99,5 +99,27 @@
     .yScroll{
         max-height: rem(200);
         padding: rem(6);
+    }
+}
+
+//스킬관리
+.optList{
+    padding-bottom: rem(20);
+    ul{
+        overflow-y: auto;
+    }
+    li{
+        color: $disable;
+        padding: rem(10) rem(20);
+        cursor: pointer;
+        &.nodata{
+            @include heightArray;
+        }
+        &.disabled{
+           color: $cancel;
+        }
+        &.is-active{
+            background: $selHover;
+        }
     }
 }

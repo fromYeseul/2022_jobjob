@@ -1,0 +1,42 @@
+.skillAdmin{
+    width: 100%;
+    .regiPartWrapper{
+        height: calc(100vh - 140px);
+    }
+    .flexBw{
+        margin-top: rem(15);
+    }
+    .boxWrap{
+        > div{
+            width: 60%;
+        }
+        .left{
+            width: 25%;
+            .optList{
+                width: calc(100% + 40px);
+                margin-left: -20px;
+                ul{
+                    height: rem(480);
+                }
+            }
+            &:first-child{
+                padding-bottom: 0;
+                .optList{
+                    padding-bottom: 0;
+                    ul{
+                        height: rem(560);
+                    }
+                }
+            }
+        }
+        .right{
+            .flexBw{
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    }
+    .divideBox{
+        margin-top: rem(15);
+    }
+}
