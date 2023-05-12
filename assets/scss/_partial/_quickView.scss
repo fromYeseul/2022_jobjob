@@ -7,13 +7,14 @@
     background: $white;
     //border: 1px solid $tabGray;  
     box-shadow: -1px 1px 1px 0 rgba(100, 100, 100, 0.1);
+    border:1px solid $layoutColor;  
     &.fixedHeight{
         width: 0;
         position: fixed;
         top: 60px;
         right: -360px;
         box-shadow: none;
-        border-left:1px solid $tabGray;    
+        border-left:1px solid $layoutColor;    
         transition:all .3s;
         &.is-active{
             width: rem(360);
@@ -60,7 +61,7 @@
             &.is-active{
                 //padding: rem(20);
                 //height: calc(100vh - 115px);
-                height: calc(100vh - 180px);
+                height: calc(100vh - 170px);
             }
             // .boxList{
             //     .moreList{
