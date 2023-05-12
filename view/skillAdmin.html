@@ -69,8 +69,8 @@
                                 </div>
 
                                 <div class="flexBw">
-                                    <button class="white laSize">분류관리</button>
-                                    <button class="white laSize">사용량조회</button>
+                                    <button class="white laSize layerOpen" aria-controls="group-admin">분류관리</button>
+                                    <button class="white laSize layerOpen" aria-controls="amount-chk">사용량조회</button>
                                 </div>
 
                                 <div class="divideBox">
@@ -128,9 +128,9 @@
                                                 <li>
                                                     <label class="need" for="">사용여부</label>
                                                     <div class="tabType midSize">
-                                                        <input type="radio" id="americano1" name="coffee111" value="americano1" checked="">
+                                                        <input type="radio" id="americano1" name="coffee111" value="americano1" disabled checked="">
                                                         <label for="americano1">사용</label>
-                                                        <input type="radio" id="latte1" name="coffee111" value="latte1">
+                                                        <input type="radio" id="latte1" name="coffee111" value="latte1" disabled>
                                                         <label for="latte1">미사용</label>
                                                     </div>
                                                 </li>
@@ -139,7 +139,7 @@
                                                     <div class="flexBw">
                                                         <input class="sm-midSize" type="text" maxlength="20" placeholder="스킬명을 입력하세요." readonly>      
                                                         <input class="sm-midSize" type="text" id="default" maxlength="" value="SK102" readonly>       
-                                                        <button class="white midSize">중복체크</button>     
+                                                        <button class="white midSize" disabled>중복체크</button>     
                                                     </div>                                                                       
                                                 </li>                
                                                 <li>
@@ -202,54 +202,244 @@
         </section>
     </section>
 
+    <!--분류관리 팝업-->
+    <div id="group-admin" class="modalLayer center is-active">
+        <div class="layerBox midSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h2>분류 관리</h2>
+            </div>
+            <div class="modalCont center">
+                <div class="divideBox">
+                    <div class="left">
+                        <h5>스킬 분류</h5>
+                        <div class="btnType full">
+                            <input type="radio" id="role1" name="roleGroup" value="role1" checked="">
+                            <label for="role1">Architect</label>
+                            
+                            <input type="radio" id="role2" name="roleGroup" value="role2">
+                            <label for="role2">Language</label>
+                            
+                            <input type="radio" id="role3" name="roleGroup" value="role3">
+                            <label for="role3">JavaScript</label>
+                            
+                            <input type="radio" id="role4" name="roleGroup" value="role4">
+                            <label for="role4">DBMS</label>
+                            
+                            <input type="radio" id="role5" name="roleGroup" value="role5">
+                            <label for="role5">Framework</label>
+                            
+                            <input type="radio" id="role6" name="roleGroup" value="role6">
+                            <label for="role6">기타</label>
+                            
+                            <input type="radio" id="role7" name="roleGroup" value="role7" disabled><!--미사용 disabled 추가-->
+                            <label for="role7">(미사용) Tool</label>
+                        </div>
+                        <button class="white full">+ 분류 추가</button>
+                    </div>
+                    <div class="right">
+                        <h5>분류 상세</h5>
 
-    <!--동일메뉴명 팝업-->
-    <div id="menu-confirm" class="modalLayer center">
-        <div class="layerBox confirmType">
-            <div class="modalHeader"><h4>안내사항</h4></div>
-            <div class="modalCont center">
-                동일한 메뉴명이 존재합니다.
-            </div>
-            <div class="modalFooter">
-                <button class="layerClose">확인</button>
-            </div>
-        </div>        
-        <div class="layerDim"></div>    
-    </div>
-    <!--//동일메뉴명 팝업-->
+                        <div class="inputList flex">   
+                            <ul>
+                                <li>
+                                    <label class="need" for="">사용여부</label>
+                                    <div class="tabType midSize">
+                                        <input type="radio" id="americano1" name="coffee111" value="americano1" checked="" disabled>
+                                        <label for="americano1">사용</label>
+                                        <input type="radio" id="latte1" name="coffee111" value="latte1" disabled>
+                                        <label for="latte1">미사용</label>
+                                    </div>
+                                </li>
 
-    <!--복사 팝업-->
-    <div id="copy-confirm" class="modalLayer center">
-        <div class="layerBox confirmType">
-            <div class="modalHeader"><h4>안내사항</h4></div>
-            <div class="modalCont center">
-                선택하신 메뉴를 복사하시겠습니까?
-            </div>
-            <div class="modalFooter">
-                <button class="white layerClose">취소</button>
-                <button class="layerClose">확인</button>
+                                <li>                    
+                                    <label class="need" for="groupNm">분류명</label>
+                                    <input type="text" id="groupNm" value="Architect" readonly>                                                                                   
+                                </li>
+                                <li>
+                                    <label for="">비고</label>
+                                    <textarea name="" id="" cols="70" rows="4" placeholder="내용 입력" readonly></textarea> 
+                                </li>
+                                <li class="history">
+                                    <ul>
+                                        <li>
+                                            <p>수정</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>수정</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>수정</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>수정</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>최초등록</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="modalFooter">
+                            <button class="white prefix layerOpen" aria-controls="del-confirm">삭제</button>
+                            <button class="suffix">저장</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>        
         <div class="layerDim"></div>    
     </div>
-    <!--//복사 팝업-->
+    <!--//분류관리 팝업-->
     
-    <!--삭제 팝업-->
-    <div id="del-confirm" class="modalLayer center">
-        <div class="layerBox confirmType">
-            <div class="modalHeader"><h4>안내사항</h4></div>
+    <div id="amount-chk" class="modalLayer center is-active">
+        <div class="layerBox sm-midSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h2>스킨 사용량 조회</h2>
+            </div>
             <div class="modalCont center">
-                하위에 속한 모든 코드도 삭제됩니다.<br>삭제하시겠습니까?
+                <div class="tableTop">
+                    <button class="white mid-lowSize">
+                        <i class="ico download"></i>
+                        엑셀저장
+                    </button>            
+                </div>
+                <div class="tableBox">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>스킬코드</th>
+                                <th>
+                                    <select class="xsSize noBd" name="" id="">
+                                        <option value="">분류 전체</option>
+                                        <option value="dog">Dog</option>
+                                        <option value="cat">Cat</option>
+                                    </select>
+                                </th>
+                                <th>스킬명</th>
+                                <th>사용횟수</th>
+                                <th>사용여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>10000회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>10000회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>10000회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="modalFooter">
-                <button class="white layerClose">취소</button>
-                <button class="layerClose">확인</button>
+                <button class="white">닫기</button>
             </div>
-        </div>        
-        <div class="layerDim"></div>    
+        </div>
+        <div class="layerDim"></div> 
     </div>
-    <!--//삭제 팝업-->
-    
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

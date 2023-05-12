@@ -68,6 +68,16 @@
                 margin-right: -16px;
             }
         }
+        &.sm-midSize{
+            width: rem(550);
+            .modalFooter{
+                width: rem(120);
+                margin: rem(20) auto;
+            }
+        }
+        &.midSize{
+            width: rem(800);
+        }
         &.mid-laSize{
             width: rem(1000);
             padding: rem(40) rem(30);
@@ -370,4 +380,30 @@
     //         line-height: rem(28);
     //     }
     // }
+}
+
+//스킬관리 - 분류관리 팝업 
+#group-admin{
+    .left{
+        width: 30%;
+        .btnType{
+            margin-bottom: rem(10);
+            height: rem(380);
+            overflow-y: auto;
+        }
+    }
+    .right{
+        width: 70%;
+    }
+}
+
+//스킬관리 - 사용량 조회 팝업
+#amount-chk{
+    .tableTop{
+        justify-content: flex-end;
+    }
+    .tableBox{
+        height: rem(500);
+        overflow-y: auto;
+    }
 }
