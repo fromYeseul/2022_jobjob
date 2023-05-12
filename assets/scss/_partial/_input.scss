@@ -1,3 +1,321 @@
+.inputList{
+    li{
+        margin-bottom: rem(30);
+    }
+}
+
+
+label{
+    font-weight: 500;
+    &.need{
+        padding-right: rem(10);
+        position: relative;
+        &::after{
+            content:'*';
+        }
+    }
+    & + input[type=text].full,
+     input[type=password].full{
+        margin-top: rem(6);
+     }
+}
+
+input[type=text],
+input[type=password],
+textarea{
+    font-size: rem(14);
+    padding: rem(16);
+    border-radius: rem(4);
+    border:1px solid $inputGray;   
+    resize: none; 
+    cursor: pointer;
+    &:focus{        
+        outline: 1px solid $mainColor;
+    }
+}
+
+/* INPUT */
+input[type=text],
+input[type=password]{
+    height: rem(50);
+    padding: 0 rem(16);
+    &.full{
+        width: 100%;
+    }
+    &.lowType{
+        height: rem(30);
+    }
+    &::placeholder{
+        color: $placeholder;
+        font-size: rem(16);
+    }
+}
+/* INPUT 좌우아이콘 */
+.inputIco{
+    position: relative;
+    input[type=text],
+    input[type=password]{
+        width: 100%;
+    }
+    .ico{
+        position: absolute;
+        top: 50%;
+        right:rem(14);
+        transform: translateY(-50%);
+        &.is-active{
+            width: 10px;    //임시
+        }
+        + input{
+            padding-left: rem(34);
+        }
+    }
+    i.ico{
+        left:rem(14);
+    }
+    & + .button,
+    & + button{
+        line-height: rem(49);
+        margin-left: rem(4);
+    }
+}
+
+/* INPUT + 버튼 */
+.hasBtn{
+    label{
+        //display: block;
+    }
+    input{
+        height: rem(50);
+        padding-left: rem(14);
+        & + button{
+            margin-left: rem(4);
+        }
+    }
+    .button,
+    button{
+        line-height: rem(49);
+        & + input{
+            margin-left: rem(4);
+        }
+        & + .inputIco{
+            margin-left: rem(4);
+        }
+    }
+    .inputIco{
+        display: inline-block;
+    }
+}
+
+/* 파일첨부 */
+.inputFile{
+    border:1px solid $gray;
+}
+
+/* TEXTAREA */
+textarea{
+    width: 100%;
+    & + .counter{
+        color: $subInfo;
+        text-align: right;
+        margin-top: rem(10);
+    }
+}
+.textForm{
+    padding: rem(5);
+    border-radius: rem(4);
+    border:1px solid $inputGray; 
+    textarea{
+        padding: auto;
+        outline: none;
+        border: 0;
+    }
+    & + .btnWrap{
+        margin-top: rem(10);
+    }
+}
+
+/* 체크박스 */
+input[type=checkbox],
+input[type=radio]{
+    display: none;
+    position: relative;
+    + label{
+        display: inline-block;
+        position: relative;
+        &::before{
+            content:'';
+            display: inline-block;
+            width: rem(20);
+            height: rem(20);
+            background-image: url(../img/IcoGroup.png);
+            background-position: 0px 0px;
+            vertical-align: sub;
+        }
+    }
+    &:checked{
+        + label{
+            &::before{
+                background-position: -20px 0;
+            }
+        }
+    }        
+    &.hasTxt{
+        + label{
+            margin-right: rem(10);
+            &::before{
+                margin-right: rem(6);
+            }
+        }
+    }    
+    // 북마크
+    &.bMark{
+        display:none;
+        + label{
+            display:inline-block;
+            width: rem(20);
+            height: rem(20);
+            background-image: url(../img/IcoGroup.png);
+            background-position: 0px -40px;
+            vertical-align: sub;
+            &::before{
+                display: none;
+            }
+        }
+        &:checked{
+            & + label{
+                background-position: -20px -40px;
+            }
+        }
+    }
+    // 토글스위치
+    &.chkSwitch{
+        display: inline-block;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: rem(38);  
+        height: rem(21);  
+        border: 1px solid $gray;
+        border-radius: rem(11);  
+        + label{
+            vertical-align: rem(4);
+            &::before{
+                display: none;
+            }
+        }
+        &::after{
+            content:'';
+            width: rem(15);  
+            height: rem(15);  
+            border-radius: 50%;
+            background: $gray;
+            position: absolute;
+            left: rem(2);  
+            top: rem(2);  
+            transform: translateX(0);
+            transition: all .3s ease ;
+        }
+        &:checked{
+            background: $mainColor;
+            border: 1px solid $mainColor;
+            &::after{
+                background: $white;
+                transform: translateX(17px);
+            }
+            &:disabled{
+                background: $disable;
+                border: 1px solid $disable;
+                opacity: .2;
+            }
+        }
+        &:disabled{
+            cursor: not-allowed;
+            opacity: .5;
+            & + label{
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+/* 버튼타입 */
+.btnType{
+    input[type=checkbox]{
+        width: 0;
+        opacity: 0;
+        position: fixed;
+        + label{
+            width: rem(80);
+            line-height: rem(40);
+            margin-right: rem(5);
+            text-align: center;
+            color: $titleGray;
+            font-weight: 500;
+            background: $white;
+            border-radius: rem(5);
+            border: 1px solid $inputGray;
+            &::before{
+                display: none;
+            }
+        }
+        &:checked{
+            + label{
+                color: $mainColor;
+                border: 1px solid $mainColor;
+            }
+        }
+    }
+}
+
+/* 라디오박스 */
+input[type=radio]{
+    + label{
+        &::before{
+            background-position: 0px -20px;
+        }
+    }
+    &:checked{
+        + label{
+            &::before{
+                background-position: -20px -20px;
+            }
+        }
+    }  
+}
+
+/* 탭타입 라디오박스 */
+.tabType{
+    display: flex;
+    input[type=radio]{
+        width: 0;
+        opacity: 0;
+        position: fixed;
+        + label{
+            width: rem(86);
+            line-height: rem(50);
+            text-align: center;
+            color: $titleGray;
+            font-weight: 500;
+            background: $white;
+            border: 1px solid $inputGray;
+            &::before{
+                display: none;
+            }
+            &:nth-child(2){
+                border-radius: rem(4) 0 0 rem(4);
+            } 
+            &:last-child{
+                border-radius: 0 rem(4) rem(4) 0;
+            }
+        }
+        &:checked{
+            + label{
+                color: $white;
+                background-color: $mainColor;
+                border: 1px solid $mainColor;
+            }
+        }
+    }
+}
 
 .inputList{
     > ul{
