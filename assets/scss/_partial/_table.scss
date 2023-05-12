@@ -110,7 +110,7 @@ table{
     tbody{
         tr{
             &:hover{
-                background: #eaf2f8;
+                background: $tableHover;
             }       
             &:has(.nodata){
                 &:hover{
@@ -324,7 +324,7 @@ table{
         }
     }
     .memo{
-        padding: rem(16);
+        padding: rem(6) rem(16) !important;
         position: relative;
         text-align: left;
         &::before{
