@@ -28,14 +28,20 @@
     .inputList{
         .flexCenter{
             li{
-                margin-bottom: rem(10);
+                // margin-bottom: rem(10);
+                margin-bottom: 0;
                 & + li{
                     margin-left: rem(10);
                 }
             }
-            // & + .flexCenter{
-            //     margin-top: rem(10);
-            // }
+            & + .flexCenter{
+                margin-top: rem(10);
+            }
+        }
+        .grid{
+            & + .grid{
+                margin-top: rem(10);
+            }
         }
     }
     .flexEnd{
