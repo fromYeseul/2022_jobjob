@@ -22,11 +22,11 @@
 // }
 
 select{
-  padding: 0 5px;
+  padding: 0 7px;
   padding-right: 10px;
   // width: rem(100);
   min-width: rem(100);
-  height: 46px;
+  height: 44px;
   border-radius: 5px;
   border:1px solid $inputGray;  
 
@@ -52,12 +52,12 @@ select{
     }
   }
   &.xsSize{
-    min-width: rem(80);
+    min-width: rem(70);
     width: rem(70);
     height: rem(36);
   }
   &.lowSize{
-    height: rem(36);
+    height: rem(32);
   }
   &.wideSize{
     width: rem(180);
@@ -91,7 +91,7 @@ select{
 .select {
   position: relative;
   display: inline-block;
-  width: rem(100);
+  width: rem(102);
   font-size: rem(14);
   font-weight: 400;
   text-align: left !important;
@@ -108,7 +108,7 @@ select{
     //text-align: left;
     font-weight: 400;
     line-height: rem(42);
-    padding-left: rem(10);
+    padding-left: rem(7);
     @include ellipsis;
     width: 100%;
     cursor: pointer;
@@ -120,7 +120,7 @@ select{
       position: absolute;
       top: 50%;
       transform: translateY(-40%); 
-      right: rem(10); 
+      right: rem(7); 
     }
     &.low{
       line-height: rem(34);
@@ -187,13 +187,22 @@ select{
       .optionItem{
         padding: 0 !important;
         label{
-          padding: rem(8) rem(10);
+          padding: rem(8) rem(8);
         }
       }
     }
   }
   &.lowSize{
-    width: rem(100);
+    width: rem(102);
+    .selDefault{
+      line-height: rem(32);
+    }
+    .optionList {
+      top: rem(40);
+    }
+  }
+  &.mid-lowSize{
+    width: rem(102);
     .selDefault{
       line-height: rem(36);
     }
@@ -202,7 +211,7 @@ select{
     }
   }
   &.xsSize{
-    width: rem(70);
+    width: rem(72);
   }
   &.smSize{
     width: rem(86);
@@ -221,7 +230,7 @@ select{
     width: rem(130);
   }
   &.wideSize{
-    width: rem(180);
+    width: rem(182);
   }  
   &.upper{
     .optionList{

@@ -162,6 +162,7 @@ input[type=radio]{
     &.hasTxt{
         + label{
             margin-right: rem(10);
+            font-weight: 400;
             &::before{
                 margin-right: rem(6);
             }
@@ -434,7 +435,7 @@ input[type=radio]{
 
 /* 공통 */
 label{
-    font-weight: 500;
+    font-weight: 400;
 }
 input[type=text],
 input[type=number],
@@ -475,12 +476,12 @@ input[type=date]{
     }
     &.xxsSize{
         width: rem(40);
-        height: rem(35);
+        height: rem(32);
         padding: rem(8);
     }
     &.xsSize{
         width: rem(60);
-        height: rem(40);
+        height: rem(36);
     }
     &.smSize{
         width: rem(70);
@@ -489,7 +490,7 @@ input[type=date]{
         width: rem(140);
     }
     &.lowSize{
-        height: rem(36);
+        height: rem(32);
     }
     &.midSize{
         width: rem(100);
@@ -552,7 +553,7 @@ input[type=number]{
 input[type=month],
 input[type=date]{
     position: relative;
-    padding: rem(11) rem(16);
+    padding: rem(10) rem(10);
     width: rem(140);    
     &.editType{
         width: 84%;
@@ -566,9 +567,9 @@ input[type=date]{
     }
     &.smSize{
         width: rem(115);
-        padding: rem(8);
+        padding: rem(7);
         &::after{
-            right: rem(10);
+            right: rem(8);
         }
     }
     &::-webkit-calendar-picker-indicator {
@@ -584,7 +585,7 @@ input[type=date]{
         height: rem(18);
         position: absolute;
         top: 50%;
-        right: rem(16);
+        right: rem(10);
         transform: translateY(-50%);
         background: url(../img/icoCal.png) no-repeat;
     }
@@ -620,7 +621,7 @@ input[type=password]{
     & + .button,
     & + button{
         line-height: rem(49);
-        margin-left: rem(4);
+        margin-left: rem(7);
     }
 }
 
@@ -635,19 +636,19 @@ input[type=password]{
         }
     }
     input{
-        padding-left: rem(10);
+        padding-left: rem(7);
         & + button{
-            margin-left: rem(10);
+            margin-left: rem(7);
         }
     }
     .button,
     button{
         line-height: rem(42);
         & + input{
-            margin-left: rem(4);
+            margin-left: rem(7);
         }
         & + .inputIco{
-            margin-left: rem(4);
+            margin-left: rem(7);
         }
     }
     .inputIco{
@@ -669,10 +670,10 @@ input[type=file] {
 
 //칩타입, 파일업로드
 .inputGroup {
-    min-height: rem(46);
+    min-height: rem(44);
     max-height: rem(100);
     overflow-y: auto;
-    padding: rem(8) rem(10);
+    padding: rem(5) rem(6);
     // margin-top: rem(10);
     border-radius: rem(5);
     border:1px solid $layoutColor;
@@ -680,7 +681,7 @@ input[type=file] {
     label{
         color: $placeholder;
         font-weight: 400;
-        line-height: rem(29);
+        line-height: rem(32);
         font-size: rem(14);
     }
     input{
@@ -748,7 +749,7 @@ input[type=file] {
         height: auto;
         max-height: fit-content;
         overflow-y: inherit;
-        line-height: rem(26);
+        line-height: rem(32);
         font-size: rem(14);
         vertical-align: bottom;
         &.laSize{
@@ -805,8 +806,8 @@ input[type=file] {
     }
     & + label{
         min-width: rem(90);
-        margin-left: rem(10);
-        line-height: rem(46);
+        margin-left: rem(7);
+        line-height: rem(44);
         padding: 0 rem(15);
         display: inline-block;
         color: $white;
@@ -850,7 +851,7 @@ input[type=file] {
         border:0;
     }
     .ico{
-        margin-left: rem(3);
+        margin-left: rem(5);
     }
     span{
         font-size: rem(13);
@@ -868,7 +869,7 @@ a{
         span{
             display: block;
             margin-top: rem(10);
-            padding: rem(15) rem(20);
+            padding: rem(15) rem(10);
             background: $white;
             border-radius: rem(5);
             @include ellipsis;

@@ -25,7 +25,7 @@ input[type=radio]{
             vertical-align: sub;
             width: rem(18);
             height: rem(18);
-            vertical-align: -3px;
+            // vertical-align: -3px;
             background-image: url(../img/icoGroup.png);
             background-position: 0px 0px;
         }
@@ -167,7 +167,7 @@ input[type=radio]{
             min-width: rem(65);
             line-height: rem(42);
             // padding: 0 rem(25);
-            margin-right: rem(5);
+            margin-right: rem(4);
             text-align: center;
             color: $titleGray;
             font-weight: 500;
@@ -182,6 +182,8 @@ input[type=radio]{
             + label{
                 color: $mainColor;
                 border: 1px solid $mainColor;
+                // height:rem(44);
+                line-height: rem(42);
             }
         }
 
@@ -190,6 +192,7 @@ input[type=radio]{
             + label{
                 display: inline-block !important;
                 min-width: rem(65);
+                // height:rem(44);
                 line-height: rem(42);
                 padding: 0 rem(25);
                 margin-right: rem(5);
@@ -216,7 +219,8 @@ input[type=radio]{
     input[type=radio]{
         + label{
             line-height: rem(42);
-            margin-right: rem(10);
+            padding: 0 rem(10);
+            margin-right: rem(5);
             &:last-child{
                 margin-right: 0;
             }
@@ -294,7 +298,7 @@ input[type=radio]{
         input[type=checkbox],
         input[type=radio]{
             + label{
-                line-height: rem(40);
+                line-height: rem(30);
                 padding: 0 rem(10);
             }
             
@@ -312,7 +316,8 @@ input[type=radio]{
         input[type=radio]{
             + label{
                 min-width: auto;
-                line-height: rem(29);
+                height:rem(30);
+                line-height: rem(26);
                 padding: 0 rem(5);
             }
             
@@ -320,8 +325,9 @@ input[type=radio]{
             + input[type=hidden]{
                 + label{
                     min-width: auto;
-                    line-height: rem(29);
-                    padding: 0 rem(5);
+                    height:rem(30);
+                    line-height: rem(26);
+                    padding: 0 rem(4);
                 }
             }
         }          
@@ -469,7 +475,7 @@ input[type=radio]{
                 //width: rem(63); //221202
                 width: rem(72);  
                 min-width: rem(60);
-                line-height: rem(29);
+                line-height: rem(28);
                 margin-right: -2px;            
             }        
         }
