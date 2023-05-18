@@ -21,14 +21,14 @@
         position: absolute;
         bottom: rem(15);
         > div{
-            padding-right: rem(360);
+            padding-right: rem(330);
         }
     }
     .boxWrap{
-        padding: rem(20) rem(20) rem(15);   
+        padding: rem(20) rem(20) rem(18);   
         padding-bottom: rem(10);
         &.headType{
-            padding: rem(20); 
+            padding: rem(16) rem(20);
         }
         &.prefix{
             width: rem(500);
@@ -45,7 +45,7 @@
             }
         }
         &.sticky{
-            margin-top: rem(10);
+            margin-top: rem(15);
             padding: 0;
             font-size: rem(16);
             position: relative;
@@ -94,7 +94,7 @@
             overflow-x: auto;
         }
         .yScroll{
-            height: calc(100vh - 815px);
+            height: calc(100vh - 800px);
             margin-top: rem(10);
             .tit{
                 margin-top: rem(16);
@@ -108,7 +108,7 @@
             color: $subInfo;
         }
         >.bottom{
-            margin-top: rem(10);
+            margin-top: rem(7);
             text-align: right;
         }
     }
@@ -134,6 +134,12 @@
         //         color: $inputGray;
         //     }
         // }
+        td{
+            &.txtCenter span.eHigh {  //추가    
+                display: block;
+                text-align: center;
+            }
+        }
     }
     .wrapBottom{
         .hasTooltip{

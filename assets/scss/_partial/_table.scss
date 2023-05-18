@@ -183,7 +183,8 @@ table{
                 padding: 0;
                 padding-top: 5px;
                 padding-bottom: 5px;
-                background: transparent;
+                // background: transparent;
+                background: $white;
                 color: $black;
                 border-bottom: 1px solid $layoutColor;
                 // a{
@@ -209,6 +210,7 @@ table{
                         border-left: 4px solid transparent;
                         border-right: 4px solid transparent;
                         border-top: 4px solid $layoutColor;
+                        // border-top: 4px solid $mainColor;
                         position: absolute;
                         top: rem(22);
                         left: calc(50% - 4px);
@@ -288,8 +290,25 @@ table{
     }
     .ellipsis{
         @include ellipsis;
-        // padding: rem(14);
-        padding: rem(4) rem(14);
+        // padding: rem(4) rem(14);
+        padding: 0 rem(6);
+        //추가 min-height:rem(60); 
+        .dNear{
+            font-size: rem(12);
+        }
+        .dNear,
+        .label{
+            & + a{
+                margin-left: rem(5);
+            }
+        }
+    }
+
+    .ellipsis-3{
+        @include ellipsis-3;
+        // padding: rem(4) rem(14);
+        padding: rem(4) rem(4);
+        min-height:rem(92); //추가
         .dNear{
             font-size: rem(12);
         }
@@ -301,8 +320,8 @@ table{
         }
     }
     .photo{
-        width: rem(32);
-        height: rem(32);
+        width: rem(30);
+        height: rem(30);
         border-radius: rem(12);
         vertical-align: middle;
         // margin-right: rem(10);
@@ -341,7 +360,7 @@ table{
         }
     }
     .inputIco{
-        width: calc(100% - 116px);
+        width: calc(100% - 26px);
     }
     input{
         background: transparent;
