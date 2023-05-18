@@ -6,18 +6,23 @@
 
 
 label{
-    font-weight: 400;
+    // font-weight: 500;
     &.need{
         padding-right: rem(10);
         position: relative;
         &::after{
             content:'*';
         }
+    }    
+    &.disabled{
+        color: $cancel !important;
+        pointer-events: none;
+        background: $bgColor !important;
     }
     & + input[type=text].full,
-     input[type=password].full{
+    & + input[type=password].full{
         margin-top: rem(6);
-     }
+    }
 }
 
 input[type=text],
