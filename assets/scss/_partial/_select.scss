@@ -35,6 +35,8 @@ select{
   -moz-appearance: none;
   appearance: none;
   background: url(../img/icoSelect.png) no-repeat calc(100% - 6px);
+  
+  background-color: $white;
   &:focus{
     border: 1px solid $mainColor;
   }
@@ -57,6 +59,11 @@ select{
   }
   &.xsSize{
     min-width: rem(70);
+    width: rem(70);
+    height: rem(36);
+  }
+  &.smSize{
+    min-width: rem(80);
     width: rem(70);
     height: rem(36);
   }

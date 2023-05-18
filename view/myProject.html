@@ -438,7 +438,7 @@
                                                     <table class="chkType">
                                                         <!--230207 수정-->
                                                         <colgroup>
-                                                            <col width="60px;">
+                                                            <col width="70px;">
                                                             <col width="130px">
                                                             <col width="30px;">
                                                             <col width="80px;">
@@ -456,7 +456,10 @@
                                                             <tr>
                                                                 <th>
                                                                     <input type="checkbox" id="chkAll2" class="hasTxt">
-                                                                    <label for="chkAll2">40/40</label>
+                                                                    <label for="chkAll2">
+                                                                        <span>40</span>/
+                                                                        <span>40</span>
+                                                                    </label>
                                                                 </th>
                                                                 <th>
                                                                     <!-- <a href="#memScore"class="layerOpen is-active">90점 이상</a> -->
@@ -586,13 +589,15 @@
                                                                     <span aria-controls="memArea" class="layerOpen">거주지역</span>
                                                                 </th>    
                                                                 <th colspan="3" class="txtRight">                                                                     
-                                                                    <div class="hasBtn">         
+                                                                    <div class="hasBtn">     
+                                                                        <!--230518 수정 -ys -->    
                                                                         <div class="inputIco">
-                                                                            <input type="text" id="search" class="laSize" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
+                                                                            <input type="text" id="search" class="laSize lowSize" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
                                                                             <button class="ico search"></button>
                                                                         </div>   
-                                                                        <button aria-controls="tableFilter" class="white onlyIco filter"><i class="ico filter"></i></button>
-                                                                        <button class="white onlyIco"><i class="ico refresh"></i></button>
+                                                                        <button aria-controls="tableFilter" class="white onlyIco midSize filter"><i class="ico filter"></i></button>
+                                                                        <button class="white onlyIco midSize"><i class="ico refresh"></i></button>
+                                                                        <!--//230518 수정 -ys -->    
                                                                     </div>
                                                                 </th>
                                                             </tr>
@@ -1142,7 +1147,12 @@
                                                                 </td>
                                                                 <td>22/04/04<br>관리자 등록</td>
                                                                 <td>
-                                                                    <div class="select smSize">
+                                                                    <select class="mid-lowSize" name="" id="">
+                                                                        <option value="">전체</option>
+                                                                        <option value="">합격</option>
+                                                                        <option value="">최종합격</option>
+                                                                    </select>
+                                                                    <!-- <div class="select smSize">
                                                                         <span class="selDefault">전체</span>
                                                                         <ul class="optionList hasChk">
                                                                             <li class="optionItem disabled">
@@ -1162,7 +1172,7 @@
                                                                                 <label for="optChk_4">mango</label>
                                                                             </li>
                                                                         </ul>
-                                                                    </div>
+                                                                    </div> -->
                                                                 </td>
                                                             </tr>
                                                             <tr>
