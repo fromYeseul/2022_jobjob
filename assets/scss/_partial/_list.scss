@@ -106,6 +106,7 @@
 //스킬관리
 .optList{
     padding-bottom: rem(20);
+    text-align: left;
     ul{
         overflow-y: auto;
     }
@@ -121,6 +122,16 @@
         }
         &.is-active{
             background: $selHover;
+        }
+    }
+}
+
+.divideBox{
+    .optList{
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        ul{
+            height: rem(420);
         }
     }
 }

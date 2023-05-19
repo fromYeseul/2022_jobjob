@@ -6,7 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAP TEMP</title>
     <style>
-        header img{width: 100%;}
+        header {width: 100%;height:20px;}
+        header p.topline  {    
+            position:relative;        
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background-color: #ccc;
+        }
+        header p.topline img  {            
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+        }
+        .TopWrap{}
+        .TopWrap table.head {border: 0px solid #333;margin-top:15px;}    
+        .TopWrap table.head tr td {border: 1px dashed #666;text-align: center;}     
 
         .tableWrap{padding:10px;}
         .flex{display: flex;}
@@ -14,15 +31,18 @@
         table{
             table-layout: fixed;
             border-collapse: collapse;
-            
+            color: #222;
+            font-size:12px;
             width: 100%;
         }
+        table ul{padding-left: 20px;}
         table tr{}
         table tr td,
         table tr th{
-            padding: 4px 10px;
-            height: 30px;
-            border: 1px solid #000;
+            font-size:13px;
+            padding: 0 10px;
+            height: 27px;
+            border: 1px solid #999;
         }
 
         table tr td{}
@@ -31,25 +51,36 @@
         table tr td.right{text-align: right;}
         table tr td.center{text-align: center;}
         table tr th{text-align: center;}
+        table tr th.title:first-child{border-top: 2px solid #666;}
         table tr th.left{text-align: left;}
-
-        label + input[type="checkbox"]{margin-left: 15px;}
+        table tr th.left.title {font-size: 14px; color:#000;background-color: #ededed;padding: 2px 10px;}
+        .sfont {font-size: 11px;}
+        header span.right {float:right;color:#666;}
+        table.noBorder tr td label + input[type="checkbox"]{margin-left: 15px;}
+        table tr td label + input[type="checkbox"]{margin-left: 7px;}
     </style>
 </head>
 <body>
     
-    <header><img src="/assets/img/temSap.jpg" alt=""></header>
-    
-
+    <header><p class="topline"><img class="right" src="../assets/img/echoit_ci_kor.png"></p></header>
+    <div class="TopWrap">
+        <table class="head">
+            <tbody>
+                <tr>
+                    <td><h2>개 인 이 력 카 드</h2></td>
+                </tr>
+            </tbody>
+        </table>    
+    </div>
     <div class="tableWrap">
         <table class="noBorder">
             <colgroup>
-                <col width="20%">
+                <col width="23%">
                 <col>
             </colgroup>
             <tbody>
                 <tr>
-                    <th>■ 컨설팅 전문 영역</th>
+                    <th class="left">■ 컨설팅 전문 영역</th>
                     <td>
                         <input type="checkbox" id="모듈" name="major">
                         <label for="모듈">모듈 프로세스 컨설턴트</label>
@@ -59,7 +90,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>■ 컨설팅 경험 분야</th>
+                    <th class="left">■ 컨설팅 경험 분야</th>
                     <td>                        
                         <input type="checkbox" id="FI" name="exp">
                         <label for="FI">FI</label>
@@ -180,7 +211,7 @@
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="4" class="left">I. 기본 인적 사항</th>
+                    <th colspan="4" class="left title">I. 기본 인적 사항</th>
                 </tr>
             </thead>
             <tbody>
@@ -210,23 +241,23 @@
     <div class="tableWrap">
         <table>
             <colgroup> 
-                <col width="15%">
+                <col width="18%">
                 <col>
-                <col width="15%">
+                <col width="18%">
                 <col>
-                <col width="15%">
+                <col width="18%">
                 <col>
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="6" class="left">II. 프로젝트 경력</th>
+                    <th colspan="6" class="left title">II. 프로젝트 경력</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th>SAP 경력</th>
                     <td class="right"> 년</td>
-                    <th>Non-SAP경력</th>
+                    <th>Non-SAP 경력</th>
                     <td class="right"> 년</td>
                     <th>경력 총계</th>
                     <td class="right"> 년</td>
@@ -244,27 +275,27 @@
                 <col>
                 <col>
                 <col>
-
-                <col width="30%">
                 <col>
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="7" class="left">III. 프로젝트 요약</th>
+                    <th colspan="6" class="left title">III. 프로젝트 요약</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th>순번</th>
+                    <th rowspan="2">순번</th>
                     <th>고객 명</th>
                     <th>산업분야</th>
                     <th colspan="2">기간(From ~ To)</th>
-                    <th>프로젝트 명</th>
                     <th>역할</th>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <th colspan="2">프로젝트 명</th>
+                    <th colspan="3">상세 구현내용</th>
+                </tr>
+                <tr>
+                    <td rowspan="2"></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -272,8 +303,11 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td colspan="2"></td>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -281,28 +315,19 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td colspan="2"></td>
+                    <td colspan="3"></td>
                 </tr>
             </tbody>
         </table>
     </div>
-
-    
-    
-    <header><img src="/assets/img/temSap.jpg" alt=""></header>
     
     <!--SAP Knowledge-->
     <div class="tableWrap">
         <table>
             <thead>
                 <tr>
-                    <th class="left">IV. SAP Knowledge</th>
+                    <th class="left title">IV. SAP Knowledge</th>
                 </tr>
             </thead>
             <tbody>
@@ -313,60 +338,6 @@
         </table>
     </div>
     
-    <!--프로젝트 상세-->
-    <div class="tableWrap">
-        <table>
-            <colgroup> 
-                <col width="8%">
-                <col>
-                <col>
-                <col width="30%">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th colspan="4" class="left">V. 프로젝트 상세</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>순번</th>
-                    <th>고객 명</th>
-                    <th>프로젝트 명</th>
-                    <th>상세 구현 내용</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
     
     <!--회사근무 경력-->
     <div class="tableWrap">
@@ -378,7 +349,7 @@
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="3" class="left">VI. 회사 근무 경력</th>
+                    <th colspan="3" class="left title">VI. 회사 근무 경력</th>
                 </tr>
             </thead>
             <tbody>
@@ -411,31 +382,46 @@
     </div>
         
     
-    <header><img src="/assets/img/temSap.jpg" alt=""></header>
+    <!-- <header><img src="/assets/img/temSap.jpg" alt=""></header> -->
 
     <!--학력-->
     <div class="tableWrap">
         <table>
             <colgroup> 
-                <col width="40%">
                 <col>
-                <col>
+                <col width="22%">
+                <col width="35%">
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="3" class="left">VII. 학력</th>
+                    <th colspan="3" class="left title">VII. 학력</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td class="right">고등학교</td>
                     <td class="right">년 &nbsp; &nbsp; &nbsp; &nbsp;월</td>
-                    <td>졸업유무</td>
+                    <td>
+                        <input type="checkbox" id="" name="">
+                        <label for="">졸업</label>
+
+                        <input type="checkbox" id="" name="">
+                        <label for="">미졸업</label>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="right">대학교 &nbsp; &nbsp; &nbsp; &nbsp;학과</td>
+                    <td class="right">대학교 <span style="margin-left:40%;">학과</span></td>
                     <td class="right">년 &nbsp; &nbsp; &nbsp; &nbsp;월</td>
-                    <td>졸업유무 (졸업/재학중/휴학)</td>
+                    <td>
+                        <input type="checkbox" id="" name="">
+                        <label for="">졸업</label>
+
+                        <input type="checkbox" id="" name="">
+                        <label for="">재학중</label>
+
+                        <input type="checkbox" id="" name="">
+                        <label for="">휴학</label>                        
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -452,14 +438,14 @@
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="4" class="left">VIII. 교육 수료</th>
+                    <th colspan="4" class="left title">VIII. 교육 수료</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th colspan="2">기간 (From ~ To)</th>
                     <th>교 육 내 용</th>
-                    <th>주관사 (기관)</th>
+                    <th>주관사(기관)</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -487,14 +473,14 @@
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="3" class="left">IX. 자격증</th>
+                    <th colspan="3" class="left title">IX. 자격증</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th>취득 년 월</th>
                     <th>자 격 분 야</th>
-                    <th>주관사 (기관)</th>
+                    <th>인증사(기관)</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -515,27 +501,48 @@
         <table>
             <colgroup>
                 <col>
-                <col>
-                <col>
-                <col width="30%">
+                <col width="20%">
+                <col width="13%">
+                <col width="48%">
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="4" class="left">X. 외국어 능력</th>
+                    <th colspan="4" class="left title">X. 외국어 능력</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th>언어</th>
-                    <th>공인기관(Authority)</th>
-                    <th>점수(Score)</th>
-                    <th>레벨(LEVEL)</th>
+                    <th>공인기관<span class="sfont">(Authority)</span></th>
+                    <th>점수<span class="sfont">(Score)</span></th>
+                    <th>레벨<span class="sfont">(LEVEL)</span></th>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td class="center">상, 중, 하   /   1급, 2급, 3급</td>
+                    <td class="center">
+                        <input type="checkbox" id="" name="">
+                        <label for="">상</label>
+
+                        <input type="checkbox" id="" name="">
+                        <label for="">중</label>
+
+                        <input type="checkbox" id="" name="">
+                        <label for="">하</label> 
+                        
+                        / 
+                         
+                        <input type="checkbox" id="" name="">
+                        <label for="">1급</label>
+
+                        <input type="checkbox" id="" name="">
+                        <label for="">2급</label>
+
+                        <input type="checkbox" id="" name="">
+                        <label for="">3급</label>                       
+                    </td>
+                    </td></td>
                 </tr>
             </tbody>
         </table>
@@ -546,13 +553,13 @@
         <table>
             <thead>
                 <tr>
-                    <th colspan="2" class="left">■ 비자(VISA)</th>
+                    <th colspan="2" class="left title">■ 비자(VISA)</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th>국가 (Country)</th>
-                    <th>유효 기간(Valid – To)</th>
+                    <th>국가 <span class="sfont">(Country)</span></th>
+                    <th>유효 기간 <span class="sfont">(Valid  To)</span></th>
                 </tr>
                 <tr>
                     <td></td>
@@ -566,17 +573,17 @@
     <div class="tableWrap">
         <table>
             <colgroup>
-                <col width="30%">
+                <col width="25%">
                 <col>
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="2" class="left">■ 보유 기술</th>
+                    <th colspan="2" class="left title">■ 보유 기술</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th class="left">SAP  관 련  기 술</th>
+                    <th class="left">SAP 관련기술</th>
                     <td>
                         <ul>
                             <li></li>
@@ -584,7 +591,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th class="left">Non-SAP 관련 기술</th>
+                    <th class="left">Non-SAP 관련기술</th>
                     <td>
                         <ul>
                             <li></li>

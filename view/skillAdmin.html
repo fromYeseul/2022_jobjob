@@ -213,28 +213,32 @@
                 <div class="divideBox">
                     <div class="left">
                         <h5>스킬 분류</h5>
-                        <div class="btnType full">
-                            <input type="radio" id="role1" name="roleGroup" value="role1" checked="">
-                            <label for="role1">Architect</label>
-                            
-                            <input type="radio" id="role2" name="roleGroup" value="role2">
-                            <label for="role2">Language</label>
-                            
-                            <input type="radio" id="role3" name="roleGroup" value="role3">
-                            <label for="role3">JavaScript</label>
-                            
-                            <input type="radio" id="role4" name="roleGroup" value="role4">
-                            <label for="role4">DBMS</label>
-                            
-                            <input type="radio" id="role5" name="roleGroup" value="role5">
-                            <label for="role5">Framework</label>
-                            
-                            <input type="radio" id="role6" name="roleGroup" value="role6">
-                            <label for="role6">기타</label>
-                            
-                            <input type="radio" id="role7" name="roleGroup" value="role7" disabled><!--미사용 disabled 추가-->
-                            <label for="role7">(미사용) Tool</label>
-                        </div>
+
+                        <!--230519 수정 -ys -->
+                        <div class="optList">                                            
+                            <ul>
+                                <li class="is-active">전체</li><!--선택 is-active 클래스 추가-->
+                                <li class="disabled">(미사용) Framework</li><!--미사용 disabled 클래스 추가-->
+                                <li>Architect</li>
+                                <li>Language</li>
+                                <li>JavaScript</li>
+                                <li>DBMS</li>
+                                <li>기타</li>
+                                <li>Architect</li>
+                                <li>Language</li>
+                                <li>JavaScript</li>
+                                <li>DBMS</li>
+                                <li>기타</li>
+                                <li>Architect</li>
+                                <li>Language</li>
+                                <li>JavaScript</li>
+                                <li>DBMS</li>
+                                <li>기타</li>
+                                <li>(미사용) Framework</li>
+                            </ul>
+                        </div>                        
+                        <!--//230519 수정 -ys -->
+                        
                         <button class="white full">+ 분류 추가</button>
                     </div>
                     <div class="right">
@@ -314,7 +318,7 @@
     </div>
     <!--//분류관리 팝업-->
     
-    <div id="amount-chk" class="modalLayer center is-active">
+    <div id="amount-chk" class="modalLayer center">
         <div class="layerBox sm-midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>

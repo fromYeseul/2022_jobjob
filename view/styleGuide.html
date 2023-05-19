@@ -32,13 +32,13 @@
                     <a href="#style-button">Button</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-input">Input</a>
+                    <a href="#style-input" class="is-active">Input</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-select">Select</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-chk" class="is-active">Check / Radio</a>
+                    <a href="#style-chk">Check / Radio</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-range">Range Slider</a>
@@ -500,8 +500,8 @@
                         </ul>
                     </div>
             </div>
-            <div id="style-input" class="tabCont">
-                <h2>Input</h2>
+            <div id="style-input" class="tabCont is-active">
+                <h2>Input</h2>                
 
                 <div class="input">
 
@@ -712,7 +712,24 @@
                         </ul>
                     </div>
 
-                    <div class="clip"><span>DATE</span></div> 
+
+                    <div class="clip"><span>DATEPICKER</span></div> 
+                    <div class="">
+                        <ul>
+                            <li>
+                                <span>default</span>
+                                <span class="size">width 140px</span>
+
+
+                                <input class="dateType" type="text" placeholder="연도 - 월 - 일" id="datepicker">
+
+                                
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="clip"><span>DATE (기본 input type="date")</span></div> 
                     <div class="">
                         <ul>
                             <li>
@@ -733,6 +750,38 @@
                         </ul>
                     </div>
                     
+
+                    <div class="clip"><span>파일 다중첨부</span></div> 
+                    <div class="">
+                        <div class="uploadBox">
+                            <div class="inputGroup upload wide">
+                                <div class="drop">
+                                    <i class="ico fileUpload"></i>
+                                    <label for="fileUpload">
+                                        RFP, 기획서, 스토리보드 등 프로젝트를 파악할 수 있는 자료를<br>
+                                        여기에 첨부해 주세요. (파일 최대 5개, 100MB이하)
+                                    </label>
+                                </div>
+                                <div class="list">
+                                    <ul class="list_ul">
+                                        <li>
+                                            <div class="prefix">testt esttestte stesttetestt esttestte sttesttetestt esttestte sttesttetestt estteste sttesttet.pdf</div>
+                                            <div class="volume">54.6KB</div>
+                                            <i class="ico delete"></i>
+                                        </li>
+                                        <li>
+                                            <div class="prefix">tes.pdf</div>
+                                            <div class="volume">54.6KB</div>
+                                            <i class="ico delete"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        
+                            <label for="cycleDocument22" class="">직접선택</label>
+                            <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="">
+                        </div>
+                    </div>
                     
 
                     <div class="clip"><span>파일첨부(no working)</span></div> 
@@ -781,10 +830,10 @@
                     <div class="input">
                         <ul>
                             <li>
-                                <span>xsSize</span>
-                                <span class="size">70px * 36px</span>
+                                <span>xxsSize</span>
+                                <span class="size">60px * 44px</span>
 
-                                <select class="xsSize" name="" id="">
+                                <select class="xxsSize" name="" id="">
                                     <option value="">선택</option>
                                     <option value="dog" disabled>선택1</option>
                                     <option value="cat">선택2</option>
@@ -792,8 +841,29 @@
                                 </select>
                             </li>
                             <li>
+                                <span>xsSize</span>
+                                <span class="size">70px * 36px</span>
+
+                                <select class="xsSize" name="" id="">
+                                    <option value="">매입매출</option>
+                                    <option value="dog" disabled>선택1</option>
+                                    <option value="cat">선택2</option>
+                                    <option value="hamster">선택3</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>smSize</span>
+                                <span class="size">80px * 36px</span>
+
+                                <select class="smSize" name="" id="">
+                                    <option value="">choose</option>
+                                    <option value="dog" disabled>Dog</option>
+                                    <option value="cat">Cat</option>
+                                </select>
+                            </li>
+                            <li>
                                 <span>default</span>
-                                <span class="size">100px * 46px</span>
+                                <span class="size">100px * 44px</span>
 
                                 <select name="" id="">
                                     <option value="">choose</option>
@@ -825,7 +895,7 @@
                             </li>
                             <li>
                                 <span>noborder</span>
-                                <span class="size">100px * 46px</span>
+                                <span class="size">100px * 44px</span>
 
                                 <select class="noBd" name="" id="">
                                     <option value="">choose</option>
@@ -835,7 +905,7 @@
                             </li>
                             <li>
                                 <span>lowSize</span>
-                                <span class="size">100px * 36px</span>
+                                <span class="size">100px * 32px</span>
 
                                 <select class="lowSize" name="" id="">
                                     <option value="">choose</option>
@@ -845,7 +915,7 @@
                             </li>
                             <li>
                                 <span>wideSize</span>
-                                <span class="size">180px * 46px</span>
+                                <span class="size">180px * 44px</span>
 
                                 <select class="wideSize" name="" id="">
                                     <option value="">choose</option>
@@ -855,7 +925,7 @@
                             </li>
                             <li>
                                 <span>full</span>
-                                <span class="size">auto * 46px</span>
+                                <span class="size">auto * 44px</span>
 
                                 <select name="" id="" class="full">
                                     <option value="">choose</option>
@@ -995,7 +1065,7 @@
                     </div>
                 </div>
             </div>
-            <div id="style-chk" class="tabCont is-active">  <!--라디오, 체크박스 수정 완료 230323-->
+            <div id="style-chk" class="tabCont">  <!--라디오, 체크박스 수정 완료 230323-->
                 <h2>Check / Radio</h2>
                 <div class="input">
                     <div class="clip mt20"><span>Check</span></div>   
@@ -2176,6 +2246,18 @@
         rangeSlider();
         rangeSliderMulti();
         rangeSlider();
+    </script>
+
+    
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( "#datepicker" ).datepicker();
+    } );
     </script>
 </body>
 </html>

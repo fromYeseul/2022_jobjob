@@ -66,7 +66,7 @@
                             <div class="boxWrap">    
                                 <div class="infoList">
                                     <ul>
-                                        <li>
+                                        <!-- <li>
                                             <h6 class="need">메뉴위치</h6>
                                             <div class="tabType">
                                                 <input type="radio" id="menuAdmin" name="menuPosi" value="menuAdmin" checked="">
@@ -79,7 +79,7 @@
                                                 <option value="dog" disabled="">Dog</option>
                                                 <option value="cat">Cat</option>
                                             </select>
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <h6 class="need">메뉴명</h6>
                                             <div class="hasBtn full">
@@ -362,12 +362,41 @@
                                     <label class="need" for="menuURI">메뉴URI</label>
                                     <input type="text" class="full" id="menuURI" placeholder="메뉴URI를 입력하세요.">
                                 </li>
+                                <!--230519 수정 -ys-->
+                                <li class="flexStr">
+                                    <label class="need" for="menuURI">메뉴아이콘</label>
 
-                                <li>
+                                    <div class="listBox">
+                                        <div class="chkWrap">
+                                            <input type="radio" id="a1" name="menuIco">
+                                            <label for="a1">
+                                                <span class="gnb"><i class="ico home gray"></i></span>
+                                            </label>
+        
+                                            <input type="radio" id="a2" name="menuIco">
+                                            <label for="a2">
+                                                <span class="gnb"><i class="ico member gray"></i></span>
+                                            </label>
+        
+                                            <input type="radio" id="a3" name="menuIco">
+                                            <label for="a3">
+                                                <span class="gnb"><i class="ico project gray"></i></span>
+                                            </label>
+        
+                                            <input type="radio" id="a4" name="menuIco">
+                                            <label for="a4">
+                                                <span class="gnb"><i class="ico admin gray"></i></span>
+                                            </label>                                     
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--//230519 수정 -ys-->
+
+                                <li class="flexStr"><!--230519 수정 -ys-->
                                     <label for="">비고</label>
                                     <textarea name="" id="" cols="70" rows="4" placeholder="내용 입력"></textarea> 
                                 </li>
-                                <li class="history">
+                                <!-- <li class="history">
                                     <ul>
                                         <li>
                                             <p>수정</p>
@@ -405,7 +434,7 @@
                                             </div>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
 

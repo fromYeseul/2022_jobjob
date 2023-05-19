@@ -190,30 +190,32 @@ table{
                 // a{
                 span{
                     //color: $black;
-                    position: relative;
-                    cursor: pointer;
-                    &::after{
-                        content:'';    
-                        //원형                    
-                        // width: rem(4);
-                        // height: rem(4);
-                        // border-radius: 50%;
-                        // background: $layoutColor;
-                        // position: absolute;
-                        // top: rem(22);
-                        // left: calc(50% - 4px);
-                        // top: -2px;
-                        // right: -7px;
+                    &.filter{                        
+                        position: relative;
+                        cursor: pointer;
+                        &::after{
+                            content:'';    
+                            //원형                    
+                            // width: rem(4);
+                            // height: rem(4);
+                            // border-radius: 50%;
+                            // background: $layoutColor;
+                            // position: absolute;
+                            // top: rem(22);
+                            // left: calc(50% - 4px);
+                            // top: -2px;
+                            // right: -7px;
 
-                        width: 0;
-                        height: 0;
-                        border-left: 4px solid transparent;
-                        border-right: 4px solid transparent;
-                        border-top: 4px solid $layoutColor;
-                        // border-top: 4px solid $mainColor;
-                        position: absolute;
-                        top: rem(22);
-                        left: calc(50% - 4px);
+                            width: 0;
+                            height: 0;
+                            border-left: 4px solid transparent;
+                            border-right: 4px solid transparent;
+                            border-top: 4px solid $layoutColor;
+                            // border-top: 4px solid $mainColor;
+                            position: absolute;
+                            top: rem(22);
+                            left: calc(50% - 4px);
+                        }
                     }
                     &.is-active{
                         // &::after{
@@ -364,11 +366,11 @@ table{
     }
     input{
         background: transparent;
-        &.bMark{
-            & + label{
-                vertical-align: middle;
-            }
-        }
+        // &.bMark{
+        //     & + label{
+        //         vertical-align: middle;
+        //     }
+        // }
     }
 }
 
