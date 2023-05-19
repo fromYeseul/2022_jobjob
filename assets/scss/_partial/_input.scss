@@ -343,6 +343,7 @@ textarea{
     }
     label{
         display: block;
+        font-weight: 500;
         // margin-bottom: rem(10);    
         &.need{
             position: relative;
@@ -432,6 +433,20 @@ textarea{
             }
             input{
                 margin-top: 0;
+            }
+            &.flexStr{
+                align-items: start;
+            }
+        }
+        
+        .listBox{
+            text-align: left;
+            label{
+                min-width: auto;
+                margin: 0 rem(5) rem(10) rem(5);
+            }
+            .gnb{
+                margin-left: rem(4);
             }
         }
     }  
@@ -551,6 +566,12 @@ input[type=text]{
     &.midSize{
         width: rem(300);
     }
+    &.dateType{
+        padding: rem(10) rem(10);
+        padding-right: rem(30);
+        width: rem(140);    
+        background: url(../img/icoCal.png) 90% 50% no-repeat;
+    }
 }
 
 input[type=number]{
@@ -641,7 +662,7 @@ input[type=password]{
 .hasBtn{
     display: flex;
     align-items: center;
-    padding: 0 rem(6);
+    // padding: 0 rem(6);
     &.full{
         width: 100%;
         input{
@@ -684,7 +705,7 @@ input[type=file] {
 //칩타입, 파일업로드
 .inputGroup {
     min-width: rem(350);
-    min-height: rem(46);
+    min-height: rem(44);
     max-height: rem(100);
     overflow-y: auto;
     padding: rem(5) rem(6);

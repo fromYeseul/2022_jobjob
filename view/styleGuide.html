@@ -32,13 +32,13 @@
                     <a href="#style-button">Button</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-input">Input</a>
+                    <a href="#style-input" class="is-active">Input</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-select">Select</a>
                 </li>
                 <li class="tabBtn">
-                    <a href="#style-chk" class="is-active">Check / Radio</a>
+                    <a href="#style-chk">Check / Radio</a>
                 </li>
                 <li class="tabBtn">
                     <a href="#style-range">Range Slider</a>
@@ -500,8 +500,8 @@
                         </ul>
                     </div>
             </div>
-            <div id="style-input" class="tabCont">
-                <h2>Input</h2>
+            <div id="style-input" class="tabCont is-active">
+                <h2>Input</h2>                
 
                 <div class="input">
 
@@ -712,7 +712,24 @@
                         </ul>
                     </div>
 
-                    <div class="clip"><span>DATE</span></div> 
+
+                    <div class="clip"><span>DATEPICKER</span></div> 
+                    <div class="">
+                        <ul>
+                            <li>
+                                <span>default</span>
+                                <span class="size">width 140px</span>
+
+
+                                <input class="dateType" type="text" placeholder="연도 - 월 - 일" id="datepicker">
+
+                                
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="clip"><span>DATE (기본 input type="date")</span></div> 
                     <div class="">
                         <ul>
                             <li>
@@ -1048,7 +1065,7 @@
                     </div>
                 </div>
             </div>
-            <div id="style-chk" class="tabCont is-active">  <!--라디오, 체크박스 수정 완료 230323-->
+            <div id="style-chk" class="tabCont">  <!--라디오, 체크박스 수정 완료 230323-->
                 <h2>Check / Radio</h2>
                 <div class="input">
                     <div class="clip mt20"><span>Check</span></div>   
@@ -2229,6 +2246,18 @@
         rangeSlider();
         rangeSliderMulti();
         rangeSlider();
+    </script>
+
+    
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( "#datepicker" ).datepicker();
+    } );
     </script>
 </body>
 </html>
