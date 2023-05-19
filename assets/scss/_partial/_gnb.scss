@@ -71,9 +71,11 @@
         }
         li{
             a{
-                display: block;
+                // display: block;
+                display: flex;
                 padding: rem(10) rem(13);
                 padding-left: rem(15);
+                padding-right: 0;
                 // display: flex;
                 // align-items: center;
                 span{
@@ -99,7 +101,10 @@
             }
         }
         .menuTxt{
-            display: none;
+            // display: none;
+            display: inline-block;
+            text-indent: -10rem;
+
             color: $white;
             font-size: rem(15);
             margin-left: rem(15);
@@ -107,6 +112,7 @@
             // position: relative;
             //position: absolute;
             //transition: all .3s;
+            opacity: 0;
         }        
         .depth2{
             // display: none;
