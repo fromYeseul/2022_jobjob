@@ -116,10 +116,10 @@
                                 <input class="" type="date" id="">
                                 <input class="mr10" type="date" id="">
 
-                                <input type="checkbox" id="license01" name="aa" class="hasTxt">
+                                <!-- <input type="checkbox" id="license01" name="aa" class="hasTxt">
                                 <label for="license01">정보처리기사</label>
                                 <input type="checkbox" id="license02" name="aa" class="hasTxt">
-                                <label for="license02" class="ml10">KOSA</label>
+                                <label for="license02" class="ml10">KOSA</label> -->
                             </li>
                         </ul>
                     </div>
@@ -168,14 +168,23 @@
                     </div>
      
                     <div class="tableTop">
-                        <div class="select lowSize">
-                            <span class="selDefault">10개씩</span>
-                            <ul class="optionList">
-                                <li class="optionItem">20개씩</li>
-                                <li class="optionItem">50개씩</li>
-                                <li class="optionItem">100개씩</li>
-                            </ul>
+                        <!--230519 위치 수정 -ys -->
+                        <div class="prefix flexCenter">
+                            <div class="select lowSize mr10">
+                                <span class="selDefault">10개씩</span>
+                                <ul class="optionList">
+                                    <li class="optionItem">20개씩</li>
+                                    <li class="optionItem">50개씩</li>
+                                    <li class="optionItem">100개씩</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" id="license01" name="aa" class="hasTxt">
+                            <label for="license01">정보처리기사</label>
+                            <input type="checkbox" id="license02" name="aa" class="hasTxt">
+                            <label for="license02" class="ml10">KOSA</label>
                         </div>
+                        <!--//230519 위치 수정 -ys -->
 
                         <!--221024 추가 -ys -->
                         <div class="">
@@ -270,7 +279,14 @@
                                     <td><a href="#">S</a></td>
                                     <td class="eHigh">57.5</td>
                                     <td>Y</td>
-                                    <td>Y</td>
+                                    <td>
+                                        <!--230522 추가 -ys-->
+                                        <select class="xxsSize" name="" id="">
+                                            <option value="">Y</option>
+                                            <option value="">N</option>
+                                        </select>
+                                        <!--//230522 추가 -ys-->
+                                    </td>
                                 </tr>                                 
                                 <tr>
                                     <td>9</td>
