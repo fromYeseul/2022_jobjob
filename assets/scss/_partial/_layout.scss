@@ -239,7 +239,7 @@ header{
                     }
                     &::after{
                         content:'';
-                        width: 6px;
+                        width: 7px;
                         height: 1px;
                         background: white;
                         position: absolute;
@@ -279,7 +279,13 @@ header{
                 text-indent: 0;
                 transition: all .2s;
                 opacity: 1;
-            } 
+            }      
+            .depth2{
+                text-indent: 0;
+                transition: all .2s;
+                
+                opacity: 1;
+            }
         }
     }
     &.is-active{   
@@ -327,6 +333,9 @@ header{
             }
             &.noSide{
                 padding-left: 0;
+            }
+            &.noRight{
+                width: 100%;
             }
             .contLayout{
                 &.is-active{

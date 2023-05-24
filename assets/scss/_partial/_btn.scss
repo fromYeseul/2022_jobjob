@@ -29,8 +29,10 @@ button,
     &:disabled,
     &.disabled{
         cursor:not-allowed;
-        color: $cancel;
-        background-color: $white;
+        // color: $cancel;
+        // background-color: $white;
+        color: $inputGray;
+        background:$inputDisable;
         border: 1px solid $inputGray;
     }
     //버튼간격
@@ -101,6 +103,11 @@ button,
         background-color: inherit;
         border: 0;
     }
+    &.bdType{
+        color: $mainColor;
+        background-color: $white;
+        border: 1px solid $mainColor;
+    }
     &.white{
         //width: rem(98);
         //line-height: rem(34);
@@ -130,7 +137,9 @@ button,
         // }
         &:disabled,
         &.disabled{
-            color: $cancel;
+            // color: $cancel;
+            color: $inputGray;
+            background:$inputDisable;
             cursor:not-allowed;
         }
     }
@@ -167,7 +176,9 @@ button,
         border: 1px solid $btnGray;
         border-radius: rem(20);        
         &.disabled{
-            color: $layoutColor;
+            // color: $layoutColor;
+            color: $inputGray;
+            background:$inputDisable;
             border: 1px solid $layoutColor;
         }
     }

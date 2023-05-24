@@ -27,12 +27,13 @@
     // }
     .inputList{
         .flexCenter{
+            gap : rem(10);
             li{
                 // margin-bottom: rem(10);
                 margin-bottom: 0;
-                & + li{
-                    margin-left: rem(10);
-                }
+                // & + li{
+                //     margin-left: rem(10);
+                // }
             }
             & + .flexCenter{
                 margin-top: rem(10);
@@ -42,12 +43,12 @@
             & + .grid{
                 margin-top: rem(10);
             }
-            position: relative;
-            .round{
-                position: absolute;
-                left: 88%;
-                top: rem(10);
-            }
+            // position: relative;
+            // .round{
+            //     position: absolute;
+            //     left: 88%;
+            //     top: rem(10);
+            // }
         }
     }
     .flexEnd{
@@ -57,6 +58,52 @@
         & + .flexCenter{
             margin-top: -20px;
         }
+    }
+
+
+    .inputGroup{
+        height: rem(70);
+        &.upload{
+            height: auto;
+        }
+    }
+    //그리드
+    .specialJob,
+    .skillExp,
+    .detailJob,
+    .added{
+        grid-column : 1/6;
+    }
+    .projName{
+        grid-column : 2/4;
+    }
+    .clientComp,
+    .useTool{
+        display: flex;
+        gap: rem(10);
+        grid-column : 1/4;
+        .full{
+            width: 50%;
+        }
+    }
+    .careerEtc{
+        grid-column : 4/6;
+    }
+    .jobCondi{
+        grid-column : 1/3;
+    }
+    .preferPosi{
+        grid-column : 2/6;
+        .inputGroup{
+            height: auto;
+        }
+    }
+
+    .gridBtn{
+        grid-column : 7/9;
+    }
+    .empty{
+        grid-column : 7/9;
     }
 
     //연-월-일 placeholder 제거
