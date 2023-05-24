@@ -15,9 +15,9 @@ label{
         }
     }    
     &.disabled{
-        color: $cancel !important;
+        color: $titleGray !important;
         pointer-events: none;
-        background: $bgColor !important;
+        background: $inputDisable !important;
     }
     & + input[type=text].full,
     & + input[type=password].full{
@@ -486,9 +486,14 @@ input[type=date]{
         } 
     }
     &:disabled{
-        color: $inputGray;
-        //pointer-events: none;
-        background: transparent;
+        // color: $inputGray;
+        // //pointer-events: none;
+        // background: transparent;
+        color: $titleGray;
+        background:$inputDisable;
+        &::placeholder{
+            color: $inputGray;
+        }
     }
     &:focus{        
         outline: 1px solid $mainColor;
@@ -570,7 +575,28 @@ input[type=text]{
         padding: rem(10) rem(10);
         padding-right: rem(30);
         width: rem(140);    
+        background-color: $white;
         background: url(../img/icoCal.png) 90% 50% no-repeat;
+        &.editType{
+            width: rem(76);
+            height: rem(36);
+            padding: rem(8) 0;
+            padding-left: rem(4);
+            border:0;
+            color: $black;
+            background: none;
+            &:focus{
+                color: $black;
+                outline:0;
+                background: $white;
+            }
+            &::placeholder{
+                color: $cancel;
+            }
+        }
+        &.fullSize{
+            width: 100%;
+        }
     }
 }
 

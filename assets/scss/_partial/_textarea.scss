@@ -23,8 +23,8 @@ textarea{
         } 
     }
     &:disabled{
-        color: $inputGray;
-        background: transparent;
+        color: $inputGray;;
+        background: $inputDisable;
     }
     & + .counter{
         font-size: rem(14);
@@ -43,6 +43,12 @@ textarea{
     }
     &.laSize{
         width: rem(500);
+    }
+    &.fullSize{
+        width: 100%;
+    }
+    &.editType{
+        padding: rem(4) rem(2);
     }
     &.need{
         border:1px solid $error;

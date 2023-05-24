@@ -39,8 +39,7 @@ function navList(){
 
     for(let i=0; i<navLi.length; i++){
         navLi[i].addEventListener('click', function(){
-            let this_navInner = this.querySelector('ul');
-
+            
             for(let j=0; j<navInner.length; j++){
                 navInner[j].classList.remove('is-active');
             }
@@ -48,7 +47,11 @@ function navList(){
                 navLi[i].classList.remove('is-active');
             }
             
+            console.log(this);
+            let this_navInner = this.querySelector('ul');
             this.classList.toggle('is-active');
+            console.log(this);
+
             if(this_navInner != undefined){
                 this_navInner.classList.toggle('is-active');
             }            

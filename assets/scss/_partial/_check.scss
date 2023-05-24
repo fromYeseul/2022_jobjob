@@ -140,15 +140,19 @@ input[type=radio]{
                 transform: translateX(17px);
             }
             &:disabled{
-                background: $disable;
+                color: $inputGray;
+                background:$inputDisable;
                 border: 1px solid $disable;
                 opacity: .2;
             }
         }
         &:disabled{
+            color: $inputGray;
+            background:$inputDisable;
             cursor: not-allowed;
-            opacity: .5;
             & + label{
+                color: $inputGray;
+                background:$inputDisable;
                 cursor: not-allowed;
             }
         }
@@ -212,6 +216,38 @@ input[type=radio]{
                 + label{
                     color: $mainColor;
                     border: 1px solid $mainColor;
+                }
+            }    
+            &:disabled{
+                + label{
+                    color: $mainColor;
+                    background: $white;
+                    border: 1px solid $mainColor;
+                    cursor: not-allowed;
+                }
+                + input[type=hidden]{
+                    + label{
+                        color: $mainColor;
+                        background: $white;
+                        border: 1px solid $mainColor;
+                        cursor: not-allowed;
+                    }
+                }    
+            } 
+        } 
+        &:disabled{
+            + label{
+                color: $inputGray;
+                background: $inputDisable;
+                border: 1px solid $inputGray;
+                cursor: not-allowed;
+            }
+            + input[type=hidden]{
+                + label{
+                    color: $inputGray;
+                    background: $inputDisable;
+                    border: 1px solid $inputGray;
+                    cursor: not-allowed;
                 }
             }    
         } 
@@ -400,7 +436,8 @@ input[type=radio]{
     }  
     &:disabled{
         + label{
-                background:$bgColor;
+                color: $inputGray;
+                background:$inputDisable;
                 cursor: not-allowed;
         }
     } 
@@ -447,7 +484,8 @@ input[type=radio]{
         }
         &:disabled{
             + label{
-                    background:$bgColor;
+                    color: $inputGray;
+                    background:$inputDisable;
                     cursor: not-allowed;
             }
         } 

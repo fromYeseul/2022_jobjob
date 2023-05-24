@@ -42,15 +42,15 @@ select{
   }
   &:disabled {
     // opacity: 0.5;
-    color: $inputGray;
-    background: $bgColor; 
+    cursor: not-allowed;
+    color: $titleGray;
     background: url(../img/icoSelect_dis.png) no-repeat calc(100% - 6px);
+    background-color:$inputDisable;
   }
   option{
     // zoom: 1.2;
     &:disabled{
       display: none;
-      color: $error;
     }
   }
   &.xxsSize{
@@ -74,6 +74,9 @@ select{
   &.wideSize{
     width: rem(180);
   } 
+  &.laSize{
+    width: rem(210);
+  } 
   &.autoSize{
     padding-right: rem(22);
   }
@@ -87,6 +90,9 @@ select{
     option{
       color: $black;
     }
+  }
+  &.need{
+    border: 1px solid $error; 
   }
 }
 
@@ -114,8 +120,8 @@ select{
   border-radius: rem(4);
   border: 1px solid $inputGray;
   &.disabled{
-    color: $cancel;
-    background: $lightGray;
+    color: $titleGray;
+    background:$inputDisable;
     pointer-events: none;
   }
   .selDefault{
@@ -181,8 +187,8 @@ select{
         background: $selHover;
       }
       &.disabled{
-        color: $cancel;
-        background: $lightGray;
+        color: $titleGray;
+        background:$inputDisable;
         pointer-events: none;
         &:hover{
           background: transparent;
@@ -287,6 +293,7 @@ select{
   &.disable{
     color: $inputGray;
     pointer-events: none;
+    background-color: $inputDisable;
     //background: $inputGray;
     .selDefault{
       &::before{

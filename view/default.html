@@ -73,7 +73,13 @@
                         <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span></a></li>
                         <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>
                         <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span></a></li>
-                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -508,7 +514,7 @@
     
     <!--230104 전체수정 -ys-->
         <!--221013 추가 -ys-->
-    <div id="showLevel" class="modalLayer center is-active">
+    <div id="showLevel" class="modalLayer center">
         <div class="layerBox laSize"><!--230104 수정 -ys-->
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -994,7 +1000,7 @@
 
     
     <!--221017 추가 -ys-->
-    <div id="investDetail" class="modalLayer center is-active">
+    <div id="investDetail" class="modalLayer center">
         <div class="layerBox fullSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -1532,7 +1538,9 @@
                                                 대외비 에코에코에코에코에코 에코에코에코에코에코
                                             </td>
                                             <td rowspan="2">
-                                                <input type="date" class="editType">
+                                                <!-- <input type="date" class="editType"> -->
+                                                <!-- <input type="text" class="dateType editType"> -->
+                                                <input class="dateType editType" type="text" placeholder="연도 - 월 - 일" id="datepicker">
                                             </td>
                                             <td rowspan="2">
                                                 <input type="date" class="editType">
@@ -1557,7 +1565,11 @@
                                             </td>
                                             <td rowspan="2">자동계산</td>
                                             <td rowspan="2">-</td>
-                                            <td rowspan="2" class="none">2020. 02. 15 조기철수 예정</td><!--221020 가려지는 비고 클래스추가 -ys-->
+                                            <!--<td rowspan="2" class="none">2020. 02. 15 조기철수 예정</td> --221020 가려지는 비고 클래스추가 -ys-->
+                                            <td rowspan="2" class="none">
+                                                <textarea name="" id="" cols="30" rows="1"></textarea>
+                                            </td>
+
                                             <td rowspan="4">
                                                 <!--221220 태그 수정 -ys-->
                                                 <button class="txtType open">[펼침]</button>
