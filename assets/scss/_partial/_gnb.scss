@@ -89,7 +89,9 @@
                 }
             }
             ul{
-                display: none;
+                // display: none;
+                opacity: 0;
+                height: 0;
                 &.is-active {
                     background: rgba(0,0,0,0.2);
                 }
@@ -98,7 +100,8 @@
                     font-size: rem(14);
                     position: relative;
                     a{
-                        padding-left: rem(25);
+                        // padding-left: rem(25);
+                        padding-left: rem(34);
                         position: relative;                        
                         &::before{
                             content:'';
@@ -107,7 +110,7 @@
                             background: $white;
                             position: absolute;
                             top: 50%;
-                            left: rem(13);
+                            left: rem(22);
                             opacity: 0.5;
                         }
                         &:hover{

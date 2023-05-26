@@ -410,6 +410,7 @@ textarea{
                 }
                 &.gap20{
                     column-gap: rem(20);
+                    align-items: center;    //근무환경 정렬
                 }
             }
             textarea{
@@ -594,8 +595,13 @@ input[type=text]{
                 color: $cancel;
             }
         }
+        &.full,
         &.fullSize{
             width: 100%;
+        }
+        &.mid-lowSize{
+            width: rem(100);
+            height: rem(32);
         }
     }
 }
@@ -806,7 +812,9 @@ input[type=file] {
     //파일업로드
     &.upload{
         display: inline-block;
-        width: calc(100% - 132px);
+        // width: calc(100% - 132px);
+        padding: 10px 40px;
+        width: 100%;
         height: auto;
         max-height: fit-content;
         overflow-y: inherit;
@@ -844,29 +852,29 @@ input[type=file] {
                     &:hover{
                         background: $selHover;
                     }
-                    .prefix{
-                        @include ellipsis;
-                        cursor: inherit;
-                    }
                     .delete{
                         margin-left: rem(10);
                     }
                 }
             }
         }
+        .fileName{
+            display: inline-block;
+            // margin-left: rem(10);
+            // vertical-align: text-bottom;
+            @include ellipsis;
+            cursor: initial;
+            width: 80%;
+        }
+        .volume,
+        .float_r{
+            color: $subGray;
+        }
     }
     &.wide{
         width: rem(600);
-        margin-top: rem(20);
+        // margin-top: rem(20);
         padding: rem(18) rem(110);
-    }
-    .fileName{
-        display: inline-block;
-        margin-left: rem(10);
-        vertical-align: text-bottom;
-        @include ellipsis;
-        cursor: initial;
-        width: 65%;
     }
     & + label{
         min-width: rem(90);
@@ -874,19 +882,29 @@ input[type=file] {
         line-height: rem(44);
         padding: 0 rem(15);
         display: inline-block;
-        color: $white;
+        
         font-weight: 700;
         text-align: center;
         border-radius: rem(6);
-        background-color: $mainColor;
+
+        // color: $white;
+        // background-color: $mainColor;
+        //디자인 수정
+        font-size: rem(16);
+        color: $mainColor;
+        border: 1px solid $mainColor;
         cursor: pointer;
     }
-    span{
-        font-size: rem(13);
-    }
+    // span{
+    //     font-size: rem(13);
+    // }
 }
 
-
+.uploadBox{
+    display: flex;
+    align-items: flex-end;
+    margin-top: rem(10);
+}
 
 
   
