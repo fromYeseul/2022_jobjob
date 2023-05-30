@@ -3,7 +3,9 @@
     li{
         display: inline-block;
         vertical-align: middle;
-        margin: 0 rem(6);
+        //margin: 0 rem(6); 0530 J삭제
+        border-radius: rem(3);  //0530 J추가
+        padding: rem(3) rem(10); //0530 J추가
         color: $subInfo;
         cursor: pointer;
         a{
@@ -23,6 +25,7 @@
         &.is-active{
             color: $black;
             font-weight: 700;
+            background: $bgColor;
         }
     }
 }

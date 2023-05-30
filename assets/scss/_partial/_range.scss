@@ -2,7 +2,7 @@
     padding: rem(10) 0;
     .slider {
         position: relative;
-        height: rem(10);
+        height: rem(11); //0530 J수정 (10->11)
         z-index: 1;
         .track{
             position: absolute;
@@ -47,6 +47,9 @@
     }
     &.single{
         .slider{
+            .track{
+                background-image: url(../img/icoTrack2.png); //0530 J추가
+            }    
             .range{
                 left: 0;
             }
