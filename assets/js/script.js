@@ -122,12 +122,15 @@ rightPanel();
 // 우측 패널 필터창
 function filterLayer(){
     let filter = document.querySelector('.rPanelLayer .filter');
+    let filterIco = document.querySelector('.rPanelLayer .filter .filter');
     let filterWrapper = document.querySelector('.rPanelLayer .filterWrapper');
+
 
     if(filterWrapper !== null){       
         filter.addEventListener('click', function(e){
             e.preventDefault();
             filterWrapper.classList.toggle('is-active');
+            filterIco.classList.toggle('is-active');
         }); 
     }else{
         return;
@@ -153,9 +156,25 @@ function layerPop(){
         }
         for(let j=0; j<closeBtn.length; j++){
             closeBtn[j].addEventListener('click', function(){
-                this.parentNode.parentNode.parentNode.classList.remove('is-active');
+                // this.parentNode.parentNode.parentNode.classList.remove('is-active');
+                this.closest('.modalLayer').classList.remove('is-active');
             });
         }
+
+        //외부영역 클릭시 닫힘
+        let Dim = document.querySelectorAll('.layerDim');
+
+        for(let k=0; k<Dim.length; k++){
+            Dim[k].addEventListener('click', function(){
+                this.closest('.modalLayer').classList.remove('is-active');
+            })
+        }
+        // $(document).click(function(e){
+        //     if(e.target.className == 'layerDim'){                
+        //         console.log('aa');
+        //         e.target.closest('.modalLayer').classList.remove('is-active');
+        //     }
+        // })
     }else{
         return;
     }
