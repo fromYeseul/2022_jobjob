@@ -123,23 +123,22 @@
                             }
                         }
                     }
+                    //2depth메뉴 선택시
+                    &.is-active{
+                        background: rgba(0,0,0,0.1);
+                    }
                 }
             }
         }
         .menuTxt{
-            // display: none;
-            display: inline-block;
-            text-indent: -10rem;
-
+            display: none;
             color: $white;
             font-size: rem(15);
-            // margin-left: rem(15);
             margin-left: rem(13);
             vertical-align: middle;
-            // position: relative;
-            //position: absolute;
-            //transition: all .3s;
-            opacity: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }        
         .depth2{
             // display: none;
