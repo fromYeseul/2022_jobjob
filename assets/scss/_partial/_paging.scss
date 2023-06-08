@@ -7,6 +7,7 @@
         cursor: pointer;
         a{
             display: inline-block;
+            width: rem(28);
             color: $subInfo;
             border-radius: rem(3);  //0530 J추가
             padding: rem(3) rem(10); //0530 J추가
@@ -31,6 +32,15 @@
                 color: $black;
                 font-weight: 700;
                 background: $activeGray;
+            }
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-last-child(2),
+        &:last-child{
+            a{
+                width: rem(20);
+                padding: rem(3);
             }
         }
     }
