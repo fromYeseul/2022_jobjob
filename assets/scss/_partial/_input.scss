@@ -458,6 +458,11 @@ textarea{
             align-items: center;
         }
     }
+    input{
+        &.dateType{
+            width: 100%;
+        }
+    }
 }
 
 /* 공통 */
@@ -568,6 +573,13 @@ input[type=date]{
         margin-left: rem(10);
     }
 }
+
+input[type=hidden]{
+    & + .btnType{
+        margin-left: rem(10);
+    }
+}
+
 input[type=text]{    
     &.midSize{
         width: rem(300);
@@ -576,8 +588,8 @@ input[type=text]{
         padding: rem(10) rem(10);
         padding-right: rem(30);
         width: rem(140);    
+        background: url(../img/icoCal.png) right 10px top 50% no-repeat;
         background-color: $white;
-        background: url(../img/icoCal.png) 90% 50% no-repeat;
         &.editType{
             width: rem(76);
             height: rem(36);
@@ -600,8 +612,21 @@ input[type=text]{
             width: 100%;
         }
         &.mid-lowSize{
-            width: rem(100);
+            width: rem(115);
             height: rem(32);
+        }
+        &.onGoing{
+            border: 1px solid $onGoing;
+            &:focus{        
+                border:0;
+                //outline: 1px solid $mainColor;
+            } 
+        }
+        &.disabled,
+        &:disabled{
+            color: $titleGray;
+            background: url(../img/icoCal_dis.png) right 10px top 50% no-repeat;
+            background-color:$inputDisable;
         }
     }
 }
@@ -822,7 +847,9 @@ input[type=file] {
         font-size: rem(14);
         vertical-align: bottom;
         &.laSize{
-            padding: rem(18) rem(50);
+            // padding: rem(18) rem(50);
+            // padding: rem(26) rem(50);
+            padding: rem(26) rem(40);
             width: rem(400);
         }
         &.wide{

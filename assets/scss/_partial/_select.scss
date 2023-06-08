@@ -83,6 +83,7 @@ select{
   } 
   &.autoSize{
     padding-right: rem(22);
+    height: rem(36);
   }
   &.full{
     width: 100%;
@@ -98,7 +99,14 @@ select{
   &.need{
     border: 1px solid $error; 
   }
+  &.onGoing{
+    border: 1px solid $onGoing;
+    &:focus{        
+        border:0;
+    } 
+  }
 }
+
 
 //datepicker select 초기화
 .ui-datepicker-title{
