@@ -4,16 +4,20 @@
         display: inline-block;
         vertical-align: middle;
         //margin: 0 rem(6); 0530 J삭제
-        border-radius: rem(3);  //0530 J추가
-        padding: rem(3) rem(10); //0530 J추가
-        color: $subInfo;
         cursor: pointer;
         a{
-            color : $disable;
+            display: inline-block;
+            color: $subInfo;
+            border-radius: rem(3);  //0530 J추가
+            padding: rem(3) rem(10); //0530 J추가
+            &:hover{
+                color: $black;
+                font-weight: 700;
+            }
         }
-        // &.pagingDouble{
-        //     margin: 0;
-        // }
+        &.pagingDouble{
+            padding: 0;
+        }
         &.numType{
             li{
                 &:first-child,
@@ -23,9 +27,11 @@
             }
         }
         &.is-active{
-            color: $black;
-            font-weight: 700;
-            background: $bgColor;
+            a{
+                color: $black;
+                font-weight: 700;
+                background: $activeGray;
+            }
         }
     }
 }

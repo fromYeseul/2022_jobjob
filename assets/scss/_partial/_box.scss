@@ -348,6 +348,7 @@
             .head{
                 .prefix{
                     @include ellipsis;
+                    width: 86%;
                     font-size: rem(18);
                     font-weight: 700;
                 }
@@ -412,7 +413,11 @@
                 }
             }
             .suffix{
+                display: flex;
                 line-height: 1;
+                a{
+                    margin-left: rem(6);
+                }
             }
         }
         .cont{       
@@ -422,8 +427,19 @@
             font-size: rem(14);
             padding: rem(14);
             .prefix{
-                width: 60%;
+                width: 75%;
                 color: $subInfo; 
+                position: relative;
+                &::before{
+                    content:'';
+                    width: 1px;
+                    height: rem(80);
+                    background: $layoutColor;
+                    position: absolute;
+                    right: -10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
                 ul{
                     width: 96%;
                 }
@@ -467,7 +483,7 @@
                         &:before {
                             content:"...";
                             position: absolute;
-                            left: rem(20);
+                            left: rem(5);
                             z-index: 1;
                             letter-spacing: 1px;
                             line-height: rem(12);
@@ -520,6 +536,10 @@
                 }
                 &.colType{
                     flex-direction: column;
+                }
+                button{
+                    width: auto;
+                    padding: 0 rem(6);
                 }
             }     
         }
