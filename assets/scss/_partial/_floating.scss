@@ -22,13 +22,28 @@
     select,
     .select{
         margin-top: rem(10);
+        width: rem(120);
+        line-height: rem(36);
+        .selDefault{
+            line-height: rem(36);
+        }
         & + h5{
-            margin-top: rem(24);
+            // margin-top: rem(24);
+            margin-top: rem(14);
+        }
+    }
+    h5{
+        & + button{
+            margin-top: rem(10);
         }
     }
     button{
         display: block;
-        width: rem(100) !important;
-        margin: rem(13) auto;
+        margin: 0 auto;
+        width: rem(120);
+        line-height: rem(36);
+        & + button{
+            margin-top: rem(10);
+        }
     }
 }

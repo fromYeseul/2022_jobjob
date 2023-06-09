@@ -769,10 +769,10 @@ function makeScroll(){
 
 //직무추천 필터
 //호출 : filterBtn.onclick = openFilter();        
-let filterBtn = document.querySelectorAll('.tabWrapper .filter');
-let myProjJobFilter = document.querySelector('.myProjDetail .filterWrapper');
 
 function openFilter(){
+    let filterBtn = document.querySelectorAll('.tabWrapper .filter');
+    let myProjJobFilter = document.querySelector('.myProjDetail .filterWrapper');
     for(let i=0; i<filterBtn.length; i++){
         filterBtn[i].addEventListener('click', function(){
             this.classList.toggle('is-active');
@@ -785,6 +785,8 @@ function openFilter(){
     }
 }
 // openFilter();
+
+
 
 
 // function layerPop(){
