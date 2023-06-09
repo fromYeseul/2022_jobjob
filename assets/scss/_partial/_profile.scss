@@ -21,3 +21,34 @@
         margin-top: rem(20);
     }
 }
+
+.phoImg{
+    display: inline-block;
+    &.is-special{
+        .photo{
+            border: 2px solid $mainColor;
+        }
+        position: relative;
+        &::before{
+            content:'';
+            width: rem(13);
+            height: rem(13);
+            border-radius: 50%;
+            background: $mainColor;
+            position: absolute;
+            right: 0;
+            bottom: -1px;
+        }
+        &::after{
+            content:'';
+            width: 9px;
+            height: 7px;
+            background-image: url(../img/icoGroup.png);
+            background-position: -180px -60px;
+            position: absolute;
+            right: 2px;
+            bottom: 2px;
+
+        }
+    }
+}
