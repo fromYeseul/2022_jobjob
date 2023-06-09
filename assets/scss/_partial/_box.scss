@@ -394,6 +394,22 @@
             }
         }
     }
+    &.headType{
+        .cont{
+            .prefix{
+                &::before{
+                    content:'';
+                    width: 1px;
+                    height: rem(80);
+                    background: $layoutColor;
+                    position: absolute;
+                    right: -10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
     &.headType,
     &.memoBox{
         // margin-top: rem(20);
@@ -429,17 +445,6 @@
             .prefix{
                 width: 75%;
                 color: $subInfo; 
-                position: relative;
-                &::before{
-                    content:'';
-                    width: 1px;
-                    height: rem(80);
-                    background: $layoutColor;
-                    position: absolute;
-                    right: -10px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
                 ul{
                     width: 96%;
                 }
@@ -516,20 +521,20 @@
                 margin-left: 0;
                 padding: 0 rem(14);
                 font-weight: 500;
-                position: relative;
-                &::before{
-                    content:'';
-                    width: 1px;
-                    height: rem(80);
-                    background: $layoutColor;
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
+                // position: relative;
+                // &::before{
+                //     content:'';
+                //     width: 1px;
+                //     height: rem(80);
+                //     background: $layoutColor;
+                //     position: absolute;
+                //     left: 0;
+                //     top: 50%;
+                //     transform: translateY(-50%);
+                // }
             }
             .suffix{
-                width: rem(80);
+                min-width: rem(80);
                 color: $disable;
                 &.clear{
                     color: $mainColor;
