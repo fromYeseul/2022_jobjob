@@ -7,7 +7,23 @@
 
 
 
-// .ui-datepicker-title{display: flex;}
+.ui-datepicker-title{
+    display: flex;
+    justify-content: center;
+}
+.ui-datepicker{
+    select{
+        &.ui-datepicker-year,
+        &.ui-datepicker-month{
+            width: 40%;
+            min-width: auto;
+        }
+        &.ui-datepicker-month{
+            margin-left: 10px;
+        }
+    }
+}
+
 .ui-datepicker th{
     background: $mainColor;
 }
@@ -39,9 +55,6 @@
     border-radius: rem(4);
     background: $white;
 }
-.ui-state-hover .ui-icon{
-background-image: url();
-}
 
 //선택한 날짜
 .ui-state-active, .ui-widget-content .ui-state-active{
@@ -52,5 +65,25 @@ background-image: url();
         .ui-state-active, .ui-widget-content .ui-state-active{
             color: #fff;
         }
+    }
+}
+
+//좌우화살표
+.ui-widget-header .ui-icon{
+    background-image: url(../img/icoDatepicker.png);   
+    &.ui-icon-circle-triangle-w{
+        background-position: 0 0;
+    } 
+    &.ui-icon-circle-triangle-e{
+        background-position: -16px 0;
+    }
+}
+.ui-state-hover .ui-icon{
+    background-image: url(../img/icoDatepicker.png);   
+    &.ui-icon-circle-triangle-w{
+        background-position: -32px 0;
+    }
+    &.ui-icon-circle-triangle-e{
+        background-position: -48px 0;
     }
 }
