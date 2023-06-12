@@ -530,10 +530,23 @@ input[type=radio]{
     }
 }
 
+//li갯수에 따라 너비조절
+@mixin space-out($min, $max) {
+    @for $i from $min through $max {
+        &:first-child:nth-last-child(#{$i}),
+        &:first-child:nth-last-child(#{$i}) ~ li {
+        width: 1 / $i * 100%;
+        }
+    }
+}
+
 /* 박스타입 라디오박스 */
 .boxType{
     ul{
         display: flex;
+        & + ul{
+            margin-top: -1px;
+        }
     }
     li{        
         min-width: rem(110);
@@ -584,6 +597,9 @@ input[type=radio]{
                 }
             }
         }
+    }
+    li{
+        @include space-out(1, 8);   //최대 6개
     }
 }
 
