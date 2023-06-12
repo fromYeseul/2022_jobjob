@@ -119,8 +119,13 @@
 
                                         <li>                    
                                             <label class="need" for="memNm">이름</label>
-                                            <input class="" type="text" id="memNm" placeholder="홍길동(필수)">                                         
-                                            <input class="" type="text" id="memNm_Eng" placeholder="영문(선택)">                                                                                     
+                                            
+                                            <!--230609 수정 -ys-->
+                                            <div class="flex mt5">
+                                                <input class="" type="text" id="memNm" placeholder="홍길동(필수)">                                         
+                                                <input class="ml5" type="text" id="memNm_Eng" placeholder="영문(선택)">           
+                                            </div>              
+                                            <!--//230609 수정 -ys-->                                                            
                                         </li>
                                         <li>
                                             <label class="need" for="">생년월일</label>
@@ -584,7 +589,7 @@
                                             <!-- <h4>포트폴리오(선택)</h4> -->
                                             <h6>포트폴리오(선택)</h6><!--230522 수정 -ys -->
                                             <div class="uploadBox">
-                                                <div class="inputGroup upload laSize">
+                                                <div class="inputGroup upload"><!--230609 클래스 제거 -ys -->
                                                     <div class="drop">
                                                         <i class="ico fileUpload"></i>
                                                         <label for="fileUpload">
@@ -1542,8 +1547,8 @@
     <!--플로팅메뉴-->
     <div class="floatingWrapper bottom">
         <div class="floating">
-            <button class="white lowSize">취소</button>
-            <button class="lowSize" id="saveBtn">저장</button>
+            <button class="white">취소</button>
+            <button class="" id="saveBtn">저장</button>
         </div>
     </div>
     <!--//플로팅메뉴-->
