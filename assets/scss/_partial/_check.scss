@@ -541,12 +541,16 @@ input[type=radio]{
         font-weight: 400;
         text-align: center;
         @include heightArray;
+        margin-left: -1px;
         cursor: pointer;
         &:nth-child(1){
-            label{
-                border-left: 0;
-            }
+            margin-left: 0;
         }
+        // &:nth-child(1){
+        //     label{
+        //         border-left: 0;
+        //     }
+        // }
         input{
             width: 0;
             opacity: 0;
@@ -557,7 +561,7 @@ input[type=radio]{
                 padding: rem(16) rem(10);
                 font-weight: 400;
                 border: 1px solid $layoutColor;
-                border-right: 0;
+                // border-right: 0;
                 &::before{
                     display: none;
                 }

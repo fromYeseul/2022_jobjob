@@ -74,6 +74,16 @@
         //     margin-top: 0;
         // }
     }
+    input[type=text]{
+        &:read-only{
+            padding: 0;
+            width: rem(20);
+            color: $black;
+            border: 0;
+            background: transparent;
+            cursor: inherit;
+        }
+    }
     .listBox{
         display: flex;
         .prefix,

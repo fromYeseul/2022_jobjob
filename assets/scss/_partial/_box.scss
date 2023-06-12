@@ -293,7 +293,7 @@
         }
         .cont{       
             .prefix{
-                width: 70%;            
+                width: 65%;            
                 @include ellipsis-2;
             }
             .suffix{
@@ -394,22 +394,6 @@
             }
         }
     }
-    &.headType{
-        .cont{
-            .prefix{
-                &::before{
-                    content:'';
-                    width: 1px;
-                    height: rem(80);
-                    background: $layoutColor;
-                    position: absolute;
-                    right: -10px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
-        }
-    }
     &.headType,
     &.memoBox{
         // margin-top: rem(20);
@@ -445,6 +429,7 @@
             .prefix{
                 width: 75%;
                 color: $subInfo; 
+                position: relative;
                 ul{
                     width: 96%;
                 }
@@ -585,6 +570,26 @@
             top: -10px;
             left: 48%;
             transform: translateX(-50%);
+        }
+    }
+    &.headType{
+        border:1px solid $boxHead;
+        .head{
+            background: $boxHead;
+        }
+        .cont{
+            .prefix{
+                &::before{
+                    content:'';
+                    width: 1px;
+                    height: rem(60);
+                    background: $layoutColor;
+                    position: absolute;
+                    right: -10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
         }
     }
     &.tableType{
