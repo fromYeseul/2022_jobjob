@@ -75,13 +75,21 @@ header{
         }
     }
     &.center{
+        height: rem(48);
         justify-content: center;
         background: $tooltipGray;
         h3{
             color: $white;
+            font-size: rem(20);
         }
         .center{
             margin-left: 0;
+        }
+        & + .contWrapper{
+            padding-top: rem(48);
+            .contLayout{
+                height: calc(100vh - 48px);
+            }
         }
     }
 }

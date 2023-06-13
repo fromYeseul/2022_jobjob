@@ -6,11 +6,12 @@
         text-align: right;
         label{
             margin-right: 0;
+            font-size: rem(14);
         }
     }
     .boxListWrap{    
         // height: calc(100vh - 124px);
-        height: calc(100vh - 166px);
+        height: calc(100vh - 154px);
     }
     .boxList{
         height: rem(110);
@@ -22,7 +23,8 @@
 
 .memDetail{
     width: calc(100% - 280px);
-    padding: rem(30);
+    // padding: rem(30);
+    padding:  rem(40) rem(30);
 
     // height: calc(100vh - 90px);
     // overflow-y: auto;
@@ -72,13 +74,13 @@
 .resumeWrapper{
     font-size: rem(14);
     height: calc(100vh - 180px);
+    overflow-y: auto;
     .resuTop{
         text-align: right;
         padding-bottom: rem(10);
     }
     .resuBox{    
         height: calc(100vh - 250px);
-        @include scroll_0;
     }
 }
 .resume{
@@ -107,6 +109,9 @@
                     border-top:1px solid $titleGray;
                 }
             }
+            .top{
+                text-align: center;
+            }
             h3{
                 display: inline-block;
                 & + span{
@@ -114,6 +119,47 @@
                     font-size: rem(16);
                     letter-spacing: -0.71px;
                     color: $subGray;
+                }
+            }
+        }
+        .mid{
+            li{
+                position: relative;
+                margin-left: rem(24);
+                &::before{
+                    content:'';
+                    width: rem(16);
+                    height: rem(16);
+                    background-image: url(../img/icoGroup.png);
+                    background-position: -40px -100px;
+                    position: absolute;
+                    top: 0;
+                    left: -20px;
+                }
+                &.pNum{
+                    &::before{
+                        background-position: -60px -100px;
+                        left: -18px;
+                    }
+                }
+                &.mail{
+                    &::before{
+                        background-position: -80px -100px;
+                    }
+                }
+                &.address{
+                    &::before{
+                        background-position: -100px -100px;
+                        left: -19px;
+                    }   
+                }
+
+                &:nth-last-child(1),
+                &:nth-last-child(2){
+                    margin-left: 0;
+                    &::before{
+                        display: none;
+                    }
                 }
             }
         }

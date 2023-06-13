@@ -10,7 +10,7 @@
     
     </head>
 <body>
-    <header class="center"> 
+    <header class="center"> <!--230609 center 추가 -ys -->
         <div class="center title">
             <!-- <h3>홍길동(여/29) WEB/개발</h3>
             <h3>22년 12개월(특급)</h3> -->
@@ -200,14 +200,15 @@
                                     <button class="white mid-lowSize">강제탈퇴</button>
                                 </div> -->
 
-                                <!--230518 수정 -ys-->
+                                <!--230609 수정 -ys-->
                                 <div class="resuTop">    
-                                    <button class="mid-lowSize float_l">스페셜 지정</button>
-                                    <!-- <button class="mid-lowSize warning">스페셜 해제</button> -->
-                                    <button class="white mid-lowSize">이력서 다운로드</button>
-                                    <button class="white mid-lowSize">정보수정</button>
+                                    <button class="white mid-lowSize float_l">이력서 다운로드</button>
+
+                                    <button class="bdType mid-lowSize">스페셜 지정</button>
+                                    <button class="rBdType mid-lowSize">스페셜 지정</button>
+                                    <button class="white mid-lowSize">강제탈퇴</button>
                                 </div>
-                                <!--//230518 수정 -ys-->
+                                <!--//230609 수정 -ys-->
 
                                 <div class="resuBox"><!--221223 추가 -ys-->
                                     <div class="resume">
@@ -215,7 +216,13 @@
                                         <div class="prefix">
                                             <div class="profile">
                                                 <h3>정회원</h3>
-                                                <img src="../assets/img/sample.png">                                            
+                                                <!-- <img src="../assets/img/sample.png">      -->
+
+                                                <!--230609 수정 -ys -->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>  
+                                                <!--//230609 수정 -ys -->                                     
                                                 <p class="mainC">Special</p>
                                             </div>
                                             <div class="info">
@@ -226,10 +233,12 @@
                                                 </div>
                                                 <div class="mid">
                                                     <ul>
-                                                        <li>1990.08.20</li>
-                                                        <li>010-6923-1205</li>
-                                                        <li>abc@naver.com</li>
-                                                        <li>서울 광진구 구의동 242-37 아이원 202호</li>
+                                                        <!--230609 추가 -ys -->
+                                                        <li class="birth">1990.08.20</li>
+                                                        <li class="pNum">010-6923-1205</li>
+                                                        <li class="mail">abc@naver.com</li>
+                                                        <li class="address">서울 광진구 구의동 242-37 아이원 202호</li>
+                                                        <!--//230609 추가 -ys -->
                                                         <br>
                                                         <li><b>소속</b>가나다 회사</li>
                                                         <li><b>사업자 번호</b>1234567</li>
@@ -247,7 +256,7 @@
                                                     </a>
                                                     <!--//220916 태그위치 수정 -ys-->
                                                     <b>웹사이트</b>
-                                                    www.naver.com/aaa
+                                                    <a href="#" target="_blank">www.naver.com/aaa</a><!--230609 수정 -ys -->
                                                 </div>                 
                                             </div>                       
                                         </div>
