@@ -228,6 +228,12 @@ button,
         &:disabled{
             background: $inputDisable;
         }
+        &.filter{
+            &.is-active{
+                background-color: $selHover;
+                border: 1px solid $btnActive;
+            }
+        }
     }
     &.txtType{
         width: auto;
