@@ -451,8 +451,8 @@
                                                     <table class="chkType">
                                                         <!--230207 수정-->
                                                         <colgroup>
+                                                            <!-- 230614 수정 -ys -->
                                                             <col width="70px;">
-                                                            <!-- <col width="130px"> 230609 수정 -ys -->
                                                             <col width="65px">
                                                             <col width="30px;">
                                                             <col width="80px;">
@@ -460,12 +460,12 @@
 
                                                             <col width="90px">
                                                             <col width="60px;">
-                                                            <col width="60px;">
-                                                            <!-- <col> 230609 수정 -ys -->
+                                                            <col width="80px;">
                                                             <col width="40%;">
                                                             <col width="70px;">
 
                                                             <col width="100px;">
+                                                            <!-- //230614 수정 -ys -->
                                                         </colgroup>
                                                         <thead>
                                                             <tr>
@@ -624,11 +624,11 @@
                                                                     <label for="ff1"></label>
                                                                 </td>
                                                                 <td class="txtLeft">
-                                                                    <!--230609 수정 -ys -->
+                                                                    <!--230614 수정 -ys -->
                                                                     <span class="phoImg is-special">
                                                                         <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                                     </span>
-                                                                    <!--//230609 수정 -ys -->
+                                                                    <!--//230614 수정 -ys -->
                                                                     <span class="eHigh">100.0</span>
                                                                 </td>
                                                                 <td>
@@ -648,7 +648,7 @@
                                                                     <span class="eHigh">22년 4개월</span>
                                                                 </td>
                                                                 <td>4년제<br>졸업</td>
-                                                                <td>서울<br>강서</td>
+                                                                <td>서울<br>용인시 처인구</td>
                                                                 <td class="ellipsis">
                                                                     ASP, JSP, Java, Linux, Oracle, UNIX, Maria, SQLite, Mongo, Ember, Redi,                                       
                                                                     ASP, JSP, Java, Linux, Oracle, UNIX, Maria, SQLite, Mongo, Ember, Redi                                       
@@ -1083,8 +1083,8 @@
                                                 <div class="tableBox">                              
                                                     <table class="chkType hasInput">
                                                         <colgroup>
+                                                            <!-- 230614 수정 -ys -->
                                                             <col width="60px;">
-                                                            <!-- <col width="130px"> 230609 수정 -ys -->
                                                             <col width="65px">
                                                             <col width="30px;">
                                                             <col width="80px;">
@@ -1092,12 +1092,12 @@
                                                             <col width="100px;">
                     
                                                             <col width="65px;">
-                                                            <col width="75px;">
+                                                            <col width="80px;">
                                                             <col width="65px;">
-                                                            <!-- <col > 230609 수정 -ys  -->
                                                             <col width="40%;">
                                                             <col width="90px;">
                                                             <col width="90px">
+                                                            <!-- //230614 수정 -ys -->
                                                         </colgroup>
                                                         <thead>
                                                             <tr>
@@ -1678,8 +1678,8 @@
                                                 <div class="tableBox">                              
                                                     <table class="chkType hasInput">
                                                         <colgroup>
+                                                            <!-- 230614 수정 -ys -->
                                                             <col width="62px;">
-                                                            <!-- <col width="130px"> 230609 수정 -ys -->
                                                             <col width="65px">
                                                             <col width="30px;">
                                                             <col width="80px;">
@@ -1687,14 +1687,14 @@
 
                                                             <col width="90px;">                    
                                                             <col width="50px;">
-                                                            <col width="60px;">
+                                                            <col width="80px;">
                                                             <col width="70px;">
                                                             <col width="60px;">
                                                             
-                                                            <!-- <col> 230609 수정 -ys -->
                                                             <col width="40%;">
                                                             <col width="75px;">
                                                             <col width="90px">
+                                                            <!-- 230614 수정 -ys -->
                                                         </colgroup>
                                                         <thead>
                                                             <tr>
@@ -2029,24 +2029,22 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--221006 추가 -ys-->
-                                <div class="filterWrapper smSize" id="tableFilter">
+                                <!--230614 수정 -ys-->
+                                <div class="filterWrapper smSize is-active" id="tableFilter">
                                     <div class="filterTop">
                                         <h2>필터</h2>
-                                        <a href="#" class="ico refresh"></a>
+                                        <div class="float_r">
+                                            <a href="#" class="ico refresh"></a>
+                                            <button class="ico layerClose"></button>
+                                        </div>
                                     </div>                    
                                                
                                     <div class="filterList">
-                                        <h6>가용일자</h6>           
-                                        <input type="date" class="smSize"> 부터
-                                        <input type="date" class="smSize mt10"> 까지
-
-                                        <div class="flex_2_3 mt10">
-                                            <button class="white lowSize">삭제</button>
-                                            <button class="lowSize">적용</button> 
-                                        </div>
-                                    </div>       
-                    
+                                        <h6>가용일자</h6>         
+                                        
+                                        <input type="text" id="ableDateSt" placeholder="연도-월-일" class="dateType"> 부터
+                                        <input type="text" id="ableDateSt" placeholder="연도-월-일" class="dateType mt10"> 까지
+                                    </div>                       
                                     
                                     <!-- <div class="filterList">     
                                         <h6>경력</h6>                 
@@ -2074,9 +2072,9 @@
                                         <!-- //230104 버튼수정 -ys--
                                     </div>       -->
                                     
-                                    <button class="white mt20">닫기</button>
+                                    <button class="mt20">적용</button>
                                 </div>
-                                <!--//221006 추가 -ys-->
+                                <!--//230614 수정 -ys-->
                             </div>
                         </div>
                         <!--221114 수정 -ys-->
