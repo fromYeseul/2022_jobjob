@@ -767,12 +767,13 @@ function makeScroll(){
 // }
 
 
-//직무추천 필터
+//직무추천 필터 - 230614 수정 -ys
 //호출 : filterBtn.onclick = openFilter();        
 
 function openFilter(){
     let filterBtn = document.querySelectorAll('.tabWrapper .filter');
     let myProjJobFilter = document.querySelector('.myProjDetail .filterWrapper');
+    let myProjLayerClose = document.querySelector('.myProjDetail .filterWrapper .layerClose');
     for(let i=0; i<filterBtn.length; i++){
         filterBtn[i].addEventListener('click', function(){
             this.classList.toggle('is-active');
@@ -783,6 +784,9 @@ function openFilter(){
             //console.log(filterID);
         })
     }
+    myProjLayerClose.addEventListener('click',function(){
+        this.closest('.filterWrapper').classList.remove('is-active');
+    })
 }
 // openFilter();
 

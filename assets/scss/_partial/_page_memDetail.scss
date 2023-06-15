@@ -131,10 +131,15 @@
                     width: rem(16);
                     height: rem(16);
                     background-image: url(../img/icoGroup.png);
-                    background-position: -40px -100px;
+                    background-position: -40px -184px;
                     position: absolute;
-                    top: 0;
+                    top: 2px;
                     left: -20px;
+                }
+                &.birth{
+                    &::before{                        
+                        background-position: -40px -100px;
+                    }
                 }
                 &.pNum{
                     &::before{
@@ -145,6 +150,7 @@
                 &.mail{
                     &::before{
                         background-position: -80px -100px;
+                        top: 6px;
                     }
                 }
                 &.address{
@@ -169,6 +175,13 @@
                 margin-top: rem(24);
                 &:first-child{
                     margin-top: 0;
+                }
+            }
+            a{
+                text-decoration: underline;
+                word-break: break-all;
+                &.download{
+                    text-decoration: none;
                 }
             }
         }
