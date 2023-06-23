@@ -62,9 +62,6 @@
         }
     }
 }
-.boxList{
-    cursor: pointer;
-}
 
 
 
@@ -226,7 +223,6 @@
     background: $white;
     border-radius: rem(5);
     font-size: rem(14);
-    cursor:pointer;
     .head,
     .bottom{
         font-weight: 500;
@@ -274,7 +270,7 @@
         min-width: rem(72);
         border:1px solid $selGray;
         .square{
-            padding: rem(3) rem(10);
+            padding: rem(3) rem(8);
             border:0;
             margin-left: 0;
             text-align: left;
@@ -288,9 +284,9 @@
         border-radius: 0;
         border-bottom:1px solid $tableBorder;
         position: relative;
-        &:last-child{
-            border-bottom: 0;
-        }
+        // &:last-child{
+        //     border-bottom: 0;
+        // }
         .cont{       
             .prefix{
                 width: 65%;            
@@ -435,8 +431,9 @@
                 color: $subInfo; 
                 position: relative;
                 ul{
-                    width: 96%;
+                    width: 98%;
                 }
+                a,
                 span{
                     margin-right: rem(10);
                     // line-height: rem(30);
@@ -449,6 +446,10 @@
                         color: $subInfo;
                         font-weight: 400;
                         font-size: rem(12);
+                    }
+                    a{
+                        text-decoration: underline;
+                        cursor: pointer;
                     }
                 }
                 .memPay{
@@ -481,6 +482,16 @@
                             z-index: 1;
                             letter-spacing: 1px;
                             line-height: rem(12);
+                        }
+                    }
+                    &.memoTitle{
+                        padding:0;
+                        background: transparent;
+                        @include ellipsis;
+                        width: 100%;
+                        margin-bottom: -10px;
+                        a{
+                            width: 100%;
                         }
                     }
                     &.editType{
@@ -580,6 +591,7 @@
         border:1px solid $boxHead;
         .head{
             background: $boxHead;
+            cursor:pointer;
         }
         .cont{
             .prefix{

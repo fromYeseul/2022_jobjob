@@ -50,7 +50,8 @@ select{
   option{
     // zoom: 1.2;
     &:disabled{
-      display: none;
+      color: $titleGray;
+      background-color:$inputDisable;
     }
   }
   &.xxsSize{
@@ -75,6 +76,9 @@ select{
     width: rem(102);
     height: rem(36);
   }
+  &.midSize{
+    width: rem(140);
+  } 
   &.wideSize{
     width: rem(180);
   } 
@@ -204,6 +208,18 @@ select{
         pointer-events: none;
         &:hover{
           background: transparent;
+        }
+      }
+      input{
+        &:disabled{          
+          color: $titleGray;
+          background:$inputDisable;
+          pointer-events: none;
+          & + label{            
+          color: $titleGray;
+          background:$inputDisable;
+          pointer-events: none;
+          }
         }
       }
       label{

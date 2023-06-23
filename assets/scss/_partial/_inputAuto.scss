@@ -83,7 +83,7 @@
 
 
 
-//어디에 쓴거지...?
+//자동완성
 .ui-helper-hidden {
 	display: none;
     &-accessible{
@@ -110,9 +110,20 @@
     top:30px;
 	left: 0;
 	cursor: default;
+
+    max-height: 200px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    border: 1px solid $selOptList;
 }
 .ui-widget-content {
 	background: #ffffff;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    .ui-menu-item-wrapper{
+        &.ui-state-active{
+            border:0;
+        }
+    }
 }
 .ui-menu {
     position: absolute;

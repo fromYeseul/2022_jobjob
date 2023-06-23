@@ -15,9 +15,24 @@
     }
 }
 
+#myPeoA-1{
+    .boxList{
+        &.headType{
+            .cont{
+                .prefix{
+                    width: 68%;
+                }
+                .suffix{
+                    width: 26%;
+                }
+            }
+        }
+    }
+}
+
 .myPeoDetail{
     .tableBox{
-        height: calc(100vh - 190px);  
+        height: calc(100vh - 240px);  
         margin-top: rem(30);      
     }
     .boxListWrap{    
@@ -28,16 +43,6 @@
     .default{
         height: 100%;
     }
-    &.is-active{
-        & + .quickView{
-            width: rem(360);
-            right: rem(52);
-        }
-    }
-}
-
-
-.myPeoDetail{
     .notify{
         p{
             &:first-child{
@@ -46,8 +51,10 @@
             }
         }
     }    
-    .tableBox{
-        height: calc(100vh - 240px);  
-        margin-top: rem(30);      
+    &.is-active{
+        & + .quickView{
+            width: rem(360);
+            right: rem(52);
+        }
     }
 }

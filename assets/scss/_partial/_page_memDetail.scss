@@ -52,6 +52,11 @@
             padding-right: rem(10);
             background: transparent;
         }
+        td{
+            &.ellipsis{
+                cursor: inherit;
+            }
+        }
     }
 }
 
@@ -98,7 +103,7 @@
     >.prefix{
         width: rem(330);
         padding: rem(40) rem(50);
-        background: $beige;
+        background: $memBg;
         // height: calc(100vh - 250px);
         // @include scroll_0;
         .info{
@@ -114,6 +119,7 @@
             }
             h3{
                 display: inline-block;
+                font-size: rem(26);
                 & + span{
                     margin-left: rem(6);
                     font-size: rem(16);
