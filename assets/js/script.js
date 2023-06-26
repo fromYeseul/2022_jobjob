@@ -774,6 +774,7 @@ function openFilter(){
     let filterBtn = document.querySelectorAll('.tabWrapper .filter');
     let myProjJobFilter = document.querySelector('.myProjDetail .filterWrapper');
     let myProjLayerClose = document.querySelector('.myProjDetail .filterWrapper .layerClose');
+    
     for(let i=0; i<filterBtn.length; i++){
         filterBtn[i].addEventListener('click', function(){
             this.classList.toggle('is-active');
@@ -786,10 +787,16 @@ function openFilter(){
     }
     myProjLayerClose.addEventListener('click',function(){
         this.closest('.filterWrapper').classList.remove('is-active');
-    })
+    });
 }
 // openFilter();
 
+$(document).mouseup(function (e){
+	var filterWrapper = $(".filterWrapper");
+	if(filterWrapper.has(e.target).length === 0){
+		filterWrapper.removeClass("is-active");
+	}
+});
 
 
 
