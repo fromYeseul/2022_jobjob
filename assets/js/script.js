@@ -767,7 +767,7 @@ function makeScroll(){
 // }
 
 
-//직무추천 필터 - 230614 수정 -ys
+//직무추천 필터 - 230627 수정 -ys
 //호출 : filterBtn.onclick = openFilter();        
 
 function openFilter(){
@@ -797,7 +797,7 @@ $(document).mouseup(function (e){
 		filterWrapper.removeClass("is-active");
 	}
 });
-
+//230627 수정 -ys
 
 
 // function layerPop(){
@@ -1025,7 +1025,7 @@ function showTable(){
 // }
 
 
-//range slide : 마이프로젝트-직무추천 세부설정 / 230427 추가 -ys
+//range slide : 마이프로젝트-직무추천 세부설정 / 230627 수정 -ys
 //회사까지의 거리
 function rangeSlider(){
     const comDistance = document.getElementById("comDistance");
@@ -1034,6 +1034,7 @@ function rangeSlider(){
 
     const thumbRight = document.querySelector(".single .slider > .thumb.right");
     const range = document.querySelector(".single .slider > .range");
+    const slider = document.querySelector(".single .slider");
 
     const setRightValue = () => {
         const _this = distanceTo;
@@ -1046,9 +1047,21 @@ function rangeSlider(){
         
         comDistance.value = Math.round(percent * 0.5);
     };
+    setRightValue();
+    distanceTo.addEventListener("input", setRightValue);   
+    
+    //클릭시 이동
+    const clickValue = (e) => {        
+        const movePercent = parseInt(e.offsetX/5);
+        thumbRight.style.right = 100 - movePercent + "%";
+        range.style.right = 100 - movePercent + "%";
 
-    distanceTo.addEventListener("input", setRightValue);
+        comDistance.value = Math.round(movePercent * 0.5);
+    }    
+
+    slider.addEventListener("click", clickValue);
 }
+
 
 //보유경력
 function rangeSliderMulti(){
@@ -1062,6 +1075,8 @@ function rangeSliderMulti(){
     const thumbLeft = document.querySelector(".multi .slider > .thumb.left");
     const thumbRight = document.querySelector(".multi .slider > .thumb.right");
     const range = document.querySelector(".multi .slider > .range");
+    const slider = document.querySelector(".multi .slider");
+    const track = document.querySelector(".multi .track");
 
     const setLeftValue = () => {
         const _this = careerLeft;
@@ -1095,7 +1110,36 @@ function rangeSliderMulti(){
 
     careerLeft.addEventListener("input", setLeftValue);
     careerRight.addEventListener("input", setRightValue);
+    
+
+    //클릭시 이동
+    const clickValue = (e) => {        
+        let std;
+        if(e.target.classList.contains('track')) std = e.offsetX;
+        else if(e.target.classList.contains('range'))  std = e.offsetX + thumbLeft.offsetLeft;
+
+        const leftDis = Math.abs(std- (thumbLeft.offsetLeft));
+        const rightDis = Math.abs((thumbRight.offsetLeft) - std);
+
+        const movePercent = parseInt(std/5);
+        
+        if(leftDis >= rightDis){
+            console.log('rightDis');            
+            thumbRight.style.right = 100 - movePercent + "%";
+            range.style.right = 100 - movePercent + "%";
+            careerTo.value = Math.round(movePercent * 0.3);
+        }else{
+            console.log('leftDis');
+            thumbLeft.style.left = movePercent + "%";
+            range.style.left = movePercent + "%";
+    
+            careerFrom.value = Math.round(movePercent * 0.3);
+        }        
+    }        
+    slider.addEventListener("click", clickValue);
 }
+//230627 수정 -ys
+
 
 //카운팅 - 메뉴관리
 function counting(){
