@@ -271,7 +271,6 @@ h1, h2, h3, h4, h5, h6, p {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
 }
 
 .ellipsis-5 {
@@ -442,6 +441,10 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0 1.875rem;
 }
 
+.cke_screen_reader_only {
+  height: 0 !important;
+}
+
 .iscroll {
   overflow: hidden;
   position: relative;
@@ -515,7 +518,7 @@ header {
   position: relative;
 }
 .contWrapper .contLayout .myProjList {
-  width: 16.25rem;
+  width: 18.75rem;
   background: #fff;
   border-right: 1px solid #cccccc;
   position: relative;
@@ -529,7 +532,7 @@ header {
 }
 .contWrapper .contLayout .myProjDetail {
   transition: all 0.3s;
-  width: calc(100% - 20px);
+  width: calc(100% - 300px);
   padding: 0.9375rem;
   overflow-y: auto;
 }
@@ -699,18 +702,6 @@ header {
 }
 .layoutWrapper.is-active .contWrapper {
   padding-left: 11.25rem;
-}
-.layoutWrapper.is-active .contWrapper .myProjList {
-  width: 17.5rem;
-}
-.layoutWrapper.is-active .contWrapper .myProjDetail {
-  width: calc(100% - 260px);
-}
-.layoutWrapper.is-active .contWrapper .myProjDetail .wrap {
-  width: calc(100% - 400px);
-}
-.layoutWrapper.is-active .contWrapper .myProjDetail .wrap > div {
-  padding-right: 14.5rem;
 }
 .layoutWrapper.is-active .contWrapper .projRegister .regiPartWrapper {
   padding-right: 9.5625rem;
@@ -910,7 +901,6 @@ header .center.title h3 {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
   width: 100%;
   text-align: center;
   cursor: inherit;
@@ -941,14 +931,22 @@ header .suffix li:nth-child(3)::before, header .suffix li:nth-child(4)::before {
   transform: translateY(-45%);
 }
 header.center {
+  height: 3rem;
   justify-content: center;
   background: #58585e;
 }
 header.center h3 {
   color: #fff;
+  font-size: 1.25rem;
 }
 header.center .center {
   margin-left: 0;
+}
+header.center + .contWrapper {
+  padding-top: 3rem;
+}
+header.center + .contWrapper .contLayout {
+  height: calc(100vh - 48px);
 }
 
 /* GNB 아이콘 */
@@ -981,11 +979,14 @@ header.center .center {
   box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
 }
 .rPanelLayer .rPanelCont .yScroll {
-  height: calc(100vh - 322px);
+  height: calc(100vh - 300px);
   overflow-y: auto;
 }
 .rPanelLayer .rPanelCont .yScroll::-webkit-scrollbar {
   width: 0;
+}
+.rPanelLayer .rPanelCont .yScroll .nodata {
+  height: calc(100% - 20px);
 }
 .rPanelLayer .rPanelCont .hasBtn {
   margin-bottom: 1.25rem;
@@ -1593,7 +1594,6 @@ footer.toast button + button {
 .floatingWrapper .select {
   margin-top: 0.625rem;
   width: 7.5rem !important;
-  line-height: 2.25rem !important;
 }
 .floatingWrapper select .selDefault,
 .floatingWrapper .select .selDefault {
@@ -1619,10 +1619,10 @@ footer.toast button + button {
 .quickView {
   position: absolute;
   right: 0;
-  top: 1.875rem;
+  top: 2.5rem;
   width: 20rem;
   background: #fff;
-  box-shadow: -1px 1px 1px 0 rgba(100, 100, 100, 0.1);
+  box-shadow: -1px -1px 1px 0 rgba(100, 100, 100, 0.1);
 }
 .quickView.fixedHeight {
   width: 0;
@@ -1697,7 +1697,7 @@ footer.toast button + button {
 .quickView .boxListWrap.is-active {
   padding: 0.625rem 1.125rem;
   padding-top: 0;
-  height: calc(100vh - 181px);
+  height: calc(100vh - 178px);
 }
 .quickView .boxListWrap li {
   margin-top: 0.75rem;
@@ -1730,14 +1730,13 @@ footer.toast button + button {
   display: block;
   margin-bottom: 0.25rem;
   font-weight: 700;
-  text-decoration: underline;
   width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
+  cursor: inherit;
 }
 .quickView .boxList .txtRight {
   margin-top: 0;
@@ -1804,6 +1803,9 @@ footer.toast button + button {
   justify-content: inherit;
   margin-bottom: 0.9375rem;
 }
+.filterTop .layerClose {
+  margin-left: 0.625rem;
+}
 
 .filterList + .filterList {
   margin-top: 1.875rem;
@@ -1823,11 +1825,14 @@ footer.toast button + button {
 }
 .filterList input[type=text]:read-only {
   padding: 0;
-  width: 1.25rem;
+  width: 1.5rem;
   color: #000000;
   border: 0;
   background: transparent;
   cursor: inherit;
+}
+.filterList input[type=text].dateType {
+  width: 7.25rem;
 }
 .filterList .listBox {
   display: flex;
@@ -1956,10 +1961,6 @@ footer.toast button + button {
 
 .tableBox {
   overflow-y: auto;
-}
-.tableBox thead.sticky {
-  position: sticky;
-  top: 0;
 }
 .tableBox.noScroll {
   overflow-y: initial;
@@ -2101,11 +2102,11 @@ table.chkType tr th {
   color: #000000;
   border-bottom: 1px solid #cccccc;
 }
-table.chkType tr th span.filter {
+table.chkType tr th span.layerOpen, table.chkType tr th span.filter {
   position: relative;
   cursor: pointer;
 }
-table.chkType tr th span.filter::after {
+table.chkType tr th span.layerOpen::after, table.chkType tr th span.filter::after {
   content: "";
   width: 0;
   height: 0;
@@ -2153,7 +2154,6 @@ table .ellipsis {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
   padding: 0 0.375rem;
 }
 table .ellipsis .dNear {
@@ -2271,7 +2271,7 @@ table input {
   width: 1.75rem;
   color: #666666;
   border-radius: 0.1875rem;
-  padding: 0.1875rem 0.625rem;
+  padding: 0.1875rem 0;
 }
 .paging li a:hover {
   color: #000000;
@@ -2605,7 +2605,7 @@ button:disabled, button.disabled,
 button + button, button + .button,
 .button + button,
 .button + .button {
-  margin-left: 0.25rem;
+  margin-left: 0.375rem;
 }
 button.auto,
 .button.auto {
@@ -2767,6 +2767,11 @@ button.onlyIco:disabled,
 .button.onlyIco:disabled {
   background: #f8f8f8;
 }
+button.onlyIco.filter.is-active,
+.button.onlyIco.filter.is-active {
+  background-color: #e5effa;
+  border: 1px solid #a9bfd5;
+}
 button.txtType,
 .button.txtType {
   width: auto;
@@ -2921,7 +2926,7 @@ input[type=password].lowType {
 }
 input[type=text]::placeholder,
 input[type=password]::placeholder {
-  color: #8f8f8f;
+  color: #cccccc;
   font-size: 1rem;
 }
 
@@ -3069,6 +3074,10 @@ textarea + .counter {
 .inputList.column.row textarea {
   height: calc(100% - 30px);
 }
+.inputList.column.row .onlyIco {
+  width: 2rem;
+  height: 2rem;
+}
 .inputList.flex li {
   display: flex;
   align-items: center;
@@ -3126,7 +3135,7 @@ input[type=number]::placeholder,
 input[type=password]::placeholder,
 input[type=month]::placeholder,
 input[type=date]::placeholder {
-  color: #8f8f8f;
+  color: #cccccc;
   font-size: 0.875rem;
 }
 input[type=text]:read-only,
@@ -3134,7 +3143,7 @@ input[type=number]:read-only,
 input[type=password]:read-only,
 input[type=month]:read-only,
 input[type=date]:read-only {
-  color: #cccccc;
+  color: #8f8f8f;
   background: #f2f2f7;
 }
 input[type=text]:read-only:focus,
@@ -3354,7 +3363,7 @@ input[type=text].dateType.onGoing {
   border: 1px solid #ffc812;
 }
 input[type=text].dateType.onGoing:focus {
-  border: 0;
+  border: 1px solid #ffc812;
 }
 input[type=text].dateType.disabled, input[type=text].dateType:disabled {
   color: #a6a6b6;
@@ -3504,7 +3513,7 @@ input[type=file] {
   position: relative;
 }
 .inputGroup label {
-  color: #8f8f8f;
+  color: #cccccc;
   font-weight: 400;
   line-height: 2rem;
   font-size: 0.875rem;
@@ -3589,7 +3598,7 @@ input[type=file] {
   margin-left: 0.625rem;
 }
 .inputGroup.upload .drop {
-  color: #8f8f8f;
+  color: #cccccc;
   display: flex;
   font-size: 0.875rem;
   align-items: center;
@@ -3618,7 +3627,6 @@ input[type=file] {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
   cursor: initial;
   width: 80%;
 }
@@ -3696,7 +3704,6 @@ a.download span {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
   width: 100%;
 }
 
@@ -3711,7 +3718,7 @@ textarea {
   resize: none;
 }
 textarea::placeholder {
-  color: #8f8f8f;
+  color: #cccccc;
   font-size: 0.875rem;
 }
 textarea:focus {
@@ -3719,7 +3726,7 @@ textarea:focus {
 }
 textarea:read-only {
   color: #cccccc;
-  background: #f2f2f7;
+  background: #f8f8f8;
 }
 textarea:read-only:focus {
   border: 1px solid #cccccc;
@@ -3828,7 +3835,7 @@ textarea.need {
   justify-content: space-between;
   margin-bottom: 0;
   padding: 4px 6px;
-  color: #8f8f8f;
+  color: #cccccc;
   cursor: pointer;
 }
 .autoList li:hover {
@@ -3841,7 +3848,6 @@ textarea.need {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
   width: 60%;
 }
 .autoList li .suffix {
@@ -3881,10 +3887,18 @@ textarea.need {
   top: 30px;
   left: 0;
   cursor: default;
+  max-height: 200px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  border: 1px solid #cccccc;
 }
 
 .ui-widget-content {
   background: #ffffff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.ui-widget-content .ui-menu-item-wrapper.ui-state-active {
+  border: 0;
 }
 
 .ui-menu {
@@ -4179,7 +4193,7 @@ input[type=radio].chkSwitch:disabled + label {
 }
 .btnType.low input[type=checkbox] + label,
 .btnType.low input[type=radio] + label {
-  line-height: 1.875rem;
+  line-height: 1.9375rem;
   padding: 0 0.625rem;
 }
 .btnType.low input[type=checkbox] + input[type=hidden] + label,
@@ -4371,27 +4385,6 @@ input[type=radio]:disabled + label {
   border-radius: 1.875rem;
   background: #fff;
 }
-.boxType li {
-  max-width: 9.875rem;
-}
-.boxType li:first-child:nth-last-child(1), .boxType li:first-child:nth-last-child(1) ~ li {
-  width: 100%;
-}
-.boxType li:first-child:nth-last-child(2), .boxType li:first-child:nth-last-child(2) ~ li {
-  width: 50%;
-}
-.boxType li:first-child:nth-last-child(3), .boxType li:first-child:nth-last-child(3) ~ li {
-  width: 33.3333333333%;
-}
-.boxType li:first-child:nth-last-child(4), .boxType li:first-child:nth-last-child(4) ~ li {
-  width: 25%;
-}
-.boxType li:first-child:nth-last-child(5), .boxType li:first-child:nth-last-child(5) ~ li {
-  width: 20%;
-}
-.boxType li:first-child:nth-last-child(6), .boxType li:first-child:nth-last-child(6) ~ li {
-  width: 16.6666666667%;
-}
 
 /* 별점평가 */
 .starWrap {
@@ -4489,7 +4482,8 @@ select:disabled {
   background-color: #f8f8f8;
 }
 select option:disabled {
-  display: none;
+  color: #a6a6b6;
+  background-color: #f8f8f8;
 }
 select.xxsSize {
   min-width: 3.75rem;
@@ -4512,6 +4506,9 @@ select.lowSize {
 select.mid-lowSize {
   width: 6.375rem;
   height: 2.25rem;
+}
+select.midSize {
+  width: 8.75rem;
 }
 select.wideSize {
   width: 11.25rem;
@@ -4541,7 +4538,7 @@ select.onGoing {
   border: 1px solid #ffc812;
 }
 select.onGoing:focus {
-  border: 0;
+  border: 1px solid #ffc812;
 }
 
 .ui-datepicker-title select {
@@ -4578,7 +4575,6 @@ select.onGoing:focus {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
   width: 100%;
   cursor: pointer;
 }
@@ -4643,6 +4639,16 @@ select.onGoing:focus {
 }
 .select .optionList .optionItem.disabled:hover {
   background: transparent;
+}
+.select .optionList .optionItem input:disabled {
+  color: #a6a6b6;
+  background: #f8f8f8;
+  pointer-events: none;
+}
+.select .optionList .optionItem input:disabled + label {
+  color: #a6a6b6;
+  background: #f8f8f8;
+  pointer-events: none;
 }
 .select .optionList .optionItem label {
   display: block;
@@ -4864,6 +4870,7 @@ select.onGoing:focus {
 .rangeSlider .slider {
   position: relative;
   height: 0.6875rem;
+  cursor: pointer;
   z-index: 1;
 }
 .rangeSlider .slider .track {
@@ -5068,7 +5075,6 @@ table.tree {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
   width: 70%;
 }
 .tree tr .rootCont .suffix {
@@ -5121,26 +5127,23 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   height: 1.125rem;
   background-position: -80px 0px;
 }
+.ico.excDown {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -120px -100px;
+  vertical-align: -3px;
+}
 .ico.download {
   width: 1.125rem;
   height: 1.125rem;
   background-position: -40px 0;
+  cursor: pointer;
 }
 .ico.filter {
   width: 1.125rem;
   height: 1.125rem;
   background-position: -60px 0;
   position: relative;
-}
-.ico.filter.is-active:after {
-  content: "";
-  width: 0.875rem;
-  height: 0.875rem;
-  background-position: -40px -40px;
-  background-image: url(../img/icoGroup.png);
-  position: absolute;
-  bottom: -2px;
-  right: -6px;
 }
 .ico.file {
   width: 1rem;
@@ -5200,6 +5203,12 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   height: 1.0625rem;
   background-position: -180px -160px;
 }
+.ico.resume_b {
+  width: 1rem;
+  height: 1.0625rem;
+  background-position: -160px -160px;
+  cursor: pointer;
+}
 .ico.more {
   width: 0.1875rem;
   height: 1.125rem;
@@ -5212,7 +5221,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-position: -60px -20px;
   cursor: pointer;
 }
-.ico.smClose.w {
+.ico.smClose.w, .ico.smClose.white {
   background-position: -80px -20px;
 }
 .ico.layerClose {
@@ -5341,18 +5350,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 
 /* HEADER 아이콘 */
-.header .ico {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-image: url(../img/icoGnb.png);
-}
-.header .ico.info {
-  background-position: 0px 0px;
-}
-.header .ico.setting {
-  background-position: 30px 30px;
-}
-
 /* GNB 아이콘 */
 .gnb .ico {
   width: 1.375rem;
@@ -5477,7 +5474,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
   color: #000000;
   font-size: 1.25rem;
   font-weight: 700;
@@ -5500,10 +5496,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .boxWrap.divideType .head,
 .boxList.divideType .head {
   border-bottom: 1px solid #cccccc;
-}
-
-.boxList {
-  cursor: pointer;
 }
 
 .boxListWrap {
@@ -5558,7 +5550,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
 }
 .boxWrap.headType .head .prefix p {
   padding: 0.25rem 0;
@@ -5618,7 +5609,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background: #fff;
   border-radius: 0.3125rem;
   font-size: 0.875rem;
-  cursor: pointer;
 }
 .boxList .head,
 .boxList .bottom {
@@ -5639,7 +5629,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
 }
 .boxList .photo {
   width: 2.375rem;
@@ -5669,7 +5658,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   border: 1px solid #a6a6b6;
 }
 .boxList .moreList .square {
-  padding: 0.1875rem 0.625rem;
+  padding: 0.1875rem 0.5rem;
   border: 0;
   margin-left: 0;
   text-align: left;
@@ -5682,9 +5671,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   border-radius: 0;
   border-bottom: 1px solid #dddddd;
   position: relative;
-}
-.boxList.listType:last-child {
-  border-bottom: 0;
 }
 .boxList.listType .cont .prefix {
   width: 65%;
@@ -5756,10 +5742,12 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
   width: 86%;
   font-size: 1.125rem;
   font-weight: 700;
+}
+.boxList.flexType .center .head .prefix .label {
+  vertical-align: 2px;
 }
 .boxList.flexType .center .head .suffix {
   width: auto;
@@ -5784,7 +5772,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
   width: 70%;
 }
 .boxList.flexType .center .bottom .prefix span {
@@ -5843,9 +5830,11 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   position: relative;
 }
 .boxList.headType .cont .prefix ul, .boxList.memoBox .cont .prefix ul {
-  width: 96%;
+  width: 98%;
 }
-.boxList.headType .cont .prefix span, .boxList.memoBox .cont .prefix span {
+.boxList.headType .cont .prefix a,
+.boxList.headType .cont .prefix span, .boxList.memoBox .cont .prefix a,
+.boxList.memoBox .cont .prefix span {
   margin-right: 0.625rem;
 }
 .boxList.headType .cont .prefix .memName, .boxList.memoBox .cont .prefix .memName {
@@ -5857,6 +5846,10 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   color: #666666;
   font-weight: 400;
   font-size: 0.75rem;
+}
+.boxList.headType .cont .prefix .memName a, .boxList.memoBox .cont .prefix .memName a {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .boxList.headType .cont .prefix .memPay, .boxList.memoBox .cont .prefix .memPay {
   color: #000000;
@@ -5880,7 +5873,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
   width: 100%;
 }
 .boxList.headType .cont .prefix .memMemo b, .boxList.memoBox .cont .prefix .memMemo b {
@@ -5896,6 +5888,21 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   z-index: 1;
   letter-spacing: 1px;
   line-height: 0.75rem;
+}
+.boxList.headType .cont .prefix .memMemo.memoTitle, .boxList.memoBox .cont .prefix .memMemo.memoTitle {
+  padding: 0;
+  background: transparent;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
+  width: 100%;
+  margin-bottom: -10px;
+}
+.boxList.headType .cont .prefix .memMemo.memoTitle a, .boxList.memoBox .cont .prefix .memMemo.memoTitle a {
+  width: 100%;
 }
 .boxList.headType .cont .prefix .memMemo.editType, .boxList.memoBox .cont .prefix .memMemo.editType {
   padding: 0;
@@ -5963,10 +5970,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .boxList.headType .bottom .txtCenter, .boxList.memoBox .bottom .txtCenter {
   margin-top: 5px;
 }
-.boxList.headType .showMore, .boxList.memoBox .showMore {
-  right: 0.9375rem;
-  top: 0.875rem;
-}
 .boxList.headType textarea, .boxList.headType input[type=text], .boxList.memoBox textarea, .boxList.memoBox input[type=text] {
   margin-top: 0.3125rem;
   padding: 0.4375rem;
@@ -5988,6 +5991,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .boxList.headType .head {
   background: #aaa;
+  cursor: pointer;
 }
 .boxList.headType .cont .prefix::before {
   content: "";
@@ -6049,7 +6053,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .divideBox h5 {
   margin-bottom: 0.625rem;
   text-align: left;
-  color: #7a848e;
+  color: #838ca3;
 }
 .divideBox .left .tableBox {
   height: 33.75rem;
@@ -6223,7 +6227,6 @@ h6 + .h6_sub {
 
 .profile {
   text-align: center;
-  height: 16.25rem;
   margin: 3.75rem 0;
   position: relative;
 }
@@ -6241,9 +6244,28 @@ h6 + .h6_sub {
 .profile button {
   margin-top: 1.25rem;
 }
+.profile h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.profile .phoImg.is-special::before {
+  width: 24px;
+  height: 24px;
+  right: 10px;
+  top: 14px;
+}
+.profile .phoImg.is-special::after {
+  width: 15px;
+  height: 11px;
+  background-image: url(../img/icoGroup.png);
+  background-position: -180px -40px;
+  right: 14px;
+  top: 20px;
+}
 
 .phoImg {
   display: inline-block;
+  margin-right: 0 !important;
 }
 .phoImg.is-special {
   position: relative;
@@ -6258,7 +6280,7 @@ h6 + .h6_sub {
   border-radius: 50%;
   background: #0460d2;
   position: absolute;
-  right: 0;
+  right: 8px;
   bottom: -1px;
 }
 .phoImg.is-special::after {
@@ -6268,7 +6290,7 @@ h6 + .h6_sub {
   background-image: url(../img/icoGroup.png);
   background-position: -180px -60px;
   position: absolute;
-  right: 2px;
+  right: 10px;
   bottom: 2px;
 }
 
@@ -6402,6 +6424,21 @@ h6 + .h6_sub {
   display: none;
 }
 
+.errorPage {
+  text-align: center;
+}
+.errorPage h2 {
+  margin-top: 5rem;
+}
+.errorPage h6 {
+  margin-top: 1.25rem;
+}
+.errorPage .bottom {
+  margin-top: 1.875rem;
+  display: flex;
+  justify-content: center;
+}
+
 .myProjList .boxListWrap {
   height: calc(100vh - 129px);
 }
@@ -6416,7 +6453,7 @@ h6 + .h6_sub {
   width: 0;
 }
 .myProjDetail .wrap {
-  width: calc(100% - 260px);
+  width: calc(100% - 330px);
   position: absolute;
   bottom: 0.9375rem;
 }
@@ -6470,9 +6507,11 @@ h6 + .h6_sub {
   overflow-y: visible;
 }
 .myProjDetail .boxWrap.sticky .filterWrapper {
+  padding-top: 1.25rem;
+  height: auto;
   left: auto;
-  right: -205px;
-  top: -1px;
+  right: 1.125rem;
+  top: 6.25rem;
   font-size: 0.875rem;
 }
 .myProjDetail .boxWrap.sticky th {
@@ -6538,6 +6577,18 @@ h6 + .h6_sub {
   padding: 0 0.25rem;
   font-size: 0.75rem;
 }
+.myProjDetail .listBottom .suffix {
+  flex: 2 1 0;
+}
+.myProjDetail .listBottom .suffix .suffix {
+  flex: 2 1 60%;
+}
+.myProjDetail .phoImg.is-special::before {
+  right: 0;
+}
+.myProjDetail .phoImg.is-special::after {
+  right: 2px;
+}
 
 .myPeoList .tabBtnWrap {
   padding-top: 0.9375rem;
@@ -6570,8 +6621,15 @@ h6 + .h6_sub {
   margin-left: 0.625rem;
 }
 
+#myPeoA-1 .boxList.headType .cont .prefix {
+  width: 68%;
+}
+#myPeoA-1 .boxList.headType .cont .suffix {
+  width: 26%;
+}
+
 .myPeoDetail .tableBox {
-  height: calc(100vh - 190px);
+  height: calc(100vh - 240px);
   margin-top: 1.875rem;
 }
 .myPeoDetail .boxListWrap {
@@ -6582,18 +6640,13 @@ h6 + .h6_sub {
 .myPeoDetail .default {
   height: 100%;
 }
-.myPeoDetail.is-active + .quickView {
-  width: 22.5rem;
-  right: 3.25rem;
-}
-
 .myPeoDetail .notify p:first-child {
   font-size: 1.125rem;
   font-weight: 700;
 }
-.myPeoDetail .tableBox {
-  height: calc(100vh - 240px);
-  margin-top: 1.875rem;
+.myPeoDetail.is-active + .quickView {
+  width: 22.5rem;
+  right: 3.25rem;
 }
 
 .genMember .condition .chkWrap {
@@ -6637,9 +6690,10 @@ h6 + .h6_sub {
 }
 .memList .listTop label {
   margin-right: 0;
+  font-size: 0.875rem;
 }
 .memList .boxListWrap {
-  height: calc(100vh - 166px);
+  height: calc(100vh - 154px);
 }
 .memList .boxList {
   height: 6.875rem;
@@ -6650,7 +6704,7 @@ h6 + .h6_sub {
 
 .memDetail {
   width: calc(100% - 280px);
-  padding: 1.875rem;
+  padding: 2.5rem 1.875rem;
 }
 .memDetail .tableBox {
   height: calc(100vh - 210px);
@@ -6667,6 +6721,9 @@ h6 + .h6_sub {
   padding-right: 0.625rem;
   background: transparent;
 }
+.memDetail .tabCont td.ellipsis {
+  cursor: inherit;
+}
 
 #memDetail-1,
 #memDetail-3,
@@ -6682,6 +6739,7 @@ h6 + .h6_sub {
 .resumeWrapper {
   font-size: 0.875rem;
   height: calc(100vh - 180px);
+  overflow-y: auto;
 }
 .resumeWrapper .resuTop {
   text-align: right;
@@ -6689,10 +6747,6 @@ h6 + .h6_sub {
 }
 .resumeWrapper .resuBox {
   height: calc(100vh - 250px);
-  overflow-y: auto;
-}
-.resumeWrapper .resuBox::-webkit-scrollbar {
-  width: 0;
 }
 
 .resume {
@@ -6707,15 +6761,19 @@ h6 + .h6_sub {
 .resume > .prefix {
   width: 20.625rem;
   padding: 2.5rem 3.125rem;
-  background: #d8dce3;
+  background: #dde2e9;
 }
 .resume > .prefix .info > div + div {
   margin-top: 1.875rem;
   padding-top: 1.875rem;
   border-top: 1px solid #a6a6b6;
 }
+.resume > .prefix .info .top {
+  text-align: center;
+}
 .resume > .prefix .info h3 {
   display: inline-block;
+  font-size: 1.625rem;
 }
 .resume > .prefix .info h3 + span {
   margin-left: 0.375rem;
@@ -6723,12 +6781,54 @@ h6 + .h6_sub {
   letter-spacing: -0.71px;
   color: #8f8f8f;
 }
+.resume > .prefix .mid li {
+  position: relative;
+  margin-left: 1.5rem;
+}
+.resume > .prefix .mid li::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../img/icoGroup.png);
+  background-position: -40px -184px;
+  position: absolute;
+  top: 2px;
+  left: -20px;
+}
+.resume > .prefix .mid li.birth::before {
+  background-position: -40px -100px;
+}
+.resume > .prefix .mid li.pNum::before {
+  background-position: -60px -100px;
+  left: -18px;
+}
+.resume > .prefix .mid li.mail::before {
+  background-position: -80px -100px;
+  top: 6px;
+}
+.resume > .prefix .mid li.address::before {
+  background-position: -100px -100px;
+  left: -19px;
+}
+.resume > .prefix .mid li:nth-last-child(1), .resume > .prefix .mid li:nth-last-child(2) {
+  margin-left: 0;
+}
+.resume > .prefix .mid li:nth-last-child(1)::before, .resume > .prefix .mid li:nth-last-child(2)::before {
+  display: none;
+}
 .resume > .prefix .bottom b {
   display: block;
   margin-top: 1.5rem;
 }
 .resume > .prefix .bottom b:first-child {
   margin-top: 0;
+}
+.resume > .prefix .bottom a {
+  text-decoration: underline;
+  word-break: break-all;
+}
+.resume > .prefix .bottom a.download {
+  text-decoration: none;
 }
 .resume > .suffix {
   padding: 2.5rem 3.125rem;
@@ -6740,7 +6840,7 @@ h6 + .h6_sub {
 }
 .resume > .suffix .resuInfo h3 {
   padding-bottom: 0.375rem;
-  color: #7a848e;
+  color: #838ca3;
   font-size: 1.25rem;
   border-bottom: 1px solid #a6a6b6;
 }
@@ -6766,7 +6866,6 @@ h6 + .h6_sub {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: pointer;
   display: block;
   cursor: initial;
 }
@@ -6826,6 +6925,9 @@ h6 + .h6_sub {
 }
 .memRegister .inputGroup.upload {
   height: auto;
+}
+.memRegister .profile {
+  height: 16.25rem;
 }
 .memRegister .specialJob,
 .memRegister .skillExp,
