@@ -568,6 +568,17 @@ input[type=date]{
         &::placeholder{
             color: $cancel;
         }
+        &.hasDatepicker{
+            border:1px solid $inputGray;  
+            &:read-only{
+                color: $subGray;
+                background: $white;
+                &:focus{        
+                    border: 1px solid $inputGray;
+                    outline: 0;
+                } 
+            }
+        }
         &.xsSize{
             width: rem(60);
             height: rem(40);
