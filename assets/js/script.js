@@ -963,7 +963,7 @@ function dragDrop(){
 //투입상세정보팝업 펼침
 // 호출 : showTable();
 function showTable(){
-    let flex_2_3 = document.querySelector('.flex_2_3');
+    let flex_2_3 = document.querySelector('.flex_1_1');
     let open = document.querySelector('.open');
     let none = document.querySelectorAll('td.none');
     let theadActive = document.querySelector('.suffix .tableHead th')

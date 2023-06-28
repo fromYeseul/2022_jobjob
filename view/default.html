@@ -1023,7 +1023,7 @@
 
     
     <!--221017 추가 -ys-->
-    <div id="investDetail" class="modalLayer center">
+    <div id="investDetail" class="modalLayer center is-active">
         <div class="layerBox fullSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -1047,22 +1047,21 @@
                     </div>
                 </div>
                 <div class="xScroll"><!--221129 위치이동 -ys -->
-                    <div class="flex_2_3"><!--230119 수정 -ys -->
+                    <div class="flex_1_1 is-active"><!--230119 수정 -ys -->
                         <div class="prefix">   
                             <div class="tableBox noScroll"><!--230119 클래스 제거 -ys -->
                                 <table class="hasInput" id="salesTable">
                                     <colgroup>
-                                        <col width="30px">
+                                        <col width="40px">
+                                        <col width="60px">
                                         <col>
                                         <col>
-                                        <col width="120px">
-                                        <col>
-
-                                        <col>
-                                        <col>
-                                        <col width="200px"><!--230119 수정 -ys -->
-                                        <col width="200px">
-                                        <col>
+                                        <col width="90px">
+                                        <col width="90px">
+                                        <col width="40px">
+                                        <col width="90px">
+                                        <col width="90px">
+                                        <col width="40px">
                                     </colgroup>
                                     <thead>
                                         <tr class="tableHead">
@@ -1091,39 +1090,39 @@
                                                 <label for="iphone"></label>
                                             </td>
                                             <td rowspan="2">
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="xsSize" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">초급</option>
+                                                    <option value="002">중급</option>
+                                                    <option value="003">고급</option>
+                                                </select>
                                             </td>
                                             <td rowspan="2">
-                                                <div class="select xxsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
                                             <td rowspan="2">
-                                                <div class="select">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
-                                            <td rowspan="2">22.09.01</td>
-                                            <td rowspan="2">22.09.01</td>
                                             <td rowspan="2">
-                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.04.03">
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.04.03">
+                                            </td>
+                                            <td rowspan="2">
+                                                <input type="number" class="devManmonth editType txtCenter xxsSize" placeholder="0.00" value="0.17" readonly="readonly">
                                             </td>
                                             <td rowspan="2">
                                                 <input type="text" class="editType txtCenter" placeholder="100,000,000">
@@ -1143,48 +1142,39 @@
                                                 <label for="iphone"></label>
                                             </td>
                                             <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="xsSize" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">초급</option>
+                                                    <option value="002">중급</option>
+                                                    <option value="003">고급</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <div class="select">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
-                                            <td>22.09.01</td>
-                                            <td>22.09.01</td>
                                             <td>
-                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.04.03">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.04.03">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="devManmonth editType txtCenter xxsSize" placeholder="0.00" value="0.17" readonly="readonly">
                                             </td>
                                             <td>
                                                 <input type="text" class="editType txtCenter" placeholder="1,000,000">
@@ -1200,48 +1190,39 @@
                                                 <label for="iphone"></label>
                                             </td>
                                             <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="xsSize" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">초급</option>
+                                                    <option value="002">중급</option>
+                                                    <option value="003">고급</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <div class="select">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
-                                            <td>22.09.01</td>
-                                            <td>22.09.01</td>
                                             <td>
-                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.04.03">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.04.03">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="devManmonth editType txtCenter xxsSize" placeholder="0.00" value="0.17" readonly="readonly">
                                             </td>
                                             <td>
                                                 <input type="text" class="editType txtCenter" placeholder="1,000,000">
@@ -1257,48 +1238,39 @@
                                                 <label for="iphone"></label>
                                             </td>
                                             <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="xsSize" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">초급</option>
+                                                    <option value="002">중급</option>
+                                                    <option value="003">고급</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <div class="select">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
-                                            <td>22.09.01</td>
-                                            <td>22.09.01</td>
                                             <td>
-                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.04.03">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.04.03">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="devManmonth editType txtCenter xxsSize" placeholder="0.00" value="0.17" readonly="readonly">
                                             </td>
                                             <td>
                                                 <input type="text" class="editType txtCenter" placeholder="1,000,000">
@@ -1314,48 +1286,39 @@
                                                 <label for="iphone"></label>
                                             </td>
                                             <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="xsSize" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">초급</option>
+                                                    <option value="002">중급</option>
+                                                    <option value="003">고급</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <div class="select">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
-                                            <td>22.09.01</td>
-                                            <td>22.09.01</td>
                                             <td>
-                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.04.03">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.04.03">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="devManmonth editType txtCenter xxsSize" placeholder="0.00" value="0.17" readonly="readonly">
                                             </td>
                                             <td>
                                                 <input type="text" class="editType txtCenter" placeholder="1,000,000">
@@ -1371,48 +1334,39 @@
                                                 <label for="iphone"></label>
                                             </td>
                                             <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="xsSize" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">초급</option>
+                                                    <option value="002">중급</option>
+                                                    <option value="003">고급</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
                                             <td>
-                                                <div class="select">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
-                                            <td>22.09.01</td>
-                                            <td>22.09.01</td>
                                             <td>
-                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.04.03">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.04.03">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="devManmonth editType txtCenter xxsSize" placeholder="0.00" value="0.17" readonly="readonly">
                                             </td>
                                             <td>
                                                 <input type="text" class="editType txtCenter" placeholder="1,000,000">
@@ -1430,38 +1384,30 @@
                                                 <label for="iphone"></label>
                                             </td>
                                             <td rowspan="2">
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="xsSize" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">초급</option>
+                                                    <option value="002">중급</option>
+                                                    <option value="003">고급</option>
+                                                </select>
                                             </td>
                                             <td rowspan="2">
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">선택</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">개발(SAP)</li>
-                                                        <li class="optionItem">컨설팅(SAP)</li>
-                                                        <li class="optionItem">선택</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
                                             <td rowspan="2">
-                                                <div class="select">
-                                                    <span class="selDefault low">fruits</span>
-                                                    <ul class="optionList">
-                                                        <div class="yScroll"><!--230201 추가-->
-                                                            <li class="optionItem">apple</li>
-                                                            <li class="optionItem">banana</li>
-                                                            <li class="optionItem">carrot</li>
-                                                            <li class="optionItem">mango</li>
-                                                            <li class="optionItem">grape</li>
-                                                        </div>
-                                                    </ul>
-                                                </div>
+                                                <select class="full" id="outJobCode0">
+                                                    <option value="">선택</option>
+                                                    <option value="001" selected="selected">JAVA 개발</option>
+                                                    <option value="002">.NET 개발</option>
+                                                    <option value="003">Mobile개발</option>
+                                                    <option value="004">기타</option>
+                                                </select>
                                             </td>
                                             <td rowspan="2">
                                                 <input type="date" class="editType">
@@ -1470,7 +1416,7 @@
                                                 <input type="date" class="editType">
                                             </td>
                                             <td rowspan="2">
-                                                <input type="text" class="editType txtCenter" placeholder="0/0">
+                                                <input type="number" class="devManmonth editType txtCenter xxsSize" placeholder="0.00" value="0.17" readonly="readonly">
                                             </td>
                                             <td rowspan="2">
                                                 <input type="text" class="editType txtCenter" placeholder="100,100,000,000">
@@ -1507,20 +1453,17 @@
                                     
                                     <!--221220 수정 -ys-->
                                     <colgroup>
-                                        <col width="80px">
-                                        <col>
                                         <col width="100px">
+                                        <col width="90px">
                                         <col width="50px">
-                                        <col width="50px">
-
-                                        <col width="30px">
                                         <col width="90px">
                                         <col width="90px">
-                                        <col>
+                                        <col width="40px">
+                                        <col width="90px">
+                                        <col width="90px">
                                         <col width="70px">
-
-                                        <col width="30px">
-                                        <col>
+                                        <col width="70px">
+                                        <col width="40px">
                                         <col>
                                     </colgroup>
                                     <!--//221220 수정 -ys-->
@@ -1545,256 +1488,369 @@
                                     </thead>
                                     <tbody class="dragBox">                            
                                         <tr draggable="true" class="dragTr">
-                                            <td rowspan="2">고급/개발</td>
-                                            <td rowspan="2">
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">홍길금</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">홍길금</li>
-                                                        <li class="optionItem">홍길금</li>
-                                                        <li class="optionItem">홍길금</li>
-                                                    </ul>
-                                                </div>
+                                            <td>고급/개발</td>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="">고헌우</option>
+                                                    <option value="">김길현</option>
+                                                    <option value="">김진원</option>
+                                                    <option value="">문의형</option>
+                                                    <option value="">신문호</option>
+                                                    <option value="">강남규</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">박순아</option>
+                                                    <option value="">최영효</option>
+                                                    <option value="">양찬호</option>
+                                                </select>
                                             </td>
                                             <!-- <td>에코에코에코에코에코</td> -->
-                                            <td  rowspan="2" class="ellipsis" title="에코에코에코"><!--230119 수정 -ys -->
-                                                대외비 에코에코에코에코에코 에코에코에코에코에코
+                                            <td title="에코에코에코"><!--230119 수정 -ys -->
+                                                에코
                                             </td>
-                                            <td rowspan="2">
-                                                <!-- <input type="date" class="editType"> -->
-                                                <!-- <input type="text" class="dateType editType"> -->
-                                                <input class="dateType editType" type="text" placeholder="연도 - 월 - 일" id="datepicker">
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
                                             </td>
-                                            <td rowspan="2">
-                                                <input type="date" class="editType">
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
                                             </td>
-                                            <td rowspan="2">
-                                                <input type="text" class="editType txtCenter" placeholder="3.75">
+                                            <td><input type="number" class="editType txtCenter xxsSize devManmonth" placeholder="0.00" value="1" readonly="readonly">
                                             </td>
-                                            <td rowspan="2">
+                                            <td>
                                                 <input type="text" class="editType txtCenter" placeholder="88,000,000,000">
                                             </td>
-                                            <td rowspan="2">
+                                            <td>
                                                 <input type="text" class="editType txtCenter" placeholder="68,000,000,000">
                                             </td>
-                                            <td rowspan="2">
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">상태</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">투입</li>
-                                                        <li class="optionItem">종료</li>
-                                                    </ul>
-                                                </div>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="001">투입</option>
+                                                    <option value="002">철수</option>
+                                                    <option value="003">교체</option>
+                                                    <option value="004" selected="selected">종료</option>
+                                                    <option value="005">기타</option>
+                                                </select>
                                             </td>
-                                            <td rowspan="2">자동계산</td>
-                                            <td rowspan="2">-</td>
-                                            <!--<td rowspan="2" class="none">2020. 02. 15 조기철수 예정</td> --221020 가려지는 비고 클래스추가 -ys-->
-                                            <td rowspan="2" class="none">
-                                                <textarea name="" id="" cols="30" rows="1"></textarea>
+                                            <td>자동계산</td>
+                                            <td>-</td>
+                                            <td>
+                                                <textarea rows="1" cols="50" maxlength="50" class="editType" readonly=""></textarea>
                                             </td>
-
-                                            <td rowspan="4">
-                                                <!--221220 태그 수정 -ys-->
-                                                <button class="txtType open">[펼침]</button>
-                                            </td>
-                                        </tr>   
-                                        <tr class="dragTr"></tr>                     
+                                        </tr>                                           
                                         <tr draggable="true" class="dragTr">
-                                            <td rowspan="2">고급/개발</td>
-                                            <td rowspan="2">
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">홍길금</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">홍길금</li>
-                                                        <li class="optionItem">홍길금</li>
-                                                        <li class="optionItem">홍길금</li>
-                                                    </ul>
-                                                </div>
+                                            <td>고급/개발</td>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="">고헌우</option>
+                                                    <option value="">김길현</option>
+                                                    <option value="">김진원</option>
+                                                    <option value="">문의형</option>
+                                                    <option value="">신문호</option>
+                                                    <option value="">강남규</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">박순아</option>
+                                                    <option value="">최영효</option>
+                                                    <option value="">양찬호</option>
+                                                </select>
                                             </td>
-                                            <td rowspan="2">
-                                                <div class="ellipsis">에코 에코 에코 에코</div><!--230410 수정 -->
+                                            <!-- <td>에코에코에코에코에코</td> -->
+                                            <td title="에코에코에코"><!--230119 수정 -ys -->
+                                                에코
                                             </td>
-                                            <td rowspan="2">22.12.01</td>
-                                            <td rowspan="2">22.09.01</td>
-                                            <td rowspan="2">
-                                                <input type="text" class="editType txtCenter" placeholder="3.75">
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
                                             </td>
-                                            <td rowspan="2">
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
+                                            </td>
+                                            <td><input type="number" class="editType txtCenter xxsSize devManmonth" placeholder="0.00" value="1" readonly="readonly">
+                                            </td>
+                                            <td>
                                                 <input type="text" class="editType txtCenter" placeholder="88,000,000,000">
                                             </td>
-                                            <td rowspan="2">
-                                                <input type="text" class="editType txtCenter" placeholder="80,000,000,000">
-                                            </td>
-                                            <td rowspan="2">
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">상태</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">투입</li>
-                                                        <li class="optionItem">종료</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td rowspan="2">자동계산</td>
-                                            <td rowspan="2">-</td>
-                                            <td rowspan="2" class="none">2020. 02. 15 조기철수 예정</td>
-                                        </tr>  
-                                        <tr class="dragTr"></tr>                          
-                                        <tr draggable="true" class="dragTr">
-                                            <td>고급/개발</td>
                                             <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">홍길금</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">홍길금</li>
-                                                        <li class="optionItem">홍길금</li>
-                                                        <li class="optionItem">홍길금</li>
-                                                    </ul>
-                                                </div>
+                                                <input type="text" class="editType txtCenter" placeholder="68,000,000,000">
                                             </td>
                                             <td>
-                                                <div class="ellipsis">에코 에코 에코 에코</div>
-                                            </td>
-                                            <td>22.12.01</td>
-                                            <td>22.09.01</td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="3.75">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
-                                            </td>
-                                            <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">상태</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">투입</li>
-                                                        <li class="optionItem">종료</li>
-                                                    </ul>
-                                                </div>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="001">투입</option>
+                                                    <option value="002">철수</option>
+                                                    <option value="003">교체</option>
+                                                    <option value="004" selected="selected">종료</option>
+                                                    <option value="005">기타</option>
+                                                </select>
                                             </td>
                                             <td>자동계산</td>
                                             <td>-</td>
-                                            <td class="none">2020. 02. 15 조기철수 예정</td>
+                                            <td>
+                                                <textarea rows="1" cols="50" maxlength="50" class="editType" readonly=""></textarea>
+                                            </td>
+                                        </tr>                                          
+                                        <tr draggable="true" class="dragTr">
+                                            <td>고급/개발</td>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="">고헌우</option>
+                                                    <option value="">김길현</option>
+                                                    <option value="">김진원</option>
+                                                    <option value="">문의형</option>
+                                                    <option value="">신문호</option>
+                                                    <option value="">강남규</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">박순아</option>
+                                                    <option value="">최영효</option>
+                                                    <option value="">양찬호</option>
+                                                </select>
+                                            </td>
+                                            <!-- <td>에코에코에코에코에코</td> -->
+                                            <td title="에코에코에코"><!--230119 수정 -ys -->
+                                                에코
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
+                                            </td>
+                                            <td><input type="number" class="editType txtCenter xxsSize devManmonth" placeholder="0.00" value="1" readonly="readonly">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="88,000,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="68,000,000,000">
+                                            </td>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="001">투입</option>
+                                                    <option value="002">철수</option>
+                                                    <option value="003">교체</option>
+                                                    <option value="004" selected="selected">종료</option>
+                                                    <option value="005">기타</option>
+                                                </select>
+                                            </td>
+                                            <td>자동계산</td>
+                                            <td>-</td>
+                                            <td>
+                                                <textarea rows="1" cols="50" maxlength="50" class="editType" readonly=""></textarea>
+                                            </td>
+                                        </tr>                                          
+                                        <tr draggable="true" class="dragTr">
+                                            <td>고급/개발</td>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="">고헌우</option>
+                                                    <option value="">김길현</option>
+                                                    <option value="">김진원</option>
+                                                    <option value="">문의형</option>
+                                                    <option value="">신문호</option>
+                                                    <option value="">강남규</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">박순아</option>
+                                                    <option value="">최영효</option>
+                                                    <option value="">양찬호</option>
+                                                </select>
+                                            </td>
+                                            <!-- <td>에코에코에코에코에코</td> -->
+                                            <td title="에코에코에코"><!--230119 수정 -ys -->
+                                                에코
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
+                                            </td>
+                                            <td><input type="number" class="editType txtCenter xxsSize devManmonth" placeholder="0.00" value="1" readonly="readonly">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="88,000,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="68,000,000,000">
+                                            </td>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="001">투입</option>
+                                                    <option value="002">철수</option>
+                                                    <option value="003">교체</option>
+                                                    <option value="004" selected="selected">종료</option>
+                                                    <option value="005">기타</option>
+                                                </select>
+                                            </td>
+                                            <td>자동계산</td>
+                                            <td>-</td>
+                                            <td>
+                                                <textarea rows="1" cols="50" maxlength="50" class="editType" readonly=""></textarea>
+                                            </td>
+                                        </tr>                                          
+                                        <tr draggable="true" class="dragTr">
+                                            <td>고급/개발</td>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="">고헌우</option>
+                                                    <option value="">김길현</option>
+                                                    <option value="">김진원</option>
+                                                    <option value="">문의형</option>
+                                                    <option value="">신문호</option>
+                                                    <option value="">강남규</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">박순아</option>
+                                                    <option value="">최영효</option>
+                                                    <option value="">양찬호</option>
+                                                </select>
+                                            </td>
+                                            <!-- <td>에코에코에코에코에코</td> -->
+                                            <td title="에코에코에코"><!--230119 수정 -ys -->
+                                                에코
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
+                                            </td>
+                                            <td><input type="number" class="editType txtCenter xxsSize devManmonth" placeholder="0.00" value="1" readonly="readonly">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="88,000,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="68,000,000,000">
+                                            </td>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="001">투입</option>
+                                                    <option value="002">철수</option>
+                                                    <option value="003">교체</option>
+                                                    <option value="004" selected="selected">종료</option>
+                                                    <option value="005">기타</option>
+                                                </select>
+                                            </td>
+                                            <td>자동계산</td>
+                                            <td>-</td>
+                                            <td>
+                                                <textarea rows="1" cols="50" maxlength="50" class="editType" readonly=""></textarea>
+                                            </td>
+                                        </tr>                                          
+                                        <tr draggable="true" class="dragTr">
+                                            <td>고급/개발</td>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="">고헌우</option>
+                                                    <option value="">김길현</option>
+                                                    <option value="">김진원</option>
+                                                    <option value="">문의형</option>
+                                                    <option value="">신문호</option>
+                                                    <option value="">강남규</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">박순아</option>
+                                                    <option value="">최영효</option>
+                                                    <option value="">양찬호</option>
+                                                </select>
+                                            </td>
+                                            <!-- <td>에코에코에코에코에코</td> -->
+                                            <td title="에코에코에코"><!--230119 수정 -ys -->
+                                                에코
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
+                                            </td>
+                                            <td><input type="number" class="editType txtCenter xxsSize devManmonth" placeholder="0.00" value="1" readonly="readonly">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="88,000,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="68,000,000,000">
+                                            </td>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="001">투입</option>
+                                                    <option value="002">철수</option>
+                                                    <option value="003">교체</option>
+                                                    <option value="004" selected="selected">종료</option>
+                                                    <option value="005">기타</option>
+                                                </select>
+                                            </td>
+                                            <td>자동계산</td>
+                                            <td>-</td>
+                                            <td>
+                                                <textarea rows="1" cols="50" maxlength="50" class="editType" readonly=""></textarea>
+                                            </td>
+                                        </tr>                                          
+                                        <tr draggable="true" class="dragTr">
+                                            <td>고급/개발</td>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="">고헌우</option>
+                                                    <option value="">김길현</option>
+                                                    <option value="">김진원</option>
+                                                    <option value="">문의형</option>
+                                                    <option value="">신문호</option>
+                                                    <option value="">강남규</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">강병수</option>
+                                                    <option value="">박순아</option>
+                                                    <option value="">최영효</option>
+                                                    <option value="">양찬호</option>
+                                                </select>
+                                            </td>
+                                            <!-- <td>에코에코에코에코에코</td> -->
+                                            <td title="에코에코에코"><!--230119 수정 -ys -->
+                                                에코
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType hasDatepicker" placeholder="yyyy.mm.dd" readonly="readonly" value="2023.05.01">
+                                            </td>
+                                            <td><input type="number" class="editType txtCenter xxsSize devManmonth" placeholder="0.00" value="1" readonly="readonly">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="88,000,000,000">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="editType txtCenter" placeholder="68,000,000,000">
+                                            </td>
+                                            <td>
+                                                <select class="xsSize">
+                                                    <option value="">선택</option>
+                                                    <option value="001">투입</option>
+                                                    <option value="002">철수</option>
+                                                    <option value="003">교체</option>
+                                                    <option value="004" selected="selected">종료</option>
+                                                    <option value="005">기타</option>
+                                                </select>
+                                            </td>
+                                            <td>자동계산</td>
+                                            <td>-</td>
+                                            <td>
+                                                <textarea rows="1" cols="50" maxlength="50" class="editType" readonly=""></textarea>
+                                            </td>
                                         </tr>                           
-                                        <tr draggable="true" class="dragTr">
-                                            <td>고급/개발</td>
-                                            <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">홍길금</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">홍길금</li>
-                                                        <li class="optionItem">홍길금</li>
-                                                        <li class="optionItem">홍길금</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="ellipsis">에코 에코 에코 에코</div>
-                                            </td>
-                                            <td>22.12.01</td>
-                                            <td>22.09.01</td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="3.75">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
-                                            </td>
-                                            <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">상태</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">투입</li>
-                                                        <li class="optionItem">종료</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>자동계산</td>
-                                            <td>-</td>
-                                            <td class="none">2020. 02. 15 조기철수 예정</td>
-                                        </tr>                           
-                                        <tr draggable="true" class="dragTr">
-                                            <td>고급/개발</td>
-                                            <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">홍길금</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">홍길금</li>
-                                                        <li class="optionItem">홍길금</li>
-                                                        <li class="optionItem">홍길금</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="ellipsis">에코 에코 에코 에코</div>
-                                            </td>
-                                            <td>22.12.01</td>
-                                            <td>22.09.01</td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="3.75">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
-                                            </td>
-                                            <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">상태</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">투입</li>
-                                                        <li class="optionItem">종료</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>자동계산</td>
-                                            <td>-</td>
-                                            <td class="none">2020. 02. 15 조기철수 예정</td>
-                                        </tr>                           
-                                        <tr draggable="true" class="dragTr">
-                                            <td>고급/개발</td>
-                                            <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">홍길금</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">홍길금</li>
-                                                        <li class="optionItem">홍길금</li>
-                                                        <li class="optionItem">홍길금</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="ellipsis">에코 에코 에코 에코</div>
-                                            </td>
-                                            <td>22.12.01</td>
-                                            <td>22.09.01</td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="3.75">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="editType txtCenter" placeholder="1,000,000">
-                                            </td>
-                                            <td>
-                                                <div class="select xsSize">
-                                                    <span class="selDefault low">상태</span>
-                                                    <ul class="optionList">
-                                                        <li class="optionItem">투입</li>
-                                                        <li class="optionItem">종료</li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                            <td>자동계산</td>
-                                            <td>-</td>
-                                            <td class="none">2020. 02. 15 조기철수 예정</td>
-                                        </tr>              
                                     </tbody>
                                     <tfoot>
                                         <tr>

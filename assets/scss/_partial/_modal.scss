@@ -108,6 +108,7 @@
                 width: rem(240);
                 margin: rem(40) auto;
             }
+            .flex_1_1,
             .flex_2_3{
                 width: rem(1790);
                 //투입상세정보 팝업 (table 확장)
@@ -380,6 +381,18 @@
     //         line-height: rem(28);
     //     }
     // }
+    .flex_1_1{
+        > .prefix{
+            flex: 1 1 40%;
+        }
+    }
+    table{
+        select{
+            &.full{
+                height: rem(36);
+            }
+        }
+    }
 }
 
 //스킬관리 - 분류관리 팝업 
