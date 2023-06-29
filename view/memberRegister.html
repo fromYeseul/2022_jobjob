@@ -66,11 +66,18 @@
                         <h2>회원등록</h2>
                         <div class="breadCrumb">
                             <ul class="flex">
+                                <li class="is-active" aria-controls="memRegi0">기본정보</li>
+                                <li aria-controls="memRegi1">직무/스킬</li>
+                                <li aria-controls="memRegi2">근무경력</li>
+                                <li aria-controls="memRegi3">프로젝트경력</li>
+                                <li aria-controls="memRegi4">선호조건, 기타</li>
+                                <!-- 
+                                    
                                 <li class="is-active" id="#"><a href="#memRegi0">기본정보</a></li>
                                 <li id="#"><a href="#memRegi1">직무/스킬</a></li>
                                 <li id="#"><a href="#memRegi2">근무경력</a></li>
                                 <li id="#"><a href="#memRegi3">프로젝트경력</a></li>
-                                <li id="#"><a href="#memRegi4">선호조건, 기타</a></li>
+                                <li id="#"><a href="#memRegi4">선호조건, 기타</a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -936,7 +943,6 @@
                             </div>                       
                         </div>
 
-
                         <div class="regiPart" id="memRegi3">
                             <h3>7. 프로젝트경력</h3>
                             <div class="h3_sub">순서와 상관없이 프로젝트 경력을 모두 입력해 주세요. </div>
@@ -1271,7 +1277,6 @@
                                 <button class="bdType midSize">추가</button><!--230522 수정 -ys -->
                             </div>
                         </div>
-
 
                         <div class="regiPart" id="memRegi4">
                             <h3>8. 선호조건</h3>
@@ -1655,7 +1660,6 @@
             let breadCrumbs = document.querySelectorAll('.breadCrumb li');
             
             regiPartWrapper.addEventListener('scroll',function(){
-
                 for(let i=0; i<breadCrumbs.length; i++){
                     breadCrumbs[i].classList.remove('is-active');
                     let target = document.getElementById('memRegi' + i).getBoundingClientRect().top;
@@ -1665,11 +1669,24 @@
                         }
                         breadCrumbs[i].classList.add('is-active');
                     }
-
                 }
             });
+
+            for(let i=0; i<breadCrumbs.length; i++){
+                breadCrumbs[i].addEventListener('click', function(){
+                    breadID = this.getAttribute("aria-controls");
+                    document.getElementById(breadID).scrollIntoView();
+
+                    for(let j=0; j<breadCrumbs.length; j++){
+                        breadCrumbs[j].classList.remove('is-active');
+                    }
+                    breadCrumbs[i].classList.add('is-active');
+                });
+            }
         }
         regiScroll();    
+
+
     </script>
 
     <script>
@@ -1681,7 +1698,7 @@
             if (target.val() == "") target.addClass("test");
             else target.removeClass("test");
         });
-        console.log($("input[type=date]"));
+        // console.log($("input[type=date]"));
     </script>
 </body>
 </html>

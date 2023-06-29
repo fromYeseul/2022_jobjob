@@ -46,13 +46,21 @@ h1{
                     display: none;
                 }
             }
-            a{
+            a,
+            span{
                 color: $titleGray;
+                cursor: pointer;
             }
             &.is-active{
-                a{
+                a,
+                span{
                     color: $mainColor;
                 }                
+            }
+            color: $titleGray;
+            cursor: pointer;
+            &.is-active{
+                color: $mainColor;
             }
         }
     }
