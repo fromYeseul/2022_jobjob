@@ -72,7 +72,14 @@ input[type=radio]{
             }
         }
 
-    }        
+    }   
+    &:disabled{
+        + label{
+                color: $inputGray;
+                background:transparent;
+                cursor: not-allowed;
+        }
+    }      
     &.hasTxt{
         + input[type=hidden]{
             + label{

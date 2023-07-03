@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 모집공고</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li>
+                        <a href="#">내정보 수정</a>
+                        <a href="#" class="logState">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="noDepth">
+                            <a alertToast href="#"><i class="ico home"></i><span class="menuTxt">홈</span></a>
+                        </li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">고객문의</span></a></li>
+                                <li><a href="#"><span class="depth2">운영자관리</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>
+                        <li class="is-active"><a href="#"><i class="ico recruit"></i><span class="menuTxt">공고/지원자</span></a>
+                            <ul class="is-active">
+                                <li class="is-active"><a href="#"><span class="depth2">전체 모집공고</span></a></li>
+                                <li><a href="#"><span class="depth2">인재검색/제안</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>  
+        
+        <section class="contWrapper">
+            <section class="contLayout">
+                <section class="recruitList">
+                    <h2>전체 모집공고<button class="laSize">새로운 공고등록</button></h2>
+
+                    <div class="condition">
+                        <ul>
+                            <li>
+                                <p class="condiTit">프로젝트 구분</p>
+                                <div class="tabType">
+                                    <input type="radio" id="projOn" name="projSort" checked>
+                                    <label for="projOn">진행</label>
+                                    <input type="radio" id="projEnd" name="projSort">
+                                    <label for="projEnd">종료</label>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="condiTit">상태</p>
+                                <select>
+                                    <option value="">전체</option>
+                                    <option value="001">1</option>
+                                    <option value="002">2</option>
+                                    <option value="003">3</option>
+                                    <option value="004">4</option>
+                                    <option value="005">5</option>
+                                </select>
+                            </li>
+                            <li>
+                                <p class="condiTit">검색</p>
+                                <div class="">
+                                <select>
+                                    <option value="">전체직군</option>
+                                    <option value="001"></option>
+                                    <option value="002">2</option>
+                                    <option value="003">3</option>
+                                    <option value="004">4</option>
+                                    <option value="005">5</option>
+                                </select>
+                                <select>
+                                    <option value="">전체직무</option>
+                                    <option value="001">1</option>
+                                    <option value="002">2</option>
+                                    <option value="003">3</option>
+                                    <option value="004">4</option>
+                                    <option value="005">5</option>
+                                </select>
+                            </li>
+                            <li class="hasBtn">
+                                <p class="condiTit"></p>
+                                <input type="text" id="project2" maxlength="20" placeholder="띄어쓰기로 and 검색 (예) 한화 삼성">
+                                <button>
+                                    <i class="ico search white"></i>
+                                </button>
+
+                                <input type="checkbox" id="license01" name="aa" class="hasTxt">
+                                <label for="license01">내 담당만</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="accWrap">                        
+                        <div class="accBox nodata"><!--게시물없을 때-->
+                                게시물이 없습니다.
+                        </div>
+
+                        <div class="accBox is-active"><!--여러개 오픈가능-->
+                            <div class="accHead">
+                                <div class="prefix">
+                                    <div class="projTit">CJ프레시웨이 온리원푸드넷 UI/UX 및 주문프로세스 개선 CJ프레시웨이 온리원푸드넷 UI/UX 및 주문프로세스 개선 프로젝트프로젝트</div>
+                                    <span class="count">12</span>
+                                    <span class="count temp">1</span>
+                                </div>  
+                                <div class="suffix">
+                                    기획 / 개발 / 디자인 / PM
+                                    <button type="button" class="onlyIco lowSize"><i class="ico plus"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="accInner">
+                                <ul>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <button class="round">웹기획</button>
+                                            <div class="projTit">대기업 B2B 주문 프로세스 개선 기획자대기업 B2B 주문 프로세스 개선 기획 모집 (즉시투입 가능자 우대)</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>직무추천 <span class="mainC">0</span></li>
+                                                <li>보낸제안 <span class="mainC">2</span></li>
+                                                <li>제안수락 <span class="mainC">0</span></li>
+                                                <li>지원자 <span class="mainC">3</span></li>
+                                                <li>미열람 <span class="mainC">0</span></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <button class="round">웹개발</button>
+                                            <div class="projTit">대기업 B2B 클레임 영역 java 개발자 구인</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>직무추천 <span class="mainC">2</span></li>
+                                                <li>보낸제안 <span class="mainC">2</span></li>
+                                                <li>제안수락 <span class="mainC">0</span></li>
+                                                <li>지원자 <span class="mainC">13</span></li>
+                                                <li>미열람 <span class="mainC">3</span></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <button class="round">웹퍼블리싱</button>
+                                            <div class="projTit">대기업 B2B 주문업 B2B 주문업 B2B 주문 프로세스 개선 기획자대기업 B2B 주문 프로세스 개선 기획 모집 (즉시투입 가능자 우대)</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <button class="round short">이어등록</button>
+                                            <button class="round">
+                                                <i class="ico delete_bin"></i> 삭제
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accBox">
+                            <div class="accHead">
+                                <div class="prefix">
+                                    <div class="projTit">테스트 주문프로세스 개선 프로젝트프로젝트</div>
+                                    <span class="count">4</span>
+                                    <span class="count temp">0</span>
+                                </div>  
+                                <div class="suffix">
+                                    기획 / 개발 / 디자인 / PM
+                                    <button type="button" class="onlyIco lowSize"><i class="ico plus"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="accInner">
+                                <ul>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <button class="round">웹기획</button>
+                                            <div class="projTit">대기업 B2B 주문 프로세스 개선 기획자대기업 B2B 주문 프로세스 개선 기획 모집 (즉시투입 가능자 우대)</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>직무추천 <span class="mainC">0</span></li>
+                                                <li>보낸제안 <span class="mainC">2</span></li>
+                                                <li>제안수락 <span class="mainC">0</span></li>
+                                                <li>지원자 <span class="mainC">3</span></li>
+                                                <li>미열람 <span class="mainC">0</span></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <button class="round">웹개발</button>
+                                            <div class="projTit">대기업 B2B 클레임 영역 java 개발자 구인</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <button class="round short">이어등록</button>
+                                            <button class="round">
+                                                <i class="ico delete_bin"></i> 삭제
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <button class="round">웹퍼블리싱</button>
+                                            <div class="projTit">대기업 B2B 주문업 B2B 주문업 B2B 주문 프로세스 개선 기획자대기업 B2B 주문 프로세스 개선 기획 모집 (즉시투입 가능자 우대)</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>직무추천 <span class="mainC">0</span></li>
+                                                <li>보낸제안 <span class="mainC">2</span></li>
+                                                <li>제안수락 <span class="mainC">0</span></li>
+                                                <li>지원자 <span class="mainC">3</span></li>
+                                                <li>미열람 <span class="mainC">0</span></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accBox">
+                            <div class="accHead">
+                                <div class="prefix">
+                                    <div class="projTit">한화큐셀 신규회사코드 추가 및 고도화, 신규회사 SAP ERP 안정화 및 주문프로세스 개선 프로젝트프로젝트</div>
+                                    <span class="count">0</span>
+                                    <span class="count temp">2</span>
+                                </div>  
+                                <div class="suffix">
+                                    기획 / 개발 / 디자인 / PM
+                                    <button type="button" class="onlyIco lowSize"><i class="ico plus"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="accInner">
+                                <ul>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <button class="round">웹기획</button>
+                                            <div class="projTit">대기업 B2B 주문 프로세스 개선 기획자대기업 B2B 주문 프로세스 개선 기획 모집 (즉시투입 가능자 우대)</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>직무추천 <span class="mainC">0</span></li>
+                                                <li>보낸제안 <span class="mainC">2</span></li>
+                                                <li>제안수락 <span class="mainC">0</span></li>
+                                                <li>지원자 <span class="mainC">3</span></li>
+                                                <li>미열람 <span class="mainC">0</span></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <button class="round">웹개발</button>
+                                            <div class="projTit">대기업 B2B 클레임 영역 java 개발자 구인</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <button class="round short">이어등록</button>
+                                            <button class="round">
+                                                <i class="ico delete_bin"></i> 삭제
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <button class="round">웹퍼블리싱</button>
+                                            <div class="projTit">대기업 B2B 주문업 B2B 주문업 B2B 주문 프로세스 개선 기획자대기업 B2B 주문 프로세스 개선 기획 모집 (즉시투입 가능자 우대)</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>직무추천 <span class="mainC">0</span></li>
+                                                <li>보낸제안 <span class="mainC">2</span></li>
+                                                <li>제안수락 <span class="mainC">0</span></li>
+                                                <li>지원자 <span class="mainC">3</span></li>
+                                                <li>미열람 <span class="mainC">0</span></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accBox">
+                            <div class="accHead">
+                                <div class="prefix">
+                                    <div class="projTit">개선 CJ프레시웨이 온리원푸드넷 UI/UX 및 주문프로세스 개선 프로젝트프로젝트</div>
+                                    <span class="count">4</span>
+                                    <span class="count temp">8</span>
+                                </div>  
+                                <div class="suffix">
+                                    기획 / 개발 / 디자인 / PM
+                                    <button type="button" class="onlyIco lowSize"><i class="ico plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accBox">
+                            <div class="accHead">
+                                <div class="prefix">
+                                    <div class="projTit">CJ프레시웨이 온리원푸드넷 UI/UX 및 주문프로세스 개선 CJ프레시웨이 온리원푸드넷 UI/UX 및 주문프로세스 개선 프로젝트프로젝트</div>
+                                    <span class="count">4</span>
+                                    <span class="count temp">1</span>
+                                </div>  
+                                <div class="suffix">
+                                    기획 / 개발 / 디자인 / PM
+                                    <button type="button" class="onlyIco lowSize"><i class="ico plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+                
+        <!--우측패널-->
+        <div class="rPanelLayer">
+            <div class="rPanelBox">
+                <div class="rPanelHeader">
+                    <button class="ico layerClose rClose"></button>
+                </div>
+                <div class="rPanelCont">
+                    <h2>회원검색</h2>
+                    
+                    <div class="hasBtn">  
+                        <a href="#" class="button white onlyIco filter">
+                            <i class="ico filter"></i>
+                        </a>     
+                        <div class="inputIco">
+                            <input type="text" id="search" class="" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
+                            <button class="ico search"></button>
+                        </div>
+                    </div>
+                    <div class="yScroll">
+                        <div class="listTop">                                        
+                            <input type="checkbox" id="chkAll" class="hasTxt">
+                            <label for="chkAll"> 0 / 4</label>
+                            
+                            <input type="checkbox" id="chkLevel" class="hasTxt">
+                            <label for="chkLevel" class="mr0"> 등급으로 보기</label>
+
+                            <i class="ico setting"></i>
+                        </div>
+
+                        <div class="boxListWrap">  
+                            <ul>
+                                <li class="boxList headType is-active"> 
+                                    <div class="head">
+                                        <p class="prefix">
+                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
+                                            <label for="memChk_1"></label>
+
+                                            <span>90.0</span>
+                                        </p>
+                                        <p class="suffix"></p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <div class="flexCenter">  
+                                                        <a href="#" target="_blank">홍길순(여/29)</a>
+                                                        <span>개발</span>
+                                                        <span>네트워크엔지니어</span>
+                                                    </div>                                                 
+                                                </li>
+                                                <li>
+                                                    <span>010-5923-1209</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                </li>
+                                                <li class="memMemo">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                                <li class="memMemo is-active">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="suffix colType hasTooltip clear">
+                                            투입중<br>(~22/05/01)                                                                        
+                                            <div class="tooltip">
+                                                CJ프레시웨이 온리원푸드넷                             
+                                            </div>         
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="boxList headType"> 
+                                    <div class="head">
+                                        <p class="prefix">
+                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
+                                            <label for="memChk_1"></label>
+
+                                            <span>88.8</span>
+                                        </p>
+                                        <p class="suffix"></p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <span class="phoImg">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <div class="flexCenter">  
+                                                        <a href="#" target="_blank">홍길순(여/29)</a>
+                                                        <span>개발</span>
+                                                        <span>네트워크엔지니어</span>
+                                                    </div>                                                 
+                                                </li>
+                                                <li>
+                                                    <span>010-3245-3451</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                </li>
+                                                <li class="memMemo">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="suffix">
+                                            <button class="lowSize">연락하기</button>  
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="boxList headType"> 
+                                    <div class="head">
+                                        <p class="prefix">
+                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
+                                            <label for="memChk_1"></label>
+
+                                            <span>90.0</span>
+                                        </p>
+                                        <p class="suffix"></p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <span class="phoImg">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <div class="flexCenter">  
+                                                        <a href="#" target="_blank">홍길순(여/29)</a>
+                                                        <span>디자인</span>
+                                                        <span>에코</span>
+                                                    </div>                                                 
+                                                </li>
+                                                <li>
+                                                    <span>010-3245-3451</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                </li>
+                                                <li class="memMemo">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="suffix">
+                                            제안불가<br>(부회원) 
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li class="boxList headType"> 
+                                    <div class="head">
+                                        <p class="prefix">
+                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
+                                            <label for="memChk_1"></label>
+
+                                            <span>90.0</span>
+                                        </p>
+                                        <p class="suffix"></p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <div class="flexCenter">  
+                                                        <a href="#" target="_blank">홍길순(여/29)</a>
+                                                        <span>디자인</span>
+                                                        <span>에코</span>
+                                                    </div>                                                 
+                                                </li>
+                                                <li>
+                                                    <span>010-3245-3451</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                </li>
+                                                <li class="memMemo">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="suffix">
+                                            제안불가<br>(부회원) 
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a href="#" class="goTop">
+                            <i class="ico top"></i>
+                        </a>
+                    </div>
+
+                    <div class="listBottom pagingType">                        
+                        <div class="paging">
+                            <ul>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico pagingFirst"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico pagingLeft"></span>
+                                    </a>
+                                </li>
+                                <li class="is-active"><a>1</a></li>
+                                <li><a>2</a></li>
+                                <li><a>3</a></li>
+                                <li><a>4</a></li>
+                                <li><a>5</a></li>
+                                <li><a>6</a></li>
+                                <li><a>7</a></li>
+                                <li><a>8</a></li>
+                                <li><a>9</a></li>
+                                <li><a>10</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico pagingRight is-active"></span>
+                                    </a>
+                                </li>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico pagingLast is-active"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filterWrapper">
+                <div class="filterTop">
+                    <h2>필터</h2>
+                    <a href="#" class="ico refresh"></a>
+                </div>                        
+                
+                <div class="filterList">
+                    <div class="tit">등급</div>  
+
+                    <input type="checkbox" id="lvAll" name="level" class="hasTxt">
+                    <label for="lvAll">전체</label>      
+                    <input type="checkbox" id="lv3" name="level" class="hasTxt">
+                    <label for="lv3">특급</label>                     
+                    <input type="checkbox" id="lv2" name="level" class="hasTxt">
+                    <label for="lv2">고급</label>                     
+                    <input type="checkbox" id="lv1" name="level" class="hasTxt">
+                    <label for="lv1">중급</label>                     
+                    <input type="checkbox" id="lv0" name="level" class="hasTxt">
+                    <label for="lv0">초급</label>
+                </div>       
+
+                <div class="filterList">
+                    <div class="tit">학력</div>  
+
+                    <input type="radio" id="eduLv0" name="eduLevel" class="hasTxt">
+                    <label for="eduLv0">전체</label>
+                    <input type="radio" id="eduLv3" name="eduLevel" class="hasTxt">
+                    <label for="eduLv3">대졸이상</label>
+                    <input type="radio" id="eduLv2" name="eduLevel" class="hasTxt">
+                    <label for="eduLv2">초대졸 이상</label>
+                    <input type="radio" id="eduLv1" name="eduLevel" class="hasTxt">
+                    <label for="eduLv1">고졸 이상</label>
+                </div>      
+                
+                <div class="filterList">
+                    <div class="tit">정보처리기사</div>  
+
+                    <input type="radio" id="licenseAll" name="license" class="hasTxt">
+                    <label for="licenseAll">전체</label>  
+                    <input type="radio" id="license1" name="license" class="hasTxt">
+                    <label for="license1">있음</label>                     
+                    <input type="radio" id="license0" name="license" class="hasTxt">
+                    <label for="license0">없음</label>       
+                </div>  
+                
+                <div class="filterList">
+                    <div class="tit">KOSA</div>  
+
+                    <input type="radio" id="kosaAll" name="kosa" class="hasTxt">
+                    <label for="kosaAll">전체</label>   
+                    <input type="radio" id="kosa1" name="kosa" class="hasTxt">
+                    <label for="kosa1">있음</label>                     
+                    <input type="radio" id="kosa0" name="kosa" class="hasTxt">
+                    <label for="kosa0">없음</label>       
+                </div>    
+                
+                <div class="filterList">
+                    <div class="tit">평가</div>  
+                    
+                    <input type="radio" id="score0" name="score" class="hasTxt">
+                    <label for="score0">전체</label>    
+                    <input type="radio" id="score3" name="score" class="hasTxt">
+                    <label for="score3">90점 이상</label>  
+                    <input type="radio" id="score2" name="score" class="hasTxt">
+                    <label for="score2">80점 이상</label> 
+                    <input type="radio" id="score1" name="score" class="hasTxt">
+                    <label for="score1">70점 이상</label>   
+                </div>             
+            </div>
+        </div>
+        <div class="rPanel">
+            <ul>
+                <li><i class="ico searchMem"></i></li>
+                <li><i class="ico schedule"></i></li>
+                <li><i class="ico mail"></i></li>
+            </ul>
+        </div>
+        <!--우측패널-->
+    </section>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        $(".accBox .onlyIco").on("click", function(){
+            $(this).parents(".accBox").toggleClass("is-active");
+        });
+    </script>
+</body>
+</html>

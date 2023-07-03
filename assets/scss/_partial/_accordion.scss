@@ -1,0 +1,212 @@
+
+.accWrap{
+    margin-top: rem(40);
+}
+
+.accBox{
+    padding: rem(9) 0;
+    background: $white;
+    border-radius: rem(5);
+    border:1px solid $layoutColor;
+    overflow: hidden;
+    
+    &.is-active{
+        border:1px solid $mainColor;
+        .ico{
+            &.plus{
+                height: rem(2);
+                background-position: 0 -180px;
+            }
+        }
+        .accInner{
+            display: block;
+        }
+    }
+    &.nodata{
+        display: flex;
+        line-height: rem(80);
+    }
+    & + .accBox{
+        margin-top: rem(12);
+    }
+
+    .prefix,
+    .suffix{
+        display: flex;
+        align-items: center;
+    }
+    .projTit{
+        @include ellipsis;
+        cursor: pointer;
+    }
+}
+
+.accHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(16) rem(25);
+    .prefix{
+        font-weight: bold;
+        font-size: rem(18);
+    }
+    .suffix{
+        color: $accSuffixGray;
+        .onlyIco{
+            margin-left: rem(36);
+        }
+    }
+    & + .accInner{
+        margin-top: -7px;
+    }
+} 
+.accInner{
+    display: none;
+    .innerList{
+        @include sideArray;
+        padding: rem(10) rem(25);
+        cursor: pointer;
+        &:hover{
+            background: $selHover;
+        }
+    }
+    .prefix{
+        width: 70%;
+        color: $accPrefixGray;
+        .round{
+            color: $cancel;
+            border-color: $cancel;
+            margin-right: rem(10);
+        }
+    }
+    .suffix{
+        font-size: rem(14);
+        font-weight: 500;
+        ul{
+            display: flex;
+        }
+        li{
+            margin-left: rem(20);
+            position: relative;
+            &::before{
+                content:'';
+                width: 1px;
+                height: 16px;
+                background: $layoutColor;
+                position: absolute;
+                top: 5px;
+                left: -9px;
+            }
+            &:first-child{
+                &::before{
+                    display: none;
+                }
+            }
+        }
+        .mainC{
+            margin-left: rem(5);
+        }
+    }
+}
+
+//모집공고 관리 flatType
+.accWrap{
+    &.flatType{
+        margin-top: 0;
+        .accBox{
+            padding: 0;
+            border-radius: 0;
+            border: 0;
+            overflow: hidden;
+            &.is-active{
+                border-bottom: 1px solid $accBorderBottom;
+                .accHead{
+                    color: $black;
+                    background: $selHover;
+                    border-bottom:0;
+                }
+                .ico{                    
+                    &.arrow{
+                        width: rem(16);
+                        height: rem(9);
+                        background-position: -120px -180px;
+                        vertical-align: 2px;
+                    }
+                }
+            }
+            &.disabled{
+                .accHead{
+                    color: $addHeadGray;
+                    cursor: not-allowed;
+                }                
+            }
+            & + .accBox{
+                margin-top: 0;
+            }
+        }
+        .accHead{
+            padding: rem(16) rem(20) rem(16) rem(12);
+            color: $black;
+            border-bottom: 1px solid $accBorderBottom;
+            cursor: pointer;
+            .prefix{
+                font-size: rem(16);
+            }
+            & + .accInner{
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.accInner{
+    &.infoType{
+        padding: 0 rem(30);
+        .innerList{
+            padding: 0;
+            > ul{                
+                width: 100%;
+                display: grid;
+                grid-template-columns: 70% 30%;
+                grid-template-rows: 1fr;
+                row-gap: rem(16);
+                padding: rem(20) 0;
+                border-bottom: 1px solid $inputGray;
+                ul{
+                    display: flex;
+                }
+            }
+            &:hover{
+                background: transparent;
+            }
+        }       
+        &:last-child{
+            ul{
+                border-bottom:0;
+            }
+        }     
+        .projTit{
+            color: $black;
+            font-size: rem(18);
+            font-weight: 700;
+        }
+        .projManager{
+            @include ellipsis;
+            display: block;
+            width: auto;
+            max-width: 90%;
+        }
+        .projInfo{
+            li{
+                margin-right: rem(20);
+            }
+        }
+        .signDate{
+            margin-right: rem(10);
+            color: $accDate;
+        }
+        .suffix{
+            justify-self: end;
+        }
+    }
+}

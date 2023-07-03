@@ -3,6 +3,7 @@
     margin-top: rem(30);
     .condiTit{
         display: block;
+        // height: rem(22);
         margin-bottom: rem(9);
         font-size: rem(15);
         font-weight: 500;
@@ -11,6 +12,11 @@
             margin-top: -8px;
             // margin-bottom: rem(3);
             margin-bottom: rem(8    );
+        }
+    }
+    p{
+        &.condiTit{
+            height: rem(22);
         }
     }
     > ul{
@@ -26,13 +32,25 @@
                     background-color: $white;
                 }
             }
-
             //select, input 너비, 높이 등을 기본값으로할건지???
         }
     }
-    label{
-        font-weight: 400;
+    .hasBtn{
+        .button,
+        button{
+            width: rem(44);
+            background: $searchbtnGray;
+            border: 1px solid $searchbtnGray;
+        }
     }
+    .hasTxt{
+        & + label{
+            margin-left: rem(20);
+        }        
+    }
+    // label{
+    //     font-weight: 400;
+    // }
     .select,
     select{
         &.autoSize{

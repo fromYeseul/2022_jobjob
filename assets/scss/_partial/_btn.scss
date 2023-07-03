@@ -176,10 +176,12 @@ button,
         color: $black;
         font-size: rem(13);
         font-weight: 500;
+        word-break: keep-all;
+        vertical-align: text-bottom;  
         background: $white;
         //border: 1px solid $gray;
         border: 1px solid $btnGray;
-        border-radius: rem(20);        
+        border-radius: rem(20);      
         &.disabled{
             // color: $layoutColor;
             color: $inputGray;
@@ -331,21 +333,41 @@ span{
         background: $mainColor;
     }
 }
-.deco{
+.count{
+    margin-left: rem(6);
     display: inline-block;
-    // min-width: rem(40);
-    // line-height: rem(22);
-    min-width: rem(30);
-    margin: rem(2) rem(3);
-    line-height: rem(23);
-    //height: rem(24);
-    padding: rem(1) rem(7);
-    font-size: rem(12);
-    color: $tooltipGray;
+    padding: 0 rem(4);
+    min-width: rem(20);
+    // height: rem(20);
+    line-height: rem(19);
+    color: $white;
+    font-size: rem(14);
+    font-weight: normal;
     text-align: center;
-    background: $tableBorder;
-    border:0;
-    border-radius: rem(5);
-    // margin-right: rem(4);
-    cursor: inherit;      
+    border-radius: rem(30);
+    border: 1px solid $mainColor;
+    background: $mainColor;
+    &.temp{
+        color: $error;
+        border: 1px solid $error;
+        background: $white;
+    }
 }
+// .deco{
+//     display: inline-block;
+//     // min-width: rem(40);
+//     // line-height: rem(22);
+//     min-width: rem(30);
+//     margin: rem(2) rem(3);
+//     line-height: rem(23);
+//     //height: rem(24);
+//     padding: rem(1) rem(7);
+//     font-size: rem(12);
+//     color: $tooltipGray;
+//     text-align: center;
+//     background: $tableBorder;
+//     border:0;
+//     border-radius: rem(5);
+//     // margin-right: rem(4);
+//     cursor: inherit;      
+// }
