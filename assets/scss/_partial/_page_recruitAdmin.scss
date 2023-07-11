@@ -2,6 +2,16 @@
     width: 100%;
 }
 
+.recruitAdmin{
+    .tabCont{
+        margin-top: -2px;
+        padding: rem(5) rem(25) rem(50);
+        background: $white;
+        border: 1px solid $inputGray;
+    }
+}
+
+
 .projBox{
     margin-top: rem(40);
     margin-bottom: rem(25);
@@ -11,13 +21,29 @@
     border-radius: rem(10);
     border: 1px solid $projBoxBorder;
     background: $projBox;
+    position: relative;
+    .suffix{
+        display: flex;
+        align-items: center;
+    }
+    .txtType{
+        font-size: rem(16);
+    }
+    .alertToast{
+        top: -20px;
+        right: 110px;
+    }
 }
-
-.recruitAdmin{
-    .tabCont{
-        margin-top: -2px;
-        padding: rem(5) rem(25) rem(50);
-        background: $white;
-        border: 1px solid $inputGray;
+.chipBox{
+    text-align: left;
+    padding: 0 rem(40);
+    .chip{
+        display: inline-block;
+        margin: rem(3) rem(8);
+        margin-left: 0;
+        font-size: rem(12);
+        padding: rem(4) rem(8);
+        background: $chipGray;
+        border-radius: rem(6);
     }
 }

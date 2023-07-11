@@ -62,7 +62,8 @@ button,
     //     height: rem(35)
     // }
     &.smSize{
-        min-width: rem(70);
+        // min-width: rem(70);
+        min-width: rem(60);
         width: auto;
         line-height: rem(28);
         // padding: 0 rem(12);
@@ -245,6 +246,9 @@ button,
         color: $cancel;  //0530 J수정 $subInfo -> $cancel
         background: transparent;
         border:0;
+        &.mainC{
+            color: $mainColor;
+        }
     }
     //마이피플 더보기 삭제
     &.square{
@@ -288,6 +292,11 @@ button,
     &.reject{
         color: $delay;
         border-color: $delay;
+    }
+    &.clear{
+        color: $disable;
+        background: $activeGray;
+        border:0;
     }
 }
 

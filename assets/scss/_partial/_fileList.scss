@@ -1,0 +1,34 @@
+.fileBox{
+    .fileTop{
+        @include sideArray;
+        .txtType{
+            color: $mainColor;
+        }
+    }
+    .fileList{
+        margin-top: rem(10);
+        padding: rem(16);
+        padding-right: rem(8);
+        background: $fileBg;
+        border-radius: 6px;
+        .list_ul{
+            padding-right: rem(8);
+            max-height: rem(140);
+            overflow-y: auto;
+        }
+        li{
+            color: $fileGray;
+            @include sideArray;
+            &:hover{
+                background: $selHover;
+            }
+            .fileInfo{
+                width: 92%;
+                @include sideArray;
+            }
+        }
+    }
+    &.fileBox{
+        margin-top: rem(25);
+    }
+}

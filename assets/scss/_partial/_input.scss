@@ -356,7 +356,7 @@ textarea{
         & + select,
         & + .select,
         & + .inputGroup{
-            margin-top: rem(10);
+            margin-top: rem(6);
         }
     }
     // input{
@@ -583,6 +583,9 @@ input[type=date]{
             width: rem(60);
             height: rem(40);
         }
+        &.xxsSize{
+            padding-left: 0;
+        }
     }
     & + .btnType{
         margin-left: rem(10);
@@ -629,6 +632,9 @@ input[type=text]{
         &.mid-lowSize{
             width: rem(115);
             height: rem(32);
+        }
+        &.laSize{
+            width: rem(160);
         }
         &.onGoing{
             border: 1px solid $onGoing;
@@ -907,7 +913,7 @@ input[type=file] {
             // vertical-align: text-bottom;
             @include ellipsis;
             cursor: initial;
-            width: 80%;
+            width: 76%;
         }
         .volume,
         .float_r{
@@ -988,14 +994,14 @@ input[type=file] {
 a{
     &.download{
         img{
-            vertical-align: middle;
-            margin-right: rem(8);
+            vertical-align: -3px;
+            margin-right: rem(4);
         }
         span{
             display: block;
             margin-top: rem(10);
-            padding: rem(15) rem(10);
-            background: $white;
+            // padding: rem(15) rem(10);
+            // background: $white;
             border-radius: rem(5);
             @include ellipsis;
             width: 100%;

@@ -111,6 +111,87 @@ select{
   }
 }
 
+.selectedBox{
+  margin-top: rem(40);
+  padding: rem(8);
+  border-radius: rem(4);
+  border:1px solid $inputGray; 
+  position: relative;
+  &:after{
+    content:'';
+    width: rem(12);
+    height: rem(6);
+    background: url(../img/icoSelect.png);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.is-active{
+    border: 1px solid $mainColor;
+    &:after{
+      top: 45%;
+      transform: rotate(180deg);
+    }
+  }  
+}
+.selectList{
+  display: none;
+  
+  // padding: rem(4);
+  // padding-left: 0;
+  background: $white;
+  border-radius: rem(4);
+  border: 1px solid $layoutColor;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+
+  margin-top: rem(6);
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  &.is-active{
+      display: block;
+      width: 100%;
+  }
+  ul{
+      display: inherit !important;
+      max-height: rem(200);
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+          width: 12px;
+          height: 10px;
+      }        
+      &::-webkit-scrollbar-track {
+          background-color: $white;
+      }
+      &::-webkit-scrollbar-thumb {
+          //트랙사이 간격
+          background-clip: padding-box;
+          border: 2px solid transparent;
+      }
+  }
+  li{
+      @include sideArray;
+      margin-bottom: 0;
+      padding: 4px 6px;
+      cursor: pointer;
+      &:hover{
+          background: $selHover;
+      }
+      .prefix{
+          @include ellipsis;
+          width: 60%;
+      }
+      .suffix{
+          color: $selGray;
+      }
+      // & + li{
+      //     margin-left: 0 !important;
+      // }
+  }
+}
+
+
 
 //datepicker select 초기화
 .ui-datepicker-title{

@@ -1,0 +1,85 @@
+.recruitRegister{
+    width: 100%;
+    .hasTooltip{
+        .tooltip{
+            &.left{
+                left: -165px;
+            }
+        }
+    }
+    .inputGroup{
+        height: rem(80);
+    }
+    .col6{
+        row-gap: rem(30);
+        column-gap: rem(45);
+        grid-template-columns: 4fr 160px 230px;
+    }
+    .col4{
+        width: 80%;
+        row-gap: rem(30);
+        column-gap: rem(45);
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+    li{
+        input{
+            &.xsSize{
+                width: rem(58);
+                height: rem(44);
+                text-align: center;
+            }
+            &.sm-midSize{
+                width: rem(160);
+            }
+        }
+        .range{
+            margin: 0 rem(16);
+        }
+    }
+}
+
+.recruitRegister{
+    .hasTooltip{
+        .tooltip{
+            &.left{
+                top:5%;
+                &.line2{
+                    top:20%;
+                }
+                &.line3{
+                    top:34%;
+                }
+                &.line4{
+                    top:46%;
+                }
+            }
+        }
+    } 
+}
+
+.recruitPeriod,
+.recruitTime{
+    grid-column: 2/4;
+    select{
+        width: 79px;
+        min-width: auto;
+    }
+}
+.recruitPeriod{
+    .tabType{
+        margin-left: 36px;
+    }
+}
+.recruitWork{
+    grid-column: 1/4;
+}
+
+.recruiterCrew{
+    grid-column: 1/5;
+    ul{
+        display: flex;
+    }
+    li{
+        margin-right: rem(80);
+    }
+}

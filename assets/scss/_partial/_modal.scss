@@ -68,6 +68,9 @@
                 margin-right: -16px;
             }
         }
+        &.smMidSize{
+            width: rem(470);
+        }
         &.sm-midSize{
             width: rem(550);
             .modalFooter{
@@ -171,6 +174,9 @@
             margin-top: rem(10);
         }
     }
+    .h3_sub{
+        text-align: center;
+    }
     .tabBtnWrap{
         justify-content: center;
     }
@@ -197,10 +203,10 @@
     }
     .tableTop{
         margin-top: rem(30);
-        height: rem(46);
+        // height: rem(46);
     }
     table{
-        table-layout: inherit;
+        // table-layout: inherit;
         .select{
             .optionList{
                 max-height: rem(110);
@@ -253,11 +259,7 @@
 }
 .modalFooter{
     margin-top: rem(30);
-    @include flex_2_3;  //기본 2:3
-    // &.pagingType{
-    //     padding: rem(40);
-    //     //@include heightArray;
-    // }
+    @include flex_2_3;
     button{        
         flex: 2 1 0;
         + button{
@@ -265,20 +267,12 @@
             margin-left: rem(10);
         }
     }
-    // button{
-    //     + button{
-    //         margin-left: rem(10);
-    //     }
-    // }
-    // &.flex_2_3{
-    //     button{        
-    //         flex: 2 1 0;
-    //         + button{
-    //             flex: 3 1 0;
-    //             margin-left: rem(10);
-    //         }
-    //     }
-    // }
+    &.single{
+        width: 50%;
+        max-width: rem(200);
+        margin: rem(30) auto;
+        margin-bottom: 0;
+    }
 }
 .modalInfo{
     font-size: rem(14);
@@ -344,6 +338,9 @@
         overflow-y: auto;
         height: 360px;
     }
+    table{
+        table-layout: inherit;
+    }
     .empty{
         display: inline-block;
         width: rem(40);
@@ -355,6 +352,9 @@
 }
 
 #investDetail{
+    table{
+        table-layout: inherit;
+    }
     .flex{
         .prefix{flex: 1 1 45%;}
         .suffix{flex: 2 1 55%;}    
@@ -395,6 +395,18 @@
     }
 }
 
+//마이프로젝트 - 직무추천-설정 팝업
+#recomDetail{
+    .filterList{
+        position: relative;
+    }
+    .alertToast{
+        bottom: -25px;
+        left: 0;
+        transform: initial;
+    }
+}
+
 //스킬관리 - 분류관리 팝업 
 #group-admin,
 #skillAdminPop{
@@ -432,6 +444,152 @@
     .right{
         .inputList{
             min-height: rem(470);
+        }
+    }
+}
+
+//모집공고관리 - 프로젝트 선택 팝업
+#recruitProject{
+    .listBox{
+        margin-bottom: rem(40);
+    }
+}
+
+//모집공고등록 - 이전공고불러오기 - 팝업
+#pre-recruit{
+    .listBottom{
+        &.pagingType{
+            border-top: 0;
+        }
+    }
+}
+
+
+#searchFilter{
+    .modalCont{
+        h4{
+            color: $beigeTit;
+            margin-bottom: rem(16);
+        }
+        > ul{
+            display: flex;   
+            margin-top: rem(30);
+            > li{
+                padding: 0 rem(24);
+                min-width: rem(200);
+                border-right: 1px solid $layoutColor;
+                &:first-child{
+                    padding-left: 0;
+                }
+                &:last-child{
+                    padding-right: 0;
+                    border-right:0;
+                }
+                li{
+                    margin-bottom: rem(5);
+                }
+            }   
+        }
+        .btnType{
+            margin-bottom: rem(10);
+            justify-content: center;
+        }
+    }
+    .listBottom{
+        margin-top: rem(60);
+        button{
+            flex: 1 1 50%;
+        }
+    }
+    .inputGroup{
+        padding: 0;
+        min-width: rem(880);
+        height: rem(55);
+        overflow-y: auto;
+        border:0;
+    }
+    .suffix{
+        display: flex;
+        margin-left: rem(100);
+    }
+}
+
+
+//모집공고상세 - 프로젝트 제안이력 팝업
+#projOfferHis{
+    h4{
+        text-align: center;
+    }
+    .profile{
+        display: flex;
+        margin: 0;
+        .phoImg{
+            margin: 0 rem(20);
+            margin-right: rem(30) !important;
+            display: inline-block;
+            &.is-special{
+                &::before{
+                    width: 21px;
+                    height: 20px;
+                    right: 5px;
+                    top: 10px;
+                }
+                &:after{
+                    right: 8px;
+                    top: 14px;
+                }
+            }
+            img{
+                width: rem(100);
+                height: rem(100);
+            }
+        }
+        ul{
+            margin: rem(10) 0;
+            li{
+                font-size: rem(14);
+                font-weight: 500;
+                text-align: left;
+                line-height: rem(24);
+                &:first-child{
+                    font-size: rem(16);
+                }
+            }
+        }
+    }
+    table{
+        margin-top: rem(20);
+        td{
+            height: rem(33);
+        }
+    }
+    .offerResult{
+        padding: rem(25) rem(20);
+        border:1px solid $layoutColor;
+        border-radius: rem(6);
+        li{
+            margin: rem(8) 0;
+                padding-left: rem(18);
+                position: relative;
+                &::before{
+                    content:'';
+                    width: 4px;
+                    height: 4px;
+                    background: $dotGray;
+                    position: absolute;
+                    left: 8px;
+                    top: 10px;
+                }
+        }
+    }
+    .offerMessage{
+        padding: rem(10);
+        background: $offerBg;
+        border-radius: rem(6);
+        .yScroll{
+            height: rem(200);
+            padding: rem(10);
+            padding-right: 0;
         }
     }
 }

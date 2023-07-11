@@ -1679,7 +1679,6 @@
                                                     <table class="chkType hasInput">
                                                         <colgroup>
                                                             <!-- 230623 수정 -ys -->
-                                                            <col width="62px;">
                                                             <col width="65px">
                                                             <col width="30px;">
                                                             <col width="80px;">
@@ -1697,10 +1696,6 @@
                                                         </colgroup>
                                                         <thead>
                                                             <tr>
-                                                                <th>
-                                                                    <input type="checkbox" id="chkAll2" class="hasTxt">
-                                                                    <label for="chkAll2"> 40/40</label>
-                                                                </th>
                                                                 <th>
                                                                     <!-- <a href="#memScore"class="layerOpen is-active">90점 이상</a> -->
                                                                     <span aria-controls="memScore" class="layerOpen is-active">90점 이상</span>
@@ -1734,10 +1729,6 @@
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <td>
-                                                                    <input type="checkbox" id="rr1">
-                                                                    <label for="rr1"></label>
-                                                                </td>
                                                                 <td class="txtLeft">
                                                                     <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                                     <span class="eHigh"> 100.0</span>
@@ -1768,10 +1759,6 @@
                                                                 <td>22/04/04<br>관리자 등록</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>
-                                                                    <input type="checkbox" id="rr2">
-                                                                    <label for="rr2"></label>
-                                                                </td>
                                                                 <td class="txtLeft">
                                                                     <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                                     <span class="eHigh">0.0</span>
@@ -1799,10 +1786,6 @@
                                                                 <td>22/04/04<br>관리자 등록</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>
-                                                                    <input type="checkbox" id="rr3">
-                                                                    <label for="rr3"></label>
-                                                                </td>
                                                                 <td class="txtLeft">
                                                                     <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                                     <span class="eHigh"> 90.0</span>
@@ -1827,10 +1810,6 @@
                                                                 <td>22/04/04<br>관리자 등록</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>
-                                                                    <input type="checkbox" id="rr4">
-                                                                    <label for="rr4"></label>
-                                                                </td>
                                                                 <td class="txtLeft">
                                                                     <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                                     <span class="eHigh"> 100.0</span>
@@ -1852,10 +1831,6 @@
                                                                 <td>22/04/04<br>관리자 등록</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>
-                                                                    <input type="checkbox" id="rr5">
-                                                                    <label for="rr5"></label>
-                                                                </td>
                                                                 <td class="txtLeft">
                                                                     <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                                     <span class="eHigh"> 100.0</span>
@@ -1877,10 +1852,6 @@
                                                                 <td>22/04/04<br>관리자 등록</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>
-                                                                    <input type="checkbox" id="rr6">
-                                                                    <label for="rr6"></label>
-                                                                </td>
                                                                 <td class="txtLeft">
                                                                     <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                                     <span class="eHigh"> 100.0</span>
@@ -1962,7 +1933,8 @@
                                     <div class="filterList">
                                         <h6>가용일자</h6>         
                                         
-                                        <input type="text" id="ableDateSt" placeholder="연도-월-일" class="dateType"> 부터
+                                        <input class="dateType" type="text" placeholder="연도 - 월 - 일" id="datepicker"> 
+                                         부터
                                         <input type="text" id="ableDateSt" placeholder="연도-월-일" class="dateType mt10"> 까지
                                     </div>                       
                                     
@@ -3022,6 +2994,10 @@
                             <button class="ico smClose w"></button>
                         </div>
                     </div>
+                    <div class="alertToast is-active" id="toast01">
+                        중요 프로젝트로 설정되었습니다.
+                        <i class="ico smClose w"></i>
+                    </div>
                 </div>
 
                 <div class="filterList">
@@ -3118,6 +3094,16 @@
         //230427 추가 -ys
         rangeSliderMulti();
         rangeSlider();
+    </script>
+
+    
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( "#datepicker" ).datepicker();
+    } );
     </script>
 </body>
 </html>

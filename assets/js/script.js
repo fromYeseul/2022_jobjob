@@ -793,9 +793,10 @@ function openFilter(){
 
 $(document).mouseup(function (e){
 	var filterWrapper = $(".filterWrapper");
-	if(filterWrapper.has(e.target).length === 0){
-		filterWrapper.removeClass("is-active");
-	}
+	var uiDate = $(".ui-datepicker-calendar");
+	if(filterWrapper.has(e.target).length === 0 && uiDate.has(e.target).length === 0){
+        filterWrapper.removeClass("is-active");
+    }
 });
 //230627 수정 -ys
 
@@ -1401,3 +1402,28 @@ function chkList(){
     console.log(chkListLabel);
 }
 //chkList();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//2차
+
+//아코디언 on/off
+function accordion(){    
+    $(".accBox .onlyIco").on("click", function(){
+        $(this).parents(".accBox").toggleClass("is-active");
+    });
+}

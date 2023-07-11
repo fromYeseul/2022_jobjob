@@ -8,12 +8,15 @@
     .inputList{
         width: 70%;
     }
+    .regiPartWrapper{
+        height: calc(100vh - 200px);
+    }
 }
 
 
 .regiPartWrapper{
     @include scroll_0;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 130px);
     overflow-y: auto;
     scroll-behavior:smooth;
 
@@ -25,11 +28,22 @@
         padding-right: rem(40);
     }
 }
-.regiPart{
-    // padding-top: rem(50);
-    h3{
-        margin-top: rem(25);
+
+.regiTop{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    .prefix{
+        display: flex;
+        align-items: center;
     }
+    h3{
+        margin-right: rem(30);
+    }
+}
+
+.regiPart{
+    margin-top: rem(25);
     &:last-child{
         padding-bottom: rem(50);
     }
@@ -38,6 +52,9 @@
         padding: rem(25);
         &.noTit{
             margin-top: rem(50);
+        }
+        & + h3{
+            margin-top: rem(25);
         }
         .inputList{
             .full{
@@ -58,7 +75,8 @@
             }
             input[type=text]{
                 &.dateType{
-                    width: rem(140);
+                    
+            width: rem(160);
                     &.full,
                     &.fullSize{
                         width: 100%;
@@ -80,7 +98,7 @@
         h4,
         h6{
             font-weight: 500;
-            margin-bottom: rem(10);
+            margin-bottom: rem(6);
             &.need{
                 position: relative;
                 &::after{

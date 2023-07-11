@@ -1,0 +1,2769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모집공고 관리 상세</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo.png" alt="">
+                </a>
+            </div>            
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="noDepth">
+                            <a alertToast href="#"><i class="ico home"></i><span class="menuTxt">홈</span></a>
+                        </li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">고객문의</span></a></li>
+                                <li><a href="#"><span class="depth2">운영자관리</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>
+                        <li class="is-active"><a href="#"><i class="ico recruit"></i><span class="menuTxt">공고/지원자</span></a>
+                            <ul class="is-active">
+                                <li class="is-active"><a href="#"><span class="depth2">전체 모집공고</span></a></li>
+                                <li><a href="#"><span class="depth2">인재검색/제안</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>  
+        
+        <section class="contWrapper">
+            <section class="contLayout">
+                <section class="recruitDetail">
+                    <h2>모집공고 관리 (제목계속 바뀜)</h2>
+
+                    <div class="projBox">
+                        <h4 class="layerOpen" aria-controls="recruitProject">CJ프레시웨이 온리원푸드넷 UI/UX 및 주문프로세스 개선 프로젝트 선택 "팝업열림"</h4>
+                        <div class="suffix">
+                            <span class="mr10">기획 - 모바일기획</span>
+                            <button class="white laSize layerOpen" aria-controls="recomDetail">직무추천 세부설정 "팝업열림"</button>
+                            <button class="white laSize layerOpen" aria-controls="">(지원자 목록) 공고보기</button>
+                            <button class="laSize">목록으로</button>
+                        </div>
+                    </div>
+
+                    <div class="tabWrapper" id="style-tab01">
+                        <ul class="tabBtnWrap">
+                            <li class="tabBtn">
+                                <a href="#tab-01" class="is-active">직무추천(15)</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#tab-02">지원자(6)</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#tab-03">보낸제안(5)</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#tab-04">관심등록(1)</a>
+                            </li>
+
+                            <input type="checkbox" id="closed" name="closed" class="hasTxt">
+                            <label for="closed">제안가능 회원만</label>
+                        </ul>
+                        <div class="tabContWrap">
+                            <div id="tab-01" class="tabCont is-active">
+                                <div class="tableBox">                              
+                                    <table class="chkType">
+                                        <colgroup>
+                                            <col width="4%;">
+                                            <col width="5%">
+                                            <col width="4%;">
+                                            <col width="8%;">
+                                            <col width="8%;">                                            
+
+                                            <col width="8%;">
+                                            <col width="8%;">
+                                            <col width="8%;">
+                                            <col>
+                                            <col width="16%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">
+                                                    <input type="checkbox" id="chkAll2" class="hasTxt">
+                                                    <label for="chkAll2">전체선택</label>
+                                                </th>
+                                                <th colspan="6"></th>
+                                                <th colspan="2" class="txtRight">
+                                                    <input type="checkbox" id="level" class="hasTxt">
+                                                    <label for="level">인정등급</label>
+                                                    
+                                                    <span class="subInfo">
+                                                        (비삼성 WEB_SAP)
+                                                        <span class="hasTooltip">
+                                                            <i class="ico qMark"></i>
+                                                            <div class="tooltip type2">                                            
+                                                                <p>???</p>
+                                                                ????
+                                                            </div>       
+                                                        </span>
+                                                    </span>
+                                                    <div class="hasBtn">     
+                                                        <div class="inputIco">
+                                                            <input type="text" id="search" class="laSize lowSize" maxlength="" placeholder="키워드를 입력하세요.">
+                                                            <button class="ico search"></button>
+                                                        </div>   
+                                                        <button aria-controls="searchFilter" class="white onlyIco midSize layerOpen"><i class="ico filter"></i></button>
+                                                        <button class="white onlyIco midSize"><i class="ico refresh"></i></button>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10">
+                                                    <div class="inputObj">
+                                                        <span>JSP</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>스페셜회원만</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>에코</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>협력</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>26~30세</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>4년제 졸업</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>15년~</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>~30일 이내</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>JavaScript</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>JSP</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>스페셜회원만</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>에코</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>협력</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>26~30세</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>4년제 졸업</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>15년~</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>~30일 이내</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>JavaScript</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>JSP</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>스페셜회원만</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+                                                    <div class="inputObj">
+                                                        <span>에코</span>
+                                                        <button class="ico smClose w"></button>
+                                                    </div>
+
+                                                    <button class="round">초기화</button>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="ff1">
+                                                    <label for="ff1"></label>
+                                                </td>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh">100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>  
+                                                </td>
+                                                <td>
+                                                    <strong>김길동(남)</strong>
+                                                    <p>81세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>서울</strong>
+                                                    <p>강서구</p>
+                                                </td>
+                                                <td>
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">22년 4개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>
+                                                        <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                        초급
+                                                    </strong>
+                                                    <p>고등학교 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <div class="chipBox">
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">Java</span>
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">Linux</span>
+                                                        <span class="chip">Oracle</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Linux</span>
+                                                        <span class="chip">Oracle</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Maria</span>
+                                                        <span class="chip">SQLite</span>
+                                                    </div>                                     
+                                                </td>
+                                                <td>
+                                                    <button class="bdType layerOpen" aria-controls="projOfferHis">제안하기"팝업열림"</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="ff1">
+                                                    <label for="ff1"></label>
+                                                </td>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh">100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>  
+                                                </td>
+                                                <td>
+                                                    <strong>윤동주(남)</strong>
+                                                    <p>81세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>경기</strong>
+                                                    <p>성남시 중원구</p>
+                                                </td>
+                                                <td>
+                                                    <strong>개발</strong>
+                                                    <p class="eHigh">2년 4개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>
+                                                        <span class="accept">인</span>초급
+                                                    </strong>
+                                                    <p>2,3년제 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <div class="chipBox">
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                    </div>                                     
+                                                </td>
+                                                <td>
+                                                    <button class="white">
+                                                        최근에 제안
+                                                        <span>(2023.01.02)</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="ff1">
+                                                    <label for="ff1"></label>
+                                                </td>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh">100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>  
+                                                </td>
+                                                <td>
+                                                    <strong>김길동(남)</strong>
+                                                    <p>81세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>경기</strong>
+                                                    <p>안양시 동안구</p>
+                                                </td>
+                                                <td>
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">8년 2개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>초급</strong>
+                                                    <p>4년제 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <div class="chipBox">
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">Java</span>
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">Oracle</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Linux</span>
+                                                        <span class="chip">Oracle</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Maria</span>
+                                                        <span class="chip">SQLite</span>
+                                                    </div>                                     
+                                                </td>
+                                                <td>
+                                                    <button class="white">
+                                                        제안하기
+                                                        <span>최근 제안 (2023.01.02)</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="ff1">
+                                                    <label for="ff1"></label>
+                                                </td>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh">100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>  
+                                                </td>
+                                                <td>
+                                                    <strong>김길동(남)</strong>
+                                                    <p>81세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>경기</strong>
+                                                    <p>안양시 동안구</p>
+                                                </td>
+                                                <td>
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">8년 2개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>초급</strong>
+                                                    <p>4년제 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <div class="chipBox">
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">Java</span>
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">Oracle</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Linux</span>
+                                                        <span class="chip">Oracle</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Maria</span>
+                                                        <span class="chip">SQLite</span>
+                                                    </div>                                     
+                                                </td>
+                                                <td>
+                                                    <button class="bdType">제안하기
+                                                        <span>최근 제안 (2023.01.02)</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="ff1">
+                                                    <label for="ff1"></label>
+                                                </td>
+                                                <td>
+                                                    <span class="phoImg">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh">80.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>  
+                                                </td>
+                                                <td>
+                                                    <strong>한정우(남)</strong>
+                                                    <p>32세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>서울</strong>
+                                                    <p>용인시 처인구</p>
+                                                </td>
+                                                <td>
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">22년 4개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>초급</strong>
+                                                    <p>4년제 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <div class="chipBox">
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Maria</span>
+                                                        <span class="chip">SQLite</span>
+                                                    </div>                                     
+                                                </td>
+                                                <td>제안불가 (부회원)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="ff1">
+                                                    <label for="ff1"></label>
+                                                </td>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh">100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>  
+                                                </td>
+                                                <td>
+                                                    <strong>고길동(여)</strong>
+                                                    <p>23세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>서울</strong>
+                                                    <p>서초구</p>
+                                                </td>
+                                                <td>
+                                                    <strong>디자인</strong>
+                                                    <p class="eHigh">9개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>초급</strong>
+                                                    <p>고등학교 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <div class="chipBox">
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Linux</span>
+                                                        <span class="chip">Oracle</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Maria</span>
+                                                        <span class="chip">SQLite</span>
+                                                    </div>                                     
+                                                </td>
+                                                <td>
+                                                    <strong>2023.07.01 부터 가용가능</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="ff1">
+                                                    <label for="ff1"></label>
+                                                </td>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh">100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>  
+                                                </td>
+                                                <td>
+                                                    <strong>김길동(남)</strong>
+                                                    <p>81세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>서울</strong>
+                                                    <p>강서구</p>
+                                                </td>
+                                                <td>
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">22년 4개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>초급</strong>
+                                                    <p>고등학교 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <div class="chipBox">
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">Java</span>
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">Java</span>
+                                                        <span class="chip">Linux</span>
+                                                        <span class="chip">Oracle</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Linux</span>
+                                                        <span class="chip">Oracle</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Maria</span>
+                                                        <span class="chip">SQLite</span>
+                                                    </div>                                     
+                                                </td>
+                                                <td>
+                                                    <button class="bdType">제안하기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="ff1">
+                                                    <label for="ff1"></label>
+                                                </td>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh">100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>  
+                                                </td>
+                                                <td>
+                                                    <strong>김길동(남)</strong>
+                                                    <p>81세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>서울</strong>
+                                                    <p>강서구</p>
+                                                </td>
+                                                <td>
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">22년 4개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>초급</strong>
+                                                    <p>고등학교 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <div class="chipBox">
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">Java</span>
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">Java</span>
+                                                        <span class="chip">Linux</span>
+                                                        <span class="chip">Oracle</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">Java</span>
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                        <span class="chip">Java</span>
+                                                        <span class="chip">Linux</span>
+                                                        <span class="chip">Oracle</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Linux</span>
+                                                        <span class="chip">Oracle</span>
+                                                        <span class="chip">UNIX</span>
+                                                        <span class="chip">Maria</span>
+                                                        <span class="chip">SQLite</span>
+                                                        <span class="chip">ASP</span>
+                                                        <span class="chip">JSP</span>
+                                                    </div>                                     
+                                                </td>
+                                                <td>
+                                                    <button class="bdType">제안하기</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="listBottom">
+                                    <div class="prefix">
+                                        <button class="white xlSize">선택삭제</button>
+                                        <button class="xlSize">선택제안</button>
+                                    </div>
+                                </div>
+                                <div class="listBottom pagingType">                        
+                                    <div class="paging">
+                                        <ul>
+                                            <li class="pagingDouble">
+                                                <a href="#">
+                                                    <span class="ico pagingFirst"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="ico pagingLeft"></span>
+                                                </a>
+                                            </li>
+                                            <li class="is-active"><a>1</a></li>
+                                            <li><a>2</a></li>
+                                            <li><a>3</a></li>
+                                            <li><a>4</a></li>
+                                            <li><a>5</a></li>
+                                            <li><a>6</a></li>
+                                            <li><a>7</a></li>
+                                            <li><a>8</a></li>
+                                            <li><a>9</a></li>
+                                            <li><a>10</a></li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="ico pagingRight is-active"></span>
+                                                </a>
+                                            </li>
+                                            <li class="pagingDouble">
+                                                <a href="#">
+                                                    <span class="ico pagingLast is-active"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tab-02" class="tabCont">
+                                <div class="tableBox">                              
+                                    <table class="chkType">
+                                        <colgroup>
+                                            <col width="5%">
+                                            <col width="4%;">
+                                            <col width="8%;">
+                                            <col width="8%;">                                          
+                                            <col width="8%;">
+
+                                            <col width="8%;">
+                                            <col width="8%;">
+                                            <col>
+                                            <col width="8%;">
+                                            <col width="8%;">
+
+                                            <col width="8%;">
+                                            <col width="8%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th colspan="11" class="txtRight">
+                                                    <input type="checkbox" id="level" class="hasTxt">
+                                                    <label for="level">인정등급</label>
+                                                    
+                                                    <span class="subInfo">
+                                                        (비삼성 WEB_SAP)
+                                                        <span class="hasTooltip">
+                                                            <i class="ico qMark"></i>
+                                                            <div class="tooltip type2">                                            
+                                                                <p>???</p>
+                                                                ????
+                                                            </div>       
+                                                        </span>
+                                                    </span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh"> 100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>
+                                                </td>
+                                                <td>
+                                                    <strong>김기쁨(여)</strong>
+                                                    <p>29세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>서울</strong>
+                                                    <p>강서</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">22년 4개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>
+                                                        <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                        초급
+                                                    </strong>
+                                                    <p>고등학교 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <textarea name="" id="" maxlength="50" placeholder="메모입력" readonly="readonly"></textarea>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>희망단가</strong>
+                                                    <p>800만원</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>지원일</strong>
+                                                    <p>2023.05.30</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <i class="ico file"></i>
+                                                    <span class="attached layerOpen" aria-controls="fileList">첨부파일"팝업열림"</span>
+                                                </td>
+                                                <td>
+                                                    <select class="mid-lowSize" name="" id="">
+                                                        <option value="">열람</option>
+                                                        <option value="">추첨검토</option>
+                                                        <option value="">인터뷰</option>
+                                                        <option value="">최종합격</option>
+                                                        <option value="">불합격</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="phoImg">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh"> 100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>에코</strong>
+                                                    <p>정회원</p>
+                                                </td>
+                                                <td>
+                                                    <strong>김기쁨(여)</strong>
+                                                    <p>29세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>경기</strong>
+                                                    <p>성남시 중원구</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">4년 3개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>
+                                                        <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                        중급
+                                                    </strong>
+                                                    <p>2,3년제 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <textarea name="" id="" maxlength="50" placeholder="메모입력" readonly="readonly">ddddddddddddd</textarea>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>희망단가</strong>
+                                                    <p>500만원</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>관리자등록</strong>
+                                                    <p>2023.04.30</p>
+                                                </td>
+                                                <td>
+                                                    <i class="ico file"></i><br>
+                                                    <a href="#" download="">첨부파일</a>
+                                                </td>
+                                                <td>
+                                                    <select class="mid-lowSize" name="" id="">
+                                                        <option value="">열람</option>
+                                                        <option value="">추첨검토</option>
+                                                        <option value="">인터뷰</option>
+                                                        <option value="">최종합격</option>
+                                                        <option value="">불합격</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh"> 100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>
+                                                </td>
+                                                <td>
+                                                    <strong>김기쁨(여)</strong>
+                                                    <p>29세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>서울</strong>
+                                                    <p>강서</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">22년 4개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>
+                                                        <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                        초급
+                                                    </strong>
+                                                    <p>고등학교 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <textarea name="" id="" maxlength="50" placeholder="메모입력" readonly="readonly"></textarea>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>희망단가</strong>
+                                                    <p>800만원</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>지원일</strong>
+                                                    <p>2023.05.30</p>
+                                                </td>
+                                                <td>
+                                                    <i class="ico file"></i><br>
+                                                    <a href="#" download="">첨부파일</a>
+                                                </td>
+                                                <td>
+                                                    <select class="mid-lowSize" name="" id="">
+                                                        <option value="">열람</option>
+                                                        <option value="">추첨검토</option>
+                                                        <option value="">인터뷰</option>
+                                                        <option value="">최종합격</option>
+                                                        <option value="">불합격</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="phoImg">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh"> 100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>에코</strong>
+                                                    <p>정회원</p>
+                                                </td>
+                                                <td>
+                                                    <strong>김기쁨(여)</strong>
+                                                    <p>29세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>경기</strong>
+                                                    <p>성남시 중원구</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">4년 3개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>
+                                                        <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                        중급
+                                                    </strong>
+                                                    <p>2,3년제 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <textarea name="" id="" maxlength="50" placeholder="메모입력" readonly="readonly">ddddddddddddd</textarea>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>희망단가</strong>
+                                                    <p>500만원</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>관리자등록</strong>
+                                                    <p>2023.04.30</p>
+                                                </td>
+                                                <td>
+                                                    <i class="ico file"></i><br>
+                                                    <a href="#" download="">첨부파일</a>
+                                                </td>
+                                                <td>
+                                                    <select class="mid-lowSize" name="" id="">
+                                                        <option value="">열람</option>
+                                                        <option value="">추첨검토</option>
+                                                        <option value="">인터뷰</option>
+                                                        <option value="">최종합격</option>
+                                                        <option value="">불합격</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh"> 100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>
+                                                </td>
+                                                <td>
+                                                    <strong>김기쁨(여)</strong>
+                                                    <p>29세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>서울</strong>
+                                                    <p>강서</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">22년 4개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>초급</strong>
+                                                    <p>고등학교 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <textarea name="" id="" maxlength="50" placeholder="메모입력" readonly="readonly"></textarea>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>희망단가</strong>
+                                                    <p>800만원</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>지원일</strong>
+                                                    <p>2023.05.30</p>
+                                                </td>
+                                                <td>-</td>
+                                                <td>
+                                                    <span class="point">투입확정</span>                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="phoImg">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh"> 100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>에코</strong>
+                                                    <p>정회원</p>
+                                                </td>
+                                                <td>
+                                                    <strong>김기쁨(여)</strong>
+                                                    <p>29세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>경기</strong>
+                                                    <p>성남시 중원구</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">4년 3개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>중급</strong>
+                                                    <p>2,3년제 졸업</p>
+                                                </td>
+                                                <td>
+                                                    <textarea name="" id="" maxlength="50" placeholder="메모입력" readonly="readonly">ddddddddddddd</textarea>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>희망단가</strong>
+                                                    <p>500만원</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>관리자등록</strong>
+                                                    <p>2023.04.30</p>
+                                                </td>
+                                                <td>
+                                                    <i class="ico file"></i><br>
+                                                    <a href="#" download="">첨부파일</a>
+                                                </td>
+                                                <td>
+                                                    <select class="mid-lowSize" name="" id="">
+                                                        <option value="">열람</option>
+                                                        <option value="">추첨검토</option>
+                                                        <option value="">인터뷰</option>
+                                                        <option value="">최종합격</option>
+                                                        <option value="">불합격</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="listBottom pagingType">                        
+                                    <div class="paging">
+                                        <ul>
+                                            <li class="pagingDouble">
+                                                <a href="#">
+                                                    <span class="ico pagingFirst"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="ico pagingLeft"></span>
+                                                </a>
+                                            </li>
+                                            <li class="is-active"><a>1</a></li>
+                                            <li><a>2</a></li>
+                                            <li><a>3</a></li>
+                                            <li><a>4</a></li>
+                                            <li><a>5</a></li>
+                                            <li><a>6</a></li>
+                                            <li><a>7</a></li>
+                                            <li><a>8</a></li>
+                                            <li><a>9</a></li>
+                                            <li><a>10</a></li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="ico pagingRight is-active"></span>
+                                                </a>
+                                            </li>
+                                            <li class="pagingDouble">
+                                                <a href="#">
+                                                    <span class="ico pagingLast is-active"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab-03" class="tabCont">
+                                <div class="tableBox">                              
+                                    <table class="chkType">
+                                        <colgroup>
+                                            <col width="5%">
+                                            <col width="4%;">
+                                            <col width="9%;">
+                                            <col width="9%;">                                          
+                                            <col width="9%;">
+
+                                            <col width="9%;">
+                                            <col width="9%;">
+                                            <col width="9%;">
+                                            <col width="9%;">
+
+                                            <col>
+                                            <col width="12%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th colspan="10" class="txtRight">
+                                                    <input type="checkbox" id="level" class="hasTxt">
+                                                    <label for="level">인정등급</label>
+                                                    
+                                                    <span class="subInfo">
+                                                        (비삼성 WEB_SAP)
+                                                        <span class="hasTooltip">
+                                                            <i class="ico qMark"></i>
+                                                            <div class="tooltip type2">                                            
+                                                                <p>???</p>
+                                                                ????
+                                                            </div>       
+                                                        </span>
+                                                    </span>                                                   
+                                                    <select class="mid-lowSize ml10" name="" id="">
+                                                        <option value="">정렬기준 전체</option>
+                                                        <option value="">읽음</option>
+                                                        <option value="">아직 읽지 않음</option>
+                                                        <option value="">제안수락</option>
+                                                        <option value="">제안거절</option>
+                                                        <option value="">지원완료</option>
+                                                    </select>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh"> 100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>
+                                                </td>
+                                                <td>
+                                                    <strong>김기쁨(여)</strong>
+                                                    <p>29세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>서울</strong>
+                                                    <p>강서</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">22년 4개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>
+                                                        <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                        초급
+                                                    </strong>
+                                                    <p>고등학교 졸업</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>제안자</strong>
+                                                    <p>홍길동 책임</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>제안일</strong>
+                                                    <p>2023.05.30</p>
+                                                </td>
+                                                <td>
+                                                    <span class="sClear">
+                                                        <span class="dot"></span>
+                                                        읽음(2023.06.02)
+                                                    </span>
+                                                </td>
+                                                <td><button class="white smSize">제안이력</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="phoImg">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh"> 100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>에코</strong>
+                                                    <p>정회원</p>
+                                                </td>
+                                                <td>
+                                                    <strong>김기쁨(여)</strong>
+                                                    <p>29세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>경기</strong>
+                                                    <p>성남시 중원구</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">4년 3개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>
+                                                        <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                        중급
+                                                    </strong>
+                                                    <p>2,3년제 졸업</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>제안자</strong>
+                                                    <p>김기쁨책임</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>관리자등록</strong>
+                                                    <p>2023.04.30</p>
+                                                </td>
+                                                <td>
+                                                    <span class="sCancel">
+                                                        <span class="dot"></span>
+                                                        읽지않음(+5일)
+                                                    </span>
+                                                </td>
+                                                <td><button class="white smSize">제안이력</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh"> 100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>
+                                                </td>
+                                                <td>
+                                                    <strong>김기쁨(여)</strong>
+                                                    <p>29세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>서울</strong>
+                                                    <p>강서</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">22년 4개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>
+                                                        <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                        초급
+                                                    </strong>
+                                                    <p>고등학교 졸업</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>제안자</strong>
+                                                    <p>김길동수석</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>지원일</strong>
+                                                    <p>2023.05.30</p>
+                                                </td>
+                                                <td>
+                                                    <span class="sReject">
+                                                        <span class="dot"></span>
+                                                        제안거절(2023.06.01)
+                                                    </span>
+                                                </td>
+                                                <td><button class="white smSize">제안이력</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="phoImg">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh"> 100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>에코</strong>
+                                                    <p>정회원</p>
+                                                </td>
+                                                <td>
+                                                    <strong>김기쁨(여)</strong>
+                                                    <p>29세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>경기</strong>
+                                                    <p>성남시 중원구</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">4년 3개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>
+                                                        <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                        중급
+                                                    </strong>
+                                                    <p>2,3년제 졸업</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>제안자</strong>
+                                                    <p>홍길동선임</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>관리자등록</strong>
+                                                    <p>2023.04.30</p>
+                                                </td>
+                                                <td>
+                                                    <span class="sCancel">미응답</span>
+                                                    <button class="bdType smSize">다시 제안하기</button>
+                                                </td>
+                                                <td><button class="white smSize">제안이력</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh"> 100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>프리랜서</strong>
+                                                    <p>정회원</p>
+                                                </td>
+                                                <td>
+                                                    <strong>김기쁨(여)</strong>
+                                                    <p>29세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>서울</strong>
+                                                    <p>강서</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">22년 4개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>초급</strong>
+                                                    <p>고등학교 졸업</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>제안자</strong>
+                                                    <p>홍길동책임</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>지원일</strong>
+                                                    <p>2023.05.30</p>
+                                                </td>
+                                                <td>
+                                                    <span class="sClear">지원완료 (2023.06.04)</span>
+                                                </td>
+                                                <td><button class="white smSize">제안이력</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="phoImg">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <span class="eHigh"> 100.0</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                    <label for="bMark_a"></label>
+                                                </td>
+                                                <td>
+                                                    <strong>에코</strong>
+                                                    <p>정회원</p>
+                                                </td>
+                                                <td>
+                                                    <strong>김기쁨(여)</strong>
+                                                    <p>29세</p>
+                                                </td>
+                                                <td>
+                                                    <strong>경기</strong>
+                                                    <p>성남시 중원구</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>기획</strong>
+                                                    <p class="eHigh">4년 3개월</p>
+                                                </td>
+                                                <td>
+                                                    <strong>중급</strong>
+                                                    <p>2,3년제 졸업</p>
+                                                </td>
+                                                <td>                                           
+                                                    <strong>제안자</strong>
+                                                    <p>홍길동책임</p>
+                                                </td>
+                                                <td>                                                    
+                                                    <strong>관리자등록</strong>
+                                                    <p>2023.04.30</p>
+                                                </td>
+                                                <td>
+                                                    <span class="sClear">읽음(2023.06.02)</span>
+                                                </td>
+                                                <td><button class="white smSize">제안이력</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="listBottom pagingType">                        
+                                    <div class="paging">
+                                        <ul>
+                                            <li class="pagingDouble">
+                                                <a href="#">
+                                                    <span class="ico pagingFirst"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="ico pagingLeft"></span>
+                                                </a>
+                                            </li>
+                                            <li class="is-active"><a>1</a></li>
+                                            <li><a>2</a></li>
+                                            <li><a>3</a></li>
+                                            <li><a>4</a></li>
+                                            <li><a>5</a></li>
+                                            <li><a>6</a></li>
+                                            <li><a>7</a></li>
+                                            <li><a>8</a></li>
+                                            <li><a>9</a></li>
+                                            <li><a>10</a></li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="ico pagingRight is-active"></span>
+                                                </a>
+                                            </li>
+                                            <li class="pagingDouble">
+                                                <a href="#">
+                                                    <span class="ico pagingLast is-active"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab-04" class="tabCont">
+                                <div class="nodata"><!--추천없을 때-->
+                                    추천회원이 없습니다.
+                                    <button class="bdType layerOpen" aria-controls="recomDetail">검색조건 변경하기 "팝업"</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+                
+        <!--우측패널-->
+        <div class="rPanelLayer">
+            <div class="rPanelBox">
+                <div class="rPanelHeader">
+                    <button class="ico layerClose rClose"></button>
+                </div>
+                <div class="rPanelCont">
+                    <h2>회원검색</h2>
+                    
+                    <div class="hasBtn">  
+                        <a href="#" class="button white onlyIco filter">
+                            <i class="ico filter"></i>
+                        </a>     
+                        <div class="inputIco">
+                            <input type="text" id="search" class="" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
+                            <button class="ico search"></button>
+                        </div>
+                    </div>
+                    <div class="yScroll">
+                        <div class="listTop">                                        
+                            <input type="checkbox" id="chkAll" class="hasTxt">
+                            <label for="chkAll"> 0 / 4</label>
+                            
+                            <input type="checkbox" id="chkLevel" class="hasTxt">
+                            <label for="chkLevel" class="mr0"> 등급으로 보기</label>
+
+                            <i class="ico setting"></i>
+                        </div>
+
+                        <div class="boxListWrap">  
+                            <ul>
+                                <li class="boxList headType is-active"> 
+                                    <div class="head">
+                                        <p class="prefix">
+                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
+                                            <label for="memChk_1"></label>
+
+                                            <span>90.0</span>
+                                        </p>
+                                        <p class="suffix"></p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <div class="flexCenter">  
+                                                        <a href="#" target="_blank">홍길순(여/29)</a>
+                                                        <span>개발</span>
+                                                        <span>네트워크엔지니어</span>
+                                                    </div>                                                 
+                                                </li>
+                                                <li>
+                                                    <span>010-5923-1209</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                </li>
+                                                <li class="memMemo">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                                <li class="memMemo is-active">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="suffix colType hasTooltip clear">
+                                            투입중<br>(~22/05/01)                                                                        
+                                            <div class="tooltip">
+                                                CJ프레시웨이 온리원푸드넷                             
+                                            </div>         
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="boxList headType"> 
+                                    <div class="head">
+                                        <p class="prefix">
+                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
+                                            <label for="memChk_1"></label>
+
+                                            <span>88.8</span>
+                                        </p>
+                                        <p class="suffix"></p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <span class="phoImg">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <div class="flexCenter">  
+                                                        <a href="#" target="_blank">홍길순(여/29)</a>
+                                                        <span>개발</span>
+                                                        <span>네트워크엔지니어</span>
+                                                    </div>                                                 
+                                                </li>
+                                                <li>
+                                                    <span>010-3245-3451</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                </li>
+                                                <li class="memMemo">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="suffix">
+                                            <button class="lowSize">연락하기</button>  
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="boxList headType"> 
+                                    <div class="head">
+                                        <p class="prefix">
+                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
+                                            <label for="memChk_1"></label>
+
+                                            <span>90.0</span>
+                                        </p>
+                                        <p class="suffix"></p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <span class="phoImg">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <div class="flexCenter">  
+                                                        <a href="#" target="_blank">홍길순(여/29)</a>
+                                                        <span>디자인</span>
+                                                        <span>에코</span>
+                                                    </div>                                                 
+                                                </li>
+                                                <li>
+                                                    <span>010-3245-3451</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                </li>
+                                                <li class="memMemo">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="suffix">
+                                            제안불가<br>(부회원) 
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li class="boxList headType"> 
+                                    <div class="head">
+                                        <p class="prefix">
+                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
+                                            <label for="memChk_1"></label>
+
+                                            <span>90.0</span>
+                                        </p>
+                                        <p class="suffix"></p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <div class="flexCenter">  
+                                                        <a href="#" target="_blank">홍길순(여/29)</a>
+                                                        <span>디자인</span>
+                                                        <span>에코</span>
+                                                    </div>                                                 
+                                                </li>
+                                                <li>
+                                                    <span>010-3245-3451</span>
+                                                    <span>abc@echoit.co.kr</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                </li>
+                                                <li class="memMemo">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="suffix">
+                                            제안불가<br>(부회원) 
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a href="#" class="goTop">
+                            <i class="ico top"></i>
+                        </a>
+                    </div>
+
+                    <div class="listBottom pagingType">                        
+                        <div class="paging">
+                            <ul>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico pagingFirst"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico pagingLeft"></span>
+                                    </a>
+                                </li>
+                                <li class="is-active"><a>1</a></li>
+                                <li><a>2</a></li>
+                                <li><a>3</a></li>
+                                <li><a>4</a></li>
+                                <li><a>5</a></li>
+                                <li><a>6</a></li>
+                                <li><a>7</a></li>
+                                <li><a>8</a></li>
+                                <li><a>9</a></li>
+                                <li><a>10</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico pagingRight is-active"></span>
+                                    </a>
+                                </li>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico pagingLast is-active"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filterWrapper">
+                <div class="filterTop">
+                    <h2>필터</h2>
+                    <a href="#" class="ico refresh"></a>
+                </div>                        
+                
+                <div class="filterList">
+                    <div class="tit">등급</div>  
+
+                    <input type="checkbox" id="lvAll" name="level" class="hasTxt">
+                    <label for="lvAll">전체</label>      
+                    <input type="checkbox" id="lv3" name="level" class="hasTxt">
+                    <label for="lv3">특급</label>                     
+                    <input type="checkbox" id="lv2" name="level" class="hasTxt">
+                    <label for="lv2">고급</label>                     
+                    <input type="checkbox" id="lv1" name="level" class="hasTxt">
+                    <label for="lv1">중급</label>                     
+                    <input type="checkbox" id="lv0" name="level" class="hasTxt">
+                    <label for="lv0">초급</label>
+                </div>       
+
+                <div class="filterList">
+                    <div class="tit">학력</div>  
+
+                    <input type="radio" id="eduLv0" name="eduLevel" class="hasTxt">
+                    <label for="eduLv0">전체</label>
+                    <input type="radio" id="eduLv3" name="eduLevel" class="hasTxt">
+                    <label for="eduLv3">대졸이상</label>
+                    <input type="radio" id="eduLv2" name="eduLevel" class="hasTxt">
+                    <label for="eduLv2">초대졸 이상</label>
+                    <input type="radio" id="eduLv1" name="eduLevel" class="hasTxt">
+                    <label for="eduLv1">고졸 이상</label>
+                </div>      
+                
+                <div class="filterList">
+                    <div class="tit">정보처리기사</div>  
+
+                    <input type="radio" id="licenseAll" name="license" class="hasTxt">
+                    <label for="licenseAll">전체</label>  
+                    <input type="radio" id="license1" name="license" class="hasTxt">
+                    <label for="license1">있음</label>                     
+                    <input type="radio" id="license0" name="license" class="hasTxt">
+                    <label for="license0">없음</label>       
+                </div>  
+                
+                <div class="filterList">
+                    <div class="tit">KOSA</div>  
+
+                    <input type="radio" id="kosaAll" name="kosa" class="hasTxt">
+                    <label for="kosaAll">전체</label>   
+                    <input type="radio" id="kosa1" name="kosa" class="hasTxt">
+                    <label for="kosa1">있음</label>                     
+                    <input type="radio" id="kosa0" name="kosa" class="hasTxt">
+                    <label for="kosa0">없음</label>       
+                </div>    
+                
+                <div class="filterList">
+                    <div class="tit">평가</div>  
+                    
+                    <input type="radio" id="score0" name="score" class="hasTxt">
+                    <label for="score0">전체</label>    
+                    <input type="radio" id="score3" name="score" class="hasTxt">
+                    <label for="score3">90점 이상</label>  
+                    <input type="radio" id="score2" name="score" class="hasTxt">
+                    <label for="score2">80점 이상</label> 
+                    <input type="radio" id="score1" name="score" class="hasTxt">
+                    <label for="score1">70점 이상</label>   
+                </div>             
+            </div>
+        </div>
+        <div class="rPanel">
+            <ul>
+                <li><i class="ico searchMem"></i></li>
+                <li><i class="ico schedule"></i></li>
+                <li><i class="ico mail"></i></li>
+            </ul>
+        </div>
+        <!--우측패널-->
+    </section>
+
+    <!--직무추천세부설정 팝업-->
+    <div id="recomDetail" class="modalLayer center">
+        <div class="layerBox">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont">
+                <h3>직무추천 세부설정</h3>
+
+                <div class="filterList">
+                    <div class="filterTop flex">
+                        <h4>선호업무</h4>
+                    </div>
+                    <div class="btnType low block">
+                        <input type="radio" id="workAll" name="workType" value="workAll" checked="">
+                        <label for="workAll">전체</label>
+                        <input type="radio" id="workSI" name="workType" value="workSI">
+                        <label for="workSI">SI</label>
+                        <input type="radio" id="workSM" name="workType" value="workSM">
+                        <label for="workSM">SM</label>
+                    </div>
+                </div>
+
+                <div class="filterList">
+                    <div class="filterTop flex">
+                        <h4 class="">보유경력</h4>  
+                        <div class="ml10">
+                            <input type="text" class="xxsSize txtCenter" value="8" id="careerFrom" readonly="">
+                            ~
+                            <input type="text" class="xxsSize txtCenter" value="22" id="careerTo" readonly="">
+                            년
+                        </div>
+                        <button class="round ml10">기본값</button>
+                    </div>
+
+                    <div class="rangeSlider multi">
+                        <!-- 진짜 슬라이더 -->
+                        <input type="range" id="careerLeft" min="0" max="100" value="25">
+                        <input type="range" id="careerRight" min="0" max="100" value="75">
+                    
+                        <!-- 커스텀 슬라이더 -->
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb left"></div>
+                            <div class="thumb right"></div>
+                        </div>
+
+                        <div class="marking">
+                            <ul>
+                                <li>0</li>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>30</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="filterList">
+                    <div class="filterTop flex">
+                        <h4 class="">키워드 적용</h4>     
+                        <span>(보유경험, 보유스킬, 메모)</span>
+                        <button class="round ml10">기본값</button>
+                    </div>
+                    <div class="inputGroup">
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj is-active">
+                            <input type="text" class="midSize" id="inputBox" placeholder="(예) Java, JSP">
+                        </div>
+                    </div>
+                    <div class="alertToast is-active" id="toast01">
+                        중요 프로젝트로 설정되었습니다.
+                        <i class="ico smClose w"></i>
+                    </div>
+                </div>
+
+                <div class="filterList">
+                    <div class="filterTop flex">
+                        <h4 class="">회사까지거리</h4>           
+                        <div class="ml10">
+                            <input type="text" class="xxsSize txtCenter" value="5" id="comDistance" readonly="">
+                            km
+                        </div>
+                        <button class="round ml10">기본값</button>
+                    </div>
+
+                    <div class="rangeSlider single">                    
+                        <input type="range" id="distanceTo" min="0" max="50" value="5">
+                        
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range" style="right: 90%;"></div>
+                            <div class="thumb right" style="right: 90%;"></div>
+                        </div>
+                        
+                        <div class="marking">
+                            <ul>
+                                <li>0</li>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>30</li>
+                                <li>40</li>
+                                <li>50</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listBottom">
+                    <button class="white prefix">닫기</button>
+                    <button class="suffix">적용</button>
+                </div>
+            </div>
+        </div>
+        <div class="layerDim"></div>  
+    </div>
+    <!--//직무추천세부설정 팝업-->
+
+    <!--프로젝트선택 팝업-->
+    <div id="recruitProject" class="modalLayer center"><!--id 바뀌면 말씀해주세요 -ys -->
+        <div class="layerBox">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont"> 
+                <h3>모집 공고가 등록되는 프로젝트를 선택해주세요.</h3>                
+
+                <div class="selectedBox is-active">
+                    <div class="ellipsis">
+                        [대외비] 골프존유통 대기업 B2B 주문 프로세스 개선 프로젝트 골프존유통 대기업 B2B 주문 프로세스 개선 프로젝트
+                    </div>
+                </div>
+                <div class="selectList is-active">
+                    <ul>
+                        <li>
+                            <div class="prefix">세무정보처리(TAT)2급 (국가..)</div>
+                            <div class="suffix">2023.01.01 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보기술자격(ITQ)파워포인트</div>
+                            <div class="suffix">2023.11.01 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">ERP 물류정보관리사 2급</div>
+                            <div class="suffix">2022.04.31 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보처리기사</div>
+                            <div class="suffix">2023.08.12 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보기술자격(ITQ)MS Word</div>
+                            <div class="suffix">2022.11.31 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보기술자격(ITQ) 아래한글</div>
+                            <div class="suffix">2023.11.11 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보보안기사</div>
+                            <div class="suffix">2022.11.31 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">세무정보처리(TAT)2급 (국가..)</div>
+                            <div class="suffix">2023.04.05 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보기술자격(ITQ)파워포인트</div>
+                            <div class="suffix">2023.06.10 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">ERP 물류정보관리사 2급</div>
+                            <div class="suffix">2023.01.11 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보처리기사</div>
+                            <div class="suffix">2023.01.18 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보기술자격(ITQ)MS Word</div>
+                            <div class="suffix">2023.01.01 등록</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="listBox">
+                    <ul>
+                        <li>
+                            <span>기획 - 모바일기획</span>
+                            <button class="smSize">선택</button>
+                        </li>
+                        <li>
+                            <span>개발 - 백엔드</span>
+                            <button class="smSize">선택</button>
+                        </li>
+                        <li>
+                            <span>기획 - 웹기획</span>
+                            <button class="smSize">선택</button>
+                        </li>
+                        <li>
+                            <span>PM - PM</span>
+                            <button class="smSize">선택</button>
+                        </li>
+                        <li>
+                            <span>PM - PM</span>
+                            <button class="smSize">선택</button>
+                        </li>
+                        <li>
+                            <span>디자인 - 디자인</span>
+                            <button class="smSize">선택</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="listBottom">
+                    <button class="white layerClose">취소</button>
+                    <button class="bdType">다른직무 선택</button> 
+                </div>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//프로젝트선택 팝업-->
+
+
+    <!--필터 전체 팝업-->
+    <div id="searchFilter" class="modalLayer center">
+        <div class="layerBox laSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont">
+                <h3>검색필터</h3>
+
+                <ul>
+                    <li>
+                        <div class="filterList">
+                            <h4>평가</h4>
+
+                            <div class="">
+                                <ul>
+                                    <li>                  
+                                        <input type="radio" id="scoreAll" name="score" value="scoreAll" class="hasTxt" checked="">
+                                        <label for="scoreAll">전체</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="score100" name="score" value="score90" class="hasTxt">
+                                        <label for="score100">스페셜회원만</label>  
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="score90" name="score" value="score90" class="hasTxt">
+                                        <label for="score90">90점 이상</label>  
+                                    </li>
+                                    <li>                 
+                                        <input type="radio" id="score80" name="score" value="score80" class="hasTxt">
+                                        <label for="score80">80점 이상</label>   
+                                    </li>
+                                    <li>               
+                                        <input type="radio" id="score70" name="score" value="score70" class="hasTxt">
+                                        <label for="score90">70점 이상</label>   
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="filterList">
+                            <h4>소속</h4>
+
+                            <div class="">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="tt1" class="hasTxt">
+                                        <label for="tt">전체</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="tt2" class="hasTxt" checked="">
+                                        <label for="tt2">에코</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="tt3" class="hasTxt">
+                                        <label for="tt3">협력</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="tt4" class="hasTxt" checked="">
+                                        <label for="tt4">대행</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="tt5" class="hasTxt">
+                                        <label for="tt5">프리</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>  
+                    </li>
+                    <li>
+                        <div class="filterList">
+                            <h4>성별/나이</h4>
+
+                            <div class="btnType smSize">
+                                <input type="checkbox" id="b11" class="hasTxt">
+                                <label for="b11">남자</label>
+                                <input type="checkbox" id="b21" class="hasTxt" checked="">
+                                <label for="b21">여자</label>
+                            </div>
+
+                            <div class="">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="age25" class="hasTxt">
+                                        <label for="age25">~ 25세 이하</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="age26" class="hasTxt" checked="">
+                                        <label for="age26">26 ~ 30세</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="age31" class="hasTxt">
+                                        <label for="age31">31 ~ 35세</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="age36" class="hasTxt" checked="">
+                                        <label for="age36">36 ~ 40세</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="age40" class="hasTxt">
+                                        <label for="age40">40세 이상 ~</label>
+                                    </li>
+                                </ul>
+                            </div>
+        
+                            <div class="flex mt20">
+                                <input type="text" class="xxsSize" placeholder="00">
+                                ~
+                                <input type="text" class="xxsSize" placeholder="99">
+                                <button class="smSize ml10">추가</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="filterList">
+                            <h4>학력</h4>
+
+                            <div class="">
+                                <ul>
+                                    <li>                     
+                                        <input type="checkbox" id="eduLv0" class="hasTxt" checked="">
+                                        <label for="eduLv0">전체</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="eduLv3" class="hasTxt">
+                                        <label for="eduLv3">석/박사 졸업</label>  
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="eduLv3" class="hasTxt">
+                                        <label for="eduLv3">4년제 졸업</label>  
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="eduLv2" class="hasTxt">
+                                        <label for="eduLv2">2,3년제 졸업</label> 
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="eduLv1" class="hasTxt">
+                                        <label for="eduLv1">고등학교 졸업</label>  
+                                    </li>
+                                </ul> 
+                            </div>                               
+                        </div>
+                    </li>
+                    <li>
+                        <div class="filterList">
+                            <h4>경력</h4>
+
+                            <div class="">
+                                <ul>
+                                    <li>                     
+                                        <input type="checkbox" id="careerAll" class="hasTxt" checked="">
+                                        <label for="careerAll">전체</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="career1" class="hasTxt">
+                                        <label for="career1">~ 3년</label>  
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="career2" class="hasTxt">
+                                        <label for="career2">3 ~ 5년</label>  
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="career3" class="hasTxt">
+                                        <label for="career3">5 ~ 10년</label>  
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="career4" class="hasTxt">
+                                        <label for="career4">10 ~ 15년</label>  
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="career5" class="hasTxt">
+                                        <label for="career5">15년 ~</label>  
+                                    </li>
+                                </ul>          
+                            </div>     
+
+                            <div class="flex mt20">
+                                <input type="text" class="xxsSize" placeholder="00">
+                                ~
+                                <input type="text" class="xxsSize" placeholder="99">
+                                <button class="smSize ml10">추가</button>
+                            </div>                 
+                        </div>
+                    </li>
+                    <li>
+                        <div class="filterList">
+                            <h4>가용일자</h4>
+
+                            <div class="">
+                                <ul>
+                                    <li>                  
+                                        <input type="radio" id="date10" name="score" value="scoreAll" class="hasTxt" checked="">
+                                        <label for="date10">~ 10일 이내</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="date20" name="score" value="score90" class="hasTxt">
+                                        <label for="date20">~ 20일 이내</label>  
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="date30" name="score" value="score90" class="hasTxt">
+                                        <label for="date30">~ 30일 이내</label>  
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mt10">
+                                <input class="dateType" type="text" placeholder="연도 - 월 - 일" id="datepicker"> 
+                                부터
+                                <input class="dateType mt10" type="text" placeholder="연도 - 월 - 일" id="datepicker"> 
+                                까지
+                                <button class="smSize mt10">추가</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="filterList">
+                            <h4>거리</h4>
+
+                            <div class="">
+                                <ul>
+                                    <li>                     
+                                        <input type="radio" id="distance00" name="distance" class="hasTxt" checked="">
+                                        <label for="distance00">전체</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="distance10" name="distance" class="hasTxt">
+                                        <label for="distance10">10km 이내</label>  
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="distance20" name="distance" class="hasTxt">
+                                        <label for="distance20">20km 이내</label> 
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="distance30" name="distance" class="hasTxt">
+                                        <label for="distance30">30km 이내</label>  
+                                    </li>
+                                    <li>                     
+                                        <input type="radio" id="distance40" name="distance" class="hasTxt" checked="">
+                                        <label for="distance40">40km 이내</label>
+                                    </li>
+                                    <li>                     
+                                        <input type="radio" id="distance50" name="distance" class="hasTxt" checked="">
+                                        <label for="distance50">50km 이내</label>
+                                    </li>
+                                </ul>    
+                            </div>                            
+                        </div>
+                    </li>
+                </ul>
+                 
+
+                <div class="listBottom">
+                    <div class="inputGroup">
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>JSP</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                        <div class="inputObj">
+                            <span>Java</span>
+                            <button class="ico smClose w"></button>
+                        </div>
+                    </div>
+                    <div class="suffix">
+                        <button class="white">초기화</button>
+                        <button class="">적용</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layerDim"></div>  
+    </div>
+    <!--//필터 전체 팝업-->
+
+    <!--첨부파일 리스트 팝업-->
+    <div id="fileList" class="modalLayer center">
+        <div class="layerBox smMidSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+            <div class="modalCont">
+                <h3>첨부파일</h3>
+                <div class="h3_sub">해당 모집공고에 첨부된 파일만 다운로드 할 수 있습니다.</div>
+
+                <div class="fileBox">
+                    <div class="fileTop">
+                        <h6>첨부일시 : 2023.05.31 HH:MM</h6>
+                        <button class="txtType">[모두저장]</button>
+                    </div>
+                    <div class="fileList">
+                        <ul class="list_ul">
+                            <li>
+                                <div class="fileInfo">
+                                    <span>홍길동 포트폴리오.pdf</span>
+                                    <span>45 KB</span>
+                                </div>
+                                <i class="ico download"></i>
+                            </li>
+                            <li>                                
+                                <div class="fileInfo">
+                                    <span>홍길동 이력서 업데이트.ppt</span>
+                                    <span>45 KB</span>
+                                </div>
+                                <i class="ico download"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fileBox">
+                    <div class="fileTop">
+                        <h6>첨부일시 : 2023.05.31 HH:MM</h6>
+                        <button class="txtType">[모두저장]</button>
+                    </div>
+                    <div class="fileList">
+                        <ul class="list_ul">
+                            <li>
+                                <div class="fileInfo">
+                                    <span>홍길동 기술명세서.pdf</span>
+                                    <span>45 KB</span>
+                                </div>
+                                <i class="ico download"></i>
+                            </li>
+                            <li>                                
+                                <div class="fileInfo">
+                                    <span>홍길동 포트폴리오 추가본_참고.JPG</span>
+                                    <span>45 KB</span>
+                                </div>
+                                <i class="ico download"></i>
+                            </li>
+                            <li>
+                                <div class="fileInfo">
+                                    <span>홍길동 기술명세서.pdf</span>
+                                    <span>45 KB</span>
+                                </div>
+                                <i class="ico download"></i>
+                            </li>
+                            <li>                                
+                                <div class="fileInfo">
+                                    <span>홍길동 포트폴리오 추가본_참고.JPG</span>
+                                    <span>45 KB</span>
+                                </div>
+                                <i class="ico download"></i>
+                            </li>
+                            <li>
+                                <div class="fileInfo">
+                                    <span>홍길동 기술명세서.pdf</span>
+                                    <span>45 KB</span>
+                                </div>
+                                <i class="ico download"></i>
+                            </li>
+                            <li>                                
+                                <div class="fileInfo">
+                                    <span>홍길동 포트폴리오 추가본_참고.JPG</span>
+                                    <span>45 KB</span>
+                                </div>
+                                <i class="ico download"></i>
+                            </li>
+                            <li>
+                                <div class="fileInfo">
+                                    <span>홍길동 기술명세서.pdf</span>
+                                    <span>45 KB</span>
+                                </div>
+                                <i class="ico download"></i>
+                            </li>
+                            <li>                                
+                                <div class="fileInfo">
+                                    <span>홍길동 포트폴리오 추가본_참고.JPG</span>
+                                    <span>45 KB</span>
+                                </div>
+                                <i class="ico download"></i>
+                            </li>
+                            <li>
+                                <div class="fileInfo">
+                                    <span>홍길동 기술명세서.pdf</span>
+                                    <span>45 KB</span>
+                                </div>
+                                <i class="ico download"></i>
+                            </li>
+                            <li>                                
+                                <div class="fileInfo">
+                                    <span>홍길동 포트폴리오 추가본_참고.JPG</span>
+                                    <span>45 KB</span>
+                                </div>
+                                <i class="ico download"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modalFooter single">
+                <button class="white layerClose">닫기</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//첨부파일 리스트 팝업-->
+
+
+    <!--프로젝트 제안이력 팝업-->
+    <div id="projOfferHis" class="modalLayer center"><!--id 바뀌면 말씀해주세요 -ys-->
+        <div class="layerBox mid-laSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+            <div class="modalCont">
+                <h2>프로젝트 제안이력</h2>
+
+                <div class="flex_1_1">
+                    <div class="prefix">
+                        <div class="profile">
+                            <span class="phoImg is-special">
+                                <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                            </span>  
+                            <ul>
+                                <li>김기쁨 (여/29) – 기획</li>
+                                <li>정회원  프리랜서</li>
+                                <li>서울 강서구  <span class="eHigh">4년 3개월</span></li>
+                                <li>4년제 졸업 </li>
+                            </ul>
+                        </div>
+                        <div class="tableBox">
+                            <table>
+                                <colgroup>
+                                    <col width="20%">
+                                    <col>
+                                    <col width="20%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>제안일</th>
+                                        <th>제안공고</th>
+                                        <th>제안결과</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2023.01.31</td>
+                                        <td class="ellipsis">대기업 B2B 주문 프로세스 개선 대기업 B2B 주문 프로세스 개선</td>
+                                        <td>읽지않음</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023.01.31</td>
+                                        <td class="ellipsis">삼성화재 스포츠안전재단 연계 삼성화재 스포츠안전재단 연계</td>
+                                        <td>읽음</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023.01.31</td>
+                                        <td class="ellipsis">DBMS</td>
+                                        <td>미응답</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023.01.31</td>
+                                        <td class="ellipsis">중부발전 ERP시스템 기술분야 중부발전 ERP시스템 기술분야</td>
+                                        <td><span class="sOrder">수락</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023.01.31</td>
+                                        <td class="ellipsis">2020년 통합정보시스템 유지 2020년 통합정보시스템 유지</td>
+                                        <td><span class="sReject">제안거절</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023.01.31</td>
+                                        <td class="ellipsis">대기업 B2B 주문 프로세스 개선 대기업 B2B 주문 프로세스 개선</td>
+                                        <td>읽지않음</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="listBottom pagingType">                        
+                            <div class="paging">
+                                <ul>
+                                    <li class="pagingDouble">
+                                        <a href="#">
+                                            <span class="ico pagingFirst"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ico pagingLeft"></span>
+                                        </a>
+                                    </li>
+                                    <li class="is-active"><a>1</a></li>
+                                    <li><a>2</a></li>
+                                    <li><a>3</a></li>
+                                    <li><a>4</a></li>
+                                    <li><a>5</a></li>
+                                    <li><a>6</a></li>
+                                    <li><a>7</a></li>
+                                    <li><a>8</a></li>
+                                    <li><a>9</a></li>
+                                    <li><a>10</a></li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ico pagingRight is-active"></span>
+                                        </a>
+                                    </li>
+                                    <li class="pagingDouble">
+                                        <a href="#">
+                                            <span class="ico pagingLast is-active"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suffix">
+                        <div class="offerResult">
+                            <h4>제안결과 : 읽지않음</h4>
+                            <ul>
+                                <li>제안일자 :  2023.01.01  (홍길동 제안)</li>
+                                <li>제안메세지</li>
+                                <div class="offerMessage">
+                                    <div class="yScroll">
+                                    안녕하세요. ㈜에코아이티 플랫폼전략파트 홍길동입니다. <br>
+                                    저희가 찾고 있는 포지션에 적합한 인재라고 생각되어 <br>
+                                    이렇게 제안 드립니다.<br><br>
+
+                                    프로젝트 명 : 대기업 B2B 주문 프로세스 개선상세내용 : L사(에너지) 차세대 ERP PI
+                                    
+                                    
+                                    안녕하세요. ㈜에코아이티 플랫폼전략파트 홍길동입니다. <br>
+                                    저희가 찾고 있는 포지션에 적합한 인재라고 생각되어 <br>
+                                    이렇게 제안 드립니다.<br><br>
+
+                                    프로젝트 명 : 대기업 B2B 주문 프로세스 개선상세내용 : L사(에너지) 차세대 ERP PI
+                                    </div>
+                                </div>
+                                <li>제안금액 :  900만원</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modalFooter single">
+                <button class="white layerClose">닫기</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//프로젝트 제안이력 팝업-->
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        rangeSliderMulti();
+        rangeSlider();
+
+        //모집공고선택 selectbox
+        $(".selectedBox").on("click", function(){
+            $(this).toggleClass("is-active");
+            $(this).next(".selectList").toggleClass("is-active");
+        });
+    </script>
+</body>
+</html>

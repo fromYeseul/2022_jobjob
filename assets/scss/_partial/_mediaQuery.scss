@@ -26,8 +26,17 @@
     .contLayout{
         //min-height: calc(100vh - 80px) !important;
         //min-height: calc(100vh - 70px) !important;
-        height: calc(100vh - 70px) !important;
-    }    
+        height: calc(100vh - 70px);
+    }
+    header{
+        &.center{
+            & + .contWrapper{
+                .contLayout{
+                    height: calc(100vh - 38px);
+                }
+            }
+        }
+    }     
     .myProjList{
         .boxListWrap{    
             // height: calc(100vh - 174px);
@@ -51,7 +60,7 @@
     } 
     .memList{
         .boxListWrap{
-            height: calc(100vh - 173px);
+            height: calc(100vh - 164px);
         }
     } 
     .quickView{

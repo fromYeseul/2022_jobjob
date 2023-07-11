@@ -17,14 +17,12 @@
                 <a href="#" class="logo">
                     <img src="../assets/img/icoLogo.png" alt="">
                 </a>
-            </div>
+            </div>            
             <div class="suffix">
                 <ul>
                     <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
-                    <li>
-                        <a href="#">내정보 수정</a>
-                        <a href="#" class="logState">로그아웃</a>
-                    </li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li><a href="#">로그아웃</a></li>
                 </ul>
             </div>
         </header>
@@ -90,10 +88,14 @@
                     <h2>모집공고 관리</h2>
 
                     <div class="projBox">
-                        <h4>CJ프레시웨이 온리원푸드넷 UI/UX 및 주문프로세스 개선 프로젝트</h4>
+                        <h4 class="layerOpen" aria-controls="recruitProject">CJ프레시웨이 온리원푸드넷 UI/UX 및 주문프로세스 개선 프로젝트 선택 "팝업열림"</h4>
                         <div class="suffix">
-                            <button class="white laSize">모집직무 추가</button>
+                            <button class="white laSize layerOpen" aria-controls="recruitJob">모집직무 추가 "팝업열림"</button>
                             <button class="laSize">목록으로</button>
+                        </div>
+                        <div class="alertToast is-active" id="toast01">
+                            목록에서 프로젝트를 먼저 선택하세요.
+                            <i class="ico smClose white"></i>
                         </div>
                     </div>
 
@@ -117,7 +119,8 @@
                         </ul>
                         <div class="tabContWrap">
                             <div id="tab-01" class="tabCont is-active">
-                                <div class="accWrap flatType">         
+                                <div class="accWrap flatType">     
+                                      
                                     <div class="accBox is-active"><!--등록된 공고가 있을 때, 기본상태-->
                                         <div class="accHead">
                                             <div class="prefix">
@@ -220,7 +223,7 @@
                                         <div class="accInner infoType">
                                             <div class="innerList">
                                                 <ul>
-                                                    <li class="projTit">[모집중] 대기업 B2B 주문 프로세스 개선 기획자  대기업 B2B 주문 프로세스 개선 기획자 모집대기업 B2B 주문 프로세스(즉시투입 가능자 우대)</li>
+                                                    <li class="projTit">[모집중] 임시저장 레이아웃</li>
                                                     <li class="projManager suffix">채용담당자 : 김진곤, 김진용, 한아라, 김진곤</li>
                                                     <li class="projInfo">
                                                         <ul>
@@ -314,10 +317,35 @@
                                 </div>
                             </div>
 
-                            <div id="tab-02" class="tabCont">모집중</div>
-                            <div id="tab-03" class="tabCont">예정공고</div>
-                            <div id="tab-04" class="tabCont">모집마감</div>
-                            <div id="tab-05" class="tabCont">채용종료</div>
+                            <div id="tab-02" class="tabCont">
+                                <div class="accWrap flatType">     
+                                    <div class="accBox nodata"><!--공고없을 때-->
+                                        게시물이 없습니다.
+                                        + 박스의 하단여백이 어색해요..?
+                                    </div> 
+                                </div>
+                            </div>
+                            <div id="tab-03" class="tabCont">
+                                <div class="accWrap flatType">     
+                                    <div class="accBox nodata"><!--공고없을 때-->
+                                        게시물이 없습니다.
+                                    </div> 
+                                </div>
+                            </div>
+                            <div id="tab-04" class="tabCont">
+                                <div class="accWrap flatType">     
+                                    <div class="accBox nodata"><!--공고없을 때-->
+                                        게시물이 없습니다.
+                                    </div> 
+                                </div>
+                            </div>
+                            <div id="tab-05" class="tabCont">
+                                <div class="accWrap flatType">     
+                                    <div class="accBox nodata"><!--공고없을 때-->
+                                        게시물이 없습니다.
+                                    </div> 
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -661,12 +689,223 @@
         </div>
         <!--우측패널-->
     </section>
+
+
+    <!--모집 직무 선택-->
+    <div id="recruitJob" class="modalLayer center">
+        <div class="layerBox">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont"> 
+                <h3>모집 직무 선택</h3>                
+
+                <div class="filterList mt50">
+                    <div class="listBox">
+                        <div class="prefix">
+                            <div class="chkWrap boxListType">
+                                <input type="radio" id="a01" name="jobGroup">
+                                <label for="a01">개발</label>
+
+                                <input type="radio" id="a02" name="jobGroup">
+                                <label for="a03">개발(SAP)</label>
+
+                                <input type="radio" id="a03" name="jobGroup">
+                                <label for="a03">컨설팅</label>
+
+                                <input type="radio" id="a04" name="jobGroup">
+                                <label for="a04">컨설팅(SAP)</label>  
+                                
+                                <input type="radio" id="a05" name="jobGroup">
+                                <label for="a05">기획</label>   
+                                    
+                                <input type="radio" id="a06" name="jobGroup">
+                                <label for="a06">디자인</label>
+                                    
+                                <input type="radio" id="a07" name="jobGroup">
+                                <label for="a07">퍼블리싱</label>
+                                    
+                                <input type="radio" id="a08" name="jobGroup">
+                                <label for="a08">기획</label>   
+                                    
+                                <input type="radio" id="a09" name="jobGroup">
+                                <label for="a09">개발</label>                                         
+                            </div>
+                        </div>
+                        <div class="suffix">    
+                            <div class="chkWrap boxListType listType">
+                                <input type="radio" id="aa01" name="jobGroup">
+                                <label for="aa01">모바일기획</label>
+
+                                <input type="radio" id="aa02" name="jobGroup">
+                                <label for="aa02">웹기획</label>
+
+                                <input type="radio" id="aa03" name="jobGroup">
+                                <label for="aa03">사업기획</label>      
+
+                                <input type="radio" id="aa04" name="jobGroup">
+                                <label for="aa04">웹기획</label>
+
+                                <input type="radio" id="aa05" name="jobGroup">
+                                <label for="aa05">기타</label>      
+
+                                <input type="radio" id="aa06" name="jobGroup">
+                                <label for="aa06">사업기획</label>
+
+                                <input type="radio" id="aa07" name="jobGroup">
+                                <label for="aa07">사업기획</label>      
+
+                                <input type="radio" id="aa08" name="jobGroup">
+                                <label for="aa08">웹기획</label>
+
+                                <input type="radio" id="aa09" name="jobGroup">
+                                <label for="aa09">사업기획</label>                                    
+                            </div>           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alertToast is-active" id="toast01">
+                    하나만 선택할 수 있습니다.
+                    <i class="ico smClose white"></i>
+                </div>
+
+                <div class="listBottom">
+                    <button class="white layerClose">취소</button>
+                    <button class="">선택완료</button>
+                </div>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//모집 직무 선택-->
+
+
+    <!--공고프로젝트 선택-->
+    <div id="recruitProject" class="modalLayer center"><!--id 바뀌면 말씀해주세요 -ys -->
+        <div class="layerBox">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont"> 
+                <h3>모집 공고가 등록되는 프로젝트를 선택해주세요.</h3>                
+
+                <div class="selectedBox is-active">
+                    <div class="ellipsis">
+                        [대외비] 골프존유통 대기업 B2B 주문 프로세스 개선 프로젝트 골프존유통 대기업 B2B 주문 프로세스 개선 프로젝트
+                    </div>
+                </div>
+                <div class="selectList is-active">
+                    <ul>
+                        <li>
+                            <div class="prefix">세무정보처리(TAT)2급 (국가..)</div>
+                            <div class="suffix">2023.01.01 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보기술자격(ITQ)파워포인트</div>
+                            <div class="suffix">2023.11.01 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">ERP 물류정보관리사 2급</div>
+                            <div class="suffix">2022.04.31 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보처리기사</div>
+                            <div class="suffix">2023.08.12 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보기술자격(ITQ)MS Word</div>
+                            <div class="suffix">2022.11.31 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보기술자격(ITQ) 아래한글</div>
+                            <div class="suffix">2023.11.11 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보보안기사</div>
+                            <div class="suffix">2022.11.31 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">세무정보처리(TAT)2급 (국가..)</div>
+                            <div class="suffix">2023.04.05 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보기술자격(ITQ)파워포인트</div>
+                            <div class="suffix">2023.06.10 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">ERP 물류정보관리사 2급</div>
+                            <div class="suffix">2023.01.11 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보처리기사</div>
+                            <div class="suffix">2023.01.18 등록</div>
+                        </li>
+                        <li>
+                            <div class="prefix">정보기술자격(ITQ)MS Word</div>
+                            <div class="suffix">2023.01.01 등록</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="listBox">
+                    <ul>
+                        <li>
+                            <span>기획 - 모바일기획</span>
+                            <button class="smSize">선택</button>
+                        </li>
+                        <li>
+                            <span>개발 - 백엔드</span>
+                            <button class="smSize">선택</button>
+                        </li>
+                        <li>
+                            <span>기획 - 웹기획</span>
+                            <button class="smSize">선택</button>
+                        </li>
+                        <li>
+                            <span>PM - PM</span>
+                            <button class="smSize">선택</button>
+                        </li>
+                        <li>
+                            <span>PM - PM</span>
+                            <button class="smSize">선택</button>
+                        </li>
+                        <li>
+                            <span>디자인 - 디자인</span>
+                            <button class="smSize">선택</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="listBottom">
+                    <button class="white layerClose">취소</button>
+                    <button class="bdType">다른직무 선택</button> 
+                </div>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//공고프로젝트 선택-->
+
+
+
+
+
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>
-        $(".accBox").not( '.disabled' ).on("click", function(){
+        //아코디언
+        $(".accBox .accHead").on("click", function(){
+            if( !($(this).parent(".accBox").hasClass('disabled')) ) {   //disabled 이 아닌accBox만
+                $(this).parent(".accBox").toggleClass("is-active");
+            }
+        });
+
+        //모집공고선택 selectbox
+        $(".selectedBox").on("click", function(){
             $(this).toggleClass("is-active");
+            $(this).next(".selectList").toggleClass("is-active");
         });
     </script>
 </body>

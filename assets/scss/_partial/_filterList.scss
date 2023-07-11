@@ -118,9 +118,11 @@
 
 //거주지 선택 필터 border제거
 #memArea,
-#spcJob{
+#spcJob,
+#recruitJob{
     .filterList{
         .prefix{
+            input[type=radio],
             input[type=checkbox]{
                 + label{
                     + input{
@@ -148,6 +150,7 @@
             }
         }
         .suffix{
+            input[type=radio],
             input[type=checkbox]{
                 + label{
                     border-top: transparent;
