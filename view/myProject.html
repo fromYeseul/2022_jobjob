@@ -451,21 +451,21 @@
                                                     <table class="chkType">
                                                         <!--230207 수정-->
                                                         <colgroup>
-                                                            <!-- 230623 수정 -ys -->
+                                                            <!-- 230712 수정 -ys -->
                                                             <col width="70px;">
                                                             <col width="65px">
                                                             <col width="30px;">
                                                             <col width="80px;">
                                                             <col width="70px;">
 
-                                                            <col width="90px">
-                                                            <col width="60px;">
+                                                            <col width="70px">
+                                                            <col width="80px;">
                                                             <col width="80px;">
                                                             <col width="30%;">
                                                             <col width="70px;">
 
                                                             <col width="100px;">
-                                                            <!-- //230623 수정 -ys -->
+                                                            <!-- //230712 수정 -ys -->
                                                         </colgroup>
                                                         <thead>
                                                             <tr>
@@ -569,11 +569,49 @@
                                                                     </div>
                                                                 </th>
                                                                 <th>
-                                                                    <input type="checkbox" id="level" class="hasTxt">
-                                                                    <label for="level">등급보기</label>
+                                                                    <!-- <input type="checkbox" id="level" class="hasTxt">
+                                                                    <label for="level">등급보기</label> -->
+
+                                                                    <!--230712 수정 -ys : 등급보기 -> 경력 -->
+                                                                    <span aria-controls="a_memCareer" class="filter">경력</span>
+
+                                                                    <div id="a_memCareer" class="filterWrapper autoSize">
+                                                                        <div class="filterList">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <input type="radio" id="careerLv0" name="careerLevel" class="hasTxt">
+                                                                                    <label for="careerLv0">~ 3년</label>  
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="radio" id="careerLv1" name="careerLevel" class="hasTxt">
+                                                                                    <label for="careerLv1">3 ~ 5년</label> 
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="radio" id="careerLv2" name="careerLevel" class="hasTxt">
+                                                                                    <label for="careerLv2">5 ~ 10년</label>  
+                                                                                </li>
+                                                                                <li>
+                                                                                    <input type="radio" id="careerLv3" name="careerLevel" class="hasTxt">
+                                                                                    <label for="careerLv3">10 ~ 15년</label>  
+                                                                                </li>
+                                                                                <li>                     
+                                                                                    <input type="radio" id="careerLv4" name="careerLevel" class="hasTxt" checked="">
+                                                                                    <label for="careerLv4">15년 ~</label>
+                                                                                </li>
+                                                                            </ul>                                
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--//230712 수정 -ys -->
                                                                 </th>        
                                                                 <th>
                                                                     <!-- <a href="#memEdu"class="layerOpen">학력</a> -->
+
+                                                                    <!--230712 추가 -ys : 학력 -> 인정등급 + 학력-->
+                                                                    <input type="checkbox" id="level" class="hasTxt">
+                                                                    <label for="level">인정등급</label>
+                                                                    /
+                                                                    <!--//230712 추가 -ys -->
+
                                                                     <span aria-controls="a_memEdu" class="filter">학력</span>
 
                                                                     <div id="a_memEdu" class="filterWrapper autoSize">
@@ -647,7 +685,13 @@
                                                                     개발<br>
                                                                     <span class="eHigh">22년 4개월</span>
                                                                 </td>
-                                                                <td>4년제<br>졸업</td>
+                                                                <td>
+                                                                    <!--230712 수정 -ys : 인정등급 추가 -->
+                                                                    <!-- 4년제<br>졸업  -->
+                                                                    <span class="accept">인</span> 초급<br>
+                                                                    4년제 졸업
+                                                                    <!--//230712 수정 -ys  -->
+                                                                </td>
                                                                 <td>서울<br>용인시 처인구</td>
                                                                 <td class="ellipsis">
                                                                     ASP, JSP, Java, Linux, Oracle, UNIX, Maria, SQLite, Mongo, Ember, Redi,                                       
@@ -683,7 +727,10 @@
                                                                 </td>
                                                                 <td>김길동(남)<br>81세</td>
                                                                 <td>개발<br>22년 4개월</td>
-                                                                <td>4년제<br>졸업</td>
+                                                                <td>
+                                                                    <span class="accept">인</span> 초급<br>
+                                                                    2,3년제 졸업
+                                                                </td>
                                                                 <td>서울<br>강서</td>
                                                                 <td class="ellipsis">
                                                                     ASP, JSP, Java,                                       
@@ -714,7 +761,10 @@
                                                                 </td>
                                                                 <td>김길동(남)<br>81세</td>
                                                                 <td>개발<br>22년 4개월</td>
-                                                                <td>4년제<br>졸업</td>
+                                                                <td>
+                                                                    <span class="accept">인</span> 초급<br>
+                                                                    고등학교 졸업
+                                                                </td>
                                                                 <td>서울<br>강서</td>
                                                                 <td class="ellipsis">
                                                                     ASP, JSP, Java, Linux, Oracle, UNIX, Maria, SQLite, Mongo, Ember, Redi                                       
@@ -741,7 +791,10 @@
                                                                 <td>에코</td>
                                                                 <td>김길동(남)<br>81세</td>
                                                                 <td>개발<br>22년 4개월</td>
-                                                                <td>4년제<br>졸업</td>
+                                                                <td>
+                                                                    <span class="accept">인</span> 초급<br>
+                                                                    석사 졸업
+                                                                </td>
                                                                 <td>서울<br>강서</td>
                                                                 <td class="ellipsis">
                                                                     ASP, JSP, Java, Linux, Oracle, UNIX, Maria, SQLite, Mongo, Ember, Redi                                       
@@ -1083,21 +1136,21 @@
                                                 <div class="tableBox">                              
                                                     <table class="chkType hasInput">
                                                         <colgroup>
-                                                            <!-- 230623 수정 -ys -->
+                                                            <!-- 230712 수정 -ys -->
                                                             <col width="60px;">
                                                             <col width="65px">
                                                             <col width="30px;">
                                                             <col width="80px;">
                                                             <col width="70px;">
-                                                            <col width="100px;">
+                                                            <col width="80px;">
                     
-                                                            <col width="65px;">
+                                                            <col width="90px;">
                                                             <col width="80px;">
                                                             <col width="65px;">
                                                             <col width="30%;">
                                                             <col width="90px;">
                                                             <col width="90px">
-                                                            <!-- //230623 수정 -ys -->
+                                                            <!-- //230712 수정 -ys -->
                                                         </colgroup>
                                                         <thead>
                                                             <tr>
@@ -1107,28 +1160,39 @@
                                                                 </th>
                                                                 <th>
                                                                     <!-- <a href="#memScore"class="layerOpen is-active">90점 이상</a> -->
-                                                                    <span aria-controls="memScore" class="layerOpen is-active">90점 이상</span>
+                                                                    <span aria-controls="memScore" class="filter is-active">90점 이상</span>
                                                                 </th>
                                                                 <th></th>
                                                                 <th>
                                                                     <!-- <a href="#memGroup"class="layerOpen">소속</a> -->
-                                                                    <span aria-controls="memGroup" class="layerOpen">소속</span>
+                                                                    <span aria-controls="memGroup" class="filter">소속</span>
                                                                 </th>
                                                                 <th>
                                                                     <!-- <a href="#memGender"class="layerOpen">성별/나이</a> -->
-                                                                    <span aria-controls="memGender" class="layerOpen">성별/나이</span>
+                                                                    <span aria-controls="memGender" class="filter">성별/나이</span>
                                                                 </th>
                                                                 <th>
-                                                                    <input type="checkbox" id="level" class="hasTxt">
-                                                                    <label for="level">등급보기</label>
+                                                                    <!-- <input type="checkbox" id="level" class="hasTxt">
+                                                                    <label for="level">등급보기</label> -->
+
+                                                                    <!--230712 수정 -ys : 등급보기 -> 경력 -->
+                                                                    <span aria-controls="a_memCareer" class="filter">경력</span>
+                                                                    <!--//230712 수정 -ys -->
                                                                 </th>        
                                                                 <th>
                                                                     <!-- <a href="#memEdu"class="layerOpen">학력</a> -->
-                                                                    <span aria-controls="memEdu" class="layerOpen">학력</span>
+
+                                                                    <!--230712 추가 -ys : 학력 -> 인정등급 + 학력-->
+                                                                    <input type="checkbox" id="level" class="hasTxt">
+                                                                    <label for="level">인정등급</label>
+                                                                    /
+                                                                    <!--//230712 추가 -ys -->
+                                                                    
+                                                                    <span aria-controls="memEdu" class="filter">학력</span>
                                                                 </th>
                                                                 <th>
                                                                     <!-- <a href="#memArea"class="layerOpen">거주지역</a> -->
-                                                                    <span aria-controls="memArea" class="layerOpen">거주지역</span>
+                                                                    <span aria-controls="memArea" class="filter">거주지역</span>
                                                                 </th>    
                                                                 <th>희망단가</th>    
                                                                 <th>메모</th>    
@@ -1162,7 +1226,13 @@
                                                                     개발<br>
                                                                     <span class="eHigh">22년 4개월</span>
                                                                 </td>
-                                                                <td>4년제<br>졸업</td>
+                                                                <td>
+                                                                    <!--230712 수정 -ys : 인정등급 추가 -->
+                                                                    <!-- 4년제<br>졸업  -->
+                                                                    <span class="accept">인</span> 초급<br>
+                                                                    4년제 졸업
+                                                                    <!--//230712 수정 -ys  -->
+                                                                </td>
                                                                 <td>서울<br>강서</td>
                                                                 <td>협의</td>
                                                                 <td>
@@ -1678,29 +1748,28 @@
                                                 <div class="tableBox">                              
                                                     <table class="chkType hasInput">
                                                         <colgroup>
-                                                            <!-- 230623 수정 -ys -->
+                                                            <!-- 230712 수정 -ys -->
                                                             <col width="65px">
                                                             <col width="30px;">
                                                             <col width="80px;">
                                                             <col width="70px;">
 
-                                                            <col width="90px;">                    
-                                                            <col width="50px;">
+                                                            <col width="70px;">                    
+                                                            <col width="80px;">
                                                             <col width="80px;">
                                                             <col width="70px;">
                                                             <col width="60px;">
                                                             
                                                             <col width="30%;">
                                                             <col width="100px;">
-                                                            <!-- 230623 수정 -ys -->
+                                                            <!-- 230712 수정 -ys -->
                                                         </colgroup>
                                                         <thead>
                                                             <tr>
-                                                                <th>
+                                                                <th colspan="2"><!--230712 수정 -ys -->
                                                                     <!-- <a href="#memScore"class="layerOpen is-active">90점 이상</a> -->
                                                                     <span aria-controls="memScore" class="layerOpen is-active">90점 이상</span>
                                                                 </th>
-                                                                <th></th>
                                                                 <th>
                                                                     <!-- <a href="#memGroup"class="layerOpen">소속</a> -->
                                                                     <span aria-controls="memGroup" class="layerOpen">소속</span>
@@ -1710,11 +1779,22 @@
                                                                     <span aria-controls="memGender" class="layerOpen">성별/나이</span>
                                                                 </th>
                                                                 <th>
-                                                                    <input type="checkbox" id="level" class="hasTxt">
-                                                                    <label for="level">등급보기</label>
+                                                                    <!-- <input type="checkbox" id="level" class="hasTxt">
+                                                                    <label for="level">등급보기</label> -->
+                                                                    
+                                                                    <!--230712 수정 -ys : 등급보기 -> 경력 -->
+                                                                    <span aria-controls="a_memCareer" class="filter">경력</span>
+                                                                    <!--//230712 수정 -ys -->
                                                                 </th>        
                                                                 <th>
                                                                     <!-- <a href="#memEdu"class="layerOpen">학력</a> -->
+
+                                                                    <!--230712 추가 -ys : 학력 -> 인정등급 + 학력-->
+                                                                    <input type="checkbox" id="level" class="hasTxt">
+                                                                    <label for="level">인정등급</label>
+                                                                    /
+                                                                    <!--//230712 추가 -ys -->
+
                                                                     <span aria-controls="memEdu" class="layerOpen">학력</span>
                                                                 </th>
                                                                 <th>
@@ -1749,7 +1829,13 @@
                                                                     개발<br>
                                                                     <span class="eHigh">22년 4개월</span>
                                                                 </td>
-                                                                <td>4년제<br>졸업</td>
+                                                                <td>
+                                                                    <!--230712 수정 -ys : 인정등급 추가 -->
+                                                                    <!-- 4년제<br>졸업  -->
+                                                                    <span class="accept">인</span> 초급<br>
+                                                                    4년제 졸업
+                                                                    <!--//230712 수정 -ys  -->
+                                                                </td>
                                                                 <td>서울<br>강서</td>
                                                                 <td>28년 12개월</td>
                                                                 <td>협의</td>
@@ -1776,7 +1862,13 @@
                                                                 </td>
                                                                 <td>김길동(남)<br>81세</td>
                                                                 <td>개발<br>22년 4개월</td>
-                                                                <td>4년제<br>졸업</td>
+                                                                <td>
+                                                                    <!--230712 수정 -ys : 인정등급 추가 -->
+                                                                    <!-- 4년제<br>졸업  -->
+                                                                    <span class="accept">인</span> 초급<br>
+                                                                    고등학교 졸업
+                                                                    <!--//230712 수정 -ys  -->
+                                                                </td>
                                                                 <td>서울<br>강서</td>
                                                                 <td>미입력</td>
                                                                 <td>협의</td>
