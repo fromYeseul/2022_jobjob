@@ -91,7 +91,6 @@
                         <h4 class="layerOpen" aria-controls="recruitProject">CJ프레시웨이 온리원푸드넷 UI/UX 및 주문프로세스 개선 프로젝트 선택 "팝업열림"</h4>
                         <div class="suffix">
                             <span class="mr10">기획 - 모바일기획</span>
-                            <button class="white laSize layerOpen" aria-controls="recomDetail">직무추천 세부설정 "팝업열림"</button>
                             <button class="white laSize layerOpen" aria-controls="">(지원자 목록) 공고보기</button>
                             <button class="laSize">목록으로</button>
                         </div>
@@ -159,7 +158,7 @@
                                                             <button class="ico search"></button>
                                                         </div>   
                                                         <button aria-controls="searchFilter" class="white onlyIco midSize layerOpen"><i class="ico filter"></i></button>
-                                                        <button class="white onlyIco midSize"><i class="ico refresh"></i></button>
+                                                        <button class="white onlyIco midSize layerOpen" aria-controls="recomDetail"><i class="ico setting"></i></button>
                                                     </div>
                                                 </th>
                                             </tr>
@@ -311,7 +310,7 @@
                                                     </div>                                     
                                                 </td>
                                                 <td>
-                                                    <button class="bdType layerOpen" aria-controls="projOfferHis">제안하기"팝업열림"</button>
+                                                    <button class="bdType">제안하기</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -358,9 +357,12 @@
                                                     </div>                                     
                                                 </td>
                                                 <td>
-                                                    <button class="white">
+                                                    <button class="white hasTooltip">
+                                                        <div class="tooltip">            
+                                                            최근제안된 프로젝트명
+                                                        </div>  
                                                         최근에 제안
-                                                        <span>(2023.01.02)</span>
+                                                        <span>(2023.01.02)</span>                                                         
                                                     </button>
                                                 </td>
                                             </tr>
@@ -416,9 +418,12 @@
                                                     </div>                                     
                                                 </td>
                                                 <td>
-                                                    <button class="white">
+                                                    <button class="white hasTooltip">
+                                                        <div class="tooltip">            
+                                                            최근제안된 프로젝트명
+                                                        </div>  
                                                         제안하기
-                                                        <span>최근 제안 (2023.01.02)</span>
+                                                        <span>최근 제안 (2023.01.02)</span>                                                    
                                                     </button>
                                                 </td>
                                             </tr>
@@ -1260,7 +1265,9 @@
                                                         읽음(2023.06.02)
                                                     </span>
                                                 </td>
-                                                <td><button class="white smSize">제안이력</button></td>
+                                                <td>
+                                                    <button class="white smSize layerOpen" aria-controls="projOfferHis">제안이력"팝업열림"</button>
+                                                </td>                                               
                                             </tr>
                                             <tr>
                                                 <td>
@@ -2004,11 +2011,10 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="listBottom">
-                    <button class="white prefix">닫기</button>
-                    <button class="suffix">적용</button>
-                </div>
+            </div>
+            <div class="modalFooter">
+                <button class="white layerClose">닫기</button>
+                <button class="">적용</button>
             </div>
         </div>
         <div class="layerDim"></div>  
@@ -2110,11 +2116,10 @@
                         </li>
                     </ul>
                 </div>
-
-                <div class="listBottom">
-                    <button class="white layerClose">취소</button>
-                    <button class="bdType">다른직무 선택</button> 
-                </div>
+            </div>
+            <div class="modalFooter">
+                <button class="white layerClose">취소</button>
+                <button class="">다른직무 선택</button>
             </div>
         </div>        
         <div class="layerDim"></div>    
@@ -2371,8 +2376,7 @@
                             </div>                            
                         </div>
                     </li>
-                </ul>
-                 
+                </ul>                 
 
                 <div class="listBottom">
                     <div class="inputGroup">
