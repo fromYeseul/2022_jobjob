@@ -236,6 +236,8 @@
     }      
     .memSkill{
         @include ellipsis;
+        display: block !important;
+        width: 54%;  
     }
     .photo{
         width: rem(38);
@@ -433,6 +435,9 @@
                 position: relative;
                 ul{
                     width: 98%;
+                    li{
+                        display: flex;
+                    }
                 }
                 a,
                 span{
@@ -440,7 +445,6 @@
                     // line-height: rem(30);
                 }
                 .memName{
-                    display: flex;
                     color: $black;
                     font-weight: 500;
                     p{
