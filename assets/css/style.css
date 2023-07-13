@@ -1022,6 +1022,9 @@ header.center + .contWrapper .contLayout {
   text-align: center;
   margin-bottom: 1.625rem;
 }
+.rPanelLayer .listTop label {
+  margin-right: 0;
+}
 .rPanelLayer .filterWrapper {
   left: -199px;
   top: -1px;
@@ -6039,6 +6042,8 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
+  display: block !important;
+  width: 54%;
 }
 .boxList .photo {
   width: 2.375rem;
@@ -6243,13 +6248,15 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .boxList.headType .cont .prefix ul, .boxList.memoBox .cont .prefix ul {
   width: 98%;
 }
+.boxList.headType .cont .prefix ul li, .boxList.memoBox .cont .prefix ul li {
+  display: flex;
+}
 .boxList.headType .cont .prefix a,
 .boxList.headType .cont .prefix span, .boxList.memoBox .cont .prefix a,
 .boxList.memoBox .cont .prefix span {
   margin-right: 0.625rem;
 }
 .boxList.headType .cont .prefix .memName, .boxList.memoBox .cont .prefix .memName {
-  display: flex;
   color: #000000;
   font-weight: 500;
 }
