@@ -22,6 +22,11 @@
     border: 1px solid $projBoxBorder;
     background: $projBox;
     position: relative;
+    button{
+        &.laSize{
+            margin-right: rem(10);
+        }
+    }
     .suffix{
         display: flex;
         align-items: center;
@@ -45,5 +50,8 @@
         padding: rem(4) rem(8);
         background: $chipGray;
         border-radius: rem(6);
+        &.disabled{
+            opacity: .5;
+        }
     }
 }

@@ -6,7 +6,7 @@
 .accBox{
     padding: rem(9) 0;
     background: $white;
-    border-radius: rem(5);
+    border-radius: rem(6);
     border:1px solid $layoutColor;
     overflow: hidden;
     
@@ -22,14 +22,22 @@
             display: block;
         }
     }
-    &.nodata{
-        display: flex;
-        line-height: rem(80);
-    }
+    // &.nodata{
+    //     display: flex;
+    //     line-height: rem(80);
+    // }
     & + .accBox{
         margin-top: rem(12);
     }
-
+    .nodata{
+        padding: rem(30);
+        display: flex;
+        flex-direction: column;
+        line-height: rem(50);
+        button{
+            width: rem(160);
+        }
+    }
     .prefix,
     .suffix{
         display: flex;
@@ -121,6 +129,11 @@
             border-radius: 0;
             border: 0;
             overflow: hidden;
+            .ico{                    
+                &.arrow{
+                    margin-right: rem(10);
+                }
+            }
             &.is-active{
                 border-bottom: 1px solid $accBorderBottom;
                 .accHead{
@@ -131,8 +144,8 @@
                 .ico{                    
                     &.arrow{
                         width: rem(16);
-                        height: rem(9);
-                        background-position: -120px -180px;
+                        height: rem(10);
+                        background-position: -100px -120px;
                         vertical-align: 2px;
                     }
                 }
@@ -141,7 +154,12 @@
                 .accHead{
                     color: $addHeadGray;
                     cursor: not-allowed;
-                }                
+                }          
+                .ico{                    
+                    &.arrow{
+                        background-position: -120px -120px;
+                    }
+                }      
             }
             & + .accBox{
                 margin-top: 0;
@@ -210,6 +228,80 @@
         }
         .suffix{
             justify-self: end;
+        }
+    }
+}
+
+
+//마이크로사이트 indexType
+.accWrap{
+    // padding: 0 rem(30);
+    // background: $white;
+    overflow-y: auto;
+    &.indexType{
+        .accBox{
+            border-radius: 0;
+            border:0;
+            border-bottom:1px solid $layoutColor;
+            position: relative;
+            overflow: visible;
+            & + .accBox{
+                margin-top: 0;
+            }
+            &:last-child{
+                border-bottom:0;
+            }
+            .close{
+                width: rem(60);
+                height: rem(17);
+                box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+                border-top: rem(6) solid $white;
+                position: absolute;
+                left: 50%;
+                bottom: -13px;
+                transform: translateX(-50%);
+                z-index: 1;
+                &::after{
+                    content: "";
+                    width: 18px;
+                    height: 10px;
+                    background-image: url(../img/icoGroup.png);
+                    background-position: -120px -120px;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            &.is-active{                
+                .close{
+                    &::after{
+                        background-position: -140px -120px;
+                    }
+                }
+            }
+        }
+        h5{
+            position: relative;
+            z-index: 0;
+            &::after{
+                content:'';
+                width: 100%;
+                height: 12px;
+                background: $highlighter;
+                opacity: 0.5;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+        }
+        .accInner{
+            padding: rem(16) rem(30);
+            .innerList{
+                cursor: initial;
+                align-items: flex-start;
+            }
         }
     }
 }

@@ -231,11 +231,9 @@ button,
         &:disabled{
             background: $inputDisable;
         }
-        &.filter{
-            &.is-active{
-                background-color: $selHover;
-                border: 1px solid $btnActive;
-            }
+        &.is-active{
+            background-color: $selHover;
+            border: 1px solid $btnActive;
         }
     }
     &.txtType{
@@ -298,6 +296,16 @@ button,
         background: $activeGray;
         border:0;
     }
+
+    //색상별
+    &.main{
+        color: $subBlue;
+        border-color: $subBlue;
+    }
+    &.sub{
+        color: $subGray;
+        border-color: $subGray;
+    }
 }
 
 
@@ -346,6 +354,7 @@ span{
     margin-left: rem(6);
     display: inline-block;
     padding: 0 rem(4);
+    // padding-left: 2px;
     min-width: rem(20);
     // height: rem(20);
     line-height: rem(19);

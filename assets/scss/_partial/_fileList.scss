@@ -18,6 +18,7 @@
         }
         li{
             color: $fileGray;
+            line-height: rem(26);
             @include sideArray;
             &:hover{
                 background: $selHover;
@@ -25,6 +26,11 @@
             .fileInfo{
                 width: 92%;
                 @include sideArray;
+                span{
+                    &:last-child{
+                        font-size: rem(14);
+                    }
+                }
             }
         }
     }

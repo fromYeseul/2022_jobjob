@@ -57,6 +57,7 @@
                             <ul class="is-active">
                                 <li class="is-active"><a href="#"><span class="depth2">모집공고</span></a></li>
                                 <li><a href="#"><span class="depth2">인재검색/제안</span></a></li>
+                                <li><a href="#"><span class="depth2">보낸제안</span></a></li>
                             </ul>
                         </li>
                         <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span></a></li>
@@ -85,12 +86,13 @@
         <section class="contWrapper">
             <section class="contLayout">
                 <section class="recruitDetail">
-                    <h2>모집공고 관리 (제목계속 바뀜)</h2>
+                    <h2>모집공고 상세 (제목계속 바뀜)</h2>
 
                     <div class="projBox">
                         <h4 class="layerOpen" aria-controls="recruitProject">CJ프레시웨이 온리원푸드넷 UI/UX 및 주문프로세스 개선 프로젝트 선택 "팝업열림"</h4>
                         <div class="suffix">
-                            <span class="mr10">기획 - 모바일기획</span>
+                            <span class="mr10">기획</span>
+                            <button class="round sub">모바일기획</button><!--230718 수정 -ys -->
                             <button class="white laSize layerOpen" aria-controls="">(지원자 목록) 공고보기</button>
                             <button class="laSize">목록으로</button>
                         </div>
@@ -157,8 +159,12 @@
                                                             <input type="text" id="search" class="laSize lowSize" maxlength="" placeholder="키워드를 입력하세요.">
                                                             <button class="ico search"></button>
                                                         </div>   
-                                                        <button aria-controls="searchFilter" class="white onlyIco midSize layerOpen"><i class="ico filter"></i></button>
-                                                        <button class="white onlyIco midSize layerOpen" aria-controls="recomDetail"><i class="ico setting"></i></button>
+                                                        <button aria-controls="searchFilter" class="onlyIco layerOpen is-active"><!--230718 클래스 수정 -ys -->
+                                                            <i class="ico filter"></i>
+                                                        </button>
+                                                        <button class="onlyIco layerOpen" aria-controls="recomDetail"><!--230718 클래스 수정 -ys -->
+                                                            <i class="ico setting"></i>
+                                                        </button>
                                                     </div>
                                                 </th>
                                             </tr>
@@ -1173,21 +1179,23 @@
                             <div id="tab-03" class="tabCont">
                                 <div class="tableBox">                              
                                     <table class="chkType">
+                                        <!--230718 수정 -ys-->
                                         <colgroup>
-                                            <col width="5%">
+                                            <col width="6%">
                                             <col width="4%;">
                                             <col width="9%;">
                                             <col width="9%;">                                          
-                                            <col width="9%;">
+                                            <col width="7%;">
 
                                             <col width="9%;">
                                             <col width="9%;">
                                             <col width="9%;">
                                             <col width="9%;">
 
-                                            <col>
-                                            <col width="12%;">
+                                            <col width="12%">
+                                            <col width="10%;">
                                         </colgroup>
+                                        <!--//230718 수정 -ys-->
                                         <thead>
                                             <tr>
                                                 <th></th>
@@ -1259,7 +1267,7 @@
                                                     <strong>제안일</strong>
                                                     <p>2023.05.30</p>
                                                 </td>
-                                                <td>
+                                                <td class="left"><!--230718 좌측정렬 -ys-->
                                                     <span class="sClear">
                                                         <span class="dot"></span>
                                                         읽음(2023.06.02)
@@ -1311,7 +1319,7 @@
                                                     <strong>관리자등록</strong>
                                                     <p>2023.04.30</p>
                                                 </td>
-                                                <td>
+                                                <td class="left"><!--230718 좌측정렬 -ys-->
                                                     <span class="sCancel">
                                                         <span class="dot"></span>
                                                         읽지않음(+5일)
@@ -1361,7 +1369,7 @@
                                                     <strong>지원일</strong>
                                                     <p>2023.05.30</p>
                                                 </td>
-                                                <td>
+                                                <td class="left"><!--230718 좌측정렬 -ys-->
                                                     <span class="sReject">
                                                         <span class="dot"></span>
                                                         제안거절(2023.06.01)
@@ -1411,7 +1419,7 @@
                                                     <strong>관리자등록</strong>
                                                     <p>2023.04.30</p>
                                                 </td>
-                                                <td>
+                                                <td class="left"><!--230718 좌측정렬 -ys-->
                                                     <span class="sCancel">미응답</span>
                                                     <button class="bdType smSize">다시 제안하기</button>
                                                 </td>
@@ -1456,7 +1464,7 @@
                                                     <strong>지원일</strong>
                                                     <p>2023.05.30</p>
                                                 </td>
-                                                <td>
+                                                <td class="left"><!--230718 좌측정렬 -ys-->
                                                     <span class="sClear">지원완료 (2023.06.04)</span>
                                                 </td>
                                                 <td><button class="white smSize">제안이력</button></td>
@@ -1500,7 +1508,7 @@
                                                     <strong>관리자등록</strong>
                                                     <p>2023.04.30</p>
                                                 </td>
-                                                <td>
+                                                <td class="left"><!--230718 좌측정렬 -ys-->
                                                     <span class="sClear">읽음(2023.06.02)</span>
                                                 </td>
                                                 <td><button class="white smSize">제안이력</button></td>
@@ -2143,10 +2151,11 @@
 
                             <div class="">
                                 <ul>
+                                    <!-- 230718 전체없음 -ys 
                                     <li>                  
                                         <input type="radio" id="scoreAll" name="score" value="scoreAll" class="hasTxt" checked="">
                                         <label for="scoreAll">전체</label>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <input type="radio" id="score100" name="score" value="score90" class="hasTxt">
                                         <label for="score100">스페셜회원만</label>  
@@ -2173,10 +2182,11 @@
 
                             <div class="">
                                 <ul>
+                                    <!--  230718 전체없음 -ys 
                                     <li>
                                         <input type="checkbox" id="tt1" class="hasTxt">
                                         <label for="tt">전체</label>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <input type="checkbox" id="tt2" class="hasTxt" checked="">
                                         <label for="tt2">에코</label>
@@ -2247,10 +2257,11 @@
 
                             <div class="">
                                 <ul>
+                                    <!--230718 전체없음 -ys 
                                     <li>                     
                                         <input type="checkbox" id="eduLv0" class="hasTxt" checked="">
                                         <label for="eduLv0">전체</label>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <input type="checkbox" id="eduLv3" class="hasTxt">
                                         <label for="eduLv3">석/박사 졸업</label>  
@@ -2277,10 +2288,11 @@
 
                             <div class="">
                                 <ul>
+                                    <!-- 230718 전체없음 -ys 
                                     <li>                     
                                         <input type="checkbox" id="careerAll" class="hasTxt" checked="">
                                         <label for="careerAll">전체</label>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <input type="checkbox" id="career1" class="hasTxt">
                                         <label for="career1">~ 3년</label>  
@@ -2348,10 +2360,11 @@
 
                             <div class="">
                                 <ul>
+                                    <!-- 230718 전체없음 -ys 
                                     <li>                     
                                         <input type="radio" id="distance00" name="distance" class="hasTxt" checked="">
                                         <label for="distance00">전체</label>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <input type="radio" id="distance10" name="distance" class="hasTxt">
                                         <label for="distance10">10km 이내</label>  

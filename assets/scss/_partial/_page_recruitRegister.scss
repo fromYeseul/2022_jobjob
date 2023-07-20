@@ -9,11 +9,22 @@
     }
     .inputGroup{
         height: rem(80);
+        & + .chipBox{
+            margin-top: rem(10);
+            padding: 0;
+            .chip{
+                cursor: pointer;
+                &.disabled{
+                    opacity: .5;
+                    cursor: not-allowed;
+                }
+            }
+        }
     }
     .col6{
         row-gap: rem(30);
         column-gap: rem(45);
-        grid-template-columns: 4fr 160px 230px;
+        grid-template-columns: 800px 160px 230px;
     }
     .col4{
         width: 80%;
@@ -76,10 +87,17 @@
 
 .recruiterCrew{
     grid-column: 1/5;
+    // ul{
+    //     display: flex;
+    // }
+    // li{
+    //     margin-right: rem(80);
+    // }
     ul{
-        display: flex;
-    }
-    li{
-        margin-right: rem(80);
+        li{
+            display: inline-block;
+            width: rem(100);
+            margin: rem(10) 0;
+        }
     }
 }

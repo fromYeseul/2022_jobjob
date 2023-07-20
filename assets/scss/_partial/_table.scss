@@ -16,7 +16,13 @@ table{
     font-size: rem(14);
     text-align: center;
     background: $white;
-    
+    th{
+        select{
+            &.mid-lowSize{
+                width: rem(110);
+            }
+        }
+    }
     tr{
         border-bottom: 1px solid $tableBorder;
         &.bg{
@@ -324,6 +330,14 @@ table{
     a{
         color: $mainColor;
         cursor: pointer;
+    }
+    //테이블내 빨간텍스트
+    span{
+        &.point{
+            font-size: rem(14);
+            color: $error;
+            background: transparent;
+        }
     }
     span{
         &.layerOpen{

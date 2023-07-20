@@ -85,6 +85,34 @@ $fileGray : #888888;
 
 $offerBg : $fileBg;
 
+//마이크로사이트
+$subBlue : #0969d1;
+$subGray : #9595a6;
+
+$subTitGray : #7d7d7d;
+$thGray : #a3aab5;
+$thBg : #eff5fb;
+$tdBd : #c4d6ee;
+$highlighter: #fee32c;
+
+$footerGray2 : #595959;
+$copyRight : #9c9b9b;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .dot{
     display: inline-block;
     width: rem(17);
@@ -167,13 +195,7 @@ $offerBg : $fileBg;
         margin-top: rem(10);
     }
 }
-span{
-    &.point{
-        font-size: rem(14);
-        color: $error;
-        background: transparent;
-    }
-}
+
 
 //감추기
 // .blind {
@@ -384,4 +406,12 @@ span{
 //문자/메일 보내기 팝업창 에디터 리더(?) 요소 높이값
 .cke_screen_reader_only{
     height: 0 !important;
+}
+
+
+.mobile{display: none;}
+.pc{display: inline-block;}
+@media (max-width: 960px){
+    .mobile{display: inline-block;}
+    .pc{display: none;}
 }

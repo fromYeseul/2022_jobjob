@@ -56,6 +56,7 @@
                             <ul class="is-active">
                                 <li class="is-active"><a href="#"><span class="depth2">모집공고</span></a></li>
                                 <li><a href="#"><span class="depth2">인재검색/제안</span></a></li>
+                                <li><a href="#"><span class="depth2">보낸제안</span></a></li>
                             </ul>
                         </li>
                         <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span></a></li>
@@ -97,11 +98,18 @@
                     </div>
                     
                     <div class="regiPartWrapper">  
-                        <button class="white">프로젝트 선택 버튼 누락??</button>
                         <div class="projBox">
-                            <h4>CJ프레시웨이 온리원푸드넷 UI/UX 및 주문프로세스 개선 프로젝트</h4>
+                            
+                            <!-- 230714 버튼추가 -ys -->
+                            <div class="prefix">                                
+                                <button class="laSize">프로젝트 선택</button><!--230718 클래스수정 -ys -->
+                                <span class="">프로젝트를 선택해주세요.</span><!--230718 클래스제거 -ys -->
+                                <!-- <h4>CJ프레시웨이 온리원푸드넷 UI/UX 및 주문프로세스 개선 프로젝트</h4> -->
+                            </div>
+                            <!-- //230714 버튼추가 -ys -->
                             <div class="suffix">
-                                <span class="mr10">기획 - 모바일기획</span>
+                                <span class="mr10">기획</span>
+                                <button class="round sub">모바일기획</button><!--230718 수정 -ys -->
 
                                 <!-- <button class="round cancel">모바일기획</button> -->
                                 <button class="txtType mainC layerOpen" aria-controls="recruitProject">[변경] "팝업열기"</button><!--수정상태일 때 보이기-->
@@ -145,7 +153,18 @@
                                             </select>
                                         </li>
                                         <li class="recruitCareer">
-                                            <label class="" for="">희망연차 <span> (년)</span></label>
+                                            <label class="" for="">희망연차 <span> (년)</span>
+                                                <!--230718 툴팁추가 -ys -->
+                                                <span class="hasTooltip">
+                                                    <i class="ico qMark"></i>
+                                                    <div class="tooltip type2">                                            
+                                                        <p>비공개 모집공고</p>
+                                                        회원에게는 희망연차만 노출됩니다.<br>(모집 등급은 노출되지 않음)
+                                                    </div>       
+                                                </span>
+                                                <!--//230718 툴팁추가 -ys -->
+                                            </label>
+                                            
                                             <input type="text" class="xsSize" value="8">
                                             <span class="range">~</span>
                                             <input type="text" class="xsSize" value="8">
@@ -167,6 +186,22 @@
                                                 <div class="inputObj is-active">
                                                     <input type="text" class="midSize" id="inputBox" placeholder="스킬/경험을 입력하세요."><!--221213 클래스 추가 -ys -->
                                                 </div>
+                                            </div>
+
+                                            <div class="chipBox">
+                                                <span class="chip">ASP</span>
+                                                <span class="chip disabled">JSP</span>
+                                                <span class="chip disabled">Java</span>
+                                                <span class="chip disabled">ASP</span>
+                                                <span class="chip">JSP</span>
+                                                <span class="chip">Linux</span>
+                                                <span class="chip">Oracle</span>
+                                                <span class="chip">UNIX</span>
+                                                <span class="chip">Linux</span>
+                                                <span class="chip">Oracle</span>
+                                                <span class="chip">UNIX</span>
+                                                <span class="chip">Maria</span>
+                                                <span class="chip">SQLite</span>
                                             </div>
                                         </li>
                                         <li class="recruitPeriod">
@@ -193,12 +228,15 @@
                                         </li>
                                         <li class="investPeriod">
                                             <label for="">프로젝트 투입기간(선택)</label>
-                                            <input class="dateType laSize" type="text" placeholder="시작일">
-                                            <span class="range">~</span>
-                                            <input class="dateType laSize" type="text" placeholder="종료일">
+                                            <!--230718 수정 -ys -->
+                                            <input class="dateType laSize" type="text" placeholder="시작일"> 부터
+                                            <input type="text" class="xsSize ml10"> 개월
+                                            <span class="range">또는</span>
+                                            <input class="dateType laSize" type="text" placeholder="종료일"> 까지
 
                                             <input type="checkbox" id="aa" name="workYear" class="hasTxt">
-                                            <label for="aa" class="ml10">무관</label>
+                                            <label for="aa" class="ml10">협의</label>
+                                            <!--//230718 수정 -ys -->
                                         </li>
                                         <li class="recruitMm">
                                             <label class="" for="">모집인원 <span> (명)</span></label>
@@ -214,13 +252,19 @@
                                         <li class="recruitPlace">
                                             <label class="need" for="">근무장소</label>
                                             <div class="flex mt6">
+                                                <!--230718 수정 -ys -->
                                                 <select class="" name="" id="">
+                                                    <option value="stay0">상주</option>
+                                                    <option value="stay1">비상주</option>
+                                                </select>
+                                                <!--//230718 수정 -ys -->
+                                                <select class="laSize ml5" name="" id=""><!--230718 클래스추가 -ys -->
                                                     <option value="">시/도</option>
-                                                    <option value="graduation0">서울</option>
+                                                    <option value="graduation0">서울특별시</option>
                                                     <option value="graduation1">부산</option>
                                                     <option value="graduation2">경기</option>
                                                     <option value="graduation3">인천</option>
-                                                    <option value="graduation4">대구</option>
+                                                    <option value="graduation4">제주특별자치구</option>
                                                 </select>
                                                 <select class=" ml5" name="" id="">
                                                     <option value="">군/구</option>
@@ -273,7 +317,65 @@
                                                 <div class="h6_sub">담당 업무를 최대한 자세하게 입력해 주세요.  (최대 1,000자)</div>
                                             </div>
 
-                                            <div class="" style="border:1px solid #ccc; width: 100%; height: 300px;">에디터영역</div>
+                                            <!--230718 에디터탬플릿 추가 -ys -->
+                                            <div class="" style="border:1px solid #ccc; width: 100%; height: 300px; padding: 15px;
+                                            overflow-y: scroll;">에디터영역
+                                                <table style="table-layout: fixed; border-collapse: collapse;">
+                                                    <colgroup>
+                                                        <col width="200px">
+                                                        <col width="300px">                                        
+                                                        <col width="150px">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr style="background: #989b9f; color: #fff; height: 38px;">
+                                                            <th>구분</th>
+                                                            <th>내용</th>
+                                                            <th>비고</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr style="border-bottom: 1px solid #ddd;" >
+                                                            <th style="text-align: center; background: #eaf4fe;">담당업무</th>
+                                                            <td style="border-right: 1px solid #ddd; padding: 10px 20px;">
+                                                                <ul style="padding-left: 0;">
+                                                                    <li style="list-style: none;">- 담당업무를 입력하세요</li>
+                                                                    <li style="list-style: none;">- 담당업무를 입력하세요</li>
+                                                                    <li style="list-style: none;">- 담당업무를 입력하세요</li>
+                                                                    <li style="list-style: none;">- 담당업무를 입력하세요</li>
+                                                                    <li style="list-style: none;">- 담당업무를 입력하세요</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td style="text-align: center;">
+                                                                2명
+                                                            </td>
+                                                        </tr>
+                                                        <tr style="border-bottom: 1px solid #ddd;" >
+                                                            <th style="text-align: center; background: #dde9f5;">자격 및 우대사항</th>
+                                                            <td style="border-right: 1px solid #ddd; padding: 10px 20px;">
+                                                                <p style="font-weight: bold; color: #5f778f;">자격요건</p>
+                                                                <ul style="padding-left: 0;">
+                                                                    <li style="list-style: none;">- 학력무관</li>
+                                                                    <li style="list-style: none;">- 신입/경력무관</li>
+                                                                </ul>
+                                                                <p style="font-weight: bold; color: #5f778f;">우대사항</p>
+                                                                <ul style="padding-left: 0;">
+                                                                    <li style="list-style: none;">- 물류센터 근무경험자</li>
+                                                                    <li style="list-style: none;">- 생산공장 근무경험자</li>
+                                                                    <li style="list-style: none;">- WMS/ERP 전산관리 경험자</li>
+                                                                </ul>
+                                                                <p style="font-weight: bold; color: #5f778f;">기타참고사항</p>
+                                                                <ul style="padding-left: 0;">
+                                                                    <li style="list-style: none;">- 기타참고사항기타참고사항기타참고사항기타참고사항기타참고사항기타참고사항기타참고사항</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td style="text-align: center;">
+                                                                2명
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!--//230718 에디터탬플릿 추가 -ys -->
                                         </li>                                       
                                     </ul>
                                 </div>                                
@@ -332,6 +434,26 @@
                                                 <div class="h6_sub">채용 문의 담당자 외 지원자 접수 알림을(문자/메일) 받을 구성원을 추가합니다.</div>
                                             </div>
                                             <ul>
+                                                <li class="full"><!--230718 클래스 추가 -ys -->                                      
+                                                    <input type="checkbox" id="aa" name="" class="hasTxt">
+                                                    <label for="aa">전체선택</label>
+                                                </li>
+                                                <li>                                            
+                                                    <input type="checkbox" id="aa" name="" class="hasTxt">
+                                                    <label for="aa">김진용</label>
+                                                </li>
+                                                <li>                                            
+                                                    <input type="checkbox" id="aa" name="" class="hasTxt">
+                                                    <label for="aa">홍길동</label>
+                                                </li>
+                                                <li>                                            
+                                                    <input type="checkbox" id="aa" name="" class="hasTxt">
+                                                    <label for="aa">한아라</label>
+                                                </li>
+                                                <li>                                            
+                                                    <input type="checkbox" id="aa" name="" class="hasTxt">
+                                                    <label for="aa">김진곤</label>
+                                                </li>
                                                 <li class="">                                            
                                                     <input type="checkbox" id="aa" name="" class="hasTxt">
                                                     <label for="aa">전체선택</label>
@@ -352,6 +474,30 @@
                                                     <input type="checkbox" id="aa" name="" class="hasTxt">
                                                     <label for="aa">김진곤</label>
                                                 </li>
+                                                <li class="">                                            
+                                                    <input type="checkbox" id="aa" name="" class="hasTxt">
+                                                    <label for="aa">전체선택</label>
+                                                </li>
+                                                <li>                                            
+                                                    <input type="checkbox" id="aa" name="" class="hasTxt">
+                                                    <label for="aa">김진용</label>
+                                                </li>
+                                                <li>                                            
+                                                    <input type="checkbox" id="aa" name="" class="hasTxt">
+                                                    <label for="aa">한아라</label>
+                                                </li>
+                                                <li>                                            
+                                                    <input type="checkbox" id="aa" name="" class="hasTxt">
+                                                    <label for="aa">김진곤</label>
+                                                </li>
+                                                <li class="">                                            
+                                                    <input type="checkbox" id="aa" name="" class="hasTxt">
+                                                    <label for="aa">전체선택</label>
+                                                </li>
+                                                <li>                                            
+                                                    <input type="checkbox" id="aa" name="" class="hasTxt">
+                                                    <label for="aa">김진용</label>
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -368,7 +514,7 @@
     <!--플로팅메뉴-->
     <div class="floatingWrapper bottom">
         <div class="floating">
-            <h5>이 프로젝트를</h5>
+            <!-- <h5>이 프로젝트를</h5> 230718 삭제-ys -->
             <button class="white">취소</button>
             <button class="white">임시저장</button>
             <button class="white">미리보기</button>
@@ -529,7 +675,7 @@
                                 <td>2023.04.21</td>
                                 <td class="ellipsis center">최대 15자 노출인데 너무 긴거같아요??</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen" aria-controls="recruitPreview">상수도 플록시스템 성능개선 및 유지보수 사업</span></td>
+                                    <span class="layerOpen">상수도 플록시스템 성능개선 및 유지보수 사업</span></td>
                                 <td>이재윤</td>
                                 <td><button class="round order">선택</button></td>
                             </tr>
@@ -537,7 +683,7 @@
                                 <td>2023.11.01</td>
                                 <td class="ellipsis center">기획 - 웹기획</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen" aria-controls="recruitPreview">삼성화재 스포츠안전재단 연계시스템 개발_무상</span>
+                                    <span class="layerOpen">삼성화재 스포츠안전재단 연계시스템 개발_무상</span>
                                 </td>
                                 <td>한아라</td>
                                 <td><button class="round order">선택</button></td>
@@ -546,7 +692,7 @@
                                 <td>2023.01.31</td>
                                 <td class="ellipsis center">기획 – 게임기획</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen" aria-controls="recruitPreview">중부발전 ERP시스템 기술분야 유지관리</span>
+                                    <span class="layerOpen">중부발전 ERP시스템 기술분야 유지관리</span>
                                 </td>
                                 <td>김진곤</td>
                                 <td><button class="round order">선택</button></td>
@@ -555,7 +701,7 @@
                                 <td>2023.01.31</td>
                                 <td class="ellipsis center">컨설팅(SAP) – CO</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen" aria-controls="recruitPreview">[(주)멀티캠퍼스] 청년SW아카데미 학습플랫폼 청년SW아카데미 학습플랫폼</span>
+                                    <span class="layerOpen">[(주)멀티캠퍼스] 청년SW아카데미 학습플랫폼 청년SW아카데미 학습플랫폼</span>
                                 </td>
                                 <td>김재윤</td>
                                 <td><button class="round order">선택</button></td>
@@ -564,7 +710,7 @@
                                 <td>2023.04.21</td>
                                 <td class="ellipsis center">개발(SAP) – CO</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen" aria-controls="recruitPreview">상수도 플록시스템 성능개선 및 유지보수 사업</span>
+                                    <span class="layerOpen">상수도 플록시스템 성능개선 및 유지보수 사업</span>
                                 </td>
                                 <td>김재윤</td>
                                 <td><button class="round order">선택</button></td>
@@ -573,7 +719,7 @@
                                 <td>2023.11.01</td>
                                 <td class="ellipsis center">디자인 – 웹디자인</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen" aria-controls="recruitPreview">삼성화재 스포츠안전재단 연계시스템 개발_무상</span>
+                                    <span class="layerOpen">삼성화재 스포츠안전재단 연계시스템 개발_무상</span>
                                 </td>
                                 <td>한아라</td>
                                 <td><button class="round order">선택</button></td>
@@ -582,7 +728,7 @@
                                 <td>2023.01.31</td>
                                 <td class="ellipsis center">컨설팅 – 아키텍트</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen" aria-controls="recruitPreview">중부발전 ERP시스템 기술분야 유지관리</span>
+                                    <span class="layerOpen">중부발전 ERP시스템 기술분야 유지관리</span>
                                 </td>
                                 <td>김진곤</td>
                                 <td><button class="round order">선택</button></td>
@@ -591,7 +737,7 @@
                                 <td>2023.11.01</td>
                                 <td class="ellipsis center">기획 – 모바일기획</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen" aria-controls="recruitPreview">삼성화재 스포츠안전재단 연계시스템 개발_무상</span>
+                                    <span class="layerOpen">삼성화재 스포츠안전재단 연계시스템 개발_무상</span>
                                 </td>
                                 <td>한아라</td>
                                 <td><button class="round order">선택</button></td>
@@ -600,7 +746,7 @@
                                 <td>2023.01.31</td>
                                 <td class="ellipsis center">개발 - 프론트</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen" aria-controls="recruitPreview">중부발전 ERP시스템 기술분야 유지관리</span>
+                                    <span class="layerOpen">중부발전 ERP시스템 기술분야 유지관리</span>
                                 </td>
                                 <td>김진곤</td>
                                 <td><button class="round order">선택</button></td>
@@ -655,21 +801,133 @@
     <!--//이전공고불러오기 팝업-->
 
 
-    <!--모집공고 미리보기 팝업 / 마이크로사이트와 동시작업예정-->
-    <div id="recruitPreview" class="modalLayer center">
-        <div class="layerBox midSize">
+    <!--모집공고 미리보기 팝업 230718 추가-->
+    <div id="recruitPreview" class="modalLayer center"><!--id바뀌면 말씀해주세요 -ys-->
+        <div class="layerBox">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
-                <h2>공고 미리보기화면<br>마이크로사이트와 동시 작업예정</h2>
             </div>
             <div class="modalCont center">
-                <div class="tableTop"></div>
-                <div class="tableBox"></div>
+                <div class="compoWrapper">
+                    <div class="titWrapper">
+                        <div class="title">
+                            <button class="round sub">비상주</button>
+                            <button class="round main">기획</button>
+                            <span class="mobile">마포구</span><!--모바일에서만 보임-->
+                            <h2>CJ프레시웨이 온리원푸드넷 모바일 UI/UX</h2>
+                        </div>
+                        <h3>마포구</h3><!--pc에서만 보임-->
+                        <div class="tooltip">
+                            <i class="ico manager"></i> 
+                            <span class="tipBtn">담당자</span>
+                            <div class="toolBox is-active">
+                                <ul>
+                                    <li class="manager">홍길동</li>
+                                    <li class="phNm">
+                                        <span>010-1234-1234</span>
+                                        /
+                                        <span>02-345-3456</span>
+                                    </li>
+                                    <li class="mail">
+                                        abc123@echoit.co.kr
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="component">    
+                        <div class="accWrap indexType">                                           
+                            <div class="accBox is-active">
+                                <div class="accHead">
+                                    <h5>기본정보</h5>
+                                </div>
+    
+                                <div class="accInner infoType">
+                                    <div class="innerList">
+                                        <ul>
+                                            <li><p>모집직무</p><span>기획 – 모바일기획</span></li>
+                                            <li><p>금액</p><span>800 ~ 900만원</span></li>
+                                            <li><p>희망연차</p><span>n년 ~ n년</span></li>
+                                            <li><p>요구스킬</p><span >ASP, J, JSP, Javascript, ASP, J, JSP, Javascript, ASP, J, JSP, Javascript, ASP, J, JSP, Javascript,</span></li>
+                                        </ul>
+                                        <ul>
+                                            <li><p>투입기간</p><span>2022.03.11 부터 3.5개월</span></li>
+                                            <li><p>모집기간</p><span>2022.03.11 부터 2022.04.31까지</span></li>
+                                            <li><p>근무방식</p><span>상주</span></li>
+                                            <li><p>근무시간</p><span>09:00 ~ 18:00</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button class="onlyIco close"></button>
+                            </div>
+    
+                            <div class="accBox is-active">
+                                <div class="accHead">
+                                    <h5>업무상세</h5>
+                                </div>
+                                <div class="accInner infoType">
+                                    <div class="tableBox">
+                                        <table>
+                                            <colgroup>
+                                                <col width="200px">
+                                                <col width="300px">                                        
+                                                <col width="150px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>구분</th>
+                                                    <th>내용</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>담당업무</th>
+                                                    <td>
+                                                        <ul>
+                                                            <li>공장 운영지원 관리</li>
+                                                            <li>직원 근태관리, 비용관리</li>
+                                                            <li>전산마감관리</li>
+                                                            <li>물류 WMS, Data 입력지원</li>
+                                                            <li>생산 ERP Data 입력지원</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>0명</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>자격 및 우대사항</th>
+                                                    <td>
+                                                        <p>자격요건</p>
+                                                        <ul>
+                                                            <li>학력무관</li>
+                                                            <li>신입/경력무관</li>
+                                                        </ul>
+                                                        <p>우대사항</p>
+                                                        <ul>
+                                                            <li>물류센터 근무경험자</li>
+                                                            <li>생산공장 근무경험자</li>
+                                                            <li>WMS/ERP 전산관리 경험자</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottomBtn">
+                        <button class="white">취소하기</button>
+                        <button class="">등록하기</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="layerDim"></div> 
     </div>
-    <!--//모집공고 미리보기 팝업 / 마이크로사이트와 동시작업예정-->
+    <!--//모집공고 미리보기 팝업 230718 추가-->
 
 
     
@@ -711,6 +969,15 @@
         $(".selectedBox").on("click", function(){
             $(this).toggleClass("is-active");
             $(this).next(".selectList").toggleClass("is-active");
+        });
+
+        //담당자연락처보기
+        $(".tipBtn").on("click", function(){
+            $(this).next('.toolBox').toggleClass("is-active");
+        });
+        //정보 열림/닫힘
+        $(".onlyIco.close").on("click", function(){
+            $(this).parent('.accBox').toggleClass("is-active");
         });
     </script>
 </body>

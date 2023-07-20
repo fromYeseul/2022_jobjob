@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3개월 경과</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <section class="bgWrapper">
+        <div class="layoutWrapper">
+
+            <div class="logoWrapper">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo_w.png" alt="">
+                </a>
+            </div>
+
+            <!--분리가능-->
+            <div class="compoWrapper">
+                <div class="titWrapper">
+                    <div class="tooltip">
+                        <i class="ico manager"></i> 
+                        <span class="tipBtn">담당자</span>
+                        <div class="toolBox">
+                            <ul>
+                                <li class="manager">홍길동</li>
+                                <li class="phNm">
+                                    <span>010-1234-1234</span>
+                                    /
+                                    <span>02-345-3456</span>
+                                </li>
+                                <li class="mail">
+                                    abc123@echoit.co.kr
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="component center">  
+                    <div class="txtCenter">
+                        <img src="../assets/img/icoEye.png" alt="">   
+                        <h2>3개월이 지난 모집공고는<br class="mobile"> 확인할 수 없습니다.</h2>
+                    </div>  
+                </div>
+                
+                <div class="bottomBtn">
+                    <button class="">이력서 다시 첨부하기</button>
+                </div>
+                <footer>
+                    <ul>
+                        <li class="link">
+                            <a href="http://echoit.co.kr/company/company.html" target="_blank">회사소개</a>
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">Link4(미정)</a>
+                            <a href="#">Link5(미정)</a>
+                        </li>
+                        <li class="address">서울특별시 강남구 강남대로 146길 25(에코스페이스) 4층, 5층</li>
+                        <li class="contact">                            
+                            <span>jobjob@echoit.co.kr</span>
+                            <span>TEL 02-6342-8021</span>
+                            <span>FAX 02-864-8021</span>
+                        </li>
+                        <li class="copyRight">Copyright ⓒ2023 ECHOIT. All rights reserved.</li>
+                    </ul>
+                </footer>
+            </div>
+            <!--//분리가능-->
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>  
+    <script>
+        //담당자연락처보기
+        $(".tipBtn").on("click", function(){
+            $(this).next('.toolBox').toggleClass("is-active");
+        });
+    </script>  
+</body>
+</html>

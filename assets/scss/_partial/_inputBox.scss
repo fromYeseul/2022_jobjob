@@ -1,0 +1,29 @@
+.inputBox{
+    padding: rem(20);
+    border-radius: 6px;
+    border: 1px solid $layoutColor;
+    li{
+        & + li{
+            margin-top: rem(16);
+        }
+        ul{
+            margin-left: rem(26);
+            li{
+                display: inline-block;
+                margin-right: rem(16);
+            }
+        }
+        button{
+            float: right;
+        }
+    }
+    label{
+        font-weight: 400;
+    }
+}
+
+h5{
+    & + .inputBox{
+        margin-top: rem(16);
+    }
+}
