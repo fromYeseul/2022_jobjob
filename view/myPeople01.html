@@ -71,18 +71,45 @@
                         </ul>
                         <div class="tabContWrap">
                             <div id="myPeoA-1" class="tabCont is-active">
-                                <div class="usableMan">
-                                    <div class="yScroll">
-                                        <div class="listTop flexCenter flex">   
-                                            <div class="left">                                  
-                                                <input type="checkbox" id="chkAll" class="hasTxt">
-                                                <label for="chkAll"> 0 / 4</label>
-                                                
-                                                <input type="checkbox" id="chkLevel" class="hasTxt">
-                                                <label for="chkLevel"> 등급으로 보기</label>
-                                            </div>   
-                                            <button class="white smSize">선택삭제</button>
-                                        </div>
+                                <div class="usableMan">                                    
+
+                                    <!--230724 추가 -ys -->
+                                    <div class="condition">
+                                        <ul>
+                                            <li>
+                                                <select>
+                                                    <option value="">내부관리용 가용일</option>
+                                                    <option value="001">프로젝트 종료일</option>
+                                                    <option value="002">직접등록</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <input class="dateType" type="text" placeholder="시작일" id="datepicker">
+                                                <span class="range">~</span>                                                    
+                                                <input class="dateType" type="text" placeholder="종료일" id="datepicker">
+                                            </li>
+                                            <li class="hasBtn">
+                                                <input type="text" id="project2" maxlength="20" placeholder="이름, 스킬">
+                                                <button>
+                                                    <i class="ico search white"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--//230724 추가 -ys -->
+
+                                    <div class="listTop flexCenter flex">   
+                                        <div class="left">                                  
+                                            <input type="checkbox" id="chkAll" class="hasTxt">
+                                            <label for="chkAll"> 0 / 4</label>
+                                            
+                                            <input type="checkbox" id="chkLevel" class="hasTxt">
+                                            <label for="chkLevel"> 등급으로 보기</label>
+                                        </div>   
+                                        <button class="white smSize">목록추가</button>
+                                    </div>
+
+                                    <div class="yScroll"><!--230724 상단요소와 분리 -ys -->
                                         <div class="boxListWrap">            
                                             <ul>
                                                 <li class="headTypeBox">
@@ -470,7 +497,7 @@
                                                 <col>
 
                                                 <col>
-                                                <col>
+                                                <!-- <col> 230724 삭제 -ys -->
                                                 <col>
                                             </colgroup>
                                             <thead class="sticky"><!--221101 클래스추가 -ys-->
@@ -482,7 +509,7 @@
                                                     <th>직무</th>
 
                                                     <th>희망단가</th>
-                                                    <th>확정단가</th>
+                                                    <!-- <th>확정단가</th> 230724 삭제 -ys -->
                                                     <th>결과</th>
                                                 </tr>
                                             </thead>
@@ -491,299 +518,167 @@
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <!-- <span class="label">SI</span> 230724 삭제 -ys -->
+                                                        <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a><!--230724 a태그 추가 -ys-->
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
+                                                    <!-- <td>750만원</td> 230724 삭제 -ys -->
                                                     <td><span class="sOrder">지원완료</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SM</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] 리원푸드넷 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span class="sReject">지원취소</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] 리원푸드넷 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>추천검토</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] CJ프레시웨이</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>인터뷰</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] 푸드넷 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>최종합격</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] 온리원푸드넷 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>불합격</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] 온리원푸드넷 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>접수</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] CJ프레시웨이 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>접수</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SM</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>접수</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>접수</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>접수</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>접수</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>접수</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>접수</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>10</td>
                                                     <td>22.05.01</td>
                                                     <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+                                                        <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>
                                                     </td>
                                                     <td>개발</td>
                                                     <td>B/O</td>
                                                     <td>800만원</td>
-                                                    <td>750만원</td>
-                                                    <td><span>접수</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>22.05.01</td>
-                                                    <td class="ellipsis">
-                                                        <span class="label">SM</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
-                                                    </td>
-                                                    <td>개발</td>
-                                                    <td>B/O</td>
-                                                    <td>800만원</td>
-                                                    <td>750만원</td>
-                                                    <td><span>접수</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>22.05.01</td>
-                                                    <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
-                                                    </td>
-                                                    <td>개발</td>
-                                                    <td>B/O</td>
-                                                    <td>800만원</td>
-                                                    <td>750만원</td>
-                                                    <td><span>접수</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>22.05.01</td>
-                                                    <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
-                                                    </td>
-                                                    <td>개발</td>
-                                                    <td>B/O</td>
-                                                    <td>800만원</td>
-                                                    <td>750만원</td>
-                                                    <td><span>접수</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>22.05.01</td>
-                                                    <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
-                                                    </td>
-                                                    <td>개발</td>
-                                                    <td>B/O</td>
-                                                    <td>800만원</td>
-                                                    <td>750만원</td>
-                                                    <td><span>접수</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>22.05.01</td>
-                                                    <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
-                                                    </td>
-                                                    <td>개발</td>
-                                                    <td>B/O</td>
-                                                    <td>800만원</td>
-                                                    <td>750만원</td>
-                                                    <td><span>접수</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>22.05.01</td>
-                                                    <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
-                                                    </td>
-                                                    <td>개발</td>
-                                                    <td>B/O</td>
-                                                    <td>800만원</td>
-                                                    <td>750만원</td>
-                                                    <td><span>접수</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>22.05.01</td>
-                                                    <td class="ellipsis">
-                                                        <span class="label">SI</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
-                                                    </td>
-                                                    <td>개발</td>
-                                                    <td>B/O</td>
-                                                    <td>800만원</td>
-                                                    <td>750만원</td>
-                                                    <td><span>접수</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>22.05.01</td>
-                                                    <td class="ellipsis">
-                                                        <span class="label">SM</span>
-                                                        [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
-                                                    </td>
-                                                    <td>개발</td>
-                                                    <td>B/O</td>
-                                                    <td>800만원</td>
-                                                    <td>750만원</td>
                                                     <td><span>접수</span></td>
                                                 </tr>
                                             </tbody>
@@ -795,20 +690,22 @@
                                 <div class="boxListWrap">            
                                     <ul>
                                         <!--boxList-->
+                                        <!--230724 전체적으로 바뀜 -ys -->
                                         <li class="boxList flexType">
                                             <div class="prefix">
                                                 <ul>
+                                                    
                                                     <li>
-                                                        <span>추천직무</span>
-                                                        <span>AOS</span>
+                                                        <strong>개발 - </strong><!--230724 태그수정 -ys -->
+                                                        <strong>네트워크엔지니어</strong><!--230724 태그수정 -ys -->
                                                     </li>                                                    
                                                     <li>
-                                                        <span>매출단가</span>
-                                                        <span>-</span>
+                                                        <span>금액 :</span>
+                                                        <span>750-900만원</span>
                                                     </li>
                                                     <li>
-                                                        <span>모집기한</span>
-                                                        <span>~4/30(토)</span>
+                                                        <span>채용담당 :</span>
+                                                        <span>한아라</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -816,15 +713,18 @@
                                             <div class="center">                                            
                                                 <div class="head">
                                                     <span class="prefix">
-                                                        <span class="label">SM</span>
-                                                        CJ프레시웨이 온리원 푸드넷 CJ프레시웨이 온리원 푸드넷CJ프레시웨이 온리원 푸드넷CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포
+                                                        <!-- <span class="label">SM</span> 230724 삭제 -ys-->
+                                                        [모집중] [대외비]
+                                                        <span class="ellipsis is-deadline"><!--230724 임박 프로젝트 is-deadline 추가 -ys-->
+                                                            CJ프레시웨이 온리원 푸드넷 CJ프레시웨이 온리원 푸드넷
+                                                        </span>
                                                     </span>
-                                                    <span class="suffix dNear">임박</span>
-                                                    
+                                                    <span class="suffix">의정부</span>                                                    
                                                 </div>
             
                                                 <div class="cont">
-                                                    <ul class="flexCenter">
+                                                    <ul class="flexCenter mainC"><!--230724 클래스추가 -ys -->
+                                                        <li>요구스킬/경험 :</li>
                                                         <li>ASP</li>
                                                         <li>JSP</li>
                                                         <li>JAVA</li>
@@ -836,43 +736,46 @@
                                                 
                                                 <div class="bottom">
                                                     <span class="prefix">									
-                                                        <span> 영업 : 오지윤</span>									
-                                                        <span> 소싱 : 곽인혁 김혜인 김진용 정찬영 김용우 한아라 테스트3</span>	
+                                                        <span> 등록 : 2023.06.01</span>									
+                                                        <span> 마감 : 2023.07.31 <span class="dNear">(2일 후 마감)</span></span><!--230724 span태그 추가-->	
                                                     </span>
-                                                    <span>
+                                                    <!-- <span>
                                                         <a href="#" class="button white mid-lowSize" target="_blank">상세보기</a>
-                                                    </span>
+                                                    </span> -->
                                                 </div>
                                             </div>
             
-                                            <div class="suffix">
-                                                <a href="#layer_offer" class="button mid-lowSize layerOpen">제안하기</a>   
-                                                <div class="showMore">
+                                            <div class="suffix colType"><!--230724 클래스 추가 -ys -->
+                                                <a href="#" class="button white" target="_blank">공고보기</a><!--230724 이동 -ys-->
+                                                <a href="#layer_offer" class="button layerOpen">제안하기</a><!--230724 클래스 제거 -ys -->
+                                                <!-- <div class="showMore">
                                                     <a href="#" class="ico more"></a>
-                                                    <!--221013 수정 -ys-->
+                                                    !--221013 수정 -ys--
                                                     <div class="moreList">
                                                         <button class="square is-active">목록삭제</button>
                                                     </div>
-                                                    <!--//221013 수정 -ys-->
-                                                </div>                                                
+                                                    !--//221013 수정 -ys--
+                                                </div>-->
+                                                <i class="ico smClose"></i><!--230724 아이콘 변경 -ys -->
                                             </div>
                                         </li>
+                                        <!--//230724 전체적으로 바뀜 -ys -->
                                         <!--//boxList-->   
                                         
                                         <li class="boxList flexType">
                                             <div class="prefix">
                                                 <ul>
                                                     <li>
-                                                        <span>추천직무</span>
-                                                        <span>AOS</span>
+                                                        <strong>디자인 - </strong>
+                                                        <strong>웹디자인</strong>
                                                     </li>                                                    
                                                     <li>
-                                                        <span>매출단가</span>
-                                                        <span>-</span>
+                                                        <span>금액 :</span>
+                                                        <span>750-900만원</span>
                                                     </li>
                                                     <li>
-                                                        <span>모집기한</span>
-                                                        <span>~4/30(토)</span>
+                                                        <span>채용담당 :</span>
+                                                        <span>한아라</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -880,15 +783,16 @@
                                             <div class="center">                                            
                                                 <div class="head">
                                                     <span class="prefix">
-                                                        <span class="label">SM</span>
-                                                        CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포
+                                                        <!-- <span class="label">SM</span> -->
+                                                        [모집중]
+                                                        <span class="ellipsis">CJ프레시웨이 온리원 푸드넷 UI, UX 고도화</span>
                                                     </span>
-                                                    <span class="suffix dOngoing">모집</span>
-                                                    
+                                                    <span class="suffix">마포</span>                                                    
                                                 </div>
             
                                                 <div class="cont">
                                                     <ul class="flexCenter">
+                                                        <li>요구스킬/경험 :</li>
                                                         <li>ASP</li>
                                                         <li>JSP</li>
                                                         <li>JAVA</li>
@@ -899,26 +803,18 @@
                                                 </div>
                                                 
                                                 <div class="bottom">
-                                                    <span class="prefix">
-                                                        <span>영업  김성채</span>
-                                                        <span>소싱  한아라</span>
-                                                    </span>
-                                                    <span>
-                                                        <a href="#" class="button white mid-lowSize" target="_blank">상세보기</a>
+                                                    <span class="prefix">					
+                                                        <span> 등록 : 2023.06.01</span>									
+                                                        <span> 마감 : 2023.07.31</span>	
                                                     </span>
                                                 </div>
                                             </div>
             
-                                            <div class="suffix">
-                                                제의불가<br>(부회원)
-                                                <div class="showMore">
-                                                    <a href="#" class="ico more"></a>
-                                                    <!--221013 수정 -ys-->
-                                                    <div class="moreList">
-                                                        <button class="square is-active">목록삭제</button>
-                                                    </div>
-                                                    <!--//221013 수정 -ys-->
-                                                </div>
+                                            <div class="suffix colType">
+                                                <a href="#" class="button white" target="_blank">공고보기</a>   
+                                                <!-- 제의불가<br>(부회원) -->
+                                                <a href="#layer_offer" class="button layerOpen">제안하기</a><!--230724 클래스 제거 -ys -->
+                                                <i class="ico smClose"></i>
                                             </div>
                                         </li>
                                         <li class="boxList flexType">

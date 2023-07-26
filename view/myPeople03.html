@@ -454,29 +454,38 @@
                     </div>
                 </section> -->
                 <section class="myPeoDetail">
-                    <div class="notify">
+                    <!-- <div class="notify">
                         <p>홍길동님은 2022.04.03에 프로젝트 투입입니다.</p>
                         <span>필요한 준비서류와 출근정보 안내가 완료되면 목록에서 삭제하십시오.</span>
-                    </div>  
+                    </div>   -->
+                    <!--230724 수정 -ys -->
+                    <div class="notiBox">
+                        <h4>
+                            홍길동님은 <span class="important">2022.04.03 (월)</span>에 프로젝트 투입입니다.
+                            <span class="subInfo">필요한 준비서류와 출근정보 안내가 완료되면 목록에서 삭제하십시오.</span>
+                        </h4>
+                    </div>
+                    <!--//230724 수정 -ys -->
                     
                     
                     <div class="boxListWrap">            
                         <ul>
                             <!--boxList-->
+                            <!--230724 전체적으로 바뀜 -ys -->
                             <li class="boxList flexType">
                                 <div class="prefix">
                                     <ul>
                                         <li>
-                                            <span>추천직무</span>
-                                            <span>AOS</span>
+                                            <strong>개발 - </strong><!--230724 태그수정 -ys -->
+                                            <strong>네트워크엔지니어</strong><!--230724 태그수정 -ys -->
                                         </li>                                                    
                                         <li>
-                                            <span>매출단가</span>
-                                            <span>-</span>
+                                            <span>매입단가 :</span>
+                                            <span>900만원</span>
                                         </li>
                                         <li>
-                                            <span>모집기한</span>
-                                            <span>~4/30(토)</span>
+                                            <span>채용담당 :</span>
+                                            <span>한아라</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -484,15 +493,19 @@
                                 <div class="center">                                            
                                     <div class="head">
                                         <span class="prefix">
-                                            <span class="label">SM</span>
-                                            CJ프레시웨이 온리원 푸드넷 CJ프레시웨이 온리원 푸드넷CJ프레시웨이 온리원 푸드넷CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포
+                                            <!-- <span class="label">SM</span> 230724 삭제 -ys-->
+                                            [모집마감]
+                                            <span class="ellipsis is-deadline"><!--230724 임박 프로젝트 is-deadline 추가 -ys-->
+                                                CJ프레시웨이 온리원 푸드넷 CJ프레시웨이 온리원 푸드넷 CJ프레시웨이 온리원 푸드넷 CJ프레시웨이 온리원 푸드넷CJ프레시웨이 온리원 푸드넷 CJ프레시웨이 온리원 푸드넷
+                                            </span>
                                         </span>
-                                        <span class="suffix dNear">임박</span>
+                                        <span class="suffix">마포</span>
                                         
                                     </div>
 
                                     <div class="cont">
-                                        <ul class="flexCenter">
+                                        <ul class="flexCenter mainC"><!--230724 클래스추가 -ys -->
+                                            <li>요구스킬/경험 :</li>
                                             <li>ASP</li>
                                             <li>JSP</li>
                                             <li>JAVA</li>
@@ -503,18 +516,18 @@
                                     </div>
                                     
                                     <div class="bottom">
-                                        <span class="prefix">
-                                            <span>영업  김성채</span>
-                                            <span>소싱  한아라</span>
+                                        <span class="prefix">					
+                                            <span> 실투입 : 미입력</span>		
                                         </span>
-                                        <span>
+                                        <!-- <span>
                                             <a href="#" class="button white mid-lowSize" target="_blank">상세보기</a>
-                                        </span>
+                                        </span> -->
                                     </div>
                                 </div>
 
-                                <div class="suffix">
-                                    <a href="#investDetail" class="button mid-lowSize layerOpen">투입상세</a>
+                                <div class="suffix colType"><!--230724 클래스 추가 -ys -->
+                                    <a href="#" class="button white" target="_blank">공고보기</a>
+                                    <a href="#investDetail" class="button layerOpen">투입상세</a><!--230724 클래스 제거 -ys -->
                                        
                                     <!--221017 삭제 -ys--
                                     <div class="showMore">
@@ -528,6 +541,7 @@
                                     <!--//221017 삭제 -ys-->
                                 </div>
                             </li>
+                            <!--//230724 전체적으로 바뀜 -ys -->
                             <!--//boxList-->   
                             
                             <li class="boxList flexType">
@@ -599,7 +613,10 @@
 
                         <!--221017 추가 -ys-->
                         <div class="chkListWrap">
-                            <h4><i class="ico list"></i> 체크리스트</h4>
+                            <h4>
+                                <i class="ico list"></i> 체크리스트
+                                <button type="button" class="white layerOpen">고정항목 관리</button><!--230724 추가 -ys -->
+                            </h4>
                             <ul id="chkList">
                                 <!-- <li>
                                     <input type="checkbox" class="chkCustom hasTxt" id="chk1" name="chkList">
@@ -618,7 +635,7 @@
                                     <input type="text" class="laSize lowSize" maxlength="50" placeholder="내용 입력 후 엔터" onkeyup="">
                                 </li>
                             </ul>
-                            <button class="mid-lowSize" id="addchkList">+ 항목 추가</button>
+                            <button class="bdType" id="addchkList">+ 항목 추가</button><!--230724 클래스 수정 -ys -->
                         </div>
                         <!--//221017 추가 -ys-->
                     </div>

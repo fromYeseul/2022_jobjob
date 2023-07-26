@@ -84,6 +84,20 @@
                 border-bottom-color: $tooltipGray;
             }
         }
+        &.right{
+            width: auto;
+            top: 45%;
+            left: auto;
+            right: -100%;
+            transform: translateY(-50%);   
+            &::after{
+                top: 50%;
+                left: -6px;
+                transform: translateY(-50%);   
+                border-top-color: transparent;
+                border-right-color: $tooltipGray;
+            }
+        }
         
         p{
             font-weight: 700;

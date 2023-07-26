@@ -24,7 +24,6 @@
         flex-wrap: wrap;
         li{
             display: inline-block;
-            margin-right: rem(7);
             input[type=text]{                
                 width: rem(400);
                 &.dateType{
@@ -33,6 +32,9 @@
                 }
             }
             //select, input 너비, 높이 등을 기본값으로할건지???
+            & + li{
+                margin-left: rem(7);
+            }
         }
     }
     .hasBtn{
@@ -55,6 +57,17 @@
     select{
         &.autoSize{
             height: rem(44);
+        }
+    }
+    &.inList{
+        margin-top: 0;
+        ul{
+            display: grid;
+            row-gap: rem(10);
+            column-gap: rem(10);
+            li {
+                margin-left: 0;
+            }
         }
     }
 }

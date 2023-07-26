@@ -15,102 +15,10 @@
         border: 1px solid $inputGray;
     }
 }
+
 .recruitDetail{
     .tableBox{
         overflow-y: visible;
-    }
-    table{
-        &.chkType{            
-            th{
-                height: rem(60);
-                padding: rem(5) rem(20);
-                &:first-child{
-                    text-align: left;
-                }
-            }
-        }
-        .attached{
-            display: block;
-            color: $mainColor;
-            text-decoration: underline;
-            cursor:pointer;
-        }
-    }
-    thead{
-        tr{
-            border-bottom: 0;
-            th{
-                border-bottom: 0;
-            }
-            &:nth-child(2){
-                th{
-                    height: auto;
-                    padding-top: 0;
-                    //padding: 0 rem(20);
-                }
-            }
-        }
-        .round{
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-    }
-    tbody{
-        border-top: 2px solid $accPrefixGray;
-        td{    
-            padding: rem(20);        
-            .bdType,
-            .white{
-                height: rem(60);
-                line-height: initial;
-                span{
-                    display: block;
-                    font-size: 12px;
-                    font-weight: 300;
-                    color: $accDate;
-                }
-                &.smSize{
-                    height: auto;
-                    line-height: rem(30);
-                    margin-left: rem(10);
-                }
-            }
-            &:last-child{
-                strong{
-                    margin-bottom: 0;
-                }
-            }
-            &.left{
-                text-align: left;
-                padding: rem(20);
-            }
-        }
-        strong{
-            display: inline-block;
-            color: $black;
-            margin-bottom: rem(10);            
-        }
-    }
-    .subInfo{
-        color: $accDate;
-    }
-    .hasBtn{
-        display: inline-flex;
-    }
-    // .inputIco{
-    //     input[type=text]{
-    //         width: rem(440);
-    //     }
-    // }
-    .phoImg{
-        .photo{
-            width: rem(36);
-            height: rem(36);
-        }
-        & + .eHigh{
-            display: block;
-            // margin-top: 5px;
-        }
     }
     .listBottom{
         &.pagingType{

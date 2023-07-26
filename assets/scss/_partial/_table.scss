@@ -18,8 +18,15 @@ table{
     background: $white;
     th{
         select{
+            width: rem(140);
+            height: rem(36);
             &.mid-lowSize{
                 width: rem(110);
+            }
+        }
+        .hasBtn{
+            .onlyIco{
+                height: rem(32);
             }
         }
     }
@@ -271,6 +278,93 @@ table{
                 padding: rem(15) rem(18);
                 background: $bgColor;
                 border-bottom: 0;
+            }
+        }
+    }
+    &.wideType{
+        .attached{
+            display: block;
+            margin-top: 5px;
+            color: $mainColor;
+            text-decoration: underline;
+            position: relative;
+            cursor:pointer;
+        }
+        > thead{
+            > tr{
+                border-bottom: 0;
+                > th{
+                    border-bottom: 0;
+                    height: rem(60);
+                    padding: rem(5) rem(20);
+                    &:first-child{
+                        text-align: left;
+                    }
+                }
+                &:nth-child(2){
+                    th{
+                        height: auto;
+                        padding-top: 0;
+                        //padding: 0 rem(20);
+                    }
+                }
+            }
+            .round{
+                margin-left: 10px;
+                vertical-align: middle;
+            }
+        }
+        > tbody{
+            border-top: 2px solid $accPrefixGray;
+            > tr{
+                > td{    
+                    padding: rem(20);        
+                    .bdType,
+                    .white{
+                        height: rem(60);
+                        line-height: initial;
+                        span{
+                            display: block;
+                            font-size: 12px;
+                            font-weight: 300;
+                            color: $accDate;
+                        }
+                        &.smSize{
+                            height: auto;
+                            line-height: rem(30);
+                            margin-left: rem(10);
+                        }
+                    }
+                    &:last-child{
+                        strong{
+                            margin-bottom: 0;
+                        }
+                    }
+                    &.left{
+                        text-align: left;
+                        padding: rem(20);
+                    }
+                }
+            }
+            strong{
+                display: inline-block;
+                color: $black;
+                margin-bottom: rem(10);            
+            }
+        }
+        .subInfo{
+            color: $accDate;
+        }
+        .hasBtn{
+            display: inline-flex;
+        }
+        .phoImg{
+            .photo{
+                width: rem(36);
+                height: rem(36);
+            }
+            & + .eHigh{
+                display: block;
             }
         }
     }

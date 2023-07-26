@@ -1,10 +1,22 @@
 .myProjList{
     .boxListWrap{    
-        // height: calc(100vh - 164px);
-        height: calc(100vh - 129px);
+        height: calc(100vh - 221px);
     }
-    .boxList{
-        // height: rem(115);
+    .condition{
+        padding: rem(10);
+        ul{
+            .txtRight{
+                grid-column: 1 / 3;
+            }
+        }
+        select{
+            width: rem(100);
+            height: rem(38);
+        }
+        input[type=text]{
+            width: 100%;
+            height: rem(38);
+        }
     }
     .nodata{
         font-size: rem(14);
@@ -36,13 +48,30 @@
         }
         &.suffix{
             margin-left: rem(10);
-            h4{
-                text-align: center;
+            // h4{
+            //     text-align: center;
+            // }
+            .listTop{                            
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                .prefix{
+                    font-size: rem(16);
+                    i{
+                        margin-right: 4px;
+                    }
+                }
+                button,
+                .button{
+                    width: rem(90);
+                    line-height: rem(34);
+                }
             }
             .yScroll{                
                 padding-right: rem(10);
                 // height: rem(130);
-                height: rem(113); //0530 J수정 
+                height: rem(155);
             }
         }
         &.sticky{
@@ -53,9 +82,29 @@
             .tabBtnWrap{
                 padding-top: rem(8);
             }
+            .tabBtn{
+                &.suffix{
+                    position: relative;
+                    &:before{
+                        content:'';
+                        width: 1px;
+                        height: 35px;
+                        background: $tabGray; 
+                        position: absolute;
+                        left: -1px;
+                        top: 0;
+                    }
+                }
+            }
             .tabContWrap{
                 padding: rem(20);
                 padding-top: 0;
+                    td{
+                        padding: rem(20) rem(5);   
+                    }
+                .chipBox{
+                    padding: 0;
+                }
             }
             .yScroll{
                 // height: calc(100vh - 530px);
@@ -81,6 +130,7 @@
                 font-size: rem(14);
             }
             th{
+                padding: rem(5) 0;
                 position: relative;
                 .filterWrapper{
                     min-width: rem(130);
@@ -91,20 +141,61 @@
                 }
             }
         }
-        .boxType{              
-            max-height: rem(120);
+        .boxType{          
+            width: 98%;    
+            height: rem(100);
             margin-top: rem(22); //0530 J수정 30 -> 22
             // padding-bottom: rem(10);
             padding-bottom: rem(6);
-            overflow-x: auto;
+            // overflow-x: auto;
+            ul{
+                display: none;
+                &.is-active{
+                    display: flex;
+                }
+                &:first-child{
+                    display: flex;
+                }
+            }
+            li{
+                background: $white;
+                z-index: 1;
+            }
+            .onlyIco{
+                padding: 0;
+                position: absolute;
+                right: 0;
+                top: 40%;
+                transform-origin: center;
+                z-index: 1;
+                &.is-active{
+                    background: $white;
+                    border:0;
+                    transform: rotate(180deg);
+                }
+            }
         }
         .yScroll{
             height: calc(100vh - 800px);
             margin-top: rem(10);
-            .tit{
-                margin-top: rem(16);
-                &:first-child{
-                    margin-top: 0;
+            // .tit{
+            //     margin-top: rem(16);
+            //     &:first-child{
+            //         margin-top: 0;
+            //     }
+            // }
+            .innerList{
+                padding-top: 0;
+                ul{
+                    width: 100%;
+                }
+                li{
+                    line-height: 25px;
+                    p{
+                        &:before{
+                            top: 10px;
+                        }
+                    }
                 }
             }
         }
@@ -140,7 +231,7 @@
         //     }
         // }
         td{
-            height: rem(56);
+            // height: rem(56);
             &.txtCenter span.eHigh {  //추가    
                 display: block;
                 text-align: center;

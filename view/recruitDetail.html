@@ -119,7 +119,7 @@
                         <div class="tabContWrap">
                             <div id="tab-01" class="tabCont is-active">
                                 <div class="tableBox">                              
-                                    <table class="chkType">
+                                    <table class="chkType wideType"><!--230724 클래스 추가 -ys-->
                                         <colgroup>
                                             <col width="4%;">
                                             <col width="5%">
@@ -759,7 +759,7 @@
 
                             <div id="tab-02" class="tabCont">
                                 <div class="tableBox">                              
-                                    <table class="chkType">
+                                    <table class="chkType  wideType"><!--230724 클래스 추가 -ys-->
                                         <colgroup>
                                             <col width="5%">
                                             <col width="4%;">
@@ -842,9 +842,13 @@
                                                     <strong>지원일</strong>
                                                     <p>2023.05.30</p>
                                                 </td>
-                                                <td>                                                    
-                                                    <i class="ico file"></i>
-                                                    <span class="attached layerOpen" aria-controls="fileList">첨부파일"팝업열림"</span>
+                                                <td>                
+                                                    <!--230724 수정 -ys-->                            
+                                                    <button type="button" class="txtType layerOpen" aria-controls="fileList">
+                                                        <i class="ico file"></i>
+                                                        <span class="attached layerOpen" aria-controls="fileList">첨부파일"팝업열림"</span>
+                                                    </button>
+                                                    <!--//230724 수정 -ys-->
                                                 </td>
                                                 <td>
                                                     <select class="mid-lowSize" name="" id="">
@@ -902,8 +906,12 @@
                                                     <p>2023.04.30</p>
                                                 </td>
                                                 <td>
-                                                    <i class="ico file"></i><br>
-                                                    <a href="#" download="">첨부파일</a>
+                                                    <!--230724 수정 -ys-->                            
+                                                    <button type="button" class="txtType layerOpen" disabled aria-controls="fileList">
+                                                        <i class="ico file"></i>
+                                                        <span class="attached layerOpen" aria-controls="fileList">첨부파일</span>
+                                                    </button>
+                                                    <!--//230724 수정 -ys-->
                                                 </td>
                                                 <td>
                                                     <select class="mid-lowSize" name="" id="">
@@ -1178,7 +1186,7 @@
                             </div>
                             <div id="tab-03" class="tabCont">
                                 <div class="tableBox">                              
-                                    <table class="chkType">
+                                    <table class="chkType wideType"><!--230724 클래스 추가 -ys-->
                                         <!--230718 수정 -ys-->
                                         <colgroup>
                                             <col width="6%">
@@ -1904,7 +1912,7 @@
     </section>
 
     <!--직무추천세부설정 팝업-->
-    <div id="recomDetail" class="modalLayer center">
+    <div id="recomDetail" class="modalLayer center is-active">
         <div class="layerBox">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -2030,7 +2038,7 @@
     <!--//직무추천세부설정 팝업-->
 
     <!--프로젝트선택 팝업-->
-    <div id="recruitProject" class="modalLayer center"><!--id 바뀌면 말씀해주세요 -ys -->
+    <div id="recruitProject" class="modalLayer center is-active"><!--id 바뀌면 말씀해주세요 -ys -->
         <div class="layerBox">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -2136,7 +2144,7 @@
 
 
     <!--필터 전체 팝업-->
-    <div id="searchFilter" class="modalLayer center">
+    <div id="searchFilter" class="modalLayer center is-active">
         <div class="layerBox laSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -2502,7 +2510,7 @@
     <!--//필터 전체 팝업-->
 
     <!--첨부파일 리스트 팝업-->
-    <div id="fileList" class="modalLayer center">
+    <div id="fileList" class="modalLayer center is-active">
         <div class="layerBox smMidSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -2627,7 +2635,7 @@
 
 
     <!--프로젝트 제안이력 팝업-->
-    <div id="projOfferHis" class="modalLayer center"><!--id 바뀌면 말씀해주세요 -ys-->
+    <div id="projOfferHis" class="modalLayer center is-active"><!--id 바뀌면 말씀해주세요 -ys-->
         <div class="layerBox mid-laSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>

@@ -81,8 +81,14 @@
     height: calc(100vh - 180px);
     overflow-y: auto;
     .resuTop{
-        text-align: right;
-        padding-bottom: rem(10);
+        @include sideArray;
+        margin-bottom: rem(10);
+        button{            
+            min-width: rem(90);
+            width: auto;
+            line-height: rem(34);
+            padding: 0 rem(15);
+        }
     }
     .resuBox{    
         height: calc(100vh - 250px);

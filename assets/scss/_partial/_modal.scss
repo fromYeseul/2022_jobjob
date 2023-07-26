@@ -18,18 +18,30 @@
         top: 0;
         left: 0;
         right: 0;
-    }    
+        .layerBox{
+            overflow-y: auto;
+            width: rem(570);
+            max-height: 95%;
+            padding: rem(30);
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: rem(4);
+        }
+    }  
+    &.absol{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        border: 1px solid $black;
+        .layerBox{
+            padding: rem(20);
+            min-width: rem(400);
+        }
+    }  
     .layerBox{
         position: relative;
-        overflow-y: auto;
-        width: rem(570);
-        max-height: 95%;
-        padding: rem(30);
-        top:50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
         background: $white;
-        border-radius: rem(4);
         z-index: 10;
         &.confirmType{
             width: rem(330);
@@ -143,6 +155,20 @@
         font-weight: 700;
         text-align: left;
         line-height: rem(18);
+    }
+    table{
+        thead{
+            height: rem(32) !important;
+        }
+        th{
+            padding: rem(2) 0;
+            // height: rem(32);
+            color: $white !important;
+            background: $tableBgGray !important;
+        }
+        td{
+            padding: rem(4) rem(10) !important;
+        }
     }
 }
 
@@ -270,6 +296,8 @@
     }
 }
 .modalFooter{
+    max-width: 510px;
+    margin: 0 auto;
     margin-top: rem(30);
     @include flex_2_3;
     button{        
@@ -666,5 +694,13 @@
         .component{
             height: calc(100vh - 450px);
         }
+    }
+}
+
+//마이프로젝트 - 연락주의자 명단
+#contactCare{
+    .tableBox{
+        height: rem(350);
+        overflow-y: auto;
     }
 }

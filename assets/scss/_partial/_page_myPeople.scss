@@ -30,7 +30,48 @@
     }
 }
 
+.usableMan{
+    .condition{
+        margin-bottom: rem(10);
+        li{
+            &.hasBtn{
+                grid-column: 1 / 3;
+                input{
+                    width: rem(404);
+                }
+                button{
+                    line-height: rem(38);
+                }
+            }
+        }
+        select{
+            width: rem(140);
+            height: rem(38);
+        }
+        input{
+            height: rem(38);
+        }
+        .range{
+            margin: 0 5px;
+        }
+    }
+    .yScroll{
+        height: calc(100vh - 350px);
+    }
+}
+
 .myPeoDetail{
+    .notiBox{
+        margin-left: rem(30);
+        margin-top: 0;
+        width: calc(100% - 60px);
+        .subInfo{
+            margin-left: rem(10);
+            font-weight: 400;
+            font-size: rem(16);
+            color: $black;
+        }
+    }
     .tableBox{
         height: calc(100vh - 240px);  
         margin-top: rem(30);      
@@ -42,15 +83,7 @@
     }
     .default{
         height: 100%;
-    }
-    .notify{
-        p{
-            &:first-child{
-                font-size: rem(18);
-                font-weight: 700;
-            }
-        }
-    }    
+    }  
     &.is-active{
         & + .quickView{
             width: rem(360);

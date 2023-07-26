@@ -448,28 +448,38 @@
                 </section>
                 
                 <section class="myPeoDetail">
-                    <div class="notify">
+                    <!-- <div class="notify">
                         <p>홍길동님은 총 4개의 프로젝트에 추천된 상태입니다.</p>
                         <span>고객사에 결과 확인 후 합격여부를 변경하세요.</span>
-                    </div>  
+                    </div>   -->
+
+                    <!--230724 수정 -ys -->
+                    <div class="notiBox">
+                        <h4>
+                            홍길동님은 총 <span class="important">4개</span>의 프로젝트에 추천된 상태입니다.
+                            <span class="subInfo">고객사에 결과 확인 후 합격여부를 변경하세요.</span>
+                        </h4>
+                    </div>
+                    <!--//230724 수정 -ys -->
                     
                     <div class="boxListWrap">            
                         <ul>
                             <!--boxList-->
+                            <!--230724 전체적으로 바뀜 -ys -->
                             <li class="boxList flexType">
                                 <div class="prefix">
                                     <ul>
                                         <li>
-                                            <span>추천직무</span>
-                                            <span>AOS</span>
+                                            <strong>개발 - </strong><!--230724 태그수정 -ys -->
+                                            <strong>네트워크엔지니어</strong><!--230724 태그수정 -ys -->
                                         </li>                                                    
                                         <li>
-                                            <span>매출단가</span>
-                                            <span>-</span>
+                                            <span>희망금액 :</span>
+                                            <span>900만원</span>
                                         </li>
                                         <li>
-                                            <span>모집기한</span>
-                                            <span>~4/30(토)</span>
+                                            <span>채용담당 :</span>
+                                            <span>한아라</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -477,15 +487,19 @@
                                 <div class="center">                                            
                                     <div class="head">
                                         <span class="prefix">
-                                            <span class="label">SM</span>
-                                            CJ프레시웨이 온리원 푸드넷 UI, UX 고도화 - 마포
+                                            <!-- <span class="label">SM</span> 230724 삭제 -ys-->
+                                            [모집중]
+                                            <span class="ellipsis is-deadline"><!--230724 임박 프로젝트 is-deadline 추가 -ys-->
+                                                CJ프레시웨이 푸드넷 CJ프레시웨이 온리원 푸드
+                                            </span>
                                         </span>
-                                        <span class="suffix dNear">임박</span>
+                                        <span class="suffix">마포</span><!--230724 클래스 제거 -ys -->
                                         </span>
                                     </div>
 
                                     <div class="cont">
                                         <ul class="flexCenter">
+                                            <li>요구스킬/경험 :</li>
                                             <li>ASP</li>
                                             <li>JSP</li>
                                             <li>JAVA</li>
@@ -497,27 +511,24 @@
                                     
                                     <div class="bottom">
                                         <span class="prefix">
-                                            <span>영업  김성채</span>
-                                            <span>소싱  한아라</span>
+                                            <span class="mainC"> 지원일 : 2023.06.01</span>	
                                         </span>
-                                        <span>
+                                        <!-- <span>
                                             <a href="#" class="button white mid-lowSize" target="_blank">상세보기</a>
-                                        </span>
+                                        </span> -->
                                     </div>
                                 </div>
 
                                 <div class="suffix colType"><!--221013 class 추가 -ys-->
-                                    <p class="info">2022/05/30 추천</p>
+                                    <a href="#" class="button white" target="_blank">공고보기</a>   
 
-                                    <div class="select lowSize">
-                                        <span class="selDefault">인터뷰</span>
-                                        <ul class="optionList">
-                                            <li class="optionItem">열람</li>
-                                            <li class="optionItem">추천검토</li>
-                                            <li class="optionItem">인터뷰</li>
-                                            <li class="optionItem">최종합격</li>
-                                            <li class="optionItem">불합격</li>
-                                        </ul>
+                                    <div class="hasTooltip"><!--230724 툴팁추가 -ys -->
+                                        <div class="tooltip left">2022/05/30</div>
+                                        
+                                        <select class="" name="" id="">
+                                            <option value="univ2">교육</option>
+                                            <option value="univ2">자격증</option>
+                                        </select>
                                     </div>
                                     
                                     <!--221017 삭제 -ys--
@@ -532,6 +543,7 @@
                                     <!--//221017 삭제 -ys-->
                                 </div>
                             </li>
+                            <!--//230724 전체적으로 바뀜 -ys -->
                             <!--//boxList-->   
                             
                             <li class="boxList flexType">

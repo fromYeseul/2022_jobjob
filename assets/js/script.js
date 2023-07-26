@@ -792,13 +792,13 @@ function openFilter(){
 // openFilter();
 
 $(document).mouseup(function (e){
-	var filterWrapper = $(".filterWrapper");
+	var filterWrapper = $(".contWrapper .filterWrapper");
 	var uiDate = $(".ui-datepicker-calendar");
 	if(filterWrapper.has(e.target).length === 0 && uiDate.has(e.target).length === 0){
         filterWrapper.removeClass("is-active");
     }
 });
-//230627 수정 -ys
+//230724 수정 -ys
 
 
 // function layerPop(){

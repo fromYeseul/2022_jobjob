@@ -72,10 +72,16 @@
 
                                             <button class="txtType mainC layerOpen" aria-controls="">[자세히]</button>
                                         </li>
+                                        <!--230724  추가 -ys-->
+                                        <li>
+                                            <input type="checkbox" id="aa" class="hasTxt"> 
+                                            <label for="aa">(필수) 개인정보 제 3자제공 동의</label>
+                                        </li>
+                                        <!--//230724  추가 -ys-->
                                         <li>
                                             <input type="checkbox" id="a5" class="hasTxt"> 
                                             <label for="a5">(선택) 프로젝트 채용정보 수신 동의</label>
-                                            <ul>
+                                            <ul class="flex">
                                                 <li>
                                                     <input type="checkbox" id="a6" class="hasTxt"> 
                                                     <label for="a6">알림톡/문자</label>
@@ -155,7 +161,7 @@
 
 
     <!--약관보기 팝업-->
-    <div id="agreementFull" class="modalLayer center">
+    <div id="agreementFull" class="modalLayer center is-active">
         <div class="layerBox responsive">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   

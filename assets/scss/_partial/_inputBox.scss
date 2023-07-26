@@ -8,12 +8,20 @@
         }
         ul{
             margin-left: rem(26);
-            li{
-                display: inline-block;
-                margin-right: rem(16);
+            margin-top: rem(16);
+            &.flex{
+                li{
+                    margin-top: 0;
+                    margin-right: rem(10);
+                }
             }
         }
         button{
+            float: right;
+        }
+        .subInfo{
+            font-size: rem(14);
+            color: $selGray;
             float: right;
         }
     }
