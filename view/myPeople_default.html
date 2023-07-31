@@ -929,6 +929,302 @@
         </div>
         <!--우측패널-->
     </section>
+
+    <!--230724 고정항목관리 -ys-->
+    <div id="chkListAdmin" class="modalLayer center is-active"><!--id바뀌면 말씀해주세요-->
+        <div class="layerBox mid-laSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h3>고정항목관리</h3>
+                <div class="h3_sub">선택된 고정항목은 투입확정화면에 인력이 등록되면 <span class="mainC">자동으로 추가</span>됩니다.</div>
+            </div>
+            <div class="modalCont center">
+                <div class="tableTop right">
+                    <button class="white mid-lowSize">선택삭제</button>
+                </div>
+                <div class="divideBox">
+                    <div class="left">
+                        <h5>분류</h5>
+
+                        <div class="radioList">                                            
+                            <ul>
+                                <li>
+                                    <input type="radio" id="ba" name="list" class="hasTxt"><label for="ba"></label>
+                                    <input type="text" class="editType" value="삼성">
+                                    <i class="ico delete_bg"></i>
+                                </li>
+                                <li>
+                                    <input type="radio" id="baa" name="list" class="hasTxt"><label for="baa"></label>
+                                    <input type="text" class="editType" value="기자재 등록 공통">
+                                    <i class="ico delete_bg"></i>
+                                </li>
+                                <li>
+                                    <input type="radio" id="bab" name="list" class="hasTxt"><label for="bab"></label>
+                                    <input type="text" class="editType" value="삼성">
+                                    <i class="ico delete_bg"></i>
+                                </li>
+                                <li>
+                                    <input type="radio" id="bac" name="list" class="hasTxt"><label for="bac"></label>
+                                    <input type="text" class="editType" value="비삼성">
+                                    <i class="ico delete_bg"></i>
+                                </li>
+                                <li>
+                                    <input type="radio" id="bad" name="list" class="hasTxt"><label for="bad"></label>
+                                    <input type="text" class="editType" value="삼성">
+                                    <i class="ico delete_bg"></i>
+                                </li>
+                                <li>
+                                    <input type="radio" id="bae" name="list" class="hasTxt"><label for="bae"></label>
+                                    <input type="text" class="editType" value="비삼성">
+                                    <i class="ico delete_bg"></i>
+                                </li>
+                                <li>
+                                    <input type="radio" id="baf" name="list" class="hasTxt"><label for="baf"></label>
+                                    <input type="text" class="editType" value="삼성">
+                                    <i class="ico delete_bg"></i>
+                                </li>
+                                <li>
+                                    <input type="radio" id="bag" name="list" class="hasTxt"><label for="bag"></label>
+                                    <input type="text" class="editType" value="비삼성">
+                                    <i class="ico delete_bg"></i>
+                                </li>
+                                <li class="nodata"><!--항목없을때-->
+                                    분류명과 체크리스트 항목을<br>
+                                    편집 후 저장 버튼을 눌러주세요.
+                                </li>
+                            </ul>
+                        </div>                     
+                        
+                        <div class="bottom">
+                            <input type="text" placeholder="입력">
+                            <button class="bdType">분류 추가</button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="tableBox">
+                            <table>
+                                <colgroup>
+                                    <col width="8%">
+                                    <col>
+                                    <col width="15%">
+                                    <col width="15%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th width="47px">
+                                            <input type="checkbox" id="note">
+                                            <label for="note"></label>
+                                        </th>
+                                        <th width="360px;">체크리스트 내용</th>
+                                        <th width="87;">고정항목</th>
+                                        <th width="100px;">선택</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="note2">
+                                            <label for="note2"></label>
+                                        </td>
+                                        <td class="ellipsis">담당자, 담장자 연락처담당자, 담장자 연락처 안내담당자, 담장자 연락처 안내</td>
+                                        <td>
+                                            <div class="switch">
+                                                <input id="s2" type="checkbox" class="chkSwitch" checked>
+                                                <label for="s2"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txtCenter">
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="note2">
+                                            <label for="note2"></label>
+                                        </td>
+                                        <td class="ellipsis">연락처담당자담장자 연락처</td>
+                                        <td>
+                                            <div class="switch">
+                                                <input id="s2" type="checkbox" class="chkSwitch">
+                                                <label for="s2"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txtCenter">
+                                            <button type="button" class="onlyIco lowSize is-active"><i class="ico smPlus"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="note2">
+                                            <label for="note2"></label>
+                                        </td>
+                                        <td class="ellipsis">담장자 연락처 안내</td>
+                                        <td>
+                                            <div class="switch">
+                                                <input id="s2" type="checkbox" class="chkSwitch">
+                                                <label for="s2"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txtCenter">
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="note2">
+                                            <label for="note2"></label>
+                                        </td>
+                                        <td class="ellipsis">담당자 연락처 안내</td>
+                                        <td>
+                                            <div class="switch">
+                                                <input id="s2" type="checkbox" class="chkSwitch" checked>
+                                                <label for="s2"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txtCenter">
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="note2">
+                                            <label for="note2"></label>
+                                        </td>
+                                        <td class="ellipsis">담당자, 담장자 연락처담당자, 담장자 연락처 안내담당자, 담장자 연락처 안내</td>
+                                        <td>
+                                            <div class="switch">
+                                                <input id="s2" type="checkbox" class="chkSwitch" checked>
+                                                <label for="s2"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txtCenter">
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="note2">
+                                            <label for="note2"></label>
+                                        </td>
+                                        <td class="ellipsis">담당자 연락처 안내</td>
+                                        <td>
+                                            <div class="switch">
+                                                <input id="s2" type="checkbox" class="chkSwitch" checked>
+                                                <label for="s2"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txtCenter">
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="note2">
+                                            <label for="note2"></label>
+                                        </td>
+                                        <td class="ellipsis">담당자, 담장자 연락처담당자, 담장자 연락처 안내담당자, 담장자 연락처 안내</td>
+                                        <td>
+                                            <div class="switch">
+                                                <input id="s2" type="checkbox" class="chkSwitch" checked>
+                                                <label for="s2"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txtCenter">
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="note2">
+                                            <label for="note2"></label>
+                                        </td>
+                                        <td class="ellipsis">연락처담당자담장자 연락처</td>
+                                        <td>
+                                            <div class="switch">
+                                                <input id="s2" type="checkbox" class="chkSwitch">
+                                                <label for="s2"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txtCenter">
+                                            <button type="button" class="onlyIco lowSize is-active"><i class="ico smPlus"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="note2">
+                                            <label for="note2"></label>
+                                        </td>
+                                        <td class="ellipsis">담장자 연락처 안내</td>
+                                        <td>
+                                            <div class="switch">
+                                                <input id="s2" type="checkbox" class="chkSwitch">
+                                                <label for="s2"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txtCenter">
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="note2">
+                                            <label for="note2"></label>
+                                        </td>
+                                        <td class="ellipsis">담당자 연락처 안내</td>
+                                        <td>
+                                            <div class="switch">
+                                                <input id="s2" type="checkbox" class="chkSwitch" checked>
+                                                <label for="s2"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txtCenter">
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--tfoot고정용 table-->
+                        <div class="tableBox">
+                            <table>
+                                <colgroup>
+                                    <col width="6%">
+                                    <col>
+                                    <col width="16%">
+                                    <col width="16%">
+                                </colgroup>
+                                <tfoot>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <input type="text" class="full">
+                                        </td>
+                                        <td>
+                                            <div class="switch">
+                                                <input id="s2" type="checkbox" class="chkSwitch" checked>
+                                                <label for="s2"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="bdType">항목추가</button>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!--//tfoot고정용 table-->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modalFooter">
+                <button class="white prefix layerOpen" aria-controls="del-confirm">닫기</button>
+                <button class="suffix">저장</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//230724 고정항목관리 -ys-->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>

@@ -113,38 +113,39 @@ input[type=radio]{
     }
     // 토글스위치
     &.chkSwitch{
-        display: inline-block;
         // -webkit-appearance: none;
         // -moz-appearance: none;
         // appearance: none;
-        width: rem(38);  
-        height: rem(21);  
-        border: 1px solid $gray;
-        border-radius: rem(11);  
-        + label{
-            vertical-align: rem(4);
+        & + label{
             &::before{
-                display: none;
+                width: 46px;
+                height: 24px;
+                border-radius: 12px;
+                background: $cancel;
+            }            
+            &::after{
+                content:'';
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background: $white;
+                position: absolute;
+                left: 24px;  
+                top: 3px;  
+                transform: translateX(0);
+                transition: all .3s ease ;
+                z-index: 1;
             }
         }
-        &::after{
-            content:'';
-            width: rem(15);  
-            height: rem(15);  
-            border-radius: 50%;
-            background: $gray;
-            position: absolute;
-            left: rem(2);  
-            top: rem(2);  
-            transform: translateX(0);
-            transition: all .3s ease ;
-        }
         &:checked{
-            background: $mainColor;
-            border: 1px solid $mainColor;
-            &::after{
-                background: $white;
-                transform: translateX(17px);
+            & + label{
+                &::before{
+                    background: $mainColor;
+                }            
+                &::after{
+                    background: $white;
+                    transform: translateX(-20px);
+                }
             }
             &:disabled{
                 color: $inputGray;
@@ -163,6 +164,27 @@ input[type=radio]{
                 cursor: not-allowed;
             }
         }
+    }
+}
+
+.switch{
+    position: relative;
+    &::before{
+        content:'off';
+        font-size: 12px;
+        color:$white;
+        position: absolute;
+        top: 2px;
+        left: 16px;
+        z-index: 1;
+    }
+    &::after{
+        content:'on';
+        font-size: 12px;
+        color:$white;
+        position: absolute;
+        top: 2px;
+        right: 18px;
     }
 }
 

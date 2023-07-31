@@ -1,16 +1,3 @@
-.btnWrap{
-    &.center{
-        text-align: center;
-        &:before{
-            display: none;
-        }
-    }
-    &.right{
-        text-align: right;
-    }
-}
-
-
 button, 
 .button{
     display: inline-block;  //다른태그에서 필요
@@ -49,33 +36,16 @@ button,
     & + .button{
         margin-left: rem(6);
     }
-    //사이즈
-    // &.fullSize{
-    //     width: 100%;
-    //     line-height: rem(46);
-    //     &.lowSize{
-    //         width: 100%;
-    //         line-height: rem(38);
-    //     }
-    // }
     &.auto{
         width: auto;
     }
     &.lowSize{
-        // width: rem(130);
-        // line-height: rem(38);
         line-height: rem(30);
     }
-    // &.xsSize{
-    //     width: rem(45);
-    //     height: rem(35)
-    // }
     &.smSize{
-        // min-width: rem(70);
         min-width: rem(60);
         width: auto;
         line-height: rem(28);
-        // padding: 0 rem(12);
         padding: 0 rem(6);
         font-weight: 400;
         font-size: rem(14);
@@ -83,16 +53,11 @@ button,
     &.midSize{
         min-width: rem(90);
         width: auto;
-        //line-height: rem(50);
         padding: 0 rem(15);
-        // &.low{
-        //     line-height: rem(34);
-        // }
     }
     &.laSize{
         min-width: rem(120);
         width: auto;
-        //line-height: rem(48);
         padding: 0 rem(20);
         font-size: rem(16);
     }
@@ -124,35 +89,11 @@ button,
         border: 1px solid $error;
     }
     &.white{
-        //width: rem(98);
-        //line-height: rem(34);
-        //padding: 0 rem(15);
         color: $black;
         background-color: $white;
         border: 1px solid $inputGray;
-        // &.lowSize{
-        //     min-width: rem(100);
-        //     line-height: rem(34);
-        // }
-        // &.smSize{
-        //     //width: rem(74);
-        //     // padding: 0 rem(12);
-        //     padding: 0 rem(4);
-        //     line-height: rem(30);
-        //     //border: 1px solid $gray;
-        // }
-        // &.laSize{
-        //     line-height: rem(55);
-        // }
-        // &.xlSize{
-        //     width: rem(160);
-        //     line-height: rem(54);
-        //     font-size: rem(18);
-        //     font-weight: 700;
-        // }
         &:disabled,
         &.disabled{
-            // color: $cancel;
             color: $inputGray;
             background:$inputDisable;
             cursor:not-allowed;
@@ -174,13 +115,9 @@ button,
         border: 1px solid $error;
     }
     &.round{
-        // width: rem(64);
-        // height: rem(32);
-        //min-width: rem(64);
         min-width: rem(44);
         width: auto;
         padding: 0 rem(7);
-        //line-height: rem(30);
         height: rem(26);
         line-height: rem(24);
         color: $black;
@@ -189,11 +126,9 @@ button,
         word-break: keep-all;
         vertical-align: text-bottom;  
         background: $white;
-        //border: 1px solid $gray;
         border: 1px solid $btnGray;
         border-radius: rem(20);      
         &.disabled{
-            // color: $layoutColor;
             color: $inputGray;
             background:$inputDisable;
             border: 1px solid $layoutColor;
@@ -203,8 +138,6 @@ button,
         @include heightArray;
     }
     &.onlyIco{
-        // width: rem(40); 
-        // height: rem(40);
         width: rem(44);
         height: rem(44);
         background-color: $white;
@@ -218,7 +151,6 @@ button,
         }
         &.smSize{
             padding: 0;
-            //width: rem(26);
             min-width: auto;
             line-height: rem(24);
             height: rem(26);
@@ -295,10 +227,8 @@ button,
         border-color: $cancel;
     }
     &.checking{
-        // color: $onGoing;
-        // border-color: $onGoing;
-        color: #ef9914;
-        border-color: #ef9914;
+        color: $checking;
+        border-color: $checking;
     }
     &.short{
         color: $delay;
@@ -346,13 +276,9 @@ span{
     background: $tableBorder;
     border-radius: rem(20);
     border: 0;
-    //border-color: $tableBgGray;
-    //cursor: inherit;
 }
 .point{
     display: inline-block;
-    // min-width: rem(40);
-    // line-height: rem(22);
     min-width: rem(30);
     line-height: rem(18);
     font-size: rem(12);
@@ -361,7 +287,6 @@ span{
     background: $delay;
     border:0;
     border-radius: rem(5);
-    // margin-right: rem(4);
     cursor: inherit;
     &.mainC{
         background: $mainColor;
@@ -374,9 +299,7 @@ span{
     margin-left: rem(6);
     display: inline-block;
     padding: 0 rem(4);
-    // padding-left: 2px;
     min-width: rem(20);
-    // height: rem(20);
     line-height: rem(19);
     color: $white;
     font-size: rem(14);
@@ -391,21 +314,3 @@ span{
         background: $white;
     }
 }
-// .deco{
-//     display: inline-block;
-//     // min-width: rem(40);
-//     // line-height: rem(22);
-//     min-width: rem(30);
-//     margin: rem(2) rem(3);
-//     line-height: rem(23);
-//     //height: rem(24);
-//     padding: rem(1) rem(7);
-//     font-size: rem(12);
-//     color: $tooltipGray;
-//     text-align: center;
-//     background: $tableBorder;
-//     border:0;
-//     border-radius: rem(5);
-//     // margin-right: rem(4);
-//     cursor: inherit;      
-// }

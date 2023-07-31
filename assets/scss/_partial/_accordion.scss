@@ -8,34 +8,14 @@
     background: $white;
     border-radius: rem(6);
     border:1px solid $layoutColor;
-    overflow: hidden;
-    
-    &.is-active{
-        border:1px solid $mainColor;
-        .ico{
-            &.plus{
-                height: rem(2);
-                background-position: 0 -180px;
-            }
-        }
-        .accInner{
-            display: block;
-        }
-    }
-    // &.nodata{
-    //     display: flex;
-    //     line-height: rem(80);
-    // }
-    & + .accBox{
-        margin-top: rem(12);
-    }
+    overflow: hidden;    
     .nodata{
         padding: rem(30);
-        display: flex;
         flex-direction: column;
         line-height: rem(50);
         button{
-            width: rem(160);
+            width: auto;
+            padding: 0 15px;
         }
     }
     .prefix,
@@ -45,22 +25,28 @@
     }
     .projTit{
         @include ellipsis;
+        font-weight: bold;
+        font-size: rem(18);
         cursor: pointer;
-        .label{
-            margin-right: rem(10);
+    }
+    &.is-active{
+        border:1px solid $mainColor;
+        i.smPlus{
+            height: rem(2);
+            background-position: 0 -180px;
         }
+        .accInner{
+            display: block;
+        }
+    }
+    & + .accBox{
+        margin-top: rem(12);
     }
 }
 
 .accHead{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include sideArray;
     padding: rem(12) rem(25);
-    .prefix{
-        font-weight: bold;
-        font-size: rem(18);
-    }
     .suffix{
         color: $accSuffixGray;
         .onlyIco{
@@ -71,25 +57,27 @@
         margin-top: -7px;
     }
 } 
+
 .accInner{
     display: none;
+}
+
+.innerList{
+    @include sideArray;
+    padding: rem(10) rem(25);
+    cursor: pointer;
     .prefix{
         width: 70%;
         color: $accPrefixGray;
         .round{
             color: $cancel;
-            border-color: $cancel;
             margin-right: rem(10);
         }
     }
     .suffix{
         font-size: rem(14);
         font-weight: 500;
-        ul{
-            display: flex;
-        }
         li{
-            margin-left: rem(20);
             position: relative;
             &::before{
                 content:'';
@@ -97,86 +85,66 @@
                 height: 16px;
                 background: $layoutColor;
                 position: absolute;
-                top: 5px;
-                left: -9px;
+                top: 3px;
+                left: -6px;
             }
             &:first-child{
                 &::before{
                     display: none;
                 }
             }
-        }
-        .mainC{
-            margin-left: rem(5);
-        }
-    }
-}
-
-.innerList{
-    @include sideArray;
-    padding: rem(10) rem(25);
-    cursor: pointer;
-    // &:hover{
-    //     background: $selHover;
-    // }
-    > ul{
-        padding: 0;
-        display: block;
-        width: 48%;
-        border-bottom: 0;
-    }
-    li{
-        display: flex;
-        text-align: left;
-        line-height: 32px;
-        p{
-            flex-shrink: 0;
-            width: rem(100);
-            color: $subGray;
-            font-weight: 500;
-            position: relative;
-            &::before{
-                content:'';
-                width: 4px;
-                height: 4px;
-                background: $dotGray;
-                border-radius: 50%;
-                position: absolute;
-                top: 14px;
-                left: -10px;
+            .mainC{
+                margin-left: rem(5);
             }
         }
     }
+    ul{
+        display: flex;
+        gap: 15px;
+    }
+    li{
+        display: flex;
+        line-height: 32px;
+    }
+    p{
+        flex-shrink: 0;
+        width: rem(100);
+        color: $subGray;
+        font-weight: 500;
+        position: relative;
+        &::before{
+            content:'';
+            width: 4px;
+            height: 4px;
+            background: $dotGray;
+            border-radius: 50%;
+            position: absolute;
+            top: 14px;
+            left: -10px;
+        }
+    }    
 }
 
-//모집공고 관리 flatType
 .accWrap{
-    &.flatType{
+    //모집공고 관리
+    &.flatType{ 
         margin-top: 0;
         .accBox{
             padding: 0;
             border-radius: 0;
             border: 0;
-            overflow: hidden;
-            .ico{                    
-                &.arrow{
-                    margin-right: rem(10);
-                }
+            i.arrow{
+                margin-right: rem(10);
             }
             &.is-active{
                 border-bottom: 1px solid $accBorderBottom;
                 .accHead{
-                    color: $black;
                     background: $selHover;
                     border-bottom:0;
                 }
-                .ico{                    
-                    &.arrow{
-                        // width: rem(16);
-                        // height: rem(10);
-                        background-position: -100px -120px;
-                        vertical-align: 2px;
-                    }
+                i.arrow{
+                    background-position: -100px -120px;
+                    vertical-align: 2px;
                 }
             }
             &.disabled{
@@ -184,11 +152,9 @@
                     color: $addHeadGray;
                     cursor: not-allowed;
                 }          
-                .ico{                    
-                    &.arrow{
-                        background-position: -120px -120px;
-                    }
-                }      
+                i.arrow{
+                    background-position: -120px -120px;
+                }  
             }
             & + .accBox{
                 margin-top: 0;
@@ -196,7 +162,6 @@
         }
         .accHead{
             padding: rem(16) rem(20) rem(16) rem(12);
-            color: $black;
             border-bottom: 1px solid $accBorderBottom;
             cursor: pointer;
             .prefix{
@@ -210,7 +175,8 @@
 }
 
 .accInner{
-    &.infoType{
+    //모집공고관리
+    &.infoType{ 
         padding: 0 rem(30);
         .innerList{
             padding: 0;
@@ -222,51 +188,36 @@
                 row-gap: rem(16);
                 padding: rem(20) 0;
                 border-bottom: 1px solid $inputGray;
-                ul{
-                    display: flex;
-                }
-            }
-            &:hover{
-                background: transparent;
             }
         }       
         &:last-child{
             ul{
                 border-bottom:0;
             }
-        }     
-        .projTit{
-            color: $black;
-            font-size: rem(18);
-            font-weight: 700;
-        }
-        .projManager{
-            @include ellipsis;
-            display: block;
-            width: auto;
-            max-width: 90%;
-        }
-        .projInfo{
-            li{
-                margin-right: rem(20);
-            }
-        }
-        .signDate{
-            margin-right: rem(10);
-            color: $accDate;
-        }
+        }  
         .suffix{
             justify-self: end;
+        }
+        ul{
+            .projManager{
+                @include ellipsis;
+                display: block;
+                width: auto;
+                max-width: 90%;
+            }
+            .signDate{
+                margin-right: rem(10);
+                color: $accDate;
+            }
+
         }
     }
 }
 
 
-//마이크로사이트 indexType
+
 .accWrap{
-    // padding: 0 rem(30);
-    // background: $white;
-    overflow-y: auto;
+    //마이크로사이트
     &.indexType{
         .accBox{
             border-radius: 0;
@@ -274,9 +225,6 @@
             border-bottom:1px solid $layoutColor;
             position: relative;
             overflow: visible;
-            & + .accBox{
-                margin-top: 0;
-            }
             &:last-child{
                 border-bottom:0;
             }
@@ -328,8 +276,13 @@
         .accInner{
             padding: rem(16) rem(30);
             .innerList{
-                cursor: initial;
+                padding: 0;
                 align-items: flex-start;
+                cursor: initial;
+                > ul{
+                    display: block;
+                    width: 48%;
+                }
             }
         }
     }

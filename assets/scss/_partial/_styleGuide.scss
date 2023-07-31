@@ -1,4 +1,42 @@
 .styleguide{
+   #style-sort{
+        >.tabBtnWrap{
+            display: block;
+            width: rem(250);
+            box-shadow: 5px 4px 5px rgba(0,0,0,0.2);
+            ul{
+                display: flex;
+            }
+            .tabBtn{
+                padding-top: 10px;
+                width: 50%;
+                line-height: 30px;
+            }
+            a{
+                // width: 100%;
+                border:0;
+                border-radius: 0;
+                &.is-active{
+                    color: #000;
+                    background: none;
+                    border-bottom: 2px solid #000;
+                }
+            }
+        }
+   } 
+   .tabBtnWrap{
+        .tabBtn{
+            &:first-child{
+                a{
+                    border-radius: 0;
+                }
+            }
+        }
+   }
+}
+
+
+.styleguide{
     .clip {
         height: rem(40);
         background: $bgColor;
@@ -11,13 +49,13 @@
             margin-top: rem(20);
         }
       > span{
-        position: absolute;
-        font-size: rem(18);
-        font-weight: 500;
-        line-height: rem(40);
-        letter-spacing: rem(2);
-        text-transform: uppercase;
-      }
+            position: absolute;
+            font-size: rem(18);
+            font-weight: 500;
+            line-height: rem(40);
+            letter-spacing: rem(2);
+            text-transform: uppercase;
+        }
     }    
     hr {
         border: 0;
@@ -187,7 +225,7 @@
             // }
         } 
     }
-    label {
-        min-width: 100px;
-    }
+    // label {
+    //     min-width: 100px;
+    // }
 }

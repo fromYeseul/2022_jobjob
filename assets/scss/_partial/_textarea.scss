@@ -55,37 +55,28 @@ textarea{
     }
 }
 
-.counter{
-    span{
-        vertical-align: -1px;
-    }
-}
 
+//메모 - 마이프로젝트, 마이피플, 회원상세
 .textForm{
     display: none;
     margin-top: rem(10);
-    //padding: rem(5);
-    //border-radius: rem(4);
-    //border:1px solid $layoutColor;
+    padding: rem(5);
+    border-radius: rem(4);
+    border:1px solid $inputGray; 
     &.is-active{
         display: block;
     }
-    textarea{
-        //padding: auto;
-        //outline: none;
-        //border: 0;    
+    textarea{ 
         border:1px solid $layoutColor;    
         @include scroll_0;    
         transition: all .3s;
     }
-    .btnWrap{
-        margin-top: rem(10);
-        .cancel{
-            color: $black;
-            border: 1px solid $inputGray;
-        }
-    }
-    & + .btnWrap{
-        margin-top: rem(10);
+}
+.btnWrap{
+    text-align: center;
+    margin-top: rem(10);
+    button{
+        width: rem(60);
+        line-height: rem(30);
     }
 }
