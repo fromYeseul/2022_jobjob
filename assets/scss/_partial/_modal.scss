@@ -20,7 +20,6 @@
         right: 0;
         .layerBox{
             overflow-y: auto;
-            width: rem(570);
             max-height: 95%;
             padding: rem(30);
             top:50%;
@@ -33,14 +32,16 @@
         position: absolute;
         top: 100%;
         right: 0;
+        background: $white;
         border: 1px solid $black;
         .layerBox{
             padding: rem(20);
-            min-width: rem(400);
+            min-width: rem(240);
         }
     }  
     .layerBox{
         position: relative;
+        width: rem(570);
         background: $white;
         z-index: 10;
         &.confirmType{
@@ -72,6 +73,9 @@
                 width: rem(560);
             }
         }
+        &.autoSize{
+            width: auto;
+        }
         &.smSize{
             width: rem(380);
             padding: rem(45);
@@ -85,13 +89,16 @@
         }
         &.sm-midSize{
             width: rem(550);
-            .modalFooter{
-                width: rem(120);
-                margin: rem(20) auto;
-            }
+            // .modalFooter{
+            //     width: rem(120);
+            //     margin: rem(20) auto;
+            // }
         }
         &.midSize{
             width: rem(800);
+        }
+        &.midSize2{
+            width: rem(900);
         }
         &.mid-laSize{
             width: rem(1000);
@@ -186,9 +193,11 @@
     h3{
         margin-bottom: rem(20);
     }
+    & + .momodalCont{
+        margin-top: rem(10);
+    }
 }
 .modalCont{
-    margin-top: rem(10);
     position: relative;
     &.center{
         text-align: center;
@@ -214,13 +223,17 @@
     .tabBtnWrap{
         justify-content: center;
     }
-    .inputList{
-        margin-top: rem(30);
+    // .inputList{
+    //     margin-top: rem(30);
+    // }
+    .boxWrap{
+        padding: rem(25) rem(18);
     }
     .flexBw{
         font-size: rem(14);
-        color:$subInfo;
+        // color:$subInfo;
         margin-top: rem(10);
+        position: relative;
         label{
             font-weight: 400;
             // font-size: rem(14);
@@ -713,6 +726,7 @@
 }
 
 //마이피플 - 고정항목관리
+//거래처 - 거래처 담당자
 #chkListAdmin{
     .divideBox {
         .left{width: 35%; padding: rem(15) rem(20);}
@@ -735,9 +749,121 @@
         }
         input{
             height: rem(32);
+            background: $white;
         }
         button{
             line-height: rem(32);
         }
+    }
+}
+
+//거래처 - 거래처 담당자
+#clientAdmin{
+    .tableBox{
+            padding-top: rem(30);
+            height: rem(500);
+            thead{
+                position: absolute;
+                top: 46px;
+                z-index: 2;
+            }
+        &:last-child{
+            padding-top: 0;
+            height: 55px;
+        }
+        td{
+            &.nodata{
+                height: 469px;
+            }
+        }
+        tfoot{
+            td{
+                padding: 10px 5px !important;
+            }
+            input{
+                height: rem(32);
+                background: $white;
+            }
+            button{
+                margin-left: 4px;
+                width: 60px;
+                height: 32px;
+                line-height: rem(32);
+            }
+        }
+    }
+    .modalFooter{
+        position: relative;
+    }
+    .alertToast{
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+#requireProject{
+    .absol{
+        .layerBox{
+            padding: rem(10);
+            min-width: auto;
+            width: auto;
+            background: $modalBg;
+            left: 0;
+            transform: initial;
+        }        
+    }
+    .tooltip{
+        text-align: left;
+        width: 390px;
+        left: -380px;
+        top: 0%;
+        transform: translate(0, -20%);
+        &::after{
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            margin-top: -3px;
+            margin-left: 0;
+            border-top-color: transparent;
+            border-left-color: $tooltipGray;
+        }
+    }
+
+}
+#callTemplate{
+    &.absol{
+        .layerBox{
+            background: $white;
+        }        
+    }
+    .yScroll{
+        height: 300px;
+    }
+    .modalCont{
+        margin-top: 10px;
+    }
+}
+
+//거래처등록-회사검색
+#compSearch{
+    .tableTop{
+        display: block;
+        margin-top: 20px;
+    }
+    input{
+        flex-grow: 1;
+    }
+    .hasBtn{
+        .button,
+        button{
+            width: rem(44);
+            background: $searchbtnGray;
+            border: 1px solid $searchbtnGray;
+        }
+    }
+    .tableBox{
+        height: rem(500);
     }
 }

@@ -7,7 +7,7 @@
     img{
         width: rem(130);
         height: rem(130);
-        margin:rem(10) auto 0;
+        // margin:rem(10) auto 0;
         // width: 100%;
         border-radius: 50%;
     }
@@ -34,7 +34,7 @@
                 width: 24px;
                 height: 24px;
                 right: 10px;
-                top: 14px;
+                top: 6px;
             }
             &::after{
                 width: 15px;
@@ -42,7 +42,7 @@
                 background-image: url(../img/icoGroup.png);
                 background-position: -180px -40px;
                 right: 14px;
-                top: 20px;
+                top: 12px;
             }
         }
     }
@@ -50,7 +50,7 @@
 
 .phoImg{
     display: inline-block;
-    margin-right: 0 !important;
+    // margin-right: 0 !important;
     &.is-special{
         .photo{
             border: 2px solid $mainColor;
@@ -63,7 +63,7 @@
             border-radius: 50%;
             background: $mainColor;
             position: absolute;
-            right: 8px;
+            right: -2px;
             bottom: -1px;
         }
         &::after{
@@ -73,13 +73,124 @@
             background-image: url(../img/icoGroup.png);
             background-position: -180px -60px;
             position: absolute;
-            right: 10px;
+            right: 0;
             bottom: 2px;
-
         }
     }
 }
 
-// .profileBox{
-//     display: flex;
-// }
+//인재검색 - 프로젝트 제안하기 팝업
+.offertrg{
+    > ul{
+        display: flex;
+        gap:4px;
+        .trgBox{
+            width: rem(162);
+        }
+        // .trgBox{
+        //     display: initial;
+        //     flex: 1 1 25%;
+        // }
+    }
+}
+.trgBox{
+    padding: rem(14);
+    border-radius: 6px;
+    border:1px solid $layoutColor;
+    position: relative;
+    .flexCenter{
+        flex-wrap: inherit;
+    }
+    .smClose{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .phoImg{
+        margin-right: rem(10);
+        &.is-special{
+            &::before{
+                width: 12px;
+                height: 12px;
+                right: 4px;
+                top: 4px;
+            }
+            &::after{
+                width: 9px;
+                height: 7px;
+                background-position: -180px -60px;
+                right: 5px;
+                top: 6px;
+            }
+        }
+    }
+    .photo{
+        width: rem(58);
+        height: rem(58);
+    }
+    .profile{
+        margin: 0;
+        li{
+            margin-bottom: 0;
+            .ellipsis{
+                display: inline-block;
+                max-width: 80%;
+            }
+        }
+    }
+}
+
+//보낸제안
+.offeredMem{
+    width: 24%;
+    padding: rem(15) rem(20);
+    border-radius: 6px;
+    border:1px solid $layoutColor;
+    .profile{
+        margin: 0;
+        display: flex;
+        gap: 30px;
+        .left{
+            li{
+                display: block;
+            }
+        }
+        ul{
+            display: initial;
+            li{
+                align-items: center;
+            }
+            .subInfo{
+                margin-left: 5px;
+            }
+            .bdType{
+                margin-top: 0;
+                margin-left: 8px;
+                width: rem(96);
+                line-height: rem(30);
+                padding: 0px 4px;
+            }
+        }
+    }
+    .phoImg{
+        &.is-special{
+            &::before{
+                width: 13px;
+                height: 13px;
+                right: 3px;
+                top: 3px;
+            }
+            &::after{
+                width: 9px;
+                height: 7px;
+                background-position: -180px -60px;
+                right: 5px;
+                top: 6px;
+            }
+        }
+    }
+    .photo{
+        width: rem(58);
+        height: rem(58);
+    }
+}

@@ -25,14 +25,69 @@
                 <div class="tabWrapper listType" id="style-content">
                     <div class="tabBtnWrap">
                         <ul>
+                            <li class="tabBtn"><a href="#nav" class="is-active">메뉴</a></li>
                             <li class="tabBtn"><a href="#memBox">회원 박스</a></li>
                             <li class="tabBtn"><a href="#prjBox">프로젝트 박스</a></li>
                             <li class="tabBtn"><a href="#bulletList">불릿 리스트</a></li>
-                            <li class="tabBtn"><a href="#tableTop" class="is-active">테이블 상단</a></li>
+                            <li class="tabBtn"><a href="#tableTop">테이블 상단</a></li>
                             <li class="tabBtn"><a href=""></a></li>
                         </ul>                
                     </div>
                     <div class="tabContWrap">
+                        
+                        <div class="tabCont is-active" id="nav" style="position:relative; height: 100vh;">
+                            <h2>메뉴</h2>
+                            <div class="clip mt20"><span>메뉴</span></div> 
+
+                            <section class="layoutWrapper is-active">
+                                <section class="gnbWrapper" style="position:absolute; top:110px; left:50px;">
+                                    <div class="gnb">
+                                        <div class="navCtrlBtn">
+                                            <i class="ico ctrlBtn"></i>
+                                        </div>
+                                        <nav class="navWrapper">
+                                            <ul>
+                                                <li class="noDepth">
+                                                    <a alertToast href="#"><i class="ico home"></i><span class="menuTxt">홈</span></a>
+                                                </li>
+                                                <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span></a>
+                                                    <ul>
+                                                        <li class="is-active"><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                                        <li><a href="#"><span class="depth2">고객문의</span></a></li>
+                                                        <li><a href="#"><span class="depth2">운영자관리</span></a></li>
+                                                        <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                                        <li><a href="#"><span class="depth2">통계</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span></a>
+                                                    <ul>
+                                                        <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                                        <li><a href="#"><span class="depth2">통계</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>
+                                                <li><a href="#"><i class="ico recruit"></i><span class="menuTxt">공고/지원자</span></a>
+                                                    <ul>
+                                                        <li><a href="#"><span class="depth2">모집공고</span></a></li>
+                                                        <li><a href="#"><span class="depth2">인재검색/제안</span></a></li>
+                                                        <li><a href="#"><span class="depth2">보낸제안</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="is-active"><a href="#"><i class="ico admin"></i><span class="menuTxt">사업관리</span></a>
+                                                    <ul class="is-active">
+                                                        <li><a href="#"><span class="depth2">거래처관리</span></a></li>
+                                                        <li><a href="#"><span class="depth2">사업현황</span></a></li>
+                                                        <li><a href="#"><span class="depth2">직원현황</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span></a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </section>  
+                            </section>
+                        </div>
+
                         <div class="tabCont" id="memBox">
                             <h2>회원 박스</h2>
 
@@ -263,7 +318,7 @@
                                 </div>
                             </div>  
                         </div>
-                        <div class="tabCont is-active" id="tableTop">
+                        <div class="tabCont" id="tableTop">
                             <h2>테이블 상단</h2>
 
                             <div class="clip mt20"><span>매입매출</span></div> 
@@ -877,6 +932,13 @@
                                             <button class="round checking">checking</button>
                                             <button class="round short">short</button>
                                             <button class="round reject">reject</button>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <span class="size"></span>
+
+                                            <button class="round save">저장</button>
+                                            <button class="round off">취소</button>
                                         </li>
                                     </ul>
                                 </div>
@@ -2059,9 +2121,9 @@
 
                                 <div class="clip"><span>Number Paging</span></div>
                                 <div class="listBottom pagingType">                        
-                                    <div class="paging numType">
+                                    <div class="paging">
                                         <ul>
-                                            <li>
+                                            <li class="pagingDouble">
                                                 <a href="#">
                                                     <span class="ico pagingFirst"></span>
                                                 </a>
@@ -2071,22 +2133,22 @@
                                                     <span class="ico pagingLeft"></span>
                                                 </a>
                                             </li>
-                                            <li class="is-active">1</li>
-                                            <li>2</li>
-                                            <li>3</li>
-                                            <li>4</li>
-                                            <li>5</li>
-                                            <li>6</li>
-                                            <li>7</li>
-                                            <li>8</li>
-                                            <li>9</li>
-                                            <li>10</li>
+                                            <li class="is-active"><a>1</a></li>
+                                            <li><a>2</a></li>
+                                            <li><a>3</a></li>
+                                            <li><a>4</a></li>
+                                            <li><a>5</a></li>
+                                            <li><a>6</a></li>
+                                            <li><a>7</a></li>
+                                            <li><a>8</a></li>
+                                            <li><a>9</a></li>
+                                            <li><a>10</a></li>
                                             <li>
                                                 <a href="#">
                                                     <span class="ico pagingRight is-active"></span>
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li class="pagingDouble">
                                                 <a href="#">
                                                     <span class="ico pagingLast is-active"></span>
                                                 </a>

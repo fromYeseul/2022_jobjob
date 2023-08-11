@@ -122,6 +122,8 @@ input[type=radio]{
                 height: 24px;
                 border-radius: 12px;
                 background: $cancel;
+                background-image: url(../img/bgSwitch.png);
+                background-size: contain;
             }            
             &::after{
                 content:'';
@@ -141,6 +143,8 @@ input[type=radio]{
             & + label{
                 &::before{
                     background: $mainColor;
+                    background-image: url(../img/bgSwitch.png);
+                    background-size: contain;
                 }            
                 &::after{
                     background: $white;
@@ -167,26 +171,14 @@ input[type=radio]{
     }
 }
 
-.switch{
-    position: relative;
-    &::before{
-        content:'off';
-        font-size: 12px;
-        color:$white;
-        position: absolute;
-        top: 2px;
-        left: 16px;
-        z-index: 1;
-    }
-    &::after{
-        content:'on';
-        font-size: 12px;
-        color:$white;
-        position: absolute;
-        top: 2px;
-        right: 18px;
-    }
-}
+// .switch{
+//     position: relative;
+//     label{
+//         width: rem(50);
+//         height: rem(26);
+//     }
+//     // background: $mainColor;
+// }
 
 /* 버튼타입 체크박스 */
 .btnType{

@@ -25,6 +25,8 @@
     }
     .projTit{
         @include ellipsis;
+        width: auto;
+        max-width: 90%;
         font-weight: bold;
         font-size: rem(18);
         cursor: pointer;
@@ -41,6 +43,11 @@
     }
     & + .accBox{
         margin-top: rem(12);
+    }    
+    .signDate{
+        margin-right: rem(10);
+        color: $accDate;
+        font-size: rem(14);
     }
 }
 
@@ -85,7 +92,7 @@
                 height: 16px;
                 background: $layoutColor;
                 position: absolute;
-                top: 3px;
+                top: 8px;
                 left: -6px;
             }
             &:first-child{
@@ -109,6 +116,7 @@
     p{
         flex-shrink: 0;
         width: rem(100);
+        text-align: left;
         color: $subGray;
         font-weight: 500;
         position: relative;
@@ -123,6 +131,9 @@
             left: -10px;
         }
     }    
+    span{
+        text-align: left;
+    }
 }
 
 .accWrap{
@@ -197,19 +208,12 @@
         }  
         .suffix{
             justify-self: end;
-        }
-        ul{
-            .projManager{
-                @include ellipsis;
-                display: block;
-                width: auto;
-                max-width: 90%;
-            }
-            .signDate{
-                margin-right: rem(10);
-                color: $accDate;
-            }
-
+        }        
+        .projManager{
+            @include ellipsis;
+            display: block;
+            width: auto;
+            max-width: 90%;
         }
     }
 }

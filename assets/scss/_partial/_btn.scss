@@ -35,6 +35,9 @@ button,
     & + button,
     & + .button{
         margin-left: rem(6);
+        &.txtType{
+            margin-left: rem(15);
+        }
     }
     &.auto{
         width: auto;
@@ -241,6 +244,18 @@ button,
     &.clear{
         color: $disable;
         background: $activeGray;
+        border:0;
+    }
+
+    //bg상태버튼
+    &.save{
+        color: $white;
+        background: $mainColor;
+        border:0;
+    }
+    &.off{
+        color: $gray;
+        background: $offGray;
         border:0;
     }
 

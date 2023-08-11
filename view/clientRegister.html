@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>거래처 등록</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="hasFooter">
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="noDepth">
+                            <a alertToast href="#"><i class="ico home"></i><span class="menuTxt">홈</span></a>
+                        </li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">고객문의</span></a></li>
+                                <li><a href="#"><span class="depth2">운영자관리</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>
+                        <li class="is-active"><a href="#"><i class="ico recruit"></i><span class="menuTxt">공고/지원자</span></a>
+                            <ul class="is-active">
+                                <li class="is-active"><a href="#"><span class="depth2">모집공고</span></a></li>
+                                <li><a href="#"><span class="depth2">인재검색/제안</span></a></li>
+                                <li><a href="#"><span class="depth2">보낸제안</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>    
+        
+        <section class="contWrapper noRight"><!--우측패널 없는 페이지-->
+            <section class="contLayout">
+                
+                <section class="clientRegister">
+
+                    <div class="pageTit">
+                        <h2>거래처 등록</h2>
+                        <div class="breadCrumb">
+                            <ul class="flex">
+                                <li class="is-active" aria-controls="clientRegi0">기본정보</li>
+                                <li aria-controls="clientRegi1">첨부파일</li>
+                                <li aria-controls="clientRegi2">프로젝트 이력</li>
+                                <li aria-controls="clientRegi3">메모</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="regiPartWrapper">  
+                        
+                        <div class="regiPart" id="clientRegi0">
+                            <h3>1. 기본정보</h3>
+                            
+                            <div class="boxWrap hasTooltip">                                
+                                <div class="inputList">   
+                                    <ul class="grid col5">
+                                        <li>
+                                            <h6 class="need">거래구분</h6>
+                                            <select class="full" name="" id="">
+                                                <option value="">매입</option>
+                                                <option value="">매출</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <h6 class="need">회사명</h6>
+                                            <div class="hasBtn">
+                                                <input type="text" placeholder="소속회사명 입력">
+                                                <button>
+                                                    <i class="ico search white"></i>
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">사업자번호</label>
+                                            <input class="full" type="text" placeholder="숫자만 입력">
+                                        </li>
+                                        <li>
+                                            <label for="">법인번호</label>
+                                            <input class="full" type="text" placeholder="숫자만 입력">
+                                        </li>
+                                        <li>
+                                            <h6 class="need">폐업구분</h6>
+                                            <select class="full" name="" id="">
+                                                <option value="">정상</option>
+                                                <option value="">폐업</option>
+                                            </select>
+                                        </li>
+
+                                        <li>
+                                            <label for="">업태</label>
+                                            <input class="full" type="text">
+                                        </li>
+                                        <li>
+                                            <label for="">업종</label>
+                                            <input class="full" type="text">
+                                        </li>
+                                        <li class="clientWeb">
+                                            <label for="">홈페이지</label>
+                                            <input class="full" type="text">
+                                        </li>
+                                        <li>
+                                            <h6 class="need">사용상태</h6>
+                                            <select class="full" name="" id="">
+                                                <option value="">사용</option>
+                                                <option value="">미사용</option>
+                                            </select>
+                                        </li>
+
+                                        <li>
+                                            <label class="need" for="">대표자명</label>
+                                            <input class="full" type="text">
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">대표자 연락처</label>
+                                            <input class="smSize" type="text">
+                                            <span class="hyphen">-</span>
+                                            <input class="smSize" type="text">
+                                            <span class="hyphen">-</span>
+                                            <input class="smSize" type="text">
+                                        </li>
+                                        <li>
+                                            <label for="">대표번호</label>
+                                            <input class="full" type="text" placeholder="숫자만 입력">
+                                        </li>
+                                        <li>
+                                            <label for="">팩스번호</label>
+                                            <input class="full" type="text" placeholder="숫자만 입력">
+                                        </li>
+                                        <li>
+                                            <h6>협력/대행</h6>
+                                            <select class="full" name="" id="">
+                                                <option value="">협력</option>
+                                                <option value="">대행</option>
+                                            </select>
+                                        </li>
+
+                                        <li class="clientAdd">
+                                            <h6 class="need">근무장소</h6>
+                                            <div class="flex mt6">
+                                                <select class="laSize" name="" id="">
+                                                    <option value="">시/도</option>
+                                                    <option value="">서울특별시</option>
+                                                    <option value="">부산</option>
+                                                    <option value="">경기</option>
+                                                    <option value="">인천</option>
+                                                    <option value="">제주특별자치구</option>
+                                                </select>
+                                                <select class="ml5" name="" id="">
+                                                    <option value="">군/구</option>
+                                                    <option value="">강남구</option>
+                                                    <option value="">강북구</option>
+                                                    <option value="">강서구</option>
+                                                    <option value="">강남구</option>
+                                                </select>
+                                                <input class="full ml5" type="text" id="" placeholder="상세주소">                                                             
+                                            </div>
+                                        </li>
+                                        <li class="clientAccount">
+                                            <h6 class="need">법인계좌정보</h6>
+                                            <div class="flex mt6">
+                                                <select class="laSize" name="" id="">
+                                                    <option value="">은행선택</option>
+                                                    <option value="">신한은행</option>
+                                                    <option value="">국민은행</option>
+                                                    <option value="">우리은행</option>
+                                                </select>
+                                                <input class="full ml5" type="text" id="" placeholder="계좌번호">                                                             
+                                            </div>
+                                        </li>       
+                                        <li>
+                                            <h6 class="need">담당자</h6>
+                                            <button class="midSize">담당자 지정</button>
+                                        </li>                              
+                                    </ul>
+                                </div>                                
+
+                                <div class="tooltip left is-active">
+                                    <p>거래처등록 말풍선 가이드</p>
+                                    추후 제공 합니다.
+                                    <br>
+                                    (예) 쇼핑몰 홈페이지 고도화
+                                </div>
+                                <div class="tooltip left line2 is-active">
+                                    <p>거래처등록 말풍선 가이드</p>
+                                    추후 제공 합니다.
+                                </div>
+                                <div class="tooltip left line3 is-active">
+                                    <p>거래처등록 말풍선 가이드</p>
+                                    추후 제공 합니다.
+                                </div>
+                                <div class="tooltip left line4 is-active">
+                                    <p>거래처등록 말풍선 가이드</p>
+                                    추후 제공 합니다.
+                                </div>
+                            </div>
+                        </div>   
+
+                        <div class="regiPart" id="clientRegi1">
+                            <h3>2. 첨부파일</h3>
+                            <div class="boxWrap">
+                                <div class="inputList">  
+                                    <h6>파일목록</h6>
+                                    <div class="uploadBox">
+                                        <div class="inputGroup upload">
+                                            <div class="drop">
+                                                <i class="ico fileUpload"></i>
+                                                <label for="fileUpload">
+                                                    본인의 포트폴리오 자료를 여기에 첨부해 주세요.<br>
+                                                    (파일 최대 5개, 100MB 이하)                                                      
+                                                </label>
+                                            </div>
+                                            <div class="list">
+                                                <ul class="list_ul">
+                                                    <li>
+                                                        <span class="fileName">test.JPG</span>
+                                                        <span class="volume">45 KB</span>
+                                                        <i class="ico delete_bg"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    
+                                        <label for="cycleDocument22" class="">직접선택</label>
+                                        <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="">
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>     
+
+                        <div class="regiPart" id="clientRegi2">
+                            <h3>3. 프로젝트 이력</h3>
+                            <div class="boxWrap">
+                                <div class="tableBox">
+                                    <table>
+                                        <colgroup>
+                                            <col width="56px;">
+                                            <col width="6%;">
+                                            <col width="40%;">
+                                            <col>
+                                            <col>
+            
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>상태</th>
+                                                <th>프로젝트</th>
+                                                <th>요청사</th>
+                                                <th>요청자</th>
+                                                <th>고객사</th>
+                                                <th>계약사</th>
+                                                <th>등록일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>7</td>
+                                                <td><a href="#" class="button round order">접수</a></td>
+                                                <td class="ellipsis">
+                                                    <span class="label">SM</span>
+                                                    <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 온리원푸드넷 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>
+                                                </td>
+                                                <td>주식회사에코아이티</td>
+                                                <td>홍길동</td>
+                                                <td>CJ프레시웨이</td>
+                                                <td>라이트브레인M</td>
+                                                <td>23.07.06 한아라</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td><a href="#" class="button round reject">종료</a></td>
+                                                <td class="ellipsis">
+                                                    <span class="label">SM</span>
+                                                    <a href="#">[대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX</a>
+                                                </td>
+                                                <td>주식회사에코아이티</td>
+                                                <td>홍길동</td>
+                                                <td>CJ프레시웨이</td>
+                                                <td>라이트브레인M</td>
+                                                <td>23.07.06 한아라</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="nodata" colspan="8">거래처 등록이 완료된 후에 제공됩니다.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="listBottom pagingType">                        
+                                    <div class="paging">
+                                        <ul>
+                                            <li class="pagingDouble">
+                                                <a href="#">
+                                                    <span class="ico pagingFirst"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="ico pagingLeft"></span>
+                                                </a>
+                                            </li>
+                                            <li class="is-active"><a>1</a></li>
+                                            <li><a>2</a></li>
+                                            <li><a>3</a></li>
+                                            <li><a>4</a></li>
+                                            <li><a>5</a></li>
+                                            <li><a>6</a></li>
+                                            <li><a>7</a></li>
+                                            <li><a>8</a></li>
+                                            <li><a>9</a></li>
+                                            <li><a>10</a></li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="ico pagingRight is-active"></span>
+                                                </a>
+                                            </li>
+                                            <li class="pagingDouble">
+                                                <a href="#">
+                                                    <span class="ico pagingLast is-active"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="regiPart" id="clientRegi3">
+                            <h3>4. 메모</h3>
+                            <div class="boxWrap">
+                                <div class="commentBox">
+                                    <div class="commentInput">
+                                        <span class="writer self">한아라(나)</span>
+                                        <div class="comment">
+                                            <input type="text" class="full">
+                                        </div>
+                                        <button class="midSize">입력</button>
+                                    </div>
+                                    <div class="commentList">
+                                        <ul>
+                                            <li>
+                                                <span class="writer self">한아라(나)</span>
+                                                <div class="comment">
+                                                    <input type="text" class="full" value="안녕하세요">
+                                                    <div class="rightBtn">
+                                                        <button class="round save">저장</button>
+                                                        <button class="round off">취소</button>
+                                                    </div>
+                                                </div>
+                                                <span class="date">2024.01.12 오후 3:35</span>
+                                            </li>
+                                            <li>
+                                                <span class="writer self">한아라(나)</span>
+                                                <div class="comment">
+                                                    <input type="text" class="full" readonly>
+                                                    <div class="rightBtn">
+                                                        <i class="ico more2"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="date">2024.01.10 오후 3:35</span>
+                                            </li>
+                                            <li>
+                                                <span class="writer">홍길동</span>
+                                                <div class="comment">
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                </div>
+                                                <span class="date">2024.01.01 오후 3:35</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                </section>
+                
+            </section>
+        </section>
+    </section>
+
+    <!--플로팅메뉴-->
+    <div class="floatingWrapper bottom">
+        <div class="floating">
+            <!-- <h5>이 프로젝트를</h5> 230718 삭제-ys -->
+            <button class="white">취소</button>
+            <button class="white">임시저장</button>
+            <button class="white">미리보기</button>
+            <button class="" id="saveBtn">등록완료??</button>
+        </div>
+    </div>
+    <!--//플로팅메뉴-->
+
+
+    <!--회사검색-->
+    <div id="compSearch" class="modalLayer center"><!--id바뀌면 말씀해주세요-->
+        <div class="layerBox sm-midSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h2>회사 검색</h2>
+                <div class="h3_sub">거래처 회사를 검색한 후 선택버튼을 눌러주세요.</div>
+            </div>
+            <div class="modalCont center">
+                <div class="tableTop">
+                    <div class="hasBtn">
+                        <input type="text" placeholder="">
+                        <button>
+                            <i class="ico search white"></i>
+                        </button>
+                    </div>          
+                </div>
+                <div class="tableBox">
+                    <table>
+                        <colgroup>
+                            <col width="30px">
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th colspan="2">회사명</th>
+                                <th>사업자번호</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>전자
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>전기
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>전기
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>메디슨
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>제약
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>SDI
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="nodata">
+                                    검색 결과가 없습니다.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modalFooter">
+                <button class="white">닫기</button>
+                <button class="">선택</button>
+            </div>
+        </div>
+        <div class="layerDim"></div> 
+    </div>
+    <!--//회사검색-->
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

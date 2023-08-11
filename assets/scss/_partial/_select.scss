@@ -111,9 +111,14 @@ select{
   }
 }
 
+.selectBox{
+  position: relative;
+}
 .selectedBox{
-  margin-top: rem(40);
+  // margin-top: rem(40);
+  display: flex;
   padding: rem(8);
+  background: $white;
   border-radius: rem(4);
   border:1px solid $inputGray; 
   position: relative;
@@ -189,6 +194,10 @@ select{
       // & + li{
       //     margin-left: 0 !important;
       // }
+  }
+  .tableBox{
+    height: rem(300);
+    overflow-x: hidden;
   }
 }
 

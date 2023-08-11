@@ -1,0 +1,149 @@
+.talentedSearch{
+    padding: 0.9375rem;
+    .boxWrap{
+            margin-top: rem(25);
+            padding: rem(20) rem(25);
+    }
+}
+
+
+.searchRequire{
+    display: flex;
+    gap: 28px;
+    >.prefix,
+    >.suffix{
+        flex: 1 1 50%;
+    }
+    >.suffix{
+        padding: rem(10);
+        border-radius: rem(5);
+        border:1px solid $layoutColor;
+        .inputGroup{
+            overflow-y: auto;
+            height: 110px;
+            max-height: initial;
+        }
+        .bottom{
+            margin-top: 5px;
+            position: relative;
+            .txtType{
+                color: $black;
+                font-weight: 500;
+            }
+        }
+        .modalLayer{
+            &.absol{
+                right: -20px;
+                top: 130%;
+                .layerBox{
+                    padding: rem(10);
+                    min-width: auto;
+                    width: rem(300);
+                    background: $modalBg;
+                }
+            }
+        }
+    }
+    .filterOptList{
+        >ul{
+            display: flex;
+            gap: 6px;
+            >li{
+                flex: 1 1;
+                border-radius: rem(5);
+                border:1px solid $layoutColor;
+                position: relative;
+                cursor:pointer;
+                &::after{
+                    content: '';
+                    width: rem(12);
+                    height: rem(6);
+                    background: url(../img/icoSelect.png) no-repeat;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-40%); 
+                    right: rem(7); 
+                }       
+                > span{
+                    display: block;
+                    padding: 10px 8px;
+                }
+                .absol{
+                    left:0;
+                    right: auto;
+                    .filterList{                        
+                        padding: rem(20) rem(12);
+                        min-width: rem(130);
+                        width: auto;
+                        height: auto;
+                    }
+                }     
+            }
+        }
+    }
+    .filterCustom{
+        margin-top: rem(25);
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        li{
+            @include sideArray;
+            flex: 1 1 19%;
+            max-width: rem(166);
+            padding: 10px 8px;
+            padding-right: 0;
+            border-radius: rem(5);
+            border:1px solid $layoutColor;
+            position: relative;
+            .more2{
+                padding: 0 6px;
+            }
+            &.is-active{
+                background: $mainColor;
+                .customTit{
+                    color: $white;
+                }
+                .more2{
+                    background-position: -160px -100px;
+                }
+            }
+            &.info{
+                display: block;
+                flex: 100%;
+                max-width: initial;
+                border:0;
+                text-align: center;
+                strong{
+                    display: inline-block;
+                    margin-bottom: rem(10);
+                    font-size: rem(20);
+                    color: $mainColor;
+                }
+            }
+            .customTit{
+                margin-left: 5px;
+                display: inline-block;
+                text-decoration: underline;
+                @include ellipsis;
+                width: 80%;
+                cursor:pointer;
+            }
+        }
+        .modalLayer{
+            &.absol{
+                left: 75%;
+                right: auto;
+                top: 90%;
+                .layerBox{
+                    padding: rem(10);
+                    min-width: auto;
+                    width: rem(170);
+                    background: $modalBg;
+                }
+            }
+        }
+    }
+}
+
