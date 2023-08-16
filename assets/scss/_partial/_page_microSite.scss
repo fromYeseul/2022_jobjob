@@ -200,13 +200,19 @@
         }
     }
     .bottomBtn{
-        display: flex;
+        @include heightArray;
         width: 30%;
+        height: rem(54);
         margin: rem(16) auto;
         margin-bottom: 0;
         button{
             height: rem(54);
             font-size: rem(18);
+        }
+        p{
+            color: $mainColor;
+            font-size: rem(20);
+            font-weight: bold;
         }
     }
     footer{

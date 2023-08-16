@@ -15,6 +15,7 @@ $onGoing : #ffc812;
 $checking : #ef9914;
 $cancel : #a6a6b6;
 $delay : $error;
+$safe : #08c97c;
 
 // $gnbGreen : #89c895;
 $titGreen : #97926d;
@@ -123,7 +124,7 @@ $copyRight : #9c9b9b;
     height: rem(17);
     border-radius: 50%;
     vertical-align: middle;
-    margin-right: rem(18);
+    margin-right: rem(12);
 }
 
 //상태별 색상
@@ -142,11 +143,21 @@ $copyRight : #9c9b9b;
         background: $cancel;
     }
 }
-.sReject{
+.sReject,
+.sDanger{
     color: $delay;
     .dot{
         background: $delay;
     }
+}
+.sSafe{
+    color: $safe;
+    .dot{
+        background: $safe;
+    }
+}
+.sChecking{
+    color: $checking;
 }
 
 //평가별 색상
@@ -166,6 +177,14 @@ $copyRight : #9c9b9b;
 }
 .dNone{
     color: $highlight !important;
+}
+
+//총매입매출
+.tBuy{
+    color: $error;
+}
+.tSales{
+    color: $mainColor;
 }
 
 

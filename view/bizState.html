@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>거래처(매입)</title>
+    <title>사업현황</title>
     
     <link rel="stylesheet" href="../assets/css/style.css">
 
@@ -81,7 +81,12 @@
                                 </select>
                             </li>
                             <li>
-                                <p class="condiTit">협력/대행</p>
+                                <p class="condiTit">사업기간</p>
+                                <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">
+                                <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">
+                            </li>
+                            <li>
+                                <p class="condiTit">위험도</p>
                                 <select>
                                     <option value="">전체</option>
                                     <option value="001">1</option>
@@ -92,8 +97,16 @@
                                 </select>
                             </li>
                             <li class="hasBtn">
-                                <label class="condiTit" for="project2">검색어</label>
-                                <input type="text" id="project2" maxlength="20" placeholder="거래처명 또는 거래처 코드">
+                                <label class="condiTit" for="project2">구분</label>
+                                <select>
+                                    <option value="">전체</option>
+                                    <option value="001">1</option>
+                                    <option value="002">2</option>
+                                    <option value="003">3</option>
+                                    <option value="004">4</option>
+                                    <option value="005">5</option>
+                                </select>
+                                <input type="text" id="project2" maxlength="20" placeholder="고객사, 계약사 및 프로젝트명">
                                 <button>
                                     <i class="ico search white"></i>
                                 </button>
@@ -120,165 +133,432 @@
                         <table>
                             <colgroup>
                                 <col width="56px;">
-                                <col>
-                                <col>
-                                <col>
-                                <col>
+                                <col width="4%">
+                                <col width="4%">
+                                <col width="4%">
+                                <col width="6%">
 
-                                <col width="22%;">
-                                <col>
+                                <col width="26%;">
+                                <col width="10%">
                                 <col>
                                 <col>
                                 <col>
 
                                 <col>    
-                                <col width="10%;">
+                                <col>
+                                <col>
+                                <col>
+                                <col width="8%">
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th>No.</th>
-                                    <th>사용상태</th>
-                                    <th>폐업구분</th>
-                                    <th>사업유형</th>
-                                    <th>거래구분</th>
-                                    <th>거래처명</th>
-                                    <th>대표</th>
-                                    <th>사업자번호</th>
-                                    <th>협력/대행</th>
-                                    <th>프로젝트 이력</th>
+                                    <th>
+                                        <input type="checkbox" id="a1">
+                                        <label for="a1"></label>
+                                    </th>
+                                    <th>코드</th>
+                                    <th>상태</th>
+                                    <th>계약</th>
+                                    <th>고객자  |계약사</th>
+
+                                    <th>프로젝트</th>
+                                    <th>사업기간</th>
+                                    <th>진척률</th>
+                                    <th>투입/전체</th>
+                                    <th>MM</th>
+
+                                    <th>총매출 | 총매입</th>
+                                    <th>이익률</th>
+                                    <th>위험도</th>
                                     <th>담당자</th>
-                                    <th>수정일</th>
+                                    <th>비고</th>
                                 </tr>
                             </thead>
                             <tbody>                                
                                 <tr>
+                                    <td>
+                                        <input type="checkbox" id="a11">
+                                        <label for="a11"></label>
+                                    </td>
+                                    <td>A5022</td>
+                                    <td><button class="round">진행</button></td>
+                                    <td><span class="sReject">미계약</span></td>
+                                    <td><a href="#">CJ프레시웨이 올리브네트웍스</a></td>
+                                    <td class="ellipsis" title="">
+                                        <span class="label">SM</span>
+                                        <a href="#">모바일앱 서비스 협약서모바일앱 서비스 협약서모바일앱 서비스 협약서</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
+                                    <td>60</td>
+                                    <td>3/5</td>
+                                    <td>14.3</td>
+                                    <td class="right">
+                                        <span class="tSales">113,758,000</span>
+                                        <br>
+                                        <span class="tBuy">69,700,000</span>
+                                    </td>
+                                    <td>11.6</td>
+                                    <td>
+                                        <span class="sDanger">
+                                            <span class="dot"></span>
+                                            위험
+                                        </span>
+                                    </td>
+                                    <td><i class="ico preview"></i></td>
+                                    <td>2023.01.08 김재윤</td>
+                                </tr>                              
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="a11">
+                                        <label for="a11"></label>
+                                    </td>
+                                    <td>A5022</td>
+                                    <td><button class="round off">종료</button></td>
+                                    <td><span class="sReject">변경미계약</span></td>
+                                    <td><a href="#">하이벨류컨설팅</a></td>
+                                    <td class="ellipsis" title="">
+                                        <span class="label">SM</span>
+                                        <a href="#">코웨이 영업정보시스템</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
                                     <td>10</td>
-                                    <td>사용</td>
-                                    <td>정상</td>
-                                    <td>법인</td>
-                                    <td>매입</td>
-                                    <td class="ellipsis" title="">
-                                        <a href="#">라이트브레인</a>                                        
+                                    <td>2/5</td>
+                                    <td>2</td>
+                                    <td class="right">
+                                        <span class="tSales">10,758,000</span>
+                                        <br>
+                                        <span class="tBuy">9,700,000</span>
                                     </td>
-                                    <td>홍길동</td>
-                                    <td>123-12-123456</td>
-                                    <td>협력</td>
-                                    <td>5건</td>
+                                    <td>4</td>
+                                    <td>
+                                        <span class="sSafe">
+                                            <span class="dot"></span>
+                                            양호
+                                        </span>
+                                    </td>
                                     <td><i class="ico preview"></i></td>
                                     <td>2023.01.08 김재윤</td>
-                                </tr>                               
+                                </tr>                            
                                 <tr>
-                                    <td>9</td>
-                                    <td>사용</td>
-                                    <td><span class="sReject">폐업</span></td>
-                                    <td>개인</td>
-                                    <td>매입/매출</td>
-                                    <td class="ellipsis" title="">
-                                        <a href="#">(유)프라이스워터하우스쿠퍼스컨설팅프라이스워터하우스쿠퍼스컨설팅프라이스워터하우스쿠퍼스컨설팅프라이스워터하우스쿠퍼스컨설팅프라이스워터하우스쿠퍼스컨설팅</a>                                        
+                                    <td>
+                                        <input type="checkbox" id="a11">
+                                        <label for="a11"></label>
                                     </td>
-                                    <td>최재성, 홍성호</td>
-                                    <td>123-11-123456</td>
-                                    <td>-</td>
-                                    <td><span class="disabled">0건</span></td>
+                                    <td>A5022</td>
+                                    <td><button class="round cancel">무산</button></td>
+                                    <td>발주서</td>
+                                    <td><a href="#">한국 IBM</a></td>
+                                    <td class="ellipsis" title="">
+                                        <span class="label">SM</span>
+                                        <a href="#">국민건강보험공단 ERP 시스템 유지보수 사업</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
+                                    <td>60</td>
+                                    <td>3/3</td>
+                                    <td>6</td>
+                                    <td class="right">
+                                        <span class="tSales">7,166,000</span>
+                                        <br>
+                                        <span class="tBuy">3,400,000</span>
+                                    </td>
+                                    <td>-4</td>
+                                    <td>
+                                        <span class="sSafe">
+                                            <span class="dot"></span>
+                                            양호
+                                        </span>
+                                    </td>
                                     <td><i class="ico preview"></i></td>
                                     <td>2023.01.08 김재윤</td>
-                                </tr>                       
+                                </tr>                            
                                 <tr>
+                                    <td>
+                                        <input type="checkbox" id="a11">
+                                        <label for="a11"></label>
+                                    </td>
+                                    <td>A5022</td>
+                                    <td><button class="round">진행</button></td>
+                                    <td>발주서</td>
+                                    <td><a href="#">CJ프레시웨이 올리브네트웍스</a></td>
+                                    <td class="ellipsis" title="">
+                                        <span class="label">SM</span>
+                                        <a href="#">모바일앱 서비스 협약서모바일앱 서비스 협약서모바일앱 서비스 협약서</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
+                                    <td>60</td>
+                                    <td>3/5</td>
+                                    <td>14.3</td>
+                                    <td class="right">
+                                        <span class="tSales">113,758,000</span>
+                                        <br>
+                                        <span class="tBuy">69,700,000</span>
+                                    </td>
+                                    <td>11.6</td>
+                                    <td>
+                                        <span class="sSafe">
+                                            <span class="dot"></span>
+                                            양호
+                                        </span>
+                                    </td>
+                                    <td><i class="ico preview"></i></td>
+                                    <td>2023.01.08 김재윤</td>
+                                </tr>                              
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="a11">
+                                        <label for="a11"></label>
+                                    </td>
+                                    <td>A5022</td>
+                                    <td><button class="round off">종료</button></td>
+                                    <td>발주서</td>
+                                    <td><a href="#">하이벨류컨설팅</a></td>
+                                    <td class="ellipsis" title="">
+                                        <span class="label">SM</span>
+                                        <a href="#">코웨이 영업정보시스템</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
                                     <td>10</td>
-                                    <td>사용</td>
-                                    <td>정상</td>
-                                    <td>법인</td>
-                                    <td>매입</td>
-                                    <td class="ellipsis" title="">
-                                        <a href="#">라이트브레인</a>                                        
+                                    <td>2/5</td>
+                                    <td>2</td>
+                                    <td class="right">
+                                        <span class="tSales">10,758,000</span>
+                                        <br>
+                                        <span class="tBuy">9,700,000</span>
                                     </td>
-                                    <td>홍길동</td>
-                                    <td>123-22-123456</td>
-                                    <td>대행</td>
-                                    <td>5건</td>
+                                    <td>4</td>
+                                    <td>
+                                        <span class="sSafe">
+                                            <span class="dot"></span>
+                                            양호
+                                        </span>
+                                    </td>
                                     <td><i class="ico preview"></i></td>
                                     <td>2023.01.08 김재윤</td>
-                                </tr>                               
+                                </tr>                            
                                 <tr>
-                                    <td>9</td>
-                                    <td>사용</td>
-                                    <td>정상</td>
-                                    <td>법인</td>
-                                    <td>매입</td>
-                                    <td class="ellipsis" title="">
-                                        <a href="#">(유)워터하우스</a>                                        
+                                    <td>
+                                        <input type="checkbox" id="a11">
+                                        <label for="a11"></label>
                                     </td>
-                                    <td>최재성</td>
-                                    <td>123-11-123456</td>
-                                    <td>협력</td>
-                                    <td>11건</td>
+                                    <td>A5022</td>
+                                    <td><button class="round off">종료</button></td>
+                                    <td>발주서</td>
+                                    <td><a href="#">한국 IBM</a></td>
+                                    <td class="ellipsis" title="">
+                                        <span class="label">SM</span>
+                                        <a href="#">국민건강보험공단 ERP 시스템 유지보수 사업</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
+                                    <td>60</td>
+                                    <td>3/3</td>
+                                    <td>6</td>
+                                    <td class="right">
+                                        <span class="tSales">7,166,000</span>
+                                        <br>
+                                        <span class="tBuy">3,400,000</span>
+                                    </td>
+                                    <td>-4</td>
+                                    <td>
+                                        <span class="sSafe">
+                                            <span class="dot"></span>
+                                            양호
+                                        </span>
+                                    </td>
                                     <td><i class="ico preview"></i></td>
                                     <td>2023.01.08 김재윤</td>
-                                </tr>                       
+                                </tr>                            
                                 <tr>
+                                    <td>
+                                        <input type="checkbox" id="a11">
+                                        <label for="a11"></label>
+                                    </td>
+                                    <td>A5022</td>
+                                    <td><button class="round off">종료</button></td>
+                                    <td>발주서</td>
+                                    <td><a href="#">CJ프레시웨이</a></td>
+                                    <td class="ellipsis" title="">
+                                        <span class="label">SM</span>
+                                        <a href="#">모바일앱 서비스 협약서모바일앱 서비스 협약서모바일앱 서비스 협약서</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
+                                    <td>60</td>
+                                    <td>3/5</td>
+                                    <td>14.3</td>
+                                    <td class="right">
+                                        <span class="tSales">113,758,000</span>
+                                        <br>
+                                        <span class="tBuy">69,700,000</span>
+                                    </td>
+                                    <td>11.6</td>
+                                    <td>
+                                        <span class="sSafe">
+                                            <span class="dot"></span>
+                                            양호
+                                        </span>
+                                    </td>
+                                    <td><i class="ico preview"></i></td>
+                                    <td>2023.01.08 김재윤</td>
+                                </tr>                              
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="a11">
+                                        <label for="a11"></label>
+                                    </td>
+                                    <td>A5022</td>
+                                    <td><button class="round off">종료</button></td>
+                                    <td>발주서</td>
+                                    <td><a href="#">하이벨류컨설팅</a></td>
+                                    <td class="ellipsis" title="">
+                                        <span class="label">SM</span>
+                                        <a href="#">코웨이 영업정보시스템</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
                                     <td>10</td>
-                                    <td>사용</td>
-                                    <td>정상</td>
-                                    <td>법인</td>
-                                    <td>매입</td>
-                                    <td class="ellipsis" title="">
-                                        <a href="#">라이트브레인</a>                                        
+                                    <td>2/5</td>
+                                    <td>2</td>
+                                    <td class="right">
+                                        <span class="tSales">10,758,000</span>
+                                        <br>
+                                        <span class="tBuy">9,700,000</span>
                                     </td>
-                                    <td>홍길동</td>
-                                    <td>123-11-123456</td>
-                                    <td>협력</td>
-                                    <td>5건</td>
+                                    <td>4</td>
+                                    <td>
+                                        <span class="sSafe">
+                                            <span class="dot"></span>
+                                            양호
+                                        </span>
+                                    </td>
                                     <td><i class="ico preview"></i></td>
                                     <td>2023.01.08 김재윤</td>
-                                </tr>                               
+                                </tr>                            
                                 <tr>
-                                    <td>9</td>
-                                    <td>사용</td>
-                                    <td>정상</td>
-                                    <td>법인</td>
-                                    <td>매입</td>
-                                    <td class="ellipsis" title="">
-                                        <a href="#">(유)프라이스워터하우스</a>                                        
+                                    <td>
+                                        <input type="checkbox" id="a11">
+                                        <label for="a11"></label>
                                     </td>
-                                    <td>홍성호</td>
-                                    <td>123-22-123456</td>
-                                    <td>협력</td>
-                                    <td>1건</td>
+                                    <td>A5022</td>
+                                    <td><button class="round off">종료</button></td>
+                                    <td>발주서</td>
+                                    <td><a href="#">한국 IBM</a></td>
+                                    <td class="ellipsis" title="">
+                                        <span class="label">SM</span>
+                                        <a href="#">국민건강보험공단 ERP 시스템 유지보수 사업</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
+                                    <td>60</td>
+                                    <td>3/3</td>
+                                    <td>6</td>
+                                    <td class="right">
+                                        <span class="tSales">7,166,000</span>
+                                        <br>
+                                        <span class="tBuy">3,400,000</span>
+                                    </td>
+                                    <td>-4</td>
+                                    <td>
+                                        <span class="sSafe">
+                                            <span class="dot"></span>
+                                            양호
+                                        </span>
+                                    </td>
                                     <td><i class="ico preview"></i></td>
                                     <td>2023.01.08 김재윤</td>
-                                </tr>                       
+                                </tr>                            
                                 <tr>
+                                    <td>
+                                        <input type="checkbox" id="a11">
+                                        <label for="a11"></label>
+                                    </td>
+                                    <td>A5022</td>
+                                    <td><button class="round">진행</button></td>
+                                    <td><span class="sReject">미계약</span></td>
+                                    <td><a href="#">한국 IBM</a></td>
+                                    <td class="ellipsis" title="">
+                                        <span class="label">SM</span>
+                                        <a href="#">모바일앱 서비스 협약서모바일앱 서비스 협약서모바일앱 서비스 협약서</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
+                                    <td>60</td>
+                                    <td>3/5</td>
+                                    <td>14.3</td>
+                                    <td class="right">
+                                        <span class="tSales">113,758,000</span>
+                                        <br>
+                                        <span class="tBuy">69,700,000</span>
+                                    </td>
+                                    <td>11.6</td>
+                                    <td>
+                                        <span class="sDanger">
+                                            <span class="dot"></span>
+                                            위험
+                                        </span>
+                                    </td>
+                                    <td><i class="ico preview"></i></td>
+                                    <td>2023.01.08 김재윤</td>
+                                </tr>                              
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="a11">
+                                        <label for="a11"></label>
+                                    </td>
+                                    <td>A5022</td>
+                                    <td><button class="round off">종료</button></td>
+                                    <td><span class="sReject">변경미계약</span></td>
+                                    <td><a href="#">한국 IBM</a></td>
+                                    <td class="ellipsis" title="">
+                                        <span class="label">SM</span>
+                                        <a href="#">코웨이 영업정보시스템</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
                                     <td>10</td>
-                                    <td>사용</td>
-                                    <td>정상</td>
-                                    <td>법인</td>
-                                    <td>매입</td>
-                                    <td class="ellipsis" title="">
-                                        <a href="#">라이트브레인</a>                                        
+                                    <td>2/5</td>
+                                    <td>2</td>
+                                    <td class="right">
+                                        <span class="tSales">10,758,000</span>
+                                        <br>
+                                        <span class="tBuy">9,700,000</span>
                                     </td>
-                                    <td>홍길동</td>
-                                    <td>123-11-123456</td>
-                                    <td>협력</td>
-                                    <td>5건</td>
+                                    <td>4</td>
+                                    <td>
+                                        <span class="sDanger">
+                                            <span class="dot"></span>
+                                            위험
+                                        </span>
+                                    </td>
                                     <td><i class="ico preview"></i></td>
                                     <td>2023.01.08 김재윤</td>
-                                </tr>                               
+                                </tr>                            
                                 <tr>
-                                    <td>9</td>
-                                    <td>사용</td>
-                                    <td><span class="sReject">폐업</span></td>
-                                    <td>개인</td>
-                                    <td>매입</td>
-                                    <td class="ellipsis" title="">
-                                        <a href="#">(유)프라이스워터하우스</a>                                        
+                                    <td>
+                                        <input type="checkbox" id="a11">
+                                        <label for="a11"></label>
                                     </td>
-                                    <td>최재성</td>
-                                    <td>123-11-123456</td>
-                                    <td>협력</td>
-                                    <td>4건</td>
+                                    <td>A5022</td>
+                                    <td><button class="round cancel">무산</button></td>
+                                    <td>발주서</td>
+                                    <td><a href="#">한국 IBM</a></td>
+                                    <td class="ellipsis" title="">
+                                        <span class="label">SM</span>
+                                        <a href="#">국민건강보험공단 ERP 시스템 유지보수 사업</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
+                                    <td>60</td>
+                                    <td>3/3</td>
+                                    <td>6</td>
+                                    <td class="right">
+                                        <span class="tSales">7,166,000</span>
+                                        <br>
+                                        <span class="tBuy">3,400,000</span>
+                                    </td>
+                                    <td>-4</td>
+                                    <td>
+                                        <span class="sSafe">
+                                            <span class="dot"></span>
+                                            양호
+                                        </span>
+                                    </td>
                                     <td><i class="ico preview"></i></td>
                                     <td>2023.01.08 김재윤</td>
-                                </tr>
+                                </tr>   
                             </tbody>
                         </table>
                     </div>

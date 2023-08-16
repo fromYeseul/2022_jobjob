@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6, p {
   height: 1.0625rem;
   border-radius: 50%;
   vertical-align: middle;
-  margin-right: 1.125rem;
+  margin-right: 0.75rem;
 }
 
 .sClear {
@@ -120,11 +120,24 @@ h1, h2, h3, h4, h5, h6, p {
   background: #a6a6b6;
 }
 
-.sReject {
+.sReject,
+.sDanger {
   color: #ff1236;
 }
-.sReject .dot {
+.sReject .dot,
+.sDanger .dot {
   background: #ff1236;
+}
+
+.sSafe {
+  color: #08c97c;
+}
+.sSafe .dot {
+  background: #08c97c;
+}
+
+.sChecking {
+  color: #ef9914;
 }
 
 .eHigh {
@@ -145,6 +158,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 .dNone {
   color: #009ce0 !important;
+}
+
+.tBuy {
+  color: #ff1236;
+}
+
+.tSales {
+  color: #0460d2;
 }
 
 .mainC {
@@ -1969,20 +1990,20 @@ footer.toast button + button {
   margin-top: 10px;
 }
 
-#compSearch .tableTop {
+.compSearch .tableTop {
   display: block;
   margin-top: 20px;
 }
-#compSearch input {
+.compSearch input {
   flex-grow: 1;
 }
-#compSearch .hasBtn .button,
-#compSearch .hasBtn button {
+.compSearch .hasBtn .button,
+.compSearch .hasBtn button {
   width: 2.75rem;
   background: #6b6b6b;
   border: 1px solid #6b6b6b;
 }
-#compSearch .tableBox {
+.compSearch .tableBox {
   height: 31.25rem;
 }
 
@@ -6098,6 +6119,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 0.1875rem;
   height: 0.625rem;
   background-position: -140px -100px;
+  padding: 0 3px;
   cursor: pointer;
 }
 .ico.smClose {
@@ -6560,23 +6582,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   padding: 0 0.3125rem;
   transform: translateX(50%);
 }
-.boxList .moreList {
-  position: absolute;
-  top: 1.75rem;
-  right: -25px;
-  display: none;
-  min-width: 4.5rem;
-  border: 1px solid #a6a6b6;
-}
-.boxList .moreList .square {
-  padding: 0.1875rem 0.5rem;
-  border: 0;
-  margin-left: 0;
-  text-align: left;
-}
-.boxList .moreList.is-active {
-  display: block;
-}
 .boxList.listType {
   padding: 1rem 1.25rem;
   border-radius: 0;
@@ -7003,6 +7008,24 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .boxList.tableType.is-active {
   border: 1px solid #0460d2;
+}
+
+.moreList {
+  position: absolute;
+  top: 1.75rem;
+  right: -25px;
+  display: none;
+  min-width: 4.5rem;
+  border: 1px solid #a6a6b6;
+}
+.moreList .square {
+  padding: 0.1875rem 0.5rem;
+  border: 0;
+  margin-left: 0;
+  text-align: left;
+}
+.moreList.is-active {
+  display: block;
 }
 
 .divideBox {
@@ -7876,6 +7899,7 @@ h6 + .h6_sub {
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
+  z-index: 1;
 }
 .commentList .date {
   color: #aaa;
@@ -9046,13 +9070,21 @@ h6 + .h6_sub {
 }
 .compoWrapper .bottomBtn {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30%;
+  height: 3.375rem;
   margin: 1rem auto;
   margin-bottom: 0;
 }
 .compoWrapper .bottomBtn button {
   height: 3.375rem;
   font-size: 1.125rem;
+}
+.compoWrapper .bottomBtn p {
+  color: #0460d2;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 .compoWrapper footer {
   text-align: left;
@@ -9391,11 +9423,26 @@ h6 + .h6_sub {
 }
 .clientRegister .hasTooltip .tooltip.left {
   left: -165px;
+  top: 40px;
 }
-.clientRegister .col5 {
-  width: 95%;
+.clientRegister .hasTooltip .tooltip.left.line2 {
+  top: 140px;
+}
+.clientRegister .hasTooltip .tooltip.left.line3 {
+  top: 230px;
+}
+.clientRegister .hasTooltip .tooltip.left.line4 {
+  top: 320px;
+}
+.clientRegister .bizCorpor {
+  width: 90%;
   column-gap: 3.75rem;
-  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr;
+}
+.clientRegister .bizIncome {
+  width: 90%;
+  column-gap: 3.75rem;
+  grid-template-columns: 1fr 1fr 50px 1fr 1fr 1fr;
 }
 .clientRegister .hasBtn input {
   flex-grow: 1;
@@ -9416,14 +9463,56 @@ h6 + .h6_sub {
   width: 90%;
 }
 
-.clientRegister .clientWeb {
+.clientRegister .clientWeb,
+.clientRegister .clientAccount,
+.clientRegister .clientCode {
   grid-column: 3/5;
 }
-.clientRegister .clientAdd {
+.clientRegister .clientAdd,
+.clientRegister .clientFile {
   grid-column: 1/3;
 }
-.clientRegister .clientAccount {
-  grid-column: 3/5;
+.clientRegister .clientPayday,
+.clientRegister .clientCode {
+  display: none;
+}
+.clientRegister .clientManager {
+  grid-row: 4/5;
+  grid-column: 5/6;
+}
+.clientRegister.is-detail .clientPayday,
+.clientRegister.is-detail .clientCode {
+  display: block;
+}
+.clientRegister.is-detail .clientManager {
+  grid-row: 5/6;
+  grid-column: 5/6;
+}
+.clientRegister .bizIncome {
+  width: 90%;
+  column-gap: 3.75rem;
+  grid-template-columns: 1fr 1fr 50px 1fr 1fr 1fr;
+}
+.clientRegister .bizIncome .clientName {
+  margin-right: -50px;
+}
+.clientRegister .bizIncome .clientContact,
+.clientRegister .bizIncome .clientAccount,
+.clientRegister .bizIncome .clientCode {
+  grid-column: 4/6;
+}
+.clientRegister .bizIncome .clientEmail {
+  grid-column: 2/4;
+}
+.clientRegister .bizIncome .clientAdd {
+  grid-column: 1/4;
+}
+.clientRegister .bizIncome .clientManager {
+  grid-row: initial;
+  grid-column: initial;
+}
+.clientRegister .bizIncome .clientPayday {
+  display: block;
 }
 .clientRegister input.xsSize {
   width: 3.625rem;
@@ -9431,7 +9520,7 @@ h6 + .h6_sub {
   text-align: center;
 }
 .clientRegister .hyphen {
-  margin: 0 1rem;
+  margin: 0 0.5625rem;
 }
 
 .bizState .tableTop {

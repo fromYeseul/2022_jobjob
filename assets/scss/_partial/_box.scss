@@ -272,24 +272,6 @@
         padding: 0 rem(5);
         transform: translateX(50%);
     }
-    .moreList{
-        position: absolute;
-        top: rem(28);
-
-        right: -25px;
-        display: none;
-        min-width: rem(72);
-        border:1px solid $selGray;
-        .square{
-            padding: rem(3) rem(8);
-            border:0;
-            margin-left: 0;
-            text-align: left;
-        }
-        &.is-active{
-            display: block;
-        }
-    }
     &.listType{
         padding: rem(16) rem(20);
         border-radius: 0;
@@ -727,7 +709,25 @@
     }
 }
 
+//더보기
+.moreList{
+    position: absolute;
+    top: rem(28);
 
+    right: -25px;
+    display: none;
+    min-width: rem(72);
+    border:1px solid $selGray;
+    .square{
+        padding: rem(3) rem(8);
+        border:0;
+        margin-left: 0;
+        text-align: left;
+    }
+    &.is-active{
+        display: block;
+    }
+}
 
 
 .divideBox{
