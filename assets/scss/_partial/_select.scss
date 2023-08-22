@@ -91,6 +91,7 @@ select{
   }
   &.full{
     width: 100%;
+    min-width: auto;
   }
   &.noBd{
     color: $white;
@@ -113,6 +114,7 @@ select{
 
 .selectBox{
   position: relative;
+  flex-grow: 1;
 }
 .selectedBox{
   // margin-top: rem(40);
@@ -331,6 +333,11 @@ select{
         }
       }
     }
+  }
+  &.autoSize{
+    width: auto;
+    min-width: rem(102);
+    padding: 0 25px 0 10px;
   }
   &.lowSize{
     width: rem(102);

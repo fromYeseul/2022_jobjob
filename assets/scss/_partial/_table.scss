@@ -19,6 +19,8 @@
 
 
 
+
+
 table{
     width: 100%;
     font-size: rem(14);
@@ -119,7 +121,11 @@ table{
             }
         }
     }
-    tbody{
+    tbody{        
+        th{
+            color: $black;
+            background: $tableHover;    
+        }
         tr{
             &:hover{
                 background: $tableHover;
@@ -277,7 +283,7 @@ table{
             //     background: transparent;
             // }
             td{
-                padding: rem(6) rem(3);
+                padding: rem(6);
                 height: rem(50);
             } 
         }
@@ -446,6 +452,10 @@ table{
             color: $mainColor;
             cursor: pointer;
         }
+    }
+    .dot{
+        margin-right: 4px;
+        vertical-align: sub;
     }
 }
 

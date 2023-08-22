@@ -410,6 +410,9 @@ input[type=password]{
         }
     }  
     &.flex{
+        ul{
+            flex-grow: 1;
+        }
         li{
             display: flex;
             align-items: center;
@@ -806,7 +809,7 @@ input[type=file] {
         }
         label{
             line-height: rem(20);
-            margin-left: rem(10);
+            margin-left: rem(20);
         }
         .drop{
             color: $placeholder;
@@ -820,6 +823,7 @@ input[type=file] {
         .list{
             .list_ul{
                 display: block;
+                margin-top: 10px;
                 li{
                     @include sideArray;
                     padding: 0 rem(4);

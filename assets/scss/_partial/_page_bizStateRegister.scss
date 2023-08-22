@@ -1,0 +1,53 @@
+.bizStateRegister{
+    width: 100%;
+    .col6{
+        margin-top: rem(30);
+        width: 85%;
+        column-gap: rem(60);
+        grid-template-columns: 1fr 50px 1.8fr 1fr 1fr 90px;
+    }
+    .hasBtn{
+        input{
+            flex-grow: 1;
+        }
+        .button,
+        button{
+            width: rem(60);
+        }
+    }
+    input[type=text]{
+        &.dateType{
+            width: rem(150) !important;
+        }
+    }
+    .range{
+        margin: 0 22px;
+    }
+    .uploadBox{
+        label{
+            margin-bottom: 0;
+        }
+    }
+    .clientComp{
+        grid-column: 1/3;
+    }
+    .bizTerm{
+        grid-column: 4/6;
+    }
+    .bizFile{
+        grid-column: 1/4;
+    }
+    select{
+        &.others{
+            color: $error;
+        }
+    }
+}
+
+#bizStateRegi3{
+    tr{
+        &:hover{
+            background: transparent;
+        }
+    }
+}

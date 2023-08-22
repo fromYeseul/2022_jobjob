@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사업현황 등록</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="hasFooter">
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="noDepth">
+                            <a alertToast href="#"><i class="ico home"></i><span class="menuTxt">홈</span></a>
+                        </li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">고객문의</span></a></li>
+                                <li><a href="#"><span class="depth2">운영자관리</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>
+                        <li class="is-active"><a href="#"><i class="ico recruit"></i><span class="menuTxt">공고/지원자</span></a>
+                            <ul class="is-active">
+                                <li class="is-active"><a href="#"><span class="depth2">모집공고</span></a></li>
+                                <li><a href="#"><span class="depth2">인재검색/제안</span></a></li>
+                                <li><a href="#"><span class="depth2">보낸제안</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>    
+        
+        <section class="contWrapper noRight"><!--우측패널 없는 페이지-->
+            <section class="contLayout">
+                
+                <section class="bizStateRegister">
+
+                    <div class="pageTit">
+                        <h2>사업현황 등록(필수항목 확인하기)</h2>
+                        <div class="breadCrumb">
+                            <ul class="flex">
+                                <li class="is-active" aria-controls="bizStateRegi0">기본정보</li>
+                                <li aria-controls="bizStateRegi1">매출/매입</li>
+                                <li aria-controls="bizStateRegi2">계약</li>
+                                <li aria-controls="bizStateRegi3">청구스케줄</li>
+                                <li aria-controls="bizStateRegi4">수금스케줄</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="regiPartWrapper">  
+                        
+                        <div class="regiPart" id="bizStateRegi0">
+                            <h3>1. 기본정보</h3>
+                            
+                            <div class="boxWrap hasTooltip">                                
+                                <div class="inputList">   
+                                    <h3>[종료] 대기업 B2B 주문 프로세스 개선 기획자 모집</h3>
+                                    <ul class="grid col6">
+                                        <li class="clientComp">
+                                            <h6 class="need">고객사</h6>
+                                            <div class="hasBtn">
+                                                <input type="text" class="full" placeholder="">
+                                                <button>변경</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h6 class="need">계약사</h6>
+                                            <div class="hasBtn">
+                                                <input type="text" class="full" placeholder="">
+                                                <button>변경</button>
+                                            </div>
+                                        </li>
+                                        <li class="bizTerm">
+                                            <h6 class="need">사업기간</h6>
+                                            <input class="dateType laSize" type="text" placeholder="시작일">
+                                            <span class="range">~</span>
+                                            <input class="dateType laSize" type="text" placeholder="종료일">
+                                        </li>
+                                        <li>
+                                            <h6 class="need">보험</h6>
+                                            <select class="full" name="" id="">
+                                                <option value="">Y</option>
+                                                <option value="">N</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <h6 class="need">계약상태</h6>
+                                            <select class="full redOpt" name="" id=""><!--미계약/변경미계약 선택시 red컬러 (하단 script)-->
+                                                <option value="0">발주서</option>
+                                                <option value="1">미계약</option>
+                                                <option value="2">변경미계약</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <h6 class="need">턴키</h6>
+                                            <input id="s2" type="checkbox" class="chkSwitch">
+                                            <label for="s2" class="mt10"></label>
+                                        </li> 
+                                        <li>
+                                            <label class="need" for="">계약금액</label>
+                                            <input class="txtRight" type="text" value="100,000,000,000" readonly> 원
+                                        </li>
+                                        <li>
+                                            <h6 class="need">주관부서</h6>
+                                            <select class="full" name="" id="">
+                                                <option value="">플랫폼전략</option>
+                                                <option value="">미래융합사업</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <h6 class="need">프로젝트 상태</h6>
+                                            <select class="full" name="" id="">
+                                                <option value="">진행</option>
+                                                <option value="">종료</option>
+                                                <option value="">무산</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <h6 class="need">검수</h6>
+                                            <select class="full" name="" id="">
+                                                <option value="">Y</option>
+                                                <option value="">N</option>
+                                            </select>
+                                        </li>
+                                        <li class="bizFile">                                            
+                                            <h6>첨부파일</h6>
+                                            <div class="uploadBox">
+                                                <div class="inputGroup upload">
+                                                    <div class="drop">
+                                                        <i class="ico fileUpload"></i>
+                                                        <label for="fileUpload">
+                                                            파일을 첨부해주세요.<br>
+                                                            (파일 최대 5개, 100MB 이하)                                                      
+                                                        </label>
+                                                    </div>
+                                                    <div class="list">
+                                                        <ul class="list_ul">
+                                                            <li>
+                                                                <span class="fileName">test.JPG</span>
+                                                                <span class="volume">45 KB</span>
+                                                                <i class="ico delete_bg"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                                <label for="cycleDocument22" class="">직접선택</label>
+                                                <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="">
+                                            </div>
+                                        </li>             
+                                        <li class="">
+                                            <h6 class="need">영업담당</h6>
+                                            <div class="select laSize is-active">
+                                                <span class="selDefault is-active">홍길동</span>
+                                                <ul class="optionList">
+                                                    <li class="optionItem">
+                                                        <input type="checkbox" id="optChk_1" class="hasTxt">
+                                                        <label for="optChk_1">홍길은</label>
+                                                    </li>
+                                                    
+                                                    <li class="optionItem">
+                                                        <input type="checkbox" id="optChk_2" class="hasTxt">
+                                                        <label for="optChk_2">홍길순</label>
+                                                    </li>
+                                                    <li class="optionItem">
+                                                        <input type="checkbox" id="optChk_3" class="hasTxt">
+                                                        <label for="optChk_3">홍길금</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li class="clientManager">
+                                            <h6>담당자</h6>
+                                            <button class="midSize">담당자 지정</button>
+                                            <span class="mainC ml5">4명</span>
+                                        </li>
+                                    </ul>  
+                                </div>       
+                            </div>
+                        </div>   
+
+                        <div class="regiPart" id="bizStateRegi1">
+                            <h3>2. 매출/매입</h3>
+                            <div class="boxWrap">
+                                <div class="tableBox"></div>
+                            </div>
+                        </div>
+
+                        <div class="regiPart" id="bizStateRegi2">
+                            <h3>3. 계약</h3>
+                            <div class="boxWrap">
+                                <div class="tableBox"></div>
+                            </div>
+                        </div>
+
+                        <div class="regiPart" id="bizStateRegi3">
+                            <h3>4. 청구스케줄</h3>
+                            <div class="boxWrap">
+                                <div class="tableTop">
+                                    <div class="prfix">
+                                        <h4>프로젝트 소개</h4>
+                                        <select class="smSize ml10" name="" id="">
+                                            <option value="">choose</option>
+                                            <option value="dog" disabled="">Dog</option>
+                                            <option value="cat">Cat</option>
+                                        </select>
+                                        <select class="smSize" name="" id="">
+                                            <option value="">choose</option>
+                                            <option value="dog" disabled="">Dog</option>
+                                            <option value="cat">Cat</option>
+                                        </select>
+                                        <select class="smSize" name="" id="">
+                                            <option value="">choose</option>
+                                            <option value="dog" disabled="">Dog</option>
+                                            <option value="cat">Cat</option>
+                                        </select>
+                                    </div>
+                                    <div class="suffix">
+                                        <button class="smSize" type="button">수정</button>
+                                    </div>
+                                </div>
+                                <div class="tableBox">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>청구회차</th>
+                                                <th>청구일자</th>
+                                                <th>청구금액</th>
+                                                <th>계산서발행</th>
+                                                <th>검수일자</th>
+                                                <th>분배율(%)</th>
+                                                <th>비고</th>
+                                                <th>청구합계</th>
+                                                <th>계약금액</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1회</th>
+                                                <td class="subGray">2020.01.01</td>
+                                                <td class="mainC">50,000,000</td>
+                                                <td>2020.01.25</td>
+                                                <td>2020.01.25</td>
+                                                <td></td>
+                                                <td>담당자 메모내용</td>
+                                                <td rowspan="4">
+                                                    <b class="important">250,000,000</b>
+                                                </td>
+                                                <td rowspan="4">
+                                                    <b>250,000,000</b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>2회</th>
+                                                <td class="subGray">2020.01.01</td>
+                                                <td class="mainC">50,000,000</td>
+                                                <td>2020.01.25</td>
+                                                <td>2020.01.25</td>
+                                                <td></td>
+                                                <td>담당자 메모내용</td>
+                                            </tr>
+                                            <tr>
+                                                <th>3회</th>
+                                                <td class="subGray">2020.01.01</td>
+                                                <td class="mainC">50,000,000</td>
+                                                <td>2020.01.25</td>
+                                                <td>2020.01.25</td>
+                                                <td></td>
+                                                <td>담당자 메모내용</td>
+                                            </tr>
+                                            <tr>
+                                                <th>4회</th>
+                                                <td class="subGray">2020.01.01</td>
+                                                <td class="mainC">50,000,000</td>
+                                                <td>2020.01.25</td>
+                                                <td>2020.01.25</td>
+                                                <td></td>
+                                                <td>담당자 메모내용</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="regiPart" id="bizStateRegi4">
+                            <h3>5. 수금스케줄</h3>
+                            <div class="boxWrap">
+                                <div class="tableBox"></div>
+                            </div>
+                        </div>
+                    </div>     
+                </section>
+                
+            </section>
+        </section>
+    </section>
+
+    <!--플로팅메뉴-->
+    <div class="floatingWrapper bottom">
+        <div class="floating">
+            <!-- <h5>이 프로젝트를</h5> 230718 삭제-ys -->
+            <button class="white">취소</button>
+            <button class="white">임시저장</button>
+            <button class="white">미리보기</button>
+            <button class="" id="saveBtn">등록완료??</button>
+        </div>
+    </div>
+    <!--//플로팅메뉴-->
+
+    <div id="" class="modalLayer center compSearch">
+        <div class="layerBox sm-midSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h2>회사 검색</h2>
+                <div class="h3_sub">거래처 회사를 검색한 후 선택버튼을 눌러주세요.</div>
+            </div>
+            <div class="modalCont center">
+                <div class="tableTop">
+                    <div class="hasBtn">
+                        <input type="text" placeholder="">
+                        <button>
+                            <i class="ico search white"></i>
+                        </button>
+                    </div>          
+                </div>
+                <div class="tableBox">
+                    <table>
+                        <colgroup>
+                            <col width="30px">
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th colspan="2">회사명</th>
+                                <th>사업자번호</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>전자
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>전기
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>전기
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>메디슨
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>제약
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>SDI
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="nodata">
+                                    검색 결과가 없습니다.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modalFooter">
+                <button class="white">닫기</button>
+                <button class="">선택</button>
+            </div>
+        </div>
+        <div class="layerDim"></div> 
+    </div>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        selectBox();
+
+        $(document).ready(function() {
+            $('.redOpt').change(function() {
+                var current = $('.redOpt').val();
+                if (current != 1 || 2) {
+                    $('.redOpt').css('color','red');
+                } else {
+                    $('.redOpt').css('color','black');
+                }
+            }); 
+        });  
+    </script>
+</body>
+</html>

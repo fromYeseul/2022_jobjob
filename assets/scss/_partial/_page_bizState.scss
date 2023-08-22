@@ -1,5 +1,52 @@
 .bizState{
+    width: 100%;
     .tableTop{
         margin-top: rem(30);
     }
+    tfoot{
+        td{
+            padding: 0 6px;
+            background: $tfootGray;
+        }
+    }
+    .relative{
+        position: absolute;
+        bottom: 15px;
+        width: 97%;
+        .absolBody{
+            height: calc(100vh - 454px);
+            @include scroll_0;
+            transition: all .3s;
+            &.is-active{
+                height: calc(100vh - 230px);
+            }
+        }
+    }
+    &.is-active{
+        // .absolBody{
+        //     height: calc(100vh - 350px);
+        // }
+        // h2,
+        // .condition,
+        // .tableTop{
+        //     margin-top: 0;
+        //     transform: scale(.5);
+        //     transform-origin: left top;
+        // }
+        // .tableTop{
+        //     margin-top: -30px;
+        // }
+    }
 }
+
+// .contWrapper{
+    
+//     .contLayout{
+//         &.is-active{
+//             // height: calc(100vh + 160px);
+//             .absolBody{
+//                 height: calc(100vh - 230px);
+//             }
+//         }
+//     }
+// }
