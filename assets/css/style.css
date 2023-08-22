@@ -8902,10 +8902,37 @@ h6 + .h6_sub {
 }
 
 .compoWrapper {
+  min-width: 22.5rem;
   padding: 2.5rem 3.125rem;
   padding-bottom: 0.625rem;
   border-radius: 6px 6px 0 0;
   background: #f2f2f7;
+}
+.compoWrapper.fullSize {
+  background: #fff;
+}
+.compoWrapper.fullSize .component {
+  height: calc(100vh - 215px);
+}
+.compoWrapper.fullSize .component img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.compoWrapper.fullSize h3 {
+  margin-top: 0.625rem;
+}
+.compoWrapper.fullSize h4 {
+  margin-top: 1.875rem;
+}
+.compoWrapper.fullSize .bottomBtn {
+  margin-top: 3.125rem;
+  width: 100%;
+  background: #fff;
+}
+.compoWrapper.fullSize footer ul {
+  margin-top: 1.25rem;
+  padding-top: 1.875rem;
+  border-top: 2px solid #000000;
 }
 .compoWrapper .titWrapper {
   height: 4.3125rem;
@@ -9097,6 +9124,13 @@ h6 + .h6_sub {
   margin: 1rem auto;
   margin-bottom: 0;
 }
+.compoWrapper .bottomBtn .hasBtn {
+  width: 18.75rem;
+}
+.compoWrapper .bottomBtn .hasBtn button {
+  width: 6.25rem;
+  height: 2.75rem;
+}
 .compoWrapper .bottomBtn button {
   height: 3.375rem;
   font-size: 1.125rem;
@@ -9163,6 +9197,19 @@ h6 + .h6_sub {
     padding: 1.5625rem;
     padding-bottom: 5rem;
     border-radius: 0;
+  }
+  .compoWrapper.fullSize {
+    padding-bottom: 1.5625rem;
+  }
+  .compoWrapper.fullSize .component.center {
+    height: calc(100vh - 280px);
+  }
+  .compoWrapper.fullSize .bottomBtn {
+    position: relative;
+    padding: 0;
+  }
+  .compoWrapper.fullSize footer ul {
+    padding-top: 1.25rem;
   }
   .compoWrapper .titWrapper {
     height: auto;
@@ -9606,7 +9653,8 @@ h6 + .h6_sub {
   color: #ff1236;
 }
 
-#bizStateRegi3 tr:hover {
+#bizStateRegi3 tr:hover,
+#bizStateRegi4 tr:hover {
   background: transparent;
 }
 

@@ -15,10 +15,39 @@
 
 
 .compoWrapper{
+    min-width: rem(360);
     padding: rem(40) rem(50);
     padding-bottom: rem(10);
     border-radius: 6px 6px 0 0;
     background: $bgColor;
+    &.fullSize{
+        background: $white;
+        .component{
+            height: calc(100vh - 215px);
+            img{
+                width: rem(60);
+                height: rem(60);
+            }
+        }
+        h3{
+            margin-top: rem(10);
+        }
+        h4{
+            margin-top: rem(30);
+        }
+        .bottomBtn{
+            margin-top: rem(50);
+            width: 100%;
+            background: $white;
+        }
+        footer{
+            ul{
+                margin-top: rem(20);
+                padding-top: rem(30);
+                border-top: 2px solid $black;
+            }
+        }
+    }
     .titWrapper{
         height: rem(69);
         text-align: center;
@@ -205,6 +234,13 @@
         height: rem(54);
         margin: rem(16) auto;
         margin-bottom: 0;
+        .hasBtn{
+            width: rem(300);
+            button{
+                width:rem(100);
+                height: rem(44);
+            }
+        }
         button{
             height: rem(54);
             font-size: rem(18);
@@ -277,6 +313,23 @@
         padding: rem(25);
         padding-bottom: rem(80);
         border-radius: 0;
+        &.fullSize{
+            padding-bottom: rem(25);
+            .component{
+                &.center{
+                    height: calc(100vh - 280px);
+                }
+            }
+            .bottomBtn{
+                position: relative;
+                padding: 0;
+            }
+            footer{
+                ul{
+                    padding-top: rem(20);
+                }
+            }   
+        }
         .titWrapper{
             height: auto;
             text-align: left;
