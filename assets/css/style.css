@@ -1406,6 +1406,10 @@ footer.toast button + button {
   width: 62.5rem;
   padding: 2.5rem 1.875rem;
 }
+.modalLayer .layerBox.mid-laSize2 {
+  width: 75rem;
+  padding: 2.5rem 1.875rem;
+}
 .modalLayer .layerBox.laSize {
   width: auto;
   max-width: 90.625rem;
@@ -1468,8 +1472,6 @@ footer.toast button + button {
 }
 .modalLayer table th {
   padding: 0.125rem 0;
-  color: #fff !important;
-  background: #989b9f !important;
 }
 .modalLayer table td {
   padding: 0.25rem 0.625rem !important;
@@ -1489,7 +1491,7 @@ footer.toast button + button {
 .modalHeader .layerClose {
   float: right;
 }
-.modalHeader h3 {
+.modalHeader h2, .modalHeader h3 {
   margin-bottom: 1.25rem;
 }
 .modalHeader + .momodalCont {
@@ -2007,6 +2009,33 @@ footer.toast button + button {
   height: 31.25rem;
 }
 
+.chargeSet .tableBox.absolBody {
+  height: auto;
+  max-height: 300px;
+}
+.chargeSet tr:hover {
+  background: transparent;
+}
+.chargeSet tr input {
+  height: 2rem;
+}
+.chargeSet tr input.full {
+  text-align: right;
+}
+.chargeSet tfoot .right {
+  position: relative;
+}
+.chargeSet tfoot .right::after {
+  content: "";
+  width: 1px;
+  height: 20px;
+  background: #a3aab5;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /* 프로젝트 등록 플로팅 */
 .floatingWrapper {
   width: 11.5625rem;
@@ -2435,6 +2464,9 @@ footer.toast button + button {
   width: 8.75rem;
   background-color: #fff;
 }
+.condition > ul li input[type=text].smSize {
+  width: 15.625rem;
+}
 .condition > ul li + li {
   margin-left: 0.4375rem;
 }
@@ -2467,10 +2499,18 @@ footer.toast button + button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: 0.625rem;
+  font-weight: 500;
 }
 .tableTop.right {
   justify-content: flex-end;
+}
+.tableTop .prefix,
+.tableTop .suffix {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .tableBox {
@@ -2481,6 +2521,16 @@ footer.toast button + button {
 }
 .tableBox + .listBottom.pagingType {
   border-top: 0;
+}
+.tableBox.absolBody {
+  height: calc(100vh - 454px);
+  transition: all 0.3s;
+}
+.tableBox.absolBody.is-active {
+  height: calc(100vh - 230px);
+}
+.tableBox.absolBody::-webkit-scrollbar-track {
+  background-color: #fff;
 }
 
 table {
@@ -2756,6 +2806,9 @@ table .ellipsis .label + a {
 }
 table input {
   background: transparent;
+}
+table input[type=text].dateType {
+  width: 100%;
 }
 table .inputIco {
   width: calc(100% - 26px);
@@ -3382,7 +3435,7 @@ button.onlyIco.smSize,
 .button.onlyIco.smSize {
   padding: 0;
   min-width: auto;
-  line-height: 1.5rem;
+  width: 1.625rem;
   height: 1.625rem;
 }
 button.onlyIco.midSize,
@@ -4067,6 +4120,7 @@ input[type=text].dateType.full, input[type=text].dateType.fullSize {
 input[type=text].dateType.mid-lowSize {
   width: 7.1875rem;
   height: 2rem;
+  height: 2.25rem;
 }
 input[type=text].dateType.laSize {
   width: 10rem;
@@ -7284,6 +7338,10 @@ h6 + .h6_sub {
   top: -20px;
   right: 110px;
 }
+.notiBox .selectBox,
+.projBox .selectBox {
+  width: 43.75rem;
+}
 
 .projRole {
   display: flex;
@@ -7420,7 +7478,7 @@ h6 + .h6_sub {
 }
 
 .offeredMem {
-  width: 24%;
+  width: 25rem;
   padding: 0.9375rem 1.25rem;
   border-radius: 6px;
   border: 1px solid #cccccc;
@@ -7545,7 +7603,6 @@ h6 + .h6_sub {
 .regiPart .boxWrap label,
 .regiPart .boxWrap h4,
 .regiPart .boxWrap h6 {
-  display: inline-block;
   font-weight: 500;
   margin-bottom: 0.375rem;
 }
@@ -9059,11 +9116,17 @@ h6 + .h6_sub {
   column-gap: 3.75rem;
   grid-template-columns: 50% 40%;
 }
+.compoWrapper .grid.block {
+  width: 50%;
+}
+.compoWrapper .grid.block li {
+  display: block;
+}
+.compoWrapper .grid.block li.wishPay {
+  margin-bottom: 1.875rem;
+}
 .compoWrapper .grid .agreement {
   grid-row: 1/3;
-}
-.compoWrapper .grid .attResume {
-  margin-top: 1.875rem;
 }
 .compoWrapper .inputGroup {
   min-width: auto;
@@ -9604,17 +9667,7 @@ h6 + .h6_sub {
   bottom: 15px;
   width: 97%;
 }
-.bizState .relative .absolBody {
-  height: calc(100vh - 454px);
-  overflow-y: auto;
-  transition: all 0.3s;
-}
-.bizState .relative .absolBody::-webkit-scrollbar {
-  width: 0;
-}
-.bizState .relative .absolBody.is-active {
-  height: calc(100vh - 230px);
-}
+
 .bizStateRegister {
   width: 100%;
 }

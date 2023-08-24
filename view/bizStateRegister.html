@@ -251,9 +251,9 @@
                             <h3>4. 청구스케줄</h3>
                             <div class="boxWrap">
                                 <div class="tableTop">
-                                    <div class="prfix">
+                                    <div class="prefix">
                                         <h4>청구조건</h4>
-                                        <select class="smSize ml10" name="" id="">
+                                        <select class="smSize" name="" id="">
                                             <option value="">정액</option>
                                             <option value="cat">Cat</option>
                                         </select>
@@ -338,9 +338,9 @@
                             <h3>5. 수금스케줄</h3>
                             <div class="boxWrap">
                                 <div class="tableTop">
-                                    <div class="prfix">
+                                    <div class="prefix">
                                         <h4>수금조건</h4>
-                                        <select class="smSize ml10" disabled>
+                                        <select class="smSize" disabled>
                                             <option value="">정액</option>
                                             <option value="cat">Cat</option>
                                         </select>
@@ -439,108 +439,207 @@
     </div>
     <!--//플로팅메뉴-->
 
-    <div id="" class="modalLayer center compSearch">
-        <div class="layerBox sm-midSize">
+    <div id="" class="modalLayer center chargeSet is-active">
+        <div class="layerBox mid-laSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
-                <h2>회사 검색</h2>
-                <div class="h3_sub">거래처 회사를 검색한 후 선택버튼을 눌러주세요.</div>
+                <h2>청구스케줄/입금스케줄</h2>
             </div>
             <div class="modalCont center">
                 <div class="tableTop">
-                    <div class="hasBtn">
-                        <input type="text" placeholder="">
-                        <button>
-                            <i class="ico search white"></i>
-                        </button>
-                    </div>          
+                    <div class="prefix flexCenter">
+                        청구조건
+
+                        <select class="smSize" name="" id="">
+                            <option value="">정액</option>
+                            <option value="dog" disabled="">Dog</option>
+                            <option value="cat">Cat</option>
+                        </select>
+
+                        <input class="dateType mid-lowSize" type="text" placeholder="연도 - 월 - 일" id="">
+
+                        <input type="checkbox" id="equality" name="aa" class="hasTxt">
+                        <label for="equality">매월균등청구</label>
+
+                        
+                        <select class="xxsSize" name="" id="">
+                            <option value="">매월</option>
+                            <option value="dog" disabled="">매주</option>
+                            <option value="cat">매년</option>
+                        </select>
+
+                        
+                        <select class="xxsSize" name="" id="">
+                            <option value="">1일</option>
+                            <option value="dog" disabled="">10일</option>
+                            <option value="cat">20일</option>
+                            <option value="cat">30일</option>
+                        </select>
+
+                        <button class="smSize">적용</button>
+                    </div>
+                    <div class="suffix">
+                        <button type="button" class="onlyIco smSize"><i class="ico smPlus"></i></button>
+                        청구회차 추가
+                        <button class="bdType mid-lowSize">청구스케줄동기화</button>
+                    </div>                   
                 </div>
-                <div class="tableBox">
-                    <table>
-                        <colgroup>
-                            <col width="30px">
-                            <col>
-                            <col>
-                        </colgroup>
-                        <thead>
+                <div class="relative">     
+                    <!--thead 고정용 table-->
+                    <div class="tableBox">
+                        <table class="hasInput">
+                            <thead>
+                                <tr>
+                                    <th width="140px">청구회차</th>
+                                    <th width="148px">청구일자</th>
+                                    <th width="148px">청구금액</th>
+                                    <th width="148px">계산서발행</th>
+                                    <th width="148px">검수일자</th>
+                                    <th width="120px">분배율(%)</th>
+                                    <th>비고</th>
+                                    <th width="50px">삭제</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <!--thead 고정용 table-->
+                        
+                    <div class="tableBox absolBody">    
+                        <table class="hasInput">
+                            <colgroup>
+                                <col width="4%">
+                                <col width="10%">
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="15%">
+
+                                <col width="12%">
+                                <col width="24%">
+                                <col width="5%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>1회</th>
+                                    <th>
+                                      <input type="checkbox" id="chargeClear" class="hasTxt">
+                                      <label for="chargeClear">청구완료</label>
+                                    </th>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="full mainC" type="text" id="lowSize"></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="xxsSize mainC" type="text" id="xxsSize"> %</td>
+                                    <td><textarea rows="1" placeholder="특이사항 메모 입력"></textarea></td>
+                                    <td><i class="ico delete_bg"></i></td>
+                                </tr>
+                                <tr>
+                                    <th>2회</th>
+                                    <th>
+                                      <input type="checkbox" id="chargeClear" class="hasTxt">
+                                      <label for="chargeClear">청구완료</label>
+                                    </th>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="full mainC" type="text" id="lowSize"></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="xxsSize mainC" type="text" id="xxsSize"> %</td>
+                                    <td><textarea rows="1" placeholder="특이사항 메모 입력"></textarea></td>
+                                    <td><i class="ico delete_bg"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--tfoot 고정용 table-->
+                    <div class="tableBox">
+                        <table>
+                            <colgroup>
+                                <col width="80%">
+                                <col width="20%">
+                            </colgroup>
+                            <tfoot>
+                                <tr>
+                                    <td class="right">
+                                        <b class="tSales">청구합계 : 113,758,000</b>
+                                        <!-- <b class="tBuy">청구합계 : 69,700,000</b> -->
+                                    </td>
+                                    <td><b>계약금액 : 250,000,000</b></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!--//tfoot 고정용 table-->
+
+
+
+                    <div class="tableBox">
+                        <table>
                             <tr>
-                                <th colspan="2">회사명</th>
-                                <th>사업자번호</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <input type="radio" id="a1" name="fff" checked="">
-                                    <label for="a1"></label>
-                                </td>
-                                <td class="left">
-                                    <span class="mainC">삼성</span>전자
-                                </td>
-                                <td>124-08-123876</td>
+                                <td>test</td>
+                                <td>test</td>
                             </tr>
                             <tr>
-                                <td>
-                                    <input type="radio" id="a1" name="fff" checked="">
-                                    <label for="a1"></label>
-                                </td>
-                                <td class="left">
-                                    <span class="mainC">삼성</span>전기
-                                </td>
-                                <td>124-08-123876</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="radio" id="a1" name="fff" checked="">
-                                    <label for="a1"></label>
-                                </td>
-                                <td class="left">
-                                    <span class="mainC">삼성</span>전기
-                                </td>
-                                <td>124-08-123876</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="radio" id="a1" name="fff" checked="">
-                                    <label for="a1"></label>
-                                </td>
-                                <td class="left">
-                                    <span class="mainC">삼성</span>메디슨
-                                </td>
-                                <td>124-08-123876</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="radio" id="a1" name="fff" checked="">
-                                    <label for="a1"></label>
-                                </td>
-                                <td class="left">
-                                    <span class="mainC">삼성</span>제약
-                                </td>
-                                <td>124-08-123876</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="radio" id="a1" name="fff" checked="">
-                                    <label for="a1"></label>
-                                </td>
-                                <td class="left">
-                                    <span class="mainC">삼성</span>SDI
-                                </td>
-                                <td>124-08-123876</td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" class="nodata">
-                                    검색 결과가 없습니다.
+                                <td>ddd</td>
+                                <td>aaa
+                                    <table>
+                                        <tr>
+                                            <td>bbb</td>
+                                        </tr>
+                                    </table>
                                 </td>
                             </tr>
-                        </tbody>
-                    </table>
+                        </table>
+                    </div>
+
+
+
+                    <div class="listBottom pagingType">                        
+                        <div class="paging">
+                            <ul>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico pagingFirst"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico pagingLeft"></span>
+                                    </a>
+                                </li>
+                                <li class="is-active"><a>1</a></li>
+                                <li><a>2</a></li>
+                                <li><a>3</a></li>
+                                <li><a>4</a></li>
+                                <li><a>5</a></li>
+                                <li><a>6</a></li>
+                                <li><a>7</a></li>
+                                <li><a>8</a></li>
+                                <li><a>9</a></li>
+                                <li><a>10</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico pagingRight is-active"></span>
+                                    </a>
+                                </li>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico pagingLast is-active"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>      
+
+                <div class="alertToast is-active" id="toast01">
+                    저장되었습니다.
+                    <i class="ico smClose white"></i>
                 </div>
-            </div>
+            </div>      
+
             <div class="modalFooter">
                 <button class="white">닫기</button>
-                <button class="">선택</button>
+                <button class="">저장</button>
             </div>
         </div>
         <div class="layerDim"></div> 

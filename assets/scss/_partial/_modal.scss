@@ -104,6 +104,10 @@
             width: rem(1000);
             padding: rem(40) rem(30);
         }
+        &.mid-laSize2{
+            width: rem(1200);
+            padding: rem(40) rem(30);
+        }
         &.laSize{
             width: auto;
             max-width: rem(1450);
@@ -170,8 +174,8 @@
         th{
             padding: rem(2) 0;
             // height: rem(32);
-            color: $white !important;
-            background: $tableBgGray !important;
+            //color: $white !important;
+            //background: $tableBgGray !important;
         }
         td{
             padding: rem(4) rem(10) !important;
@@ -190,7 +194,7 @@
     .layerClose{
         float: right;
     }
-    h3{
+    h2, h3{
         margin-bottom: rem(20);
     }
     & + .momodalCont{
@@ -865,5 +869,41 @@
     }
     .tableBox{
         height: rem(500);
+    }
+}
+
+//사업현황 등록 - 청구스케줄
+.chargeSet{
+    .tableBox{
+        &.absolBody{
+            height: auto;
+            max-height: 300px;
+        }
+    }
+    tr{
+        &:hover{
+            background: transparent;
+        }
+        input{
+            height: rem(32);
+            &.full{
+                text-align: right;
+            }
+        }
+    }
+    tfoot{
+        .right{
+            position: relative;
+            &::after{
+                content:'';
+                width: 1px;
+                height: 20px;
+                background: $thGray;
+                position: absolute; 
+                right: -20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
     }
 }

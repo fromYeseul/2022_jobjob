@@ -165,12 +165,21 @@
         margin-top: rem(20);
         column-gap: rem(60);
         grid-template-columns: 50% 40%;
+        &.block{
+            width: 50%;
+            li{
+                display: block;
+                &.wishPay{
+                    margin-bottom: rem(30);
+                }
+            }
+        }
         .agreement{
             grid-row: 1 / 3;
         }
-        .attResume{
-            margin-top: rem(30);
-        }
+        // .attResume{
+        //     margin-top: rem(30);
+        // }
     }
     .inputGroup{
         min-width: auto;

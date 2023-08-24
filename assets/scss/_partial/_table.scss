@@ -1,8 +1,16 @@
 .tableTop{
     @include sideArray;
+    align-items: flex-end;    
     margin-bottom: rem(10);   
+    font-weight: 500;
     &.right{
             justify-content: flex-end;
+    }
+    .prefix,
+    .suffix{
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 }
 .tableBox{
@@ -15,8 +23,17 @@
             border-top: 0;
         }
     }
+    &.absolBody{
+        height: calc(100vh - 454px);
+        transition: all .3s;
+        &.is-active{
+            height: calc(100vh - 230px);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $white;
+        }
+    }
 }
-
 
 
 
@@ -399,6 +416,37 @@ table{
             }
         }
     }
+    // &.absol{
+    //     border-collapse:collapse;
+    //     width:1370px;
+    //     margin:0 auto;
+    //     overflow:hidden;
+    //     thead{
+    //         float:left;
+    //         width:1370px;
+    //         tr{
+    //             display:table;
+    //             width:1370px;
+    //         }
+    //     }
+    //     tbody{
+    //         // float:left;
+    //         // width:1370px;
+    //         max-height:200px;
+    //         overflow-y:auto;
+    //         // overflow-x:hidden;
+    //         tr{
+    //             display:table;
+    //             width:1370px;
+    //         }
+    //     }
+    // }
+
+
+
+
+
+
     .ellipsis{
         @include ellipsis;
         padding: 0 rem(6);
@@ -414,7 +462,12 @@ table{
     }
     input{
         background: transparent;
-    }
+        &[type=text]{
+            &.dateType{
+                width: 100%;
+            }
+        }
+    }    
     .inputIco{
         width: calc(100% - 26px);
     }
