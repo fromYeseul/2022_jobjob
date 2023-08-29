@@ -324,6 +324,13 @@
     margin: 0 auto;
     margin-top: rem(30);
     @include flex_2_3;
+    position: relative;
+    &.single{
+        width: 50%;
+        max-width: rem(200);
+        margin: rem(30) auto;
+        margin-bottom: 0;
+    }
     button{        
         flex: 2 1 0;
         + button{
@@ -331,11 +338,11 @@
             margin-left: rem(10);
         }
     }
-    &.single{
-        width: 50%;
-        max-width: rem(200);
-        margin: rem(30) auto;
-        margin-bottom: 0;
+    .alertToast{
+        top:-50px;
+        bottom: auto;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 .modalInfo{
@@ -872,8 +879,9 @@
     }
 }
 
-//사업현황 등록 - 청구스케줄
-.chargeSet{
+//사업현황 등록 - 청구스케줄, 제경비입력
+.chargeSet,
+.exceptCharge{
     .tableBox{
         &.absolBody{
             height: auto;

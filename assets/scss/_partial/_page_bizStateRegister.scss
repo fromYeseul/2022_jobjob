@@ -4,7 +4,7 @@
         margin-top: rem(30);
         width: 85%;
         column-gap: rem(60);
-        grid-template-columns: 1fr 50px 1.8fr 1fr 1fr 90px;
+        grid-template-columns: 1fr 50px 1.8fr 1fr 1fr 130px;
     }
     .hasBtn{
         input{
@@ -17,7 +17,7 @@
     }
     input[type=text]{
         &.dateType{
-            width: rem(150) !important;
+            width: rem(140) !important;
         }
     }
     .range{
@@ -34,8 +34,15 @@
     .bizTerm{
         grid-column: 4/6;
     }
+    .bizProjNm,
     .bizFile{
         grid-column: 1/4;
+    }
+    .bizInsurance{
+        grid-column: 5/7;
+        label{
+            margin-right: rem(20);
+        }
     }
     select{
         &.others{

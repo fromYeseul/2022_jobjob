@@ -313,14 +313,6 @@ table{
         }
     }
     &.wideType{
-        .attached{
-            display: block;
-            margin-top: 5px;
-            color: $mainColor;
-            text-decoration: underline;
-            position: relative;
-            cursor:pointer;
-        }
         > thead{
             > tr{
                 border-bottom: 0;
@@ -487,6 +479,19 @@ table{
                 right: 2px;    
             }
         }
+    }    
+    .file{
+        & + .attached{
+            display: block;
+        }
+    }
+    .attached{
+        // display: block;
+        margin-top: 5px;
+        color: $mainColor !important;
+        text-decoration: underline;
+        position: relative;
+        cursor:pointer;
     }
     a{
         color: $mainColor;
