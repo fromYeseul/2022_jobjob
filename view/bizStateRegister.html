@@ -94,8 +94,7 @@
                                 <li class="is-active" aria-controls="bizStateRegi0">기본정보</li>
                                 <li aria-controls="bizStateRegi1">매출/매입</li>
                                 <li aria-controls="bizStateRegi2">계약</li>
-                                <li aria-controls="bizStateRegi3">청구스케줄</li>
-                                <li aria-controls="bizStateRegi4">수금스케줄</li>
+                                <li aria-controls="bizStateRegi3">청구/입금스케줄</li>
                             </ul>
                         </div>
                     </div>
@@ -150,9 +149,9 @@
                                         </li>
                                         <li class="bizTerm">
                                             <h6 class="need">사업기간</h6>
-                                            <input class="dateType laSize" type="text" placeholder="시작일">
+                                            <input class="dateType" type="text" placeholder="시작일">
                                             <span class="range">~</span>
-                                            <input class="dateType laSize" type="text" placeholder="종료일">
+                                            <input class="dateType" type="text" placeholder="종료일">
                                         </li>
                                         <li>
                                             <h6 class="need">검수</h6>
@@ -249,188 +248,1175 @@
                         <div class="regiPart" id="bizStateRegi1">
                             <h3>2. 매출/매입</h3>
                             <div class="boxWrap">
-                                <div class="tableBox"></div>
+                                <div class="flexLeft">
+                                    <div class="prefix">     
+                                        <div class="tableTop left">
+                                            <h4 class="mainC">계약기준</h4>
+                                            <input type="checkbox" id="e1" class="hasTxt">
+                                            <label for="e1" class="ml10">삼성SDS등급적용</label>     
+                                        </div>
+
+                                        <div class="tabWrapper" id="onContract">
+                                            <ul class="tabBtnWrap autoSize flex">
+                                                <div class="prefix">
+                                                    <li class="tabBtn">
+                                                        <a href="#onC-1" class="is-active">전체</a>
+                                                    </li>
+                                                    <li class="tabBtn">
+                                                        <a href="#onC-2" class="">비삼성
+                                                            <i class="ico more2"></i>
+                                                            <div class="moreList is-active">
+                                                                <button class="square is-active">이름변경</button>
+                                                                <button class="square is-active">그룹삭제</button>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="tabBtn">
+                                                        <a href="#onC-3" class="">기타1
+                                                            <i class="ico more2"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="tabBtn">
+                                                        <a href="#onC-4" class="">+</a>
+                                                    </li>
+                                                </div>
+                                                <div class="suffix">
+                                                    <button class="white smSize">
+                                                        + 행추가
+                                                    </button>
+                                                </div>
+                                            </ul>
+                                            <div class="tabContWrap">
+                                                <div id="onC-1" class="tabCont is-active">
+                                                    <div class="tableBox">
+                                                        <table>
+                                                            <colgroup>
+                                                                <col>
+                                                                <col>
+                                                                <col>
+                                                                <col width="12%">
+                                                                <col width="12%">
+
+                                                                <col>
+                                                                <col>
+                                                                <col>
+                                                                <col>
+                                                                <col>
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>그룹</th>
+                                                                    <th>직무/모듈</th>
+                                                                    <th>등급</th>
+                                                                    <th>시작일</th>
+                                                                    <th>종료일</th>
+                                                                    <th>MM(수량)</th>
+                                                                    <th>매출단가</th>
+                                                                    <th>제경비</th>
+                                                                    <th>매출합</th>
+                                                                    <th>삭제</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <select name="" id="">
+                                                                            <option value="">비삼성</option>
+                                                                            <option value="cat">삼성A</option>
+                                                                            <option value="dog">삼성B</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select name="" id="">
+                                                                            <option value="">라이선스</option>
+                                                                            <option value="cat">ABAP</option>
+                                                                            <option value="dog">매출할인</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select name="" id="">
+                                                                            <option value="">특급</option>
+                                                                            <option value="cat">고급</option>
+                                                                            <option value="dog">초급</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td><input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                                                    <td><input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                                                    <td>1.0</td>
+                                                                    <td class="right">8,000,000</td>
+                                                                    <td class="right">200,000</td>
+                                                                    <td class="right">8,200,000</td>
+                                                                    <td><i class="ico delete_bg"></i></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <select name="" id="">
+                                                                            <option value="">비삼성</option>
+                                                                            <option value="cat">삼성A</option>
+                                                                            <option value="dog">삼성B</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select name="" id="">
+                                                                            <option value="">라이선스</option>
+                                                                            <option value="cat">ABAP</option>
+                                                                            <option value="dog">매출할인</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select name="" id="">
+                                                                            <option value="">특급</option>
+                                                                            <option value="cat">고급</option>
+                                                                            <option value="dog">초급</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td><input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                                                    <td><input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                                                    <td>1.0</td>
+                                                                    <td class="right">
+                                                                        <span class="marked">-60,000</span>
+                                                                    </td>
+                                                                    <td class="right">
+                                                                        <span class="marked">0</span>
+                                                                    </td>
+                                                                    <td class="right">
+                                                                        <span class="marked">-1,000,000</span>
+                                                                    </td>
+                                                                    <td><i class="ico delete_bg"></i></td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <td colspan="5"></td>
+                                                                    <td>5.5</td>
+                                                                    <td class="right">17,000,000</td>
+                                                                    <td class="right">200,000</td>
+                                                                    <td class="right"><b class="dark">42,200,000</b></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div id="onC-2" class="tabCont">
+                                                    <div class="tableBox">
+                                                        <table>
+                                                            <colgroup>
+                                                                <col width="10%">
+                                                                <col width="5%">
+                                                                <col>
+                                                                <col width="12%">
+                                                                <col>
+    
+                                                                <col width="20%">
+                                                                <col>
+                                                                <col width="12%">
+                                                                <col width="12%">
+                                                                <col>
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>계약</th>
+                                                                    <th>상세</th>
+                                                                    <th>구분</th>
+                                                                    <th>소속</th>
+                                                                    <th>투입</th>
+                                                                    <th>계약기간</th>
+                                                                    <th>MM</th>
+                                                                    <th>계약단가</th>
+                                                                    <th>합계</th>
+                                                                    <th>메모</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>발주서</td>
+                                                                    <td>
+                                                                        <span class="layerOpen" aria-controls="contractDetail">
+                                                                            <i class="ico preview"></i>
+                                                                        </span>
+                                                                    </td>
+                                                                    <td>사업</td>
+                                                                    <td class="ellipsis">이지글로벌</td>
+                                                                    <td>1명</td>
+                                                                    <td>2022.04.18~2023.04.18</td>
+                                                                    <td>1.0</td>
+                                                                    <td>7,000,000</td>
+                                                                    <td>84,000,000</td>
+                                                                    <td>3</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div id="onC-3" class="tabCont">00</div>
+                                                <div id="onC-4" class="tabCont">11</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="suffix">
+                                        <div class="tableTop left">
+                                            <h4 class="mainC">실투입기준</h4>
+                                            <input type="checkbox" id="e1" class="hasTxt">
+                                            <label for="e1" class="ml10">삼성SDS등급적용</label>     
+                                        </div>
+
+                                        <div class="tabWrapper" id="onActual">
+                                            <ul class="tabBtnWrap autoSize flex">
+                                                <div class="prefix">
+                                                    <li class="tabBtn">
+                                                        <a href="#onA-1" class="">매입계획</a>
+                                                    </li>
+                                                    <li class="tabBtn">
+                                                        <a href="#onA-2" class="is-active">투입인력</a>
+                                                    </li>
+                                                </div>
+                                                <div class="suffix">
+                                                    <button class="white smSize">
+                                                        + 행추가
+                                                    </button>
+                                                </div>
+                                            </ul>
+                                            <div class="tabContWrap">
+                                                <div id="onA-1" class="tabCont">
+                                                    <div class="tableBox">
+                                                        <table>
+                                                            <colgroup>
+                                                                <col width="10%">
+                                                                <col width="5%">
+                                                                <col width="15%">
+                                                                <col width="15%">
+                                                                <col width="20%">
+                                                                <col width="5%">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>그룹</th>
+                                                                    <th>MM</th>
+                                                                    <th>매입단가</th>
+                                                                    <th>매입합계</th>
+                                                                    <th>비고</th>
+                                                                    <th>삭제</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <select name="" id="">
+                                                                            <option value="">선택</option>
+                                                                            <option value="cat">삼성A</option>
+                                                                            <option value="dog">삼성B</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>2.0</td>
+                                                                    <td class="right">8,000,000</td>
+                                                                    <td class="right">16,000,000</td>
+                                                                    <td class="left ellipsis">메모입력 메모입력 메모입력 메모입력</td>
+                                                                    <td><i class="ico delete_bg"></i></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <select name="" id="">
+                                                                            <option value="">선택</option>
+                                                                            <option value="cat">삼성A</option>
+                                                                            <option value="dog">삼성B</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td><input class="" type="text" id="xxsSize"></td>
+                                                                    <td><input class="txtRight" type="text" id="xxsSize"></td>
+                                                                    <td><input class="txtRight" type="text" id="xxsSize"></td>
+                                                                    <td><textarea rows="1" placeholder="특이사항 메모 입력"></textarea></td>
+                                                                    <td><i class="ico delete_bg"></i></td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <td colspan="2" class="right">3.5</td>
+                                                                    <td class="right">
+                                                                        15,200,000<br>
+                                                                        <b>ratio</b> <b class="marked">31.4%</b>
+                                                                    </td>
+                                                                    <td class="right">
+                                                                        <b class="dark">26,800,000</b><br>
+                                                                        <b>GP</b> <b class="marked">154,000,000</b>
+                                                                    </td>
+                                                                    <td colspan="2"></td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div id="onA-2" class="tabCont is-active">
+                                                    <div class="flexTable">
+                                                        <div class="tableBox">
+                                                            <table>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th width="30px">
+                                                                            <input type="checkbox" id="tt3">
+                                                                            <label for="tt3"></label>
+                                                                        </th>
+                                                                        <th>그룹</th>
+                                                                        <th>계약상태</th>
+                                                                        <th>상태</th>
+                                                                        <th>소속</th>
+                                                                        <th>투입인력</th>
+                                                                        <th>직무/모듈</th>
+                                                                        <th>등급</th>
+
+                                                                        <!--매출-->
+                                                                        <th width="100px" class="fold hideS">시작일</th>
+                                                                        <th width="100px" class="hideS">종료일</th>
+                                                                        <th width="80px" class="fold">
+                                                                            매출MM <i class="ico extend sales"></i>
+                                                                        </th>
+                                                                        <th class="hideS">매출단가</th>
+                                                                        <th class="hideS">매출제경비</th>
+                                                                        <th class="hideS">매출합계</th>
+                                                                        <!--//매출-->
+
+                                                                        <!--매입-->
+                                                                        <th width="100px" class="fold hideB">실투입</th>
+                                                                        <th width="100px" class="hideB">종료일</th>
+                                                                        <th width="80px" class="fold">
+                                                                            매입MM <i class="ico extend buy"></i>
+                                                                        </th>
+                                                                        <th class="hideB">매입단가</th>
+                                                                        <th class="hideB">매입제경비</th>
+                                                                        <th class="hideB">매입합계</th>
+                                                                        <th class="hideB">분할</th>
+                                                                        <!--//매입-->
+
+                                                                        <th class="fold">비고</th>
+                                                                        <th width="40px">삭제</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="t3">
+                                                                            <label for="t3"></label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <select name="" id="">
+                                                                                <option value="">비삼성</option>
+                                                                                <option value="cat">삼성A</option>
+                                                                                <option value="dog">삼성B</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            <i class="ico preview"></i>
+                                                                            <span class="marked">미계약</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <select name="" id="">
+                                                                                <option value="">계약직</option>
+                                                                                <option value="cat">정규직</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td class="ellipsis">
+                                                                            <i class="ico edit"></i>
+                                                                            이지글로벌이 지글로벌이지글로벌이지글로벌
+                                                                        </td>
+                                                                        <td>
+                                                                            <i class="ico edit"></i>
+                                                                            최은영
+                                                                        </td>
+                                                                        <td>
+                                                                            <select name="" id="">
+                                                                                <option value="">ABAP</option>
+                                                                                <option value="cat">CON</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            <select name="" id="">
+                                                                                <option value="">초급</option>
+                                                                                <option value="cat">중급</option>
+                                                                            </select>
+                                                                        </td>
+
+                                                                        
+                                                                        <!--매출-->
+                                                                        <td class="hideS">
+                                                                            <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
+                                                                        </td>
+                                                                        <td class="hideS">
+                                                                            <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
+                                                                        </td>
+                                                                        <td>1.0</td>
+                                                                        <td class="right hideS">100,000</td>
+                                                                        <td class="right hideS">100,000</td>
+                                                                        <td class="right hideS"><b class="dark">9,100,000</b></td>                                                                        
+                                                                        <!--//매출-->
+
+                                                                        
+                                                                        <!--매입-->
+                                                                        <td class="hideB">
+                                                                            <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
+                                                                        </td>
+                                                                        <td class="hideB">
+                                                                            <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
+                                                                        </td>
+                                                                        <td>1.0</td>
+                                                                        <td class="right hideB">9,000,000</td>
+                                                                        <td class="right hideB">100,000</td>
+                                                                        <td class="right hideB"><b class="dark">9,100,000</b></td>
+                                                                        <td class="hideB">
+                                                                            <button class="txtType mainC">[분할]</button>
+                                                                        </td>                                                                        
+                                                                        <!--//매출-->
+
+                                                                        <td>
+                                                                            <textarea rows="1"></textarea>
+                                                                        </td>
+                                                                        <td>
+                                                                            <i class="ico delete_bg"></i>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="t3">
+                                                                            <label for="t3"></label>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td class="ellipsis"></td>
+                                                                        <td></td>
+                                                                        <td>
+                                                                            <select name="" id="">
+                                                                                <option value="">ABAP</option>
+                                                                                <option value="cat">CON</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            <select name="" id="">
+                                                                                <option value="">초급</option>
+                                                                                <option value="cat">중급</option>
+                                                                            </select>
+                                                                        </td>
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="t3">
+                                                                            <label for="t3"></label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <select name="" id="">
+                                                                                <option value="">비삼성</option>
+                                                                                <option value="cat">삼성A</option>
+                                                                                <option value="dog">삼성B</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            <select class="redOpt" name="" id="">
+                                                                                <option>선택</option>
+                                                                                <option value="0">미계약</option>
+                                                                                <option value="1">계약</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            <select name="" id="">
+                                                                                <option value="">계약직</option>
+                                                                                <option value="cat">정규직</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            <button class="bdType xsSize">검색</button>
+                                                                        </td>
+                                                                        <td><button class="bdType xsSize">검색</button></td>
+                                                                        <td>
+                                                                            <select name="" id="">
+                                                                                <option value="">ABAP</option>
+                                                                                <option value="cat">CON</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            <select name="" id="">
+                                                                                <option value="">초급</option>
+                                                                                <option value="cat">중급</option>
+                                                                            </select>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <td colspan="8"></td>
+
+                                                                                                                                                
+                                                                        <!--매출-->
+                                                                        <td colspan="2" class="hideS"></td>
+                                                                        <td>4.00</td>
+                                                                        <td class="right hideS">26,000,000</td>
+                                                                        <td class="right hideS">760,000</td>
+                                                                        <td class="right hideS"> 
+                                                                            <b class="dark">267,600,000</b>
+                                                                        </td>                                                                        
+                                                                        <!--//매출-->
+                                                                                                                                                
+                                                                        <!--매입-->
+                                                                        <td colspan="2" class="hideB"></td>
+                                                                        <td>4.00</td>
+                                                                        <td class="right hideB">26,000,000</td>
+                                                                        <td class="right hideB">760,000</td>
+                                                                        <td class="right hideB"> 
+                                                                            <b class="dark">267,600,000</b>
+                                                                            <br>
+                                                                            <b class="marked">(32,400,000)</b>
+                                                                        </td>
+                                                                        <td class="hideB"></td>                                                          
+                                                                        <!--//매입-->
+                                                                        <td colspan="2"></td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="onA-3" class="tabCont">00</div>
+                                                <div id="onA-4" class="tabCont">11</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabWrapper" id="onActual">
+                                    <ul class="tabBtnWrap autoSize flex">
+                                        <div class="prefix">
+                                            <li class="tabBtn">
+                                                <a href="#onAA" class="is-active">투입인력</a>
+                                            </li>
+                                        </div>
+                                        <div class="suffix">
+                                            <button class="white smSize">
+                                                + 아래 행추가
+                                            </button>
+                                        </div>
+                                    </ul>
+                                    <div class="tabContWrap">
+                                        <div id="onAA2" class="tabCont is-active">
+                                            <div class="flexTable">
+                                                <div class="tableBox">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="30px">
+                                                                    <input type="checkbox" id="tt3">
+                                                                    <label for="tt3"></label>
+                                                                </th>
+                                                                <th>그룹</th>
+                                                                <th>계약상태</th>
+                                                                <th>상태</th>
+                                                                <th>소속</th>
+                                                                <th>투입인력</th>
+                                                                <th>직무/모듈</th>
+                                                                <th>등급</th>
+
+                                                                <!--매출-->
+                                                                <th width="100px" class="fold hideS">시작일</th>
+                                                                <th width="100px" class="hideS">종료일</th>
+                                                                <th width="80px" class="fold">
+                                                                    매출MM <i class="ico extend sales"></i>
+                                                                </th>
+                                                                <th class="hideS">매출단가</th>
+                                                                <th class="hideS">매출제경비</th>
+                                                                <th class="hideS">매출합계</th>
+                                                                <!--//매출-->
+
+                                                                <!--매입-->
+                                                                <th width="100px" class="fold hideB">실투입</th>
+                                                                <th width="100px" class="hideB">종료일</th>
+                                                                <th width="80px" class="fold">
+                                                                    매입MM <i class="ico extend buy"></i>
+                                                                </th>
+                                                                <th class="hideB">매입단가</th>
+                                                                <th class="hideB">매입제경비</th>
+                                                                <th class="hideB">매입합계</th>
+                                                                <th class="hideB">분할</th>
+                                                                <!--//매입-->
+
+                                                                <th class="fold">비고</th>
+                                                                <th width="40px">삭제</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox" id="t3">
+                                                                    <label for="t3"></label>
+                                                                </td>
+                                                                <td>
+                                                                    <select name="" id="">
+                                                                        <option value="">비삼성</option>
+                                                                        <option value="cat">삼성A</option>
+                                                                        <option value="dog">삼성B</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td>
+                                                                    <i class="ico preview"></i>
+                                                                    <span class="marked">미계약</span>
+                                                                </td>
+                                                                <td>
+                                                                    <select name="" id="">
+                                                                        <option value="">계약직</option>
+                                                                        <option value="cat">정규직</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td class="ellipsis">
+                                                                    <i class="ico edit"></i>
+                                                                    이지글로벌이 지글로벌이지글로벌이지글로벌
+                                                                </td>
+                                                                <td>
+                                                                    <i class="ico edit"></i>
+                                                                    최은영
+                                                                </td>
+                                                                <td>
+                                                                    <select name="" id="">
+                                                                        <option value="">ABAP</option>
+                                                                        <option value="cat">CON</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td>
+                                                                    <select name="" id="">
+                                                                        <option value="">초급</option>
+                                                                        <option value="cat">중급</option>
+                                                                    </select>
+                                                                </td>
+
+                                                                
+                                                                <!--매출-->
+                                                                <td class="hideS">
+                                                                    <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
+                                                                </td>
+                                                                <td class="hideS">
+                                                                    <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
+                                                                </td>
+                                                                <td>1.0</td>
+                                                                <td class="right hideS">100,000</td>
+                                                                <td class="right hideS">100,000</td>
+                                                                <td class="right hideS"><b class="dark">9,100,000</b></td>                                                                        
+                                                                <!--//매출-->
+
+                                                                
+                                                                <!--매입-->
+                                                                <td class="hideB">
+                                                                    <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
+                                                                </td>
+                                                                <td class="hideB">
+                                                                    <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
+                                                                </td>
+                                                                <td>1.0</td>
+                                                                <td class="right hideB">9,000,000</td>
+                                                                <td class="right hideB">100,000</td>
+                                                                <td class="right hideB"><b class="dark">9,100,000</b></td>
+                                                                <td class="hideB">
+                                                                    <button class="txtType mainC">[분할]</button>
+                                                                </td>                                                                        
+                                                                <!--//매출-->
+
+                                                                <td>
+                                                                    <textarea rows="1"></textarea>
+                                                                </td>
+                                                                <td>
+                                                                    <i class="ico delete_bg"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox" id="t3">
+                                                                    <label for="t3"></label>
+                                                                </td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="ellipsis"></td>
+                                                                <td></td>
+                                                                <td>
+                                                                    <select name="" id="">
+                                                                        <option value="">ABAP</option>
+                                                                        <option value="cat">CON</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td>
+                                                                    <select name="" id="">
+                                                                        <option value="">초급</option>
+                                                                        <option value="cat">중급</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox" id="t3">
+                                                                    <label for="t3"></label>
+                                                                </td>
+                                                                <td>
+                                                                    <select name="" id="">
+                                                                        <option value="">비삼성</option>
+                                                                        <option value="cat">삼성A</option>
+                                                                        <option value="dog">삼성B</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td>
+                                                                    <select class="redOpt" name="" id="">
+                                                                        <option>선택</option>
+                                                                        <option value="0">미계약</option>
+                                                                        <option value="1">계약</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td>
+                                                                    <select name="" id="">
+                                                                        <option value="">계약직</option>
+                                                                        <option value="cat">정규직</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="bdType xsSize">검색</button>
+                                                                </td>
+                                                                <td><button class="bdType xsSize">검색</button></td>
+                                                                <td>
+                                                                    <select name="" id="">
+                                                                        <option value="">ABAP</option>
+                                                                        <option value="cat">CON</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td>
+                                                                    <select name="" id="">
+                                                                        <option value="">초급</option>
+                                                                        <option value="cat">중급</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td colspan="8"></td>
+
+                                                                                                                                        
+                                                                <!--매출-->
+                                                                <td colspan="2" class="hideS"></td>
+                                                                <td>4.00</td>
+                                                                <td class="right hideS">26,000,000</td>
+                                                                <td class="right hideS">760,000</td>
+                                                                <td class="right hideS"> 
+                                                                    <b class="dark">267,600,000</b>
+                                                                </td>                                                                        
+                                                                <!--//매출-->
+                                                                                                                                        
+                                                                <!--매입-->
+                                                                <td colspan="2" class="hideB"></td>
+                                                                <td>4.00</td>
+                                                                <td class="right hideB">26,000,000</td>
+                                                                <td class="right hideB">760,000</td>
+                                                                <td class="right hideB"> 
+                                                                    <b class="dark">267,600,000</b>
+                                                                    <br>
+                                                                    <b class="marked">(32,400,000)</b>
+                                                                </td>
+                                                                <td class="hideB"></td>                                                          
+                                                                <!--//매입-->
+                                                                <td colspan="2"></td>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="regiPart" id="bizStateRegi2">
                             <h3>3. 계약</h3>
-                            <div class="boxWrap">
-                                <div class="tableBox"></div>
+                            <div class="boxWrap flex_1_1">
+                                <div class="prefix">
+                                    <div class="tabWrapper" id="contractAll">
+                                        <ul class="tabBtnWrap autoSize flex">                                            
+                                            <div class="prefix">
+                                                <li class="tabBtn">
+                                                    <a href="" class="is-active">전체</a>
+                                                </li>
+                                            </div>
+                                            <div class="suffix">
+                                                <button class="onlyIco midSize">
+                                                    <i class="ico refresh"></i>
+                                                </button>
+                                            </div>
+                                        </ul>
+                                        <div class="tabContWrap">
+                                            <div class="tabCont is-active">
+                                                <div class="tableBox">
+                                                    <table>
+                                                        <colgroup>
+                                                            <col width="10%">
+                                                            <col width="5%">
+                                                            <col>
+                                                            <col width="12%">
+                                                            <col>
+
+                                                            <col width="20%">
+                                                            <col>
+                                                            <col width="12%">
+                                                            <col width="12%">
+                                                            <col>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>계약</th>
+                                                                <th>상세</th>
+                                                                <th>구분</th>
+                                                                <th>소속</th>
+                                                                <th>투입</th>
+                                                                <th>계약기간</th>
+                                                                <th>MM</th>
+                                                                <th>계약단가</th>
+                                                                <th>합계</th>
+                                                                <th>메모</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>발주서</td>
+                                                                <td>
+                                                                    <span class="layerOpen" aria-controls="contractDetail">
+                                                                        <i class="ico preview"></i>
+                                                                    </span>
+                                                                </td>
+                                                                <td>사업</td>
+                                                                <td class="ellipsis">이지글로벌</td>
+                                                                <td>1명</td>
+                                                                <td>2022.04.18~2023.04.18</td>
+                                                                <td>1.0</td>
+                                                                <td>7,000,000</td>
+                                                                <td>84,000,000</td>
+                                                                <td>3</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="sReject">변경미계약</span></td>
+                                                                <td>
+                                                                    <span class="layerOpen" aria-controls="contractDetail">
+                                                                        <i class="ico preview"></i>
+                                                                    </span>
+                                                                </td>
+                                                                <td>사업</td>
+                                                                <td class="ellipsis">이지글로벌이지글로벌이지글로벌</td>
+                                                                <td>1명</td>
+                                                                <td>2022.04.18~2023.04.18</td>
+                                                                <td>1.0</td>
+                                                                <td>7,000,000</td>
+                                                                <td>84,000,000</td>
+                                                                <td>3</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="sReject">미계약</span></td>
+                                                                <td>
+                                                                    <span class="layerOpen" aria-controls="contractDetail">
+                                                                        <i class="ico preview"></i>
+                                                                    </span>
+                                                                </td>
+                                                                <td>사업</td>
+                                                                <td class="ellipsis">이지글로벌</td>
+                                                                <td>1명</td>
+                                                                <td>2022.04.18~2023.04.18</td>
+                                                                <td>1.0</td>
+                                                                <td>7,000,000</td>
+                                                                <td>84,000,000</td>
+                                                                <td>3</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>발주서</td>
+                                                                <td>
+                                                                    <span class="layerOpen" aria-controls="contractDetail">
+                                                                        <i class="ico preview"></i>
+                                                                    </span>
+                                                                </td>
+                                                                <td>사업</td>
+                                                                <td class="ellipsis">이지글로벌</td>
+                                                                <td>1명</td>
+                                                                <td>2022.04.18~2023.04.18</td>
+                                                                <td>1.0</td>
+                                                                <td>7,000,000</td>
+                                                                <td>84,000,000</td>
+                                                                <td>3</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="suffix">
+                                    <div class="tabWrapper" id="contractClass">
+                                        <ul class="tabBtnWrap autoSize flex">
+                                            <div class="prefix">
+                                                <li class="tabBtn prefix">
+                                                    <a href="#contract-01" class="is-active">투입인력</a>
+                                                </li>
+                                                <li class="tabBtn center">
+                                                    <a href="#contract-02">제경비</a>
+                                                </li>
+                                                <div class="h6_sub">'매입합산제외' 항목으로 입력된 제경비는 매입합계금액에 합산되지 않습니다.</div>
+                                            </div>
+                                            <div class="suffix">
+                                                <button class="white smSize">계약분리</button>
+                                            </div>
+                                        </ul>
+                                        <div class="tabContWrap">
+                                            <div id="contract-01" class="tabCont is-active">
+                                                <div class="tableBox">
+                                                    <table>
+                                                        <colgroup>
+                                                            <col width="5%">
+                                                            <col width="12%">
+                                                            <col>
+                                                            <col>
+                                                            <col width="20%">
+
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>No.</th>
+                                                                <th>소속</th>
+                                                                <th>등급/직무</th>
+                                                                <th>투입인력</th>
+                                                                <th>실투입기간</th>
+                                                                <th>MM</th>
+                                                                <th>매입단가</th>
+                                                                <th>제경비</th>
+                                                                <th>매입합계</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>05</td>  
+                                                                <td class="ellipsis">이지글로벌이지글로벌이지글로벌</td>  
+                                                                <td>특급/개발</td>  
+                                                                <td>김호영</td>  
+                                                                <td>2022.10.01~2023.02.12</td>  
+                                                                <td>1.0</td>  
+                                                                <td>9,000,000</td>  
+                                                                <td>100,000</td>  
+                                                                <td>44,100,000</td>  
+                                                            </tr>
+                                                            <tr>
+                                                                <td>05</td>  
+                                                                <td class="ellipsis">이지글로벌</td>  
+                                                                <td>특급/개발</td>  
+                                                                <td>김호영</td>  
+                                                                <td>2022.10.01~2023.02.12</td>  
+                                                                <td>1.0</td>  
+                                                                <td>9,000,000</td>  
+                                                                <td>100,000</td>  
+                                                                <td>44,100,000</td>  
+                                                            </tr>
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td colspan="9" class="right"><b class="dark">265,100,000</b></td>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div id="contract-02" class="tabCont">bb</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="regiPart" id="bizStateRegi3">
-                            <h3>4. 청구스케줄</h3>
-                            <div class="boxWrap">
-                                <div class="tableTop">
-                                    <div class="prefix">
-                                        <h4>청구조건</h4>
-                                        <select class="smSize" name="" id="">
-                                            <option value="">정액</option>
-                                            <option value="cat">Cat</option>
-                                        </select>
-                                        <select class="smSize" name="" id="">
-                                            <option value="">매월</option>
-                                            <option value="cat">Cat</option>
-                                        </select>
-                                        <select class="smSize" name="" id="">
-                                            <option value="">1일</option>
-                                            <option value="cat">Cat</option>
-                                        </select>
+                            <h3>4. 청구/입금스케줄</h3>
+                            <div class="boxWrap flex_4_3">
+                                <div class="prefix">     
+                                    <h4 class="mainC">청구 스케줄</h4><!--등록화면에서는 없음-ys -->                             
+                                    <div class="tableTop">
+                                        <div class="prefix">
+                                            <h5>청구조건</h5>
+                                            <select class="smSize" name="" id="">
+                                                <option value="">정액</option>
+                                                <option value="cat">Cat</option>
+                                            </select>
+                                            <select class="smSize" name="" id="">
+                                                <option value="">매월</option>
+                                                <option value="cat">Cat</option>
+                                            </select>
+                                            <select class="smSize" name="" id="">
+                                                <option value="">1일</option>
+                                                <option value="cat">Cat</option>
+                                            </select>
+                                        </div>
+                                        <div class="suffix">
+                                            <button class="smSize" type="button">수정</button>
+                                        </div>
                                     </div>
-                                    <div class="suffix">
-                                        <button class="smSize" type="button">수정</button>
-                                    </div>
-                                </div>
-                                <div class="tableBox">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>청구회차</th>
-                                                <th>청구일자</th>
-                                                <th>청구금액</th>
-                                                <th>계산서발행</th>
-                                                <th>검수일자</th>
-                                                <th>분배율(%)</th>
-                                                <th>비고</th>
-                                                <th>청구합계</th>
-                                                <th>계약금액</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1회</th>
-                                                <td class="subGray">2020.01.01</td>
-                                                <td class="mainC">50,000,000</td>
-                                                <td>2020.01.25</td>
-                                                <td>2020.01.25</td>
-                                                <td></td>
-                                                <td>담당자 메모내용</td>
-                                                <td rowspan="4">
-                                                    <b class="important">250,000,000</b>
-                                                </td>
-                                                <td rowspan="4">
-                                                    <b>250,000,000</b>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>2회</th>
-                                                <td class="subGray">2020.01.01</td>
-                                                <td class="mainC">50,000,000</td>
-                                                <td>2020.01.25</td>
-                                                <td>2020.01.25</td>
-                                                <td></td>
-                                                <td>담당자 메모내용</td>
-                                            </tr>
-                                            <tr>
-                                                <th>3회</th>
-                                                <td class="subGray">2020.01.01</td>
-                                                <td class="mainC">50,000,000</td>
-                                                <td>2020.01.25</td>
-                                                <td>2020.01.25</td>
-                                                <td></td>
-                                                <td>담당자 메모내용</td>
-                                            </tr>
-                                            <tr>
-                                                <th>4회</th>
-                                                <td class="subGray">2020.01.01</td>
-                                                <td class="mainC">50,000,000</td>
-                                                <td>2020.01.25</td>
-                                                <td>2020.01.25</td>
-                                                <td></td>
-                                                <td>담당자 메모내용</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                                    <div class="tableBox">
+                                        <table>
+                                            <colgroup>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
 
-                        <div class="regiPart" id="bizStateRegi4">
-                            <h3>5. 수금스케줄</h3>
-                            <div class="boxWrap">
-                                <div class="tableTop">
-                                    <div class="prefix">
-                                        <h4>수금조건</h4>
-                                        <select class="smSize" disabled>
-                                            <option value="">정액</option>
-                                            <option value="cat">Cat</option>
-                                        </select>
-                                        <select class="smSize" disabled>
-                                            <option value="">매월</option>
-                                            <option value="cat">Cat</option>
-                                        </select>
-                                        <select class="smSize" disabled>
-                                            <option value="">1일</option>
-                                            <option value="cat">Cat</option>
-                                        </select>
-                                    </div>
-                                    <div class="suffix">
-                                        <button class="smSize" type="button">수정</button>
+                                                <col>
+                                                <col width="30%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>청구회차</th>
+                                                    <th>청구일자</th>
+                                                    <th>청구금액</th>
+                                                    <th>계산서발행</th>
+                                                    <th>검수일자</th>
+                                                    <th>분배율(%)</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>1회</th>
+                                                    <td class="subGray">2020.01.01</td>
+                                                    <td class="mainC">50,000,000</td>
+                                                    <td>2020.01.25</td>
+                                                    <td>2020.01.25</td>
+                                                    <td></td>
+                                                    <td class="ellipsis">담당자 메모내용 담당자 메모내용 담당자 메모내용</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>2회</th>
+                                                    <td class="subGray">2020.01.01</td>
+                                                    <td class="mainC">50,000,000</td>
+                                                    <td>2020.01.25</td>
+                                                    <td>2020.01.25</td>
+                                                    <td></td>
+                                                    <td class="ellipsis">담당자 메모내용</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>3회</th>
+                                                    <td class="subGray">2020.01.01</td>
+                                                    <td class="mainC">50,000,000</td>
+                                                    <td>2020.01.25</td>
+                                                    <td>2020.01.25</td>
+                                                    <td></td>
+                                                    <td class="ellipsis">담당자 메모내용</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>4회</th>
+                                                    <td class="subGray">2020.01.01</td>
+                                                    <td class="mainC">50,000,000</td>
+                                                    <td>2020.01.25</td>
+                                                    <td>2020.01.25</td>
+                                                    <td></td>
+                                                    <td class="ellipsis">담당자 메모내용</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="6" class="right">
+                                                        <b class="dark">청구합계 230,000,000                                                        </b>
+                                                        <b class="marked">(+250,000,000)</b>
+                                                    </td>
+                                                    <td class="left">
+                                                        <b>계약금액 250,000,000</b>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
                                     </div>
                                 </div>
-                                <div class="tableBox">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>청구회차</th>
-                                                <th>청구일자</th>
-                                                <th>청구금액</th>
-                                                <th>계산서발행</th>
-                                                <th>검수일자</th>
-                                                <th>분배율(%)</th>
-                                                <th>비고</th>
-                                                <th>청구합계</th>
-                                                <th>계약금액</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>1회</th>
-                                                <td class="subGray">2020.01.01</td>
-                                                <td class="mainC">50,000,000</td>
-                                                <td>2020.01.25</td>
-                                                <td>2020.01.25</td>
-                                                <td></td>
-                                                <td>담당자 메모내용</td>
-                                                <td rowspan="4">
-                                                    <b class="important">250,000,000</b>
-                                                </td>
-                                                <td rowspan="4">
-                                                    <b>250,000,000</b>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>2회</th>
-                                                <td class="subGray">2020.01.01</td>
-                                                <td class="mainC">50,000,000</td>
-                                                <td>2020.01.25</td>
-                                                <td>2020.01.25</td>
-                                                <td></td>
-                                                <td>담당자 메모내용</td>
-                                            </tr>
-                                            <tr>
-                                                <th>3회</th>
-                                                <td class="subGray">2020.01.01</td>
-                                                <td class="mainC">50,000,000</td>
-                                                <td>2020.01.25</td>
-                                                <td>2020.01.25</td>
-                                                <td></td>
-                                                <td>담당자 메모내용</td>
-                                            </tr>
-                                            <tr>
-                                                <th>4회</th>
-                                                <td class="subGray">2020.01.01</td>
-                                                <td class="mainC">50,000,000</td>
-                                                <td>2020.01.25</td>
-                                                <td>2020.01.25</td>
-                                                <td></td>
-                                                <td>담당자 메모내용</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <!--등록화면에서는 없음-ys -->
+                                <div class="suffix">
+                                    <h4 class="mainC">입금 스케줄</h4>
+                                    <div class="tableTop">
+                                        <div class="prefix">
+                                            <h5>입금조건</h5>
+                                            <select class="smSize" disabled>
+                                                <option value="">정액</option>
+                                                <option value="cat">Cat</option>
+                                            </select>
+                                            <select class="smSize" disabled>
+                                                <option value="">매월</option>
+                                                <option value="cat">Cat</option>
+                                            </select>
+                                            <select class="smSize" disabled>
+                                                <option value="">1일</option>
+                                                <option value="cat">Cat</option>
+                                            </select>
+                                        </div>
+                                        <div class="suffix">
+                                            <button class="smSize" type="button">수정</button>
+                                        </div>
+                                    </div>
+                                    <div class="tableBox">
+                                        <table>
+                                            <colgroup>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col width="30%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>입금회차</th>
+                                                    <th>입금일자</th>
+                                                    <th>입금금액</th>
+                                                    <th>분배율(%)</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>1회</th>
+                                                    <td class="subGray">2020.01.01</td>
+                                                    <td class="mainC">50,000,000</td>
+                                                    <td></td>
+                                                    <td class="ellipsis">담당자 메모내용</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>2회</th>
+                                                    <td class="subGray">2020.01.01</td>
+                                                    <td class="mainC">50,000,000</td>
+                                                    <td></td>
+                                                    <td class="ellipsis">담당자 메모내용</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>3회</th>
+                                                    <td class="subGray">2020.01.01</td>
+                                                    <td class="mainC">50,000,000</td>
+                                                    <td></td>
+                                                    <td class="ellipsis">담당자 메모내용 담당자 메모내용 담당자 메모내용</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>4회</th>
+                                                    <td class="subGray">2020.01.01</td>
+                                                    <td class="mainC">50,000,000</td>
+                                                    <td></td>
+                                                    <td class="ellipsis">담당자 메모내용</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="4" class="right">
+                                                        <b class="dark">청구합계 230,000,000                                                        </b>
+                                                        <b class="marked">(+250,000,000)</b>
+                                                    </td>
+                                                    <td class="left">
+                                                        <b>계약금액 250,000,000</b>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
                                 </div>
+                                <!--//등록화면에서는 없음-ys -->
                             </div>
                         </div>
                     </div>     
@@ -451,6 +1437,21 @@
         </div>
     </div>
     <!--//플로팅메뉴-->
+
+
+    <!--계약상세 팝업-->
+    <div id="contractDetail" class="modalLayer center">
+        <div class="layerBox">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h2>청구스케줄/입금스케줄</h2>
+            </div>
+            <div class="modalCont center"></div>
+            <div class="modalFooter"></div>
+        </div>
+        <div class="layerDim"></div> 
+    </div>
+    <!--//계약상세 팝업-->
 
 
     <!--청구스케줄, 입금스케줄 팝업-->
@@ -866,24 +1867,24 @@
                                 <tr>
                                     <td>1회</td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">법인카드</option>
                                             <option value="dog" disabled="">개인카드</option>
                                             <option value="cat">현금</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">choose</option>
                                             <option value="dog" disabled="">Dog</option>
                                             <option value="cat">Cat</option>
                                         </select>
                                     </td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td>1.0</td>
-                                    <td class="txtRight"><input class="full lowSize txtRight" type="text" id="xxsSize"></td>
-                                    <td class="txtRight"><input class="full lowSize txtRight" type="text" id="xxsSize"></td>
+                                    <td class="txtRight"><input class="txtRight" type="text"></td>
+                                    <td class="txtRight"><input class="txtRight" type="text"></td>
                                     <td>140,000</td>
                                     <td><button class="bdType xsSize">첨부</button></td>
                                     <td><textarea rows="1"></textarea></td>
@@ -892,23 +1893,23 @@
                                 <tr>
                                     <td>1회</td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">법인카드</option>
                                             <option value="dog" disabled="">개인카드</option>
                                             <option value="cat">현금</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">choose</option>
                                             <option value="dog" disabled="">Dog</option>
                                             <option value="cat">Cat</option>
                                         </select>
                                     </td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td>1.0</td>
-                                    <td class="txtRight"><input class="full lowSize txtRight" type="text" id="xxsSize"></td>
+                                    <td class="txtRight"><input class="txtRight" type="text"></td>
                                     <td class="txtRight"><span class="tBuy">-60,000</span></td>
                                     <td>140,000</td>
                                     <td class="ellipsis"><a href="" class="attached" download="">신라호텔 1박 숙소.jpg</a></td>
@@ -918,24 +1919,24 @@
                                 <tr>
                                     <td>1회</td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">법인카드</option>
                                             <option value="dog" disabled="">개인카드</option>
                                             <option value="cat">현금</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">choose</option>
                                             <option value="dog" disabled="">Dog</option>
                                             <option value="cat">Cat</option>
                                         </select>
                                     </td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td>1.0</td>
-                                    <td class="txtRight"><input class="full lowSize txtRight" type="text" id="xxsSize"></td>
-                                    <td class="txtRight"><input class="full lowSize txtRight" type="text" id="xxsSize"></td>
+                                    <td class="txtRight"><input class="txtRight" type="text" id="xxsSize"></td>
+                                    <td class="txtRight"><input class="txtRight" type="text" id="xxsSize"></td>
                                     <td>140,000</td>
                                     <td><button class="bdType xsSize">첨부</button></td>
                                     <td><textarea rows="1"></textarea></td>
@@ -944,23 +1945,23 @@
                                 <tr>
                                     <td>1회</td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">법인카드</option>
                                             <option value="dog" disabled="">개인카드</option>
                                             <option value="cat">현금</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">choose</option>
                                             <option value="dog" disabled="">Dog</option>
                                             <option value="cat">Cat</option>
                                         </select>
                                     </td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td>1.0</td>
-                                    <td class="txtRight"><input class="full lowSize txtRight" type="text" id="xxsSize"></td>
+                                    <td class="txtRight"><input class="txtRight" type="text" id="xxsSize"></td>
                                     <td class="txtRight"><span class="tBuy">-60,000</span></td>
                                     <td>140,000</td>
                                     <td class="ellipsis"><a href="" class="attached" download="">신라호텔 1박 숙소.jpg</a></td>
@@ -970,24 +1971,24 @@
                                 <tr>
                                     <td>1회</td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">법인카드</option>
                                             <option value="dog" disabled="">개인카드</option>
                                             <option value="cat">현금</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">choose</option>
                                             <option value="dog" disabled="">Dog</option>
                                             <option value="cat">Cat</option>
                                         </select>
                                     </td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td>1.0</td>
-                                    <td class="txtRight"><input class="full lowSize txtRight" type="text" id="xxsSize"></td>
-                                    <td class="txtRight"><input class="full lowSize txtRight" type="text" id="xxsSize"></td>
+                                    <td class="txtRight"><input class="txtRight" type="text" id="xxsSize"></td>
+                                    <td class="txtRight"><input class="txtRight" type="text" id="xxsSize"></td>
                                     <td>140,000</td>
                                     <td><button class="bdType xsSize">첨부</button></td>
                                     <td><textarea rows="1"></textarea></td>
@@ -996,23 +1997,23 @@
                                 <tr>
                                     <td>1회</td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">법인카드</option>
                                             <option value="dog" disabled="">개인카드</option>
                                             <option value="cat">현금</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">choose</option>
                                             <option value="dog" disabled="">Dog</option>
                                             <option value="cat">Cat</option>
                                         </select>
                                     </td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td>1.0</td>
-                                    <td class="txtRight"><input class="full lowSize txtRight" type="text" id="xxsSize"></td>
+                                    <td class="txtRight"><input class="txtRight" type="text" id="xxsSize"></td>
                                     <td class="txtRight"><span class="tBuy">-60,000</span></td>
                                     <td>140,000</td>
                                     <td class="ellipsis"><a href="" class="attached" download="">신라호텔 1박 숙소.jpg</a></td>
@@ -1022,26 +2023,26 @@
                                 <tr>
                                     <td>1회</td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">법인카드</option>
                                             <option value="dog" disabled="">개인카드</option>
                                             <option value="cat">현금</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <select class="full lowSize" name="" id="">
+                                        <select name="" id="">
                                             <option value="">choose</option>
                                             <option value="dog" disabled="">Dog</option>
                                             <option value="cat">Cat</option>
                                         </select>
                                     </td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
-                                    <td><input class="dateType lowSize" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td>1.0</td>
-                                    <td class="txtRight"><input class="full lowSize txtRight" type="text" id="xxsSize"></td>
-                                    <td class="txtRight"><span class="tBuy">-60,000</span></td>
+                                    <td class="txtRight"><input class="txtRight" type="text" id="xxsSize"></td>
+                                    <td class="txtRight"><input class="txtRight" type="text" id="xxsSize"></td>
                                     <td>140,000</td>
-                                    <td class="ellipsis"><a href="" class="attached" download="">신라호텔 1박 숙소.jpg</a></td>
+                                    <td><button class="bdType xsSize">첨부</button></td>
                                     <td><textarea rows="1"></textarea></td>
                                     <td><i class="ico delete_bg"></i></td>
                                 </tr>
@@ -1101,7 +2102,38 @@
                     $('.redOpt').css('color','black');
                 }
             }); 
-        });  
+        });
+
+        //2.매출/매입 table 축소,확장
+        //매출
+        $(".flexTable .extend.sales").on("click", function(){
+            $(this).toggleClass('is-active');
+            $(this).parent('th').toggleClass('fold');
+            $(this).parents('.tableBox').find('.hideS').toggleClass('on');
+        });
+        //매입
+        $(".flexTable .extend.buy").on("click", function(){
+            $(this).toggleClass('is-active');
+            $(this).parent('th').toggleClass('fold');
+            $(this).parents('.tableBox').find('.hideB').toggleClass('on');
+        });
+
+        //2. table 축소,확장시 너비 조절
+        $(".extend").on("click", function(){
+            let salesOn = $('.extend.sales').hasClass('is-active');
+            let buyOn = $('.extend.buy').hasClass('is-active');
+
+            if(salesOn === true && buyOn === true){
+                $(this).parents('.tableBox').css('width', "2000px");
+            }else if(salesOn !== true && buyOn !== true){     
+                $(this).parents('.tableBox').css('width', "1000px");
+            }
+            else if(salesOn === true || buyOn === true){
+                $(this).parents('.tableBox').css('width', "1300px");
+            }
+        });
+        
+
     </script>
 </body>
 </html>

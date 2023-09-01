@@ -199,8 +199,12 @@ $copyRight : #9c9b9b;
 .subGray{
     color: $subGray;
 }
+.marked,
 .important{
     color: $error;
+}
+.dark{
+    color: $black;
 }
 
 //마이프로젝트-직무추천-설정팝업
@@ -286,8 +290,23 @@ $copyRight : #9c9b9b;
 }
 .flex_2_3{
     display: flex;
-    .prefix{flex: 1 1 40%;}
-    .suffix{flex: 2 1 60%;}    
+    >.prefix{flex: 1 1 40%;}
+    >.suffix{flex: 2 1 60%;}    
+}
+.flex_3_2{
+    display: flex;
+    >.prefix{flex: 3 1 0;}
+    >.suffix{flex: 2 1 0;}    
+}
+.flex_4_3{
+    display: flex;
+    >.prefix{flex: 4 1 0;}
+    >.suffix{flex: 3 1 0;}    
+}
+.flex_4_5{
+    display: flex;
+    >.prefix{flex: 4 1 0;}
+    >.suffix{flex: 5 1 0;}    
 }
 
 .block{

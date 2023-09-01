@@ -3,6 +3,10 @@
     align-items: flex-end;    
     margin-bottom: rem(10);   
     font-weight: 500;
+    &.left{        
+        justify-content: flex-start;
+        align-items: center;
+    }
     &.right{
             justify-content: flex-end;
     }
@@ -90,7 +94,11 @@ table{
                 }
             }
         }
+        select,
         .select{
+            width: 100%;
+            min-width: auto;
+            height: rem(32);
             text-align: left;
             color: $black;
         }
@@ -109,7 +117,7 @@ table{
         td{
             color: $tableGray;
             // padding: rem(14) 0;
-            padding: rem(4) 0;
+            padding: rem(4);
             // height: rem(40);
             height: rem(50);
             &.nodata{
@@ -122,7 +130,6 @@ table{
             }
             &.left{
                 text-align: left;
-                padding-left: rem(14);
             }
             &.right{
                 text-align: right;
@@ -452,7 +459,10 @@ table{
             }
         }
     }
-    input{
+    input,
+    input[type=text]{
+        width: 100%;
+        height: rem(32);
         background: transparent;
         &[type=text]{
             &.dateType{

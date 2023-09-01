@@ -61,22 +61,38 @@
                 border-radius: 0 rem(4) rem(4) 0;
             }                
         }
+        & + .h6_sub{
+            margin-left: rem(10);
+        }
         a{
             display: inline-block;
             width: rem(96);
             color: $cancel; 
             font-weight: 500;
             border: 1px solid $inputGray;
+            .more2{
+                margin-left: 5px;
+                margin-top: -3px;
+            }
             &.is-active{                    
                 color: $white;
                 background-color: $mainColor;
                 border: 1px solid $mainColor;
+                .more2{
+                    background-position: -160px -100px;
+                }
             }
         }
     }
     input{
         & + label{
             margin-left: rem(10);
+        }
+    }
+    &.autoSize{
+        a{
+            padding: 0 rem(10);
+            width: auto;
         }
     }
     &.wideSize{

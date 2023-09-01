@@ -53,6 +53,13 @@
         &.noTit{
             margin-top: rem(50);
         }
+        &.flex,
+        &.flex_1_1,
+        .flex_1_2,
+        .flex_4_3,
+        &.flex_4_3{
+            gap: 20px;
+        }
         & + h3{
             margin-top: rem(25);
         }
@@ -126,5 +133,10 @@
     }
     .hasTooltip{
         cursor: default;
+    }
+    tfoot{
+        td{
+            padding: rem(10) rem(4);
+        }
     }
 }

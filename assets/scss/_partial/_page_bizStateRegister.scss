@@ -1,8 +1,12 @@
 .bizStateRegister{
     width: 100%;
+    .regiPartWrapper{        
+        padding-left: rem(100);
+        padding-right: rem(100);
+    }
     .col6{
         margin-top: rem(30);
-        width: 85%;
+        width: 72%;
         column-gap: rem(60);
         grid-template-columns: 1fr 50px 1.8fr 1fr 1fr 130px;
     }
@@ -15,13 +19,8 @@
             width: rem(60);
         }
     }
-    input[type=text]{
-        &.dateType{
-            width: rem(140) !important;
-        }
-    }
     .range{
-        margin: 0 22px;
+        margin: 0 26px;
     }
     .uploadBox{
         label{
@@ -33,6 +32,11 @@
     }
     .bizTerm{
         grid-column: 4/6;
+        input[type=text]{
+            &.dateType{
+                width: rem(140) !important;
+            }
+        }
     }
     .bizProjNm,
     .bizFile{
@@ -44,18 +48,84 @@
             margin-right: rem(20);
         }
     }
+    .boxWrap{
+        >.prefix{
+            .tabBtn{
+                a{
+                    border-radius: 4px 4px 0 0;
+                }
+            }
+        }
+    }
+    .tabBtnWrap{
+        &.flex{
+            justify-content: space-between;
+            .prefix{
+                display: flex;
+                align-items: center;
+            }
+        }
+        .tabBtn{
+            line-height: rem(34);
+            a{
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
     select{
         &.others{
             color: $error;
         }
     }
+    h4{
+        & + .tableTop{
+            margin-top: 30px;
+        }
+    }
 }
 
-#bizStateRegi3,
-#bizStateRegi4{
-    tr{
-        &:hover{
-            background: transparent;
+
+
+.flexLeft{
+    display: flex;
+    gap: 20px;
+    >.prefix{
+        flex-shrink: 0;
+        width: 820px;
+    }
+    >.suffix{
+        flex-grow: 1;
+        overflow-x: hidden;
+    }   
+}
+
+.flexTable{
+    width: 100%;
+    overflow-x: auto;
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    .tableBox{
+        width: 1000px;
+        th{
+            &.fold{
+                border-left: 1px solid red;
+            }
         }
+        tfoot{
+            td{
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+.hideS,
+.hideB{
+    display: none;
+    &.on{
+        display: table-cell;
     }
 }
