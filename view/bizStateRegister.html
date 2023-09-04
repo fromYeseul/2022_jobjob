@@ -457,8 +457,17 @@
                                     <div class="suffix">
                                         <div class="tableTop left">
                                             <h4 class="mainC">실투입기준</h4>
-                                            <input type="checkbox" id="e1" class="hasTxt">
-                                            <label for="e1" class="ml10">삼성SDS등급적용</label>     
+                                            
+                                            <div class="ml20">
+                                                <span class="hasTooltip">                                   
+                                                    <i class="ico layoutF is-active"></i>
+                                                    <div class="tooltip bottom">좌우정렬 보기</div>         
+                                                </span>
+                                                <span class="hasTooltip">                                   
+                                                    <i class="ico layoutG"></i>
+                                                    <div class="tooltip bottom">상하정렬 보기</div>         
+                                                </span>
+                                            </div>
                                         </div>
 
                                         <div class="tabWrapper" id="onActual">
@@ -1224,7 +1233,84 @@
                                                     </table>
                                                 </div>
                                             </div>
-                                            <div id="contract-02" class="tabCont">bb</div>
+                                            <div id="contract-02" class="tabCont">
+                                                <div class="tableBox">
+                                                    <table>
+                                                        <colgroup>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                            <col width="20%">
+                                                            <col>
+
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>투입인력</th>
+                                                                <th>결제방법</th>
+                                                                <th>항목</th>
+                                                                <th>실투입기간</th>
+                                                                <th>MM</th>
+                                                                <th>단가</th>
+                                                                <th>제외금액</th>
+                                                                <th>합계</th>
+                                                                <th>파일</th>
+                                                                <th>비고</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>김호영</td>  
+                                                                <td>법인카드</td>
+                                                                <td>숙소</td>  
+                                                                <td>2022.10.01~2023.02.12</td>  
+                                                                <td>1.0</td>  
+                                                                <td>9,000,000</td>  
+                                                                <td>0</td>
+                                                                <td>100,000</td>  
+                                                                <td><i class="ico file"></i></td>  
+                                                                <td></td>  
+                                                            </tr>
+                                                            <tr>
+                                                                <td>김호영</td>  
+                                                                <td>현금</td>
+                                                                <td>합산제외</td>  
+                                                                <td>2022.10.01~2023.02.12</td>  
+                                                                <td>1.0</td>  
+                                                                <td>0</td>  
+                                                                <td><span class="marked">60,000</span></td>
+                                                                <td><span class="marked">-60,000</span></td>  
+                                                                <td><i class="ico file"></i></td>  
+                                                                <td>특이사항</td>  
+                                                            </tr>
+                                                            <tr>
+                                                                <td>김호영</td>  
+                                                                <td>현금</td>
+                                                                <td>숙소</td>  
+                                                                <td>2022.10.01~2023.02.12</td>  
+                                                                <td>1.0</td>  
+                                                                <td>50,000</td>  
+                                                                <td>0</td>
+                                                                <td>500,000</td>  
+                                                                <td><i class="ico file"></i></td>  
+                                                                <td></td>  
+                                                            </tr>
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td colspan="6"></td>
+                                                                <td><b class="dark">합계</b></td>
+                                                                <td class="right"><b class="dark">265,100,000</b></td>
+                                                                <td colspan="2"></td>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2104,6 +2190,13 @@
             }); 
         });
 
+        //2. 매출/매입 (실투입기준) 레이아웃 버튼 active
+        $(".tableTop .ico").on("click", function(){
+            $(".tableTop .ico").removeClass('is-active');
+            $(this).addClass('is-active');
+        });
+
+
         //2.매출/매입 table 축소,확장
         //매출
         $(".flexTable .extend.sales").on("click", function(){
@@ -2127,8 +2220,7 @@
                 $(this).parents('.tableBox').css('width', "2000px");
             }else if(salesOn !== true && buyOn !== true){     
                 $(this).parents('.tableBox').css('width', "1000px");
-            }
-            else if(salesOn === true || buyOn === true){
+            }else if(salesOn === true || buyOn === true){
                 $(this).parents('.tableBox').css('width', "1300px");
             }
         });
