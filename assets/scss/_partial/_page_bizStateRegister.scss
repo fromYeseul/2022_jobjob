@@ -6,7 +6,7 @@
     }
     .col6{
         margin-top: rem(30);
-        width: 72%;
+        width: rem(1300);
         column-gap: rem(60);
         grid-template-columns: 1fr 50px 1.8fr 1fr 1fr 130px;
     }
@@ -20,7 +20,7 @@
         }
     }
     .range{
-        margin: 0 26px;
+        margin: 0 22px;
     }
     .uploadBox{
         label{
@@ -34,7 +34,7 @@
         grid-column: 4/6;
         input[type=text]{
             &.dateType{
-                width: rem(140) !important;
+                width: rem(172) !important;
             }
         }
     }
@@ -70,6 +70,16 @@
             a{
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
+            }
+        }
+    }
+    .tableTop{
+        .hasTooltip{
+            & + .hasTooltip{
+                margin-left: rem(10);
+            }
+            .tooltip{
+                top: 150%;
             }
         }
     }
