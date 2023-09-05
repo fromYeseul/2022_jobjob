@@ -525,7 +525,7 @@
 
 
     <!--프로젝트 변경하기 팝업-->
-    <div id="recruitProject" class="modalLayer center"><!--id 바뀌면 말씀해주세요 -ys -->
+    <div id="recruitProject" class="modalLayer center is-active"><!--id 바뀌면 말씀해주세요 -ys -->
         <div class="layerBox">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -591,7 +591,7 @@
                     </ul>
                 </div>
 
-                <div class="listBox">
+                <div class="listBox"><!--없을때 nodata 추가-->
                     <ul>
                         <li>
                             <span>기획 - 모바일기획</span>
@@ -620,9 +620,13 @@
                     </ul>
                 </div>
             </div>
-            <div class="modalFooter single">
-                <button class="white layerClose">내용부터 입력</button>
+
+            <!--230901 수정-ys-->
+            <div class="modalFooter">
+                <button class="white layerClose">취소하기</button>
+                <button class="bdType">다른직무 선택</button>
             </div>
+            <!--//230901 수정-ys-->
         </div>        
         <div class="layerDim"></div>    
     </div>
@@ -634,11 +638,12 @@
         <div class="layerBox midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
-                <h2>이전공고불러오기</h2>
+                <!-- <h2>이전공고불러오기</h2> 230901 이동 asis -ys -->
             </div>
             <div class="modalCont center">
+                <h2>이전공고불러오기</h2><!--230901 이동 asis -ys -->
                 <div class="tableTop">
-                    <div class="h6_sub">담당 업무를 최대한 자세하게 입력해 주세요.  (최대 1,000자)</div>
+                    <div class="h6_sub">최근 6개월 내 등록된 모집공고만 노출됩니다.</div><!--230901 수정 -ys -->
                     
                     <input type="checkbox" id="equalJob" name="equalJob" class="hasTxt">
                     <label for="equalJob">동일 직무만</label>           
@@ -836,7 +841,7 @@
 
 
     <!--모집공고 미리보기 팝업 230718 추가-->
-    <div id="recruitPreview" class="modalLayer center"><!--id바뀌면 말씀해주세요 -ys-->
+    <div id="recruitPreview" class="modalLayer center is-active"><!--id바뀌면 말씀해주세요 -ys-->
         <div class="layerBox">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -964,26 +969,26 @@
     <!--//모집공고 미리보기 팝업 230718 추가-->
     
 
-    <!--datepicker test/무시-->
-    <div id="datepickerTest" class="modalLayer center">
+    <!--datepicker 230901 추가 -ys-->
+    <div id="datepickerTest" class="modalLayer center is-active">
         <div class="layerBox">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
             </div>
             <div class="modalCont"> 
-                <h3>전문직무 선택</h3>      
+                <h3>모집마감일 선택</h3>      
 
                 <div id="datepicker" style="width: 100%;"></div>
 
                 <div class="listBottom">
-                    <button class="white prefix" disabled="">선택초기화</button>
-                    <button class="suffix">저장</button>
+                    <button class="white">취소</button>
+                    <button class="">재등록</button>
                 </div>
             </div>
         </div>        
         <div class="layerDim"></div>    
     </div>
-    <!--//datepicker test/무시-->
+    <!--//datepicker 230901 추가 -ys-->
 
 
     

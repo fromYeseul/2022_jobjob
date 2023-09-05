@@ -143,6 +143,18 @@
                     background: $modalBg;
                 }
             }
+            ul{
+                display: initial;
+                li{
+                    display: inline-block;
+                    padding: 0;
+                    max-width: inherit;
+                    border: 0;
+                    & + li{
+                        margin-top: 5px;
+                    }
+                }
+            }
         }
     }
 }

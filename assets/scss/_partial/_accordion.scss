@@ -4,7 +4,7 @@
 }
 
 .accBox{
-    padding: rem(9) 0;
+    padding: rem(12) 0;
     background: $white;
     border-radius: rem(6);
     border:1px solid $layoutColor;
@@ -45,7 +45,7 @@
         margin-top: rem(12);
     }    
     .signDate{
-        margin-right: rem(10);
+        margin-right: rem(30);
         color: $accDate;
         font-size: rem(14);
     }
@@ -83,7 +83,7 @@
     }
     .suffix{
         font-size: rem(14);
-        font-weight: 500;
+        //font-weight: 500;
         li{
             position: relative;
             &::before{
@@ -144,9 +144,6 @@
             padding: 0;
             border-radius: 0;
             border: 0;
-            i.arrow{
-                margin-right: rem(10);
-            }
             &.is-active{
                 border-bottom: 1px solid $accBorderBottom;
                 .accHead{
@@ -159,16 +156,25 @@
                 }
             }
             &.disabled{
+                opacity: 1;
                 .accHead{
-                    color: $addHeadGray;
-                    cursor: not-allowed;
+                    .prefix{
+                        color: $addHeadGray;
+                        cursor: not-allowed;
+                    }
                 }          
                 i.arrow{
                     background-position: -120px -120px;
                 }  
             }
+            &.nodata{
+                height: rem(100);
+            }
             & + .accBox{
                 margin-top: 0;
+            }
+            i.arrow{
+                margin-right: rem(10);
             }
         }
         .accHead{
@@ -214,6 +220,9 @@
             display: block;
             width: auto;
             max-width: 90%;
+        }
+        .projInfo{
+            font-size: 14px;
         }
     }
 }
@@ -283,6 +292,7 @@
                 padding: 0;
                 align-items: flex-start;
                 cursor: initial;
+                font-size: 14px;
                 > ul{
                     display: block;
                     width: 48%;

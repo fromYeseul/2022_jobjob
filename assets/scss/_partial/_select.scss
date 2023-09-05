@@ -118,7 +118,7 @@ select{
 }
 .selectedBox{
   // margin-top: rem(40);
-  display: flex;
+  @include sideArray;
   padding: rem(8);
   background: $white;
   border-radius: rem(4);
@@ -180,7 +180,8 @@ select{
   li{
       @include sideArray;
       margin-bottom: 0;
-      padding: 4px 6px;
+      padding: 6px;
+      font-size: 14px;
       cursor: pointer;
       &:hover{
           background: $selHover;

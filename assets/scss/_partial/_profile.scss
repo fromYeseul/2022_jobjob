@@ -96,7 +96,7 @@
     }
 }
 .trgBox{
-    padding: rem(14);
+    padding: rem(8) rem(14);
     border-radius: 6px;
     border:1px solid $layoutColor;
     position: relative;
@@ -132,8 +132,15 @@
     }
     .profile{
         margin: 0;
+        font-weight: 500;
         li{
             margin-bottom: 0;
+            &.subGray {
+                font-weight: 400;
+            }
+            &:nth-child(2){
+                font-size: rem(13);
+            }
             .ellipsis{
                 display: inline-block;
                 max-width: 80%;
@@ -152,7 +159,7 @@
     .profile{
         margin: 0;
         display: flex;
-        gap: 30px;
+        gap: 40px;
         .left{
             li{
                 display: block;
@@ -164,7 +171,7 @@
                 align-items: center;
             }
             .subInfo{
-                margin-left: 5px;
+                margin-left: 10px;
             }
             .bdType{
                 margin-top: 0;

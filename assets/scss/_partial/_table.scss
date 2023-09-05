@@ -47,17 +47,23 @@ table{
     font-size: rem(14);
     text-align: center;
     background: $white;
-    th{
-        select{
-            width: rem(140);
-            height: rem(36);
-            &.mid-lowSize{
-                width: rem(110);
+    tr{
+        th{
+            select{
+                width: rem(140);
+                height: rem(36);
+                &.mid-lowSize{
+                    width: rem(110);
+                }
+                &.noBd{
+                    font-size: rem(14);
+                    font-weight: 500;
+                }
             }
-        }
-        .hasBtn{
-            .onlyIco{
-                height: rem(32);
+            .hasBtn{
+                .onlyIco{
+                    height: rem(32);
+                }
             }
         }
     }

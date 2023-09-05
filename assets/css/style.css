@@ -173,15 +173,20 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .subInfo {
-  color: #666666;
+  color: #444;
 }
 
 .subGray {
   color: #9595a6;
 }
 
+.marked,
 .important {
   color: #ff1236;
+}
+
+.dark {
+  color: #000000;
 }
 
 .addSet {
@@ -268,11 +273,41 @@ h1, h2, h3, h4, h5, h6, p {
 .flex_2_3 {
   display: flex;
 }
-.flex_2_3 .prefix {
+.flex_2_3 > .prefix {
   flex: 1 1 40%;
 }
-.flex_2_3 .suffix {
+.flex_2_3 > .suffix {
   flex: 2 1 60%;
+}
+
+.flex_3_2 {
+  display: flex;
+}
+.flex_3_2 > .prefix {
+  flex: 3 1 0;
+}
+.flex_3_2 > .suffix {
+  flex: 2 1 0;
+}
+
+.flex_4_3 {
+  display: flex;
+}
+.flex_4_3 > .prefix {
+  flex: 4 1 0;
+}
+.flex_4_3 > .suffix {
+  flex: 3 1 0;
+}
+
+.flex_4_5 {
+  display: flex;
+}
+.flex_4_5 > .prefix {
+  flex: 4 1 0;
+}
+.flex_4_5 > .suffix {
+  flex: 5 1 0;
 }
 
 .block {
@@ -658,6 +693,7 @@ header {
   border-right: 0;
   background: #f2f2f7;
 }
+.contWrapper .contLayout.is-active .myProjList .condition,
 .contWrapper .contLayout.is-active .myProjList .boxListWrap,
 .contWrapper .contLayout.is-active .myProjList .listBottom {
   display: none;
@@ -1514,6 +1550,7 @@ footer.toast button + button {
 }
 .modalCont h3 {
   text-align: center;
+  margin-bottom: 1.625rem;
 }
 .modalCont h3 + .filterList {
   margin-top: 0.625rem;
@@ -1587,6 +1624,7 @@ footer.toast button + button {
   margin: 0 auto;
   margin-top: 1.875rem;
   display: flex;
+  position: relative;
 }
 .modalFooter .prefix {
   flex: 1 1 40%;
@@ -1601,6 +1639,12 @@ footer.toast button + button {
   flex: 1 1 60%;
   margin-left: 0.625rem;
 }
+.modalFooter.single {
+  width: 50%;
+  max-width: 12.5rem;
+  margin: 1.875rem auto;
+  margin-bottom: 0;
+}
 .modalFooter button {
   flex: 2 1 0;
 }
@@ -1608,11 +1652,11 @@ footer.toast button + button {
   flex: 3 1 0;
   margin-left: 0.625rem;
 }
-.modalFooter.single {
-  width: 50%;
-  max-width: 12.5rem;
-  margin: 1.875rem auto;
-  margin-bottom: 0;
+.modalFooter .alertToast {
+  top: -50px;
+  bottom: auto;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .modalInfo {
@@ -1634,7 +1678,7 @@ footer.toast button + button {
   font-weight: 500;
 }
 .modalInfo .list {
-  color: #666666;
+  color: #444;
 }
 .modalInfo .list li {
   margin-top: 0.875rem;
@@ -1644,7 +1688,7 @@ footer.toast button + button {
   content: "";
   width: 5px;
   height: 1px;
-  background: #666666;
+  background: #444;
   position: absolute;
   top: 0.625rem;
   left: -9px;
@@ -1741,6 +1785,8 @@ footer.toast button + button {
 
 #recruitProject .listBox {
   margin-bottom: 2.5rem;
+  height: 400px;
+  overflow-y: auto;
 }
 
 #pre-recruit .listBottom.pagingType {
@@ -1823,12 +1869,12 @@ footer.toast button + button {
 }
 #projOfferHis .profile ul li {
   font-size: 0.875rem;
-  font-weight: 500;
   text-align: left;
   line-height: 1.5rem;
 }
 #projOfferHis .profile ul li:first-child {
   font-size: 1rem;
+  font-weight: 500;
 }
 #projOfferHis table {
   margin-top: 1.25rem;
@@ -1840,6 +1886,10 @@ footer.toast button + button {
   padding: 1.5625rem 1.25rem;
   border: 1px solid #cccccc;
   border-radius: 0.375rem;
+}
+#projOfferHis .offerResult ul {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
 }
 #projOfferHis .offerResult li {
   margin: 0.5rem 0;
@@ -1981,6 +2031,9 @@ footer.toast button + button {
   border-top-color: transparent;
   border-left-color: #58585e;
 }
+#requireProject .selectedBox {
+  padding-right: 2.5rem;
+}
 
 #callTemplate.absol .layerBox {
   background: #fff;
@@ -2009,23 +2062,29 @@ footer.toast button + button {
   height: 31.25rem;
 }
 
-.chargeSet .tableBox.absolBody {
+.chargeSet .tableBox.absolBody,
+.exceptCharge .tableBox.absolBody {
   height: auto;
   max-height: 300px;
 }
-.chargeSet tr:hover {
+.chargeSet tr:hover,
+.exceptCharge tr:hover {
   background: transparent;
 }
-.chargeSet tr input {
+.chargeSet tr input,
+.exceptCharge tr input {
   height: 2rem;
 }
-.chargeSet tr input.full {
+.chargeSet tr input.full,
+.exceptCharge tr input.full {
   text-align: right;
 }
-.chargeSet tfoot .right {
+.chargeSet tfoot .right,
+.exceptCharge tfoot .right {
   position: relative;
 }
-.chargeSet tfoot .right::after {
+.chargeSet tfoot .right::after,
+.exceptCharge tfoot .right::after {
   content: "";
   width: 1px;
   height: 20px;
@@ -2204,7 +2263,6 @@ footer.toast button + button {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  cursor: inherit;
 }
 .quickView .boxList .txtRight {
   margin-top: 0;
@@ -2468,7 +2526,7 @@ footer.toast button + button {
   width: 15.625rem;
 }
 .condition > ul li + li {
-  margin-left: 0.4375rem;
+  margin-left: 0.625rem;
 }
 .condition .hasBtn .button,
 .condition .hasBtn button {
@@ -2502,6 +2560,10 @@ footer.toast button + button {
   align-items: flex-end;
   margin-bottom: 0.625rem;
   font-weight: 500;
+}
+.tableTop.left {
+  justify-content: flex-start;
+  align-items: center;
 }
 .tableTop.right {
   justify-content: flex-end;
@@ -2539,14 +2601,18 @@ table {
   text-align: center;
   background: #fff;
 }
-table th select {
+table tr th select {
   width: 8.75rem;
   height: 2.25rem;
 }
-table th select.mid-lowSize {
+table tr th select.mid-lowSize {
   width: 6.875rem;
 }
-table th .hasBtn .onlyIco {
+table tr th select.noBd {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+table tr th .hasBtn .onlyIco {
   height: 2rem;
 }
 table tr {
@@ -2575,7 +2641,11 @@ table tr.tableHead th {
 table tr.tableHead + tr th {
   padding: 0.375rem 0;
 }
+table tr select,
 table tr .select {
+  width: 100%;
+  min-width: auto;
+  height: 2rem;
   text-align: left;
   color: #000000;
 }
@@ -2591,7 +2661,7 @@ table tr th span.layerOpen {
 }
 table tr td {
   color: #666666;
-  padding: 0.25rem 0;
+  padding: 0.25rem;
   height: 3.125rem;
 }
 table tr td.nodata {
@@ -2602,7 +2672,6 @@ table tr td.nodata {
 }
 table tr td.left {
   text-align: left;
-  padding-left: 0.875rem;
 }
 table tr td.right {
   text-align: right;
@@ -2706,14 +2775,6 @@ table.hasInput tfoot td {
   background: #f2f2f7;
   border-bottom: 0;
 }
-table.wideType .attached {
-  display: block;
-  margin-top: 5px;
-  color: #0460d2;
-  text-decoration: underline;
-  position: relative;
-  cursor: pointer;
-}
 table.wideType > thead > tr {
   border-bottom: 0;
 }
@@ -2804,10 +2865,14 @@ table .ellipsis .dNear + a,
 table .ellipsis .label + a {
   margin-left: 0.3125rem;
 }
-table input {
+table input,
+table input[type=text] {
+  width: 100%;
+  height: 2rem;
   background: transparent;
 }
-table input[type=text].dateType {
+table input[type=text].dateType,
+table input[type=text][type=text].dateType {
   width: 100%;
 }
 table .inputIco {
@@ -2825,6 +2890,16 @@ table .phoImg.is-special::before {
 }
 table .phoImg.is-special::after {
   right: 2px;
+}
+table .file + .attached {
+  display: block;
+}
+table .attached {
+  margin-top: 5px;
+  color: #0460d2 !important;
+  text-decoration: underline;
+  position: relative;
+  cursor: pointer;
 }
 table a {
   color: #0460d2;
@@ -2909,7 +2984,7 @@ table .dot {
 .paging li a {
   display: inline-block;
   width: 1.75rem;
-  color: #666666;
+  color: #444;
   border-radius: 0.1875rem;
   padding: 0.1875rem 0;
 }
@@ -2959,7 +3034,7 @@ table .dot {
   content: "";
   width: 5px;
   height: 1px;
-  background: #666666;
+  background: #444;
   position: absolute;
   top: 0.75rem;
   left: -9px;
@@ -3005,7 +3080,7 @@ table .dot {
   background: #0460d2;
 }
 .infoList .info {
-  color: #666666;
+  color: #444;
 }
 .infoList .info.attached {
   cursor: pointer;
@@ -3021,14 +3096,14 @@ table .dot {
 }
 
 .infoBox {
-  padding: 0.25rem;
+  padding: 0.25rem 0.375rem;
   border-radius: 0.25rem;
   border: 1px solid #cccccc;
 }
 .infoBox .info {
   display: flex;
   align-items: center;
-  padding: 0.375rem;
+  padding: 0.375rem 0.625rem;
   color: #000000;
 }
 .infoBox .info i {
@@ -3165,6 +3240,9 @@ table .dot {
 .tabBtnWrap .tabBtn:last-child a {
   border-radius: 0 0.25rem 0.25rem 0;
 }
+.tabBtnWrap .tabBtn + .h6_sub {
+  margin-left: 0.625rem;
+}
 .tabBtnWrap .tabBtn a {
   display: inline-block;
   width: 6rem;
@@ -3172,13 +3250,25 @@ table .dot {
   font-weight: 500;
   border: 1px solid #cccccc;
 }
+.tabBtnWrap .tabBtn a .more2 {
+  margin-left: 5px;
+  margin-top: -3px;
+}
 .tabBtnWrap .tabBtn a.is-active {
   color: #fff;
   background-color: #0460d2;
   border: 1px solid #0460d2;
 }
+.tabBtnWrap .tabBtn a.is-active .more2 {
+  background-position: -160px -100px;
+}
 .tabBtnWrap input + label {
-  margin-left: 0.625rem;
+  margin-left: 1rem;
+  font-size: 14px;
+}
+.tabBtnWrap.autoSize a {
+  padding: 0 0.625rem;
+  width: auto;
 }
 .tabBtnWrap.wideSize a {
   width: 11.875rem;
@@ -3302,6 +3392,11 @@ button.auto,
 }
 button.lowSize,
 .button.lowSize {
+  line-height: 1.875rem;
+}
+button.xsSize,
+.button.xsSize {
+  width: 2.8125rem;
   line-height: 1.875rem;
 }
 button.smSize,
@@ -3493,7 +3588,7 @@ button.square,
   min-width: 4.5rem;
   width: auto;
   line-height: 1.625rem;
-  color: #666666;
+  color: #444;
   font-weight: 400;
   background: #fff;
   border-radius: 0;
@@ -3558,8 +3653,8 @@ button.main,
 }
 button.sub,
 .button.sub {
-  color: #9595a6;
-  border-color: #9595a6;
+  color: #8f8f8f;
+  border-color: #8f8f8f;
 }
 
 span.button {
@@ -3596,7 +3691,7 @@ span.button {
   background: #0460d2;
 }
 .point.normal {
-  background: #9595a6;
+  background: #8f8f8f;
 }
 
 .count {
@@ -3808,7 +3903,7 @@ input[type=password]::placeholder {
 .inputList.flex li {
   display: flex;
   align-items: center;
-  margin-bottom: 0.625rem;
+  margin-bottom: 1rem;
   gap: 0.625rem;
 }
 .inputList.flex li h6,
@@ -3875,7 +3970,7 @@ input[type=number]:read-only,
 input[type=password]:read-only,
 input[type=month]:read-only,
 input[type=date]:read-only {
-  color: #9595a6;
+  color: #8f8f8f;
   background: #f2f2f7;
 }
 input[type=text]:read-only:focus,
@@ -4049,7 +4144,7 @@ input[type=number].editType.hasDatepicker:read-only,
 input[type=password].editType.hasDatepicker:read-only,
 input[type=month].editType.hasDatepicker:read-only,
 input[type=date].editType.hasDatepicker:read-only {
-  color: #9595a6;
+  color: #8f8f8f;
   background: #fff;
 }
 input[type=text].editType.hasDatepicker:read-only:focus,
@@ -4130,6 +4225,11 @@ input[type=text].dateType.onGoing {
 }
 input[type=text].dateType.onGoing:focus {
   border: 1px solid #ffc812;
+}
+input[type=text].dateType.noBg {
+  padding-right: 0.625rem;
+  text-align: center;
+  background: none;
 }
 input[type=text].dateType.disabled, input[type=text].dateType:disabled {
   color: #a6a6b6;
@@ -4242,7 +4342,7 @@ input[type=file] {
   top: 3.125rem;
   left: -1px;
   width: calc(100% + 2px);
-  color: #666666;
+  color: #444;
   padding: 0;
   border-radius: 0.25rem;
   border: 1px solid #cccccc;
@@ -4336,7 +4436,7 @@ input[type=file] {
 }
 .inputGroup.upload .volume,
 .inputGroup.upload .float_r {
-  color: #9595a6;
+  color: #8f8f8f;
 }
 .inputGroup.wide {
   width: 37.5rem;
@@ -4370,7 +4470,7 @@ input[type=file] {
   color: #fff;
   line-height: 1.375rem;
   margin: 0.125rem;
-  background: #9595a6;
+  background: #8f8f8f;
   border-radius: 0.3125rem;
   position: relative;
 }
@@ -4446,7 +4546,7 @@ textarea {
   width: 100%;
   vertical-align: middle;
   font-size: 0.875rem;
-  padding: 0.5rem 0.625rem;
+  padding: 0.3125rem 0.625rem;
   border-radius: 0.25rem;
   border: 1px solid #cccccc;
   resize: none;
@@ -4472,7 +4572,7 @@ textarea:disabled {
 }
 textarea + .counter {
   font-size: 0.875rem;
-  color: #666666;
+  color: #444;
   text-align: right;
   margin-top: 0.625rem;
 }
@@ -4678,6 +4778,7 @@ input[type=radio] {
 input[type=checkbox] + label,
 input[type=radio] + label {
   display: inline-block;
+  font-weight: 400 !important;
   cursor: pointer;
   position: relative;
 }
@@ -5270,6 +5371,7 @@ input[type=radio]:disabled + label {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 0.875rem;
 }
 .fileBox .fileList li .fileInfo span:last-child {
   font-size: 0.875rem;
@@ -5369,6 +5471,8 @@ select.onGoing:focus {
 
 .selectedBox {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0.5rem;
   background: #fff;
   border-radius: 0.25rem;
@@ -5429,7 +5533,8 @@ select.onGoing:focus {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0;
-  padding: 4px 6px;
+  padding: 6px;
+  font-size: 14px;
   cursor: pointer;
 }
 .selectList li:hover {
@@ -5518,7 +5623,7 @@ select.onGoing:focus {
   top: 3.125rem;
   left: -1px;
   width: calc(100% + 2px);
-  color: #666666;
+  color: #444;
   padding: 0;
   border-radius: 0.25rem;
   border: 1px solid #cccccc;
@@ -5764,7 +5869,6 @@ select.onGoing:focus {
   text-align: center;
 }
 .hasTooltip .qMark {
-  margin-left: 4px;
   cursor: pointer;
 }
 .hasTooltip:hover > .tooltip {
@@ -6183,6 +6287,13 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-position: -160px -60px;
   cursor: pointer;
 }
+.ico.edit {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-position: -120px -140px;
+  vertical-align: initial;
+  cursor: pointer;
+}
 .ico.more {
   width: 0.1875rem;
   height: 1.125rem;
@@ -6230,13 +6341,22 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   height: 0.125rem;
   background-position: -40px -180px;
 }
-.ico.qMark {
+.ico.reduce {
   width: 1.125rem;
   height: 1.125rem;
-  vertical-align: -4px;
-  background-position: -120px 0;
+  background-position: -100px -180px;
+  cursor: pointer;
 }
-.ico.qMark2 {
+.ico.extend {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -80px -180px;
+  cursor: pointer;
+}
+.ico.extend.is-active {
+  background-position: -100px -180px;
+}
+.ico.qMark, .ico.qMark2 {
   width: 1.125rem;
   height: 1.125rem;
   background-position: -160px -20px;
@@ -6449,7 +6569,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .boxWrap .head .suffix,
 .boxList .head .suffix {
-  color: #666666;
+  color: #444;
   font-size: 0.875rem;
 }
 .boxWrap .head .suffix span:nth-child(2),
@@ -6462,7 +6582,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   content: "";
   width: 1px;
   height: 0.875rem;
-  background: #666666;
+  background: #444;
   position: absolute;
   top: 50%;
   left: -4px;
@@ -6557,7 +6677,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   padding: 0.25rem 0;
 }
 .boxWrap.headType .head .prefix p > span {
-  color: #666666;
+  color: #444;
 }
 .boxWrap.headType .head .prefix p > span.dNear {
   margin-right: 0.625rem;
@@ -6570,7 +6690,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   content: "";
   width: 1px;
   height: 0.75rem;
-  background: #666666;
+  background: #444;
   position: absolute;
   top: 50%;
   left: -4px;
@@ -6587,7 +6707,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   position: relative;
 }
 .boxWrap.headType .bottom .prefix {
-  color: #666666;
+  color: #444;
 }
 
 .headTypeBox,
@@ -6798,11 +6918,11 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .boxList.flexType .suffix {
   width: 8.75rem;
   text-align: center;
-  color: #666666;
+  color: #444;
   position: relative;
 }
 .boxList.flexType .suffix .info {
-  color: #666666;
+  color: #444;
   margin-bottom: 0.625rem;
 }
 .boxList.flexType .suffix .txtCenter .select {
@@ -6876,7 +6996,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .boxList.headType .cont .prefix, .boxList.memoBox .cont .prefix {
   width: 75%;
-  color: #666666;
+  color: #444;
   position: relative;
 }
 .boxList.headType .cont .prefix ul, .boxList.memoBox .cont .prefix ul {
@@ -6892,7 +7012,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   font-weight: 500;
 }
 .boxList.headType .cont .prefix .memName p, .boxList.memoBox .cont .prefix .memName p {
-  color: #666666;
+  color: #444;
   font-weight: 400;
   font-size: 0.75rem;
 }
@@ -6915,7 +7035,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   margin-top: 0.625rem;
   padding: 0.3125rem 0.5rem;
   background: #f2f2f7;
-  color: #666666;
+  color: #444;
   width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -7011,7 +7131,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   padding: 0.875rem;
   padding-top: 0;
   font-weight: 400;
-  color: #666666;
+  color: #444;
 }
 .boxList.headType .bottom .comment, .boxList.memoBox .bottom .comment {
   color: #000000;
@@ -7090,6 +7210,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   display: none;
   min-width: 4.5rem;
   border: 1px solid #a6a6b6;
+  z-index: 1;
 }
 .moreList .square {
   padding: 0.1875rem 0.5rem;
@@ -7160,7 +7281,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .divideBox li.history li .flexBw {
   margin-top: 0;
   flex-grow: 1;
-  color: #666666;
+  color: #444;
 }
 .divideBox li.history li .flexBw span {
   font-weight: 400;
@@ -7267,7 +7388,7 @@ h3 + .h3_sub,
 }
 
 .h3_sub {
-  color: #666666;
+  color: #444;
 }
 
 h4 {
@@ -7346,9 +7467,11 @@ h6 + .h6_sub {
 .projRole {
   display: flex;
   align-items: center;
+  font-weight: 500;
 }
 .projRole .round {
   margin-right: 5px;
+  color: #a6a6b6;
 }
 
 .profile {
@@ -7433,7 +7556,7 @@ h6 + .h6_sub {
 }
 
 .trgBox {
-  padding: 0.875rem;
+  padding: 0.5rem 0.875rem;
   border-radius: 6px;
   border: 1px solid #cccccc;
   position: relative;
@@ -7468,9 +7591,16 @@ h6 + .h6_sub {
 }
 .trgBox .profile {
   margin: 0;
+  font-weight: 500;
 }
 .trgBox .profile li {
   margin-bottom: 0;
+}
+.trgBox .profile li.subGray {
+  font-weight: 400;
+}
+.trgBox .profile li:nth-child(2) {
+  font-size: 0.8125rem;
 }
 .trgBox .profile li .ellipsis {
   display: inline-block;
@@ -7486,7 +7616,7 @@ h6 + .h6_sub {
 .offeredMem .profile {
   margin: 0;
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 .offeredMem .profile .left li {
   display: block;
@@ -7498,7 +7628,7 @@ h6 + .h6_sub {
   align-items: center;
 }
 .offeredMem .profile ul .subInfo {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 .offeredMem .profile ul .bdType {
   margin-top: 0;
@@ -7581,6 +7711,11 @@ h6 + .h6_sub {
 .regiPart .boxWrap.noTit {
   margin-top: 3.125rem;
 }
+.regiPart .boxWrap.flex, .regiPart .boxWrap.flex_1_1,
+.regiPart .boxWrap .flex_1_2,
+.regiPart .boxWrap .flex_4_3, .regiPart .boxWrap.flex_4_3 {
+  gap: 20px;
+}
 .regiPart .boxWrap + h3 {
   margin-top: 1.5625rem;
 }
@@ -7630,13 +7765,16 @@ h6 + .h6_sub {
 .regiPart .hasTooltip {
   cursor: default;
 }
+.regiPart tfoot td {
+  padding: 0.625rem 0.25rem;
+}
 
 .accWrap {
   margin-top: 2.5rem;
 }
 
 .accBox {
-  padding: 0.5625rem 0;
+  padding: 0.75rem 0;
   background: #fff;
   border-radius: 0.375rem;
   border: 1px solid #cccccc;
@@ -7683,7 +7821,7 @@ h6 + .h6_sub {
   margin-top: 0.75rem;
 }
 .accBox .signDate {
-  margin-right: 0.625rem;
+  margin-right: 1.875rem;
   color: #b0a6b6;
   font-size: 0.875rem;
 }
@@ -7725,7 +7863,6 @@ h6 + .h6_sub {
 }
 .innerList .suffix {
   font-size: 0.875rem;
-  font-weight: 500;
 }
 .innerList .suffix li {
   position: relative;
@@ -7757,7 +7894,7 @@ h6 + .h6_sub {
   flex-shrink: 0;
   width: 6.25rem;
   text-align: left;
-  color: #9595a6;
+  color: #8f8f8f;
   font-weight: 500;
   position: relative;
 }
@@ -7783,9 +7920,6 @@ h6 + .h6_sub {
   border-radius: 0;
   border: 0;
 }
-.accWrap.flatType .accBox i.arrow {
-  margin-right: 0.625rem;
-}
 .accWrap.flatType .accBox.is-active {
   border-bottom: 1px solid #b6b6b6;
 }
@@ -7797,15 +7931,24 @@ h6 + .h6_sub {
   background-position: -100px -120px;
   vertical-align: 2px;
 }
-.accWrap.flatType .accBox.disabled .accHead {
+.accWrap.flatType .accBox.disabled {
+  opacity: 1;
+}
+.accWrap.flatType .accBox.disabled .accHead .prefix {
   color: #999;
   cursor: not-allowed;
 }
 .accWrap.flatType .accBox.disabled i.arrow {
   background-position: -120px -120px;
 }
+.accWrap.flatType .accBox.nodata {
+  height: 6.25rem;
+}
 .accWrap.flatType .accBox + .accBox {
   margin-top: 0;
+}
+.accWrap.flatType .accBox i.arrow {
+  margin-right: 0.625rem;
 }
 .accWrap.flatType .accHead {
   padding: 1rem 1.25rem 1rem 0.75rem;
@@ -7850,6 +7993,9 @@ h6 + .h6_sub {
   display: block;
   width: auto;
   max-width: 90%;
+}
+.accInner.infoType .projInfo {
+  font-size: 14px;
 }
 
 .accWrap.indexType .accBox {
@@ -7909,6 +8055,7 @@ h6 + .h6_sub {
   padding: 0;
   align-items: flex-start;
   cursor: initial;
+  font-size: 14px;
 }
 .accWrap.indexType .accInner .innerList > ul {
   display: block;
@@ -7965,7 +8112,7 @@ h6 + .h6_sub {
   position: relative;
 }
 .commentList .comment input {
-  padding-right: 120px;
+  padding-right: 50px;
 }
 .commentList .comment input:read-only {
   background: #fff;
@@ -8212,7 +8359,7 @@ h6 + .h6_sub {
 }
 .myProjDetail .boxWrap .boxList {
   width: 100%;
-  color: #666666;
+  color: #444;
 }
 .myProjDetail .boxWrap > .bottom {
   margin-top: 0.4375rem;
@@ -8488,7 +8635,7 @@ h6 + .h6_sub {
   margin-left: 0.375rem;
   font-size: 1rem;
   letter-spacing: -0.71px;
-  color: #9595a6;
+  color: #8f8f8f;
 }
 .resume > .prefix .mid li {
   position: relative;
@@ -8804,7 +8951,7 @@ h6 + .h6_sub {
 
 .recruitAdmin .tabCont {
   margin-top: -2px;
-  padding: 0.3125rem 1.5625rem 3.125rem;
+  padding: 0.75rem 1.5625rem 3.125rem;
   background: #fff;
   border: 1px solid #cccccc;
 }
@@ -8847,8 +8994,8 @@ h6 + .h6_sub {
   border-top: 0;
   padding-bottom: 2.1875rem;
 }
-.recruitDetail .listBottom button.xlSize {
-  line-height: 2.75rem;
+.recruitDetail .listBottom button {
+  width: 10rem;
 }
 .recruitDetail .nodata {
   height: 10rem;
@@ -9061,6 +9208,7 @@ h6 + .h6_sub {
 .compoWrapper .titWrapper .toolBox li {
   margin-left: 1.5rem;
   color: #fff;
+  font-size: 14px;
   font-weight: 300;
   text-align: left;
   line-height: 1.75rem;
@@ -9077,6 +9225,8 @@ h6 + .h6_sub {
   left: -20px;
 }
 .compoWrapper .titWrapper .toolBox li.manager {
+  font-size: 16px;
+  font-weight: 500;
   margin-left: 0;
 }
 .compoWrapper .titWrapper .toolBox li.manager::before {
@@ -9127,6 +9277,7 @@ h6 + .h6_sub {
 }
 .compoWrapper .grid .agreement {
   grid-row: 1/3;
+  font-size: 0.875rem;
 }
 .compoWrapper .inputGroup {
   min-width: auto;
@@ -9176,7 +9327,10 @@ h6 + .h6_sub {
   margin-top: 0.625rem;
 }
 .compoWrapper .accWrap table tbody td p {
+  margin-left: 15px;
   font-weight: 500;
+  line-height: 1.875rem;
+  color: #5f778f;
 }
 .compoWrapper .bottomBtn {
   display: flex;
@@ -9241,10 +9395,14 @@ h6 + .h6_sub {
   font-weight: 500;
   justify-self: end;
 }
+.compoWrapper footer ul .contact {
+  letter-spacing: normal;
+}
 .compoWrapper footer ul .contact span {
   margin-right: 10px;
 }
 .compoWrapper footer ul .copyRight {
+  font-size: 12px;
   color: #9c9b9b;
   justify-self: end;
 }
@@ -9506,6 +9664,18 @@ h6 + .h6_sub {
   width: 10.625rem;
   background: #f1f2f3;
 }
+.searchRequire .filterCustom .modalLayer ul {
+  display: initial;
+}
+.searchRequire .filterCustom .modalLayer ul li {
+  display: inline-block;
+  padding: 0;
+  max-width: inherit;
+  border: 0;
+}
+.searchRequire .filterCustom .modalLayer ul li + li {
+  margin-top: 5px;
+}
 
 .sendedOfferList {
   width: 100%;
@@ -9531,6 +9701,9 @@ h6 + .h6_sub {
   height: 2rem;
   position: absolute;
   right: 0;
+}
+.sendedOfferDetail .innerList {
+  padding: 1.25rem 1.5625rem;
 }
 .sendedOfferDetail .innerList ul {
   flex-wrap: wrap;
@@ -9671,11 +9844,15 @@ h6 + .h6_sub {
 .bizStateRegister {
   width: 100%;
 }
+.bizStateRegister .regiPartWrapper {
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+}
 .bizStateRegister .col6 {
   margin-top: 1.875rem;
-  width: 85%;
+  width: 72%;
   column-gap: 3.75rem;
-  grid-template-columns: 1fr 50px 1.8fr 1fr 1fr 90px;
+  grid-template-columns: 1fr 50px 1.8fr 1fr 1fr 130px;
 }
 .bizStateRegister .hasBtn input {
   flex-grow: 1;
@@ -9684,11 +9861,8 @@ h6 + .h6_sub {
 .bizStateRegister .hasBtn button {
   width: 3.75rem;
 }
-.bizStateRegister input[type=text].dateType {
-  width: 9.375rem !important;
-}
 .bizStateRegister .range {
-  margin: 0 22px;
+  margin: 0 26px;
 }
 .bizStateRegister .uploadBox label {
   margin-bottom: 0;
@@ -9699,16 +9873,80 @@ h6 + .h6_sub {
 .bizStateRegister .bizTerm {
   grid-column: 4/6;
 }
+.bizStateRegister .bizTerm input[type=text].dateType {
+  width: 8.75rem !important;
+}
+.bizStateRegister .bizProjNm,
 .bizStateRegister .bizFile {
   grid-column: 1/4;
+}
+.bizStateRegister .bizInsurance {
+  grid-column: 5/7;
+}
+.bizStateRegister .bizInsurance label {
+  margin-right: 1.25rem;
+}
+.bizStateRegister .boxWrap > .prefix .tabBtn a {
+  border-radius: 4px 4px 0 0;
+}
+.bizStateRegister .tabBtnWrap.flex {
+  justify-content: space-between;
+}
+.bizStateRegister .tabBtnWrap.flex .prefix {
+  display: flex;
+  align-items: center;
+}
+.bizStateRegister .tabBtnWrap .tabBtn {
+  line-height: 2.125rem;
+}
+.bizStateRegister .tabBtnWrap .tabBtn a {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .bizStateRegister select.others {
   color: #ff1236;
 }
+.bizStateRegister h4 + .tableTop {
+  margin-top: 30px;
+}
 
-#bizStateRegi3 tr:hover,
-#bizStateRegi4 tr:hover {
-  background: transparent;
+.flexLeft {
+  display: flex;
+  gap: 20px;
+}
+.flexLeft > .prefix {
+  flex-shrink: 0;
+  width: 820px;
+}
+.flexLeft > .suffix {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+.flexTable {
+  width: 100%;
+  overflow-x: auto;
+}
+.flexTable::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.flexTable .tableBox {
+  width: 1000px;
+}
+.flexTable .tableBox th.fold {
+  border-left: 1px solid red;
+}
+.flexTable .tableBox tfoot td {
+  padding: 0;
+}
+
+.hideS,
+.hideB {
+  display: none;
+}
+.hideS.on,
+.hideB.on {
+  display: table-cell;
 }
 
 @media (min-width: 2200px) {
@@ -9733,9 +9971,6 @@ h6 + .h6_sub {
   }
   .myPeoList .yScroll {
     height: calc(100vh - 233px);
-  }
-  .myProjDetail .boxWrap.sticky .yScroll {
-    height: calc(100vh - 540px);
   }
   .memList .boxListWrap {
     height: calc(100vh - 164px);
@@ -9785,6 +10020,7 @@ h6 + .h6_sub {
 .ui-widget-header {
   background: #fff;
   border: 0;
+  position: relative;
 }
 
 .ui-widget.ui-widget-content {
@@ -9829,10 +10065,13 @@ h6 + .h6_sub {
 
 .ui-datepicker .ui-datepicker-title,
 .ui-datepicker-title {
+  line-height: 40px;
   font-size: 1rem;
 }
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight {
+  display: inline-block;
+  width: 100%;
   color: #fff;
   font-weight: bold;
   border: 0;
@@ -9844,6 +10083,8 @@ h6 + .h6_sub {
 }
 
 .ui-state-hover, .ui-widget-content .ui-state-hover {
+  display: inline-block;
+  width: 100%;
   border-radius: 0.25rem;
   background: #fff;
 }
@@ -9853,11 +10094,33 @@ h6 + .h6_sub {
 }
 
 .ui-datepicker-current-day.ui-datepicker-today .ui-state-active, .ui-datepicker-current-day.ui-datepicker-today .ui-widget-content .ui-state-active {
+  display: inline-block;
+  width: 100%;
   color: #fff;
 }
 
+.ui-datepicker-prev {
+  height: 15px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ui-datepicker-next {
+  height: 15px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .ui-widget-header .ui-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
   background-image: url(../img/icoDatepicker.png);
+  text-indent: -999px;
 }
 .ui-widget-header .ui-icon.ui-icon-circle-triangle-w {
   background-position: 0 0;
@@ -9912,7 +10175,7 @@ h6 + .h6_sub {
   background: none;
   border-bottom: 2px solid #000;
 }
-.styleguide .tabBtnWrap .tabBtn:first-child a {
+.styleguide #style-component .tabBtnWrap .tabBtn:first-child a {
   border-radius: 0;
 }
 

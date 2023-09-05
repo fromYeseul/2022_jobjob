@@ -2,7 +2,7 @@
 
 
 .ui-datepicker{box-shadow: 1px 1px 5px rgba(0,0,0,0.2);}
-.ui-widget-header{background: #fff; border: 0;}
+.ui-widget-header{background: #fff; border: 0; position: relative;}
 .ui-widget.ui-widget-content{border: 0;}
 
 
@@ -48,11 +48,14 @@
 //타이틀
 .ui-datepicker .ui-datepicker-title,
 .ui-datepicker-title{
+    line-height: 40px;
     font-size: rem(16);
 }
 
 //오늘
 .ui-state-highlight, .ui-widget-content .ui-state-highlight{
+    display: inline-block;
+    width: 100%;
     color: $white;
     font-weight: bold;
     border: 0;
@@ -65,6 +68,8 @@
 
 //마우스오버
 .ui-state-hover, .ui-widget-content .ui-state-hover{
+    display: inline-block;
+    width: 100%;
     border-radius: rem(4);
     background: $white;
 }
@@ -76,14 +81,34 @@
 .ui-datepicker-current-day{
     &.ui-datepicker-today{
         .ui-state-active, .ui-widget-content .ui-state-active{
+            display: inline-block;
+            width: 100%;
             color: #fff;
         }
     }
 }
 
 //좌우화살표
+.ui-datepicker-prev{
+    height: 15px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ui-datepicker-next{
+    height: 15px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .ui-widget-header .ui-icon{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
     background-image: url(../img/icoDatepicker.png);   
+    text-indent: -999px;
     &.ui-icon-circle-triangle-w{
         background-position: 0 0;
     } 
