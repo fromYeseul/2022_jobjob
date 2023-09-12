@@ -46,6 +46,7 @@
         grid-column: 5/7;
         label{
             margin-right: rem(20);
+            line-height: 44px;
         }
     }
     .boxWrap{
@@ -57,10 +58,20 @@
             }
         }
     }
+    .tabWrapper{
+        &.mt20{
+            .tabBtn{
+                button{
+                    margin-left: rem(735);
+                }
+            }
+        }
+    }
     .tabBtnWrap{
         &.flex{
             justify-content: space-between;
-            .prefix{
+            .prefix,
+            .suffix{
                 display: flex;
                 align-items: center;
             }
@@ -100,40 +111,52 @@
 .flexLeft{
     display: flex;
     gap: 20px;
+    // flex-wrap: nowrap;
+    overflow-x: auto;
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
     >.prefix{
         flex-shrink: 0;
         width: 820px;
     }
     >.suffix{
-        flex-grow: 1;
-        overflow-x: hidden;
+        width: 900px;
+        flex: 0 0 auto;
+        // flex-grow: 1;
+        // overflow-x: hidden;
     }   
+    .tableBox{
+        // width: 1100px;
+        th,
+        td{
+            &.fold{
+                border-left: 1px solid $tableBorder;
+                &.is-active{
+                    border-left: 0;
+                }
+            }
+        }
+        // tfoot{
+        //     td{
+        //         padding: 0;
+        //     }
+        // }
+    }
 }
 
 .flexTable{
     width: 100%;
     overflow-x: auto;
-    &::-webkit-scrollbar-track {
-        background-color: transparent;
-    }
-    .tableBox{
-        width: 1000px;
-        th{
-            &.fold{
-                border-left: 1px solid red;
-            }
-        }
-        tfoot{
-            td{
-                padding: 0;
-            }
-        }
-    }
+    // .suffix{
+        
+    // }
 }
 
 
 .hideS,
-.hideB{
+.hideB,
+.hideI{
     display: none;
     &.on{
         display: table-cell;

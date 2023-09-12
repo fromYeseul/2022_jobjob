@@ -1,0 +1,71 @@
+
+.divideBox{
+    display: flex;
+    h5{
+        margin-bottom: rem(10);
+        color: $beigeTit;
+    }   
+    > div{
+        padding: rem(20);
+        border: 1px solid $boxGray;
+        border-radius: rem(6);
+        & + div{
+            margin-left: -1px;
+        }
+        &.left{
+            width: 40%;
+            & + .center{
+                width: 25%;
+            }
+        }
+        &.right{
+            width: 60%;
+            // .inputList{
+            //     margin-top: 0;
+            //     min-height: rem(50);
+            //     > ul{
+            //         flex-basis: 100%;
+            //         > li{
+            //             min-height: rem(46);
+            //             &.nodata{
+            //                 @include heightArray;
+            //             }
+            //         }
+            //     }
+            // }
+        }
+    }     
+    .history{
+        ul{
+            padding-right: rem(10);
+            height: rem(110);
+            overflow-y: auto;
+        }
+        li{
+            margin-bottom: rem(5);
+            p{
+                font-weight: 500;
+                min-width: rem(120);
+            }
+            .flexBw{
+                color:$subInfo;
+                span{
+                    font-weight: 400;
+                }
+            }
+        }
+    }        
+    .modalFooter{
+        padding-left: rem(250);
+        max-width: initial;
+        &::before{
+            content:'';
+            width: calc(100% + 40px);
+            height: 1px;
+            background: $boxGray;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+        }
+    }
+}

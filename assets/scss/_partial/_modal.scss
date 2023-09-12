@@ -196,6 +196,7 @@
     }
     h2, h3{
         margin-bottom: rem(20);
+        font-size: rem(22);
     }
     & + .momodalCont{
         margin-top: rem(10);
@@ -211,13 +212,10 @@
             text-align: left;
         }
     }
-    h2{
-        text-align: center;
+    h2, h3{
         margin-bottom: rem(26);
-    }
-    h3{
         text-align: center;
-        margin-bottom: rem(26);
+        font-size: rem(22);
         & + .filterList{
             margin-top: rem(10);
         }
@@ -266,21 +264,6 @@
                 max-height: rem(110);
             }
         }
-        // .select{
-        //     .optionList{
-        //         overflow-y: initial;
-        //         .yScroll{
-        //             max-height: rem(110);
-        //             &::-webkit-scrollbar-track {
-        //               background-color: transparent;
-        //             }
-        //             &::-webkit-scrollbar-thumb {
-        //               background-clip: padding-box;
-        //               border: 2px solid transparent;
-        //             }
-        //         }
-        //     }
-        // }
     }
     .tabType{
         input[type=radio]{
@@ -414,36 +397,6 @@
 
 
 
-
-
-
-
-
-
-
-// //토스트팝업
-// .alertToast{
-//     position: absolute;
-//     color: $white;
-//     text-align: left;
-//     padding: rem(5) rem(10);
-//     padding-right: rem(30);
-//     background: $tooltipGray;
-//     box-shadow: 3px 3px 3px rgb(0 0 0 / 20%);
-//     border-radius: rem(5);
-//     display: none;
-//     z-index: 1;
-//     .ico{
-//         position: absolute;
-//         top: 50%;
-//         right: rem(10);
-//         transform: translateY(-5px);
-//     }
-//     &.is-active{
-//         display: block;
-//     }
-// }
-
 #showLevel{
     .tabCont{
         overflow-y: auto;
@@ -558,12 +511,24 @@
         }
     }
 }
+.menuDetail{
+    .tableBox{
+        height: rem(540);
+        padding-right: rem(10);
+    }
+    .right{
+        .inputList{
+            min-height: rem(470);
+        }
+    }
+}
 
 //모집공고관리 - 프로젝트 선택 팝업
 #recruitProject{
     .listBox{
-        margin-bottom: rem(40);
-        height: 400px;
+        margin-top: rem(20);
+        margin-bottom: rem(20);
+        height: rem(360);
         overflow-y: auto;
     }
 }
@@ -657,8 +622,11 @@
                 height: rem(100);
             }
         }
+        .tableBox{
+            margin-top: rem(10);
+        }
         ul{
-            margin: rem(10) 0;
+            // margin: rem(10) 0;
             li{
                 font-size: rem(14);
                 text-align: left;
@@ -867,10 +835,24 @@
 }
 
 //거래처등록-회사검색
-.compSearch{
+//사업현황등록-인력검색
+.compSearch,
+.MmSearch{
     .tableTop{
-        display: block;
         margin-top: 20px;
+        text-align: left;
+        li{
+            flex: 1 1 0; 
+            font-size: rem(14);
+            &:last-child{
+                flex: 2 1 0; 
+                margin-left: 10px;
+            }
+        }
+        label{
+            display: inline-block;
+            margin-bottom: 6px;
+        }
     }
     input{
         flex-grow: 1;
@@ -884,7 +866,7 @@
         }
     }
     .tableBox{
-        height: rem(500);
+        height: rem(540);
     }
 }
 
@@ -922,5 +904,92 @@
                 transform: translateY(-50%);
             }
         }
+    }
+}
+
+//사업현황 등록 - 계약상세
+.contractDetail{
+    .col7{
+        // width: 90%;
+        row-gap: rem(20);
+        column-gap: rem(50);
+        // grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr;
+        grid-template-columns: 60px 110px 80px 120px 90px 130px 110px;
+    }
+    .cont{
+        height: 60vh;
+        overflow-y: auto;
+    }
+    .underBg{
+        margin-top: rem(40);
+    }
+    .info{
+        margin-top: rem(15);
+        color: $subInfo;
+    }
+    .conDTerm,
+    .conDCount{
+        grid-column: 3/5;
+    }
+    .conDFile{
+        grid-column: 1/5;
+    }
+    .dateType{
+        width: rem(110) !important;
+    }
+    .range{
+        margin: 0 4px;
+    }
+
+    .tableTop{
+        .prefix,
+        .suffix{
+            gap: 0;
+        }
+    }
+    .commentBox{
+        .commentInput{
+            padding-bottom: 10px;
+            &::after{
+                display: none;
+            }
+        }
+        .writer{
+            text-align: left;
+        }
+        .comment{
+            width: 820px;
+        }
+    } 
+}
+
+//사업현황 등록 - 계약생성
+.contractCreate{
+    .col4{
+        row-gap: rem(20);
+        column-gap: rem(50);
+        // grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr;
+        grid-template-columns: 3fr 1fr 1fr 1fr;
+    }
+    .info{
+        margin-top: rem(15);
+        color: $subInfo;
+
+    }
+    .tableBox{
+        height: 300px;
+        overflow-y: auto;
+    }
+    .putMm{
+        grid-row: 1/4;
+    }
+    .conDTerm{
+        grid-column: 2/4;
+    }
+    .dateType{
+        width: rem(120) !important;
+    }
+    .range{
+        margin: 0 10px;
     }
 }

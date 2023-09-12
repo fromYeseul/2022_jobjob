@@ -102,11 +102,11 @@
                     <div class="regiPartWrapper">  
                         
                         <div class="regiPart" id="clientRegi0">
-                            <h3>1. 기본정보</h3>
+                            <h3>1. 기본정보 (매입)</h3>
                             
                             <div class="boxWrap hasTooltip">                                
                                 <div class="inputList">   
-                                    <!--230816 법인/개인 소득 -ys -->
+                                    <!--230816 법인/개인 소득 (매입) -ys -->
                                     <ul class="grid bizCorpor"><!--230816 클래스 수정 -ys -->
                                         <li>
                                             <h6 class="need">사업자 유형</h6><!--230816 수정 -ys -->
@@ -116,7 +116,7 @@
                                                 <option value="">사업소득</option>
                                             </select>
                                         </li>
-                                        <li>
+                                        <li class=""><!--'매출'등록에서 "clientCNm"클래스 추가 230901 -ys -->
                                             <h6 class="need">회사명</h6>
                                             <div class="hasBtn">
                                                 <input type="text" placeholder="소속회사명 입력">
@@ -181,13 +181,21 @@
                                             <label for="">팩스번호</label>
                                             <input class="full" type="text" placeholder="숫자만 입력">
                                         </li>
-                                        <li>
+                                        <!-- 230901 삭제 -ys <li>
                                             <h6>협력/대행</h6>
                                             <select class="full" name="" id="">
                                                 <option value="">협력</option>
                                                 <option value="">대행</option>
                                             </select>
+                                        </li> -->
+
+                                        <!-- 230901 이동 tobe -ys -->
+                                        <li class="clientManager">
+                                            <h6>담당자</h6>
+                                            <button class="midSize">담당자 지정</button>
+                                            <span class="mainC ml5">4명</span>
                                         </li>
+                                        <!-- //230901 이동 tobe -ys -->
 
                                         
                                         <li class="clientAdd">
@@ -248,17 +256,19 @@
                                             <input class="full" type="text" readonly>
                                         </li>
 
-                                        <li class="clientManager">
+                                        <!-- 230901 이동 asis -ys -->
+                                        <!-- <li class="clientManager">
                                             <h6>담당자</h6>
                                             <button class="midSize">담당자 지정</button>
                                             <span class="mainC ml5">4명</span>
-                                        </li>
+                                        </li> -->
+                                        <!-- //230901 이동 asis -ys -->
                                         <!--//230816 추가 -ys -->
                                     </ul>  
-                                    <!--//230816 법인/개인 소득 -ys -->
+                                    <!--//230816 법인/개인 소득 (매입) -ys -->
 
                                     
-                                    <!--230816 사업 소득 -ys -->
+                                    <!--230816 사업 소득 (매출) -ys -->
                                     <ul class="grid bizIncome">
                                         <li>
                                             <h6 class="need">사업자 유형</h6>
@@ -331,7 +341,12 @@
                                             <h6>담당자</h6>
                                             <button class="midSize">담당자 지정</button>
                                             <span class="mainC ml5">4명</span>
-                                        </li>
+                                        </li>                                        
+                                    </ul>
+                                    <!--//230816 사업 소득 (매출) -ys -->
+
+                                    <!--230906 분리 -ys-->
+                                    <ul>
                                         <li class="clientFile">                                            
                                             <h6>첨부파일</h6>
                                             <div class="uploadBox">
@@ -359,7 +374,7 @@
                                             </div>
                                         </li>  
                                     </ul>
-                                    <!--//230816 사업 소득 -ys -->
+                                    <!--//230906 분리 -ys-->
                                 </div>                                
 
                                 <div class="tooltip left is-active">
@@ -598,12 +613,23 @@
             </div>
             <div class="modalCont center">
                 <div class="tableTop">
-                    <div class="hasBtn">
-                        <input type="text" placeholder="">
-                        <button>
-                            <i class="ico search white"></i>
-                        </button>
-                    </div>          
+                    <!--230901 수정 -ys -->
+                    <ul class="flex">
+                        <li>
+                            <label for="">회사명</label>
+                            <input class="full" type="text">
+                        </li>
+                        <li>
+                            <label for="">사업자번호</label>
+                            <div class="hasBtn">
+                                <input class="full" type="text" placeholder="">
+                                <button>
+                                    <i class="ico search white"></i>
+                                </button>
+                            </div>                              
+                        </li>
+                    </ul>
+                    <!--//230901 수정 -ys -->
                 </div>
                 <div class="tableBox">
                     <table>
@@ -626,6 +652,46 @@
                                 </td>
                                 <td class="left">
                                     <span class="mainC">삼성</span>전자
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>전기
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>전기
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>전자
+                                </td>
+                                <td>124-08-123876</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="a1" name="fff" checked="">
+                                    <label for="a1"></label>
+                                </td>
+                                <td class="left">
+                                    <span class="mainC">삼성</span>전기
                                 </td>
                                 <td>124-08-123876</td>
                             </tr>

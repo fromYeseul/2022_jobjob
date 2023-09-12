@@ -1,20 +1,64 @@
-.boxListWrap{    
-    //height: calc(100vh - 100px);
-    @include scroll_0;
+
+.boxTop{
+    text-align: right;
 }
 
-
+.boxListWrap{    
+    @include scroll_0;    
+    background: $white;
+    & + .listBottom{
+        padding: rem(20) 0;
+        background: $white;
+    }
+    //마이피플 - 체크박스있는 타입
+    .headTypeBox{
+        margin-top: rem(20);
+        display: flex;
+        // width: 100%;
+        // position: relative;
+        // &.center{
+        //     align-items: center;
+        // }
+        // label{
+        //     & + .boxList{
+        //         margin-left: rem(8);
+        //         width: calc(100% - 26px);
+        //     }
+        // }
+        .boxList{
+            margin-left: rem(8);
+            width: calc(100% - 26px);
+        }
+        // .button{
+        //     &.round{
+        //         padding:0 rem(3);
+        //     }
+        // }
+    }
+    .boxList{
+        & + .boxList{
+            margin-top: rem(20);
+        }
+        &.listType{
+            margin-top: 0;
+            position: relative;
+        }
+    }
+    // >ul{
+    //     >li{
+    //         margin-top: rem(20);
+    //         // &.listType{
+    //         //     margin-top: 0;
+    //         // }
+    //     }
+    // }
+}
 
 .boxWrap,
 .boxList{
     background: $white;
     border-radius: rem(5);
-    // border:1px solid $layoutColor;
-    // &.is-active{
-    //     border:1px solid $mainColor;
-    // }
     .head{
-        align-items: center;
         @include sideArray;        
         .prefix{
             font-weight: 500;
@@ -22,106 +66,68 @@
                 margin-left: rem(4);
             }
         }
-        .suffix{
-            color: $subInfo;
-            font-size: rem(14);
-            span{
-                &:nth-child(2){
-                    margin-left: rem(10);
-                    position: relative;
-                    &::before{
-                        content:'';
-                        width: 1px;
-                        height: rem(14);
-                        background: $subInfo;
-                        position: absolute;
-                        top:50%;
-                        left: -4px;
-                        transform: translateY(-40%);
-                    }
-                }
-            }
-        }
+        // .suffix{
+        //     color: $subInfo;
+        //     font-size: rem(14);
+        //     span{
+        //         &:nth-child(2){
+        //             margin-left: rem(10);
+        //             position: relative;
+        //             &::before{
+        //                 content:'';
+        //                 width: 1px;
+        //                 height: rem(14);
+        //                 background: $subInfo;
+        //                 position: absolute;
+        //                 top:50%;
+        //                 left: -4px;
+        //                 transform: translateY(-40%);
+        //             }
+        //         }
+        //     }
+        // }
     }
-    .title{
-        @include ellipsis;
-        color: $black;
-        font-size: rem(20);
-        font-weight: 700;
-    }
+    // .title{
+    //     @include ellipsis;
+    //     color: $black;
+    //     font-size: rem(20);
+    //     font-weight: 700;
+    // }
     .bottom{
         @include sideArray;
-        align-items: center;
+        align-items: flex-end;
         // .prefix{
         //     color: $subInfo;
         // }
         .button{
             font-weight: 700;
         }  
-        &.right{
-            justify-content: flex-end;
-        }
-    }
-    &.divideType{
-        .head{
-            border-bottom: 1px solid $layoutColor;
-        }
+        // &.right{
+        //     justify-content: flex-end;
+        // }
     }
 }
 
 
 
-.boxListWrap{    
-    // height: calc(100vh - 187px);
-    @include scroll_0;    
-    background: $white;
-    & + .listBottom{
-        // padding: rem(40) 0;
-        padding: rem(20) 0;
-        background: $white;
-    }
-    >ul{
-        >li{
-            margin-top: rem(20);
-            &.listType{
-                margin-top: 0;
-            }
-            &.tableTypeBox{
-                margin-top: 10px;
-            }
-        }
-    }
-}
-
-.boxTop{
-    text-align: right;
-    button, .button{
-        font-weight: 700;
-    }
-}
-
-//직각타입
+//등록화면위주 컨텐츠 박스
 .boxWrap{
     background: $white;
     border-radius: rem(7);
     border: 1px solid $layoutColor;
     font-size: rem(14);
+
+    //마이프로젝트
     &.headType{
-        .head,
-        .bottom{
-            align-items: center;
-            @include sideArray; 
-        }
         .head{
-            position: relative;
+            @include sideArray; 
             .prefix{
                 // color: $subInfo;
-                font-size: rem(14);
+                // font-size: rem(14);
                 @include ellipsis;
                 p{
                     padding: rem(4) 0; //0530 J추가  
                     > span{          
-                        color: $subInfo;
                         &.dNear{
                             margin-right: rem(10);
                         }
@@ -138,25 +144,7 @@
                                 left: -4px;
                                 transform: translateY(-40%);
                             }
-                        }
-                        // margin-left: rem(10);
-                        // position: relative;
-                        // &::before{
-                        //     content:'';
-                        //     width: 1px;
-                        //     height: rem(14);
-                        //     background: $subInfo;
-                        //     position: absolute;
-                        //     top:50%;
-                        //     left: -6px;
-                        //     transform: translateY(-40%);
-                        // }
-                        // &:first-child{
-                        //     margin-left: 0;
-                        //     &::before{
-                        //         display: none;
-                        //     }
-                        // }                    
+                        }              
                     }
                 }    
                 h4{
@@ -170,101 +158,54 @@
         .cont{
             margin-top: rem(10);
             position: relative;
-            // .flexCenter{
-            //     margin: rem(50) 0 rem(30);
-            //     flex-wrap:wrap;
-            //     li{
-            //         width: 20%;
-            //         min-width: rem(104);
-            //         height: rem(90);
-            //         margin-left: -1px;
-            //         padding: rem(20) 0;
-            //         border: 1px solid $layoutColor;
-            //         //border-left: 0;
-            //         text-align: center;
-            //         @include heightArray;
-            //         cursor: pointer;
-            //         // &:nth-child(5){
-            //         //     border-right:0;
-            //         // }
-            //         &.is-active{
-            //             color: $white;
-            //             font-weight: 700;
-            //             background: $mainColor;
-            //             border: 1px solid $mainColor;
-            //         }
-            //     }
-            // }
         }
-        .bottom{
-            .prefix{
-                color: $subInfo;
+    }
+    //사업현황등록 - 계약상세
+    &.titType{
+        padding: 0;
+        .head{
+            padding: rem(20) rem(25);
+            background: $boxTitBg;
+            h3{
+                margin-bottom: 0;
+            }
+            .label{
+                margin-right: 15px;
+                vertical-align: middle;
             }
         }
-    }
-}
-
-
-
-.headTypeBox,
-.tableTypeBox{
-    display: flex;
-    width: 100%;
-    position: relative;
-    &.center{
-        align-items: center;
-    }
-    label{
-        & + .boxList{
-            margin-left: rem(8);
-            width: calc(100% - 26px);
-        }
-    }
-    .button{
-        &.round{
-            padding:0 rem(3);
+        .cont{
+            padding: rem(30);
         }
     }
 }
 
-//둥근타입
+
+//리스트타입 박스
 .boxList{
-    background: $white;
-    border-radius: rem(5);
     font-size: rem(14);
-    .head,
-    .bottom{
-        font-weight: 500;
-        align-items: center;
-        @include sideArray; 
-    }
+    // .head,
+    // .bottom{
+    //     font-weight: 500;
+    //     align-items: center;
+    //     @include sideArray; 
+    // }
     .cont{
         // margin-top: rem(16);
         margin-top: rem(12);
-        position: relative;
-    }      
-    .memSkill{
-        @include ellipsis;
-        display: block !important;
-        width: 54%;  
-    }
-    .photo{
-        width: rem(38);
-        height: rem(38);
-        border-radius: rem(12);
-        vertical-align: middle;
-        // margin-right: rem(10);
-    }
-    button,
-    .button{
-        // &.white{
-        //     border: 1px solid $btnGray;
-        // }
-        &.round{
-            min-width: rem(55);
-            line-height: rem(26);
-        }
-    }
+        // position: relative;
+        @include endArray;
+    }  
+    // button,
+    // .button{
+    //     // &.white{
+    //     //     border: 1px solid $btnGray;
+    //     // }
+    //     &.round{
+    //         min-width: rem(55);
+    //         line-height: rem(26);
+    //     }
+    // }
     .showMore{
         position: absolute;
         right: 0;
@@ -272,11 +213,12 @@
         padding: 0 rem(5);
         transform: translateX(50%);
     }
+    
+    //마이프로젝트, 회원상세
     &.listType{
         padding: rem(16) rem(20);
         border-radius: 0;
         border-bottom:1px solid $tableBorder;
-        position: relative;
         cursor: pointer;
         // &:last-child{
         //     border-bottom: 0;
@@ -286,11 +228,11 @@
                 width: 65%;            
                 @include ellipsis-2;
             }
-            .suffix{
-                position: absolute;
-                right: 0;
-                bottom: 0;
-            }  
+            // .suffix{
+            //     position: absolute;
+            //     right: 0;
+            //     bottom: 0;
+            // }  
         }
         &.is-active{
             border: 2px solid $mainColor;
@@ -303,6 +245,7 @@
     &.flexType{
         margin-bottom: rem(20);
         padding: rem(20) rem(25);
+        border-radius: rem(5);
         border:1px solid $layoutColor;
         @include stretchArray;
         position: relative;
@@ -318,55 +261,50 @@
             background: $jobLayout;
             position: absolute;
             top: 50%;
-            left: 14%;
+            left: 15%;
             transform: translateY(-50%);
         }
         &::after{
             left: auto;
-            right: 14%;
+            right: 16%;
         }
-        i.smClose{
-            position: absolute;
-            right: 0;
-            top: 0;
-            padding: 0 rem(5);
-            transform: translateX(50%);
-        }
-        > .suffix{
-            @include heightArray;
-            &.colType{
-                flex-direction: column;
-            }
-        }
+        // > .suffix{
+        //     @include heightArray;
+        //     &.colType{
+        //         flex-direction: column;
+        //     }
+        //     i.smClose{
+        //         position: absolute;
+        //         right: 0;
+        //         top: 0;
+        //         transform: translateX(50%);
+        //     }
+        // }
         .prefix{
-            width: rem(140);
-            display: flex;
-            align-items: center;
-            li{
-                margin-top: rem(14);
-                &:first-child{
-                    margin-top: 0;
-                }
-                // span{
-                //     &:first-child{
-                //         font-weight: 700;
-                //         margin-right: rem(10);
-                //     }
-                // }
+            // width: rem(140);
+            // display: flex;
+            // align-items: center;
+            ul{
+                @include stretchArray;                
+                flex-direction: column;
+                height: rem(100);
             }
         }        
         .center{
             max-width: rem(900);
-            width: calc(100% - 300px);
-            padding: rem(6) rem(20);
+            width: calc(100% - 330px);
+            @include stretchArray;                
+            flex-direction: column;
+            height: rem(100);
             .head{
                 .prefix{
                     @include ellipsis;
-                    width: 86%;
+                    display: block;
                     font-size: rem(18);
                     font-weight: 700;
                     .label{
                         vertical-align: 2px;
+                        margin-right: 5px;
                     }
                 }
                 .suffix{
@@ -374,7 +312,6 @@
                     font-weight: 500;
                 }
                 .is-deadline{
-                    margin-left: rem(5);
                     position: relative;
                     z-index: 0;
                     &::after{
@@ -391,7 +328,6 @@
             }
             .cont{
                 // margin-top: rem(16);
-                margin-top: rem(10);
                 li{
                     display: inline-block;
                     margin-right: rem(10);
@@ -399,14 +335,14 @@
                 }
             }
             .bottom{
-                margin-top: rem(10);
+                // margin-top: rem(10);
                 // align-items: end;
                 //margin-top: rem(6);
                 // color: $titleGray;
                 .prefix{
-                    width:auto;
-                    @include ellipsis;
-                    width: 70%;
+                    // width:auto;
+                    // @include ellipsis;
+                    // width: 70%;
                     span{
                         margin-right: rem(24);
                     }
@@ -415,58 +351,71 @@
         }    
         .suffix{
             width: rem(140);
-            text-align: center;
             color: $subInfo;
+            text-align: center;
             position: relative;
-            .info{
-                color:$subInfo;
-                margin-bottom: rem(10);
+            @include heightArray;
+            &.colType{
+                flex-direction: column;
+                gap: 5px;
             }
-            .txtCenter{
-                .select{
-                    margin: 10px auto;
-                }
+            i.smClose{
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: translateX(50%);
             }
-            select,
+            // .info{
+            //     color:$subInfo;
+            //     margin-bottom: rem(10);
+            // }
+            // .txtCenter{
+            //     .select{
+            //         margin: 10px auto;
+            //     }
+            // }
+            // select,
             button,
             .button{
-                width: rem(108);
-                height: rem(36);
-                line-height: rem(36);
-                & + button,
-                & + .button{
-                    margin-left: 0;
-                    margin-top: rem(5);
-                }
-                & + .hasTooltip{
-                    margin-top: rem(5);
-                }
+                // min-width: rem(90);
+                width: auto;
+                line-height: rem(34);
+                padding: 0 rem(15);
+                // & + button,
+                // & + .button{
+                //     margin-left: 0;
+                //     margin-top: rem(5);
+                // }
+                // & + .hasTooltip{
+                //     margin-top: rem(5);
+                // }
             }
         }
-        .hasTooltip{
-            .tooltip{
-                &.left{
-                    visibility: hidden;
-                    display: block;
-                    width: auto;
-                    top: 50%;
-                    left: -110px;
-                    transform: translateY(-50%);
-                    text-align: center;
-                }
-            }
-            &:hover{
-                >.tooltip{
-                    visibility: visible;
-                }
-            }
-        }
+        // .hasTooltip{
+        //     .tooltip{
+        //         &.left{
+        //             visibility: hidden;
+        //             display: block;
+        //             width: auto;
+        //             top: 50%;
+        //             left: -110px;
+        //             transform: translateY(-50%);
+        //             text-align: center;
+        //         }
+        //     }
+        //     &:hover{
+        //         >.tooltip{
+        //             visibility: visible;
+        //         }
+        //     }
+        // }
     }
     &.headType,
     &.memoBox{
         // margin-top: rem(20);
         border:1px solid $layoutColor;
         position: relative;
+        cursor:pointer;
         &:first-child{
             margin-top: rem(10);
         }
@@ -476,73 +425,81 @@
             padding: rem(6) rem(8);
             .prefix{
                 font-weight: 400; 
-                .score{
-                    margin-left: rem(10);
-                }
+                // .score{
+                //     margin-left: rem(10);
+                // }
             }
-            .suffix{
-                display: flex;
-                line-height: 1;
-                a{
-                    margin-left: rem(6);
-                }
-            }
+            // .suffix{
+            //     display: flex;
+            //     line-height: 1;
+            //     a{
+            //         margin-left: rem(6);
+            //     }
+            // }
         }
         .cont{       
             margin-top: 0;
-            border-top:0;
-            @include sideArray;
-            font-size: rem(14);
+            // border-top:0;
+            // @include sideArray;
+            // font-size: rem(14);
+            align-items: center;
             padding: rem(14);
+            li{
+                display: flex;
+                gap: 10px;
+            }
             .prefix{
                 width: 75%;
                 color: $subInfo; 
                 position: relative;
-                ul{
-                    width: 98%;
-                    // li{
-                    //     display: flex;
-                    // }
-                }
-                a,
-                span{
-                    margin-right: rem(10);
-                    // line-height: rem(30);
-                }
+                // ul{
+                //     width: 98%;
+                //     // li{
+                //     //     display: flex;
+                //     // }
+                // }
                 .memName{
                     color: $black;
                     font-weight: 500;
-                    p{
-                        color: $subInfo;
-                        font-weight: 400;
-                        font-size: rem(12);
+                    gap: 10px;
+                    .flexCenter{
+                        gap: 10px;
+                        a{
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }  
                     }
-                    a{
-                        text-decoration: underline;
-                        cursor: pointer;
+                    // gap: 10px;
+                    // p{
+                    //     color: $subInfo;
+                    //     font-weight: 400;
+                    //     font-size: rem(12);
+                    // }
+                    .photo{
+                        width: rem(38);
+                        border-radius: rem(12);
+                        vertical-align: middle;
+                        // margin-right: rem(10);
                     }
                 }
-                .memPay{
-                    color: $black;
-                    font-weight: 500;                    
-                    font-size: rem(14);
-                }
+                .memSkill{
+                    @include ellipsis;
+                    display: block !important;
+                } 
                 .memCareer{
-                    color: $highlight;
-                }
-                .memGrd{
                     color: $highlight;
                 }
                 .memMemo{
                     margin-top: rem(10);
                     padding: rem(5) rem(8);
                     background: $bgColor;
-                    color: $subInfo;
                     @include ellipsis;
                     width: 100%;
+                    gap: 0;
                     b{
                         color: $black;
                     }
+                    //앞 말줄임말 타입
                     &.is-active{
                         padding-left: rem(21);
                         &:before {
@@ -554,93 +511,95 @@
                             line-height: rem(12);
                         }
                     }
-                    &.memoTitle{
-                        padding:0;
-                        background: transparent;
-                        @include ellipsis;
-                        width: 100%;
-                        margin-bottom: -10px;
-                        a{
-                            width: 100%;
-                        }
-                    }
-                    &.editType{
-                        padding:0;
-                        background: transparent;
-                        @include ellipsis-5;
-                        width: 100%;
-                        &:before{
-                            display: none;
-                        }                        
-                        &.is-active{
-                            -webkit-line-clamp: initial;
-                        }
+                }
+            }               
+            .memMemo{
+                &.memoTitle{
+                    padding:0;
+                    background: transparent;
+                    @include ellipsis;
+                    width: 100%;
+                    // margin-bottom: -10px;
+                    // a{
+                    //     width: 100%;
+                    // }
+                }
+                &.editType{
+                    margin-top: 0;
+                    padding:0;
+                    background: transparent;
+                    @include ellipsis-5;
+                    // width: 100%;                     
+                    &.is-active{
+                        -webkit-line-clamp: initial;
                     }
                 }
-            }   
-            .center,
-            .suffix{
-                text-align: center;
-                font-size: rem(14);
-                @include heightArray;
-                button{
-                    font-size: rem(14);
-                }
             }
-            .center{
-                margin-left: 0;
-                padding: 0 rem(14);
-                font-weight: 500;
-                // position: relative;
-                // &::before{
-                //     content:'';
-                //     width: 1px;
-                //     height: rem(80);
-                //     background: $layoutColor;
-                //     position: absolute;
-                //     left: 0;
-                //     top: 50%;
-                //     transform: translateY(-50%);
-                // }
-            }
+            // .center,
+            // .suffix{
+            //     // font-size: rem(14);
+            //     // @include heightArray;
+            //     // button{
+            //     //     font-size: rem(14);
+            //     // }
+            // }
+            // .center{
+            //     margin-left: 0;
+            //     padding: 0 rem(14);
+            //     font-weight: 500;
+            // }
             .suffix{
                 min-width: rem(80);
+                text-align: center;
                 color: $disable;
+                position: relative;
                 &.clear{
                     color: $mainColor;
                 }
-                &.colType{
-                    flex-direction: column;
+                &::before{
+                    content:'';
+                    width: 1px;
+                    height: rem(60);
+                    background: $layoutColor;
+                    position: absolute;
+                    left: -10px;
+                    top: 50%;
+                    transform: translateY(-50%);
                 }
-                button{
-                    width: auto;
-                    padding: 0 rem(6);
+                // &.colType{
+                //     flex-direction: column;
+                // }
+                // button{
+                //     width: auto;
+                //     padding: 0 rem(6);
+                // }
+                .dateType{
+                    margin-top: rem(5);
                 }
             }     
         }
-        .bottom{            
-            display: block;
-            padding: rem(14);
-            padding-top: 0;
-            font-weight: 400;
-            color: $subInfo;
-            .comment{
-                color: $black;
-            }
-            .txtCenter{
-                margin-top: 5px;
-            }
-        }        
+        // .bottom{            
+        //     display: block;
+        //     padding: rem(14);
+        //     padding-top: 0;
+        //     font-weight: 400;
+        //     color: $subInfo;
+        //     .comment{
+        //         color: $black;
+        //     }
+        //     .txtCenter{
+        //         margin-top: 5px;
+        //     }
+        // }        
         // .showMore{
         //     right: rem(15);
         //     top: rem(14);
         // }
-        textarea, input[type=text]{
-            margin-top: rem(5);
-            padding: rem(7);
-        }
-        &.is-active{
-            
+        // textarea, input[type=text]{
+        //     margin-top: rem(5);
+        //     padding: rem(7);
+        // }
+        &.is-active{            
             border:1px solid $mainColor;
             .head{
                 color: $white;
@@ -657,165 +616,53 @@
             transform: translateX(-50%);
         }
     }
-    &.headType{
-        border:1px solid $boxHead;
-        .head{
-            background: $boxHead;
-            cursor:pointer;
-        }
-        .cont{
-            .prefix{
-                &::before{
-                    content:'';
-                    width: 1px;
-                    height: rem(60);
-                    background: $layoutColor;
-                    position: absolute;
-                    right: -10px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
-            li{
-                display: flex;
-            }
-        }
-    }
-    &.tableType{
-        border:1px solid $layoutColor;
-        //border-radius: 0;
-        .cont{       
-            margin-top: 0;
-            @include sideArray;
-            font-size: rem(14);
-            padding: rem(14);       
-            text-align: center;
-            position: relative;
-            .memName{
-                width: 14%;
-                text-align: left;
-            }
-            .memSkill{
-                width: 30%;
-            } 
-        }      
-        textarea, input[type=text]{
-            margin-top: rem(5);
-            padding: rem(7);
-        }
-        &.is-active{            
-            border:1px solid $mainColor;
-        }
-    }
-}
-
-//더보기
-.moreList{
-    position: absolute;
-    top: rem(28);
-    right: -25px;
-    display: none;
-    min-width: rem(72);
-    border:1px solid $selGray;
-    z-index: 1;
-    .square{
-        padding: rem(3) rem(8);
-        border:0;
-        margin-left: 0;
-        text-align: left;
-    }
-    &.is-active{
-        display: block;
-    }
-}
-
-
-.divideBox{
-    display: flex;
-    // min-height: rem(600);
-    // overflow-y: auto;
-    font-size: rem(14);
-    > div{
-        padding: rem(20);
-        border-radius: rem(6);
-        &.left{
-            width: 40%;
-            border: 1px solid $boxGray;
-            & + .left{
-                margin-left: -1px;
-            }
-        }
-        &.right{
-            width: 60%;
-            margin-left: -1px;
-            border: 1px solid $boxGray;
-        }
-    }
-    h5{
-        margin-bottom: rem(10);
-        text-align: left;
-        color: $beigeTit;
-    }
-    .left{
-        .tableBox{
-            height: rem(540);
-            padding-right: rem(10);
-        }
-    }
-    .right{
-        .inputList{
-            margin-top: 0;
-            min-height: rem(50);
-            > ul{
-                flex-basis: 100%;
-                > li{
-                    min-height: rem(46);
-                    &.nodata{
-                        @include heightArray;
-                    }
-                }
-            }
-        }
-    }
-    li{
-        &.history{
-            display: block;
-            margin-top: rem(20);
-            padding-right: rem(10);
-            height: rem(120);
-            overflow-y: auto;
-            li{
-                //min-height: auto;
-                p{
-                    text-align: left;
-                    font-weight: 500;
-                    min-width: rem(120);
-                }
-                .flexBw{
-                    margin-top: 0;
-                    flex-grow: 1;
-                    color:$subInfo;
-                    span{
-                        font-weight: 400;
-                    }
-                }
-            }
-        }
-    }
-    
-    .modalFooter{
-        padding-left: rem(250);
-        position: relative;
-        &::before{
-            content:'';
-            width: calc(100% + 40px);
-            height: 1px;
-            background: $boxGray;
-            position: absolute;
-            top: -20px;
-            left: -20px;
-        }
-    }
+    // &.headType{
+    //     .cont{
+    //         .suffix{
+    //             position: relative;
+    //             &::before{
+    //                 content:'';
+    //                 width: 1px;
+    //                 height: rem(60);
+    //                 background: $layoutColor;
+    //                 position: absolute;
+    //                 left: -10px;
+    //                 top: 50%;
+    //                 transform: translateY(-50%);
+    //             }
+    //         }
+    //         li{
+    //             display: flex;
+    //             gap: 10px;
+    //         }
+    //     }
+    // }
+    // &.tableType{
+    //     border:1px solid $layoutColor;
+    //     //border-radius: 0;
+    //     .cont{       
+    //         margin-top: 0;
+    //         @include sideArray;
+    //         font-size: rem(14);
+    //         padding: rem(14);       
+    //         text-align: center;
+    //         position: relative;
+    //         .memName{
+    //             width: 14%;
+    //             text-align: left;
+    //         }
+    //         .memSkill{
+    //             width: 30%;
+    //         } 
+    //     }      
+    //     textarea, input[type=text]{
+    //         margin-top: rem(5);
+    //         padding: rem(7);
+    //     }
+    //     &.is-active{            
+    //         border:1px solid $mainColor;
+    //     }
+    // }
 }
 
 
@@ -829,84 +676,4 @@
 
 
 
-// .boxWrap,
-// .boxList{
-//     background: $white;
-//     border-radius: rem(5);
-//     border:1px solid $layoutColor;
-//     // &.is-active{
-//     //     border:1px solid $mainColor;
-//     // }
-//     .head{
-//         align-items: center;
-//         @include sideArray;      
-//     }
-//     .title{
-//         @include ellipsis;
-//         color: $black;
-//         font-size: rem(20);
-//         font-weight: 700;
-//     }
-//     .cont{
-//         li{
-//             &:last-child{
-//                 color: $highlight;
-//             }
-//         }
-//     }
-//     .bottom{
-//         @include sideArray;
-//         align-items: center;
-//         .prefix{
-//             color: $subInfo;
-//         }
-//         .button{
-//             font-weight: 700;
-//         }  
-//     }
-//     &.divideType{
-//         .head{
-//             border-bottom: 1px solid $layoutColor;
-//         }
-//     }
-//     &.borderType{
-//         &.is-active{
-//             border: 1px solid #0460d2;
-//         }
-//     }
-// }
-// .boxList{
-//     cursor: pointer;
-// }
-
-
-// .boxListWrap{    
-//     height: calc(100vh - 187px);
-//     @include scroll_0;
-//     .boxList{
-//         padding: rem(20);
-//         margin-bottom: rem(1);
-//         border-radius: 0;
-//         border:0;
-//         .cont{
-//             margin-top: rem(10);
-//             position: relative;
-//             .prefix{
-//                 width: 78%;
-//                 @include ellipsis-2;
-//             }
-//             .suffix{
-//                 color: $subInfo;
-//                 font-size: rem(14);
-//                 position: absolute;
-//                 right: 0;
-//                 bottom: rem(3);
-//             }   
-//         }
-//     }
-//     & + .listBottom{
-//         padding: rem(40) 0;
-//         background: $white;
-//     }
-// }
 

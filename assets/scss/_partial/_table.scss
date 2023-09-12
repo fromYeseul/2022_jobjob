@@ -38,6 +38,18 @@
         }
     }
 }
+.tableSort{
+    position: relative;
+    &::after{
+        content:'';
+        width: 1px;
+        height: 100%;
+        background: $tableSort;
+        position: absolute;
+        top: 0;
+        right: -10px;
+    }
+}
 
 
 
@@ -62,6 +74,7 @@ table{
             }
             .hasBtn{
                 .onlyIco{
+                    width: rem(40);
                     height: rem(32);
                 }
             }
@@ -341,6 +354,7 @@ table{
                     th{
                         height: auto;
                         padding-top: 0;
+                        padding-bottom: rem(10);
                         //padding: 0 rem(20);
                     }
                 }

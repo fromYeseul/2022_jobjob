@@ -1,0 +1,41 @@
+//더보기
+.moreList{
+    position: absolute;
+    top: rem(28);
+    right: -25px;
+    display: none;
+    min-width: rem(72);
+    border:1px solid $selGray;
+    background: $white;
+    z-index: 1;
+    &.is-active{
+        display: block;
+    }
+    &.flex{
+        @include heightArray;
+        right: auto;
+        left: 70%;
+        padding: 5px;
+        &.is-active{
+            display: flex;
+        }
+    }
+    button, 
+    .button{
+        &.square{
+            margin-left: 0;
+            padding: rem(3) rem(8);
+            line-height: rem(26);
+            text-align: left;
+            font-weight: 400;
+            color: $subInfo;
+            border:0;
+            border-radius: 0;
+            background: $white;
+            &:hover{
+                color: $black;
+                background: $selHover;
+            }
+        }
+    }
+}

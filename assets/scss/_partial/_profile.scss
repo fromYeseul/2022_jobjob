@@ -107,6 +107,7 @@
         position: absolute;
         top: 10px;
         right: 10px;
+        z-index: 1;
     }
     .phoImg{
         margin-right: rem(10);
@@ -133,17 +134,17 @@
     .profile{
         margin: 0;
         font-weight: 500;
+        text-align: left;
         li{
             margin-bottom: 0;
-            &.subGray {
-                font-weight: 400;
-            }
-            &:nth-child(2){
+            &:nth-child(3){
                 font-size: rem(13);
             }
-            .ellipsis{
+            &.ellipsis{
                 display: inline-block;
                 max-width: 80%;
+                font-weight: 400;
+                color: $subGray2;
             }
         }
     }
@@ -163,12 +164,18 @@
         .left{
             li{
                 display: block;
+                font-size: 16px;
+                font-weight: 500;
+                .subInfo{
+                    margin-left: 2px;
+                }
             }
         }
         ul{
             display: initial;
             li{
                 align-items: center;
+                font-size: rem(14);
             }
             .subInfo{
                 margin-left: 10px;

@@ -13,6 +13,9 @@
     .listBottom{
         @include flex_2_3;
     }
+    .memSkill{
+        width: 58% !important;
+    }
 }
 
 #myPeoA-1{
@@ -23,7 +26,7 @@
                     width: 68%;
                 }
                 .suffix{
-                    width: 26%;
+                    width: 28%;
                 }
             }
         }
@@ -80,6 +83,19 @@
         height: calc(100vh - 190px);
         margin-top: rem(20);
         background: transparent;
+        .boxList{
+            &.flexType{
+                .cont{
+                    margin-top: 0;
+                }
+                &::before{
+                    left: 14%;
+                }
+                &::after{
+                    right: 14%;
+                }
+            }
+        } 
     }
     .default{
         height: 100%;

@@ -55,16 +55,20 @@ $projBoxBorder : #dcdcdc;
 $chipGray : #e6e8ea;
 $accepGray : #aaa;
 
+$boxTitBg : #f2f2f2;
 
+$tableSort: $boxTitBg;
 $tableBgGray : $gnbGray;
 $tableBorder : #dddddd;
 $tableGray : $gray;
 $tableHover : #eaf2f8;
 $tfootGray : #e6e6e6;
+$tFootSort: #c1c3c5;
 
 $tabGray : $layoutColor;
 
 $btnGray : $cancel;
+$turnKey : $activeGray;
 
 $selGray : $cancel;
 $selOptList : $layoutColor;
@@ -118,7 +122,41 @@ $copyRight : #9c9b9b;
 
 
 
-
+.underBg{
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    &::after{
+        content:'';
+        width: 100%;
+        height: 12px;
+        background: $yellowLight;
+        opacity: 0.5;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    & + .inputList,
+    & + .commentBox,
+    & + .tableBox{
+        margin-top: rem(25);
+    }
+}
+.sortL{
+    padding: 0 30px;
+    position: relative;
+    &::before{
+        content: '';
+        width: 1px;
+        height: 20px;
+        background: $tFootSort;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+    }
+}
 
 
 .dot{
@@ -128,6 +166,9 @@ $copyRight : #9c9b9b;
     border-radius: 50%;
     vertical-align: middle;
     margin-right: rem(12);
+}
+.underL{
+    text-decoration: underline;
 }
 
 //상태별 색상
@@ -204,6 +245,9 @@ $copyRight : #9c9b9b;
 .marked,
 .important{
     color: $error;
+}
+.emp{
+    color: $mainColor;
 }
 .dark{
     color: $black;

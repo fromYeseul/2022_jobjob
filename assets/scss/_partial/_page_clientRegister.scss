@@ -51,11 +51,17 @@
 }
 
 .clientRegister{
+    .clientCNm{
+        grid-column: 1/3;
+    }
     .clientWeb, 
-    .clientAccount,
-    .clientCode{
+    .clientAccount{
         grid-column: 3/5;
     }   
+    .clientCode{
+        grid-column: 5/6;
+    }
+    
     .clientAdd, 
     .clientFile{
         grid-column: 1/3;
@@ -64,20 +70,20 @@
     .clientCode{
         display: none;
     }
-    .clientManager{
-        grid-row: 4/5;
-        grid-column: 5/6;
-    }
+    // .clientManager{
+    //     grid-row: 4/5;
+    //     grid-column: 5/6;
+    // }
     //상세일때 - 지급일, 거래처 보이기, 담당자위치이동
     &.is-detail{
         .clientPayday,
         .clientCode{
             display: block;
         }
-        .clientManager{
-            grid-row: 5/6;
-            grid-column: 5/6;
-        }
+        // .clientManager{
+        //     grid-row: 5/6;
+        //     grid-column: 5/6;
+        // }
     }
     //사업소득
     .bizIncome{
@@ -98,10 +104,10 @@
         .clientAdd{
             grid-column: 1/4;
         }
-        .clientManager{
-            grid-row: initial;
-            grid-column: initial;
-        }
+        // .clientManager{
+        //     grid-row: initial;
+        //     grid-column: initial;
+        // }
         .clientPayday{
             display: block;
         }
