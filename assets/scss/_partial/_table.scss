@@ -248,7 +248,7 @@ table{
                 // background: transparent;
                 background: $white;
                 color: $black;
-                border-bottom: 1px solid $layoutColor;
+                border-bottom: 1px solid $gray;
                 // a{
                 span{
                     //color: $black;
@@ -345,7 +345,7 @@ table{
                 > th{
                     border-bottom: 0;
                     height: rem(60);
-                    padding: rem(5) rem(20);
+                    padding: rem(5) rem(0); //0913 J 좌우여백 없애기
                     &:first-child{
                         text-align: left;
                     }
@@ -398,6 +398,7 @@ table{
             }
             strong{
                 display: inline-block;
+                font-weight: 500; //0913 J추가
                 color: $black;
                 margin-bottom: rem(10);            
             }

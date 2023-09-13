@@ -42,6 +42,10 @@
         &.listType{
             margin-top: 0;
             position: relative;
+
+            &:first-child{
+                border-top: 1px solid $tableBorder; //0913 J추가
+            }
         }
     }
     // >ul{
@@ -129,7 +133,7 @@
                     padding: rem(4) 0; //0530 J추가  
                     > span{          
                         &.dNear{
-                            margin-right: rem(10);
+                            margin-right: rem(30); //0913 J수정
                         }
                         &:last-child{
                             margin-left: rem(6);
@@ -138,10 +142,10 @@
                                 content:'';
                                 width: 1px;
                                 height: rem(12);
-                                background: $subInfo;
+                                background: $boxHead;
                                 position: absolute;
                                 top:50%;
-                                left: -4px;
+                                left: -6px; //0913 J수정  
                                 transform: translateY(-40%);
                             }
                         }              
@@ -151,7 +155,7 @@
                     margin-top: rem(6);
                     .point{
                         vertical-align: 2px;
-                        margin-right: 2px;
+                        margin-right: 4px; //0913 J수정  
                     }
                 }            
             }          
@@ -236,7 +240,7 @@
             // }  
         }
         &.is-active{
-            border: 2px solid $mainColor;
+            border: 2px solid $mainColor !important; 
         }       
         .alertToast{
             top: rem(40);
@@ -293,7 +297,7 @@
         }        
         .center{
             max-width: rem(900);
-            width: calc(100% - 330px);
+            width: calc(100% - 350px); //0913 J 330 -> 350 변경 
             @include stretchArray;                
             flex-direction: column;
             height: rem(100);
@@ -311,6 +315,8 @@
                 .suffix{
                     width: auto;
                     font-weight: 500;
+                    font-size: rem(16);//0913 J 추가
+                    color: $subGray; //0913 J 추가
                 }
                 .is-deadline{
                     position: relative;
@@ -382,6 +388,7 @@
                 width: auto;
                 line-height: rem(34);
                 padding: 0 rem(15);
+                margin: rem(3) 0;//0913 J 추가
                 // & + button,
                 // & + .button{
                 //     margin-left: 0;
