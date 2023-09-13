@@ -128,7 +128,8 @@ button,
         height: rem(26);
         line-height: rem(24);
         color: $black;
-        font-size: rem(13);
+        font-size: rem(15);//0913 J 13 -> 15변경
+        margin-right: rem(2); //0913 J 추가
         font-weight: 500;
         word-break: keep-all;
         vertical-align: text-bottom;  
@@ -186,7 +187,7 @@ button,
         }
         &.is-active{
             background-color: $selHover;
-            border: 1px solid $btnActive;
+            border: 1px solid $inputGray; //0913 J수정
         }
     }
     &.txtType{
@@ -300,7 +301,7 @@ span{
 .count{
     margin-left: rem(6);
     display: inline-block;
-    padding: 0 rem(4);
+    padding: 0 rem(3) 0 rem(2);
     min-width: rem(20);
     line-height: rem(19);
     color: $white;

@@ -11,7 +11,7 @@
     margin-top: rem(40);
     margin-bottom: rem(25);
     @include sideArray;
-    padding: rem(20);
+    padding: rem(20); 
     padding-left: rem(30);
     border-radius: rem(10);
     border: 1px solid $projBoxBorder;
@@ -42,16 +42,17 @@
 .projRole{
     display: flex;
     align-items: center;
-    font-weight: 500;
+    //font-weight: 500; //0913 J삭제
     .round{
         margin-right: 10px;
         width: rem(62);
+        font-size: rem(13); //0913 J추가
         color: $cancel;
     }
     .field{
         margin-right: 20px;
-        width: rem(100);
-        font-size: rem(13);
-        color: $subInfo;
+        width: rem(106);
+        font-size: rem(14);
+        color: $mainColor;
     }
 }

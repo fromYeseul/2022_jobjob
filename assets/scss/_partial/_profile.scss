@@ -160,12 +160,13 @@
     .profile{
         margin: 0;
         display: flex;
-        gap: 40px;
+        gap: 26px; //0913 J 40 -> 26변경
         .left{
             li{
                 display: block;
-                font-size: 16px;
+                font-size: 14px; //0913 J 16 -> 14변경
                 font-weight: 500;
+                min-width: 120px; //0913 J 추가
                 .subInfo{
                     margin-left: 2px;
                 }
@@ -175,10 +176,12 @@
             display: initial;
             li{
                 align-items: center;
-                font-size: rem(14);
+                font-size: rem(15);
+                font-weight: 500; //0913 J 추가
             }
             .subInfo{
                 margin-left: 10px;
+                color: $subGray; //0913 J 추가
             }
             .bdType{
                 margin-top: 0;
