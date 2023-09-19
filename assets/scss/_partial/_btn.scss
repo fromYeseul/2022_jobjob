@@ -128,7 +128,7 @@ button,
         height: rem(26);
         line-height: rem(24);
         color: $black;
-        font-size: rem(15);//0913 J 13 -> 15변경
+        font-size: rem(13);
         margin-right: rem(2); //0913 J 추가
         font-weight: 500;
         word-break: keep-all;
@@ -177,6 +177,7 @@ button,
             min-width: auto;
             line-height: rem(30);
             height: rem(32);
+            display: inline-flex;
         }
         &.round{
             border-radius: 50%;
@@ -248,10 +249,12 @@ button,
 
     //색상별
     &.main{
+        font-size: rem(15);
         color: $subBlue;
         border-color: $subBlue;
     }
     &.sub{
+        font-size: rem(15);
         color: $subGray;
         border-color: $subGray;
     }

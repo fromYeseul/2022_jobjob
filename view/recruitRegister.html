@@ -225,6 +225,11 @@
                                             <input class="dateType laSize" type="text" placeholder="시작일">
                                             <span class="range">~</span>
                                             <input class="dateType laSize" type="text" placeholder="종료일">
+
+                                            <!--230915 추가-ys-->
+                                            <input type="checkbox" id="aa" name="workYear" class="hasTxt">
+                                            <label for="aa" class="ml10">상시</label>
+                                            <!--//230915 추가-ys-->
                                         </li>
                                         <li class="investPeriod">
                                             <label for="">프로젝트 투입기간(선택)</label>
@@ -632,16 +637,104 @@
     </div>
     <!--//프로젝트 변경하기 팝업-->
 
+    <!--모집직무선택 팝업-->
+    <div id="recruitJob" class="modalLayer center is-active">
+        <div class="layerBox">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont"> 
+                <h3>모집 직무 선택</h3>                
+
+                <div class="filterList mt50">
+                    <div class="listBox">
+                        <div class="prefix">
+                            <div class="chkWrap boxListType">
+                                <input type="radio" id="a01" name="jobGroup">
+                                <label for="a01">개발</label>
+
+                                <input type="radio" id="a02" name="jobGroup">
+                                <label for="a03">개발(SAP)</label>
+
+                                <input type="radio" id="a03" name="jobGroup">
+                                <label for="a03">컨설팅</label>
+
+                                <input type="radio" id="a04" name="jobGroup">
+                                <label for="a04">컨설팅(SAP)</label>  
+                                
+                                <input type="radio" id="a05" name="jobGroup">
+                                <label for="a05">기획</label>   
+                                    
+                                <input type="radio" id="a06" name="jobGroup">
+                                <label for="a06">디자인</label>
+                                    
+                                <input type="radio" id="a07" name="jobGroup">
+                                <label for="a07">퍼블리싱</label>
+                                    
+                                <input type="radio" id="a08" name="jobGroup">
+                                <label for="a08">기획</label>   
+                                    
+                                <input type="radio" id="a09" name="jobGroup">
+                                <label for="a09">개발</label>                                         
+                            </div>
+                        </div>
+                        <div class="suffix">    
+                            <div class="chkWrap boxListType listType">
+                                <input type="radio" id="aa01" name="jobGroup">
+                                <label for="aa01">모바일기획</label>
+
+                                <input type="radio" id="aa02" name="jobGroup">
+                                <label for="aa02">웹기획</label>
+
+                                <input type="radio" id="aa03" name="jobGroup">
+                                <label for="aa03">사업기획</label>      
+
+                                <input type="radio" id="aa04" name="jobGroup">
+                                <label for="aa04">웹기획</label>
+
+                                <input type="radio" id="aa05" name="jobGroup">
+                                <label for="aa05">기타</label>      
+
+                                <input type="radio" id="aa06" name="jobGroup">
+                                <label for="aa06">사업기획</label>
+
+                                <input type="radio" id="aa07" name="jobGroup">
+                                <label for="aa07">사업기획</label>      
+
+                                <input type="radio" id="aa08" name="jobGroup">
+                                <label for="aa08">웹기획</label>
+
+                                <input type="radio" id="aa09" name="jobGroup">
+                                <label for="aa09">사업기획</label>                                    
+                            </div>           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alertToast is-active" id="toast01">
+                    하나만 선택할 수 있습니다.
+                    <i class="ico smClose white"></i>
+                </div>
+            </div>
+            <div class="modalFooter">
+                <button class="white layerClose">취소</button>
+                <button class="">선택완료</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//모집직무선택 팝업-->
+
 
     <!--이전공고불러오기 팝업-->
-    <div id="preRecruit" class="modalLayer center is-active"><!--id 바뀌면 말씀해주세요 -ys -->
+    <div id="preRecruit" class="modalLayer center"><!--id 바뀌면 말씀해주세요 -ys -->
         <div class="layerBox midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
                 <!-- <h2>이전공고불러오기</h2> 230901 이동 asis -ys -->
             </div>
             <div class="modalCont center">
-                <h2>이전공고불러오기</h2><!--230901 이동 asis -ys -->
+                <h2>이전공고 불러오기</h2><!--230901 이동 asis -ys -->
                 <div class="tableTop">
                     <div class="h6_sub">최근 6개월 내 등록된 모집공고만 노출됩니다.</div><!--230901 수정 -ys -->
                     
@@ -841,7 +934,7 @@
 
 
     <!--모집공고 미리보기 팝업 230718 추가-->
-    <div id="recruitPreview" class="modalLayer center is-active"><!--id바뀌면 말씀해주세요 -ys-->
+    <div id="recruitPreview" class="modalLayer center"><!--id바뀌면 말씀해주세요 -ys-->
         <div class="layerBox">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -970,7 +1063,7 @@
     
 
     <!--datepicker 230901 추가 -ys-->
-    <div id="datepickerTest" class="modalLayer center is-active">
+    <div id="datepickerTest" class="modalLayer center">
         <div class="layerBox smMidSize"><!--230901 클래스추가-ys -->
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   

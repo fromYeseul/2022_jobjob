@@ -62,9 +62,12 @@
             &.is-active{                
                 .close{
                     &::after{
-                        background-position: -140px -120px;
+                        transform: translate(-50%, -50%) rotate(180deg);
                     }
                 }
+            }
+            .accHead{
+                padding: rem(12) 0;
             }
         }
         .accInner{
@@ -90,10 +93,10 @@
             z-index: 1;
             &::after{
                 content: "";
-                width: 18px;
-                height: 10px;
-                background-image: url(../img/icoGroup.png);
-                background-position: -120px -120px;
+                width: rem(12);
+                height: rem(6);
+                background-image: url(../img/icoSelect.png);
+                // background-position: -120px -120px;
                 position: absolute;
                 top: 0;
                 left: 50%;
@@ -109,7 +112,7 @@
     background: $white;
     border-radius: rem(6);
     border:1px solid $layoutColor;
-    // overflow: hidden;   
+    // overflow: hidden;  
     &.is-active{
         border:1px solid $mainColor;
         i.smPlus{
@@ -122,10 +125,13 @@
     }
     & + .accBox{
         margin-top: rem(12);
-    }  
-    & + .accBox:last-child{ //0913 J 추가
+    }   
+    &:last-of-type{
         margin-bottom: rem(15);
-    }  
+    }
+    // & + .accBox:last-child{ //0913 J 추가
+    //     margin-bottom: rem(15);
+    // }  
     
     .nodata{
         // padding: rem(30);
@@ -150,9 +156,14 @@
         }
     }
     .signDate{
-        margin-right: rem(30);
         color: $accepGray; //0913 J 수정
         font-size: rem(14); //0913 J 추가
+        & + .round{
+            margin-left: rem(30);
+        }
+        & + input + label{
+            margin-left: rem(10);
+        }
     }
 }
 

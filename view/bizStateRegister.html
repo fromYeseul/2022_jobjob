@@ -7,6 +7,7 @@
     <title>사업현황 등록</title>
     
     <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- <link rel="stylesheet" href="../assets/css/style_pms.css"> -->
 </head>
 <body>
 
@@ -258,8 +259,10 @@
                                         </div>
 
                                         <div class="tabWrapper" id="onContract">
-                                            <ul class="tabBtnWrap autoSize flex">
-                                                <div class="prefix">
+                                            
+                                            <!--230915 수정-ys -->
+                                            <div class="flex">
+                                                <ul class="tabBtnWrap autoSize">
                                                     <li class="tabBtn">
                                                         <a href="#onC-1" class="is-active">전체</a>
                                                     </li>
@@ -281,13 +284,10 @@
                                                     <li class="tabBtn">
                                                         <a href="#onC-4" class="">+</a>
                                                     </li>
-                                                </div>
-                                                <div class="suffix">
-                                                    <button class="white smSize">
-                                                        + 행추가
-                                                    </button>
-                                                </div>
-                                            </ul>
+                                                </ul>                                                
+                                                <button class="white smSize">+ 행추가</button>
+                                            </div>
+                                            <!--//230915 수정-ys -->
                                             <div class="tabContWrap">
                                                 <div id="onC-1" class="tabCont is-active">
                                                     <div class="tableBox">
@@ -473,19 +473,19 @@
                                         </div>
 
                                         <div class="tabWrapper" id="onActual">
-                                            <ul class="tabBtnWrap autoSize flex">
-                                                <div class="prefix">
+                                            <!--230915 수정-ys -->
+                                            <div class="flex">
+                                                <ul class="tabBtnWrap autoSize">
                                                     <li class="tabBtn">
                                                         <a href="#onA-1" class="">매입계획</a><!--하단 jquery에서 id사용중-->
                                                     </li>
                                                     <li class="tabBtn">
                                                         <a href="#onA-2" class="is-active">투입현황</a><!--하단 jquery에서 id사용중-->
-                                                    </li>
-                                                </div>
-                                                <div class="suffix">
-                                                    <button class="white smSize">+ 행추가</button>
-                                                </div>
-                                            </ul>
+                                                    </li>                                                        
+                                                </ul>
+                                                <button class="white smSize">+ 행추가</button>
+                                            </div>
+                                            <!--//230915 수정-ys -->
                                             <div class="tabContWrap">
                                                 <div id="onA-1" class="tabCont">
                                                     <div class="tableBox">
@@ -840,17 +840,15 @@
 
                                 <!--하단테이블-->
                                 <div class="tabWrapper mt20" id="onActual">
-                                    <ul class="tabBtnWrap autoSize flex">
-                                        <div class="prefix">
-                                            <li class="tabBtn">
-                                                <a href="#onAA2" class="is-active">투입인력</a>
+                                    <!--230915 수정-ys -->
+                                    <ul class="tabBtnWrap autoSize">
+                                        <li class="tabBtn">
+                                            <a href="#onAA2" class="is-active">투입인력</a>
 
-                                                <button class="white smSize">
-                                                    + 아래 행추가
-                                                </button>
-                                            </li>
-                                        </div>
+                                            <button class="white smSize">+ 아래 행추가</button>
+                                        </li>
                                     </ul>
+                                    <!--//230915 수정-ys -->
                                     <div class="tabContWrap">
                                         <div id="onAA2" class="tabCont is-active">
                                             <div class="flexTable flexLeft">
@@ -1144,19 +1142,21 @@
                             <div class="boxWrap flex_1_1">
                                 <div class="prefix tableSort">
                                     <div class="tabWrapper" id="contractAll">
-                                        <ul class="tabBtnWrap autoSize flex">                                            
-                                            <div class="prefix">
+                                        <!--230915 수정-ys -->
+                                        <div class="flex">
+                                            <ul class="tabBtnWrap autoSize">    
                                                 <li class="tabBtn">
                                                     <a href="" class="is-active">전체</a>
                                                 </li>
-                                            </div>
-                                            <div class="suffix">
+                                            </ul>
+                                            <div class="flex">
                                                 <button class="white smSize">계약분리</button>
                                                 <button class="onlyIco lowSize">
                                                     <i class="ico refresh"></i>
                                                 </button>
                                             </div>
-                                        </ul>
+                                        </div>
+                                        <!--//230915 수정-ys -->
                                         <div class="tabContWrap">
                                             <div class="tabCont is-active">
                                                 <div class="tableBox">
@@ -1262,17 +1262,15 @@
                                 </div>
                                 <div class="suffix">
                                     <div class="tabWrapper" id="contractClass">
-                                        <ul class="tabBtnWrap autoSize flex">
-                                            <div class="prefix">
-                                                <li class="tabBtn prefix">
-                                                    <a href="#contract-01" class="is-active">투입인력</a>
-                                                </li>
-                                                <li class="tabBtn center">
-                                                    <a href="#contract-02">제경비</a>
-                                                </li>
-                                                <!-- <div class="h6_sub">동일 소속으로 투입된 인력입니다.</div> 투입인력 active 시 보임 -->
-                                                <div class="h6_sub">'매입합산제외' 항목으로 입력된 제경비는 매입합계금액에 합산되지 않습니다.</div><!--제경비 active 시 보임-->
-                                            </div>
+                                        <ul class="tabBtnWrap autoSize">
+                                            <li class="tabBtn prefix">
+                                                <a href="#contract-01" class="is-active">투입인력</a>
+                                            </li>
+                                            <li class="tabBtn center">
+                                                <a href="#contract-02">제경비</a>
+                                            </li>
+                                            <!-- <div class="h6_sub">동일 소속으로 투입된 인력입니다.</div> 투입인력 active 시 보임 -->
+                                            <div class="h6_sub">'매입합산제외' 항목으로 입력된 제경비는 매입합계금액에 합산되지 않습니다.</div><!--제경비 active 시 보임-->
                                             <!-- <div class="suffix">
                                                 <button class="white smSize">계약분리</button>
                                             </div> -->

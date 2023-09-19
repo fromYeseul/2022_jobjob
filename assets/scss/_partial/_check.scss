@@ -487,13 +487,17 @@ input[type=radio]{
         opacity: 0;
         position: fixed;
         + label{
-            font-size:rem(15);
             margin-left: -1px;
+            margin-bottom: 0;
             min-width: rem(86);
             line-height: rem(42);
+            //padding-bottom: 0;
+
             text-align: center;
+            font-size:rem(15);
             color: $titleGray;
             font-weight: 400;
+
             background: $white;
             border: 1px solid $inputGray;
             cursor:pointer;
@@ -546,7 +550,8 @@ input[type=radio]{
         input[type=radio]{
             + label{
                 //width: rem(63); //221202
-                width: rem(72);  
+                // width: rem(72);  
+                width: rem(76);  
                 min-width: rem(60);
                 line-height: rem(28);
                 margin-right: -2px;            
@@ -636,7 +641,7 @@ input[type=radio]{
                         display: inline-block;
                         padding: 0 rem(4);
                         min-width: rem(20);
-                        height: rem(20);
+                        line-height: rem(20);
                         text-align: center;
                         border-radius: rem(30);
                         background: $white;

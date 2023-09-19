@@ -127,14 +127,17 @@ input[type=password]{
     & + button{
         margin-top: rem(10);
     }
-    > ul,
-    .grid{
+    > ul{
+    // .grid{
         > li{ 
             margin-bottom: rem(20);
             position: relative;
             // > label{
             //     margin-bottom: rem(10);    
             // }
+            &:last-of-type{
+                margin-bottom: 0;
+            }
         }
         &.grid{
             li{
@@ -150,7 +153,7 @@ input[type=password]{
         display: block;
         font-weight: 500;  
         font-size: rem(15); //0913 J추가
-        padding-bottom: rem(5); //0913 J추가
+        //padding-bottom: rem(5); //0913 J추가
         &.need{
             position: relative;
             &::after{
@@ -201,12 +204,13 @@ input[type=password]{
                 }
             }
             textarea{
-                height: calc(100% - 30px);  //프로젝트 등록
+                // height: calc(100% - 27px);  //프로젝트 등록
+                height: calc(100% - 7px);
             }
-            .onlyIco{
-                width: rem(32);
-                height: rem(32);
-            }
+            // .onlyIco{
+            //     width: rem(32);
+            //     height: rem(32);
+            // }
         }
     }  
     &.flex{
@@ -600,6 +604,7 @@ input[type=file] {
 
     //파일업로드
     &.upload{
+        margin-top: 10px;
         display: inline-block;
         // width: calc(100% - 132px);
         padding: 10px 20px;
@@ -618,7 +623,7 @@ input[type=file] {
         }
         &.wide{
             padding: rem(18) rem(30);
-            width: rem(600);
+            width: rem(500);
         }
         label{
             line-height: rem(20);
@@ -636,8 +641,8 @@ input[type=file] {
         .list{
             .list_ul{
                 display: block;
-                margin-top: 10px;
                 li{
+                    margin-top: 10px;
                     @include sideArray;
                     padding: 0 rem(4);
                     border-radius: rem(4);                   
@@ -734,24 +739,30 @@ input[type=file] {
 }
 
 //이력서 첨부파일
-a{
-    &.download{
+.portfolio{
+    padding: rem(15);
+    border-radius: 6px;
+    background: rgba($white, 0.5);
+    a{
+        display: block;
+        & + a{
+            margin-top: 10px;
+        }
         img{
             vertical-align: -3px;
             margin-right: rem(4);
         }
         span{
             display: block;
-            margin-top: rem(10);
+            //margin-top: rem(10);
             // padding: rem(15) rem(10);
             // background: $white;
             border-radius: rem(5);
             @include ellipsis;
             width: 100%;
         }
-    }    
+    }  
 }
-
 
 
 

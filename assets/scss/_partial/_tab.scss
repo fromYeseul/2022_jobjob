@@ -56,7 +56,7 @@
                 border-radius: rem(4) 0 0 rem(4);
             }                
         } 
-        &:last-child{                
+        &:last-of-type{            
             a{
                 border-radius: 0 rem(4) rem(4) 0;
             }                
@@ -92,9 +92,17 @@
         }
     }
     &.autoSize{
+        position: relative;
         a{
             padding: 0 rem(8);
-            width: auto;
+            min-width: auto;
+        }
+        .absol{
+            display: flex;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
     &.wideSize{
@@ -108,7 +116,7 @@
         border-bottom:1px solid $tabGray; 
         .tabBtn{
             a{
-                width: auto;
+                min-width: auto;
                 border: 0;
                 position: relative;
                 &.is-active{                    

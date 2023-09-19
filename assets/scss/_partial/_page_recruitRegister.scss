@@ -7,16 +7,18 @@
             }
         }
     }
-    .inputGroup{
-        height: rem(80);
-        & + .chipBox{
-            margin-top: rem(10);
-            padding: 0;
-            .chip{
-                cursor: pointer;
-                &.disabled{
-                    opacity: .5;
-                    cursor: not-allowed;
+    .recruitSkill{        
+        .inputGroup{
+            height: rem(80);
+            & + .chipBox{
+                margin-top: rem(10);
+                padding: 0;
+                .chip{
+                    cursor: pointer;
+                    &.disabled{
+                        opacity: .5;
+                        cursor: not-allowed;
+                    }
                 }
             }
         }
@@ -39,8 +41,11 @@
                 height: rem(44);
                 text-align: center;
             }
+            &.dateType{
+                width: rem(168) !important;
+            }
             &.sm-midSize{
-                width: rem(160);
+                width: rem(166);
             }
         }
         .range{

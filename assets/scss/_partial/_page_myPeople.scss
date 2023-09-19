@@ -6,7 +6,7 @@
         padding: rem(20);
     }
     .yScroll{
-        height: calc(100vh - 222px);    
+        height: calc(100vh - 246px);    
         font-size: rem(14);
         @include scroll_0;
     }
@@ -14,26 +14,12 @@
         @include flex_2_3;
     }
     .memSkill{
-        width: 58% !important;
+        // width: 58% !important;
+        width: 160px !important;
     }
 }
 
 #myPeoA-1{
-    .boxList{
-        &.headType{
-            .cont{
-                .prefix{
-                    width: 68%;
-                }
-                .suffix{
-                    width: 28%;
-                }
-            }
-        }
-    }
-}
-
-.usableMan{
     .condition{
         margin-bottom: rem(10);
         li{
@@ -61,7 +47,20 @@
     .yScroll{
         height: calc(100vh - 350px);
     }
+    .boxList{
+        &.headType{
+            .cont{
+                .prefix{
+                    width: 68%;
+                }
+                .suffix{
+                    width: 28%;
+                }
+            }
+        }
+    }
 }
+
 
 .myPeoDetail{
     .notiBox{
@@ -85,14 +84,26 @@
         background: transparent;
         .boxList{
             &.flexType{
-                .cont{
-                    margin-top: 0;
-                }
                 &::before{
                     left: 14%;
                 }
                 &::after{
                     right: 14%;
+                }
+            }
+            // .cont{
+            //     margin-top: 0;
+            // }
+
+            .hasTooltip{
+                &:hover{
+                    .tooltip{
+                        display: block;    
+                        width: auto;
+                        top: 50%;
+                        left: -110px;
+                        transform: translateY(-50%);                            
+                    }
                 }
             }
         } 

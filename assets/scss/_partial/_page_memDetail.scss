@@ -11,7 +11,7 @@
     }
     .boxListWrap{    
         // height: calc(100vh - 124px);
-        height: calc(100vh - 154px);
+        height: calc(100vh - 156px);
     }
     .boxList{
         height: rem(110);
@@ -133,7 +133,9 @@
         .mid{
             li{
                 position: relative;
+                margin: 10px 0;
                 margin-left: rem(24);
+                height: rem(20);
                 &::before{
                     content:'';
                     width: rem(16);
@@ -180,7 +182,8 @@
         .bottom{
             b{
                 display: block;
-                margin-top: rem(24);
+                // margin-top: rem(24);
+                margin-top: rem(48);
                 &:first-child{
                     margin-top: 0;
                 }
@@ -191,6 +194,9 @@
                 &.download{
                     text-decoration: none;
                 }
+            }
+            .portfolio{
+                margin-top: rem(10);
             }
         }
     }

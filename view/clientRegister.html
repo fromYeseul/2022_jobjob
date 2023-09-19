@@ -107,164 +107,166 @@
                             <div class="boxWrap hasTooltip">                                
                                 <div class="inputList">   
                                     <!--230816 법인/개인 소득 (매입) -ys -->
-                                    <ul class="grid bizCorpor"><!--230816 클래스 수정 -ys -->
-                                        <li>
-                                            <h6 class="need">사업자 유형</h6><!--230816 수정 -ys -->
-                                            <select class="full" name="" id="">
-                                                <option value="">법인</option>
-                                                <option value="">개인</option>
-                                                <option value="">사업소득</option>
-                                            </select>
-                                        </li>
-                                        <li class=""><!--'매출'등록에서 "clientCNm"클래스 추가 230901 -ys -->
-                                            <h6 class="need">회사명</h6>
-                                            <div class="hasBtn">
-                                                <input type="text" placeholder="소속회사명 입력">
-                                                <button>
-                                                    <i class="ico search white"></i>
-                                                </button>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <label class="need" for="">사업자번호</label>
-                                            <input class="full" type="text" placeholder="숫자만 입력">
-                                        </li>
-                                        <li>
-                                            <label for="">법인번호</label>
-                                            <input class="full" type="text" placeholder="숫자만 입력">
-                                        </li>
-                                        <li>
-                                            <h6 class="need">폐업구분</h6>
-                                            <select class="full" name="" id="">
-                                                <option value="">정상</option>
-                                                <option value="">폐업</option>
-                                            </select>
-                                        </li>
-
-                                        <li>
-                                            <label class="need">업태</label><!--230816 클래스추가-ys -->
-                                            <input class="full" type="text">
-                                        </li>
-                                        <li>
-                                            <label class="need">업종</label><!--230816 클래스추가-ys -->
-                                            <input class="full" type="text">
-                                        </li>
-                                        <li class="clientWeb">
-                                            <label for="">홈페이지</label>
-                                            <input class="full" type="text">
-                                        </li>
-                                        <li>
-                                            <h6 class="need">사용상태</h6>
-                                            <select class="full" name="" id="">
-                                                <option value="">사용</option>
-                                                <option value="">미사용</option>
-                                            </select>
-                                        </li>
-
-                                        <li>
-                                            <label class="need" for="">대표자명</label>
-                                            <input class="full" type="text">
-                                        </li>
-                                        <li>
-                                            <label class="" for="">대표자 연락처</label><!--230816 클래스삭제-ys -->
-                                            <input class="smSize" type="text">
-                                            <span class="hyphen">-</span>
-                                            <input class="smSize" type="text">
-                                            <span class="hyphen">-</span>
-                                            <input class="smSize" type="text">
-                                        </li>
-                                        <li>
-                                            <label for="">대표번호</label>
-                                            <input class="full" type="text" placeholder="숫자만 입력">
-                                        </li>
-                                        <li>
-                                            <label for="">팩스번호</label>
-                                            <input class="full" type="text" placeholder="숫자만 입력">
-                                        </li>
-                                        <!-- 230901 삭제 -ys <li>
-                                            <h6>협력/대행</h6>
-                                            <select class="full" name="" id="">
-                                                <option value="">협력</option>
-                                                <option value="">대행</option>
-                                            </select>
-                                        </li> -->
-
-                                        <!-- 230901 이동 tobe -ys -->
-                                        <li class="clientManager">
-                                            <h6>담당자</h6>
-                                            <button class="midSize">담당자 지정</button>
-                                            <span class="mainC ml5">4명</span>
-                                        </li>
-                                        <!-- //230901 이동 tobe -ys -->
-
-                                        
-                                        <li class="clientAdd">
-                                            <h6 class="need">주소</h6>
-                                            <input class="full" type="text" id="" placeholder="상세주소"> <!--230814 수정 -ys -->
-                                        </li>
-                                        <li class="clientAccount">
-                                            <h6 class="need">계좌정보</h6><!--230814 글자수정 -ys-->
-                                            <div class="flex mt6">
-                                                <select class="laSize" name="" id="">
-                                                    <option value="">은행선택</option>
-                                                    <option value="">신한은행</option>
-                                                    <option value="">국민은행</option>
-                                                    <option value="">우리은행</option>
+                                    <form action="">
+                                        <ul class="grid bizCorpor"><!--230816 클래스 수정 -ys -->
+                                            <li>
+                                                <h6 class="need">사업자 유형</h6><!--230816 수정 -ys -->
+                                                <select class="full" name="" id="">
+                                                    <option value="">법인</option>
+                                                    <option value="">개인</option>
+                                                    <option value="">사업소득</option>
                                                 </select>
-                                                <input class="full ml5" type="text" id="" placeholder="계좌번호">                                                             
-                                            </div>
-                                        </li>       
-                                        <li class="clientPayday"><!--230816 추가 -ys -->
-                                            <h6>지급일</h6>
-                                            <select class="full" name="" id="">
-                                                <option value="">10일</option>
-                                                <option value="">20일</option>
-                                            </select>
-                                        </li>  
-                                        <!--230814 수정 -ys -->
-                                        <li class="clientFile">                                            
-                                            <h6>첨부파일</h6><!--230816 수정 -ys -->
-                                            <div class="uploadBox">
-                                                <div class="inputGroup upload">
-                                                    <div class="drop">
-                                                        <i class="ico fileUpload"></i>
-                                                        <label for="fileUpload">
-                                                            본인의 포트폴리오 자료를 여기에 첨부해 주세요.<br>
-                                                            (파일 최대 5개, 100MB 이하)                                                      
-                                                        </label>
-                                                    </div>
-                                                    <div class="list">
-                                                        <ul class="list_ul">
-                                                            <li>
-                                                                <span class="fileName">test.JPG</span>
-                                                                <span class="volume">45 KB</span>
-                                                                <i class="ico delete_bg"></i>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                            </li>
+                                            <li class=""><!--'매출'등록에서 "clientCNm"클래스 추가 230901 -ys -->
+                                                <h6 class="need">회사명</h6>
+                                                <div class="hasBtn">
+                                                    <input type="text" placeholder="소속회사명 입력">
+                                                    <button>
+                                                        <i class="ico search white"></i>
+                                                    </button>
                                                 </div>
-                                            
-                                                <label for="cycleDocument22" class="">직접선택</label>
-                                                <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="">
-                                            </div>
-                                        </li>             
-                                        <!--//230814 수정 -ys -->       
-                                        
-                                        <!--230816 추가 -ys -->
-                                        <li class="clientCode">
-                                            <label for="">거래처코드</label>
-                                            <input class="full" type="text" readonly>
-                                        </li>
+                                            </li>
+                                            <li>
+                                                <label class="need" for="">사업자번호</label>
+                                                <input class="full" type="text" placeholder="숫자만 입력">
+                                            </li>
+                                            <li>
+                                                <label for="">법인번호</label>
+                                                <input class="full" type="text" placeholder="숫자만 입력">
+                                            </li>
+                                            <li>
+                                                <h6 class="need">폐업구분</h6>
+                                                <select class="full" name="" id="">
+                                                    <option value="">정상</option>
+                                                    <option value="">폐업</option>
+                                                </select>
+                                            </li>
 
-                                        <!-- 230901 이동 asis -ys -->
-                                        <!-- <li class="clientManager">
-                                            <h6>담당자</h6>
-                                            <button class="midSize">담당자 지정</button>
-                                            <span class="mainC ml5">4명</span>
-                                        </li> -->
-                                        <!-- //230901 이동 asis -ys -->
-                                        <!--//230816 추가 -ys -->
-                                    </ul>  
+                                            <li>
+                                                <label class="need">업태</label><!--230816 클래스추가-ys -->
+                                                <input class="full" type="text">
+                                            </li>
+                                            <li>
+                                                <label class="need">업종</label><!--230816 클래스추가-ys -->
+                                                <input class="full" type="text">
+                                            </li>
+                                            <li class="clientWeb">
+                                                <label for="">홈페이지</label>
+                                                <input class="full" type="text">
+                                            </li>
+                                            <li>
+                                                <h6 class="need">사용상태</h6>
+                                                <select class="full" name="" id="">
+                                                    <option value="">사용</option>
+                                                    <option value="">미사용</option>
+                                                </select>
+                                            </li>
+
+                                            <li>
+                                                <label class="need" for="">대표자명</label>
+                                                <input class="full" type="text">
+                                            </li>
+                                            <li>
+                                                <label class="" for="">대표자 연락처</label><!--230816 클래스삭제-ys -->
+                                                <input class="smSize" type="text">
+                                                <span class="hyphen">-</span>
+                                                <input class="smSize" type="text">
+                                                <span class="hyphen">-</span>
+                                                <input class="smSize" type="text">
+                                            </li>
+                                            <li>
+                                                <label for="">대표번호</label>
+                                                <input class="full" type="text" placeholder="숫자만 입력">
+                                            </li>
+                                            <li>
+                                                <label for="">팩스번호</label>
+                                                <input class="full" type="text" placeholder="숫자만 입력">
+                                            </li>
+                                            <!-- 230901 삭제 -ys <li>
+                                                <h6>협력/대행</h6>
+                                                <select class="full" name="" id="">
+                                                    <option value="">협력</option>
+                                                    <option value="">대행</option>
+                                                </select>
+                                            </li> -->
+
+                                            <!-- 230901 이동 tobe -ys -->
+                                            <li class="clientManager">
+                                                <h6>담당자</h6>
+                                                <button class="midSize">담당자 지정</button>
+                                                <span class="mainC ml5">4명</span>
+                                            </li>
+                                            <!-- //230901 이동 tobe -ys -->
+
+                                            
+                                            <li class="clientAdd">
+                                                <h6 class="need">주소</h6>
+                                                <input class="full" type="text" id="" placeholder="상세주소"> <!--230814 수정 -ys -->
+                                            </li>
+                                            <li class="clientAccount">
+                                                <h6 class="need">계좌정보</h6><!--230814 글자수정 -ys-->
+                                                <div class="flex mt6">
+                                                    <select class="laSize" name="" id="">
+                                                        <option value="">은행선택</option>
+                                                        <option value="">신한은행</option>
+                                                        <option value="">국민은행</option>
+                                                        <option value="">우리은행</option>
+                                                    </select>
+                                                    <input class="full ml5" type="text" id="" placeholder="계좌번호">                                                             
+                                                </div>
+                                            </li>       
+                                            <li class="clientPayday"><!--230816 추가 -ys -->
+                                                <h6>지급일</h6>
+                                                <select class="full" name="" id="">
+                                                    <option value="">10일</option>
+                                                    <option value="">20일</option>
+                                                </select>
+                                            </li>  
+                                            <!--230814 수정 -ys -->
+                                            <li class="clientFile">                                            
+                                                <h6>첨부파일</h6><!--230816 수정 -ys -->
+                                                <div class="uploadBox">
+                                                    <div class="inputGroup upload">
+                                                        <div class="drop">
+                                                            <i class="ico fileUpload"></i>
+                                                            <label for="fileUpload">
+                                                                본인의 포트폴리오 자료를 여기에 첨부해 주세요.<br>
+                                                                (파일 최대 5개, 100MB 이하)                                                      
+                                                            </label>
+                                                        </div>
+                                                        <div class="list">
+                                                            <ul class="list_ul">
+                                                                <li>
+                                                                    <span class="fileName">test.JPG</span>
+                                                                    <span class="volume">45 KB</span>
+                                                                    <i class="ico delete_bg"></i>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                
+                                                    <label for="cycleDocument22" class="">직접선택</label>
+                                                    <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="">
+                                                </div>
+                                            </li>             
+                                            <!--//230814 수정 -ys -->       
+                                            
+                                            <!--230816 추가 -ys -->
+                                            <li class="clientCode">
+                                                <label for="">거래처코드</label>
+                                                <input class="full" type="text" readonly>
+                                            </li>
+
+                                            <!-- 230901 이동 asis -ys -->
+                                            <!-- <li class="clientManager">
+                                                <h6>담당자</h6>
+                                                <button class="midSize">담당자 지정</button>
+                                                <span class="mainC ml5">4명</span>
+                                            </li> -->
+                                            <!-- //230901 이동 asis -ys -->
+                                            <!--//230816 추가 -ys -->
+                                        </ul>  
+                                    </form>
                                     <!--//230816 법인/개인 소득 (매입) -ys -->
 
                                     

@@ -3,7 +3,7 @@
 
 .ui-datepicker{box-shadow: 1px 1px 5px rgba(0,0,0,0.2);}
 .ui-widget-header{background: #fff; border: 0; position: relative;}
-.ui-widget.ui-widget-content{border: 0;}
+.ui-widget.ui-widget-content{border: 0; width:100%;}
 
 
 
@@ -28,7 +28,7 @@
     background: $mainColor;
 }
 .ui-state-default, .ui-widget-content .ui-state-default{
-    margin: 0 4px;
+    // margin: 0 4px;
     padding: 6px 0px;
     color: $black;
     font-weight: normal;
@@ -69,9 +69,16 @@
 //마우스오버
 .ui-state-hover, .ui-widget-content .ui-state-hover{
     display: inline-block;
+    margin: 0;
     width: 100%;
     border-radius: rem(4);
     background: $white;
+    cursor:pointer;
+    &.ui-corner-all{
+        width: 30px;
+        border: 0;
+        box-shadow: none;
+    }
 }
 
 //선택한 날짜
@@ -89,19 +96,22 @@
 }
 
 //좌우화살표
-.ui-datepicker-prev{
-    height: 15px;
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.ui-datepicker-next{
-    height: 15px;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+.ui-datepicker{
+
+    .ui-datepicker-prev{
+        height: 15px;
+        position: absolute;
+        left: 10px !important;
+        top: 50% !important;
+        transform: translateY(-50%);
+    }
+    .ui-datepicker-next{
+        height: 15px;
+        position: absolute;
+        right: 10px !important;
+        top: 50% !important;
+        transform: translateY(-50%);
+    }
 }
 .ui-widget-header .ui-icon{
     display: inline-block;

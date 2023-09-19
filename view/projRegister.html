@@ -184,7 +184,7 @@
                                         <ul>
                                             <li>
                                                 <label class="need" for="">직군</label>
-                                                <select class="midSize">
+                                                <select class="wideSize"><!--230915 클래스 수정-ys -->
                                                     <option class="optionItem" value="">선택</option>
                                                     <option class="optionItem" value="JG001">개발</option>
                                                     <option class="optionItem" value="JG002">개발(SAP)</option>
@@ -203,7 +203,7 @@
                                             </li>
                                             <li>
                                                 <label class="need" for="project">직무</label>
-                                                <select class="midSize">
+                                                <select class="wideSize"><!--230915 클래스 수정-ys -->
                                                     <option class="optionItem" value="">선택</option>
                                                     <option class="optionItem" value="JG001">개발</option>
                                                     <option class="optionItem" value="JG002">개발(SAP)</option>
@@ -258,10 +258,10 @@
                                                 </div>
                                                 <div class="flexEnd">
                                                     <button class="onlyIco midSize"><!--230519 클래스추가 -ys -->
-                                                        <i class="ico minus"></i>
+                                                        <i class="ico smMinus"></i><!--230915 클래스 수정-ys -->
                                                     </button>
                                                     <button class="onlyIco midSize"><!--230519 클래스추가 -ys -->
-                                                        <i class="ico plus"></i>
+                                                        <i class="ico smPlus"></i><!--230915 클래스 수정-ys -->
                                                     </button>
                                                 </div>
                                             </li>
@@ -281,11 +281,13 @@
                                             <li>
                                                 <label class="" for="">투입(예정)일</label><!--230518 need 제거 -ys-->
                                                 <!-- <input class="" type="date" id="" maxlength=""> -->
-                                                <input class="dateType full" type="text" placeholder="연도 - 월 - 일" id="">
+                                                <!-- <input class="dateType full" type="text" placeholder="연도 - 월 - 일" id=""> -->
+                                                <input type="text" class="dateType hasDatepicker" placeholder="연도-월-일" readonly="readonly">
                                             </li>
                                             <li>
                                                 <label class="" for="">종료(예정)일</label><!--230518 need 제거 -ys-->
-                                                <input class="" type="date" id="" maxlength="">
+                                                <!-- <input class="" type="date" id="" maxlength=""> -->
+                                                <input type="text" class="dateType hasDatepicker" placeholder="연도-월-일" readonly="readonly">
                                             </li>
                                         </ul>
                                         <ul>

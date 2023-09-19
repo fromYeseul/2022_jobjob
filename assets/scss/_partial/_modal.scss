@@ -34,9 +34,30 @@
         right: 0;
         background: $white;
         border: 1px solid $black;
+        z-index: 10;
         .layerBox{
             padding: rem(20);
             min-width: rem(240);
+        }
+        // .modalHeader{
+        //     & + .modalCont{
+        //         margin-top: rem(15);
+        //     }
+        // }        
+        table{
+            th{
+                color: $white;
+                background: $tableBgGray;   
+                border-bottom: 0;  
+            }
+            td{
+                height: rem(32);
+            }
+        }
+        input[type=checkbox]{
+            & + label{
+                font-size: rem(14);
+            }
         }
     }  
     .layerBox{
@@ -225,6 +246,9 @@
     }
     .tabBtnWrap{
         justify-content: center;
+    }
+    .tabContWrap{
+        margin-top: rem(30);
     }
     // .inputList{
     //     margin-top: rem(30);
@@ -914,7 +938,7 @@
         row-gap: rem(20);
         column-gap: rem(50);
         // grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr;
-        grid-template-columns: 60px 110px 80px 120px 90px 130px 110px;
+        grid-template-columns: 60px 110px 80px 120px 100px 130px 110px;
     }
     .cont{
         height: 60vh;
