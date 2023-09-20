@@ -97,7 +97,8 @@
             padding: 10px 8px;
             padding-right: 0;
             border-radius: rem(5);
-            border:1px solid $layoutColor;
+            background: $filterBg;
+            border:1px solid $filterBd;
             position: relative;
             .more2{
                 padding: 0 6px;
@@ -135,6 +136,7 @@
                 text-decoration: underline;
                 @include ellipsis;
                 width: 72%;
+                font-weight: 500;
                 cursor:pointer;
             }
         }
@@ -163,6 +165,9 @@
                 }
             }
         }
+    }
+    .gray_bin{
+        margin-left: 3px;
     }
 }
 

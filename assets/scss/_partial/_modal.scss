@@ -434,12 +434,25 @@
 }
 
 #showLevel{
+    .flex_2_1{
+        overflow-y: auto;
+        height: 360px;
+        >.prefix{
+            flex: 1 1 60%;
+        }
+        > .suffix{
+            flex: 2 1 40%;
+        }
+    } 
     .tabCont{
         overflow-y: auto;
         height: 360px;
     }
     table{
         table-layout: inherit;
+        td{
+            padding: rem(4) !important;
+        }        
     }
     .empty{
         display: inline-block;

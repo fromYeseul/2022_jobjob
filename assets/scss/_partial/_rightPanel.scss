@@ -13,9 +13,7 @@
             background-position: -120px 0px;
         }
         &.mail{
-
             background-position: -120px -30px;
-
         }
     }
 }
@@ -38,6 +36,22 @@
             @include scroll_0;
             .nodata{
                 height: calc(100% - 20px);
+            }
+        }
+        .boxList{
+            button{
+                width: rem(80);
+            }
+            //필요한가?
+            .white{
+                height: rem(60);
+                line-height: initial;
+                span{
+                    display: block;
+                    font-size: 13px;
+                    font-weight: 300;
+                    color: $accDate;
+                }
             }
         }
         .hasBtn{            

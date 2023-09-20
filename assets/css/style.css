@@ -224,6 +224,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: #9595a6;
 }
 
+.extra,
 .marked,
 .important {
   color: #ff1236;
@@ -1154,6 +1155,19 @@ header.center + .contWrapper .contLayout {
 .rPanelLayer .rPanelCont .yScroll .nodata {
   height: calc(100% - 20px);
 }
+.rPanelLayer .rPanelCont .boxList button {
+  width: 5rem;
+}
+.rPanelLayer .rPanelCont .boxList .white {
+  height: 3.75rem;
+  line-height: initial;
+}
+.rPanelLayer .rPanelCont .boxList .white span {
+  display: block;
+  font-size: 13px;
+  font-weight: 300;
+  color: #b0a6b6;
+}
 .rPanelLayer .rPanelCont .hasBtn {
   margin-bottom: 1.25rem;
 }
@@ -1780,12 +1794,25 @@ footer.toast button + button {
   margin-top: 0;
 }
 
+#showLevel .flex_2_1 {
+  overflow-y: auto;
+  height: 360px;
+}
+#showLevel .flex_2_1 > .prefix {
+  flex: 1 1 60%;
+}
+#showLevel .flex_2_1 > .suffix {
+  flex: 2 1 40%;
+}
 #showLevel .tabCont {
   overflow-y: auto;
   height: 360px;
 }
 #showLevel table {
   table-layout: inherit;
+}
+#showLevel table td {
+  padding: 0.25rem !important;
 }
 #showLevel .empty {
   display: inline-block;
@@ -3004,7 +3031,7 @@ table.wideType > tbody > tr > td .white {
 table.wideType > tbody > tr > td .bdType span,
 table.wideType > tbody > tr > td .white span {
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 300;
   color: #b0a6b6;
 }
@@ -3671,6 +3698,11 @@ button.rBdType,
   color: #ff1236;
   background-color: #fff;
   border: 1px solid #ff1236;
+}
+button.rBdType:disabled, button.rBdType.disabled,
+.button.rBdType:disabled,
+.button.rBdType.disabled {
+  opacity: 0.5;
 }
 button.white,
 .button.white {
@@ -4584,7 +4616,6 @@ input[type=file] {
   display: block !important;
 }
 .inputGroup.upload {
-  margin-top: 10px;
   display: inline-block;
   padding: 10px 20px;
   width: 100%;
@@ -5451,6 +5482,9 @@ input[type=radio]:disabled + label {
   font-weight: 700;
   background: #0460d2;
   border: 1px solid #0460d2;
+}
+.boxType li input:checked + label p .dNear {
+  color: #ffc812 !important;
 }
 .boxType li input:checked + label > .dNear {
   display: inline-block;
@@ -6447,6 +6481,11 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-position: -60px -40px;
   cursor: pointer;
 }
+.ico.gray_bin {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -140px -140px;
+}
 .ico.refresh {
   width: 1.25rem;
   height: 1.125rem;
@@ -6495,6 +6534,12 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 0.6875rem;
   height: 0.875rem;
   background-position: -160px -80px;
+}
+.ico.lock_b {
+  width: 0.9375rem;
+  height: 1.125rem;
+  vertical-align: -1px;
+  background-position: -180px -180px;
 }
 .ico.fixed {
   width: 0.875rem;
@@ -7109,7 +7154,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   gap: 10px;
 }
 .boxList.headType .cont .prefix, .boxList.memoBox .cont .prefix {
-  width: 75%;
+  width: 72%;
   color: #444;
   position: relative;
 }
@@ -7197,8 +7242,10 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   -webkit-line-clamp: initial;
 }
 .boxList.headType .cont .suffix, .boxList.memoBox .cont .suffix {
+  width: 24%;
   min-width: 5rem;
   text-align: center;
+  word-break: keep-all;
   color: #666666;
   position: relative;
 }
@@ -7211,7 +7258,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   height: 3.75rem;
   background: #cccccc;
   position: absolute;
-  left: -10px;
+  left: -5px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -7913,13 +7960,15 @@ h6 + .h6_sub {
   width: auto;
   padding: 0 15px;
 }
+.accBox .prefix {
+  width: 80%;
+}
 .accBox .prefix,
 .accBox .suffix {
   display: flex;
   align-items: center;
 }
-.accBox .prefix .projTit,
-.accBox .suffix .projTit {
+.accBox .projTit {
   width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -7927,10 +7976,18 @@ h6 + .h6_sub {
   white-space: nowrap;
   text-align: left;
   width: auto;
-  max-width: 90%;
   font-weight: 500;
   font-size: 1.0625rem;
   cursor: pointer;
+}
+.accBox .projTit .round {
+  margin-right: 0.625rem;
+  margin-top: 2px;
+  width: 3.875rem;
+  color: #a6a6b6;
+}
+.accBox .projTit i {
+  margin-right: 4px;
 }
 .accBox .signDate {
   color: #aaa;
@@ -8002,17 +8059,16 @@ h6 + .h6_sub {
   width: 70%;
   color: #4b4b4b;
 }
-.innerList .prefix .round {
-  margin-right: 0.625rem;
-  width: 3.875rem;
-  font-size: 0.8125rem;
-  color: #a6a6b6;
-}
 .innerList .prefix .field {
   margin-right: 10px;
   width: 6.625rem;
   font-size: 0.875rem;
   color: #0460d2;
+}
+.innerList .prefix .round {
+  margin-right: 0.625rem;
+  width: 3.875rem;
+  color: #a6a6b6;
 }
 .innerList .suffix {
   font-size: 0.875rem;
@@ -8041,6 +8097,7 @@ h6 + .h6_sub {
 }
 .innerList ul li {
   display: flex;
+  align-items: center;
   line-height: 32px;
 }
 .innerList ul p {
@@ -8413,6 +8470,7 @@ h6 + .h6_sub {
 }
 .myProjDetail .boxWrap .yScroll .innerList li {
   line-height: 25px;
+  align-items: baseline;
 }
 .myProjDetail .boxWrap .yScroll .innerList li p:before {
   top: 10px;
@@ -8715,7 +8773,6 @@ h6 + .h6_sub {
 .resume > .prefix .mid li {
   position: relative;
   margin: 10px 0;
-  margin-left: 1.5rem;
   height: 1.25rem;
 }
 .resume > .prefix .mid li::before {
@@ -8728,26 +8785,32 @@ h6 + .h6_sub {
   top: 2px;
   left: -20px;
 }
+.resume > .prefix .mid li.birth {
+  margin-left: 1.5rem;
+}
 .resume > .prefix .mid li.birth::before {
   background-position: -40px -100px;
+}
+.resume > .prefix .mid li.pNum {
+  margin-left: 1.5rem;
 }
 .resume > .prefix .mid li.pNum::before {
   background-position: -60px -100px;
   left: -18px;
 }
+.resume > .prefix .mid li.mail {
+  margin-left: 1.5rem;
+}
 .resume > .prefix .mid li.mail::before {
   background-position: -80px -100px;
   top: 6px;
 }
+.resume > .prefix .mid li.address {
+  margin-left: 1.5rem;
+}
 .resume > .prefix .mid li.address::before {
   background-position: -100px -100px;
   left: -19px;
-}
-.resume > .prefix .mid li:nth-last-child(1), .resume > .prefix .mid li:nth-last-child(2) {
-  margin-left: 0;
-}
-.resume > .prefix .mid li:nth-last-child(1)::before, .resume > .prefix .mid li:nth-last-child(2)::before {
-  display: none;
 }
 .resume > .prefix .bottom b {
   display: block;
@@ -8868,6 +8931,7 @@ h6 + .h6_sub {
   height: 4.375rem;
 }
 .memRegister .inputGroup.upload {
+  padding: 26px 20px;
   height: auto;
 }
 .memRegister .profile {
@@ -8898,10 +8962,13 @@ h6 + .h6_sub {
 .memRegister .careerEtc {
   grid-column: 4/6;
 }
+.memRegister .jobCondi {
+  margin-bottom: 0.625rem;
+}
 .memRegister .jobCondi2 {
   display: flex;
   align-items: end;
-  margin-bottom: 1.25rem !important;
+  margin-bottom: 0.625rem !important;
 }
 .memRegister .preferPosi {
   grid-column: 2/6;
@@ -9699,7 +9766,8 @@ h6 + .h6_sub {
   padding: 10px 8px;
   padding-right: 0;
   border-radius: 0.3125rem;
-  border: 1px solid #cccccc;
+  background: #f3f8fb;
+  border: 1px solid #c1cdd5;
   position: relative;
 }
 .searchRequire .filterCustom li .more2 {
@@ -9743,6 +9811,7 @@ h6 + .h6_sub {
   white-space: nowrap;
   text-align: left;
   width: 72%;
+  font-weight: 500;
   cursor: pointer;
 }
 .searchRequire .filterCustom .modalLayer.absol {
@@ -9767,6 +9836,9 @@ h6 + .h6_sub {
 }
 .searchRequire .filterCustom .modalLayer ul li + li {
   margin-top: 5px;
+}
+.searchRequire .gray_bin {
+  margin-left: 3px;
 }
 
 .sendedOfferList {

@@ -142,17 +142,27 @@
             padding: 0 15px;
         }
     }
+    .prefix{width: 80%;}
     .prefix,
     .suffix{
         display: flex;
         align-items: center;
-        .projTit{
-            @include ellipsis;
-            width: auto;
-            max-width: 90%;
-            font-weight: 500; //0913 J bold -> 500 수정
-            font-size: rem(17);
-            cursor: pointer;
+    }
+    .projTit{
+        @include ellipsis;
+        width: auto;
+        // max-width: 90%;
+        font-weight: 500; //0913 J bold -> 500 수정
+        font-size: rem(17);
+        cursor: pointer;
+            .round{
+                margin-right: rem(10);
+                margin-top: 2px;
+                width: rem(62);
+                color: $cancel;
+            }
+        i{
+            margin-right: 4px;
         }
     }
     .signDate{
@@ -220,18 +230,18 @@
     .prefix{
         width: 70%;
         color: $accPrefixGray;
-        .round{
-            margin-right: rem(10);
-            width: rem(62);
-            font-size: rem(13); //0913 J추가
-            color: $cancel;
-        }
         .field{
             margin-right: 10px; //0913 J수정
             width: rem(106); //0913 J수정
             font-size: rem(14); //0913 J수정
             color: $mainColor; //0913 J수정
             //font-weight:500; 0913 J추가
+        }
+        .round{
+            margin-right: rem(10);
+            width: rem(62);
+            //font-size: rem(13); //0913 J추가
+            color: $cancel;
         }
     }
     .suffix{
@@ -263,6 +273,7 @@
         gap: 15px; 
         li{
             display: flex;
+            align-items: center;
             line-height: 32px;
         }
         p{

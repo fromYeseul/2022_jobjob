@@ -134,7 +134,6 @@
             li{
                 position: relative;
                 margin: 10px 0;
-                margin-left: rem(24);
                 height: rem(20);
                 &::before{
                     content:'';
@@ -147,36 +146,40 @@
                     left: -20px;
                 }
                 &.birth{
+                    margin-left: rem(24);
                     &::before{                        
                         background-position: -40px -100px;
                     }
                 }
                 &.pNum{
+                    margin-left: rem(24);
                     &::before{
                         background-position: -60px -100px;
                         left: -18px;
                     }
                 }
                 &.mail{
+                    margin-left: rem(24);
                     &::before{
                         background-position: -80px -100px;
                         top: 6px;
                     }
                 }
                 &.address{
+                    margin-left: rem(24);
                     &::before{
                         background-position: -100px -100px;
                         left: -19px;
                     }   
                 }
 
-                &:nth-last-child(1),
-                &:nth-last-child(2){
-                    margin-left: 0;
-                    &::before{
-                        display: none;
-                    }
-                }
+                // &:nth-last-child(1),
+                // &:nth-last-child(2){
+                //     margin-left: 0;
+                //     &::before{
+                //         display: none;
+                //     }
+                // }
             }
         }
         .bottom{

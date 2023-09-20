@@ -233,7 +233,8 @@
                                         </div> -->
 
                                         <div class="suffix colType hasTooltip clear">
-                                            투입중<br>(~22/05/01)                                                                        
+                                            <!-- 투입중<br>(~22/05/01) -->
+                                            2023.07.01부터 가용가능
                                             <div class="tooltip">
                                                 CJ프레시웨이 온리원푸드넷                             
                                             </div>         
@@ -249,6 +250,60 @@
                                     </div>
                                 </li>
                                 <!--//boxList-->
+
+                                <li class="boxList headType"> 
+                                    <div class="head">
+                                        <p class="prefix">
+                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
+                                            <label for="memChk_1"></label>
+                                            <span>90.0</span>
+                                        </p>
+                                        <p class="suffix"> </p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <span class="phoImg is-special">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>
+                                                    <div class="flexCenter">  
+                                                        <a href="#" target="_blank">홍길순(여/29)</a><!--230616 태그수정 -ys -->
+                                                        <span>개발</span>
+                                                        <span>정규</span>
+                                                    </div>                                                 
+                                                </li>
+                                                <li>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span><span class="accept">인</span>고급</span>
+                                                </li>
+                                                <li>
+                                                    <span>경상남도 의정부시</span>
+                                                    <span class="memSkill">
+                                                        ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java
+                                                    </span>                                                                        
+                                                </li>   
+
+                                                <li class="memMemo">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                                <li class="memMemo is-active">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="suffix">
+                                            <button class="white hasTooltip">
+                                                <div class="tooltip">            
+                                                    최근제안된 프로젝트명
+                                                </div>  
+                                                최근에 제안
+                                                <span>(2023.01.02)</span>                                                         
+                                            </button>      
+                                        </div>
+                                    </div>
+                                </li>
 
                                 <li class="boxList headType is-active"> 
                                     <div class="head">
@@ -571,8 +626,126 @@
                 <h2>등급보기설정</h2>
             </div>
             <div class="modalCont">
+                <div class="tableTop">       
+                    <select class="autoSize" name="" id="">
+                        <option value="">[비삼성] WEB/SAP</option>
+                        <option value="">[삼성] WEB</option>
+                        <option value="">[삼성] SAP</option>
+                    </select>
+                    <span class="subInfo">[기준 : 개월 수]</span>
+                </div>
+                <div class="flex_2_1">
+                    <div class="tableBox prefix">
+                        <table class="hasInput">
+                            <colgroup>
+                                <col width="12%">
+                                <col width="8%">
 
-                <div class="tabWrapper" id="levelTable">
+                                <col width="16%">
+                                <col width="16%">
+                                <col width="16%">
+                                <col width="16%">
+                                <col width="16%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>비자격증</th>
+                                    <th>기준단가</th>
+                                    <th>고졸</th>
+                                    <th>전졸</th>
+                                    <th>대졸</th>
+                                    <th>석사</th>
+                                    <th>박사</th>
+                                </tr>
+                            </thead>
+                            <tbody>                            
+                                <tr>
+                                    <td>초급</td>
+                                    <td><input type="number" class="mid-laSize low" maxlength="10" value="6,500,000,000"></td>
+                                    <td><input type="number" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><input type="number" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><input type="number" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><input type="number" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><input type="number" class="xxsSize" maxlength="3" value=""> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                </tr>                 
+                                <tr>
+                                    <td>중급</td>
+                                    <td><input type="text" class="mid-laSize low" maxlength="10" value="7,800,000"></td>
+                                    <td><span class="empty">144</span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><span class="empty">108</span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><span class="empty">72</span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><span class="empty">36</span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><span class="empty"></span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                </tr>                        
+                                <tr>
+                                    <td>고급</td>
+                                    <td><input type="text" class="mid-laSize low" maxlength="10" value="8,500,000"></td>
+                                    <td><span class="empty">180</span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><span class="empty">144</span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><span class="empty">108</span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><span class="empty">72</span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><span class="empty"></span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                </tr>                        
+                                <tr>
+                                    <td>특급</td>
+                                    <td><input type="text" class="mid-laSize low" maxlength="10" value="9,500,000"></td>
+                                    <td><span class="empty"></span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><span class="empty">180</span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><span class="empty">144</span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><span class="empty">108</span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                    <td><span class="empty">36</span> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                </tr>            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tableBox suffix">
+                        <table class="hasInput">
+                            <colgroup>
+                                <col width="100px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>자격증</th>
+                                    <th>정보처리기능사</th>
+                                    <th>정보처리산업기사</th>
+                                    <th>정보처리기사</th>
+                                    <th>정보처리기술사</th>
+                                </tr>
+                            </thead>
+                            <tbody>                            
+                                <tr>
+                                    <td>초급</td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="83"></td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="83"></td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="47"></td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3"></td>
+                                </tr>                             
+                                <tr>
+                                    <td>중급</td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="119"></td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="119"></td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="84"></td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
+                                </tr>                               
+                                <tr>
+                                    <td>고급</td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="155"></td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="155"></td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="119"></td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
+                                </tr>                              
+                                <tr>
+                                    <td>특급</td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
+                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
+                                </tr>      
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- <div class="tabWrapper" id="levelTable">
                     <div class="tableTop">                   
                         <!-- <ul class="tabBtnWrap btnType borderType">                         -->
                         <!-- <ul class="tabBtnWrap bdType">                        
@@ -594,13 +767,13 @@
                         </ul>  -->
 
 
-                        <!--230519 select 태그 수정 -ys-->
+                        <!--230519 select 태그 수정 -ys--
                         <select class="autoSize" name="" id="">
                             <option value="">[비삼성] WEB/SAP</option>
                             <option value="">[삼성] WEB</option>
                             <option value="">[삼성] SAP</option>
                         </select>
-                        <!--//230519 select 태그 수정 -ys-->
+                        <!--//230519 select 태그 수정 -ys--
                         <span class="subInfo">[기준 : 개월 수]</span>
                     </div>
                     <div class="tabContWrap">
@@ -678,6 +851,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>자격증</th>
+                                                    <th>정보처리기능사</th>
                                                     <th>정보처리산업기사</th>
                                                     <th>정보처리기사</th>
                                                     <th>정보처리기술사</th>
@@ -687,26 +861,30 @@
                                                 <tr>
                                                     <td>초급</td>
                                                     <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="83"></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="83"></td>
                                                     <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="47"></td>
                                                     <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3"></td>
                                                 </tr>                             
                                                 <tr>
                                                     <td>중급</td>
-                                                    <td><span class="empty">84</span> ~ <input type="text" class="xxsSize" maxlength="3" value="119"></td>
-                                                    <td><span class="empty">48</span> ~ <input type="text" class="xxsSize" maxlength="3" value="84"></td>
-                                                    <td><span class="empty"></span> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="119"></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="119"></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="84"></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
                                                 </tr>                               
                                                 <tr>
                                                     <td>고급</td>
-                                                    <td><span class="empty">120</span> ~ <input type="text" class="xxsSize" maxlength="3" value="155"></td>
-                                                    <td><span class="empty">85</span> ~ <input type="text" class="xxsSize" maxlength="3" value="119"></td>
-                                                    <td><span class="empty"></span> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="155"></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="155"></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value="119"></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
                                                 </tr>                              
                                                 <tr>
                                                     <td>특급</td>
-                                                    <td><span class="empty">156</span> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
-                                                    <td><span class="empty">120</span> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
-                                                    <td><span class="empty"></span> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
+                                                    <td><input type="text" class="xxsSize" maxlength="3"> ~ <input type="text" class="xxsSize" maxlength="3" value=""></td>
                                                 </tr>      
                                             </tbody>
                                         </table>
@@ -1025,7 +1203,7 @@
                             </div>
                         </div>
                     </div>
-                </div>       
+                </div>        -->
 
                 <h5 class="mt50">유의사항</h5>
                 <div class="bulletList">
@@ -1054,7 +1232,7 @@
 
     
     <!--221017 추가 -ys-->
-    <div id="investDetail" class="modalLayer center is-active">
+    <div id="investDetail" class="modalLayer center">
         <div class="layerBox fullSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
