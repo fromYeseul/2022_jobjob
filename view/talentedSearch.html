@@ -59,9 +59,9 @@
                                 <div class="filterOptList">
                                     <ul>
                                         <li>
-                                            <span class="layerOpen" aria-controls="memArea">직군/직무</span>
+                                            <span class="layerOpen">직군/직무</span><!--230922 aria-controls 삭제-ys-->
                                             <!--직군/직무 팝업-->
-                                            <div id="memArea" class="modalLayer absol">
+                                            <div id="a_memArea" class="modalLayer absol">
                                                 <div class="layerBox">
                                                     <div class="modalHeader">
                                                         <button class="ico layerClose"></button>   
@@ -147,7 +147,7 @@
                                             <!--//직군/직무 팝업-->
                                         </li>
                                         <li>
-                                            <span class="layerOpen" aria-controls="a_memCareer">경력</span>
+                                            <span class="layerOpen">경력</span><!--230922 aria-controls 삭제-ys-->
                                             <!--경력 팝업-->
                                             <div id="a_memCareer" class="modalLayer absol">
                                                 <div class="layerBox autoSize">
@@ -193,7 +193,7 @@
                                             <!--//경력 팝업-->
                                         </li>
                                         <li>
-                                            <span class="layerOpen" aria-controls="a_memEdu">학력</span>
+                                            <span class="layerOpen">학력</span><!--230922 aria-controls 삭제-ys-->
                                             <!--학력 팝업-->
                                             <div id="a_memEdu" class="modalLayer absol">
                                                 <div class="layerBox autoSize">
@@ -234,7 +234,7 @@
                                             <!--//학력 팝업-->
                                         </li>
                                         <li>
-                                            <span class="layerOpen" aria-controls="a_memAge">나이</span>
+                                            <span class="layerOpen">나이</span><!--230922 aria-controls 삭제-ys-->
                                             <!--나이 팝업-->
                                             <div id="a_memAge" class="modalLayer absol">
                                                 <div class="layerBox autoSize">
@@ -279,7 +279,7 @@
                                             <!--//나이 팝업-->
                                         </li>
                                         <li>
-                                            <span class="layerOpen" aria-controls="a_memDate">가용일자</span>
+                                            <span class="layerOpen">가용일자</span><!--230922 aria-controls 삭제-ys-->
                                             <!--가용일자 팝업-->
                                             <div id="a_memDate" class="modalLayer absol">
                                                 <div class="layerBox autoSize">
@@ -324,7 +324,7 @@
                                         </li>
                                         
                                         <li>
-                                            <span class="layerOpen" aria-controls="a_memDistance">거리</span>
+                                            <span class="layerOpen">거리</span><!--230922 aria-controls 삭제-ys-->
                                             <!--거리 팝업-->
                                             <div id="a_memDistance" class="modalLayer absol">
                                                 <div class="layerBox autoSize">
@@ -373,18 +373,18 @@
                                 <div class="filterCustom">
                                     <ul>
                                         <!-- 조건없을 때 기본  -->
-                                        <!-- <li class="info">
-                                            <img src="../assets/img/error1.png" alt=""><!--230915 추가-ys
+                                        <li class="info">
+                                            <img src="../assets/img/error1.png" alt=""><!--230915 추가-ys-->
                                             <strong>나만의 검색조건을 만드세요!</strong>
                                             <p>검색 조건을 저장하시고 알림설정을 하시면(최대 10개) 새로운 인재가 등록되었을 때<br>
                                             메일로 안내 받으실 수 있습니다.</p>
-                                        </li> -->
-                                        <li class="is-active">
+                                        </li>
+                                        <li class="layerOpen is-active">
                                             <i class="ico letter"></i>
                                             <span class="customTit">삼성 고급만 선택</span>
                                             <i class="ico more2 layerOpen"></i>
                                             <!--알림받기 팝업-->
-                                            <div id="" class="modalLayer absol is-active">
+                                            <div id="" class="modalLayer absol">
                                                 <div class="layerBox">
                                                     <div class="modalCont">   
                                                     	<!--230901 수정-ys --> 
@@ -515,7 +515,7 @@
                                                 <input type="checkbox" id="ff1">
                                                 <label for="ff1"></label>
                                             </td>
-                                            <td class="txtLeft">
+                                            <td><!--230915 클래스 제거-ys-->
                                                 <span class="phoImg is-special">
                                                     <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                 </span>
@@ -566,7 +566,7 @@
                                                 <input type="checkbox" id="ff1">
                                                 <label for="ff1"></label>
                                             </td>
-                                            <td class="txtLeft">
+                                            <td>
                                                 <span class="phoImg">
                                                     <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                 </span>
@@ -632,7 +632,7 @@
                                                 <input type="checkbox" id="ff1">
                                                 <label for="ff1"></label>
                                             </td>
-                                            <td class="txtLeft">
+                                            <td>
                                                 <span class="phoImg">
                                                     <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                 </span>
@@ -679,7 +679,7 @@
                                                 <input type="checkbox" id="ff1">
                                                 <label for="ff1"></label>
                                             </td>
-                                            <td class="txtLeft">
+                                            <td>
                                                 <span class="phoImg">
                                                     <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
                                                 </span>
@@ -1120,7 +1120,7 @@
     </section>
 
     <!--프로젝트 제안하기-->
-    <div id="requireProject" class="modalLayer center is-active">
+    <div id="requireProject" class="modalLayer center">
         <div class="layerBox midSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -1573,27 +1573,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>
-        //모집공고선택 selectbox
+
+
+        // $(".filterOptList .layerOpen").on("click", function(){
+        //     $(this).next('.modalLayer.absol').toggleClass("is-active");
+        //     $('.modalLayer.absol').removeClass("is-active");
+        // });
+        
+
+
+
+
+
+        //모집공고선택 selectbox - 프로젝트 제안하기 pop
         $(".selectedBox").on("click", function(){
             $(this).toggleClass("is-active");
             $(this).next(".selectList").toggleClass("is-active");
         });
-
-        //검색조건 active
-        $(".filterCustom li").on("click", function(){
-            $(this).toggleClass("is-active");
-        });
-
-        //검색조건 더보기, 검색조건 저장
-        $(".layerOpen").on("click", function(){
-            event.stopPropagation();
-            $(this).next('.modalLayer.absol').toggleClass("is-active");
-        });
-
-        //템플릿 불러오기
+        
+        //템플릿 불러오기 - 프로젝트 제안하기 pop
         $("button[aria-controls='callTemplate']").on("click", function(){
             $("#callTemplate").toggleClass("is-active");
         });
+
+        //검색조건 bg active - 230922 수정
+        $(".filterCustom .customTit").on("click", function(){
+            $(this).parents('li').toggleClass("is-active");
+        });
+
+        //검색조건, 필터 팝업 + 외부클릭시 닫힘 - 230922 수정
+        $("body").click(function(e){  
+            let absol = $(".modalLayer.absol");
+            let thisAbsol = $(e.target).next(".modalLayer.absol");
+             if($(e.target).hasClass('layerOpen')){
+                absol.not(thisAbsol).removeClass("is-active");
+                thisAbsol.toggleClass("is-active");
+             }else if($(e.target).parents().hasClass('modalLayer') && !($(e.target).parents().hasClass('.listBottom'))){
+                return;
+             }
+             else{
+                absol.removeClass("is-active");
+            }  
+         });
 
         
     </script>

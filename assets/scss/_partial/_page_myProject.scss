@@ -45,9 +45,9 @@
         &.prefix{
             width: rem(500);
             min-height:rem(233);
-            span{
-                margin-right: 4px;
-            }
+            // span{
+            //     margin-right: 4px;
+            // }
             strong{
                 margin-right: 2px;
             }
@@ -156,11 +156,12 @@
                 right: 0;
                 top: 40%;
                 transform-origin: center;
+                transform: rotate(180deg);
                 z-index: 1;
                 &.is-active{
                     background: $white;
                     //border:0; //0913 J삭제
-                    transform: rotate(180deg);
+                    transform: rotate(0deg);
                 }
             }
         }

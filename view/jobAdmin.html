@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>직무직군관리</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="hasFooter">
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li>
+                        <span aria-controls="showLevel" class="layerOpen">등급보기설정
+                    </span></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="is-active"><a href="#"><i class="ico home"></i><span class="menuTxt">홈</span><i></i></a></li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span><i></i></a></li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span><i></i></a></li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span><i></i></a></li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span><i></i></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span><i></i></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span><i></i></a></li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span><i></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>   
+        
+        <section class="contWrapper noRight"><!--우측패널 없는 페이지-->
+            <section class="contLayout">
+                
+                <section class="jobAdmin">
+                    <div class="pageTit">
+                        <h2>스킬관리</h2>
+                    </div>
+                    
+                    <div class="regiPartWrapper noInfo">      
+                        <div class="regiPart">                         
+                            <div class="boxWrap noTit">  
+                                <div class="hasBtn full">
+                                    <input type="text" maxlength="" placeholder="역할그룹 검색">
+                                    <button class="midSize">검색</button>
+                                </div>
+
+                                <div class="flexBw">
+                                    <button class="white laSize layerOpen" aria-controls="group-admin">분류관리</button>
+                                    <button class="white laSize layerOpen" aria-controls="amount-chk">사용량조회</button>
+                                </div>
+
+                                <div class="divideBox">
+                                    <div class="left">
+                                        <h5>스킬 분류</h5>
+                                        
+                                        <div class="optList">                                            
+                                            <ul>
+                                                <li class="is-active">전체</li><!--선택 is-active 클래스 추가-->
+                                                <li class="disabled">(미사용) Framework</li><!--미사용 disabled 클래스 추가-->
+                                                <li>Architect</li>
+                                                <li>Language</li>
+                                                <li>JavaScript</li>
+                                                <li>DBMS</li>
+                                                <li>기타</li>
+                                                <li>Architect</li>
+                                                <li>Language</li>
+                                                <li>JavaScript</li>
+                                                <li>DBMS</li>
+                                                <li>기타</li>
+                                                <li>Architect</li>
+                                                <li>Language</li>
+                                                <li>JavaScript</li>
+                                                <li>DBMS</li>
+                                                <li>기타</li>
+                                                <li>(미사용) Framework</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="center"><!--230901 수정 -ys -->
+                                        <h5>스킬 목록</h5>
+
+                                        <div class="optList">                                            
+                                            <ul>
+                                                <li class="nodata">등록된 스킬이 없습니다.</li><!--데이터 없음-->
+                                            </ul>
+                                        </div>
+                                        <button class="white full">+ Lv1 공통코드 추가</button>
+                                    </div>
+                                    <div class="right">
+                                        <h5>스킬상세 조회</h5>
+                
+                                        <div class="inputList flex">   
+                                            <ul>
+                                                <li>
+                                                    <label  class="need" for="group">분류</label>
+                                                    <!-- <div class="infoBox"><p class="info">Architect</p></div> -->
+                                                    <select class="wideSize" name="" id="" disabled>
+                                                        <option value="">choose</option>
+                                                        <option value="dog" disabled="">Dog</option>
+                                                        <option value="cat">Cat</option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <label class="need" for="">사용여부</label>
+                                                    <div class="tabType midSize">
+                                                        <input type="radio" id="americano1" name="coffee111" value="americano1" disabled checked="">
+                                                        <label for="americano1">사용</label>
+                                                        <input type="radio" id="latte1" name="coffee111" value="latte1" disabled>
+                                                        <label for="latte1">미사용</label>
+                                                    </div>
+                                                </li>
+                                                <li>                    
+                                                    <label class="need" for="menuNm">스킬명</label>
+                                                    <div class="flexBw">
+                                                        <input class="sm-midSize" type="text" maxlength="20" placeholder="스킬명을 입력하세요." readonly>      
+                                                        <input class="sm-midSize" type="text" id="default" maxlength="" value="SK102" readonly>       
+                                                        <button class="white midSize" disabled>중복체크</button>     
+                                                    </div>                                                                       
+                                                </li>                
+                                                <li>
+                                                    <label for="">비고</label>
+                                                    <textarea name="" id="" cols="70" rows="4" placeholder="내용 입력" readonly></textarea> 
+                                                </li>
+                                                <li class="history">
+                                                    <ul>
+                                                        <li>
+                                                            <p>수정</p>
+                                                            <div class="flexBw">
+                                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                                <span>yyyy.mm.dd HH:MM</span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p>수정</p>
+                                                            <div class="flexBw">
+                                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                                <span>yyyy.mm.dd HH:MM</span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p>수정</p>
+                                                            <div class="flexBw">
+                                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                                <span>yyyy.mm.dd HH:MM</span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p>수정</p>
+                                                            <div class="flexBw">
+                                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                                <span>yyyy.mm.dd HH:MM</span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p>최초등록</p>
+                                                            <div class="flexBw">
+                                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                                <span>yyyy.mm.dd HH:MM</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                
+                                        <div class="modalFooter">
+                                            <button class="white prefix layerOpen" aria-controls="del-confirm">삭제</button>
+                                            <button class="suffix">저장</button>
+                                        </div>
+                                    </div>
+                                </div>           
+                            </div>
+                        </div>     
+                    </div>     
+                </section>                
+            </section>
+        </section>
+    </section>
+
+    <!--분류관리 팝업-->
+    <div id="group-admin" class="modalLayer center">
+        <div class="layerBox midSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h2>분류 관리</h2>
+            </div>
+            <div class="modalCont center">
+                <div class="divideBox">
+                    <div class="left">
+                        <h5>스킬 분류</h5>
+
+                        <!--230519 수정 -ys -->
+                        <div class="optList">                                            
+                            <ul>
+                                <li class="is-active">전체</li><!--선택 is-active 클래스 추가-->
+                                <li class="disabled">(미사용) Framework</li><!--미사용 disabled 클래스 추가-->
+                                <li>Architect</li>
+                                <li>Language</li>
+                                <li>JavaScript</li>
+                                <li>DBMS</li>
+                                <li>기타</li>
+                                <li>Architect</li>
+                                <li>Language</li>
+                                <li>JavaScript</li>
+                                <li>DBMS</li>
+                                <li>기타</li>
+                                <li>Architect</li>
+                                <li>Language</li>
+                                <li>JavaScript</li>
+                                <li>DBMS</li>
+                                <li>기타</li>
+                                <li>(미사용) Framework</li>
+                            </ul>
+                        </div>                        
+                        <!--//230519 수정 -ys -->
+                        
+                        <button class="white full">+ 분류 추가</button>
+                    </div>
+                    <div class="right">
+                        <h5>분류 상세</h5>
+
+                        <div class="inputList flex">   
+                            <ul>
+                                <li>
+                                    <label class="need" for="">사용여부</label>
+                                    <div class="tabType midSize">
+                                        <input type="radio" id="americano1" name="coffee111" value="americano1" checked="" disabled>
+                                        <label for="americano1">사용</label>
+                                        <input type="radio" id="latte1" name="coffee111" value="latte1" disabled>
+                                        <label for="latte1">미사용</label>
+                                    </div>
+                                </li>
+
+                                <li>                    
+                                    <label class="need" for="groupNm">분류명</label>
+                                    <input type="text" id="groupNm" value="Architect" readonly>                                                                                   
+                                </li>
+                                <li>
+                                    <label for="">비고</label>
+                                    <textarea name="" id="" cols="70" rows="4" placeholder="내용 입력" readonly></textarea> 
+                                </li>
+                                <li class="history">
+                                    <ul>
+                                        <li>
+                                            <p>수정</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>수정</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>수정</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>수정</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>최초등록</p>
+                                            <div class="flexBw">
+                                                <span>이길동(abcd@echoit.co.kr)</span>
+                                                <span>yyyy.mm.dd HH:MM</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="modalFooter">
+                            <button class="white prefix layerOpen" aria-controls="del-confirm">삭제</button>
+                            <button class="suffix">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//분류관리 팝업-->
+    
+    <div id="amount-chk" class="modalLayer center">
+        <div class="layerBox sm-midSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h2>스킨 사용량 조회</h2>
+            </div>
+            <div class="modalCont center">
+                <div class="tableTop">
+                    <button class="white mid-lowSize">
+                        <i class="ico download"></i>
+                        엑셀저장
+                    </button>            
+                </div>
+                <div class="tableBox">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>스킬코드</th>
+                                <th>
+                                    <select class="xsSize noBd" name="" id="">
+                                        <option value="">분류 전체</option>
+                                        <option value="dog">Dog</option>
+                                        <option value="cat">Cat</option>
+                                    </select>
+                                </th>
+                                <th>스킬명</th>
+                                <th>사용횟수</th>
+                                <th>사용여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>10000회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>10000회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>10000회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                            <tr>
+                                <td>SK0001</td>
+                                <td>Architect</td>
+                                <td>DA</td>
+                                <td>3회</td>
+                                <td>사용</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modalFooter">
+                <button class="white">닫기</button>
+            </div>
+        </div>
+        <div class="layerDim"></div> 
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/jquery.treegrid.min.js"></script>
+
+    <script>        
+        counting();
+        $('.tree').treegrid();
+    </script>
+</body>
+</html>

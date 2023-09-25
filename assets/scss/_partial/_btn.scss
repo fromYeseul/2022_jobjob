@@ -209,6 +209,9 @@ button,
         span{
             color: $black;
             font-weight: 500;
+            &.attached{
+                color: $mainColor;
+            }
         }
     }
     
@@ -237,6 +240,11 @@ button,
         color: $disable;
         background: $activeGray;
         border:0;
+    }
+    &.need{
+        color: $error;
+        background: $white;
+        border-color: $error;
     }
 
     //bg상태버튼
