@@ -1117,6 +1117,9 @@ header.center + .contWrapper .contLayout {
 }
 
 /* GNB 아이콘 */
+.rPanel {
+  z-index: 20;
+}
 .rPanel i {
   width: 1.875rem;
   height: 1.875rem;
@@ -3028,6 +3031,7 @@ table.wideType > tbody > tr > td {
 }
 table.wideType > tbody > tr > td .bdType,
 table.wideType > tbody > tr > td .white {
+  width: 12.25rem;
   height: 3.75rem;
   line-height: initial;
 }
@@ -3622,9 +3626,9 @@ button:disabled .attached, button.disabled .attached,
 .button:disabled .attached,
 .button.disabled .attached {
   display: block;
-  color: #a6a6b6;
+  color: #a6a6b6 !important;
   text-decoration: none;
-  cursor: initial;
+  cursor: not-allowed;
 }
 button + button, button + .button,
 .button + button,
@@ -4092,6 +4096,9 @@ input[type=password]::placeholder {
 .inputList > ul.grid li.full {
   width: 100%;
 }
+.inputList .h3_sub {
+  margin-bottom: 10px;
+}
 .inputList h6,
 .inputList label {
   display: block;
@@ -4111,6 +4118,7 @@ input[type=password]::placeholder {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2.5rem;
+  row-gap: 20px;
 }
 .inputList.column.half ul .full {
   grid-column: 1/3;
@@ -4120,7 +4128,7 @@ input[type=password]::placeholder {
 }
 .inputList.column.row {
   display: grid;
-  column-gap: 1.25rem;
+  gap: 1.25rem;
 }
 .inputList.column.row ul {
   display: flex;
@@ -4145,6 +4153,9 @@ input[type=password]::placeholder {
 }
 .inputList.column.row textarea {
   height: calc(100% - 28px);
+}
+.inputList.column li {
+  margin-bottom: 0;
 }
 .inputList.flex ul {
   flex-grow: 1;
@@ -6571,7 +6582,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 0.875rem;
   height: 0.9375rem;
   vertical-align: -1px;
-  margin-right: 2px;
+  margin-right: 5px;
   background-position: -180px -80px;
 }
 .ico.letter {
@@ -6712,6 +6723,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 1.0625rem;
   height: 1.0625rem;
   background-position: -140px -40px;
+  vertical-align: -2px;
 }
 .ico.pull {
   width: 1.125rem;
@@ -9236,6 +9248,9 @@ h6 + .h6_sub {
   row-gap: 1.875rem;
   column-gap: 2.8125rem;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
+}
+.recruitRegister ul li {
+  margin-bottom: 0;
 }
 .recruitRegister li input.xsSize {
   width: 3.625rem;
