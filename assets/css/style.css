@@ -1899,7 +1899,7 @@ footer.toast button + button {
 #recruitProject .listBox {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
-  height: 22.5rem;
+  height: 27.5rem;
   overflow-y: auto;
 }
 
@@ -4144,7 +4144,7 @@ input[type=password]::placeholder {
   align-items: center;
 }
 .inputList.column.row textarea {
-  height: calc(100% - 7px);
+  height: calc(100% - 28px);
 }
 .inputList.flex ul {
   flex-grow: 1;
@@ -5575,6 +5575,7 @@ input[type=radio]:disabled + label {
 .chkListWrap i.delete {
   margin-left: 0.625rem;
   vertical-align: middle;
+  opacity: 0.5;
 }
 .chkListWrap i + button {
   margin-left: 5px;
@@ -7147,6 +7148,11 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   line-height: 2.125rem;
   padding: 0 0.9375rem;
 }
+.boxList.flexType .suffix button + button, .boxList.flexType .suffix button + .button,
+.boxList.flexType .suffix .button + button,
+.boxList.flexType .suffix .button + .button {
+  margin-left: 0;
+}
 .boxList.flexType .suffix select {
   width: 6.75rem;
   height: 2.25rem;
@@ -7682,7 +7688,7 @@ h6 + .h6_sub {
   padding: 0.9375rem 1.25rem;
   border-radius: 6px;
   border: 1px solid #cccccc;
-  cursor: initial;
+  cursor: pointer;
 }
 .offeredMem .profile {
   margin: 0;
@@ -9712,9 +9718,35 @@ h6 + .h6_sub {
     padding: 0 0.5rem;
   }
 }
+.talentedSearch {
+  width: 100%;
+}
 .talentedSearch .boxWrap {
   margin-top: 1.5625rem;
   padding: 1.25rem 1.5625rem;
+  width: calc(100% - 60px);
+  position: absolute;
+  bottom: 30px;
+}
+.talentedSearch table thead, .talentedSearch table th {
+  height: 50px;
+}
+.talentedSearch table tbody {
+  border-top: 0;
+}
+.talentedSearch table.chkType thead {
+  border-bottom: 1px solid #4b4b4b;
+}
+.talentedSearch .yScroll {
+  height: calc(100vh - 500px);
+  transition: height 0.3s;
+  overflow-y: auto;
+}
+.talentedSearch .yScroll::-webkit-scrollbar {
+  width: 0;
+}
+.talentedSearch .yScroll.is-active {
+  height: calc(100vh - 220px);
 }
 
 .searchRequire {
@@ -9803,7 +9835,7 @@ h6 + .h6_sub {
   align-items: center;
   justify-content: space-between;
   flex: 1 1 19%;
-  max-width: 10.125rem;
+  max-width: 10.1875rem;
   padding: 10px 8px;
   padding-right: 0;
   border-radius: 0.3125rem;
@@ -9910,6 +9942,7 @@ h6 + .h6_sub {
 }
 .sendedOfferDetail .innerList {
   padding: 1.25rem 1.5625rem;
+  cursor: initial;
 }
 .sendedOfferDetail .innerList ul {
   flex-wrap: wrap;

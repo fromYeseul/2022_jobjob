@@ -372,13 +372,13 @@
                                 </div>
                                 <div class="filterCustom">
                                     <ul>
-                                        <!-- 조건없을 때 기본  -->
+                                        <!-- 조건없을 때 기본
                                         <li class="info">
-                                            <img src="../assets/img/error1.png" alt=""><!--230915 추가-ys-->
+                                            <img src="../assets/img/error1.png" alt=""><!--230915 추가-ys--
                                             <strong>나만의 검색조건을 만드세요!</strong>
                                             <p>검색 조건을 저장하시고 알림설정을 하시면(최대 10개) 새로운 인재가 등록되었을 때<br>
                                             메일로 안내 받으실 수 있습니다.</p>
-                                        </li>
+                                        </li>  -->
                                         <li class="layerOpen is-active">
                                             <i class="ico letter"></i>
                                             <span class="customTit">삼성 고급만 선택</span>
@@ -476,10 +476,31 @@
                             </div>
                         </div>
 
+                        <!--230915 thead 분리-ys -->
+                        <div class="tableBox">      
+                            <table class="chkType wideType">
+                                <thead>
+                                    <tr>
+                                        <th colspan="4">
+                                            <input type="checkbox" id="chkAll2" class="hasTxt">
+                                            <label for="chkAll2">전체(210)</label>
+
+                                            <input type="checkbox" id="chkA" class="hasTxt">
+                                            <label for="chkA" class="ml10">제안 가능 회원만</label>
+                                        </th>
+                                        <th colspan="6" class="txtRight">
+                                            <input type="checkbox" id="level" class="hasTxt">
+                                            <label for="level">인정등급</label>                                        
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <!--//230915 thead 분리-ys -->
 
                         <div class="yScroll">
                             <div class="tableBox">                              
-                                <table class="chkType wideType">
+                                <table class="wideType"><!--230915 클래스 제거-ys -->
                                     <colgroup>
                                         <col width="3%;"><!--230901 수정-ys-->
                                         <col width="4%">
@@ -494,22 +515,722 @@
 
                                         <col width="16%;">
                                     </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="4">
-                                                <input type="checkbox" id="chkAll2" class="hasTxt">
-                                                <label for="chkAll2">전체(210)</label>
-
-                                                <input type="checkbox" id="chkA" class="hasTxt">
-                                                <label for="chkA" class="ml10">제안 가능 회원만</label>
-                                            </th>
-                                            <th colspan="6" class="txtRight">
-                                                <input type="checkbox" id="level" class="hasTxt">
-                                                <label for="level">인정등급</label>                                        
-                                            </th>
-                                        </tr>
-                                    </thead>
+                                    <!--230915 thead 분리-ys -->
                                     <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="ff1">
+                                                <label for="ff1"></label>
+                                            </td>
+                                            <td><!--230915 클래스 제거-ys-->
+                                                <span class="phoImg is-special">
+                                                    <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                </span>
+                                                <span class="eHigh">100.0</span>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="bMark_a" class="bMark" name="bMark" checked="">
+                                                <label for="bMark_a"></label>
+                                            </td>
+                                            <td>
+                                                <strong>프리랜서</strong>
+                                                <p>정회원</p>  
+                                            </td>
+                                            <td>
+                                                <strong>김길동(남)</strong>
+                                                <p>81세</p>
+                                            </td>
+                                            <td>
+                                                <strong>기획</strong>
+                                                <p class="eHigh">22년 4개월</p>
+                                            </td>
+                                            <td>
+                                                <strong>
+                                                    <span class="accept">인</span><!--인정등급 체크상태일때 보여짐-->
+                                                    초급
+                                                </strong>
+                                                <p>고등학교 졸업</p>
+                                            </td>
+                                            <td>
+                                                <strong>서울</strong>
+                                                <p>인천시 미추홀구</p>
+                                            </td>
+                                            <td>
+                                                <div class="chipBox">
+                                                    <span class="chip">ASP</span>
+                                                    <span class="chip">JSP</span>
+                                                </div>                                     
+                                            </td>
+                                            <td class="hasTooltip">
+                                                <button class="bdType">제안하기</button>                                                    
+                                                <div class="tooltip">
+                                                    CJ프레시웨이 온리원푸드넷                        
+                                                </div>     
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>
                                                 <input type="checkbox" id="ff1">
@@ -1120,7 +1841,7 @@
     </section>
 
     <!--프로젝트 제안하기-->
-    <div id="requireProject" class="modalLayer center">
+    <div id="requireProject" class="modalLayer center is-active">
         <div class="layerBox midSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -1586,15 +2307,47 @@
 
 
         //모집공고선택 selectbox - 프로젝트 제안하기 pop
-        $(".selectedBox").on("click", function(){
-            $(this).toggleClass("is-active");
-            $(this).next(".selectList").toggleClass("is-active");
+        //외부클릭시 닫힘 - 230925 수정-ys
+        // $(".selectedBox").on("click", function(){
+        //     $(this).toggleClass("is-active");
+        //     $(this).next(".selectList").toggleClass("is-active");
+        // });
+
+        $("body").click(function(e){  
+            let eTarget = $(e.target);
+
+            //selectbox
+            let selectedBox = $(".selectedBox");
+            let selectList = $(".selectList");
+
+            if(eTarget.hasClass('selectedBox')){
+                eTarget.toggleClass("is-active");
+                eTarget.next(".selectList").toggleClass("is-active");
+            }else if(eTarget.parents().hasClass('selectList')){
+                return;
+            }else{
+                selectedBox.removeClass('is-active');
+                selectList.removeClass('is-active');
+            }
+
+            //템플릿 불러오기
+            let callBtn = $("button[aria-controls='callTemplate']");
+            let callTemp = $("#callTemplate");
+
+            if(eTarget.is("[aria-controls='callTemplate']")) {
+                callTemp.toggleClass("is-active");
+            }else if(eTarget.parents().is(callTemp)){
+                return;
+            }else{
+                callTemp.removeClass('is-active');
+            }
         });
+
         
         //템플릿 불러오기 - 프로젝트 제안하기 pop
-        $("button[aria-controls='callTemplate']").on("click", function(){
-            $("#callTemplate").toggleClass("is-active");
-        });
+        // $("button[aria-controls='callTemplate']").on("click", function(){
+        //     $("#callTemplate").toggleClass("is-active");
+        // });
 
         //검색조건 bg active - 230922 수정
         $(".filterCustom .customTit").on("click", function(){
@@ -1616,6 +2369,29 @@
             }  
          });
 
+
+
+        let talentedSearch_boxWrap = document.querySelector('.talentedSearch .boxWrap');
+        let tyScroll = document.querySelectorAll('.talentedSearch .boxWrap .yScroll');
+        // let yActive = document.querySelector('.myProjDetail .tabCont.is-active .yScroll');
+
+        function testScroll(){                  
+            talentedSearch_boxWrap.addEventListener('wheel', moveScroll);
+
+            function moveScroll(event){
+                for(let i=0; i<tyScroll.length; i++){
+                    let yTop = tyScroll[i].scrollTop;
+                    let eDeltaY = event.deltaY;
+
+                    if(eDeltaY > 0 && yTop === 0 ){
+                        tyScroll[i].classList.add('is-active');
+                    }else if(eDeltaY < 0){
+                        tyScroll[i].classList.remove('is-active');
+                    }            
+                }
+            }
+        }
+        testScroll();
         
     </script>
 </body>
