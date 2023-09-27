@@ -1094,7 +1094,7 @@ header .suffix li::after {
   top: 50%;
   transform: translateY(-45%);
 }
-header .suffix li:last-child::after {
+header .suffix li:nth-child(4)::after, header .suffix li:last-child::after {
   display: none;
 }
 header .suffix li.userTeam {
@@ -1103,6 +1103,15 @@ header .suffix li.userTeam {
 }
 header .suffix li.userTeam::after {
   display: none;
+}
+header .suffix li .black {
+  padding: 0 5px;
+  line-height: 22px;
+  font-size: 0.875rem;
+}
+header .suffix li .black i {
+  margin-right: 2px;
+  vertical-align: -1px;
 }
 header.center {
   height: 3rem;
@@ -2235,6 +2244,10 @@ footer.toast button + button {
   transform: translateY(-50%);
 }
 
+.exceptCharge .right::after {
+  display: none;
+}
+
 .contractDetail .col7 {
   row-gap: 1.25rem;
   column-gap: 3.125rem;
@@ -3051,6 +3064,9 @@ table.wideType > tbody > tr > td .white.smSize {
 table.wideType > tbody > tr > td:last-child strong {
   margin-bottom: 0;
 }
+table.wideType > tbody > tr > td:last-child b {
+  display: block;
+}
 table.wideType > tbody > tr > td.left {
   text-align: left;
   padding: 1.25rem;
@@ -3723,6 +3739,11 @@ button.white:disabled, button.white.disabled,
   color: #cccccc;
   background: #f8f8f8;
   cursor: not-allowed;
+}
+button.black,
+.button.black {
+  background: #000000;
+  border: 1px solid #000000;
 }
 button.showMemo,
 .button.showMemo {
@@ -6756,6 +6777,12 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-position: -120px -60px;
   cursor: pointer;
 }
+.ico.pageList_w {
+  width: 0.6875rem;
+  height: 0.8125rem;
+  background-position: -160px -200px;
+  cursor: pointer;
+}
 .ico.pagingLeft {
   width: 0.625rem;
   height: 1.125rem;
@@ -7289,7 +7316,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   min-width: 5rem;
   text-align: center;
   word-break: keep-all;
-  color: #666666;
   position: relative;
 }
 .boxList.headType .cont .suffix.clear, .boxList.memoBox .cont .suffix.clear {
@@ -7301,12 +7327,16 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   height: 3.75rem;
   background: #cccccc;
   position: absolute;
-  left: -5px;
+  left: -10px;
   top: 50%;
   transform: translateY(-50%);
 }
 .boxList.headType .cont .suffix .dateType, .boxList.memoBox .cont .suffix .dateType {
   margin-top: 0.3125rem;
+}
+.boxList.headType .cont .suffix b, .boxList.memoBox .cont .suffix b {
+  display: block;
+  font-weight: 500;
 }
 .boxList.headType.is-active, .boxList.memoBox.is-active {
   border: 1px solid #0460d2;
