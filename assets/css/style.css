@@ -1484,7 +1484,11 @@ footer.toast button + button {
   width: 20.625rem;
   padding: 1.875rem 2.5rem;
 }
+.modalLayer .layerBox.confirmType h4 {
+  margin-bottom: 1.625rem;
+}
 .modalLayer .layerBox.confirmType .modalFooter {
+  margin-top: 20px;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -1603,7 +1607,7 @@ footer.toast button + button {
   padding: 0.125rem 0;
 }
 .modalLayer table td {
-  padding: 0.25rem 0.625rem !important;
+  padding: 0.25rem 0.375rem !important;
 }
 .modalLayer table tfoot td {
   padding: 10px !important;
@@ -2161,7 +2165,7 @@ footer.toast button + button {
   padding-right: 2.5rem;
 }
 #requireProject .infoBox {
-  width: 11.75rem;
+  min-width: 7.8125rem;
 }
 
 #callTemplate.absol .layerBox {
@@ -3044,7 +3048,6 @@ table.wideType > tbody > tr > td {
 }
 table.wideType > tbody > tr > td .bdType,
 table.wideType > tbody > tr > td .white {
-  width: 12.25rem;
   height: 3.75rem;
   line-height: initial;
 }
@@ -3104,6 +3107,8 @@ table .ellipsis {
   white-space: nowrap;
   text-align: left;
   padding: 0 0.375rem;
+  width: 95%;
+  max-width: 100%;
 }
 table .ellipsis .dNear {
   font-size: 0.75rem;
@@ -3420,10 +3425,13 @@ table .dot {
   text-align: left;
   border-bottom: 1px solid #dddddd;
 }
+.radioList li span,
 .radioList li input[type=text] {
   margin-right: 0.3125rem;
   width: 85%;
-  height: 2.25rem;
+  padding-left: 4px;
+  font-size: 14px;
+  color: #666666;
 }
 .radioList li.nodata {
   height: calc(100% - 50px);
@@ -5483,7 +5491,7 @@ input[type=radio]:disabled + label {
 }
 .boxType li {
   min-width: 6.875rem;
-  height: 6.25rem;
+  height: 7.1875rem;
   font-weight: 400;
   text-align: center;
   display: flex;
@@ -5515,12 +5523,18 @@ input[type=radio]:disabled + label {
 .boxType li input + label {
   width: 100%;
   height: 100%;
-  padding: 1rem 0.625rem;
+  padding: 0.875rem 0.625rem;
+  line-height: 20px;
   font-weight: 400;
   border: 1px solid #cccccc;
 }
 .boxType li input + label::before {
   display: none;
+}
+.boxType li input + label .lv {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
 }
 .boxType li input:checked + label {
   color: #fff;
@@ -7106,6 +7120,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   justify-content: space-between;
   flex-direction: column;
   height: 6.25rem;
+  word-break: keep-all;
 }
 .boxList.flexType .center {
   max-width: 56.25rem;
@@ -7124,6 +7139,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   white-space: nowrap;
   text-align: left;
   display: block;
+  width: 82%;
   font-size: 1.125rem;
   font-weight: 700;
 }
@@ -8170,7 +8186,6 @@ h6 + .h6_sub {
 }
 .innerList ul li {
   display: flex;
-  align-items: center;
   line-height: 32px;
 }
 .innerList ul p {
@@ -8190,6 +8205,9 @@ h6 + .h6_sub {
   position: absolute;
   top: 14px;
   left: -10px;
+}
+.innerList ul span {
+  text-align: left;
 }
 
 .accept,
@@ -8498,8 +8516,8 @@ h6 + .h6_sub {
 }
 .myProjDetail .boxWrap .boxType {
   width: 98%;
-  height: 6.25rem;
-  margin-top: 1.375rem;
+  height: 7.1875rem;
+  margin-top: 1.25rem;
   padding-bottom: 0.375rem;
 }
 .myProjDetail .boxWrap .boxType ul {
@@ -8847,7 +8865,7 @@ h6 + .h6_sub {
 .resume > .prefix .mid li {
   position: relative;
   margin: 10px 0;
-  height: 1.25rem;
+  min-height: 1.25rem;
 }
 .resume > .prefix .mid li::before {
   content: "";
@@ -8983,6 +9001,9 @@ h6 + .h6_sub {
 }
 .memRegister .inputList .flexCenter li {
   margin-bottom: 0;
+}
+.memRegister .inputList .flexCenter + .flexCenter {
+  margin-top: 0.625rem;
 }
 .memRegister .inputList .grid + .grid {
   margin-top: 0.625rem;
@@ -9789,6 +9810,14 @@ h6 + .h6_sub {
 .talentedSearch .yScroll.is-active {
   height: calc(100vh - 220px);
 }
+.talentedSearch .hasTooltip .tooltip {
+  top: 50%;
+  transform: translateY(-50%);
+  left: -30%;
+}
+.talentedSearch .hasTooltip:hover .tooltip {
+  display: block;
+}
 
 .searchRequire {
   display: flex;
@@ -10404,6 +10433,10 @@ h6 + .h6_sub {
   width: auto;
   border: 0;
   box-shadow: none;
+}
+
+.ui-datepicker-header .ui-corner-all {
+  width: 30px;
 }
 
 .ui-state-active, .ui-widget-content .ui-state-active {

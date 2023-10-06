@@ -31,6 +31,18 @@
             height: calc(100vh - 220px);
         }
     }
+    .hasTooltip{
+        .tooltip{
+            top: 50%;
+            transform: translateY(-50%);
+            left: -30%;
+        }
+        &:hover{
+            .tooltip{
+                display: block;
+            }
+        }
+    }
 }
 
 

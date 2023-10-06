@@ -590,7 +590,7 @@ input[type=radio]{
     }
     li{        
         min-width: rem(110);
-        height: rem(100);
+        height: rem(115);
         font-weight: 400;
         text-align: center;
         @include heightArray;
@@ -623,12 +623,19 @@ input[type=radio]{
             + label{
                 width: 100%;
                 height: 100%;
-                padding: rem(16) rem(10);
+                // padding: rem(16) rem(10);
+                padding: rem(14) rem(10);
+                line-height: 20px;
                 font-weight: 400;
                 border: 1px solid $layoutColor;
                 // border-right: 0;
                 &::before{
                     display: none;
+                }
+                .lv{
+                    display: block;
+                    margin-bottom: 4px;
+                    font-size: 13px;
                 }
             }
             &:checked{
