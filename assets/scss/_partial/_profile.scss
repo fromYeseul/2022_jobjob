@@ -81,11 +81,16 @@
 
 //인재검색 - 프로젝트 제안하기 팝업
 .offertrg{
+    height: 210px;
+    overflow-y: auto;
+    overflow-x: hidden;
     > ul{
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        // flex-wrap: wrap;
         gap:4px;
+        grid-template-columns: repeat(4, 1fr);
         .trgBox{
+            display: initial;
             margin-bottom: 0;
             width: rem(162);
         }

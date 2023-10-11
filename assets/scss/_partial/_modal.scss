@@ -207,7 +207,8 @@
         }
         td{
             // padding: rem(4) rem(10) !important;
-            padding: rem(4) rem(6) !important;
+            // padding: rem(4) rem(6) !important;
+            padding: rem(4) !important;
         }
         tfoot{
             td{
@@ -668,11 +669,11 @@
                     width: 21px;
                     height: 20px;
                     right: 5px;
-                    top: 10px;
+                    top: 5px;
                 }
                 &:after{
                     right: 8px;
-                    top: 14px;
+                    top: 9px;
                 }
             }
             img{
@@ -742,6 +743,11 @@
     .layerBox{
         padding: 0;
         min-width: rem(1240);
+        //transition: all .3s;
+        &.mView{           
+            width: 410px;
+            min-width: 410px;
+        }
     }
     .modalHeader{
         position: absolute;
@@ -756,8 +762,18 @@
             padding-bottom: rem(40);
         }
         .component{
+            margin-top: 10px;
             height: calc(100vh - 450px);
         }
+    }
+}
+//모집공고 재등록
+#isReopen{
+    .layerBox{
+        height: 660px;
+    }
+    .hasDatepicker{
+        min-height: 457px;
     }
 }
 

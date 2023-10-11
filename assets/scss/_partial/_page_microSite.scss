@@ -2,7 +2,7 @@
     padding-top: rem(50);
     min-width: rem(360);
     background-color: $subBlue;
-    background-image: url(/./style/img/bgtxt.png);
+    background-image: url(../img/bgtxt.png);
     background-repeat: repeat;
     .layoutWrapper{
         margin: 0 auto;
@@ -68,8 +68,16 @@
                 max-width: 90%;
                 width: auto;
             }
+            .round{
+                min-width: auto;
+                height: 30px;
+                padding: 0 16px;
+                line-height: 23px;
+                border-width: 2px;
+            }
         }
         h3{
+            margin-top: 10px;
             color: $subTitGray;
             font-weight: 400;
             font-size: rem(18);
@@ -79,7 +87,9 @@
             right: 0;
             top: 4px;
             .tipBtn{
+                margin-left: 4px;
                 color: $subBlue;
+                font-size: rem(14);
                 font-weight: 500;
                 position: relative;
                 cursor: pointer;
@@ -143,11 +153,14 @@
             }
         }
     }
+    .tabType{
+        justify-content: center;
+    }
     .component{
-        margin-top: rem(16);
+        margin-top: rem(26);
         padding: rem(10) rem(30);
         overflow-y: auto;
-        height: calc(100vh - 377px);
+        height: calc(100vh - 387px);
         background: $white;
         &.center{
             @include heightArray;
@@ -320,6 +333,118 @@
     }
 }
 
+.mView{    
+    .mobile{display: inline-block;}
+    .pc{display: none;}
+    .compoWrapper{
+        padding: rem(25);
+        padding-bottom: rem(80);
+        border-radius: 0;
+        &.fullSize{
+            padding-bottom: rem(25);
+            .component{
+                &.center{
+                    height: calc(100vh - 280px);
+                }
+            }
+            .bottomBtn{
+                position: relative;
+                padding: 0;
+            }
+            footer{
+                ul{
+                    padding-top: rem(20);
+                }
+            }   
+        }
+        .titWrapper{
+            height: auto;
+            text-align: left;
+            .title{
+                display: block;
+                max-width: initial;
+                h2{
+                    display: block;
+                    margin-top: rem(10);
+                    margin-left: 0;
+                    max-width: initial;
+                    @include ellipsis-2;
+                    font-size: rem(22); 
+                }
+            }
+            .tooltip{
+                top: 0;
+            }
+        }
+        .tabType{
+            margin-top: 10px;
+        }
+        .component{            
+            height: auto;
+            padding: rem(10);
+            &.center{
+                margin-top: 40px;
+                height: calc(100vh - 334px);
+                h2{
+                    font-size: rem(26);
+                }
+                p{
+                    font-size: rem(16);
+                    margin-top: rem(30);
+                }
+                .subInfo{
+                    font-size: rem(14);
+                }
+            }
+        }
+        .grid{
+            margin: rem(20);
+            grid-template-columns: 0;
+            .agreement{   
+                grid-column: 1 / 3;
+                grid-row: 3 / 3;
+                margin-top: rem(30);
+            }
+            .wishPay{
+                grid-column: 1 / 3;
+            }
+            .attResume{
+                grid-column: 1 / 3;
+            }
+        }
+        .accWrap{
+            height: auto;
+            &.indexType{
+                .innerList{
+                    display: block;
+                    > ul{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .bottomBtn{
+            padding: rem(15) rem(25);
+            width: 100%;
+            background: $bgColor;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            z-index: 100;
+        }
+        footer{
+            ul{
+                display: block;
+                text-align: center;
+                .link{
+                    a{
+                        padding: 0 rem(8);
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media (max-width: 960px){
     .bgWrapper{
@@ -432,6 +557,5 @@
             }
         }
     }
-
 }
 @media (max-width: 760px){}

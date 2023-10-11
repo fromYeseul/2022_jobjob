@@ -834,7 +834,7 @@
                                                                         <span class="chip">JSP</span>
                                                                     </div>                                     
                                                                 </td>
-                                                                <td class="hasTooltip">
+                                                                <td>
                                                                     <b class="subGray">제안불가</b>
                                                                     <span class="subGray">(필수약관 미동의)</span>
                                                                 </td>
@@ -890,8 +890,8 @@
                                                                         <span class="chip">JSP</span>
                                                                     </div>                                     
                                                                 </td>
-                                                                <td class="hasTooltip">
-                                                                    <b>최근에 제안</b>
+                                                                <td>
+                                                                    <b class="underL">최근에 제안</b><!--231015 추가-ys-->
                                                                     <span class="subGray">(24/03/01)</span>
                                                                 </td>
                                                             </tr>
@@ -946,9 +946,13 @@
                                                                         <span class="chip">JSP</span>
                                                                     </div>                                     
                                                                 </td>
-                                                                <td class="hasTooltip">
+                                                                <!-- <td class="hasTooltip">
                                                                     <b>23/09/29</b>
                                                                     <span class="subGray">부터 가용 가능</span>
+                                                                </td> -->
+                                                                <td>
+                                                                    <b class="subGray">제안불가</b>
+                                                                    <span class="subGray">(필수약관 미동의)</span>
                                                                 </td>
                                                             </tr>
 
@@ -1018,7 +1022,7 @@
                                                                         <span class="chip">SQLite</span>
                                                                     </div>                                     
                                                                 </td>
-                                                                <td class="hasTooltip">
+                                                                <!-- <td class="hasTooltip">
                                                                     <button class="white hasTooltip">
                                                                         <div class="tooltip">            
                                                                             최근제안된 프로젝트명
@@ -1026,6 +1030,10 @@
                                                                         최근에 제안
                                                                         <span>(2023.01.02)</span>                                                         
                                                                     </button>   
+                                                                </td> -->
+                                                                <td>
+                                                                    <b class="underL">최근에 제안</b>
+                                                                    <span class="subGray">(24/03/01)</span>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -1079,7 +1087,10 @@
                                                                         <span class="chip">Java</span>
                                                                     </div>                                     
                                                                 </td>
-                                                                <td>제안불가 (부회원)</td>
+                                                                <td>
+                                                                    <b>제안불가</b>
+                                                                    <span class="subGray">(필수약관 미동의)</span>
+                                                                </td>
                                                             </tr>
                                                             <tr class="nodata">
                                                                 <td colspan="11">결과없음</td>
@@ -1510,7 +1521,9 @@
                                                                 </td>
                                                                 <td>         
                                                                     <div class="relative">
-                                                                        <strong aria-controls="privateInvest" class="attached layerOpen">1건</strong><!--230724 1건이상일때 attached 추가-ys-->
+                                                                        <strong  class="attached">1건</strong>
+                                                                        <!--230724 1건이상일때 attached 추가-ys-->
+
                                                                         <div id="privateInvest" class="modalLayer absol is-active">
                                                                             <div class="layerBox">
                                                                                 <!-- <div class="modalHeader">
@@ -1608,9 +1621,53 @@
                                                                     <strong>웹개발</strong>
                                                                     <p>네트워크엔지니어</p>
                                                                 </td>
-                                                                <td>    
+                                                                <td>        
                                                                     <div class="relative">
-                                                                        <strong class="attached layerOpen">3건</strong>
+                                                                        <strong  class="attached">1건</strong>
+                                                                        <!--230724 1건이상일때 attached 추가-ys-->
+
+                                                                        <div id="privateInvest" class="modalLayer absol is-active">
+                                                                            <div class="layerBox">
+                                                                                <!-- <div class="modalHeader">
+                                                                                    <button class="ico layerClose"></button>
+                                                                                </div> -->
+                                                                                <div class="modalCont">
+                                                                                    <div class="tableBox">                                                                                            
+                                                                                        <table>
+                                                                                            <colgroup>
+                                                                                                <col width="40%">
+                                                                                                <col>
+                                                                                                <col>
+                                                                                            </colgroup>
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th>투입기간</th>
+                                                                                                    <th>매입단가</th>
+                                                                                                    <th>상태</th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="left">2023.06.15~2023.06.22</td>
+                                                                                                    <td>700만</td>
+                                                                                                    <td><span class="sReject">투입</span></td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td class="left">2023.06.15~미입력</td>
+                                                                                                    <td>700만</td>
+                                                                                                    <td>기타</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td class="left">미입력~2023.06.22</td>
+                                                                                                    <td>미입력</td>
+                                                                                                    <td><span class="sOrder">교체</span></td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>        
+                                                                        </div>
                                                                     </div>
                                                                     <p>2023.05.30</p>                                 
                                                                 </td>
@@ -2315,7 +2372,7 @@
     </section>
     
     <!--문자보내기 팝업-->
-    <div id="layer_offer" class="modalLayer center is-active">
+    <div id="layer_offer" class="modalLayer center">
         <div class="layerBox">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -2877,7 +2934,7 @@
 
 
     <!--230427 직무추천 상세설정 팝업-->
-    <div id="recomDetail" class="modalLayer center is-active">
+    <div id="recomDetail" class="modalLayer center">
         <div class="layerBox">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -3105,7 +3162,7 @@
     <!--//230427 직무추천 상세설정 팝업-->
 
     <!--230724 연락주의자 명단 팝업-->
-    <div id="contactCare" class="modalLayer center is-active"><!--id바뀌면 말씀해주세요-ys-->
+    <div id="contactCare" class="modalLayer center"><!--id바뀌면 말씀해주세요-ys-->
         <div class="layerBox midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -3432,19 +3489,32 @@
     </script>
 
     
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script>
     $( function() {
         $( "#datepicker" ).datepicker();
     } );
-    </script>
+    </script> -->
 
     <script>
         $(".boxType .onlyIco").on("click", function(){
             $(this).toggleClass("is-active");
             $(this).parent(".boxType").find("ul").toggleClass("is-active");
+        });
+
+        //투입정보 변경이력 팝업  - 231015 수정
+        $("body").click(function(e){  
+            let absol = $(".modalLayer.absol");
+            let thisAbsol = $(e.target).next(".modalLayer.absol");
+             if($(e.target).hasClass('attached')){
+                absol.not(thisAbsol).removeClass("is-active");
+                thisAbsol.toggleClass("is-active");
+             }
+             else{
+                absol.removeClass("is-active");
+            }  
         });
     </script>
 </body>
