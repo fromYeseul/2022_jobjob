@@ -865,6 +865,7 @@
 
 #requireProject{
     .absol{
+        box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.2);
         .layerBox{
             padding: rem(10);
             min-width: auto;
@@ -890,6 +891,19 @@
             border-left-color: $tooltipGray;
         }
     }
+    tr{
+        &:last-child{            
+            .tooltip{
+                top: auto;
+                bottom: 0;
+                transform: translate(0,0);
+                &::after{
+                    top: auto;
+                    bottom: 0%;
+                }
+            }
+        }
+    }
     .selectedBox{
         padding-right: rem(40);
     }
@@ -905,6 +919,9 @@
     }
     .yScroll{
         height: 300px;
+        .tableBox{
+            overflow-y: initial;
+        }
     }
     .modalCont{
         margin-top: 10px;
@@ -1075,5 +1092,12 @@
     }
     .range{
         margin: 0 10px;
+    }
+}
+
+#fileList{
+    .h3_sub{
+        margin-top: -10px;
+        color: $filePopSub;
     }
 }

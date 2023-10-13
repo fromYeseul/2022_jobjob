@@ -173,8 +173,21 @@
     <script src="../assets/js/script.js"></script>  
     <script>
         //담당자연락처보기
-        $(".tipBtn").on("click", function(){
-            $(this).next('.toolBox').toggleClass("is-active");
+        // $(".tipBtn").on("click", function(){
+        //     $(this).next('.toolBox').toggleClass("is-active");
+        // });
+
+        //담당자연락처보기 - 231015 외부클릭시 닫힘 추가-ys
+        $("body").click(function(e){  
+            let toolBox = $(".toolBox");
+             if($(e.target).hasClass('tipBtn')){
+                $(this).next('.toolBox').toggleClass("is-active");
+             }else if($(e.target).hasClass('toolBox') || $(e.target).parents().hasClass('toolBox')){
+                return;
+             }
+             else{
+                toolBox.removeClass("is-active");
+            }  
         });
 
         //정보 열림/닫힘
