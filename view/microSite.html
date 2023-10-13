@@ -181,7 +181,7 @@
         $("body").click(function(e){  
             let toolBox = $(".toolBox");
              if($(e.target).hasClass('tipBtn')){
-                $(this).next('.toolBox').toggleClass("is-active");
+                $(e.target).next('.toolBox').toggleClass("is-active");
              }else if($(e.target).hasClass('toolBox') || $(e.target).parents().hasClass('toolBox')){
                 return;
              }
