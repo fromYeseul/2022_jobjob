@@ -150,14 +150,16 @@
     }
     .projTit{
         @include ellipsis;
+        align-items: center;
+        gap: 4px;
         width: auto;
         // max-width: 90%;
         font-weight: 500; //0913 J bold -> 500 수정
         font-size: rem(17);
         cursor: pointer;
             .round{
-                margin-right: rem(10);
-                margin-top: 2px;
+                // margin-right: rem(10);
+                // margin-top: 2px;
                 width: rem(62);
                 color: $cancel;
             }
@@ -226,6 +228,13 @@
             }
         }    
     }
+    .chipBox{
+        padding: 0;
+        .chip{
+            height: 26px; 
+            line-height: 21px;
+        }
+    }
 }
 
 .innerList{
@@ -251,7 +260,9 @@
     }
     .innerProj{
         @include ellipsis;
-        width: 84%;
+        // width: 84%;
+        width: auto;
+        max-width: 80%;
     }
     .suffix{
         font-size: rem(14);
@@ -305,6 +316,9 @@
         }   
         span{
             text-align: left;
+            &.label{
+                text-align: center;
+            }
         }
     }
 }

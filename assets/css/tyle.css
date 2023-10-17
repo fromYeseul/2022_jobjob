@@ -3110,7 +3110,6 @@ table.wideType > tbody > tr > td:last-child strong {
 }
 table.wideType > tbody > tr > td:last-child b {
   display: block;
-  line-height: 24px;
   color: #000000;
   font-weight: 500;
 }
@@ -3890,10 +3889,6 @@ button.onlyIco.lowSize,
   height: 2rem;
   display: inline-flex;
 }
-button.onlyIco.gray,
-.button.onlyIco.gray {
-  background: #a6a6b6;
-}
 button.onlyIco.round,
 .button.onlyIco.round {
   border-radius: 50%;
@@ -4001,9 +3996,7 @@ span.button {
   margin-right: 2px;
   display: inline-block;
   min-width: 2.75rem;
-  height: 1.375rem;
   line-height: 1.375rem;
-  text-align: center;
   color: #666666;
   font-size: 0.75rem;
   font-weight: 400;
@@ -4054,9 +4047,8 @@ span.button {
 }
 .count.offer {
   min-width: 1rem;
-  width: auto;
-  line-height: 0.9375rem;
-  font-size: 0.75rem;
+  line-height: 1rem;
+  font-size: 0.8125rem;
   color: #a6a6b6;
   border: 1px solid #a6a6b6;
   background: transparent;
@@ -6704,11 +6696,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-position: -160px -60px;
   cursor: pointer;
 }
-.ico.preview_w {
-  width: 1.125rem;
-  height: 1rem;
-  background-position: -160px -220px;
-}
 .ico.edit {
   width: 0.75rem;
   height: 0.75rem;
@@ -7404,7 +7391,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   -webkit-line-clamp: initial;
 }
 .boxList.headType .cont .suffix, .boxList.memoBox .cont .suffix {
-  width: 25%;
+  width: 24%;
   min-width: 5rem;
   text-align: center;
   word-break: keep-all;
@@ -7431,7 +7418,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .boxList.headType .cont .suffix b, .boxList.memoBox .cont .suffix b {
   display: block;
-  line-height: 24px;
   color: #000000;
   font-weight: 500;
 }
@@ -7646,42 +7632,9 @@ h6 + .h6_sub {
   background: #e3e3e7;
   position: relative;
 }
-.notiBox .button.laSize,
 .notiBox button.laSize,
-.projBox .button.laSize,
 .projBox button.laSize {
   margin-right: 0.625rem;
-}
-.notiBox .button.onlyIco,
-.notiBox button.onlyIco,
-.projBox .button.onlyIco,
-.projBox button.onlyIco {
-  width: 2.125rem;
-  line-height: 1.875rem;
-  height: 2.125rem;
-}
-.notiBox .prefix,
-.projBox .prefix {
-  width: 70%;
-}
-.notiBox .prefix .projGroup,
-.projBox .prefix .projGroup {
-  margin-right: 0.625rem;
-  font-size: 0.875rem;
-  color: #666666;
-}
-.notiBox .prefix .projGroup + h4,
-.projBox .prefix .projGroup + h4 {
-  width: 90%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  white-space: nowrap;
-  text-align: left;
-}
-.notiBox .prefix .selectBox,
-.projBox .prefix .selectBox {
-  width: 43.75rem;
 }
 .notiBox .prefix,
 .notiBox .suffix,
@@ -7698,6 +7651,10 @@ h6 + .h6_sub {
 .projBox .alertToast {
   top: -20px;
   right: 110px;
+}
+.notiBox .selectBox,
+.projBox .selectBox {
+  width: 43.75rem;
 }
 
 .projRole {
@@ -8042,13 +7999,6 @@ h6 + .h6_sub {
   display: none;
   visibility: visible;
 }
-.regiPart .hasTooltip .tooltip.type2 {
-  display: block;
-  visibility: hidden;
-}
-.regiPart .hasTooltip:hover .tooltip.type2 {
-  visibility: visible;
-}
 .regiPart tfoot td {
   padding: 0.625rem 0.25rem;
 }
@@ -8193,14 +8143,14 @@ h6 + .h6_sub {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  align-items: center;
-  gap: 4px;
   width: auto;
   font-weight: 500;
   font-size: 1.0625rem;
   cursor: pointer;
 }
 .accBox .projTit .round {
+  margin-right: 0.625rem;
+  margin-top: 2px;
   width: 3.875rem;
   color: #a6a6b6;
 }
@@ -8269,13 +8219,6 @@ h6 + .h6_sub {
 .accInner.infoType:last-child ul {
   border-bottom: 0;
 }
-.accInner .chipBox {
-  padding: 0;
-}
-.accInner .chipBox .chip {
-  height: 26px;
-  line-height: 21px;
-}
 
 .innerList {
   display: flex;
@@ -8306,8 +8249,7 @@ h6 + .h6_sub {
   word-wrap: break-word;
   white-space: nowrap;
   text-align: left;
-  width: auto;
-  max-width: 80%;
+  width: 84%;
 }
 .innerList .suffix {
   font-size: 0.875rem;
@@ -8358,9 +8300,6 @@ h6 + .h6_sub {
 }
 .innerList ul span {
   text-align: left;
-}
-.innerList ul span.label {
-  text-align: center;
 }
 
 .accept,
@@ -8754,18 +8693,11 @@ h6 + .h6_sub {
   padding: 0 0.25rem;
   font-size: 0.75rem;
 }
-.myProjDetail .listBottom .prefix button {
-  min-width: 7.5rem;
-}
 .myProjDetail .listBottom .suffix {
-  flex: 1 1 0;
+  flex: 2 1 0;
 }
-.myProjDetail .listBottom .suffix button + button {
-  flex: 1 1 50%;
-}
-
-#myProj-1 table td:last-child {
-  padding: 1.25rem;
+.myProjDetail .listBottom .suffix .suffix {
+  flex: 2 1 60%;
 }
 
 #myProj-3 tbody td:first-child {
@@ -9589,8 +9521,6 @@ h6 + .h6_sub {
 }
 .compoWrapper .titWrapper .title .mobile {
   margin-left: 0.625rem;
-  vertical-align: 2px;
-  color: #7d7d7d;
 }
 .compoWrapper .titWrapper .title h2 {
   font-size: 1.5rem;
@@ -9608,6 +9538,7 @@ h6 + .h6_sub {
 }
 .compoWrapper .titWrapper .title .round {
   min-width: auto;
+  height: 30px;
   padding: 0 16px;
   line-height: 23px;
   border-width: 2px;
@@ -9713,9 +9644,6 @@ h6 + .h6_sub {
 }
 .compoWrapper .component.center .subInfo {
   font-size: 1.125rem;
-}
-.compoWrapper .component .accInner {
-  text-align: left;
 }
 .compoWrapper .grid {
   margin-top: 1.25rem;
@@ -9981,9 +9909,8 @@ h6 + .h6_sub {
   .bgWrapper {
     padding-top: 0;
   }
-  .bgWrapper .layoutWrapper .logoWrapper {
+  .bgWrapper .logoWrapper {
     padding: 1.25rem;
-    padding-bottom: 10px;
   }
   .compoWrapper {
     padding: 1.5625rem;
@@ -11023,4 +10950,4 @@ h6 + .h6_sub {
   margin-bottom: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=tyle.css.map */

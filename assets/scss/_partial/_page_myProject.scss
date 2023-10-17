@@ -249,15 +249,35 @@
         }
     }
     .listBottom{
+        .prefix{
+            button{
+                min-width: rem(120);
+            }
+        }
         .suffix{
-            flex: 2 1 0;
-            .suffix{
-                flex: 2 1 60%;
+            // flex: 2 1 0;
+            flex: 1 1 0;
+            // .suffix{
+            //     flex: 2 1 60%;
+            // }
+            button{
+                & + button{
+                    flex: 1 1 50%;
+                }
             }
         }
     }
 }
 
+#myProj-1{
+    table{
+        td{
+            &:last-child{
+                padding: rem(20);
+            }
+        }
+    }
+}
 #myProj-3{
     tbody{
         td{

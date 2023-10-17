@@ -1085,7 +1085,7 @@ function rangeSliderMulti(){
         const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
         
         // 교차되지 않게, 1을 빼준 건 완전히 겹치기보다는 어느 정도 간격을 남겨두기 위해.
-        _this.value = Math.min(parseInt(_this.value), parseInt(careerRight.value) - 6);
+        _this.value = Math.min(parseInt(_this.value), parseInt(careerRight.value) - 1);
         
         // input, thumb 같이 움직이도록
         const percent = ((_this.value - min) / (max - min)) * 100;
@@ -1100,7 +1100,7 @@ function rangeSliderMulti(){
         const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
         
         // 교차되지 않게, 1을 더해준 건 완전히 겹치기보다는 어느 정도 간격을 남겨두기 위해.
-        _this.value = Math.max(parseInt(_this.value), parseInt(careerLeft.value) + 6);
+        _this.value = Math.max(parseInt(_this.value), parseInt(careerLeft.value) + 1);
         
         // input, thumb 같이 움직이도록
         const percent = ((_this.value - min) / (max - min)) * 100;

@@ -17,10 +17,31 @@
     border: 1px solid $projBoxBorder;
     background: $projBox;
     position: relative;
+    .button,
     button{
         &.laSize{
             margin-right: rem(10);
         }
+        &.onlyIco{
+            width: rem(34);
+            line-height: rem(30);
+            height: rem(34);
+        }
+    }
+    .prefix{
+        width: 70%;
+        .projGroup{
+            margin-right: rem(10);
+            font-size: rem(14);
+            color: $gray;
+            & + h4{
+                @include ellipsis;
+            }
+        }
+        .selectBox{
+            width: rem(700);
+        }
+        
     }
     .prefix,
     .suffix{
@@ -33,9 +54,6 @@
     .alertToast{
         top: -20px;
         right: 110px;
-    }
-    .selectBox{
-        width: rem(700);
     }
 }
 

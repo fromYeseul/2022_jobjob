@@ -732,7 +732,7 @@
 
 
     <!--이전공고불러오기 팝업-->
-    <div id="preRecruit" class="modalLayer center"><!--id 바뀌면 말씀해주세요 -ys -->
+    <div id="preRecruit" class="modalLayer center is-active"><!--id 바뀌면 말씀해주세요 -ys -->
         <div class="layerBox midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -751,7 +751,7 @@
                         <!--230829 수정-ys -->
                         <colgroup>
                             <col width="10%;">
-                            <col width="24%;">
+                            <col width="20%;"><!--231015 수정-ys-->
                             <col>
                             <col width="8%;">
                             <col width="10%;">
@@ -771,8 +771,11 @@
                         <tbody>
                             <tr>
                                 <td>2023.01.31</td>
-                                <td class="ellipsis center">개발 - 프론트</td>
-                                <td class="ellipsis">상수도 플록시스템 성능개선 플록시스템 성능개선 및 유지보수 사업</td><!--230829 span태그제거-ys -->
+                                <td class="ellipsis">개발 - 프론트</td><!--231015 center 클래스 제거-ys -->
+                                <td class="ellipsis">
+                                    <span class="label">모든등급</span><!--231015 추가-ys-->
+                                    상수도 플록시스템 성능개선 플록시스템 성능개선 및 유지보수 사업
+                                </td><!--230829 span태그제거-ys -->
                                 <!--230829 td추가 -ys -->
                                 <td class="">
                                     <i class="ico preview layerOpen" aria-controls="recruitPreview"></i>
@@ -783,20 +786,23 @@
                             </tr>
                             <tr>
                                 <td>2023.04.21</td>
-                                <td class="ellipsis center">최대 15자 노출인데 너무 긴거같아요??</td>
+                                <td class="ellipsis">최대 15자 노출인데 너무 긴거같아요??</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">상수도 플록시스템 성능개선 및 유지보수 사업</span></td>
-                                    <td>
-                                        <i class="ico preview"></i>
-                                    </td>
+                                    <span class="label">초급</span>
+                                    상수도 플록시스템 성능개선 및 유지보수 사업
+                                </td>
+                                <td>
+                                    <i class="ico preview"></i>
+                                </td>
                                 <td>이재윤</td>
                                 <td><button class="round order">선택</button></td>
                             </tr>
                             <tr>
                                 <td>2023.11.01</td>
-                                <td class="ellipsis center">기획 - 웹기획</td>
+                                <td class="ellipsis">기획 - 웹기획</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">삼성화재 스포츠안전재단 연계시스템 개발_무상</span>
+                                    <span class="label">중급</span>
+                                    삼성화재 스포츠안전재단 연계시스템 개발_무상
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -806,9 +812,10 @@
                             </tr>
                             <tr>
                                 <td>2023.01.31</td>
-                                <td class="ellipsis center">기획 – 게임기획</td>
+                                <td class="ellipsis">기획 – 게임기획</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">중부발전 ERP시스템 기술분야 유지관리</span>
+                                    <span class="label">중급</span>
+                                    중부발전 ERP시스템 기술분야 유지관리
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -818,9 +825,10 @@
                             </tr>
                             <tr>
                                 <td>2023.01.31</td>
-                                <td class="ellipsis center">컨설팅(SAP) – CO</td>
+                                <td class="ellipsis">컨설팅(SAP) – CO</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">[(주)멀티캠퍼스] 청년SW아카데미 학습플랫폼 청년SW아카데미 학습플랫폼</span>
+                                    <span class="label">중급</span>
+                                    [(주)멀티캠퍼스] 청년SW아카데미 학습플랫폼 청년SW아카데미 학습플랫
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -830,9 +838,10 @@
                             </tr>
                             <tr>
                                 <td>2023.04.21</td>
-                                <td class="ellipsis center">개발(SAP) – CO</td>
+                                <td class="ellipsis">개발(SAP) – CO</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">상수도 플록시스템 성능개선 및 유지보수 사업</span>
+                                    <span class="label">중급</span>
+                                    상수도 플록시스템 성능개선 및 유지보수 사업
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -842,9 +851,10 @@
                             </tr>
                             <tr>
                                 <td>2023.11.01</td>
-                                <td class="ellipsis center">디자인 – 웹디자인</td>
+                                <td class="ellipsis">디자인 – 웹디자인</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">삼성화재 스포츠안전재단 연계시스템 개발_무상</span>
+                                    <span class="label">중급</span>
+                                    삼성화재 스포츠안전재단 연계시스템 개발_무상
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -854,9 +864,10 @@
                             </tr>
                             <tr>
                                 <td>2023.01.31</td>
-                                <td class="ellipsis center">컨설팅 – 아키텍트</td>
+                                <td class="ellipsis">컨설팅 – 아키텍트</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">중부발전 ERP시스템 기술분야 유지관리</span>
+                                    <span class="label">중급</span>
+                                    중부발전 ERP시스템 기술분야 유지관리
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -866,9 +877,10 @@
                             </tr>
                             <tr>
                                 <td>2023.11.01</td>
-                                <td class="ellipsis center">기획 – 모바일기획</td>
+                                <td class="ellipsis">기획 – 모바일기획</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">삼성화재 스포츠안전재단 연계시스템 개발_무상</span>
+                                    <span class="label">중급</span>
+                                    삼성화재 스포츠안전재단 연계시스템 개발_무상
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -878,9 +890,10 @@
                             </tr>
                             <tr>
                                 <td>2023.01.31</td>
-                                <td class="ellipsis center">개발 - 프론트</td>
+                                <td class="ellipsis">개발 - 프론트</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">중부발전 ERP시스템 기술분야 유지관리</span>
+                                    <span class="label">중급</span>
+                                    중부발전 ERP시스템 기술분야 유지관리
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
