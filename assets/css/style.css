@@ -2171,12 +2171,26 @@ footer.toast button + button {
   left: -380px;
   top: 0%;
   transform: translate(0, -20%);
+  visibility: visible;
+}
+#requireProject .tooltip .yScroll {
+  height: auto;
+  max-height: 6.25rem;
+  overflow: auto;
+}
+#requireProject .tooltip .yScroll::-webkit-scrollbar {
+  width: 2px;
+}
+#requireProject .tooltip .yScroll::-webkit-scrollbar-track {
+  background-color: #444;
+}
+#requireProject .tooltip .yScroll::-webkit-scrollbar-thumb {
+  background-color: #666666;
 }
 #requireProject .tooltip::after {
   top: 50%;
   left: 100%;
   transform: translateY(-50%);
-  margin-top: -3px;
   margin-left: 0;
   border-top-color: transparent;
   border-left-color: #58585e;
@@ -2190,6 +2204,17 @@ footer.toast button + button {
   top: auto;
   bottom: 0%;
 }
+#requireProject tr:first-child .tooltip {
+  left: -380px;
+  top: 50%;
+  bottom: auto;
+  transform: translate(0, -50%);
+}
+#requireProject tr:first-child .tooltip::after {
+  top: 50%;
+  left: 100%;
+  bottom: auto;
+}
 #requireProject .selectedBox {
   padding-right: 2.5rem;
 }
@@ -2202,6 +2227,7 @@ footer.toast button + button {
 }
 #callTemplate .yScroll {
   height: 300px;
+  overflow: visible;
 }
 #callTemplate .yScroll .tableBox {
   overflow-y: initial;
@@ -3834,7 +3860,7 @@ button.round,
   word-break: keep-all;
   vertical-align: text-bottom;
   background: #fff;
-  border: 1px solid #a6a6b6;
+  border: 1px solid #8a8a8c;
   border-radius: 1.25rem;
 }
 button.round.disabled,
@@ -3892,7 +3918,7 @@ button.onlyIco.lowSize,
 }
 button.onlyIco.gray,
 .button.onlyIco.gray {
-  background: #a6a6b6;
+  background: #8a8a8c;
 }
 button.onlyIco.round,
 .button.onlyIco.round {
@@ -7703,18 +7729,20 @@ h6 + .h6_sub {
 .projRole {
   display: flex;
   align-items: center;
+  gap: 4px;
 }
 .projRole .round {
-  margin-right: 10px;
   width: 3.875rem;
   font-size: 0.8125rem;
   color: #a6a6b6;
 }
 .projRole .field {
-  margin-right: 20px;
   width: 6.625rem;
   font-size: 0.875rem;
   color: #0460d2;
+}
+.projRole .projTit {
+  max-width: 55%;
 }
 
 .profile {
@@ -8035,18 +8063,18 @@ h6 + .h6_sub {
 .regiPart .boxWrap .alertToast {
   transform: translateY(50%);
 }
-.regiPart .hasTooltip {
+.regiPart li .hasTooltip {
   cursor: default;
 }
-.regiPart .hasTooltip .tooltip {
+.regiPart li .hasTooltip > .tooltip {
   display: none;
   visibility: visible;
 }
-.regiPart .hasTooltip .tooltip.type2 {
+.regiPart li .hasTooltip > .tooltip.type2 {
   display: block;
   visibility: hidden;
 }
-.regiPart .hasTooltip:hover .tooltip.type2 {
+.regiPart li .hasTooltip:hover .tooltip.type2 {
   visibility: visible;
 }
 .regiPart tfoot td {
@@ -8101,6 +8129,16 @@ h6 + .h6_sub {
 }
 .accWrap.flatType .accHead .prefix {
   width: 85%;
+}
+.accWrap.flatType .accHead .prefix .round {
+  width: 3.875rem;
+  font-size: 0.8125rem;
+  color: #a6a6b6;
+}
+.accWrap.flatType .accHead .prefix .field {
+  width: 6.625rem;
+  font-size: 0.875rem;
+  color: #0460d2;
 }
 .accWrap.indexType .accBox {
   border-radius: 0;
@@ -8185,6 +8223,7 @@ h6 + .h6_sub {
 .accBox .suffix {
   display: flex;
   align-items: center;
+  gap: 4px;
 }
 .accBox .projTit {
   width: 90%;
@@ -8196,6 +8235,7 @@ h6 + .h6_sub {
   align-items: center;
   gap: 4px;
   width: auto;
+  max-width: 75%;
   font-weight: 500;
   font-size: 1.0625rem;
   cursor: pointer;
@@ -8251,6 +8291,9 @@ h6 + .h6_sub {
 .accInner.infoType .innerList .suffix {
   justify-self: end;
 }
+.accInner.infoType .innerList .projObj {
+  gap: 4px;
+}
 .accInner.infoType .innerList .projManager {
   width: 90%;
   overflow: hidden;
@@ -8289,13 +8332,11 @@ h6 + .h6_sub {
   color: #4b4b4b;
 }
 .innerList .prefix .field {
-  margin-right: 10px;
   width: 6.625rem;
   font-size: 0.875rem;
   color: #0460d2;
 }
 .innerList .prefix .round {
-  margin-right: 0.625rem;
   width: 3.875rem;
   color: #a6a6b6;
 }
@@ -8307,7 +8348,7 @@ h6 + .h6_sub {
   white-space: nowrap;
   text-align: left;
   width: auto;
-  max-width: 80%;
+  max-width: 75%;
 }
 .innerList .suffix {
   font-size: 0.875rem;
@@ -8336,6 +8377,7 @@ h6 + .h6_sub {
 }
 .innerList ul li {
   display: flex;
+  align-items: center;
   line-height: 32px;
 }
 .innerList ul p {
@@ -10348,270 +10390,6 @@ h6 + .h6_sub {
 }
 .sendedOfferDetail .innerList li {
   line-height: 2.125rem;
-}
-
-.clientBuy .tableTop {
-  margin-top: 1.875rem;
-}
-
-.clientSales .tableTop {
-  margin-top: 1.875rem;
-}
-
-.clientRegister {
-  width: 100%;
-}
-.clientRegister .inputList > ul > li,
-.clientRegister .inputList .grid > li {
-  margin-bottom: 1.25rem;
-}
-.clientRegister .hasTooltip .tooltip.left {
-  left: -165px;
-  top: 40px;
-}
-.clientRegister .hasTooltip .tooltip.left.line2 {
-  top: 140px;
-}
-.clientRegister .hasTooltip .tooltip.left.line3 {
-  top: 230px;
-}
-.clientRegister .hasTooltip .tooltip.left.line4 {
-  top: 320px;
-}
-.clientRegister .bizCorpor {
-  width: 90%;
-  column-gap: 3.75rem;
-  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr;
-}
-.clientRegister .bizIncome {
-  width: 90%;
-  column-gap: 3.75rem;
-  grid-template-columns: 1fr 1fr 50px 1fr 1fr 1fr;
-}
-.clientRegister .hasBtn input {
-  flex-grow: 1;
-}
-.clientRegister .hasBtn .button,
-.clientRegister .hasBtn button {
-  width: 2.75rem;
-  background: #6b6b6b;
-  border: 1px solid #6b6b6b;
-}
-.clientRegister .uploadBox {
-  width: 40%;
-}
-.clientRegister .uploadBox label {
-  margin-bottom: 0;
-}
-.clientRegister .commentBox {
-  width: 90%;
-}
-
-.clientRegister .clientCNm {
-  grid-column: 1/3;
-}
-.clientRegister .clientWeb,
-.clientRegister .clientAccount {
-  grid-column: 3/5;
-}
-.clientRegister .clientCode {
-  grid-column: 5/6;
-}
-.clientRegister .clientAdd,
-.clientRegister .clientFile {
-  grid-column: 1/3;
-}
-.clientRegister .clientPayday,
-.clientRegister .clientCode {
-  display: none;
-}
-.clientRegister.is-detail .clientPayday,
-.clientRegister.is-detail .clientCode {
-  display: block;
-}
-.clientRegister .bizIncome {
-  width: 90%;
-  column-gap: 3.75rem;
-  grid-template-columns: 1fr 1fr 50px 1fr 1fr 1fr;
-}
-.clientRegister .bizIncome .clientName {
-  margin-right: -50px;
-}
-.clientRegister .bizIncome .clientContact,
-.clientRegister .bizIncome .clientAccount,
-.clientRegister .bizIncome .clientCode {
-  grid-column: 4/6;
-}
-.clientRegister .bizIncome .clientEmail {
-  grid-column: 2/4;
-}
-.clientRegister .bizIncome .clientAdd {
-  grid-column: 1/4;
-}
-.clientRegister .bizIncome .clientPayday {
-  display: block;
-}
-.clientRegister input.xsSize {
-  width: 3.625rem;
-  height: 2.75rem;
-  text-align: center;
-}
-.clientRegister .hyphen {
-  margin: 0 0.5625rem;
-}
-
-.bizState {
-  width: 100%;
-}
-.bizState .tableTop {
-  margin-top: 1.875rem;
-}
-.bizState tfoot td {
-  padding: 0 6px;
-  background: #e6e6e6;
-}
-.bizState .relative {
-  position: absolute;
-  bottom: 15px;
-  width: 97%;
-}
-
-.bizStateRegister {
-  width: 100%;
-}
-.bizStateRegister .regiPartWrapper {
-  padding-left: 6.25rem;
-  padding-right: 6.25rem;
-}
-.bizStateRegister .col6 {
-  margin-top: 1.875rem;
-  width: 81.25rem;
-  column-gap: 3.75rem;
-  grid-template-columns: 1fr 50px 1.8fr 1fr 1fr 130px;
-}
-.bizStateRegister .hasBtn input {
-  flex-grow: 1;
-}
-.bizStateRegister .hasBtn .button,
-.bizStateRegister .hasBtn button {
-  width: 3.75rem;
-}
-.bizStateRegister .range {
-  margin: 0 22px;
-}
-.bizStateRegister .clientComp {
-  grid-column: 1/3;
-}
-.bizStateRegister .bizTerm {
-  grid-column: 4/6;
-}
-.bizStateRegister .bizTerm input[type=text].dateType {
-  width: 10.75rem !important;
-}
-.bizStateRegister .bizProjNm,
-.bizStateRegister .bizFile {
-  grid-column: 1/4;
-}
-.bizStateRegister .bizInsurance {
-  grid-column: 5/7;
-}
-.bizStateRegister .bizInsurance label {
-  margin-right: 1.25rem;
-  line-height: 44px;
-}
-.bizStateRegister .boxWrap > .prefix .tabBtn a {
-  border-radius: 4px 4px 0 0;
-}
-.bizStateRegister .tabWrapper.mt20 .tabBtn button {
-  margin-left: 45.9375rem;
-}
-.bizStateRegister .tabWrapper .flex {
-  justify-content: space-between;
-  align-items: center;
-}
-.bizStateRegister .tabBtnWrap .tabBtn {
-  line-height: 2.125rem;
-}
-.bizStateRegister .tabBtnWrap .tabBtn a {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.bizStateRegister .tableTop .hasTooltip + .hasTooltip {
-  margin-left: 0.625rem;
-}
-.bizStateRegister .tableTop .hasTooltip .tooltip {
-  top: 150%;
-}
-.bizStateRegister select.others {
-  color: #ff1236;
-}
-.bizStateRegister h4 + .tableTop {
-  margin-top: 30px;
-}
-.bizStateRegister h4 {
-  color: #205391;
-}
-.bizStateRegister button.smSize, .bizStateRegister button.midSize, .bizStateRegister button.save {
-  background: #205391;
-  border: 1px solid #205391;
-}
-.bizStateRegister button.white {
-  background: #fff;
-  border: 1px solid #cccccc;
-}
-.bizStateRegister .tabBtnWrap .tabBtn a.is-active {
-  background-color: #2a55aa;
-  border: 1px solid #2a55aa;
-}
-.bizStateRegister table tr th {
-  background: #8c98a6;
-}
-
-.flexLeft {
-  padding-bottom: 0.625rem;
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-}
-.flexLeft::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-.flexLeft > .prefix {
-  flex-shrink: 0;
-  width: 820px;
-}
-.flexLeft > .suffix {
-  width: 900px;
-  flex: 0 0 auto;
-}
-.flexLeft .tableBox th.fold,
-.flexLeft .tableBox td.fold {
-  border-left: 1px solid #dddddd;
-}
-.flexLeft .tableBox th.fold.is-active,
-.flexLeft .tableBox td.fold.is-active {
-  border-left: 0;
-}
-
-.flexTable {
-  width: 100%;
-  overflow-x: auto;
-}
-
-.hideS,
-.hideB,
-.hideI {
-  display: none;
-}
-.hideS.on,
-.hideB.on,
-.hideI.on {
-  display: table-cell;
-}
-
-.pms button {
-  background: #205391;
-  border: 1px solid #2a55aa;
 }
 
 @media (min-width: 2200px) {

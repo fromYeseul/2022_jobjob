@@ -1,0 +1,145 @@
+
+.gnbWrapper{
+    background: $white;
+    .gnb{
+        padding: rem(20) 0;
+    }  
+    .navCtrlBtn{
+        width: rem(36);
+        height: rem(36);
+        padding: rem(5) rem(8);
+        margin-left: rem(8);
+
+        // border-radius: rem(6);
+        // background: $white;
+        cursor: pointer;
+        position: relative;
+        &::before{
+            //content:'';
+            width: 0;
+            height: rem(40);
+            height: rem(36);
+            background: $white;
+            position: absolute;
+            left: -10px;
+            top: 0;
+            transition: all .01s ease;
+        }
+    }    
+    .navWrapper{
+        height: calc(100vh - 105px);
+        margin-top: rem(10);
+        //margin-left: rem(3);
+        overflow-y: auto;
+        > ul{
+            > li{                               
+                position: relative;
+                &.is-active{
+                    > a{
+                        background: rgba(255,255,255,0.3);
+                        position: relative;
+                        &::before{
+                            content:'';
+                            width: 3px;
+                            height: 100%;
+                            background: $white;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                        }
+                        span{
+                            opacity: 1;
+                        }
+                    }
+                }  
+                li{
+                    &.is-active{
+                        background: rgba(255,255,255,0.1);                        
+                        span{
+                            opacity: 1;
+                        }
+                    }
+                }   
+            }
+        }
+        li{
+            a{
+                // display: block;
+                display: flex;
+                padding: rem(10) rem(13);
+                padding-left: rem(15);
+                padding-right: 0;
+                // display: flex;
+                // align-items: center;
+                span{
+                    opacity: .8;
+                }
+                &:hover{
+                    background: rgba(255,255,255,0.1);
+                    span{
+                        opacity: 1;
+                    }
+                }
+            }
+            ul{
+                // display: none;
+                opacity: 0;
+                height: 0;
+                &.is-active {
+                    background: rgba(0,0,0,0.2);
+                }
+                li{
+                    padding: 0;
+                    font-size: rem(14);
+                    position: relative;
+                    a{
+                        // padding-left: rem(25);
+                        padding-left: rem(34);
+                        position: relative;                        
+                        &::before{
+                            content:'';
+                            width: rem(4);
+                            height: rem(1);
+                            background: $white;
+                            position: absolute;
+                            top: 50%;
+                            left: rem(22);
+                            opacity: 0.5;
+                        }
+                        &:hover{
+                            background: rgba(0,0,0,0.1);
+                            span{
+                                opacity: 1;
+                            }                      
+                            &::before{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    //2depth메뉴 선택시
+                    &.is-active{
+                        background: rgba(0,0,0,0.1);
+                    }
+                }
+            }
+        }
+        .menuTxt{
+            display: none;
+            color: $gnbTxt;
+            font-size: rem(15);
+            margin-left: rem(13);
+            vertical-align: middle;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }        
+        .depth2{
+            // display: none;
+            color: $white;
+            vertical-align: middle;
+            text-indent: -10rem;
+            opacity: 0;
+        }
+    }
+} 
+

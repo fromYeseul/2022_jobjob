@@ -45,6 +45,16 @@
             cursor: pointer;
             .prefix{
                 width: 85%;
+                .round{
+                    width: rem(62);
+                    font-size: rem(13);
+                    color: $cancel;
+                }
+                .field{
+                    width: rem(106);
+                    font-size: rem(14);
+                    color: $mainColor;
+                }
             }
         }
     }
@@ -147,12 +157,14 @@
     .suffix{
         display: flex;
         align-items: center;
+        gap: 4px;
     }
     .projTit{
         @include ellipsis;
         align-items: center;
         gap: 4px;
         width: auto;
+        max-width: 75%;
         // max-width: 90%;
         font-weight: 500; //0913 J bold -> 500 수정
         font-size: rem(17);
@@ -211,6 +223,9 @@
             .suffix{
                 justify-self: end;
             }      
+            .projObj{
+                gap: 4px;
+            }
             .projManager{
                 @include ellipsis;
                 display: block;
@@ -245,14 +260,14 @@
         width: 70%;
         color: $accPrefixGray;
         .field{
-            margin-right: 10px; //0913 J수정
+            // margin-right: 10px; //0913 J수정
             width: rem(106); //0913 J수정
             font-size: rem(14); //0913 J수정
             color: $mainColor; //0913 J수정
             //font-weight:500; 0913 J추가
         }
         .round{
-            margin-right: rem(10);
+            // margin-right: rem(10);
             width: rem(62);
             //font-size: rem(13); //0913 J추가
             color: $cancel;
@@ -262,7 +277,7 @@
         @include ellipsis;
         // width: 84%;
         width: auto;
-        max-width: 80%;
+        max-width: 75%;
     }
     .suffix{
         font-size: rem(14);
@@ -293,7 +308,7 @@
         gap: 15px; 
         li{
             display: flex;
-            // align-items: center;
+            align-items: center;
             line-height: 32px;
         }
         p{

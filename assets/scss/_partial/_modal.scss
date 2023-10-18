@@ -886,11 +886,28 @@
         left: -380px;
         top: 0%;
         transform: translate(0, -20%);
+
+
+        visibility: visible;
+        .yScroll{
+            height: auto;
+            max-height: rem(100);
+            overflow: auto;
+            &::-webkit-scrollbar {
+                width: 2px;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $subInfo;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $disable;
+            }
+        }
         &::after{
             top: 50%;
             left: 100%;
             transform: translateY(-50%);
-            margin-top: -3px;
+            // margin-top: -3px;
             margin-left: 0;
             border-top-color: transparent;
             border-left-color: $tooltipGray;
@@ -905,6 +922,19 @@
                 &::after{
                     top: auto;
                     bottom: 0%;
+                }
+            }
+        }
+        &:first-child{            
+            .tooltip{
+                left: -380px;
+                top: 50%;
+                bottom: auto;
+                transform: translate(0, -50%);
+                &::after{
+                    top: 50%;
+                    left: 100%;
+                    bottom: auto;
                 }
             }
         }
@@ -924,6 +954,7 @@
     }
     .yScroll{
         height: 300px;
+        overflow: visible;
         .tableBox{
             overflow-y: initial;
         }
