@@ -82,7 +82,8 @@
             .round{
                 min-width: auto;
                 // height: 30px;
-                padding: 0 16px;
+                // padding: 0 16px;
+                padding: 0 10px;
                 line-height: 23px;
                 border-width: 2px;
             }
@@ -100,7 +101,7 @@
             .tipBtn{
                 margin-left: 4px;
                 color: $subBlue;
-                font-size: rem(14);
+                // font-size: rem(14);
                 font-weight: 500;
                 position: relative;
                 cursor: pointer;
@@ -507,15 +508,22 @@
                     margin-left: 0;
                     max-width: initial;
                     @include ellipsis-2 
+                }                
+                h3{
+                    font-size: rem(16);
                 }
-            }
+            }                          
+            h3{
+                margin-top: 0;
+            }            
             .tooltip{
                 top: 0;
             }
         }
         .component{            
             height: auto;
-            padding: rem(10);
+            // padding: rem(10);
+            padding: 0 rem(16);
             &.center{
                 margin-top: 40px;
                 height: calc(100vh - 334px);
@@ -551,6 +559,7 @@
             &.indexType{
                 .innerList{
                     display: block;
+                    padding: rem(10);
                     > ul{
                         width: 100%;
                     }

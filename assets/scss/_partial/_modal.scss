@@ -884,14 +884,13 @@
         text-align: left;
         width: 390px;
         left: -380px;
-        top: 0%;
-        transform: translate(0, -20%);
-
-
-        visibility: visible;
+        top: 50%;
+        bottom: auto;
+        transform: translate(0, -50%);
         .yScroll{
+            padding-top: 0;
             height: auto;
-            max-height: rem(100);
+            max-height: rem(90);
             overflow: auto;
             &::-webkit-scrollbar {
                 width: 2px;
@@ -917,11 +916,11 @@
         &:last-child{            
             .tooltip{
                 top: auto;
-                bottom: 0;
+                bottom: -10px;
                 transform: translate(0,0);
                 &::after{
                     top: auto;
-                    bottom: 0%;
+                    bottom: 10%;
                 }
             }
         }
@@ -953,10 +952,10 @@
         }        
     }
     .yScroll{
-        height: 300px;
-        overflow: visible;
+        padding-top: 10px;
         .tableBox{
-            overflow-y: initial;
+            height: 300px;
+        overflow: visible;
         }
     }
     .modalCont{

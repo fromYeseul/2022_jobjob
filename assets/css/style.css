@@ -2169,13 +2169,14 @@ footer.toast button + button {
   text-align: left;
   width: 390px;
   left: -380px;
-  top: 0%;
-  transform: translate(0, -20%);
-  visibility: visible;
+  top: 50%;
+  bottom: auto;
+  transform: translate(0, -50%);
 }
 #requireProject .tooltip .yScroll {
+  padding-top: 0;
   height: auto;
-  max-height: 6.25rem;
+  max-height: 5.625rem;
   overflow: auto;
 }
 #requireProject .tooltip .yScroll::-webkit-scrollbar {
@@ -2197,12 +2198,12 @@ footer.toast button + button {
 }
 #requireProject tr:last-child .tooltip {
   top: auto;
-  bottom: 0;
+  bottom: -10px;
   transform: translate(0, 0);
 }
 #requireProject tr:last-child .tooltip::after {
   top: auto;
-  bottom: 0%;
+  bottom: 10%;
 }
 #requireProject tr:first-child .tooltip {
   left: -380px;
@@ -2226,11 +2227,11 @@ footer.toast button + button {
   background: #fff;
 }
 #callTemplate .yScroll {
-  height: 300px;
-  overflow: visible;
+  padding-top: 10px;
 }
 #callTemplate .yScroll .tableBox {
-  overflow-y: initial;
+  height: 300px;
+  overflow: visible;
 }
 #callTemplate .modalCont {
   margin-top: 10px;
@@ -8152,6 +8153,9 @@ h6 + .h6_sub {
 .accWrap.indexType .accBox.is-active .close::after {
   transform: translate(-50%, -50%) rotate(180deg);
 }
+.accWrap.indexType .accBox + .accBox {
+  margin-top: 0;
+}
 .accWrap.indexType .accBox .accHead {
   padding: 0.75rem 0;
 }
@@ -8163,6 +8167,9 @@ h6 + .h6_sub {
 .accWrap.indexType .accInner .innerList > ul {
   display: block;
   width: 48%;
+}
+.accWrap.indexType .accInner .innerList > ul li {
+  align-items: flex-start;
 }
 .accWrap.indexType .close {
   width: 3.75rem;
@@ -9650,7 +9657,7 @@ h6 + .h6_sub {
 }
 .compoWrapper .titWrapper .title .round {
   min-width: auto;
-  padding: 0 16px;
+  padding: 0 10px;
   line-height: 23px;
   border-width: 2px;
 }
@@ -9668,7 +9675,6 @@ h6 + .h6_sub {
 .compoWrapper .titWrapper .tooltip .tipBtn {
   margin-left: 4px;
   color: #0969d1;
-  font-size: 0.875rem;
   font-weight: 500;
   position: relative;
   cursor: pointer;
@@ -10067,12 +10073,18 @@ h6 + .h6_sub {
     text-align: left;
     -webkit-box-orient: vertical;
   }
+  .compoWrapper .titWrapper .title h3 {
+    font-size: 1rem;
+  }
+  .compoWrapper .titWrapper h3 {
+    margin-top: 0;
+  }
   .compoWrapper .titWrapper .tooltip {
     top: 0;
   }
   .compoWrapper .component {
     height: auto;
-    padding: 0.625rem;
+    padding: 0 1rem;
   }
   .compoWrapper .component.center {
     margin-top: 40px;
@@ -10108,6 +10120,7 @@ h6 + .h6_sub {
   }
   .compoWrapper .accWrap.indexType .innerList {
     display: block;
+    padding: 0.625rem;
   }
   .compoWrapper .accWrap.indexType .innerList > ul {
     width: 100%;
