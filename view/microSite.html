@@ -22,10 +22,10 @@
                     <div class="title">
                         <button class="round sub">비상주</button>
                         <button class="round main">기획</button>
-                        <span class="mobile">마포구</span><!--모바일에서만 보임-->
+                        <!--<span class="mobile">마포구</span> 231015 기존유지-ys-->
                         <h2>CJ프레시웨이온리원푸드넷 모바일 UI/UX</h2>
                     </div>
-                    <h3 class="pc">마포구</h3><!--pc에서만 보임--><!--230801 클래스 추가-ys-->
+                    <h3>마포구</h3><!--231015 기존유지-ys-->
                     <div class="tooltip">
                         <i class="ico manager"></i> 
                         <span class="tipBtn">담당자</span>
@@ -60,8 +60,8 @@
                                         <li><p>요구스킬</p><span >ASP, J, JSP, Javascript, ASP, J, JSP, Javascript, ASP, J, JSP, Javascript, ASP, J, JSP, Javascript,</span></li>
                                     </ul>
                                     <ul>
-                                        <li><p>투입기간</p><span>2022.03.11 부터 3.5개월</span></li>
                                         <li><p>모집기간</p><span>2022.03.11 부터 2022.04.31까지</span></li>
+                                        <li><p>투입기간</p><span>2022.03.11 부터 3.5개월</span></li>
                                         <li><p>근무방식</p><span>상주</span></li>
                                         <li><p>근무시간</p><span>09:00 ~ 18:00</span></li>
                                     </ul>
@@ -77,10 +77,16 @@
                             <div class="accInner"><!--230724 클래스 제거 -ys-->
                                 <div class="tableBox">
                                     <table>
+                                        <!-- 231015 수정 -ys 
                                         <colgroup>
                                             <col width="200px">
                                             <col width="300px">                                        
                                             <col width="150px">
+                                        </colgroup> -->
+                                        <colgroup>
+                                            <col width="120px">
+                                            <col width="300px">                                        
+                                            <col width="100px">
                                         </colgroup>
                                         <thead>
                                             <tr>
@@ -167,8 +173,21 @@
     <script src="../assets/js/script.js"></script>  
     <script>
         //담당자연락처보기
-        $(".tipBtn").on("click", function(){
-            $(this).next('.toolBox').toggleClass("is-active");
+        // $(".tipBtn").on("click", function(){
+        //     $(this).next('.toolBox').toggleClass("is-active");
+        // });
+
+        //담당자연락처보기 - 231015 외부클릭시 닫힘 추가-ys
+        $("body").click(function(e){  
+            let toolBox = $(".toolBox");
+             if($(e.target).hasClass('tipBtn')){
+                $(e.target).next('.toolBox').toggleClass("is-active");
+             }else if($(e.target).hasClass('toolBox') || $(e.target).parents().hasClass('toolBox')){
+                return;
+             }
+             else{
+                toolBox.removeClass("is-active");
+            }  
         });
 
         //정보 열림/닫힘

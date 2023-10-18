@@ -1,13 +1,20 @@
 
+.modalLayer{
+    .ui-widget.ui-widget-content{
+        width:100%;
+    }
+}
 
-
-.ui-datepicker{box-shadow: 1px 1px 5px rgba(0,0,0,0.2);}
+.ui-datepicker{
+    //width:100%; 
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
 .ui-widget-header{background: #fff; border: 0; position: relative;}
 .ui-widget.ui-widget-content{
     border: 0; 
     // width:100%;
+    z-index: 21 !important;
 }
-
 
 
 .ui-datepicker-title{
@@ -70,7 +77,8 @@
 }
 
 //마우스오버
-.ui-state-hover, .ui-widget-content .ui-state-hover{
+.ui-state-hover, 
+.ui-widget-content .ui-state-hover{
     display: inline-block;
     margin: 0;
     width: 100%;
@@ -78,15 +86,28 @@
     background: $white;
     cursor:pointer;
     &.ui-corner-all{
-        width: auto;
+        // width: auto;
+        width: 30px;
         border: 0;
         box-shadow: none;
     }
+    &.ui-datepicker-current{
+        width: auto;
+    }
 }
+.ui-datepicker-header{
+    .ui-corner-all{
+        width: 30px;
+    }
+}
+
 
 //선택한 날짜
 .ui-state-active, .ui-widget-content .ui-state-active{
-    color: #0460d2;
+    // color: #0460d2;
+    color: white;
+    background: black;
+    border-radius: 4px;
 }
 .ui-datepicker-current-day{
     &.ui-datepicker-today{

@@ -137,8 +137,25 @@
         //     margin-top: rem(50);
         // }
     }
-    .hasTooltip{
-        cursor: default;
+    li{
+        .hasTooltip{
+            cursor: default;
+            >.tooltip{
+                display: none;
+                visibility: visible;
+                &.type2{
+                    display: block;
+                    visibility: hidden;
+                }
+            }
+            &:hover{
+                .tooltip{
+                    &.type2{
+                        visibility: visible;
+                    }
+                }
+            }
+        }
     }
     tfoot{
         td{

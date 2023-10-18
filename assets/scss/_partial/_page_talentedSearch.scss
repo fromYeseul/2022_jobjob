@@ -11,7 +11,7 @@
     }
     table{
         thead,th{
-            height: 50px;
+            height: 40px;
         }
         tbody{
             border-top: 0;
@@ -22,13 +22,30 @@
             }
         }
     }
+    .listBottom{
+        button{
+            max-width: rem(204);
+        }
+    }
     .yScroll{
         // margin-top: rem(10);
-        height: calc(100vh - 500px);
+        height: calc(100vh - 490px);
         transition: height 0.3s;    
         @include scroll_0;
         &.is-active{
-            height: calc(100vh - 220px);
+            height: calc(100vh - 210px);
+        }
+    }
+    .hasTooltip{
+        .tooltip{
+            top: 50%;
+            transform: translate(-50%,-50%);
+            left: 8%;
+        }
+        &:hover{
+            .tooltip{
+                display: block;
+            }
         }
     }
 }
@@ -37,6 +54,20 @@
 .searchRequire{
     display: flex;
     gap: 28px;
+    & + .tableBox{
+        margin-top: 10px;
+        th{
+            height: 40px;
+        }
+        .tabCopy{
+            margin-right: 20px;
+            padding: 8px 30px;
+            font-size: 16px;
+            color: white;
+            background: #0460d2;
+            border-radius: 6px 6px 0 0;
+        }
+    }
     >.prefix,
     >.suffix{
         flex: 1 1 50%;
@@ -190,6 +221,7 @@
                     display: inline-block;
                     padding: 0;
                     max-width: inherit;
+                    background: transparent;
                     border: 0;
                     & + li{
                         margin-top: 5px;

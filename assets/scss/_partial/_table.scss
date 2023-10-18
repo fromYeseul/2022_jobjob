@@ -139,6 +139,13 @@ table{
             padding: rem(4);
             // height: rem(40);
             height: rem(50);
+            position: relative;
+            .alertToast{
+                top: 50%;
+                left: 100%;
+                transform: translateY(-50%);
+                min-width: rem(240);
+            }
             &.nodata{
                 display: table-cell;
                 height: rem(220);
@@ -370,9 +377,9 @@ table{
             > tr{
                 > td{    
                     padding: rem(20);        
-                    .bdType,
-                    .white{
-                        width: rem(196);
+                    // .white,
+                    .bdType{
+                        // width: rem(196);
                         height: rem(60);
                         line-height: initial;
                         span{
@@ -390,6 +397,15 @@ table{
                     &:last-child{
                         strong{
                             margin-bottom: 0;
+                        }
+                        b{
+                            display: block;
+                            line-height: 24px;
+                            color: $black;
+                            font-weight: 500;
+                            &.marked{
+                                color: $error;
+                            }
                         }
                     }
                     &.left{
@@ -472,6 +488,8 @@ table{
     .ellipsis{
         @include ellipsis;
         padding: 0 rem(6);
+        width: 95%;
+        max-width: 100%;
         .dNear{
             font-size: rem(12);
         }

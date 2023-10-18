@@ -1,29 +1,35 @@
 .fileBox{
     .fileTop{
         @include sideArray;
+        h6{
+            font-weight: 400;
+        }
         .txtType{
             color: $mainColor;
         }
     }
     .fileList{
         margin-top: rem(10);
-        padding: rem(16);
-        padding-right: rem(8);
+        padding: rem(16) rem(8);
         background: $fileBg;
-        border-radius: 6px;
+        // border-radius: 6px;
         .list_ul{
-            padding-right: rem(8);
-            max-height: rem(140);
+            padding-right: rem(4);
+            // max-height: rem(140);
+            max-height: rem(120);
             overflow-y: auto;
         }
         li{
+            padding-right: rem(4);
             color: $fileGray;
-            line-height: rem(26);
+            // line-height: rem(26);
+            line-height: rem(30);
             @include sideArray;
             &:hover{
                 background: $selHover;
             }
             .fileInfo{
+                padding-left: rem(8);
                 width: 92%;
                 @include sideArray;
                 font-size: rem(14);
@@ -36,6 +42,6 @@
         }
     }
     &.fileBox{
-        margin-top: rem(25);
+        margin-top: rem(35);
     }
 }

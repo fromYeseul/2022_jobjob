@@ -115,6 +115,11 @@
                                 <button class="txtType mainC layerOpen" aria-controls="recruitProject">[변경] "팝업열기"</button><!--수정상태일 때 보이기-->
                             </div>
                         </div>
+
+                        <div class="alertToast is-active" id="toast01">
+                            임시저장 되었습니다.
+                            <i class="ico smClose white"></i>
+                        </div>
                         
                         <div class="regiPart" id="recruRegi0">
                             <div class="regiTop">
@@ -727,7 +732,7 @@
 
 
     <!--이전공고불러오기 팝업-->
-    <div id="preRecruit" class="modalLayer center"><!--id 바뀌면 말씀해주세요 -ys -->
+    <div id="preRecruit" class="modalLayer center is-active"><!--id 바뀌면 말씀해주세요 -ys -->
         <div class="layerBox midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -746,7 +751,7 @@
                         <!--230829 수정-ys -->
                         <colgroup>
                             <col width="10%;">
-                            <col width="24%;">
+                            <col width="20%;"><!--231015 수정-ys-->
                             <col>
                             <col width="8%;">
                             <col width="10%;">
@@ -766,8 +771,11 @@
                         <tbody>
                             <tr>
                                 <td>2023.01.31</td>
-                                <td class="ellipsis center">개발 - 프론트</td>
-                                <td class="ellipsis">상수도 플록시스템 성능개선 플록시스템 성능개선 및 유지보수 사업</td><!--230829 span태그제거-ys -->
+                                <td class="ellipsis">개발 - 프론트</td><!--231015 center 클래스 제거-ys -->
+                                <td class="ellipsis">
+                                    <span class="label">모든등급</span><!--231015 추가-ys-->
+                                    상수도 플록시스템 성능개선 플록시스템 성능개선 및 유지보수 사업
+                                </td><!--230829 span태그제거-ys -->
                                 <!--230829 td추가 -ys -->
                                 <td class="">
                                     <i class="ico preview layerOpen" aria-controls="recruitPreview"></i>
@@ -778,20 +786,23 @@
                             </tr>
                             <tr>
                                 <td>2023.04.21</td>
-                                <td class="ellipsis center">최대 15자 노출인데 너무 긴거같아요??</td>
+                                <td class="ellipsis">최대 15자 노출인데 너무 긴거같아요??</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">상수도 플록시스템 성능개선 및 유지보수 사업</span></td>
-                                    <td>
-                                        <i class="ico preview"></i>
-                                    </td>
+                                    <span class="label">초급</span>
+                                    상수도 플록시스템 성능개선 및 유지보수 사업
+                                </td>
+                                <td>
+                                    <i class="ico preview"></i>
+                                </td>
                                 <td>이재윤</td>
                                 <td><button class="round order">선택</button></td>
                             </tr>
                             <tr>
                                 <td>2023.11.01</td>
-                                <td class="ellipsis center">기획 - 웹기획</td>
+                                <td class="ellipsis">기획 - 웹기획</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">삼성화재 스포츠안전재단 연계시스템 개발_무상</span>
+                                    <span class="label">중급</span>
+                                    삼성화재 스포츠안전재단 연계시스템 개발_무상
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -801,9 +812,10 @@
                             </tr>
                             <tr>
                                 <td>2023.01.31</td>
-                                <td class="ellipsis center">기획 – 게임기획</td>
+                                <td class="ellipsis">기획 – 게임기획</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">중부발전 ERP시스템 기술분야 유지관리</span>
+                                    <span class="label">중급</span>
+                                    중부발전 ERP시스템 기술분야 유지관리
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -813,9 +825,10 @@
                             </tr>
                             <tr>
                                 <td>2023.01.31</td>
-                                <td class="ellipsis center">컨설팅(SAP) – CO</td>
+                                <td class="ellipsis">컨설팅(SAP) – CO</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">[(주)멀티캠퍼스] 청년SW아카데미 학습플랫폼 청년SW아카데미 학습플랫폼</span>
+                                    <span class="label">중급</span>
+                                    [(주)멀티캠퍼스] 청년SW아카데미 학습플랫폼 청년SW아카데미 학습플랫
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -825,9 +838,10 @@
                             </tr>
                             <tr>
                                 <td>2023.04.21</td>
-                                <td class="ellipsis center">개발(SAP) – CO</td>
+                                <td class="ellipsis">개발(SAP) – CO</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">상수도 플록시스템 성능개선 및 유지보수 사업</span>
+                                    <span class="label">중급</span>
+                                    상수도 플록시스템 성능개선 및 유지보수 사업
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -837,9 +851,10 @@
                             </tr>
                             <tr>
                                 <td>2023.11.01</td>
-                                <td class="ellipsis center">디자인 – 웹디자인</td>
+                                <td class="ellipsis">디자인 – 웹디자인</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">삼성화재 스포츠안전재단 연계시스템 개발_무상</span>
+                                    <span class="label">중급</span>
+                                    삼성화재 스포츠안전재단 연계시스템 개발_무상
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -849,9 +864,10 @@
                             </tr>
                             <tr>
                                 <td>2023.01.31</td>
-                                <td class="ellipsis center">컨설팅 – 아키텍트</td>
+                                <td class="ellipsis">컨설팅 – 아키텍트</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">중부발전 ERP시스템 기술분야 유지관리</span>
+                                    <span class="label">중급</span>
+                                    중부발전 ERP시스템 기술분야 유지관리
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -861,9 +877,10 @@
                             </tr>
                             <tr>
                                 <td>2023.11.01</td>
-                                <td class="ellipsis center">기획 – 모바일기획</td>
+                                <td class="ellipsis">기획 – 모바일기획</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">삼성화재 스포츠안전재단 연계시스템 개발_무상</span>
+                                    <span class="label">중급</span>
+                                    삼성화재 스포츠안전재단 연계시스템 개발_무상
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -873,9 +890,10 @@
                             </tr>
                             <tr>
                                 <td>2023.01.31</td>
-                                <td class="ellipsis center">개발 - 프론트</td>
+                                <td class="ellipsis">개발 - 프론트</td>
                                 <td class="ellipsis">
-                                    <span class="layerOpen">중부발전 ERP시스템 기술분야 유지관리</span>
+                                    <span class="label">중급</span>
+                                    중부발전 ERP시스템 기술분야 유지관리
                                 </td>
                                 <td>
                                     <i class="ico preview"></i>
@@ -934,8 +952,8 @@
 
 
     <!--모집공고 미리보기 팝업 230718 추가-->
-    <div id="recruitPreview" class="modalLayer center"><!--id바뀌면 말씀해주세요 -ys-->
-        <div class="layerBox">
+    <div id="recruitPreview" class="modalLayer center is-active"><!--id바뀌면 말씀해주세요 -ys-->
+        <div class="layerBox"><!--231015 모바일뷰 : mView 클래스 추가-ys -->
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
             </div>
@@ -948,7 +966,7 @@
                             <span class="mobile">마포구</span><!--모바일에서만 보임-->
                             <h2>CJ프레시웨이 온리원푸드넷 모바일 UI/UX</h2>
                         </div>
-                        <h3>마포구</h3><!--pc에서만 보임-->
+                        <h3 class="pc">마포구</h3><!--pc에서만 보임-->
                         <div class="tooltip">
                             <i class="ico manager"></i> 
                             <span class="tipBtn">담당자</span>
@@ -967,11 +985,21 @@
                             </div>
                         </div>
                     </div>
+
+                    <!--231015 추가 -ys -->
+                    <div class="tabType smSize">
+                        <input type="radio" id="pcView" name="viewType" value="pcView" checked="">
+                        <label for="pcView">PC</label>
+                        <input type="radio" id="mView" name="viewType" value="mView">
+                        <label for="mView">모바일</label>
+                    </div>
+                    <!--//231015 추가 -ys -->
+
                     <div class="component">    
                         <div class="accWrap indexType">                                           
                             <div class="accBox is-active">
                                 <div class="accHead">
-                                    <h5>기본정보</h5>
+                                    <h5 class="underBg">기본정보</h5>
                                 </div>
     
                                 <div class="accInner"><!--230727 클래스 제거 -ys-->
@@ -983,8 +1011,8 @@
                                             <li><p>요구스킬</p><span >ASP, J, JSP, Javascript, ASP, J, JSP, Javascript, ASP, J, JSP, Javascript, ASP, J, JSP, Javascript,</span></li>
                                         </ul>
                                         <ul>
-                                            <li><p>투입기간</p><span>2022.03.11 부터 3.5개월</span></li>
                                             <li><p>모집기간</p><span>2022.03.11 부터 2022.04.31까지</span></li>
+                                            <li><p>투입기간</p><span>2022.03.11 부터 3.5개월</span></li>
                                             <li><p>근무방식</p><span>상주</span></li>
                                             <li><p>근무시간</p><span>09:00 ~ 18:00</span></li>
                                         </ul>
@@ -995,15 +1023,21 @@
     
                             <div class="accBox is-active">
                                 <div class="accHead">
-                                    <h5>업무상세</h5>
+                                    <h5 class="underBg">업무상세</h5>
                                 </div>
                                 <div class="accInner"><!--230727 클래스 제거 -ys-->
                                     <div class="tableBox">
                                         <table>
+                                            <!-- 231015 수정 -ys 
                                             <colgroup>
                                                 <col width="200px">
                                                 <col width="300px">                                        
                                                 <col width="150px">
+                                            </colgroup> -->
+                                            <colgroup>
+                                                <col width="120px">
+                                                <col width="300px">                                        
+                                                <col width="100px">
                                             </colgroup>
                                             <thead>
                                                 <tr>
@@ -1050,10 +1084,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bottomBtn">
+                    <!-- <div class="bottomBtn">
                         <button class="white">취소하기</button>
                         <button class="">등록하기</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -1108,6 +1142,17 @@
         //정보 열림/닫힘
         $(".onlyIco.close").on("click", function(){
             $(this).parent('.accBox').toggleClass("is-active");
+        });
+
+        //뷰타입선택 - 231015 추가
+        let viewType = $('input[name="viewType"]');
+        let recruitPreview = $('#recruitPreview .layerBox')
+        $(viewType).on("click", function(){
+            if($('input[id="pcView"]').is(':checked')){
+                recruitPreview.removeClass('mView');
+            }else if($('input[id="mView"]').is(':checked')){
+                recruitPreview.addClass('mView');
+            }
         });
     </script>
 </body>

@@ -1061,6 +1061,7 @@ function rangeSlider(){
     }    
 
     slider.addEventListener("click", clickValue);
+    slider.addEventListener("drag", clickValue);  //231015추가
 }
 
 
@@ -1118,6 +1119,7 @@ function rangeSliderMulti(){
         let std;
         if(e.target.classList.contains('track')) std = e.offsetX;
         else if(e.target.classList.contains('range'))  std = e.offsetX + thumbLeft.offsetLeft;
+        else if(e.target.classList.contains('thumb'))  return;  //231015추가
 
         const leftDis = Math.abs(std- (thumbLeft.offsetLeft));
         const rightDis = Math.abs((thumbRight.offsetLeft) - std);
@@ -1138,6 +1140,7 @@ function rangeSliderMulti(){
         }        
     }        
     slider.addEventListener("click", clickValue);
+    //slider.addEventListener("drag", clickValue);  //231015추가
 }
 //230627 수정 -ys
 

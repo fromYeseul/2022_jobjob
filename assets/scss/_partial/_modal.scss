@@ -68,7 +68,14 @@
         &.confirmType{
             width: rem(330);
             padding: rem(30) rem(40);
+            h4{
+                margin-bottom: rem(26);
+            }
+            // .modalCont{
+            //     margin-top: 20px;
+            // }
             .modalFooter{
+                margin-top: 20px;
                 @include flex_1_1;
                 button{        
                     flex: 1 1 0;
@@ -199,7 +206,9 @@
             //background: $tableBgGray !important;
         }
         td{
-            padding: rem(4) rem(10) !important;
+            // padding: rem(4) rem(10) !important;
+            // padding: rem(4) rem(6) !important;
+            padding: rem(4) !important;
         }
         tfoot{
             td{
@@ -591,7 +600,12 @@
         }
     }
 }
-
+//이전공고불러오기
+#preRecruit{
+    .tableBox{
+        height:rem(500);
+    }
+}
 
 #searchFilter{
     .modalCont{
@@ -660,11 +674,11 @@
                     width: 21px;
                     height: 20px;
                     right: 5px;
-                    top: 10px;
+                    top: 5px;
                 }
                 &:after{
                     right: 8px;
-                    top: 14px;
+                    top: 9px;
                 }
             }
             img{
@@ -734,6 +748,11 @@
     .layerBox{
         padding: 0;
         min-width: rem(1240);
+        //transition: all .3s;
+        &.mView{           
+            width: 410px;
+            min-width: 410px;
+        }
     }
     .modalHeader{
         position: absolute;
@@ -748,8 +767,18 @@
             padding-bottom: rem(40);
         }
         .component{
+            margin-top: 10px;
             height: calc(100vh - 450px);
         }
+    }
+}
+//모집공고 재등록
+#isReopen{
+    .layerBox{
+        height: 660px;
+    }
+    .hasDatepicker{
+        min-height: 457px;
     }
 }
 
@@ -841,6 +870,7 @@
 
 #requireProject{
     .absol{
+        box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.2);
         .layerBox{
             padding: rem(10);
             min-width: auto;
@@ -854,23 +884,65 @@
         text-align: left;
         width: 390px;
         left: -380px;
-        top: 0%;
-        transform: translate(0, -20%);
+        top: 50%;
+        bottom: auto;
+        transform: translate(0, -50%);
+        .yScroll{
+            padding-top: 0;
+            height: auto;
+            max-height: rem(90);
+            overflow: auto;
+            &::-webkit-scrollbar {
+                width: 2px;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $subInfo;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $disable;
+            }
+        }
         &::after{
             top: 50%;
             left: 100%;
             transform: translateY(-50%);
-            margin-top: -3px;
+            // margin-top: -3px;
             margin-left: 0;
             border-top-color: transparent;
             border-left-color: $tooltipGray;
+        }
+    }
+    tr{
+        &:last-child{            
+            .tooltip{
+                top: auto;
+                bottom: -10px;
+                transform: translate(0,0);
+                &::after{
+                    top: auto;
+                    bottom: 10%;
+                }
+            }
+        }
+        &:first-child{            
+            .tooltip{
+                left: -380px;
+                top: 50%;
+                bottom: auto;
+                transform: translate(0, -50%);
+                &::after{
+                    top: 50%;
+                    left: 100%;
+                    bottom: auto;
+                }
+            }
         }
     }
     .selectedBox{
         padding-right: rem(40);
     }
     .infoBox{
-        width: rem(188);
+        min-width: rem(125);
     }
 }
 #callTemplate{
@@ -880,7 +952,11 @@
         }        
     }
     .yScroll{
-        height: 300px;
+        padding-top: 10px;
+        .tableBox{
+            height: 300px;
+        overflow: visible;
+        }
     }
     .modalCont{
         margin-top: 10px;
@@ -956,6 +1032,13 @@
                 top: 50%;
                 transform: translateY(-50%);
             }
+        }
+    }
+}
+.exceptCharge{
+    .right{
+        &::after{
+            display: none;
         }
     }
 }
@@ -1044,5 +1127,12 @@
     }
     .range{
         margin: 0 10px;
+    }
+}
+
+#fileList{
+    .h3_sub{
+        margin-top: -10px;
+        color: $filePopSub;
     }
 }

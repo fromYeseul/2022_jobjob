@@ -110,6 +110,10 @@ button,
             cursor:not-allowed;
         }
     }
+    &.black{
+        background: $black;
+        border:1px solid $black;
+    }
     &.showMemo{
         line-height: rem(24);
         background: $bgColor;
@@ -182,6 +186,9 @@ button,
             line-height: rem(30);
             height: rem(32);
             display: inline-flex;
+        }
+        &.gray{
+            background: $btnGray;
         }
         &.round{
             border-radius: 50%;
@@ -285,7 +292,9 @@ span{
     margin-right: 2px;
     display: inline-block;
     min-width: rem(44);
+    height: rem(22);
     line-height: rem(22);
+    text-align: center;
     color: $disable;
     font-size: rem(12);
     font-weight: 400;
@@ -330,5 +339,14 @@ span{
         color: $error;
         border: 1px solid $error;
         background: $white;
+    }
+    &.offer{
+        min-width: rem(16);
+        width: auto;
+        line-height: rem(15);
+        font-size: rem(12);
+        color: $cancel;
+        border: 1px solid $cancel;
+        background: transparent;
     }
 }

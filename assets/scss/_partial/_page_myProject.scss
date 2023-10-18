@@ -132,8 +132,8 @@
         }
         .boxType{          
             width: 98%;    
-            height: rem(100);
-            margin-top: rem(22); //0530 J수정 30 -> 22
+            height: rem(115);
+            margin-top: rem(20); //0530 J수정 30 -> 22
             // padding-bottom: rem(10);
             padding-bottom: rem(6);
             // overflow-x: auto;
@@ -249,15 +249,35 @@
         }
     }
     .listBottom{
+        .prefix{
+            button{
+                min-width: rem(120);
+            }
+        }
         .suffix{
-            flex: 2 1 0;
-            .suffix{
-                flex: 2 1 60%;
+            // flex: 2 1 0;
+            flex: 1 1 0;
+            // .suffix{
+            //     flex: 2 1 60%;
+            // }
+            button{
+                & + button{
+                    flex: 1 1 50%;
+                }
             }
         }
     }
 }
 
+#myProj-1{
+    table{
+        td{
+            &:last-child{
+                padding: rem(20);
+            }
+        }
+    }
+}
 #myProj-3{
     tbody{
         td{
