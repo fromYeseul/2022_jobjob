@@ -16,16 +16,13 @@
         <header>
             <div class="prefix">
                 <a href="#" class="logo">
-                    <img src="../assets/img/icoLogo.png" alt="">
+                    <img src="../assets/img/pms/icoLogo.png" alt="">
                 </a>
             </div>
             <div class="suffix">
                 <ul>
                     <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
-                    <li><a href="#">내정보 수정</a></li>
-                    <li>
-                        <span aria-controls="showLevel" class="layerOpen">등급보기설정
-                    </span></li>
+                    <li><a href="#">내정보 수정</a></li>                    
                     <li><a href="#">로그아웃</a></li>
                 </ul>
             </div>
@@ -37,17 +34,35 @@
                     <i class="ico ctrlBtn"></i>
                 </div>
                 <nav class="navWrapper">
-                    <ul>
-                        <li class="is-active"><a href="#"><i class="ico home"></i><span class="menuTxt">홈</span><i></i></a></li>
-                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span><i></i></a></li>
-                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span><i></i></a></li>
-                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span><i></i></a></li>
-                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span><i></i></a></li>
-                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span><i></i></a></li>
-                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span><i></i></a></li>
-                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span><i></i></a></li>
-                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span><i></i></a></li>
-                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span><i></i></a></li>
+                    <ul id="leftMenuBody">
+                        <li class="noDepthundefined"><a href="javascript:sideGnb.getMenuMove(`/business/status/view`);"><i class="ico home"></i><span class="menuTxt">홈</span></a></li>
+                        <li class="undefined"><a><i class="ico member"></i><span class="menuTxt">멤버</span></a>
+                            <ul class="undefined">
+                                <li><a href="javascript:sideGnb.getMenuMove(`/member/general/main`);"><span class="depth2">일반회원</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="undefined"><a><i class="ico project"></i><span class="menuTxt">거래처</span></a>
+                            <ul class="undefined">
+                                <li><a href="javascript:sideGnb.getMenuMove(`/customer/purchase/view`);"><span class="depth2">거래처(매입)</span></a></li>
+                                <li><a href="javascript:sideGnb.getMenuMove(`/customer/sales/view`);"><span class="depth2">거래처(매출)</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="is-active"><a><i class="ico recruit gray"></i><span class="menuTxt">사업관리</span></a>
+                            <ul class="undefined"><li><a href="javascript:sideGnb.getMenuMove(`/business/status/view`);"><span class="depth2">사업현황</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="undefined"><a><i class="ico admin"></i><span class="menuTxt">운영자 관리</span></a>
+                            <ul class="undefined"><li><a href="javascript:sideGnb.getMenuMove(`/sys/manager/sms/view`);"><span class="depth2">문자/메일 발송이력</span></a></li>
+                                <li><a href="javascript:sideGnb.getMenuMove(`/operator/manager/grade/view`);"><span class="depth2">등급관리</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="undefined"><a><i class="ico system"></i><span class="menuTxt">시스템 관리</span></a>
+                            <ul class="undefined"><li><a href="javascript:sideGnb.getMenuMove(`/sys/skill/view`);"><span class="depth2">스킬관리</span></a></li>
+                                <li><a href="javascript:sideGnb.getMenuMove(`/sys/menu/view`);"><span class="depth2">메뉴관리</span></a></li>
+                                <li><a href="javascript:sideGnb.getMenuMove(`/sys/authrole/view`);"><span class="depth2">권한관리</span></a></li>
+                                <li><a href="javascript:sideGnb.getMenuMove(`/sys/manager/code/view`);"><span class="depth2">공통코드</span></a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -1544,342 +1559,7 @@
             </section>
         </section>
                 
-        <!--우측패널-->
-        <div class="rPanelLayer">
-            <div class="rPanelBox">
-                <div class="rPanelHeader">
-                    <button class="ico layerClose rClose"></button>
-                </div>
-                <div class="rPanelCont">
-                    <h2>회원검색</h2>
-                    
-                    <div class="hasBtn">  
-                        <a href="#" class="button white onlyIco filter">
-                            <i class="ico filter"></i>
-                        </a>     
-                        <div class="inputIco">
-                            <input type="text" id="search" class="" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
-                            <button class="ico search"></button>
-                        </div>
-                    </div>
-                    <div class="yScroll">
-                        <div class="listTop">                                        
-                            <input type="checkbox" id="chkAll" class="hasTxt">
-                            <label for="chkAll"> 0 / 4</label>
-                            
-                            <input type="checkbox" id="chkLevel" class="hasTxt">
-                            <label for="chkLevel" class="mr0"> 등급으로 보기</label>
-
-                            <i class="ico setting"></i>
-                        </div>
-
-                        <div class="boxListWrap">  
-                            <ul>
-                                <li class="boxList headType is-active"> 
-                                    <div class="head">
-                                        <p class="prefix">
-                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
-                                            <label for="memChk_1"></label>
-
-                                            <span>90.0</span>
-                                        </p>
-                                        <p class="suffix"></p>
-                                    </div>  
-                                    <div class="cont">
-                                        <div class="prefix">
-                                            <ul>
-                                                <li class="memName">
-                                                    <span class="phoImg is-special">
-                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
-                                                    </span>
-                                                    <div class="flexCenter">  
-                                                        <a href="#" target="_blank">홍길순(여/29)</a>
-                                                        <span>개발</span>
-                                                        <span>네트워크엔지니어</span>
-                                                    </div>                                                 
-                                                </li>
-                                                <li>
-                                                    <span>010-5923-1209</span>
-                                                    <span>abc@echoit.co.kr</span>
-                                                </li>
-                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
-                                                <li>
-                                                    <span>서울 강서</span>
-                                                    <span>4년제 졸업</span>
-                                                    <span class="memCareer">22년 4개월</span>
-                                                </li>
-                                                <li class="memMemo">
-                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
-                                                </li>
-                                                <li class="memMemo is-active">
-                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="suffix colType hasTooltip clear">
-                                            투입중<br>(~22/05/01)                                                                        
-                                            <div class="tooltip">
-                                                CJ프레시웨이 온리원푸드넷                             
-                                            </div>         
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="boxList headType"> 
-                                    <div class="head">
-                                        <p class="prefix">
-                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
-                                            <label for="memChk_1"></label>
-
-                                            <span>88.8</span>
-                                        </p>
-                                        <p class="suffix"></p>
-                                    </div>  
-                                    <div class="cont">
-                                        <div class="prefix">
-                                            <ul>
-                                                <li class="memName">
-                                                    <span class="phoImg">
-                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
-                                                    </span>
-                                                    <div class="flexCenter">  
-                                                        <a href="#" target="_blank">홍길순(여/29)</a>
-                                                        <span>개발</span>
-                                                        <span>네트워크엔지니어</span>
-                                                    </div>                                                 
-                                                </li>
-                                                <li>
-                                                    <span>010-3245-3451</span>
-                                                    <span>abc@echoit.co.kr</span>
-                                                </li>
-                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
-                                                <li>
-                                                    <span>서울 강서</span>
-                                                    <span>4년제 졸업</span>
-                                                    <span class="memCareer">22년 4개월</span>
-                                                </li>
-                                                <li class="memMemo">
-                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="suffix">
-                                            <button class="lowSize">연락하기</button>  
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="boxList headType"> 
-                                    <div class="head">
-                                        <p class="prefix">
-                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
-                                            <label for="memChk_1"></label>
-
-                                            <span>90.0</span>
-                                        </p>
-                                        <p class="suffix"></p>
-                                    </div>  
-                                    <div class="cont">
-                                        <div class="prefix">
-                                            <ul>
-                                                <li class="memName">
-                                                    <span class="phoImg">
-                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
-                                                    </span>
-                                                    <div class="flexCenter">  
-                                                        <a href="#" target="_blank">홍길순(여/29)</a>
-                                                        <span>디자인</span>
-                                                        <span>에코</span>
-                                                    </div>                                                 
-                                                </li>
-                                                <li>
-                                                    <span>010-3245-3451</span>
-                                                    <span>abc@echoit.co.kr</span>
-                                                </li>
-                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
-                                                <li>
-                                                    <span>서울 강서</span>
-                                                    <span>4년제 졸업</span>
-                                                    <span class="memCareer">22년 4개월</span>
-                                                </li>
-                                                <li class="memMemo">
-                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="suffix">
-                                            제안불가<br>(부회원) 
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                                <li class="boxList headType"> 
-                                    <div class="head">
-                                        <p class="prefix">
-                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
-                                            <label for="memChk_1"></label>
-
-                                            <span>90.0</span>
-                                        </p>
-                                        <p class="suffix"></p>
-                                    </div>  
-                                    <div class="cont">
-                                        <div class="prefix">
-                                            <ul>
-                                                <li class="memName">
-                                                    <span class="phoImg is-special">
-                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
-                                                    </span>
-                                                    <div class="flexCenter">  
-                                                        <a href="#" target="_blank">홍길순(여/29)</a>
-                                                        <span>디자인</span>
-                                                        <span>에코</span>
-                                                    </div>                                                 
-                                                </li>
-                                                <li>
-                                                    <span>010-3245-3451</span>
-                                                    <span>abc@echoit.co.kr</span>
-                                                </li>
-                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
-                                                <li>
-                                                    <span>서울 강서</span>
-                                                    <span>4년제 졸업</span>
-                                                    <span class="memCareer">22년 4개월</span>
-                                                </li>
-                                                <li class="memMemo">
-                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="suffix">
-                                            제안불가<br>(부회원) 
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <a href="#" class="goTop">
-                            <i class="ico top"></i>
-                        </a>
-                    </div>
-
-                    <div class="listBottom pagingType">                        
-                        <div class="paging">
-                            <ul>
-                                <li class="pagingDouble">
-                                    <a href="#">
-                                        <span class="ico pagingFirst"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="ico pagingLeft"></span>
-                                    </a>
-                                </li>
-                                <li class="is-active"><a>1</a></li>
-                                <li><a>2</a></li>
-                                <li><a>3</a></li>
-                                <li><a>4</a></li>
-                                <li><a>5</a></li>
-                                <li><a>6</a></li>
-                                <li><a>7</a></li>
-                                <li><a>8</a></li>
-                                <li><a>9</a></li>
-                                <li><a>10</a></li>
-                                <li>
-                                    <a href="#">
-                                        <span class="ico pagingRight is-active"></span>
-                                    </a>
-                                </li>
-                                <li class="pagingDouble">
-                                    <a href="#">
-                                        <span class="ico pagingLast is-active"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="filterWrapper">
-                <div class="filterTop">
-                    <h2>필터</h2>
-                    <a href="#" class="ico refresh"></a>
-                </div>                        
-                
-                <div class="filterList">
-                    <div class="tit">등급</div>  
-
-                    <input type="checkbox" id="lvAll" name="level" class="hasTxt">
-                    <label for="lvAll">전체</label>      
-                    <input type="checkbox" id="lv3" name="level" class="hasTxt">
-                    <label for="lv3">특급</label>                     
-                    <input type="checkbox" id="lv2" name="level" class="hasTxt">
-                    <label for="lv2">고급</label>                     
-                    <input type="checkbox" id="lv1" name="level" class="hasTxt">
-                    <label for="lv1">중급</label>                     
-                    <input type="checkbox" id="lv0" name="level" class="hasTxt">
-                    <label for="lv0">초급</label>
-                </div>       
-
-                <div class="filterList">
-                    <div class="tit">학력</div>  
-
-                    <input type="radio" id="eduLv0" name="eduLevel" class="hasTxt">
-                    <label for="eduLv0">전체</label>
-                    <input type="radio" id="eduLv3" name="eduLevel" class="hasTxt">
-                    <label for="eduLv3">대졸이상</label>
-                    <input type="radio" id="eduLv2" name="eduLevel" class="hasTxt">
-                    <label for="eduLv2">초대졸 이상</label>
-                    <input type="radio" id="eduLv1" name="eduLevel" class="hasTxt">
-                    <label for="eduLv1">고졸 이상</label>
-                </div>      
-                
-                <div class="filterList">
-                    <div class="tit">정보처리기사</div>  
-
-                    <input type="radio" id="licenseAll" name="license" class="hasTxt">
-                    <label for="licenseAll">전체</label>  
-                    <input type="radio" id="license1" name="license" class="hasTxt">
-                    <label for="license1">있음</label>                     
-                    <input type="radio" id="license0" name="license" class="hasTxt">
-                    <label for="license0">없음</label>       
-                </div>  
-                
-                <div class="filterList">
-                    <div class="tit">KOSA</div>  
-
-                    <input type="radio" id="kosaAll" name="kosa" class="hasTxt">
-                    <label for="kosaAll">전체</label>   
-                    <input type="radio" id="kosa1" name="kosa" class="hasTxt">
-                    <label for="kosa1">있음</label>                     
-                    <input type="radio" id="kosa0" name="kosa" class="hasTxt">
-                    <label for="kosa0">없음</label>       
-                </div>    
-                
-                <div class="filterList">
-                    <div class="tit">평가</div>  
-                    
-                    <input type="radio" id="score0" name="score" class="hasTxt">
-                    <label for="score0">전체</label>    
-                    <input type="radio" id="score3" name="score" class="hasTxt">
-                    <label for="score3">90점 이상</label>  
-                    <input type="radio" id="score2" name="score" class="hasTxt">
-                    <label for="score2">80점 이상</label> 
-                    <input type="radio" id="score1" name="score" class="hasTxt">
-                    <label for="score1">70점 이상</label>   
-                </div>             
-            </div>
-        </div>
-        <div class="rPanel">
-            <ul>
-                <li><i class="ico searchMem"></i></li>
-                <li><i class="ico schedule"></i></li>
-                <li><i class="ico mail"></i></li>
-            </ul>
-        </div>
-        <!--우측패널-->
+        
     </section>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

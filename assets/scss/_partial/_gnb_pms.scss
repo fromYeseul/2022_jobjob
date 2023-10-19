@@ -1,8 +1,8 @@
 
 .gnbWrapper{
-    background: $white;
-    box-shadow: 2px 0 5px rgba(102, 102, 102,0.35);
-
+    background: $white !important;
+    border-right: 1px solid $activeGray;
+    box-shadow: 1px 3px 3px 0 rgba(150, 150, 150, 0.1);
     .gnb{
         padding: rem(20) 0;
     }  
@@ -21,7 +21,7 @@
             width: 0;
             height: rem(40);
             height: rem(36);
-            background: $white;
+            background: white;
             position: absolute;
             left: -10px;
             top: 0;
@@ -38,13 +38,15 @@
                 position: relative;
                 &.is-active{
                     > a{
-                        background: $white;
+                        color: #123e74;
+                        font-weight: 500;
+                        //background: #e2eaf5; rgba(255,255,255,0.1) -> e2eaf5
                         position: relative;
                         &::before{
                             content:'';
                             width: 3px;
                             height: 100%;
-                            background: $mainColor;
+                            background: #205391;
                             position: absolute;
                             left: 0;
                             top: 0;
@@ -56,7 +58,9 @@
                 }  
                 li{
                     &.is-active{
-                        background: rgba(255,255,255,0.1);                        
+                        background: rgba(200,200,200,0.1);   //?                     
+                        
+                        font-weight: 500;
                         span{
                             opacity: 1;
                         }
@@ -74,10 +78,11 @@
                 // display: flex;
                 // align-items: center;
                 span{
-                    opacity: .8;
+                    opacity: .7;
                 }
                 &:hover{
-                    background: rgba(255,255,255,0.1);
+                    background: #e2eaf5;
+                    
                     span{
                         opacity: 1;
                     }
@@ -88,7 +93,7 @@
                 opacity: 0;
                 height: 0;
                 &.is-active {
-                    background: rgba(0,0,0,0.2);
+                    background: rgba(100,100,100,0.1); //0,0,0,0.2 -> 100,100,100,0.1 
                 }
                 li{
                     padding: 0;
@@ -102,7 +107,7 @@
                             content:'';
                             width: rem(4);
                             height: rem(1);
-                            background: $white;
+                            background: black;
                             position: absolute;
                             top: 50%;
                             left: rem(22);
@@ -127,7 +132,7 @@
         }
         .menuTxt{
             display: none;
-            color: $gnbTxt;
+            color: black;
             font-size: rem(15);
             margin-left: rem(13);
             vertical-align: middle;
@@ -137,7 +142,7 @@
         }        
         .depth2{
             // display: none;
-            color: $white;
+            color: $gray;
             vertical-align: middle;
             text-indent: -10rem;
             opacity: 0;

@@ -42,7 +42,7 @@ header{
     //min-width: rem(1600);
     width: 100%;
     padding-left: rem(52);
-    padding-right: rem(52);
+    padding-right: 0;  // 우측패널 삭제  rem(52) -> 0
     transition: all .3s;
     .contLayout{
         display: flex;
@@ -79,11 +79,36 @@ header{
             > ul{
                 > li{                    
                     &::before{
-                        background: black;
+                        content:'';
+                        width: 1px;
+                        height: 6px;
+                        background:gray;
+                        position: absolute;
+                        top: 24px;
+                        right: rem(18);
+                        transform: rotate(45deg);
                     }
                     &::after{
-                        background: black;
-                    }        
+                        content:'';
+                        width: 7px;
+                        height: 1px;
+                        background: gray;
+                        position: absolute;
+                        top: 22px;
+                        right: rem(15);
+                        transform: rotate(45deg);
+                    }                           
+                    &.is-active{
+                        &::before{
+                            top: 21px;
+                            right: 22px;
+                            transform: rotate(135deg);
+                        }
+                        &::after{
+                            top: 24px;
+                            transform: rotate(135deg);
+                        }
+                    }  
                     &.noDepth{
                         &::before,
                         &::after{
