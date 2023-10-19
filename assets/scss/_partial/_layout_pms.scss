@@ -1,120 +1,25 @@
-.wrapper{
-    width: 100%;    
-    .login{
-        width: 100%;
-        max-width: rem(1200);
-        margin: auto;
-        //height:100vh;
-        padding: rem(50) 0;
-        background-color: $bgColor;
-    }    
-    &.center{
-        height:100vh;
-        background-color: $bgColor;
-        @include heightArray;
-    }
-}
-  
-.hasFooter{
-    // overflow-y: hidden;
-    .contWrapper{
-        overflow-y: clip; //무슨기능이지??????????
-    }    
-}
-
-/* 230512 추가 -ys */
-header{
-    position: fixed !important;
-    top: 0;
-    left: 0;
-}
-.gnbWrapper{
-    top: 60px;
-}
 .contWrapper{
-    padding-top: 60px;
-}
-/* //230512 추가 -ys */
-
-
-.contWrapper{
-    min-width: rem(1920);
-    //min-width: rem(1600);
-    width: 100%;
-    padding-left: rem(52);
     padding-right: 0;  // 우측패널 삭제  rem(52) -> 0
-    transition: all .3s;
     .contLayout{
-        display: flex;
-        height: calc(100vh - 60px);
-        background: $bgColor;
-        width: 100%;
-        position: relative;
     }
 } 
 
 // GNB 클릭, 마우스오버 이벤트
 .layoutWrapper{
+    &.is-active,    //is-active는 없애야함-ys
     &.is-hover{
         .gnbWrapper{
             background:$white;
-            .navCtrlBtn{
-                width: calc(100% - 24px);
-                height: rem(36);
-                padding: rem(6) rem(10);
-                text-align: right;
-                position: relative;
-                &::before{
-                    width: rem(15);
-                    height: rem(36);
-                }
-                .ctrlBtn{
-                    width: rem(14);
-                    height: rem(22);
-                    background-position: 0px -30px !important;
-                }
-            } 
         }
         .navWrapper{
             > ul{
                 > li{                    
                     &::before{
-                        content:'';
-                        width: 1px;
-                        height: 6px;
                         background:gray;
-                        position: absolute;
-                        top: 24px;
-                        right: rem(18);
-                        transform: rotate(45deg);
                     }
                     &::after{
-                        content:'';
-                        width: 7px;
-                        height: 1px;
                         background: gray;
-                        position: absolute;
-                        top: 22px;
-                        right: rem(15);
-                        transform: rotate(45deg);
-                    }                           
-                    &.is-active{
-                        &::before{
-                            top: 21px;
-                            right: 22px;
-                            transform: rotate(135deg);
-                        }
-                        &::after{
-                            top: 24px;
-                            transform: rotate(135deg);
-                        }
-                    }  
-                    &.noDepth{
-                        &::before,
-                        &::after{
-                            display: none;
-                        }
-                    }
+                    }   
                 }
             }
             li{
