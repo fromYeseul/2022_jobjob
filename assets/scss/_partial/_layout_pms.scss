@@ -50,172 +50,13 @@ header{
         background: $bgColor;
         width: 100%;
         position: relative;
-
-        //마이프로젝트
-        .myProjList{
-            //width: rem(260);
-            //width: rem(280);
-            width: rem(300);
-            background: $white;
-            border-right: 1px solid $layoutColor;
-            position: relative;
-            transition: all .3s;
-            .closed{
-                display: none;
-                //width: rem(17);
-                height: 100%;
-                padding-left: rem(18);
-                align-items: center;
-                // opacity: .3;
-            }
-        }
-        .myProjDetail{
-            // width: calc(100% - 680px);
-            transition: all .3s;
-            // width: calc(100% - 20px);
-            width: calc(100% - 300px);
-            padding: rem(15);    
-            overflow-y: auto;
-            &.nodata{
-                width: calc(100% - 300px);
-            }
-            &.is-active{
-                width: calc(100% - 680px);
-            }
-        }
-
-
-        //마이피플
-        .myPeoList{
-            min-width: rem(500);
-            background: $white;
-            border-right: 1px solid $layoutColor;
-        }
-        .myPeoDetail{
-            // width: rem(995);
-            width: 100%;
-            max-width: rem(1400);
-            padding: rem(30) 0;  
-            .boxListWrap{
-                padding:0  rem(30) ;  
-                // padding-right: rem(70);
-            } 
-            .tabBtnWrap{
-                padding: 0 rem(30);
-            }
-        }
-
-
-        //프로젝트 의뢰목록, 일반회원, 프로젝트 진행목록, 문자전송이력
-        //모집공고, 모집공고 관리, 모집공고 관리 상세
-        .projReqList, .genMember, .projProgList, .sendHistory, 
-        .recruitList, .recruitAdmin, .recruitDetail,
-        .sendedOfferList, .sendedOfferDetail, .talentedSearch,
-        .clientBuy, .clientSales, .bizState
-        {
-            //height: calc(100vh - 100px);
-            //height: calc(100vh - 80px);
-            height: calc(100vh - 60px);
-            padding: rem(30) rem(30);
-            overflow-y: auto;
-        }
-
-        //기본
-        .default{
-            //width: calc(100% - 60px - 60px);
-            width: 100%;
-            @include heightArray;
-        }
-
-        &.is-active{
-            //width: calc(100% - 560px);
-            // .myProjDetail{
-            //     width: 45%;
-            //     width: calc(100% - 350px - 640px - 60px);
-            //     // &.is-active{
-            //     //     width: calc(100% - 350px - 640px - 60px);
-            //     // }
-            // }
-
-            //noResize : 우측패널 오픈시 사이즈 변경x (마이피플페이지)
-            &.noResize{
-                width: 100%;
-            }
-            .myProjList{
-                width: rem(37);
-                border-right: 0;
-                background: $bgColor;
-                .condition,
-                .boxListWrap,
-                .listBottom{
-                    display: none;
-                }
-                .closed{
-                    display: flex;
-                }
-            }
-        }
     }
-    &.noSide{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    &.noRight{
-        padding-right: 0;
-    }
-
 } 
-
-
-
-//우측패널
-.rPanelLayer{
-    width: 0; 
-    background: $white;
-    transition: all .3s ease;
-    //position: relative;
-    position: fixed;
-    height: calc(100vh - 70px);
-    top: rem(60);
-    right: rem(51);
-    height: calc(100vh - 60px);
-    .rPanelBox{
-        display: none;
-    }   
-    &.is-active{
-        width: rem(480); 
-        .rPanelBox{
-            display: block;
-        }   
-    }
-    &.layerType{
-        min-height: calc(100vh - 200px); //임시
-        position: fixed;
-        top: rem(60);
-        right: rem(51);
-    }
-}
-.rPanel{            
-    width: rem(52);
-    height: calc(100vh - 60px);
-    padding: rem(20) rem(15);
-    position: fixed;
-    right: 0;
-    top: rem(60);
-    background: $white;
-    border-left: 1px solid $layoutColor;
-    li{
-        margin-bottom: rem(15);
-        cursor: pointer;
-    }
-}
-
 
 // GNB 클릭, 마우스오버 이벤트
 .layoutWrapper{
     &.is-hover{
         .gnbWrapper{
-            width: rem(180);
             background:$white;
             .navCtrlBtn{
                 width: calc(100% - 24px);
@@ -238,36 +79,11 @@ header{
             > ul{
                 > li{                    
                     &::before{
-                        content:'';
-                        width: 1px;
-                        height: 6px;
-                        background: white;
-                        position: absolute;
-                        top: 24px;
-                        right: rem(18);
-                        transform: rotate(45deg);
+                        background: black;
                     }
                     &::after{
-                        content:'';
-                        width: 7px;
-                        height: 1px;
-                        background: white;
-                        position: absolute;
-                        top: 22px;
-                        right: rem(15);
-                        transform: rotate(45deg);
-                    }                           
-                    &.is-active{
-                        &::before{
-                            top: 21px;
-                            right: 22px;
-                            transform: rotate(135deg);
-                        }
-                        &::after{
-                            top: 24px;
-                            transform: rotate(135deg);
-                        }
-                    }   
+                        background: black;
+                    }        
                     &.noDepth{
                         &::before,
                         &::after{
@@ -295,65 +111,7 @@ header{
                 opacity: 1;
             }
         }
-    }
-    &.is-active{   
-        .gnbWrapper{
-            .navCtrlBtn{
-                .ctrlBtn{
-                    background-position: 0px -60px !important;
-                }
-            } 
-        }
-        .contWrapper{
-            //width: calc(100% - 205px);
-            padding-left: rem(180);
-            .myProjList{
-                //width: rem(280);
-            }
-            .myProjDetail{
-                //width: calc(100% - 260px);
-                // 회원검색 너비축소 따라 600 = 260변경
-                .wrap{
-                    // width: calc(100% - 670px);
-                    //width: calc(100% - 400px);
-                    // > div{
-                    //     //padding-right: 0;
-                    //     padding-right: rem(232);
-                    // }
-                }
-            }
-            .projRegister{
-                .regiPartWrapper{
-                    padding-right: rem(153);
-                }
-            }
-            .quickView{
-                &.fixedHeight{
-                    width: rem(322);
-                    //width: 0;
-                }
-            }
-            footer{
-                &.is-active{
-                    width: calc(100% + 180px);
-                    left: -180px;
-                }
-            }
-            &.noSide{
-                padding-left: 0;
-            }
-            &.noRight{
-                width: 100%;
-            }
-            .contLayout{
-                &.is-active{
-                    .myProjList{
-                        width: rem(37);
-                    }
-                }
-            }
-        }   
-    }       
+    }    
 }
 
 

@@ -1,6 +1,8 @@
 
 .gnbWrapper{
     background: $white;
+    box-shadow: 2px 0 5px rgba(102, 102, 102,0.35);
+
     .gnb{
         padding: rem(20) 0;
     }  
@@ -36,13 +38,13 @@
                 position: relative;
                 &.is-active{
                     > a{
-                        background: rgba(255,255,255,0.3);
+                        background: $white;
                         position: relative;
                         &::before{
                             content:'';
                             width: 3px;
                             height: 100%;
-                            background: $white;
+                            background: $mainColor;
                             position: absolute;
                             left: 0;
                             top: 0;
