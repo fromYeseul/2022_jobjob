@@ -23,6 +23,7 @@
             margin-right: rem(10);
         }
         &.onlyIco{
+            margin-left: 5px;
             width: rem(34);
             line-height: rem(30);
             height: rem(34);
@@ -36,6 +37,8 @@
             color: $gray;
             & + h4{
                 @include ellipsis;
+                width: auto;
+                max-width: 90%;
             }
         }
         .selectBox{
