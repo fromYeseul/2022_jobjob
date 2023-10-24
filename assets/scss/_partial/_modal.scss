@@ -752,6 +752,11 @@
         &.mView{           
             width: 410px;
             min-width: 410px;
+            h3{
+                margin-top: 5px;
+                margin-bottom: 20px;
+                text-align: left;
+            }
         }
     }
     .modalHeader{
@@ -969,7 +974,7 @@
 .MmSearch{
     .tableTop{
         margin-top: 20px;
-        text-align: left;
+        // text-align: left;
         li{
             flex: 1 1 0; 
             font-size: rem(14);
@@ -987,6 +992,8 @@
         flex-grow: 1;
     }
     .hasBtn{
+        width: 80%;
+        margin: 0 auto;
         .button,
         button{
             width: rem(44);
@@ -1045,12 +1052,15 @@
 
 //사업현황 등록 - 계약상세
 .contractDetail{
+    .boxWrap{
+        margin-top: 10px;
+    }
     .col7{
         // width: 90%;
         row-gap: rem(20);
         column-gap: rem(50);
         // grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr;
-        grid-template-columns: 60px 110px 80px 120px 100px 130px 110px;
+        grid-template-columns: 95px 100px 80px 120px 100px 130px 110px;
     }
     .cont{
         height: 60vh;
@@ -1063,9 +1073,17 @@
         margin-top: rem(15);
         color: $subInfo;
     }
-    .conDTerm,
-    .conDCount{
+    .conSkill{
+        grid-column: 6/8;
+    }
+    .conAdmin{
+        grid-column: 5/7;
+    }
+    .conDTerm{
         grid-column: 3/5;
+    }
+    .conDCount{
+        grid-column: 1/3;
     }
     .conDFile{
         grid-column: 1/5;
@@ -1101,33 +1119,49 @@
 
 //사업현황 등록 - 계약생성
 .contractCreate{
-    .col4{
+    h5{
+        color: $beigeTit;
+    }
+    .cont{
+        display: flex;
+        gap: 40px;
+        >.prefix{
+            flex: 2 1 0;
+        }
+        >.suffix{
+            flex: 1 1 0;
+            height: 5px;
+            h5{
+                padding-bottom: 15px;
+                border-bottom:1px solid $h5_under_pms;
+            }
+        }
+    }
+    .col2{
         row-gap: rem(20);
         column-gap: rem(50);
-        // grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr;
-        grid-template-columns: 3fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     .info{
-        margin-top: rem(15);
+        margin-top: rem(10);
         color: $subInfo;
-
     }
     .tableBox{
         height: 300px;
         overflow-y: auto;
     }
-    .putMm{
-        grid-row: 1/4;
-    }
-    .conDTerm{
-        grid-column: 2/4;
-    }
-    .dateType{
-        width: rem(120) !important;
-    }
-    .range{
-        margin: 0 10px;
-    }
+    // .putMm{
+    //     grid-row: 1/4;
+    // }
+    // .conDTerm{
+    //     grid-column: 2/4;
+    // }
+    // .dateType{
+    //     width: rem(120) !important;
+    // }
+    // .range{
+    //     margin: 0 10px;
+    // }
 }
 
 #fileList{

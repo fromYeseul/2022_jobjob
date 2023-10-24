@@ -2060,6 +2060,11 @@ footer.toast button + button {
   width: 410px;
   min-width: 410px;
 }
+#recruitPreview .layerBox.mView h3 {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  text-align: left;
+}
 #recruitPreview .modalHeader {
   position: absolute;
   top: 20px;
@@ -2241,7 +2246,6 @@ footer.toast button + button {
 .compSearch .tableTop,
 .MmSearch .tableTop {
   margin-top: 20px;
-  text-align: left;
 }
 .compSearch .tableTop li,
 .MmSearch .tableTop li {
@@ -2261,6 +2265,11 @@ footer.toast button + button {
 .compSearch input,
 .MmSearch input {
   flex-grow: 1;
+}
+.compSearch .hasBtn,
+.MmSearch .hasBtn {
+  width: 80%;
+  margin: 0 auto;
 }
 .compSearch .hasBtn .button,
 .compSearch .hasBtn button,
@@ -2312,10 +2321,13 @@ footer.toast button + button {
   display: none;
 }
 
+.contractDetail .boxWrap {
+  margin-top: 10px;
+}
 .contractDetail .col7 {
   row-gap: 1.25rem;
   column-gap: 3.125rem;
-  grid-template-columns: 60px 110px 80px 120px 100px 130px 110px;
+  grid-template-columns: 95px 100px 80px 120px 100px 130px 110px;
 }
 .contractDetail .cont {
   height: 60vh;
@@ -2328,9 +2340,17 @@ footer.toast button + button {
   margin-top: 0.9375rem;
   color: #444;
 }
-.contractDetail .conDTerm,
-.contractDetail .conDCount {
+.contractDetail .conSkill {
+  grid-column: 6/8;
+}
+.contractDetail .conAdmin {
+  grid-column: 5/7;
+}
+.contractDetail .conDTerm {
   grid-column: 3/5;
+}
+.contractDetail .conDCount {
+  grid-column: 1/3;
 }
 .contractDetail .conDFile {
   grid-column: 1/5;
@@ -2358,30 +2378,36 @@ footer.toast button + button {
   width: 820px;
 }
 
-.contractCreate .col4 {
+.contractCreate h5 {
+  color: #838ca3;
+}
+.contractCreate .cont {
+  display: flex;
+  gap: 40px;
+}
+.contractCreate .cont > .prefix {
+  flex: 2 1 0;
+}
+.contractCreate .cont > .suffix {
+  flex: 1 1 0;
+  height: 5px;
+}
+.contractCreate .cont > .suffix h5 {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #7a7a7a;
+}
+.contractCreate .col2 {
   row-gap: 1.25rem;
   column-gap: 3.125rem;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 .contractCreate .info {
-  margin-top: 0.9375rem;
+  margin-top: 0.625rem;
   color: #444;
 }
 .contractCreate .tableBox {
   height: 300px;
   overflow-y: auto;
-}
-.contractCreate .putMm {
-  grid-row: 1/4;
-}
-.contractCreate .conDTerm {
-  grid-column: 2/4;
-}
-.contractCreate .dateType {
-  width: 7.5rem !important;
-}
-.contractCreate .range {
-  margin: 0 10px;
 }
 
 #fileList .h3_sub {
@@ -3904,7 +3930,8 @@ button.onlyIco.lowSize,
 }
 button.onlyIco.gray,
 .button.onlyIco.gray {
-  background: #8a8a8c;
+  border: 1px solid #8a8a8c;
+  background: #929295;
 }
 button.onlyIco.round,
 .button.onlyIco.round {
@@ -6212,7 +6239,7 @@ select.onGoing:focus {
 .hasTooltip .tooltip.left {
   width: 9.375rem;
   top: 0;
-  left: -190px;
+  left: -165px;
   transform: translateY(-15%);
   text-align: left;
 }
@@ -6229,16 +6256,16 @@ select.onGoing:focus {
   visibility: visible;
 }
 .hasTooltip .tooltip.left.line1 {
-  top: 5%;
+  top: 40px;
 }
 .hasTooltip .tooltip.left.line2 {
-  top: 33%;
+  top: 140px;
 }
 .hasTooltip .tooltip.left.line3 {
-  top: 55%;
+  top: 230px;
 }
 .hasTooltip .tooltip.left.line4 {
-  top: 78%;
+  top: 330px;
 }
 .hasTooltip .tooltip.bottom {
   display: initial;
@@ -6719,8 +6746,8 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .ico.preview_w {
   width: 1.125rem;
-  height: 1rem;
-  background-position: -160px -220px;
+  height: 1.125rem;
+  background-position: -159px -220px;
 }
 .ico.edit {
   width: 0.75rem;
@@ -7074,30 +7101,32 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .boxWrap.hasTooltip {
   cursor: initial;
 }
+.boxWrap.hasTooltip .tooltip.left {
+  display: none;
+  visibility: visible;
+}
+.boxWrap.hasTooltip .tooltip.left.is-active {
+  display: block;
+}
 .boxWrap.headType .head {
+  display: block;
+}
+.boxWrap.headType .head .h4_sub {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
-.boxWrap.headType .head .prefix {
-  width: 90%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  white-space: nowrap;
-  text-align: left;
+.boxWrap.headType .head .h4_sub .prefix {
+  color: #666666;
+  font-weight: 400;
 }
-.boxWrap.headType .head .prefix p {
-  padding: 0.25rem 0;
+.boxWrap.headType .head .h4_sub .suffix span {
+  position: relative;
 }
-.boxWrap.headType .head .prefix p > span.dNear {
-  margin-right: 1.875rem;
-}
-.boxWrap.headType .head .prefix p > span:last-child {
+.boxWrap.headType .head .h4_sub .suffix span:last-child {
   margin-left: 0.625rem;
   position: relative;
 }
-.boxWrap.headType .head .prefix p > span:last-child::before {
+.boxWrap.headType .head .h4_sub .suffix span:last-child::before {
   content: "";
   width: 1px;
   height: 0.75rem;
@@ -7107,15 +7136,21 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   left: -6px;
   transform: translateY(-40%);
 }
-.boxWrap.headType .head .prefix h4 {
-  margin-top: 0.375rem;
+.boxWrap.headType .head h4 {
+  margin-top: 0.9375rem;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
 }
-.boxWrap.headType .head .prefix h4 .point {
+.boxWrap.headType .head h4 .point {
   vertical-align: 2px;
   margin-right: 4px;
 }
 .boxWrap.headType .cont {
-  margin-top: 0.625rem;
+  margin-top: 1rem;
   position: relative;
 }
 .boxWrap.titType {
@@ -7671,7 +7706,7 @@ h6 + .h6_sub {
 .notiBox button.onlyIco,
 .projBox .button.onlyIco,
 .projBox button.onlyIco {
-  margin-left: 5px;
+  margin-left: 15px;
   width: 2.125rem;
   line-height: 1.875rem;
   height: 2.125rem;
@@ -7953,6 +7988,15 @@ h6 + .h6_sub {
 }
 .projRegister .regiPartWrapper {
   height: calc(100vh - 200px);
+}
+.projRegister .hasTooltip .tooltip.line1 {
+  top: 20px;
+}
+.projRegister .hasTooltip .tooltip.line4 {
+  top: 320px;
+}
+.projRegister .hasTooltip .tooltip.line5 {
+  top: 550px;
 }
 
 .regiPartWrapper {
@@ -8327,7 +8371,7 @@ h6 + .h6_sub {
   font-size: 0.875rem;
   color: #0460d2;
 }
-.innerList .round {
+.innerList .prefix .round {
   width: 3.875rem;
   color: #a6a6b6;
 }
@@ -8489,12 +8533,10 @@ h6 + .h6_sub {
   display: block;
 }
 .moreList.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   right: auto;
   left: 70%;
   padding: 5px;
+  display: none;
 }
 .moreList.flex.is-active {
   display: flex;
@@ -8618,7 +8660,7 @@ h6 + .h6_sub {
   padding-bottom: 0.625rem;
 }
 .myProjDetail .boxWrap.headType {
-  padding: 1rem 1.25rem;
+  padding: 1.25rem;
 }
 .myProjDetail .boxWrap.prefix {
   width: 31.25rem;
@@ -8703,7 +8745,6 @@ h6 + .h6_sub {
 .myProjDetail .boxWrap .boxType {
   width: 98%;
   height: 7.1875rem;
-  margin-top: 1.25rem;
   padding-bottom: 0.375rem;
 }
 .myProjDetail .boxWrap .boxType ul {
@@ -9188,9 +9229,6 @@ h6 + .h6_sub {
 .memRegister .regiPartWrapper button.round i {
   margin-right: 3px;
 }
-.memRegister .hasTooltip .tooltip.left {
-  left: -165px;
-}
 .memRegister .inputList .flexCenter {
   gap: 0.625rem;
 }
@@ -9414,6 +9452,8 @@ h6 + .h6_sub {
 }
 .chipBox .chip {
   display: inline-block;
+  margin: 0.1875rem 0.5rem;
+  margin-left: 0;
   padding: 0.25rem 0.5rem;
   height: 26px;
   line-height: 21px;
@@ -9424,9 +9464,6 @@ h6 + .h6_sub {
 }
 .chipBox .chip.disabled {
   opacity: 0.5;
-}
-.chipBox .chip + .chip {
-  margin-left: 8px;
 }
 
 .recruitDetail {
@@ -9513,18 +9550,11 @@ h6 + .h6_sub {
   margin: 0 1rem;
 }
 
-.recruitRegister .hasTooltip .tooltip.left {
-  top: 5%;
-  left: -165px;
+.recruitRegister .hasTooltip .tooltip.line3 {
+  top: 320px;
 }
-.recruitRegister .hasTooltip .tooltip.left.line2 {
-  top: 20%;
-}
-.recruitRegister .hasTooltip .tooltip.left.line3 {
-  top: 34%;
-}
-.recruitRegister .hasTooltip .tooltip.left.line4 {
-  top: 46%;
+.recruitRegister .hasTooltip .tooltip.line4 {
+  top: 430px;
 }
 
 .recruitPeriod,
