@@ -1637,7 +1637,7 @@
 
 
     <!--계약상세 팝업-->
-    <div id="" class="modalLayer center">
+    <div id="" class="modalLayer center is-active">
         <div class="layerBox mid-laSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -1678,6 +1678,7 @@
                                         <label for="e1">대행</label>
                                     </div>                                
                                 </li> -->
+
                                 <li>
                                     <h6>사업자번호</h6>
                                     <div class="info">111-22-3333</div>    
@@ -1700,6 +1701,8 @@
                                     <h6>투입인력</h6>
                                     <div class="info">1 명</div>                                
                                 </li> -->
+
+                                <!--231101 추가-ys-->
                                 <li>
                                     <h6>계약유형</h6>
                                     <div class="info">
@@ -1709,6 +1712,7 @@
                                         </select>
                                     </div>
                                 </li>
+                                <!--//231101 추가-ys-->
                                 <li>
                                     <h6>계약상태</h6>
                                     <div class="info">
@@ -1839,7 +1843,7 @@
                                     <col>
                                     <col>
                                     <col>
-                                    <!-- <col> -->
+                                    <!-- <col> 231101 제거-ys -->
 
                                     <col width="20%">
                                     <col>
@@ -1872,7 +1876,7 @@
                                         <td>김기쁨</td>
                                         <td>개발</td>
                                         <td>특급</td>
-                                        <!-- <td>4년제 졸업</td> -->
+                                        <!-- <td>4년제 졸업</td> 231101 제거-ys -->
 
                                         <td>2023.01.01 ~ 2023.12.31</td>
                                         <td>1.0</td>
@@ -1917,7 +1921,7 @@
                                         <th>No.</th>
                                         <th>계약상태</th>
                                         <th>계약구분</th>
-                                        <!-- <th>투입인력</th> -->
+                                        <!-- <th>투입인력</th> 231101 제거-ys -->
                                         <th>대표자명</th>
                                         <th>계약기간</th>
 
@@ -1931,7 +1935,7 @@
                                         <td>02</td>
                                         <td>변경계약완료</td>
                                         <td>사업</td>
-                                        <td>김기쁨</td>
+                                        <td>김기쁨</td><!-- 231101 투입인력 -> 대표자명 -ys -->
 
                                         <td>2023.01.01 ~ 2023.12.31</td>
                                         <td>1명</td>
@@ -2051,18 +2055,25 @@
 
                                 <div class="tableBox">
                                     <table>
+                                        <!--231101 수정-ys-->
                                         <colgroup>
                                             <col width="5%">
+                                            <col width="10%">
                                             <col>
+                                            <col width="10%">
                                             <col>
-                                            <col>
+
+                                            <col width="30%">
                                         </colgroup>
+                                        <!--//231101 수정-ys-->
                                         <thead>
                                             <tr>
                                                 <th></th>
                                                 <th>이름</th>
                                                 <th>소속</th>
                                                 <th>구분</th>
+                                                <th>단가</th><!--231101 추가-ys-->
+                                                <th>기간</th><!--231101 추가-ys-->
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -2072,8 +2083,10 @@
                                                     <label for="w1"></label>
                                                 </td>
                                                 <td>홍길동</td>
-                                                <td>-</td>
-                                                <td>개인사업</td>
+                                                <td>투비소프트</td>
+                                                <td>개인</td>
+                                                <td class="right">3,600,000</td><!--231101 추가-ys-->
+                                                <td>2023.01.01~2023.12.31</td><!--231101 추가-ys-->
                                             </tr>
                                             <tr>
                                                 <td>
@@ -2082,7 +2095,9 @@
                                                 </td>
                                                 <td>홍길동</td>
                                                 <td>-</td>
-                                                <td>개인사업</td>
+                                                <td>개인</td>
+                                                <td class="right">7,600,000</td>
+                                                <td>2023.01.01~2023.12.31</td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -2091,7 +2106,9 @@
                                                 </td>
                                                 <td>김호영</td>
                                                 <td>매그넘브릿지</td>
-                                                <td>사업소득</td>
+                                                <td>법인</td>
+                                                <td class="right">6,600,000</td>
+                                                <td>2023.01.01~2023.12.31</td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -2100,7 +2117,9 @@
                                                 </td>
                                                 <td>홍길동</td>
                                                 <td>-</td>
-                                                <td>개인사업</td>
+                                                <td>개인</td>
+                                                <td class="right">6,900,000</td>
+                                                <td>2023.01.01~2023.12.31</td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -2109,7 +2128,9 @@
                                                 </td>
                                                 <td>홍길동</td>
                                                 <td>-</td>
-                                                <td>개인사업</td>
+                                                <td>개인</td>
+                                                <td class="right">6,600,000</td>
+                                                <td>2023.01.01~2023.12.31</td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -2118,7 +2139,9 @@
                                                 </td>
                                                 <td>홍길동</td>
                                                 <td>-</td>
-                                                <td>개인사업</td>
+                                                <td>개인</td>
+                                                <td class="right">6,600,000</td>
+                                                <td>2023.01.01~2023.12.31</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -2127,7 +2150,7 @@
                             <!--//231101 수정-ys-->
 
                             <div class=" suffix">
-                                <h5>투입인력</h5>
+                                <h5>선택정보</h5>
                                 <div class="inputList">
                                     <ul class="grid col2"><!--231101 수정-ys-->
                                         <li>
@@ -2333,15 +2356,149 @@
             </div>
             <div class="modalFooter">
                 <button class="white">닫기</button>
-                <button class="">생성</button>
+                <button class="">추가</button>
             </div>
         </div>
         <div class="layerDim"></div> 
     </div>
     <!--//계약생성 팝업-->
+    
+    <!--인력추가 팝업 231101 추가-ys -->
+    <div id="" class="modalLayer center is-active">
+        <div class="layerBox midSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+            <div class="modalCont mMSupply">
+                <h2>인력(공급) 추가</h2>
+
+                <div class="boxWrap titType">
+                    <div class="head">
+                        <h3><span class="label">종료</span>[종료] 대기업 B2B 주문 프로세스 개선 기획자 모집</h3>
+                    </div>
+                    <div class="cont">
+                        <div class="prefix">
+                            <div class="tableTop">
+                                <div class="prefix">
+                                    <h5>투입인력</h5>
+                                    <span>
+                                        <span class="mainC">1</span>/25
+                                    </span>
+                                </div>
+
+                                <div class="suffix">
+                                    <input type="checkbox" id="ttt1" class="hasTxt">
+                                    <label for="ttt1">계약(완료) 인력 모두표기</label>
+                                </div>
+                            </div>
+
+                            <div class="tableBox">
+                                <table>
+                                    <colgroup>
+                                        <col width="5%">
+                                        <col width="10%">
+                                        <col>
+                                        <col width="10%">
+                                        <col>
+
+                                        <col width="30%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>이름</th>
+                                            <th>소속</th>
+                                            <th>구분</th>
+                                            <th>단가</th>
+                                            <th>기간</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="w1">
+                                                <label for="w1"></label>
+                                            </td>
+                                            <td>홍길동</td>
+                                            <td>투비소프트</td>
+                                            <td>개인</td>
+                                            <td class="right">3,600,000</td>
+                                            <td>2023.01.01~2023.12.31</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="w2" checked>
+                                                <label for="w2"></label>
+                                            </td>
+                                            <td>홍길동</td>
+                                            <td>-</td>
+                                            <td>개인</td>
+                                            <td class="right">7,600,000</td>
+                                            <td>2023.01.01~2023.12.31</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="w3" disabled>
+                                                <label for="w3"></label>
+                                            </td>
+                                            <td>김호영</td>
+                                            <td>매그넘브릿지</td>
+                                            <td>법인</td>
+                                            <td class="right">6,600,000</td>
+                                            <td>2023.01.01~2023.12.31</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="w4" checked disabled>
+                                                <label for="w4"></label>
+                                            </td>
+                                            <td>홍길동</td>
+                                            <td>-</td>
+                                            <td>개인</td>
+                                            <td class="right">6,900,000</td>
+                                            <td>2023.01.01~2023.12.31</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="w1">
+                                                <label for="w1"></label>
+                                            </td>
+                                            <td>홍길동</td>
+                                            <td>-</td>
+                                            <td>개인</td>
+                                            <td class="right">6,600,000</td>
+                                            <td>2023.01.01~2023.12.31</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="w2" checked>
+                                                <label for="w2"></label>
+                                            </td>
+                                            <td>홍길동</td>
+                                            <td>-</td>
+                                            <td>개인</td>
+                                            <td class="right">6,600,000</td>
+                                            <td>2023.01.01~2023.12.31</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modalFooter">
+                <button class="white">닫기</button>
+                <button class="">추가</button>
+            </div>
+        </div>
+        <div class="layerDim"></div> 
+    </div>
+    <!--//인력추가 팝업 231101 추가-ys -->
+
 
     <!--인력검색-->
-    <div id="" class="modalLayer center">
+    <div id="" class="modalLayer center is-active">
         <div class="layerBox sm-midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>

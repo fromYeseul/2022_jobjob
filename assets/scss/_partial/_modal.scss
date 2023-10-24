@@ -135,6 +135,9 @@
         &.mid-laSize2{
             width: rem(1200);
             padding: rem(40) rem(30);
+            .modalFooter{
+                max-width: rem(330);
+            }
         }
         &.laSize{
             width: auto;
@@ -1117,8 +1120,9 @@
     } 
 }
 
-//사업현황 등록 - 계약생성
-.contractCreate{
+//사업현황 등록 - 계약생성, 인력추가
+.contractCreate,
+.mMSupply{
     h5{
         color: $beigeTit;
     }
@@ -1126,14 +1130,15 @@
         display: flex;
         gap: 40px;
         >.prefix{
-            flex: 2 1 0;
+            flex: 3 1 0;
         }
         >.suffix{
-            flex: 1 1 0;
-            height: 5px;
-            h5{
-                padding-bottom: 15px;
-                border-bottom:1px solid $h5_under_pms;
+            flex: 2 1 0;
+            height: 5px;            
+            .inputList{
+                margin-top: 10px;
+                padding: 20px 15px;
+                border-top: 1px solid $h5_under_pms
             }
         }
     }
@@ -1147,7 +1152,7 @@
         color: $subInfo;
     }
     .tableBox{
-        height: 300px;
+        height: 480px;
         overflow-y: auto;
     }
     // .putMm{

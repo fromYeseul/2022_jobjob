@@ -1545,6 +1545,9 @@ footer.toast button + button {
   width: 75rem;
   padding: 2.5rem 1.875rem;
 }
+.modalLayer .layerBox.mid-laSize2 .modalFooter {
+  max-width: 20.625rem;
+}
 .modalLayer .layerBox.laSize {
   width: auto;
   max-width: 90.625rem;
@@ -2378,35 +2381,44 @@ footer.toast button + button {
   width: 820px;
 }
 
-.contractCreate h5 {
+.contractCreate h5,
+.mMSupply h5 {
   color: #838ca3;
 }
-.contractCreate .cont {
+.contractCreate .cont,
+.mMSupply .cont {
   display: flex;
   gap: 40px;
 }
-.contractCreate .cont > .prefix {
-  flex: 2 1 0;
+.contractCreate .cont > .prefix,
+.mMSupply .cont > .prefix {
+  flex: 3 1 0;
 }
-.contractCreate .cont > .suffix {
-  flex: 1 1 0;
+.contractCreate .cont > .suffix,
+.mMSupply .cont > .suffix {
+  flex: 2 1 0;
   height: 5px;
 }
-.contractCreate .cont > .suffix h5 {
-  padding-bottom: 15px;
-  border-bottom: 1px solid #7a7a7a;
+.contractCreate .cont > .suffix .inputList,
+.mMSupply .cont > .suffix .inputList {
+  margin-top: 10px;
+  padding: 20px 15px;
+  border-top: 1px solid #7a7a7a;
 }
-.contractCreate .col2 {
+.contractCreate .col2,
+.mMSupply .col2 {
   row-gap: 1.25rem;
   column-gap: 3.125rem;
   grid-template-columns: 1fr 1fr;
 }
-.contractCreate .info {
+.contractCreate .info,
+.mMSupply .info {
   margin-top: 0.625rem;
   color: #444;
 }
-.contractCreate .tableBox {
-  height: 300px;
+.contractCreate .tableBox,
+.mMSupply .tableBox {
+  height: 480px;
   overflow-y: auto;
 }
 
@@ -2890,7 +2902,7 @@ footer.toast button + button {
   border-top: 0;
 }
 .tableBox.absolBody {
-  height: calc(100vh - 454px);
+  height: calc(100vh - 410px);
   transition: all 0.3s;
 }
 .tableBox.absolBody.is-active {
@@ -7162,6 +7174,12 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .boxWrap.titType .head h3 {
   margin-bottom: 0;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
 }
 .boxWrap.titType .head .label {
   margin-right: 15px;
