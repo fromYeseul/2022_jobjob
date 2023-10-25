@@ -888,36 +888,38 @@
             transform: initial;
         }        
     }
-    .tooltip{
-        text-align: left;
-        width: 390px;
-        left: -380px;
-        top: 50%;
-        bottom: auto;
-        transform: translate(0, -50%);
-        .yScroll{
-            padding-top: 0;
-            height: auto;
-            max-height: rem(90);
-            overflow: auto;
-            &::-webkit-scrollbar {
-                width: 2px;
-            }
-            &::-webkit-scrollbar-track {
-                background-color: $subInfo;
-            }
-            &::-webkit-scrollbar-thumb {
-                background-color: $disable;
-            }
-        }
-        &::after{
+    .tableBox{
+        .tooltip{
+            text-align: left;
+            width: 390px;
+            left: -380px;
             top: 50%;
-            left: 100%;
-            transform: translateY(-50%);
-            // margin-top: -3px;
-            margin-left: 0;
-            border-top-color: transparent;
-            border-left-color: $tooltipGray;
+            bottom: auto;
+            transform: translate(0, -50%);
+            .yScroll{
+                padding-top: 0;
+                height: auto;
+                max-height: rem(90);
+                overflow: auto;
+                &::-webkit-scrollbar {
+                    width: 2px;
+                }
+                &::-webkit-scrollbar-track {
+                    background-color: $subInfo;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: $disable;
+                }
+            }
+            &::after{
+                top: 50%;
+                left: 100%;
+                transform: translateY(-50%);
+                // margin-top: -3px;
+                margin-left: 0;
+                border-top-color: transparent;
+                border-left-color: $tooltipGray;
+            }
         }
     }
     tr{
@@ -1063,7 +1065,7 @@
         row-gap: rem(20);
         column-gap: rem(50);
         // grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr;
-        grid-template-columns: 95px 100px 80px 120px 100px 130px 110px;
+        grid-template-columns: 95px 100px 80px 120px 100px 130px 130px;
     }
     .cont{
         height: 60vh;
@@ -1079,14 +1081,20 @@
     .conSkill{
         grid-column: 6/8;
     }
-    .conAdmin{
-        grid-column: 5/7;
-    }
     .conDTerm{
         grid-column: 3/5;
     }
     .conDCount{
-        grid-column: 1/3;
+        grid-column: 1/4;
+        &.basic{
+            grid-column: 2/5;
+        }
+    }
+    .conAdmin{
+        grid-column: 6/8;
+        &.basic{
+            grid-column: 7/8;
+        }
     }
     .conDFile{
         grid-column: 1/5;

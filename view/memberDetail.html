@@ -220,7 +220,19 @@
                                     <div class="prefix">
                                         <button class="white">이력서 다운로드</button>
                                         <button class="bdType">스페셜 지정</button>
-                                        <button class="rBdType">스페셜 해제</button>
+                                        <button class="rBdType">블랙 지정</button>
+                                        <!--231101 추가-ys-->
+                                        <div id="" class="modalLayer absol is-active">
+                                            <div class="layerBox">
+                                                <div class="modalCont">      
+                                                    <div class="hasBtn full">                                        
+                                                        <input type="text" class="" maxlength="40" placeholder="사유입력">
+                                                        <button class="midSize">저장</button>
+                                                    </div>         
+                                                </div>
+                                            </div>     
+                                        </div>
+                                        <!--//231101 추가-ys-->
                                     </div>
                                     <div class="suffix">
                                         <button class="">제안하기</button>
@@ -245,10 +257,26 @@
                                             </div>
                                             <div class="info">
                                                 <div class="top">
+                                                    <i class="ico signal_la"></i><!--231101 추가-ys-->
                                                     <h3>김미영</h3>
                                                     <span> KIM MI YEONG</span>
                                                     <p>(ID) my.kim@echoit.co.kr</p>
                                                 </div>
+
+                                                <!--231101 추가-ys-->
+                                                <div class="signalBox">
+                                                    <div class="reason">
+                                                        블랙 지정하는 사유가 이곳에 노출됩니다.
+                                                        프로젝트 중 컴플레인 많은 편
+                                                        블랙 지정하는 사유가 이곳에 노출됩.
+                                                        여기까지 50자
+                                                    </div>
+                                                    <div class="record">
+                                                        작성: 한아라(2023.10.03)
+                                                    </div>
+                                                </div>
+                                                <!--//231101 추가-ys-->
+
                                                 <div class="mid">
                                                     <ul>
                                                         <!--230609 추가 -ys -->
@@ -2054,7 +2082,7 @@
         //221013 추가 -ys
         showMemoList();
         tableHover();
-        memoFold();
+        // memoFold();
         makeMemo();
         // for(let j=0; j < tabBtn.length; j++){
         //             if (tabBtn[j].closest('.tabWrapper').id === tab_id){
@@ -2065,6 +2093,18 @@
         //             }
         //         }
 
+        //블랙리스트 사유등록 팝업-231101 ys
+        $("body").click(function(e){
+            let thisAbsol = $(e.target).next(".modalLayer.absol");
+            
+            if($(e.target).hasClass('rBdType')){
+                thisAbsol.toggleClass("is-active");
+            }else if($('.modalLayer').hasClass("is-active")){
+                if($(".modalLayer").has(e.target).length === 0){
+                    $(".modalLayer").removeClass("is-active");
+                }
+            }
+        });
     </script>
 </body>
 </html>

@@ -88,6 +88,17 @@
             line-height: rem(34);
             padding: 0 rem(15);
         }
+        .absol{
+            top: 45px;
+            left: 245px;
+            right: auto;
+            .layerBox{
+                padding: rem(18) rem(13);
+            }
+            input{
+                height: 36px;
+            }
+        }
     }
     .resuBox{    
         height: calc(100vh - 250px);
@@ -106,22 +117,51 @@
             }
         }
     }
+    .signalBox{
+        margin: 20px -10px;
+        padding: rem(15);
+        font-size: 13px;
+        background: rgba(255,255,255,0.6);
+        border-radius: 6px;
+        border-top:1px solid $signalBox;
+        border: 1px solid $signalBox;
+        position: relative;
+        &::before{
+            content:'';
+            // margin-left: -6px;
+            // border: solid transparent;
+            // border-color: transparent;
+            // border-bottom-color: $white;
+            // border-width: 10px;
+            // pointer-events: none;
+
+            width: 20px;
+            height: 10px;
+            background-image: url(../img/signalBox_top.png);
+
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .reason{
+            color: $error;
+        }
+        .record{
+            margin-top: 20px;
+            text-align: right;
+        }
+    }
     >.prefix{
         width: rem(330);
         padding: rem(40) rem(50);
         background: $memBg;
         // height: calc(100vh - 250px);
         // @include scroll_0;
-        .info{
-            > div{
-                & + div{
-                    margin-top: rem(30);
-                    padding-top: rem(30);
-                    border-top:1px solid $titleGray;
-                }
-            }
-            .top{
-                text-align: center;
+        .top{
+            text-align: center;
+            .signal_la{
+                margin-right: rem(5);
             }
             h3{
                 display: inline-block;
@@ -132,6 +172,11 @@
                     letter-spacing: -0.71px;
                     color: $subGray;
                 }
+            }
+            & + .mid{                
+                margin-top: rem(30);
+                padding-top: rem(30);
+                border-top:1px solid $titleGray;
             }
         }
         .mid{
@@ -187,6 +232,9 @@
             }
         }
         .bottom{
+            margin-top: rem(30);
+            padding-top: rem(30);
+            border-top:1px solid $titleGray;
             b{
                 display: block;
                 // margin-top: rem(24);
