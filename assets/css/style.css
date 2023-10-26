@@ -635,19 +635,28 @@ h1, h2, h3, h4, h5, h6, p {
 .wrapper {
   width: 100%;
 }
-.wrapper .login {
-  width: 100%;
-  max-width: 75rem;
-  margin: auto;
-  padding: 3.125rem 0;
-  background-color: #f2f2f7;
+.wrapper.login {
+  padding-top: 9.5625rem;
+  background: -webkit-linear-gradient(left, #0460d2, #1983cb, #47b892);
+  background: -moz-linear-gradient(left, #0460d2, #1983cb, #47b892);
+  background: -o-linear-gradient(left, #0460d2, #1983cb, #47b892);
+  background: linear-gradient(left, #0460d2, #1983cb, #47b892);
+}
+.wrapper.login .login {
+  text-align: center;
+}
+.wrapper.login footer {
+  margin-top: 8.125rem;
+  padding-top: 2.5rem;
+  padding-bottom: 6.25rem;
+  background: #f2f2f7;
 }
 .wrapper.center {
   height: 100vh;
-  background-color: #f2f2f7;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #f2f2f7;
 }
 
 .hasFooter .contWrapper {
@@ -898,7 +907,10 @@ header {
 
 .gnbWrapper {
   width: 3.25rem;
-  background: linear-gradient(to bottom, #0460d2, #1983cb, #47b892);
+  background: -webkit-linear-gradient(bottom, #0460d2, #1983cb, #47b892);
+  background: -moz-linear-gradient(bottom, #0460d2, #1983cb, #47b892);
+  background: -o-linear-gradient(bottom, #0460d2, #1983cb, #47b892);
+  background: linear-gradient(bottom, #0460d2, #1983cb, #47b892);
   transition: all 0.3s ease;
   position: fixed;
   left: 0;
@@ -1246,16 +1258,12 @@ header.center + .contWrapper .contLayout {
 }
 
 footer {
-  width: 100%;
-  color: #a6a6b6;
+  color: #ababba;
   font-size: 0.8125rem;
-  text-align: center;
-  margin-top: 10rem;
 }
 footer.toast {
   width: calc(100% + 60px);
   height: 6.375rem;
-  margin-top: 0;
   padding: 1.5rem 2.5rem;
   display: flex;
   align-items: center;
@@ -2330,7 +2338,7 @@ footer.toast button + button {
 .contractDetail .col7 {
   row-gap: 1.25rem;
   column-gap: 3.125rem;
-  grid-template-columns: 95px 100px 80px 120px 100px 130px 130px;
+  grid-template-columns: 95px 100px 80px 120px 100px 130px 140px;
 }
 .contractDetail .cont {
   height: 60vh;
@@ -6088,7 +6096,6 @@ select.onGoing:focus {
 }
 .select .optionList .optionItem {
   display: block;
-  padding: 0.5rem 0.625rem;
   padding-right: 0.25rem;
   margin: 0;
   cursor: pointer;
@@ -6118,6 +6125,7 @@ select.onGoing:focus {
 }
 .select .optionList .optionItem label {
   display: block;
+  padding: 0.5rem 0.625rem;
   font-weight: 400;
   vertical-align: middle;
 }
@@ -7657,13 +7665,16 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 
 h1 {
   font-size: 3.375rem;
+  font-weight: 900;
+  color: #fff;
   letter-spacing: -1.93px;
 }
 
 .h1_sub {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #a6a6b6;
+  color: #fff;
+  opacity: 0.55;
 }
 
 .pageTit {
@@ -8693,10 +8704,6 @@ h6 + .h6_sub {
   background: #e5effa;
 }
 
-.login {
-  text-align: center;
-}
-
 .loginBox {
   width: 25rem;
   padding: 2.5rem;
@@ -8716,6 +8723,7 @@ h6 + .h6_sub {
 }
 
 .subLogin {
+  margin-top: 1.875rem;
   font-size: 0.875rem;
 }
 .subLogin li {

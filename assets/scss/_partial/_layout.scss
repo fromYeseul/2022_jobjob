@@ -1,17 +1,22 @@
 .wrapper{
     width: 100%;    
-    .login{
-        width: 100%;
-        max-width: rem(1200);
-        margin: auto;
-        //height:100vh;
-        padding: rem(50) 0;
-        background-color: $bgColor;
-    }    
+    &.login{
+        padding-top: rem(153);
+        @include gradient(left, $gradient);
+        .login{
+            text-align: center;
+        }   
+        footer{
+            margin-top: rem(130);
+            padding-top: rem(40);
+            padding-bottom: rem(100);
+            background: $bgColor;
+        }
+    } 
     &.center{
-        height:100vh;
-        background-color: $bgColor;
+        height: 100vh;
         @include heightArray;
+        background-color: $bgColor;
     }
 }
   
