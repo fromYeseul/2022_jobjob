@@ -636,7 +636,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
 }
 .wrapper.login {
-  min-height: 400px;
+  min-height: 25rem;
   overflow-y: auto;
   background: -webkit-linear-gradient(left, #0460d2, #1983cb, #47b892);
   background: -moz-linear-gradient(left, #0460d2, #1983cb, #47b892);
@@ -645,15 +645,16 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
 }
 .wrapper.login .loginTop {
-  min-height: 75vh;
+  min-height: 68vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  align-items: end;
 }
 .wrapper.login footer {
   padding-top: 2.5rem;
   padding-bottom: 6.25rem;
-  height: 25vh;
+  height: 32vh;
   background: #f2f2f7;
 }
 .wrapper.center {
@@ -2346,7 +2347,7 @@ footer.toast button + button {
   grid-template-columns: 95px 100px 80px 120px 100px 130px 140px;
 }
 .contractDetail .cont {
-  height: 60vh;
+  height: 58vh;
   overflow-y: auto;
 }
 .contractDetail .underBg {
@@ -2723,7 +2724,7 @@ footer.toast button + button {
 }
 .filterList .listBox .prefix,
 .filterList .listBox .suffix {
-  max-height: 27.5rem;
+  height: 27.5rem;
   overflow-y: scroll;
 }
 .filterList .listBox .prefix {
@@ -4875,7 +4876,7 @@ input[type=file] {
 .inputGroup + label {
   min-width: 5.625rem;
   margin-left: 0.4375rem;
-  line-height: 2.75rem;
+  line-height: 2.625rem;
   padding: 0 0.9375rem;
   display: inline-block;
   font-weight: 700;
@@ -7274,6 +7275,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .boxWrap.titType .head h3 {
   margin-bottom: 0;
+  font-size: 1.125rem;
   width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -7967,22 +7969,35 @@ h6 + .h6_sub {
 }
 .phoImg.is-signal::after {
   content: "";
-  width: 0.6875rem;
-  height: 0.625rem;
+  width: 0.8125rem;
+  height: 0.8125rem;
   background-image: url(../img/icoGroup.png);
-  background-position: -180px -240px;
+  background-position: -180px -220px;
   position: absolute;
   right: 0;
   bottom: -1px;
+}
+.phoImg.is-signal + a {
+  color: #000000;
+  position: relative;
+  z-index: 0;
+}
+.phoImg.is-signal + a::after {
+  content: "";
+  width: 100%;
+  height: 12px;
+  background: #fee32c;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .boxList .phoImg.is-signal::after,
 .wideType .phoImg.is-signal::after,
 .offeredMem .phoImg.is-signal::after,
 .trgBox .phoImg.is-signal::after {
-  width: 0.8125rem;
-  height: 0.8125rem;
-  background-position: -180px -220px;
   right: -4px;
   bottom: 2px;
 }
@@ -8078,6 +8093,9 @@ h6 + .h6_sub {
   margin: 0;
   display: flex;
   gap: 26px;
+}
+.offeredMem .profile.center {
+  margin: 0 auto;
 }
 .offeredMem .profile .left li {
   display: block;
@@ -8462,8 +8480,6 @@ h6 + .h6_sub {
   padding: 0.75rem 1.5625rem;
 }
 .accHead .suffix {
-  word-break: keep-all;
-  text-align: right;
   color: #676767;
 }
 .accHead .suffix .onlyIco {
@@ -8525,7 +8541,7 @@ h6 + .h6_sub {
   color: #4b4b4b;
 }
 .innerList .prefix .field {
-  width: 6.625rem;
+  width: 7.0625rem;
   font-size: 0.875rem;
   color: #0460d2;
 }
@@ -9269,6 +9285,9 @@ h6 + .h6_sub {
 .resume > .prefix .top .signal_la {
   margin-right: 0.3125rem;
 }
+.resume > .prefix .top .signal_la.none {
+  display: none;
+}
 .resume > .prefix .top h3 {
   display: inline-block;
   font-size: 1.625rem;
@@ -9715,7 +9734,7 @@ h6 + .h6_sub {
 .recruitRegister .col6 {
   row-gap: 1.875rem;
   column-gap: 2.8125rem;
-  grid-template-columns: 5fr 1fr 1.5fr;
+  grid-template-columns: 4fr 170px 2fr;
 }
 .recruitRegister .col4 {
   width: 80%;
@@ -9754,7 +9773,7 @@ h6 + .h6_sub {
 }
 .recruitPeriod select,
 .recruitTime select {
-  width: 18%;
+  width: 84px;
   min-width: auto;
 }
 
@@ -10025,17 +10044,6 @@ h6 + .h6_sub {
 .compoWrapper .accWrap table tbody td ul li {
   line-height: 1.5rem;
   margin-left: 1rem;
-  position: relative;
-}
-.compoWrapper .accWrap table tbody td ul li::before {
-  content: "";
-  width: 2px;
-  height: 2px;
-  background: #c8c8c8;
-  border-radius: 50%;
-  position: absolute;
-  top: calc(50% - 2px);
-  left: -10px;
 }
 .compoWrapper .accWrap table tbody td ul + p {
   margin-top: 0.625rem;

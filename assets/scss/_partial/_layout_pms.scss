@@ -1,9 +1,9 @@
-.wrapper{
-    width: 100%;    
+.wrapper{  
     &.login{
         background: $loginBg_pms;
         .loginTop{           
             min-height: 80vh;
+            align-items: center;
             .loginBox{
                 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.125);
                 position: relative;
@@ -12,7 +12,7 @@
         } 
         footer{
             margin-top: -20vh;
-            padding-top: 120px;
+            padding-top: rem(120);
             height: 40vh;
             background-image: url(../img/pms/bgLogin.png);
             p{
@@ -23,19 +23,12 @@
                 }
             }
         }
-    } 
-    &.center{
-        height: 100vh;
-        @include heightArray;
-        background-color: $bgColor;
     }
 }
 
 
 .contWrapper{
     padding-right: 0;  // 우측패널 삭제  rem(52) -> 0
-    .contLayout{
-    }
 } 
 
 // GNB 클릭, 마우스오버 이벤트
@@ -49,30 +42,12 @@
             > ul{
                 > li{                    
                     &::before{
-                        background:gray;
+                        background:$navArrow_pms;
                     }
                     &::after{
-                        background: gray;
+                        background: $navArrow_pms;
                     }   
                 }
-            }
-            li{
-                ul{
-                    &.is-active{
-                        // display: block;
-                        opacity: 1;
-                        height: 100%;
-                    }
-                }
-            }
-            .menuTxt{
-                transition: all .2s;
-                display: inline-block;
-            }      
-            .depth2{
-                text-indent: 0;
-                transition: all .2s;                
-                opacity: 1;
             }
         }
     }    
