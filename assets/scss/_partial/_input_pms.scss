@@ -1,0 +1,793 @@
+.inputList{
+    li{
+        // margin-bottom: rem(30);
+    }
+}
+
+
+label{
+    // font-weight: 500;
+    &.need{
+        padding-right: rem(10);
+        position: relative;
+        &::after{
+            content:'*';
+        }
+    }    
+    &.disabled{
+        color: $titleGray !important;
+        pointer-events: none;
+        background: $inputDisable !important;
+    }
+    // & + input[type=text].full,
+    // & + input[type=password].full{
+    //     margin-top: rem(6);
+    // }
+}
+
+input[type=text],
+input[type=password],
+textarea{
+    font-size: rem(14);
+    padding: rem(16);
+    border-radius: rem(4);
+    border:1px solid $inputGray;   
+    resize: none; 
+    cursor: pointer;
+    &:focus{        
+        outline: 1px solid $mainColor;
+    }
+}
+
+/* INPUT */
+input[type=text],
+input[type=password]{
+    height: rem(44);
+    padding: 0 rem(10);
+    &.full{
+        width: 100%;
+    }
+    &.lowType{
+        height: rem(30);
+    }
+    &::placeholder{
+        color: $placeholder;
+        font-size: rem(16);
+    }
+}
+/* INPUT 좌우아이콘 */
+.inputIco{
+    position: relative;
+    input[type=text],
+    input[type=password]{
+        width: 100%;
+        background: white; //신규추가
+    }
+    .ico{
+        position: absolute;
+        top: 50%;
+        right:rem(7);
+        transform: translateY(-50%);
+        &.is-active{
+            width: 10px;    //임시
+        }
+        + input{
+            padding-left: rem(34);
+        }
+    }
+    i.ico{
+        left:rem(14);
+    }
+    & + .button,
+    & + button{
+        line-height: rem(49);
+        margin-left: rem(4);
+    }
+}
+
+/* INPUT + 버튼 */
+.hasBtn{
+    display: flex;
+    align-items: center;
+    &.full{
+        width: 100%;
+        input{
+            width: 100%;
+        }
+    }
+    input{
+        // height: rem(50);
+        padding-left: rem(7);
+        & + button{
+            margin-left: rem(7);
+        }
+    }
+    .button,
+    button{
+        line-height: rem(42);
+        & + input{
+            margin-left: rem(7);
+        }
+        & + .inputIco{
+            margin-left: rem(7);
+        }
+    }
+    .inputIco{
+        display: inline-block;
+    }
+}
+
+/* 파일첨부 */
+.inputFile{
+    border:1px solid $gray;
+}
+
+.inputList{
+    & + .inputList,
+    & + button{
+        margin-top: rem(10);
+    }
+    > ul{
+    // .grid{
+        > li{ 
+            margin-bottom: rem(20);
+            position: relative;
+            // > label{
+            //     margin-bottom: rem(10);    
+            // }
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+        &.grid{
+            li{
+                // margin-bottom: 0;
+                &.full{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .h3_sub{
+        margin-bottom: 10px;
+    }
+    h6,
+    label{
+        display: block;
+        font-weight: 500;  
+        font-size: rem(15); //0913 J추가
+        //padding-bottom: rem(5); //0913 J추가
+        &.need{
+            position: relative;
+            &::after{
+                content:'*';
+                margin-left: rem(4);
+            }
+        }
+    }
+    &.column{
+        &.half{
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: rem(40);
+                row-gap: 20px;
+                .full{
+                    grid-column: 1 / 3;
+                }
+                ul{
+                    column-gap: rem(20);
+                }
+            }
+        }
+        &.row{
+            display: grid;
+            gap: rem(20);
+            ul{            
+                display: flex;
+                column-gap: rem(20);
+                //3*2일 때 우측
+                &.row{
+                    column-gap: rem(6);
+                    grid-column: 3 / span 1;
+                    grid-row: 1 / span 2;
+                }
+                //2*2일 때 우측
+                &.row2{
+                    grid-column: 2 / span 1;
+                    grid-row: 1/span 2;
+                }
+                //2*3일 때 우측하단
+                &.row3{
+                    grid-column: 2 / span 1;
+                    grid-row: 3/span 2;
+                }
+                &.gap20{
+                    column-gap: rem(20);
+                    align-items: center;    //근무환경 정렬
+                }
+            }
+            textarea{
+                // height: calc(100% - 7px);
+                height: calc(100% - 28px);  //프로젝트 등록
+            }
+            // .onlyIco{
+            //     width: rem(32);
+            //     height: rem(32);
+            // }
+        }
+        li{
+            margin-bottom: 0;
+        }
+    }  
+    &.flex{
+        ul{
+            flex-grow: 1;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            // margin-bottom: rem(10);
+            margin-bottom: rem(16);
+            gap: rem(10);
+            h6,
+            label{
+                min-width: rem(120);
+                text-align: left;
+                & + input,
+                & + select,
+                & + .select{
+                    margin-top: 0;
+                }
+            }
+            input{
+                margin-top: 0;
+            }
+            &.flexStr{
+                align-items: start;
+            }
+        }
+        
+        .listBox{
+            text-align: left;
+            label{
+                min-width: auto;
+                margin: 0 rem(5) rem(10) rem(5);
+            }
+            .gnb{
+                margin-left: rem(4);
+            }
+        }
+    }  
+    .hasBtn{
+        button{
+            background: $searchbtnGray;
+            border: 1px solid $searchbtnGray;
+        }
+    }
+    .block{
+        li{
+            margin-bottom: rem(6);
+            display: flex;
+            align-items: center;
+        }
+    }
+    input[type=text]{
+        &.dateType{
+            width: 100%;
+        }
+    }
+}
+
+/* 공통 */
+table th label{
+     font-weight: 500;
+}
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=month],
+input[type=date]{
+    font-size: rem(14);
+    //width: rem(140);
+    padding: rem(8) rem(10);
+    border-radius: rem(4);
+    border:1px solid $inputGray;   
+    &::placeholder{
+        color: $placeholder;
+        font-size: rem(14);
+    }
+    &:read-only{
+        color: $subGray;
+        background: $bgColor;
+        &:focus{        
+            border: 1px solid $inputGray;
+            outline: 0;
+        } 
+    }
+    &:disabled{
+        // color: $inputGray;
+        // //pointer-events: none;
+        // background: transparent;
+        color: $titleGray;
+        background:$inputDisable;
+        &::placeholder{
+            color: $inputGray;
+        }
+    }
+    &:focus{        
+        outline: 1px solid $mainColor;
+    }
+    &.need{
+        border: 1px solid $error; 
+        &:focus{        
+            border:0;
+            outline: 1px solid $mainColor;
+        } 
+    }
+    &.xxsSize{
+        width: rem(40);
+        height: rem(32);
+        padding: rem(8);
+    }
+    &.xsSize{
+        width: rem(60);
+        height: rem(36);
+    }
+    &.smSize{
+        width: rem(70);
+    }
+    &.sm-midSize{
+        width: rem(140);
+    }
+    &.lowSize{
+        height: rem(32);
+    }
+    &.midSize{
+        width: rem(100);
+    }
+    &.mid-laSize{
+        width: rem(140);
+        &.low{
+            height: rem(36);
+        }
+    }
+    &.laSize{
+        width: rem(360);
+    }
+    &.wideSize{
+        width: rem(440);
+    }
+    &.xlSize{
+        width: rem(500);
+    }
+    &.full{
+        width: 100%;
+    }
+    &.editType{
+        width: 100%;
+        height: rem(36);
+        padding: rem(8) 0;
+        padding-left: rem(4);
+        border:0;
+        color: $tableGray;
+        &:focus{
+            color: $black;
+            background: $white;
+        }
+        &::placeholder{
+            color: $cancel;
+        }
+        &.hasDatepicker{
+            border:1px solid $inputGray;  
+            &:read-only{
+                color: $subGray;
+                background: $white;
+                &:focus{        
+                    border: 1px solid $inputGray;
+                    outline: 0;
+                } 
+            }
+        }
+        &.xsSize{
+            width: rem(60);
+            height: rem(40);
+        }
+        &.xxsSize{
+            padding-left: 0;
+        }
+    }
+    & + .btnType{
+        margin-left: rem(10);
+    }
+}
+
+input[type=hidden]{
+    & + .btnType{
+        margin-left: rem(10);
+    }
+}
+
+input[type=text]{    
+    // &.midSize{
+    //     width: rem(300);
+    // }
+    &.dateType{
+        padding: rem(10) rem(10);
+        padding-right: rem(30);
+        width: rem(140);    
+        background: url(../img/icoCal.png) right 10px top 50% no-repeat;
+        background-color: $white;
+        &.editType{
+            width: rem(76);
+            height: rem(36);
+            padding: rem(8) 0;
+            padding-left: rem(4);
+            border:0;
+            color: $black;
+            background: none;
+            &:focus{
+                color: $black;
+                outline:0;
+                background: $white;
+            }
+            &::placeholder{
+                color: $cancel;
+            }
+        }
+        &.full,
+        &.fullSize{
+            width: 100%;
+        }
+        &.mid-lowSize{
+            width: rem(115);
+            height: rem(32);
+            height: rem(36);
+        }
+        &.laSize{
+            width: rem(160);
+        }
+        &.onGoing{
+            border: 1px solid $onGoing;
+            &:focus{        
+                // border:0;
+                //outline: 1px solid $mainColor;
+                border: 1px solid $onGoing;
+            } 
+        }
+        &.noBg{
+            padding-right: rem(10);
+            text-align: center;
+            background: none;
+        }
+        &.disabled,
+        &:disabled{
+            color: $titleGray;
+            background: url(../img/icoCal_dis.png) right 10px top 50% no-repeat;
+            background-color:$inputDisable;
+        }
+    }
+}
+
+input[type=number]{
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+input[type=month],
+input[type=date]{
+    position: relative;
+    padding: rem(10) rem(10);
+    width: rem(140);    
+    &.editType{
+        width: 84%;
+        border:0;
+        &:focus{        
+            outline: 0;
+        }
+        &::after{
+            right:-20px;
+        }
+    }
+    &.smSize{
+        width: rem(115);
+        padding: rem(7);
+        &::after{
+            right: rem(8);
+        }
+    }
+    &::-webkit-calendar-picker-indicator {
+        background: transparent;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+    &::after{
+        content:'';
+        width: rem(18);
+        height: rem(18);
+        position: absolute;
+        top: 50%;
+        right: rem(10);
+        transform: translateY(-50%);
+        background: url(../img/icoCal.png) no-repeat;
+    }
+}
+
+/* 파일첨부 */
+input[type=file] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+}
+
+//칩타입, 파일업로드
+.inputGroup {
+    min-width: rem(350);
+    min-height: rem(44);
+    max-height: rem(100);
+    overflow-y: auto;
+    padding: rem(5) rem(6);
+    // margin-top: rem(10);
+    border-radius: rem(5);
+    border:1px solid $layoutColor;
+    position: relative;
+    label{
+        color: $placeholder;
+        font-weight: 400;
+        line-height: rem(32);
+        font-size: rem(14);
+    }
+    input{
+        margin-top: 0;
+    }
+    &.need{
+        border: 1px solid $error;
+    }
+    &.laSize{
+        width: rem(500);
+    }
+    &.fullSize{
+        width: 100%;
+    }    
+    &.nobd{
+        border:0;
+        padding: 0;
+    }
+
+    .optionList {
+        display: none !important;
+        max-height: rem(220);
+        overflow-y: auto;
+        position: absolute; 
+        top: rem(50);
+        left: -1px;
+        width: calc(100% + 2px);
+        color: $subInfo;
+        padding: 0;
+        border-radius: rem(4);
+        border:1px solid $selOptList;
+        background: $white;
+        z-index: 10;
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-clip: padding-box;
+          border: 2px solid transparent;
+        }
+        .optionItem {
+          display: block;
+          padding: rem(8) rem(10);
+          margin: 0;      
+          &:hover {
+            color: $black;
+            font-weight: 500;
+            background: $selHover;
+          }
+          label{
+            display: block;
+            font-weight: 400;
+            vertical-align: middle;
+          }
+          p{
+            font-size: rem(12);
+            line-height: rem(14);
+          }
+        }
+        &.is-active{
+            display: block !important;
+        }
+    }
+
+    //파일업로드
+    &.upload{
+        // margin-top: 10px;
+        display: inline-block;
+        // width: calc(100% - 132px);
+        padding: 10px 20px;
+        width: 100%;
+        height: auto;
+        max-height: fit-content;
+        overflow-y: inherit;
+        // line-height: rem(32);
+        font-size: rem(14);
+        vertical-align: bottom;
+        &.laSize{
+            // padding: rem(18) rem(50);
+            // padding: rem(26) rem(50);
+            padding: rem(26) rem(40);
+            width: rem(400);
+        }
+        &.wide{
+            padding: rem(18) rem(30);
+            width: rem(500);
+        }
+        label{
+            line-height: rem(20);
+            margin-left: rem(20);
+        }
+        .drop{
+            color: $placeholder;
+            display: flex;
+            font-size: rem(14);
+            align-items: center;
+            // & + .list{
+            //     // margin-top: rem(10);
+            // }
+        }
+        .list{
+            .list_ul{
+                display: block;
+                li{
+                    margin-top: 10px;
+                    @include sideArray;
+                    padding: 0 rem(4);
+                    border-radius: rem(4);                   
+                    &:hover{
+                        background: $selHover;
+                    }
+                    .delete{
+                        margin-left: rem(10);
+                    }
+                }
+            }
+        }
+        .fileName{
+            display: inline-block;
+            // margin-left: rem(10);
+            // vertical-align: text-bottom;
+            @include ellipsis;
+            cursor: initial;
+            width: 70%;
+        }
+        .volume,
+        .float_r{
+            color: $subGray;
+        }
+    }
+    &.wide{
+        width: rem(600);
+        // margin-top: rem(20);
+        padding: rem(18) rem(110);
+    }
+    & + label{
+        min-width: rem(90);
+        margin-left: rem(7);
+        line-height: rem(44);
+        padding: 0 rem(15);
+        display: inline-block;
+        
+        font-weight: 700;
+        text-align: center;
+        border-radius: rem(6);
+
+        // color: $white;
+        // background-color: $mainColor;
+        //디자인 수정
+        font-size: rem(16);
+        color: $mainColor;
+        border: 1px solid $mainColor;
+        cursor: pointer;
+    }
+    // span{
+    //     font-size: rem(13);
+    // }
+}
+
+.uploadBox{
+    display: flex;
+    align-items: flex-end;
+    //margin-top: rem(10); //0913 J삭제(중복)
+}
+
+
+  
+
+
+/* 칩타입 */
+.inputObj{
+    display: inline-block;
+    // padding: rem(2) rem(10);
+    padding: rem(1) rem(6);
+    color: $white;
+    line-height: rem(22);
+    // vertical-align: top;
+    margin: rem(2);
+    background: $subGray;
+    border-radius: rem(5);
+    position: relative;
+    &.is-active{
+        background: transparent;
+        padding: rem(2);
+    }
+    input[type=text]{
+        width: rem(150);
+        height: rem(23);
+        padding: 0 rem(4);
+        border:0;
+    }
+    .ico{
+        margin-left: rem(5);
+    }
+    span{
+        font-size: rem(13);
+        line-height: rem(22);
+    }
+}
+
+//이력서 첨부파일
+.portfolio{
+    padding: rem(15);
+    border-radius: 6px;
+    background: rgba($white, 0.5);
+    a{
+        display: block;
+        & + a{
+            margin-top: 10px;
+        }
+        img{
+            vertical-align: -3px;
+            margin-right: rem(4);
+        }
+        span{
+            display: block;
+            //margin-top: rem(10);
+            // padding: rem(15) rem(10);
+            // background: $white;
+            border-radius: rem(5);
+            @include ellipsis;
+            width: 100%;
+        }
+    }  
+}
+
+
+
+
+// input[type=date]{
+//     &.test{
+//         &::before{
+//             content: attr(date-placeholder);
+//             width: 100%;
+//             color:red;
+//         }
+//         &:focus,
+//         &:valid{
+//             &::before{
+//                 display: none;
+//             }
+//         }
+//     }
+// }
+
+

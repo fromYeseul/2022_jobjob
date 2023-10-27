@@ -636,19 +636,24 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
 }
 .wrapper.login {
-  padding-top: 9.5625rem;
+  min-height: 400px;
+  overflow-y: auto;
   background: -webkit-linear-gradient(left, #0460d2, #1983cb, #47b892);
   background: -moz-linear-gradient(left, #0460d2, #1983cb, #47b892);
   background: -o-linear-gradient(left, #0460d2, #1983cb, #47b892);
   background: linear-gradient(left, #0460d2, #1983cb, #47b892);
-}
-.wrapper.login .login {
   text-align: center;
 }
+.wrapper.login .loginTop {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .wrapper.login footer {
-  margin-top: 8.125rem;
   padding-top: 2.5rem;
   padding-bottom: 6.25rem;
+  height: 25vh;
   background: #f2f2f7;
 }
 .wrapper.center {
@@ -2544,7 +2549,7 @@ footer.toast button + button {
   padding-top: 0.625rem;
 }
 .quickView .tabBtnWrap li {
-  min-width: 30%;
+  min-width: 50%;
 }
 .quickView .tabBtnWrap li a {
   display: block;
@@ -3112,9 +3117,13 @@ table.chkType tr th span.is-active::after {
 table.chkType thead {
   height: 3.3125rem;
 }
-table.chkType .tooltip {
-  top: auto;
-  bottom: 70%;
+table.chkType .hasTooltip .left {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 0;
+}
+table.chkType .hasTooltip:hover .tooltip {
+  display: block;
 }
 table.chkType.hasInput tr td {
   padding: 0.375rem 0;
@@ -7842,7 +7851,7 @@ h6 + .h6_sub {
   white-space: nowrap;
   text-align: left;
   width: auto;
-  max-width: 90%;
+  max-width: 89%;
 }
 .notiBox .prefix .selectBox,
 .projBox .prefix .selectBox {
@@ -8480,6 +8489,10 @@ h6 + .h6_sub {
 }
 .accInner.infoType .innerList .projObj {
   gap: 4px;
+}
+.accInner.infoType .innerList .projObj .round {
+  width: 3.875rem;
+  color: #a6a6b6;
 }
 .accInner.infoType .innerList .projManager {
   width: 90%;
@@ -10387,7 +10400,7 @@ h6 + .h6_sub {
 .talentedSearch .hasTooltip .tooltip {
   top: 50%;
   transform: translate(-50%, -50%);
-  left: 8%;
+  left: 0;
 }
 .talentedSearch .hasTooltip:hover .tooltip {
   display: block;

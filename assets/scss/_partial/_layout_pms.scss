@@ -2,15 +2,18 @@
     width: 100%;    
     &.login{
         background: $loginBg_pms;
-        .loginBox{
-            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.125);
-            position: relative;
-            z-index: 1;
-        }   
+        .loginTop{           
+            min-height: 80vh;
+            .loginBox{
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.125);
+                position: relative;
+                z-index: 1;
+            }   
+        } 
         footer{
-            margin-top: -80px;
-            padding-top: rem(140);
-            padding-bottom: rem(150);
+            margin-top: -20vh;
+            padding-top: 120px;
+            height: 40vh;
             background-image: url(../img/pms/bgLogin.png);
             p{
                 color: $loginFooter_pms;

@@ -1,0 +1,24 @@
+button, 
+.button{
+    border:1px solid $mainColor;
+    background-color: $mainColor;
+    
+    &.bdType{
+        color: $mainColor;
+        border: 1px solid $mainColor;
+    }
+    &.rBdType{
+        color: $error;
+        background-color: $white;
+        border: 1px solid $error;
+        &:disabled,
+        &.disabled{
+            opacity: 0.5;
+        }
+    }
+
+    //bg상태버튼
+    &.save{
+        background: $mainColor;
+    }
+}
