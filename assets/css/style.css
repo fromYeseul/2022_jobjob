@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .sChecking {
-  color: #ef9914;
+  color: #009ce0;
 }
 
 .eHigh {
@@ -2511,6 +2511,7 @@ footer.toast button + button {
   box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
   border-left: 1px solid #cccccc;
   transition: all 0.3s;
+  z-index: 10;
 }
 .quickView.fixedHeight.is-active {
   width: 20.625rem;
@@ -4018,16 +4019,18 @@ button.cancel,
 }
 button.checking,
 .button.checking {
+  color: #009ce0;
+  border-color: #009ce0;
+}
+button.improve,
+.button.improve {
   color: #ef9914;
   border-color: #ef9914;
 }
-button.short,
-.button.short {
-  color: #ff1236;
-  border-color: #ff1236;
-}
-button.reject,
-.button.reject {
+button.short, button.reject, button.decide,
+.button.short,
+.button.reject,
+.button.decide {
   color: #ff1236;
   border-color: #ff1236;
 }
@@ -4497,6 +4500,14 @@ input[type=month].midSize,
 input[type=date].midSize {
   width: 6.25rem;
 }
+input[type=text].mid-lowSize,
+input[type=number].mid-lowSize,
+input[type=password].mid-lowSize,
+input[type=month].mid-lowSize,
+input[type=date].mid-lowSize {
+  width: 7.1875rem;
+  height: 2.25rem;
+}
 input[type=text].mid-laSize,
 input[type=number].mid-laSize,
 input[type=password].mid-laSize,
@@ -4645,7 +4656,6 @@ input[type=text].dateType.full, input[type=text].dateType.fullSize {
 }
 input[type=text].dateType.mid-lowSize {
   width: 7.1875rem;
-  height: 2rem;
   height: 2.25rem;
 }
 input[type=text].dateType.laSize {
@@ -7400,20 +7410,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   font-size: 1rem;
   color: #8f8f8f;
 }
-.boxList.flexType .center .head .is-deadline {
-  position: relative;
-  z-index: 0;
-}
-.boxList.flexType .center .head .is-deadline::after {
-  content: "";
-  width: 100%;
-  height: 8px;
-  background: #c4ddf4;
-  position: absolute;
-  left: 0;
-  bottom: 3px;
-  z-index: -1;
-}
 .boxList.flexType .center .cont {
   margin-top: 0;
 }
@@ -8159,7 +8155,7 @@ h6 + .h6_sub {
   width: 70%;
 }
 .projRegister .regiPartWrapper {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 160px);
 }
 .projRegister .hasTooltip .tooltip.line1 {
   top: 20px;
@@ -9299,6 +9295,11 @@ h6 + .h6_sub {
   color: #8f8f8f;
 }
 .resume > .prefix .top + .mid {
+  margin-top: 1.875rem;
+  padding-top: 1.875rem;
+  border-top: 1px solid #a6a6b6;
+}
+.resume > .prefix .signalBox.none + .mid {
   margin-top: 1.875rem;
   padding-top: 1.875rem;
   border-top: 1px solid #a6a6b6;

@@ -49,10 +49,10 @@
 }
 
 .sClear {
-  color: #205391;
+  color: #0460d2;
 }
 .sClear .dot {
-  background: #205391;
+  background: #0460d2;
 }
 
 .sOrder {
@@ -119,7 +119,7 @@
 }
 
 .mainC {
-  color: #205391;
+  color: #0460d2;
 }
 
 .subInfo {
@@ -137,7 +137,7 @@
 }
 
 .emp {
-  color: #205391;
+  color: #0460d2;
 }
 
 .dark {
@@ -567,7 +567,7 @@
   font-weight: 500;
 }
 .gnbWrapper .navWrapper > ul > li.is-active > a::before {
-  background: #205391;
+  background: #2a55aa;
 }
 .gnbWrapper .navWrapper > ul > li li.is-active {
   font-weight: 500;
@@ -686,29 +686,15 @@ header .suffix li a {
   background-position: -90px -150px;
 }
 
-.pms button {
-  background: #205391;
-  border: 1px solid #2a55aa;
-}
-
-h1 {
-  color: #000000;
-}
-
-.h1_sub {
-  color: #58585a;
-  font-weight: 700;
-}
-
 button,
 .button {
-  border: 1px solid #205391;
-  background-color: #205391;
+  border: 1px solid #2a55aa;
+  background-color: #2a55aa;
 }
 button.bdType,
 .button.bdType {
-  color: #205391;
-  border: 1px solid #205391;
+  color: #3a6ccf;
+  border: 1px solid #3a6ccf;
 }
 button.rBdType,
 .button.rBdType {
@@ -723,14 +709,90 @@ button.rBdType:disabled, button.rBdType.disabled,
 }
 button.save,
 .button.save {
-  background: #205391;
+  background: #0460d2;
 }
 
+h1 {
+  color: #000000;
+}
+
+.h1_sub {
+  color: #58585a;
+  font-weight: 700;
+}
+
+.commentBox .writer {
+  width: 100px;
+  text-align: center;
+}
+.commentBox .writer.self {
+  color: #5aa2ef;
+}
+.commentBox .comment {
+  max-width: 980px;
+  flex-grow: 2;
+}
+
+.commentInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 1.875rem;
+  position: relative;
+}
+.commentInput::after {
+  content: "";
+  width: calc(100% + 187px);
+  height: 1px;
+  background: #cccccc;
+  position: absolute;
+  bottom: 0;
+  left: -25px;
+}
+
+.commentList li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  min-height: 2.75rem;
+}
+.commentList .comment {
+  position: relative;
+}
+.commentList .comment input {
+  padding-right: 50px;
+}
+.commentList .comment input:read-only {
+  background: #fff;
+}
+.commentList .comment .rightBtn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.commentList .date {
+  color: #aaa;
+  font-size: 14px;
+}
+
+table tbody tr:hover {
+  background: #e2eaf5;
+}
+table tbody tr th {
+  background: #f5f5f5;
+}
 table tr th {
   background: #8c98a6;
 }
 table a {
-  color: #2263b3;
+  color: #2a73cb;
+}
+table tfoot td {
+  background: #eee;
 }
 
 .clientBuy .tableTop {
@@ -893,7 +955,7 @@ table a {
   color: #ff1236;
 }
 .bizStateRegister h4 {
-  color: #205391;
+  color: #2a55aa;
 }
 .bizStateRegister h4 + .tableTop {
   margin-top: 30px;
@@ -923,8 +985,8 @@ table a {
   top: 150%;
 }
 .bizStateRegister button.smSize, .bizStateRegister button.midSize, .bizStateRegister button.save {
-  background: #205391;
-  border: 1px solid #205391;
+  background: #2a55aa;
+  border: 1px solid #2a55aa;
 }
 .bizStateRegister button.white {
   background: #fff;

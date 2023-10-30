@@ -1,4 +1,14 @@
 table{
+    tbody{ 
+        tr{
+            &:hover{
+                background: $tableHover;
+            }   
+            th{
+                background: $bodyTh_pms;
+            }
+        }
+    }
     tr{
         th{
             background: $gnbGray;        
@@ -6,5 +16,10 @@ table{
     }
     a{
         color: $a_pms;
+    }
+    tfoot{
+        td{
+            background: $tfoot_pms;
+        }
     }
 }

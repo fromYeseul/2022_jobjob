@@ -1,0 +1,61 @@
+
+.commentBox{
+    .writer{
+        width: 100px;
+        text-align: center;
+        &.self{
+            color: $highlight_pms;
+        }
+    }
+    .comment{
+        max-width: 980px;
+        flex-grow: 2;
+    }
+}
+
+.commentInput{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding-bottom: rem(30);
+    position: relative;
+    &::after{
+        content:'';
+        width: calc(100% + 187px);
+        height: 1px;
+        background: $layoutColor;
+        position: absolute;
+        bottom: 0;
+        left: -25px;
+    }
+}
+.commentList{
+    li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:10px;
+        margin-top: 10px;
+        min-height: rem(44);
+    }
+    .comment{
+        position: relative;
+        input{
+            padding-right: 50px;
+            &:read-only{
+                background: $white;
+            }
+        }
+        .rightBtn{
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+    }
+    .date{
+        color:$boxHead;
+        font-size: 14px;
+    }
+}
