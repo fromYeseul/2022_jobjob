@@ -5,6 +5,20 @@ $bgColor : #f2f2f7;
 $layoutColor : #cccccc;
 //$layoutColor : #ff0000;
 
+$gradiTop: $mainColor;
+$gradiMid: #1983cb;
+$gradiBom: #47b892;
+
+
+$gradient: $gradiTop, $gradiMid, $gradiBom; 
+@mixin gradient($direction, $gradient) { 
+    background: -webkit-linear-gradient($direction, $gradient);
+    background: -moz-linear-gradient($direction, $gradient);
+    background: -o-linear-gradient($direction, $gradient);
+    background: linear-gradient($direction, $gradient);  
+}
+
+
 //상태컬러
 $error : #ff1236;
 $disable : #666666;
@@ -13,7 +27,9 @@ $subInfo : #444;
 
 $highlight : #009ce0;
 $onGoing : #ffc812;
-$checking : #ef9914;
+$checking : #009ce0;
+$improve : #ef9914;
+$decide : $error;
 $cancel : #a6a6b6;
 $delay : $error;
 $safe : #08c97c;
@@ -69,6 +85,8 @@ $tFootSort: #c1c3c5;
 $tabGray : $layoutColor;
 
 $btnGray : #8a8a8c;
+$btnBdGray : $btnGray;
+$btnBgGray : #929295;
 $turnKey : $activeGray;
 
 $filterBg : #f3f8fb;
@@ -90,7 +108,7 @@ $tooltipGray : #58585e;
 $scrollTrack : $bgColor;
 $scrollThumb : $layoutColor;
 
-$footerGray : $titleGray;
+$footerGray : #ababba;
 
 
 
@@ -99,6 +117,7 @@ $fileGray : #888888;
 $filePopSub : #979797;
 
 $offerBg : $fileBg;
+$signalBox: #d3d7de;
 
 
 
@@ -122,8 +141,20 @@ $copyRight : #9c9b9b;
 
 //---------pms--------//
 $mainColor_pms : #205391;
+$loginBg_pms : #f8f8f8;
+$loginFooter_pms: #b4bfd2;
+$loginFooter2_pms: #739acb;
+
+$h1Sub_pms : #58585a;
+
 $tab_pms : #2a55aa;
+
 $th_pms : #8c98a6;
+$thSales_pms : #61519f;
+$thBuy_pms : #3e9894;
+$thInner_pms : #5b6f87;
+
+$h5Under_pms: #7a7a7a;
 
 
 

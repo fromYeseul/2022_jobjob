@@ -135,6 +135,9 @@
         &.mid-laSize2{
             width: rem(1200);
             padding: rem(40) rem(30);
+            .modalFooter{
+                max-width: rem(330);
+            }
         }
         &.laSize{
             width: auto;
@@ -752,6 +755,11 @@
         &.mView{           
             width: 410px;
             min-width: 410px;
+            h3{
+                margin-top: 5px;
+                margin-bottom: 20px;
+                text-align: left;
+            }
         }
     }
     .modalHeader{
@@ -880,36 +888,38 @@
             transform: initial;
         }        
     }
-    .tooltip{
-        text-align: left;
-        width: 390px;
-        left: -380px;
-        top: 50%;
-        bottom: auto;
-        transform: translate(0, -50%);
-        .yScroll{
-            padding-top: 0;
-            height: auto;
-            max-height: rem(90);
-            overflow: auto;
-            &::-webkit-scrollbar {
-                width: 2px;
-            }
-            &::-webkit-scrollbar-track {
-                background-color: $subInfo;
-            }
-            &::-webkit-scrollbar-thumb {
-                background-color: $disable;
-            }
-        }
-        &::after{
+    .tableBox{
+        .tooltip{
+            text-align: left;
+            width: 390px;
+            left: -380px;
             top: 50%;
-            left: 100%;
-            transform: translateY(-50%);
-            // margin-top: -3px;
-            margin-left: 0;
-            border-top-color: transparent;
-            border-left-color: $tooltipGray;
+            bottom: auto;
+            transform: translate(0, -50%);
+            .yScroll{
+                padding-top: 0;
+                height: auto;
+                max-height: rem(90);
+                overflow: auto;
+                &::-webkit-scrollbar {
+                    width: 2px;
+                }
+                &::-webkit-scrollbar-track {
+                    background-color: $subInfo;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: $disable;
+                }
+            }
+            &::after{
+                top: 50%;
+                left: 100%;
+                transform: translateY(-50%);
+                // margin-top: -3px;
+                margin-left: 0;
+                border-top-color: transparent;
+                border-left-color: $tooltipGray;
+            }
         }
     }
     tr{
@@ -969,7 +979,7 @@
 .MmSearch{
     .tableTop{
         margin-top: 20px;
-        text-align: left;
+        // text-align: left;
         li{
             flex: 1 1 0; 
             font-size: rem(14);
@@ -987,6 +997,8 @@
         flex-grow: 1;
     }
     .hasBtn{
+        width: 80%;
+        margin: 0 auto;
         .button,
         button{
             width: rem(44);
@@ -1045,15 +1057,18 @@
 
 //사업현황 등록 - 계약상세
 .contractDetail{
+    .boxWrap{
+        margin-top: 10px;
+    }
     .col7{
         // width: 90%;
         row-gap: rem(20);
         column-gap: rem(50);
         // grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr;
-        grid-template-columns: 60px 110px 80px 120px 100px 130px 110px;
+        grid-template-columns: 95px 100px 80px 120px 100px 130px 140px;
     }
     .cont{
-        height: 60vh;
+        height: 58vh;
         overflow-y: auto;
     }
     .underBg{
@@ -1063,9 +1078,23 @@
         margin-top: rem(15);
         color: $subInfo;
     }
-    .conDTerm,
-    .conDCount{
+    .conSkill{
+        grid-column: 6/8;
+    }
+    .conDTerm{
         grid-column: 3/5;
+    }
+    .conDCount{
+        grid-column: 1/4;
+        &.basic{
+            grid-column: 2/5;
+        }
+    }
+    .conAdmin{
+        grid-column: 6/8;
+        &.basic{
+            grid-column: 7/8;
+        }
     }
     .conDFile{
         grid-column: 1/5;
@@ -1099,35 +1128,53 @@
     } 
 }
 
-//사업현황 등록 - 계약생성
-.contractCreate{
-    .col4{
+//사업현황 등록 - 계약생성, 인력추가
+.contractCreate,
+.mMSupply{
+    h5{
+        color: $beigeTit;
+    }
+    .cont{
+        display: flex;
+        gap: 40px;
+        >.prefix{
+            flex: 3 1 0;
+        }
+        >.suffix{
+            flex: 2 1 0;
+            height: 5px;            
+            .inputList{
+                margin-top: 10px;
+                padding: 20px 15px;
+                border-top: 1px solid $h5Under_pms;
+            }
+        }
+    }
+    .col2{
         row-gap: rem(20);
         column-gap: rem(50);
-        // grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr;
-        grid-template-columns: 3fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     .info{
-        margin-top: rem(15);
+        margin-top: rem(10);
         color: $subInfo;
-
     }
     .tableBox{
-        height: 300px;
+        height: 480px;
         overflow-y: auto;
     }
-    .putMm{
-        grid-row: 1/4;
-    }
-    .conDTerm{
-        grid-column: 2/4;
-    }
-    .dateType{
-        width: rem(120) !important;
-    }
-    .range{
-        margin: 0 10px;
-    }
+    // .putMm{
+    //     grid-row: 1/4;
+    // }
+    // .conDTerm{
+    //     grid-column: 2/4;
+    // }
+    // .dateType{
+    //     width: rem(120) !important;
+    // }
+    // .range{
+    //     margin: 0 10px;
+    // }
 }
 
 #fileList{

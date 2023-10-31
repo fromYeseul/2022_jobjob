@@ -1,55 +1,19 @@
 header{        
     border-bottom: 0;
-    background: $mainColor;
-    .prefix{
-        margin-top: rem(6);
-        flex: 1 1 30%;
-    }
-    .center{
-        flex: 1 1 30%;
-        margin-top: -10px;
-        margin-left: rem(170);
-        text-align: center;
-        a{        
-            padding: rem(5) rem(4);
-            margin: 0 rem(16);
-            font-size: rem(18);
-            font-weight: 700;
-            color: $cancel;
-            &.is-active{
-                color: $mainColor;
-                border-bottom: 4px solid $mainColor;
-            }
-        }
-        &.title{
-            margin-top: 0;
-            margin-left: 0;
-            max-width: rem(800);
-            // flex: 1 1 70%;
-            h3{
-                @include ellipsis;
-                width: 100%;
-                color: $white;
-                font-size: rem(20);
-                text-align: center;
-            }
-        }
-    }
+    background: $header_pms;
     .suffix{
-        flex: 1 1 48%;
-        text-align: right;
         color: $white;
         li{
             &::after{
                 background: $white;
-            }                 
-            a{
-                color: $white;
-            }
+            }   
             &.userTeam{
                 a{
                     color: $headerSub;
                 }
+            }              
+            a{
+                color: $white;
             }
         }   
     }

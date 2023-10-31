@@ -1,17 +1,27 @@
 .wrapper{
     width: 100%;    
-    .login{
-        width: 100%;
-        max-width: rem(1200);
-        margin: auto;
-        //height:100vh;
-        padding: rem(50) 0;
-        background-color: $bgColor;
-    }    
+    &.login{
+        // padding-top: rem(153);
+        min-height: rem(400);
+        overflow-y: auto;
+        @include gradient(left, $gradient);
+        text-align: center;
+        .loginTop{           
+            min-height: 78vh;
+            @include heightArray;
+        }   
+        footer{
+            // margin-top: rem(130);
+            padding-top: rem(40);
+            padding-bottom: rem(100);
+            height: 22vh;
+            background: $bgColor;
+        }
+    } 
     &.center{
-        height:100vh;
-        background-color: $bgColor;
+        height: 100vh;
         @include heightArray;
+        background-color: $bgColor;
     }
 }
   
@@ -263,6 +273,7 @@ header{
                             top: 21px;
                             right: 22px;
                             transform: rotate(135deg);
+                            z-index: 1;
                         }
                         &::after{
                             top: 24px;

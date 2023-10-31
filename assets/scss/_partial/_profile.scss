@@ -50,6 +50,8 @@
 
 .phoImg{
     display: inline-block;
+    position: relative;
+    cursor: pointer;
     // margin-right: 0 !important;
     &.is-special{
         .photo{
@@ -75,6 +77,67 @@
             position: absolute;
             right: 0;
             bottom: 2px;
+        }
+    }
+    &.is-signal{
+        &::after{
+            content:'';      
+            width: rem(13);
+            height: rem(13);
+            background-image: url(../img/icoGroup.png);
+            background-position: -180px -220px;
+            position: absolute;
+            right: 0;
+            bottom: -1px;
+        }
+        & + a{
+            color: $black;
+            position: relative;
+            z-index: 0;
+            &::after{
+                content:'';
+                width: 100%;
+                height: 12px;
+                background: $yellowLight;
+                opacity: 0.5;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+        }
+    }
+}
+.boxList,
+.wideType,
+.offeredMem,
+.trgBox{
+    .phoImg{
+        &.is-signal{
+            &::after{           
+                right: -4px;
+                bottom: 2px;
+            }
+        }
+    }
+}
+.offeredMem{
+    .phoImg{
+        &.is-signal{
+            &::after{
+                right: 27px;
+                bottom: 7px;
+            }
+        }
+    }
+}
+.trgBox{
+    .phoImg{
+        &.is-signal{
+            &::after{
+                right: -7px;
+                bottom: -8px;
+            }
         }
     }
 }
@@ -168,6 +231,9 @@
         margin: 0;
         display: flex;
         gap: 26px; //0913 J 40 -> 26변경
+        &.center{
+            margin: 0 auto;
+        }
         .left{
             li{
                 display: block;

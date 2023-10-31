@@ -1,4 +1,5 @@
-.hasTooltip{
+.hasTooltip,
+.is-signal{
     position: relative;
     cursor: pointer;
     .tooltip{
@@ -48,7 +49,8 @@
             width: rem(150);
             top: 0;
             // left: -205px;
-            left: -190px;
+            // left: -190px;
+            left: -165px;
             transform: translateY(-15%);
             text-align: left;
             &::after{
@@ -61,18 +63,23 @@
             }
             &.is-active{
                 display: block;
+                visibility: visible;
             }
             &.line1{
-                top: 5%;
+                // top: 5%;
+                top: 40px;
             }
             &.line2{
-                top: 33%;
+                // top: 33%;
+                top: 140px;
             }
             &.line3{
-                top: 55%;
+                // top: 55%;
+                top: 230px;
             }
             &.line4{
-                top: 78%;
+                // top: 78%;
+                top: 330px;
             }
         }
         &.bottom{
@@ -117,6 +124,78 @@
     &:hover{
         >.tooltip{
             visibility: visible;
+        }
+    }
+}
+
+
+.phoImg{
+    &.is-signal{
+        .tooltip{
+            // visibility: visible;
+            height: auto;
+            max-height: 72px;
+            text-align: left;
+            bottom: auto;
+            &.right{
+                width: 200px;
+                // width: 160px;?
+                right: -210px;
+                transform: translateY(-30%);
+            }
+            &.left{
+                width: 200px;
+                // width: 160px;?
+                right: -210px;
+                top: 50%;
+                bottom: auto;
+                left: -225px;
+                transform: translateY(-65%);
+            }
+        }
+    }    
+}
+.offeredMem{
+    .phoImg{
+        &.is-signal{
+            .tooltip{
+                &.right{
+                    top: 60%;
+                    right: -183px;     
+                    line-height: 18px;           
+                }
+            }
+        }    
+    }
+}
+.trgBox{
+    .phoImg{
+        &.is-signal{
+            .tooltip{
+                &.right{
+                    right: -215px;  
+                    transform: translateY(-50%);    
+                }
+            }
+        }    
+    }
+    &:nth-child(4n){
+        .phoImg{
+            &.is-signal{
+                .tooltip{
+                    &.right{
+                        right: auto;
+                        left: -212px;
+                        &::after{
+                            top: 50%;
+                            left: auto;
+                            right: -12px;
+                            border-left-color: $tooltipGray;
+                            border-right-color: transparent;
+                        }
+                    }
+                }
+            }    
         }
     }
 }

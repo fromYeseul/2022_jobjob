@@ -28,7 +28,7 @@
         }
     }
     &.absolBody{
-        height: calc(100vh - 454px);
+        height: calc(100vh - 410px);
         transition: all .3s;
         &.is-active{
             height: calc(100vh - 230px);
@@ -159,6 +159,7 @@ table{
             }
             &.right{
                 text-align: right;
+                // padding: rem(4) rem(6);
             }
             &.hasToast{
                 position: relative;
@@ -316,9 +317,21 @@ table{
         thead{
             height: rem(53);
         }
-        .tooltip{
-            top: auto;
-            bottom: 70%;
+        // .tooltip{
+        //     top: auto;
+        //     bottom: 70%;
+        // }
+        .hasTooltip{
+            .left{
+                top: 50%;
+                transform: translate(-50%,-50%);
+                left: 0;
+            }
+            &:hover{
+                .tooltip{
+                    display: block;
+                }
+            }
         }
         &.hasInput{
             tr{

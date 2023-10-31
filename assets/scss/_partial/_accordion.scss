@@ -54,6 +54,7 @@
                     width: rem(106);
                     font-size: rem(14);
                     color: $mainColor;
+                    line-height: 1.2;
                 }
             }
         }
@@ -174,6 +175,7 @@
         // max-width: 90%;
         font-weight: 500; //0913 J bold -> 500 수정
         font-size: rem(17);
+        line-height: 1.2;
         cursor: pointer;
             .round{
                 // margin-right: rem(10);
@@ -202,8 +204,8 @@
     gap: 20px;
     padding: rem(12) rem(25);
     .suffix{
-        word-break: keep-all;
-        text-align: right;
+        // word-break: keep-all;
+        // text-align: right;
         color: $accSuffixGray;
         .onlyIco{
             // margin-left: rem(36);
@@ -231,6 +233,10 @@
             }      
             .projObj{
                 gap: 4px;
+                .round{
+                    width: rem(62);
+                    color: $cancel;
+                }
             }
             .projManager{
                 @include ellipsis;
@@ -249,13 +255,6 @@
             }
         }    
     }
-    .chipBox{
-        padding: 0;
-        .chip{
-            height: 26px; 
-            line-height: 21px;
-        }
-    }
 }
 
 .innerList{
@@ -267,7 +266,8 @@
         color: $accPrefixGray;
         .field{
             // margin-right: 10px; //0913 J수정
-            width: rem(106); //0913 J수정
+            // width: rem(106); //0913 J수정
+            width: rem(113);
             font-size: rem(14); //0913 J수정
             color: $mainColor; //0913 J수정
             //font-weight:500; 0913 J추가
@@ -284,6 +284,7 @@
         // width: 84%;
         width: auto;
         max-width: 75%;
+        line-height: 1.2;
     }
     .suffix{
         font-size: rem(14);

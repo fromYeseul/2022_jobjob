@@ -20,18 +20,23 @@
 
 .chipBox{
     text-align: left;
-    padding: 0 rem(40);
+    // padding: 0 rem(40);
     .chip{
         display: inline-block;
         margin: rem(3) rem(8);
         margin-left: 0;
-        font-size: rem(12);
         padding: rem(4) rem(8);
+        height: 26px; 
+        line-height: 21px;
+        font-size: rem(12);
         color: $chipFont; //0913 J 추가
         background: $chipGray;
         border-radius: rem(6);
         &.disabled{
             opacity: .5;
         }
+        // & + .chip{
+        //     margin-left: 8px;
+        // }
     }
 }

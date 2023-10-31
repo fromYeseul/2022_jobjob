@@ -1,151 +1,52 @@
 
 .gnbWrapper{
-    background: $white !important;
+    background: $white;
     border-right: 1px solid $activeGray;
     box-shadow: 1px 3px 3px 0 rgba(150, 150, 150, 0.1);
-    .gnb{
-        padding: rem(20) 0;
-    }  
-    .navCtrlBtn{
-        width: rem(36);
-        height: rem(36);
-        padding: rem(5) rem(8);
-        margin-left: rem(8);
-
-        // border-radius: rem(6);
-        // background: $white;
-        cursor: pointer;
-        position: relative;
-        &::before{
-            //content:'';
-            width: 0;
-            height: rem(40);
-            height: rem(36);
-            background: white;
-            position: absolute;
-            left: -10px;
-            top: 0;
-            transition: all .01s ease;
-        }
-    }    
     .navWrapper{
-        height: calc(100vh - 105px);
-        margin-top: rem(10);
-        //margin-left: rem(3);
-        overflow-y: auto;
         > ul{
-            > li{                               
-                position: relative;
+            > li{                        
                 &.is-active{
                     > a{
-                        color: #123e74;
+                        color: $mainColor_pms;
                         font-weight: 500;
-                        //background: #e2eaf5; rgba(255,255,255,0.1) -> e2eaf5
-                        position: relative;
                         &::before{
-                            content:'';
-                            width: 3px;
-                            height: 100%;
-                            background: #205391;
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                        }
-                        span{
-                            opacity: 1;
+                            background: $mainColor_pms;
                         }
                     }
                 }  
                 li{
-                    &.is-active{
-                        background: rgba(200,200,200,0.1);   //?                     
-                        
+                    &.is-active{                                       
                         font-weight: 500;
-                        span{
-                            opacity: 1;
-                        }
+                        background: rgba(200,200,200,0.1);   //?      
                     }
                 }   
             }
         }
         li{
             a{
-                // display: block;
-                display: flex;
-                padding: rem(10) rem(13);
-                padding-left: rem(15);
-                padding-right: 0;
-                // display: flex;
-                // align-items: center;
-                span{
-                    opacity: .7;
-                }
                 &:hover{
-                    background: #e2eaf5;
-                    
-                    span{
-                        opacity: 1;
-                    }
+                    background: $selHover;   
                 }
             }
             ul{
-                // display: none;
-                opacity: 0;
-                height: 0;
                 &.is-active {
                     background: rgba(100,100,100,0.1); //0,0,0,0.2 -> 100,100,100,0.1 
                 }
                 li{
-                    padding: 0;
-                    font-size: rem(14);
-                    position: relative;
-                    a{
-                        // padding-left: rem(25);
-                        padding-left: rem(34);
-                        position: relative;                        
+                    a{                    
                         &::before{
-                            content:'';
-                            width: rem(4);
-                            height: rem(1);
-                            background: black;
-                            position: absolute;
-                            top: 50%;
-                            left: rem(22);
-                            opacity: 0.5;
+                            background: $black;
                         }
-                        &:hover{
-                            background: rgba(0,0,0,0.1);
-                            span{
-                                opacity: 1;
-                            }                      
-                            &::before{
-                                opacity: 1;
-                            }
-                        }
-                    }
-                    //2depth메뉴 선택시
-                    &.is-active{
-                        background: rgba(0,0,0,0.1);
                     }
                 }
             }
         }
         .menuTxt{
-            display: none;
-            color: black;
-            font-size: rem(15);
-            margin-left: rem(13);
-            vertical-align: middle;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            color: $black;
         }        
         .depth2{
-            // display: none;
             color: $gray;
-            vertical-align: middle;
-            text-indent: -10rem;
-            opacity: 0;
         }
     }
 } 

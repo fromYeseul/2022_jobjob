@@ -9,6 +9,20 @@
         position: absolute;
         bottom: 30px;
     }
+    .chkType{
+        margin-top: 10px;
+        th{
+            height: 40px;
+        }
+        .tabCopy{
+            margin-right: 20px;
+            padding: 8px 30px;
+            font-size: 16px;
+            color: white;
+            background: #0460d2;
+            border-radius: 6px 6px 0 0;
+        }
+    }
     table{
         thead,th{
             height: 40px;
@@ -40,7 +54,7 @@
         .tooltip{
             top: 50%;
             transform: translate(-50%,-50%);
-            left: 8%;
+            left: 0;
         }
         &:hover{
             .tooltip{
@@ -54,20 +68,6 @@
 .searchRequire{
     display: flex;
     gap: 28px;
-    & + .tableBox{
-        margin-top: 10px;
-        th{
-            height: 40px;
-        }
-        .tabCopy{
-            margin-right: 20px;
-            padding: 8px 30px;
-            font-size: 16px;
-            color: white;
-            background: #0460d2;
-            border-radius: 6px 6px 0 0;
-        }
-    }
     >.prefix,
     >.suffix{
         flex: 1 1 50%;
