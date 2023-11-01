@@ -110,7 +110,7 @@
                             
                             <div class="boxWrap hasTooltip">                                
                                 <div class="inputList">   
-                                    <h3>[종료] 대기업 B2B 주문 프로세스 개선 기획자 모집</h3>
+                                    <!-- <h3>[종료] 대기업 B2B 주문 프로세스 개선 기획자 모집</h3> -->
                                     <ul class="grid col6">
                                         <li class="bizProjNm">
                                             <label class="need" for="">프로젝트명</label>
@@ -267,7 +267,7 @@
                                             <div class="flex">
                                                 <ul class="tabBtnWrap autoSize">
                                                     <li class="tabBtn">
-                                                        <a href="#onC-1" class="is-active">전체</a>
+                                                        <a href="#onC-1" class="is-active w65">전체</a>
                                                     </li>
                                                     <li class="tabBtn">
                                                         <a href="#onC-2" class="">비삼성
@@ -296,17 +296,16 @@
                                                     <div class="tableBox">
                                                         <table>
                                                             <colgroup>
+                                                                <col width="10%">
                                                                 <col>
                                                                 <col>
-                                                                <col>
-                                                                <col width="12%">
-                                                                <col width="12%">
-
-                                                                <col>
-                                                                <col>
-                                                                <col>
-                                                                <col>
-                                                                <col>
+                                                                <col width="11%">
+                                                                <col width="11%">
+                                                                <col width="8%">
+                                                                <col width="11%">
+                                                                <col width="9%">
+                                                                <col width="13%">
+                                                                <col width="6%">
                                                             </colgroup>
                                                             <thead>
                                                                 <tr>
@@ -681,7 +680,7 @@
 
                                                                         <!--내부-->
                                                                         <td class="fold">
-                                                                            <select name="" id="">
+                                                                            <select class="xxsSize" name="" id="">
                                                                                 <option value="Y">Y</option>
                                                                                 <option value="N">N</option>
                                                                             </select>
@@ -774,7 +773,7 @@
 
                                                                         <!--내부-->
                                                                         <td class="fold">
-                                                                            <select name="" id="">
+                                                                            <select class="xxsSize" name="" id="">
                                                                                 <option value="Y">Y</option>
                                                                                 <option value="N">N</option>
                                                                             </select>
@@ -829,7 +828,7 @@
                                                                         <td colspan="3" class="hideI"></td>
                                                                         <!--//내부-->
 
-                                                                        <td colspan="2"></td>
+                                                                        <td colspan="3"></td>
                                                                     </tr>
                                                                 </tfoot>
                                                             </table>
@@ -848,9 +847,9 @@
                                     <!--230915 수정-ys -->
                                     <ul class="tabBtnWrap autoSize">
                                         <li class="tabBtn">
-                                            <a href="#onAA2" class="is-active">투입인력</a>
+                                            <a href="#onAA2" class="is-active">투입현황</a>
 
-                                            <button class="white smSize">+ 아래 행추가</button>
+                                            <button class="white smSize">+ 행추가</button>
                                         </li>
                                     </ul>
                                     <!--//230915 수정-ys -->
@@ -988,7 +987,7 @@
 
                                                                 <!--내부-->
                                                                 <td class="fold">
-                                                                    <select name="" id="">
+                                                                    <select class="xxsSize" name="" id="">
                                                                         <option value="Y">Y</option>
                                                                         <option value="N">N</option>
                                                                     </select>
@@ -1081,7 +1080,7 @@
 
                                                                 <!--내부-->
                                                                 <td class="fold">
-                                                                    <select name="" id="">
+                                                                    <select class="xxsSize" name="" id="">
                                                                         <option value="Y">Y</option>
                                                                         <option value="N">N</option>
                                                                     </select>
@@ -1135,7 +1134,7 @@
                                                                 <td colspan="3" class="hideI"></td>
                                                                 <!--//내부-->
 
-                                                                <td colspan="2"></td>
+                                                                <td colspan="3"></td>
                                                             </tr>
                                                         </tfoot>
                                                     </table>
@@ -1832,7 +1831,7 @@
                         <div class="tableTop">
                             <h5 class="underBg">투입인력</h5>
                             <div class="suffix">
-                                <button class="white smSize">+ 인력추가</button>
+                                <button class="white smSize">+ 추가</button>
                                 <button class="white smSize">선택삭제</button>
                             </div>
                         </div>
@@ -3281,7 +3280,7 @@
             if(salesOn === true && buyOn === true && innerOn === true){
                 $(this).parents('.flexLeft .suffix').css('width', "2100px");
             }else if(salesOn !== true && buyOn !== true && innerOn !== true){     
-                $(this).parents('.flexLeft .suffix').css('width', "900px");
+                $(this).parents('.flexLeft .suffix').css('width', "1200px");
             }else if(salesOn === true || buyOn === true || innerOn === true){
                 $(this).parents('.flexLeft .suffix').css('width', "1800px");
             }
@@ -3292,9 +3291,9 @@
             let tabHref = e.target.getAttribute('href');
 
             if(tabHref === '#onA-1'){
-                $(this).parents('.flexLeft .suffix').css('width', "770px");
+                $(this).parents('.flexLeft .suffix').css('width', "767px");
             }else if(tabHref === '#onA-2'){
-                $(this).parents('.flexLeft .suffix').css('width', "900px");
+                $(this).parents('.flexLeft .suffix').css('width', "1200px");
                 $("#onA-2").find('.extend').parent('th').addClass('fold');
                 $("#onA-2").find('.extend').removeClass('is-active');
                 $("#onA-2").find('.fold').removeClass('is-active');

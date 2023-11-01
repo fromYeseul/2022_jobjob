@@ -47,7 +47,7 @@
         background: $tableSort;
         position: absolute;
         top: 0;
-        right: -10px;
+        right: -20px;   // -10 -> -20
     }
 }
 
@@ -81,7 +81,7 @@ table{
         }
     }
     tr{
-        border-bottom: 1px solid $tableBorder;
+        // border-bottom: 1px solid $tableBorder;
         &.bg{
             background: rgba($mainColor, 0.02);
             &.is-active{
@@ -159,6 +159,7 @@ table{
             }
             &.right{
                 text-align: right;
+                padding-right: 10px;
                 // padding: rem(4) rem(6);
             }
             &.hasToast{
@@ -178,6 +179,7 @@ table{
             background: $tableHover;    
         }
         tr{
+            border-bottom: 1px solid $tableBorder; //11.01 tbody > 아래로 이동
             &:hover{
                 background: $tableHover;
             }       

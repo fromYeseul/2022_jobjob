@@ -1,14 +1,14 @@
 .bizStateRegister{
     width: 100%;
     .regiPartWrapper{        
-        padding-left: rem(100);
-        padding-right: rem(100);
+        padding-left: rem(50);
+        padding-right: rem(126);
     }
     .col6{
-        margin-top: rem(30);
+        margin-top: rem(20);
         width: rem(1300);
         column-gap: rem(60);
-        grid-template-columns: 1fr 50px 1.8fr 1fr 1fr 130px;
+        grid-template-columns: 1fr 50px 1.6fr 1fr 1fr 140px;  //1fr 50px 1.8fr 1fr 1fr 130px -> 수정
     }
     .hasBtn{
         input{
@@ -50,7 +50,8 @@
         }
     }
     h4{
-        color: $mainColor_pms;
+        color: $btnBd_pms;
+        font-weight: 500;
         & + .tableTop{
             margin-top: 30px;
         }
@@ -67,6 +68,12 @@
                 }
             }
         }
+        &.flex_1_1,
+            .flex_1_2,
+            .flex_4_3,
+            &.flex_4_3{
+                gap: 40px;
+            }
     }
     .tabWrapper{
         &.mt20{
@@ -102,6 +109,20 @@
     }
 
     //pms
+    input[type=text]{
+        background: white; //11.01추가
+        text-align : right; //11.01추가
+        &.dateType{  
+            &.noBg{
+            padding: rem(2);
+            text-align: center;
+            background: white;
+            }
+
+        }
+    }
+
+     
     button{
         &.smSize,
         &.midSize,
@@ -119,18 +140,18 @@
             a{
                 &.is-active{
                     background-color: $tab_pms;
-                    border: 1px solid $tab_pms;
-                }
+                    border: 1px solid $tab_pms;                    
+                }            
             }
         }
     }
     table{
         tr{
             th{
-                height: rem(26);
-                &.sales{background: $thSales_pms;}
-                &.buy{background: $thBuy_pms;}
-                &.inner{background: $thInner_pms;}
+                //height: rem(26); 11.01삭제
+                &.sales{background: $thSales_pms; border: 0 !important;} //11.1 border: 0추가
+                &.buy{background: $thBuy_pms; border: 0 !important;}
+                &.inner{background: $thInner_pms; border: 0 !important;}
                 .ico{
                     margin-left: 3px;
                 }
@@ -140,6 +161,7 @@
                     height: rem(20);
                     &.sales,&.buy,&.inner{
                         opacity: 0.7;
+                        border: 0;  //11.1 border: 0추가
                     }
                 }                
             }
@@ -152,7 +174,7 @@
 .flexLeft{
     padding-bottom: rem(10);
     display: flex;
-    gap: 20px;
+    gap: 40px;  // 20 -> 40
     // flex-wrap: nowrap;
     overflow-x: auto;
     &::-webkit-scrollbar-track {
@@ -160,13 +182,13 @@
     }
     >.prefix{
         flex-shrink: 0;
-        width: 820px;
+        width: 783px; //820 -> 783
         th{
             height: rem(51);
         }
     }
     >.suffix{
-        width: 900px;
+        width: 1200px;  // 900 -> 1200
         flex: 0 0 auto;
         // flex-grow: 1;
         // overflow-x: hidden;
@@ -183,7 +205,8 @@
         th,
         td{
             &.fold{
-                border-left: 1px solid #b2b4b7;
+                height: rem(26); //추가
+                border-left: 1px solid #ddd; //b2b4b7 -> ddd
                 &.is-active{
                     border-left: 0;
                 }
@@ -200,7 +223,11 @@
 .flexTable{
     width: 100%;
     overflow-x: auto;
-    // .suffix{
+    .flexLeft{
+        .suffix{
+        width: 1201px;   //상하정렬시 추가 10.31
+        }
+    }
         
     // }
 }
