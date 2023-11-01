@@ -26,48 +26,57 @@ h1{
         left: -40px;
         bottom: 0;
     }
-    .breadCrumb{
-        font-size: rem(20);
-        font-weight: 700;
-        .flex{
-            align-items: center;
+    //사업현황 등록
+    .suffix{
+        display: flex;
+        button{
+            width: rem(120);
+            line-height: rem(36);
         }
-        li{
-            margin-left: rem(55);
-            position: relative;
+    }
+}
+
+.breadCrumb{
+    font-size: rem(20);
+    font-weight: 700;
+    .flex{
+        align-items: center;
+    }
+    li{
+        margin-left: rem(55);
+        position: relative;
+        &::after{
+            content:'';
+            width: rem(18);
+            height: rem(3);
+            background: url(../img/icoGroup.png);
+            //background-position: -240px 0;
+            background-position: -120px -20px;
+            position: absolute;
+            top: 50%;
+            right: -36px;
+            //transform: translateY(-50%);
+        }
+        &:last-child{
             &::after{
-                content:'';
-                width: rem(18);
-                height: rem(3);
-                background: url(../img/icoGroup.png);
-                //background-position: -240px 0;
-                background-position: -120px -20px;
-                position: absolute;
-                top: 50%;
-                right: -36px;
-                //transform: translateY(-50%);
+                display: none;
             }
-            &:last-child{
-                &::after{
-                    display: none;
-                }
-            }
-            a,
-            span{
-                color: $titleGray;
-                cursor: pointer;
-            }
-            &.is-active{
-                a,
-                span{
-                    color: $mainColor;
-                }                
-            }
+        }
+        a,
+        span{
             color: $titleGray;
             cursor: pointer;
-            &.is-active{
+        }
+        &.is-active{
+            a,
+            span{
                 color: $mainColor;
-            }
+            }                
+        }
+        color: $titleGray;
+        cursor: pointer;
+        &.is-active{
+            color: $mainColor;
         }
     }
 }

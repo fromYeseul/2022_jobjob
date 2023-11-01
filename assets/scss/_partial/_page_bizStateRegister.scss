@@ -3,11 +3,18 @@
     .regiPartWrapper{        
         padding-left: rem(50);
         padding-right: rem(126);
+        .regiPart {
+            .boxWrap{
+                margin-top: rem(10);
+                padding: rem(30) rem(50);
+            }
+        }
     }
     .col6{
-        margin-top: rem(20);
+        // margin-top: rem(20);
         width: rem(1300);
         column-gap: rem(60);
+        grid-template-columns: 1fr 50px 1.8fr 1fr 1fr 130px;
         grid-template-columns: 1fr 50px 1.6fr 1fr 1fr 140px;  //1fr 50px 1.8fr 1fr 1fr 130px -> 수정
     }
     .hasBtn{
@@ -20,7 +27,7 @@
         }
     }
     .range{
-        margin: 0 22px;
+        margin: 0 23px;
     }
     .clientComp{
         grid-column: 1/3;
@@ -29,7 +36,7 @@
         grid-column: 4/6;
         input[type=text]{
             &.dateType{
-                width: rem(172) !important;
+                width: rem(176) !important;
             }
         }
     }
@@ -61,25 +68,24 @@
 
 .bizStateRegister{
     .boxWrap{
-        >.prefix{
+        >.prefix,
+        >.suffix{
+            width: rem(775);
             .tabBtn{
                 a{
                     border-radius: 4px 4px 0 0;
                 }
             }
         }
-        &.flex_1_1,
-            .flex_1_2,
-            .flex_4_3,
-            &.flex_4_3{
-                gap: 40px;
-            }
+        &.flex{
+            gap: 40px;
+        }
     }
     .tabWrapper{
         &.mt20{
             .tabBtn{
                 button{
-                    margin-left: rem(735);
+                    margin-left: rem(645);
                 }
             }
         }
@@ -95,6 +101,12 @@
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
             }
+            &:first-child{
+                a{
+                    min-width: rem(65);
+                    border-top-left-radius: rem(4);
+                }                
+            }
         }
     }
     .tableTop{
@@ -108,19 +120,24 @@
         }
     }
 
-    //pms
-    input[type=text]{
-        background: white; //11.01추가
-        text-align : right; //11.01추가
-        &.dateType{  
-            &.noBg{
-            padding: rem(2);
-            text-align: center;
-            background: white;
+    table{
+        //pms
+        input[type=text]{
+            background: $white; //11.01추가
+            // text-align : right; //11.01추가
+            &.dateType{  
+                padding: rem(2);
+                text-align: center;
+                background: $white;
+                // &.noBg{
+                //     padding: rem(2);
+                //     text-align: center;
+                //     background: white;
+                // }
             }
-
         }
     }
+    
 
      
     button{
@@ -149,9 +166,12 @@
         tr{
             th{
                 //height: rem(26); 11.01삭제
-                &.sales{background: $thSales_pms; border: 0 !important;} //11.1 border: 0추가
-                &.buy{background: $thBuy_pms; border: 0 !important;}
-                &.inner{background: $thInner_pms; border: 0 !important;}
+                // &.sales{background: $thSales_pms; border: 0 !important;} //11.1 border: 0추가
+                // &.buy{background: $thBuy_pms; border: 0 !important;}
+                // &.inner{background: $thInner_pms; border: 0 !important;}
+                &.sales{background: $thSales_pms;}
+                &.buy{background: $thBuy_pms;}
+                &.inner{background: $thInner_pms;}
                 .ico{
                     margin-left: 3px;
                 }
@@ -159,10 +179,9 @@
             &:nth-child(2){
                 th{
                     height: rem(20);
-                    &.sales,&.buy,&.inner{
-                        opacity: 0.7;
-                        border: 0;  //11.1 border: 0추가
-                    }
+                    &.sales{background: $thSales2_pms;}
+                    &.buy{background: $thBuy2_pms;}
+                    &.inner{background: $thInner2_pms;}
                 }                
             }
         }
@@ -182,16 +201,18 @@
     }
     >.prefix{
         flex-shrink: 0;
-        width: 783px; //820 -> 783
+        // width: 783px; //820 -> 783
+        width: 775px; //820 -> 783
         th{
             height: rem(51);
         }
     }
     >.suffix{
-
+        flex: 2 1 50%;
         // width: 770px;
 
-        width: 1200px;  // 900 -> 1200 origin/jina
+        // width: 1200px;  // 900 -> 1200 origin/jina
+        width: 775px;
         flex: 0 0 auto;
         // flex-grow: 1;
         // overflow-x: hidden;
@@ -205,11 +226,11 @@
     }   
     .tableBox{
         // width: 1100px;
-        th,
+        // th,
         td{
             &.fold{
                 height: rem(26); //추가
-                border-left: 1px solid #ddd; //b2b4b7 -> ddd
+                border-left: 1px solid $tableBorder; //b2b4b7 -> ddd
                 &.is-active{
                     border-left: 0;
                 }
@@ -228,11 +249,9 @@
     overflow-x: auto;
     .flexLeft{
         .suffix{
-        width: 1201px;   //상하정렬시 추가 10.31
+            width: 1201px;   //상하정렬시 추가 10.31
         }
-    }
-        
-    // }
+    }        
 }
 
 
