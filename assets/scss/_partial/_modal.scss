@@ -105,7 +105,7 @@
             width: auto;
         }
         &.smSize{
-            width: rem(380);
+            width: rem(400);
             padding: rem(45);
             .modalHeader{
                 margin-top: -16px;
@@ -246,11 +246,14 @@
         }
     }
     h2, h3{
-        margin-bottom: rem(26);
+        margin-bottom: rem(40);
         text-align: center;
         font-size: rem(22);
         & + .filterList{
             margin-top: rem(10);
+        }
+        & + .h3_sub{
+            margin-top: -30px;
         }
     }
     .h3_sub{
@@ -1181,5 +1184,29 @@
     .h3_sub{
         margin-top: -10px;
         color: $filePopSub;
+    }
+}
+
+
+//로그인
+.joinRequest{
+    .inputList{
+        &.flex{
+            h6,
+            label{
+                min-width: rem(80);
+            }
+            li{
+                margin-bottom: rem(32);
+                .suffix{
+                    margin-left: 0;
+                }
+            }
+            input{
+                & + input{
+                    margin-top: 10px;
+                }
+            }
+        }
     }
 }
