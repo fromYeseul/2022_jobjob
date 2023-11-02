@@ -43,7 +43,7 @@
     </section>
 
     <!--가입신청 팝업-->
-    <div id="recruitJob" class="modalLayer center is-active">
+    <div id="" class="modalLayer center is-active">
         <div class="layerBox smSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -103,6 +103,339 @@
         <div class="layerDim"></div>    
     </div>
     <!--//가입신청 팝업-->
+
+    <!--가입신청완료 팝업-->
+    <div id="" class="modalLayer center is-active">
+        <div class="layerBox smSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont joinReqClr"><!--팝업고유클래스-->
+                <h3>가입 신청 완료</h3>  
+
+                <img src="../assets/img/icoClear.png" alt="">
+                
+
+                <p>abc@echoit.co.kr(으)로 발송된 <br> 인증 메일을 확인해 주세요.</p>
+                <p class="marked">인증기한 : 2023년 11월03일 11시까지</p>
+
+                <div class="stepBox">
+                    <ul>
+                        <li>STEP 01. 메일 인증</li>
+                        <li>STEP 02. 담당자 승인</li>
+                    </ul>
+                </div>
+
+                <p class="manager">담당자 : <span class="mainC">홍길동 010-1234-5678</span></p>
+
+            </div>
+            <div class="modalFooter single">
+                <button class="xlSize">확인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//가입신청완료 팝업-->
+
+    <!--메일인증대기 팝업-->
+    <div id="" class="modalLayer center is-active">
+        <div class="layerBox smSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont mailCerti"><!--팝업고유클래스-->
+                <h3>메일 인증 대기중</h3>  
+
+                <img src="../assets/img/icoHold.png" alt="">
+                
+
+                <p>abc@echoit.co.kr(으)로 발송된 <br> 인증 메일을 확인해 주세요.</p>
+                <p class="marked">인증기한 : 2023년 11월03일 11시까지</p>
+
+                <div class="stepBox">
+                    <ul>
+                        <li class="is-active">STEP 01. 메일 인증</li>
+                        <li>STEP 02. 담당자 승인</li>
+                    </ul>
+                </div>
+
+                <p class="manager">담당자 : <span class="mainC">홍길동 010-1234-5678</span></p>
+
+            </div>
+            <div class="modalFooter single">
+                <button class="xlSize">인증메일 재발송</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//메일인증대기 팝업-->
+
+    <!--담당자승인대기 팝업-->
+    <div id="" class="modalLayer center is-active">
+        <div class="layerBox smSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont managerCerti"><!--팝업고유클래스-->
+                <h3>담당자 승인 대기중</h3>  
+
+                <img src="../assets/img/icoHold.png" alt="">
+                
+                <p class="mainC">이메일 인증이 완료되었습니다. </p>
+                <p>관리자가 가입승인을 완료하면 <br> 서비스를 이용하실 수 있습니다.</p>
+                
+                <div class="stepBox">
+                    <ul>
+                        <li>STEP 01. 메일 인증</li>
+                        <li class="is-active">STEP 02. 담당자 승인</li>
+                    </ul>
+                </div>
+
+                <p class="manager">담당자 : <span class="mainC">홍길동 010-1234-5678</span></p>
+
+            </div>
+            <div class="modalFooter single">
+                <button class="xlSize">로그인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//담당자승인대기 팝업-->
+
+    <!--메일인증만료 팝업-->
+    <div class="modalLayer center is-active">
+        <div class="layerBox smSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+            <div class="modalCont certiExpire">
+                <h3>인증 기한이 만료되었습니다.</h3>
+                <b>
+                    기존 가입 신청 정보는 삭제되었으므로 <br>
+                    다시 가입신청을 해주시기 바랍니다.
+                </b>
+            </div>
+            <div class="modalFooter single">
+                <button class="layerClose">가입신청</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//메일인증만료 팝업-->
+
+    <!--ID/PW 찾기 팝업-->
+    <div class="modalLayer center is-active">
+        <div class="layerBox smSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+            <div class="modalCont findId">
+                
+
+                <div class="tabWrapper" id="findId">
+                    <ul class="tabBtnWrap underType">
+                        <li class="tabBtn">
+                            <a href="#tab-01-u" class="is-active">아이디찾기</a>
+                        </li>
+                        <li class="tabBtn">
+                            <a href="#tab-02-u">비밀번호 찾기</a>
+                        </li>
+                    </ul>
+                    <div class="tabContWrap">
+                        <div id="tab-01-u" class="tabCont is-active">
+                            <div class="inputList flex">   
+                                <ul>
+                                    <li>
+                                        <label for="findNm">이름</label>
+                                        <div class="suffix">
+                                            <input type="text" class="full" id="findNm" placeholder="홍길동">         
+                                        </div>                                                                
+                                    </li>
+                                    <li>
+                                        <label for="findPn">휴대폰 번호</label>
+                                        <div class="suffix">
+                                            <input type="text" class="full" id="findNm" placeholder="010-1234-1234">         
+                                        </div>                                                                
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="tab-02-u" class="tabCont">
+                            <div class="inputList flex">   
+                                <ul>
+                                    <li>
+                                        <label for="findEm">이메일 주소</label>
+                                        <div class="suffix">
+                                            <input type="text" class="full" id="findEm" placeholder="Hong.gildong@echoit.co.kr">         
+                                        </div>                                                                
+                                    </li>
+                                    <li>
+                                        <label for="findPn">휴대폰 번호</label>
+                                        <div class="suffix">
+                                            <input type="text" class="full" id="findNm" placeholder="010-1234-1234">         
+                                        </div>                                                                
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modalFooter single">
+                <button class="layerClose">확인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//ID/PW 찾기 팝업-->
+
+    <!--내정보수정 팝업-->
+    <div id="" class="modalLayer center is-active">
+        <div class="layerBox smMidSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont infoRevise"><!--팝업고유클래스-->
+                <h3>내정보 수정</h3>  
+                
+                <div class="inputList flex">   
+                    <ul>
+                        <li>
+                            <label for="joinEmail">아이디</label>
+                            <div class="suffix"> 
+                                <div class="hasBtn">
+                                    <input type="text" placeholder="Jy.kim@echoit.co.kr" disabled>
+                                    <button class="bdType">변경</button>
+                                </div>
+                            </div>                                                                
+                        </li>
+                        <li>                    
+                            <label for="joinNm">이름</label>
+                            <div class="suffix">
+                                <input type="text" class="full" id="joinNm" placeholder="김재윤" disabled>        
+                            </div>                                                                                                               
+                        </li>
+                        <li>
+                            <label for="joinPw">비밀번호</label>
+                            <div class="suffix"> 
+                                <div class="hasBtn">
+                                    <input type="password" disabled>
+                                    <button class="bdType">변경</button>
+                                </div>
+                            </div>                                               
+                        </li>
+                        <li>                    
+                            <label for="joinPn">휴대폰 번호</label>
+                            <div class="suffix">
+                                <input type="text" class="full" id="joinPn" placeholder="010-1234-5678">        
+                            </div>                                                                                                               
+                        </li>
+                        <li>                    
+                            <h6 for="joinPn">소속부서</h6>
+                            <div class="suffix">
+                                <select class="full">
+                                    <option value="">선택</option>
+                                    <option value="001">1</option>
+                                    <option value="002">2</option>
+                                    <option value="003">3</option>
+                                    <option value="004">4</option>
+                                    <option value="005">5</option>
+                                </select>      
+                            </div>                                                                                                               
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modalFooter single">
+                <button class="xlSize">저장</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//내정보수정 팝업-->
+
+    <!--아이디변경 팝업-->
+    <div id="" class="modalLayer center is-active">
+        <div class="layerBox smMidSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont changeId"><!--팝업고유클래스-->
+                <h3>아이디 변경</h3>  
+                
+                <div class="inputList flex">   
+                    <ul>
+                        <li>
+                            <label for="nowPw">현재 비밀번호</label>
+                            <div class="suffix"> 
+                                <input type="text" for="nowPw" class="full" placeholder="현재 비밀번호 입력">
+                                <p class="error is-active">현재 비밀번호가 일치하지 않습니다.</p>
+                            </div>                                                                
+                        </li>
+                        <li>                    
+                            <label for="id">변경할 아이디</label>
+                            <div class="suffix">
+                                <input type="text" for="id" class="full" placeholder="이메일 주소입력">  
+                                <p class="error is-active">이미 존재하는 이메일 주소입니다.</p>      
+                            </div>                                                                                                               
+                        </li>
+                        <li class="center">
+                            <button class="xlSize">인증메일 발송</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modalFooter">
+                <button class="white xlSize">뒤로</button>
+                <button class="xlSize">변경완료</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//아이디변경 팝업-->
+
+    <!--비밀번호변경 팝업-->
+    <div id="" class="modalLayer center is-active">
+        <div class="layerBox smMidSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont changePw"><!--팝업고유클래스-->
+                <h3>비밀번호 변경</h3>  
+                
+                <div class="inputList flex">   
+                    <ul>
+                        <li>
+                            <label for="nowPw">현재 비밀번호</label>
+                            <div class="suffix"> 
+                                <input type="text" for="nowPw" class="full" placeholder="현재 비밀번호 입력">
+                                <p class="error is-active">현재 비밀번호가 일치하지 않습니다.</p>
+                            </div>                                                                
+                        </li>
+                        <li>                    
+                            <label for="pw">새 비밀번호</label>
+                            <div class="suffix">
+                                <input type="text" for="pw" class="full" placeholder="8~20자영문, 숫자, 특수문자 조합">  
+                                <p class="error is-active">영문 + 숫자 + 특수문자를 모두 조합해 주세요.</p>      
+                            </div>                                                                                                               
+                        </li>
+                        <li>                    
+                            <label for="pw2">새 비밀번호 확인</label>
+                            <div class="suffix">
+                                <input type="text" for="pw2" class="full" placeholder="비밀번호 다시입력 ">  
+                            </div>                                                                                                               
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modalFooter">
+                <button class="white xlSize">뒤로</button>
+                <button class="xlSize">변경</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//비밀번호변경 팝업-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>

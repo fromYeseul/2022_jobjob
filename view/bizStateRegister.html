@@ -566,6 +566,7 @@
                                                     <div class="flexTable">
                                                         <div class="tableBox">
                                                             <table>
+                                                                
                                                                 <!--231101 수정-ys -->
                                                                 <thead>
                                                                     <tr>
@@ -647,11 +648,13 @@
                                                                             <i class="ico edit"></i>
                                                                             최은영
                                                                         </td>
-                                                                        <td>
-                                                                            <select name="" id="">
+                                                                        <td class="ellipsis">
+                                                                            <!-- <select name="" id="">
                                                                                 <option value="">ABAP</option>
                                                                                 <option value="cat">CON</option>
-                                                                            </select>
+                                                                            </select> -->
+                                                                            <i class="ico edit"></i>
+                                                                            ABAPABA PABAPABAP ABAPABAPABAPABAP
                                                                         </td>
                                                                         <td>
                                                                             <select name="" id="">
@@ -3246,7 +3249,7 @@
                 for(let i=0; i<breadCrumbs.length; i++){
                     breadCrumbs[i].classList.remove('is-active');
                     let target = document.getElementById('bizStateRegi' + i).getBoundingClientRect().top;
-                    if(target <180){
+                    if(target <220){
                         for(let j=0; j<breadCrumbs.length; j++){
                             breadCrumbs[j].classList.remove('is-active');
                         }

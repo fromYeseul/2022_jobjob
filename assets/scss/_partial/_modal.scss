@@ -248,7 +248,7 @@
     h2, h3{
         margin-bottom: rem(40);
         text-align: center;
-        font-size: rem(22);
+        font-size: rem(20);
         & + .filterList{
             margin-top: rem(10);
         }
@@ -351,8 +351,7 @@
     &.single{
         width: 50%;
         max-width: rem(200);
-        margin: rem(30) auto;
-        margin-bottom: 0;
+        margin-top: rem(50);
     }
     button{        
         flex: 2 1 0;
@@ -1188,8 +1187,9 @@
 }
 
 
-//로그인
-.joinRequest{
+//로그인 - 가입신청, 내정보수정
+.joinRequest,
+.infoRevise{
     .inputList{
         &.flex{
             h6,
@@ -1197,9 +1197,18 @@
                 min-width: rem(80);
             }
             li{
-                margin-bottom: rem(32);
-                .suffix{
-                    margin-left: 0;
+                & + li{
+                    margin-top: rem(32);
+                }
+                .hasBtn{
+                    input{
+                        flex: 1 1 auto;
+                    }
+                    button{
+                        width: rem(70);
+                        background: $white;
+                        border: 1px solid $mainColor;
+                    }
                 }
             }
             input{
@@ -1208,5 +1217,64 @@
                 }
             }
         }
+    }
+    & + .single{
+        margin-top: rem(30);
+        max-width: rem(120);
+    }
+}
+//로그인 - 가입신청완료, 메일인증대기, 담당자승인대기
+.joinReqClr,    //가입신청완료
+.mailCerti, //메일인증대기
+.managerCerti{  //담당자승인대기
+    text-align: center;
+    img{
+        margin: rem(20);
+    }
+    p{
+        font-weight: bold;
+        margin: rem(15) 0;
+        &.manager{
+            margin-top: rem(10);
+            font-size: rem(15);
+        }
+    }
+    .step,
+    .stepBox{
+        margin: rem(30) 0;
+    }
+}
+//로그인 - 메일인증만료
+.certiExpire{
+    margin-top: rem(20);
+    text-align: center;
+}
+//로그인 - ID/PW 찾기, 아이디변경, 비밀번호변경
+.findId,
+.changeId,
+.changePw{
+    .inputList{
+        &.flex{
+            li{
+                &.center{
+                    justify-content: center;
+                }
+                h6,
+                label{
+                    width: rem(145);
+                    min-width: auto;
+                }
+            }        
+        }
+    }
+    // & + .single{
+    //     margin-top: rem(30);
+    //     max-width: rem(120);
+    // }
+}
+.changeId,
+.changePw{
+    .inputList{
+        height: rem(370);
     }
 }
