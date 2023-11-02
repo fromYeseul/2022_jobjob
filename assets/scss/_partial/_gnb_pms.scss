@@ -18,9 +18,10 @@
                 li{
                     &.is-active{                                       
                         font-weight: 500;
-                        background: rgba(200,200,200,0.1);   //?      
+                        background: rgba(200,200,200,0.3);   //?      
                     }
-                }   
+                }
+                   
             }
         }
         li{
@@ -31,14 +32,18 @@
             }
             ul{
                 &.is-active {
-                    background: rgba(100,100,100,0.1); //0,0,0,0.2 -> 100,100,100,0.1 
+                    background: rgba(200,200,200,0.2); //0,0,0,0.2 -> 100,100,100,0.1 
                 }
                 li{
                     a{                    
                         &::before{
                             background: $black;
                         }
+                        &:hover{
+                            background: rgba(160,160,160,0.2);
+                        }
                     }
+                    
                 }
             }
         }
