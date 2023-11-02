@@ -36,8 +36,8 @@
 
 .dot {
   display: inline-block;
-  width: 1.0625rem;
-  height: 1.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
   border-radius: 50%;
   vertical-align: middle;
   margin-right: 0.75rem;
@@ -521,7 +521,7 @@
   background: #f8f8f8;
 }
 .wrapper.login .loginTop {
-  min-height: 80vh;
+  min-height: 85vh;
   align-items: center;
 }
 .wrapper.login .loginTop .loginBox {
@@ -530,7 +530,7 @@
   z-index: 1;
 }
 .wrapper.login footer {
-  margin-top: -20vh;
+  margin-top: -25vh;
   padding-top: 7.5rem;
   height: 40vh;
   background-image: url(../img/pms/bgLogin.png);
@@ -563,7 +563,7 @@
   box-shadow: 1px 3px 3px 0 rgba(150, 150, 150, 0.1);
 }
 .gnbWrapper .navWrapper > ul > li.is-active > a {
-  color: #123e74;
+  color: #2a55aa;
   font-weight: 500;
 }
 .gnbWrapper .navWrapper > ul > li.is-active > a::before {
@@ -589,9 +589,16 @@
   color: #666666;
 }
 
+.navCtrlBtn {
+  height: 1.375rem;
+}
+
 header {
   border-bottom: 0;
   background: #205391;
+}
+header .navCtrlBtn {
+  margin-left: -30px;
 }
 header .suffix {
   color: #fff;
@@ -647,6 +654,13 @@ header .suffix li a {
 }
 .gnb .ico.bizAdmin {
   background-position: -60px -150px;
+}
+
+.ico.ctrlBtn {
+  width: 1.375rem;
+  height: 1.375rem;
+  background-image: url(../img/icoGnb.png);
+  background-position: 0px 0px;
 }
 
 .navWrapper li.is-active .ico.home {
@@ -709,7 +723,7 @@ button.rBdType:disabled, button.rBdType.disabled,
 }
 button.save,
 .button.save {
-  background: #0460d2;
+  background: #2a55aa;
 }
 
 h1 {
@@ -721,62 +735,8 @@ h1 {
   font-weight: 700;
 }
 
-.commentBox .writer {
-  width: 100px;
-  text-align: center;
-}
 .commentBox .writer.self {
   color: #5aa2ef;
-}
-.commentBox .comment {
-  max-width: 980px;
-  flex-grow: 2;
-}
-
-.commentInput {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-bottom: 1.875rem;
-  position: relative;
-}
-.commentInput::after {
-  content: "";
-  width: calc(100% + 187px);
-  height: 1px;
-  background: #cccccc;
-  position: absolute;
-  bottom: 0;
-  left: -25px;
-}
-
-.commentList li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-  min-height: 2.75rem;
-}
-.commentList .comment {
-  position: relative;
-}
-.commentList .comment input {
-  padding-right: 50px;
-}
-.commentList .comment input:read-only {
-  background: #fff;
-}
-.commentList .comment .rightBtn {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-.commentList .date {
-  color: #aaa;
-  font-size: 14px;
 }
 
 table tbody tr:hover {
@@ -787,6 +747,11 @@ table tbody tr th {
 }
 table tr th {
   background: #8c98a6;
+  font-weight: 400;
+  height: auto;
+}
+table tr.is-active {
+  background: #eaf0f8;
 }
 table a {
   color: #2a73cb;
@@ -912,14 +877,18 @@ table tfoot td {
   width: 100%;
 }
 .bizStateRegister .regiPartWrapper {
-  padding-left: 6.25rem;
-  padding-right: 6.25rem;
+  padding-left: 3.125rem;
+  padding-right: 7.875rem;
+}
+.bizStateRegister .regiPartWrapper .regiPart .boxWrap {
+  margin-top: 0.625rem;
+  padding: 1.875rem 3.125rem;
 }
 .bizStateRegister .col6 {
-  margin-top: 1.875rem;
   width: 81.25rem;
   column-gap: 3.75rem;
   grid-template-columns: 1fr 50px 1.8fr 1fr 1fr 130px;
+  grid-template-columns: 1fr 50px 1.6fr 1fr 1fr 140px;
 }
 .bizStateRegister .hasBtn input {
   flex-grow: 1;
@@ -929,7 +898,7 @@ table tfoot td {
   width: 3.75rem;
 }
 .bizStateRegister .range {
-  margin: 0 22px;
+  margin: 0 23px;
 }
 .bizStateRegister .clientComp {
   grid-column: 1/3;
@@ -938,7 +907,7 @@ table tfoot td {
   grid-column: 4/6;
 }
 .bizStateRegister .bizTerm input[type=text].dateType {
-  width: 10.75rem !important;
+  width: 11rem !important;
 }
 .bizStateRegister .bizProjNm,
 .bizStateRegister .bizFile {
@@ -955,17 +924,26 @@ table tfoot td {
   color: #ff1236;
 }
 .bizStateRegister h4 {
-  color: #2a55aa;
+  color: #3a6ccf;
+  font-weight: 500;
 }
 .bizStateRegister h4 + .tableTop {
   margin-top: 30px;
 }
 
-.bizStateRegister .boxWrap > .prefix .tabBtn a {
+.bizStateRegister .boxWrap > .prefix,
+.bizStateRegister .boxWrap > .suffix {
+  width: 48.4375rem;
+}
+.bizStateRegister .boxWrap > .prefix .tabBtn a,
+.bizStateRegister .boxWrap > .suffix .tabBtn a {
   border-radius: 4px 4px 0 0;
 }
+.bizStateRegister .boxWrap.flex {
+  gap: 40px;
+}
 .bizStateRegister .tabWrapper.mt20 .tabBtn button {
-  margin-left: 45.9375rem;
+  margin-left: 40.3125rem;
 }
 .bizStateRegister .tabWrapper .flex {
   justify-content: space-between;
@@ -978,11 +956,23 @@ table tfoot td {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
+.bizStateRegister .tabBtnWrap .tabBtn:first-child a {
+  min-width: 4.0625rem;
+  border-top-left-radius: 0.25rem;
+}
 .bizStateRegister .tableTop .hasTooltip + .hasTooltip {
   margin-left: 0.625rem;
 }
 .bizStateRegister .tableTop .hasTooltip .tooltip {
   top: 150%;
+}
+.bizStateRegister table input[type=text] {
+  background: #fff;
+}
+.bizStateRegister table input[type=text].dateType {
+  padding: 0.125rem;
+  text-align: center;
+  background: #fff;
 }
 .bizStateRegister button.smSize, .bizStateRegister button.midSize, .bizStateRegister button.save {
   background: #2a55aa;
@@ -995,9 +985,6 @@ table tfoot td {
 .bizStateRegister .tabBtnWrap .tabBtn a.is-active {
   background-color: #2a55aa;
   border: 1px solid #2a55aa;
-}
-.bizStateRegister table tr th {
-  height: 1.625rem;
 }
 .bizStateRegister table tr th.sales {
   background: #61519f;
@@ -1014,14 +1001,20 @@ table tfoot td {
 .bizStateRegister table tr:nth-child(2) th {
   height: 1.25rem;
 }
-.bizStateRegister table tr:nth-child(2) th.sales, .bizStateRegister table tr:nth-child(2) th.buy, .bizStateRegister table tr:nth-child(2) th.inner {
-  opacity: 0.7;
+.bizStateRegister table tr:nth-child(2) th.sales {
+  background: #8483b4;
+}
+.bizStateRegister table tr:nth-child(2) th.buy {
+  background: #83acb4;
+}
+.bizStateRegister table tr:nth-child(2) th.inner {
+  background: #7d8da0;
 }
 
 .flexLeft {
   padding-bottom: 0.625rem;
   display: flex;
-  gap: 20px;
+  gap: 40px;
   overflow-x: auto;
 }
 .flexLeft::-webkit-scrollbar-track {
@@ -1029,23 +1022,23 @@ table tfoot td {
 }
 .flexLeft > .prefix {
   flex-shrink: 0;
-  width: 820px;
+  width: 775px;
 }
 .flexLeft > .prefix th {
   height: 3.1875rem;
 }
 .flexLeft > .suffix {
-  width: 900px;
+  flex: 2 1 50%;
+  width: 775px;
   flex: 0 0 auto;
 }
 .flexLeft > .suffix .tabCont:first-child th {
   height: 3.1875rem;
 }
-.flexLeft .tableBox th.fold,
 .flexLeft .tableBox td.fold {
-  border-left: 1px solid #b2b4b7;
+  height: 1.625rem;
+  border-left: 1px solid #dddddd;
 }
-.flexLeft .tableBox th.fold.is-active,
 .flexLeft .tableBox td.fold.is-active {
   border-left: 0;
 }
@@ -1053,6 +1046,9 @@ table tfoot td {
 .flexTable {
   width: 100%;
   overflow-x: auto;
+}
+.flexTable .flexLeft .suffix {
+  width: 1201px;
 }
 
 .hideS,

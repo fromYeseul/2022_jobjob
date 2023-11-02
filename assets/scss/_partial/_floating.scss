@@ -9,6 +9,17 @@
         top:auto;
         bottom: 0;
     }
+    &.indicator{
+        width: auto;
+        right: rem(25);
+        top: 16%;
+        transform: initial;
+        .floating{
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+    }
     .floating{
         padding: rem(24);
         text-align: center;
@@ -44,6 +55,30 @@
         line-height: rem(36) !important;
         & + button{
             margin-top: rem(10);
+        }
+    }
+}
+
+.floatingWrapper{
+    &.indicator{
+        li{
+            margin-bottom: rem(40);
+            color: $titleGray;
+            font-size: rem(18);
+            cursor: pointer;
+            &::after{
+                width: rem(3);
+                height: rem(16);
+                background-position: -100px -20px;
+                top: auto;
+                right: auto;
+                left: 50%;
+                bottom: -110%;
+                transform: translateX(-50%);
+            }
+            &.is-active{
+                color: $mainColor;
+            }
         }
     }
 }

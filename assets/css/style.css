@@ -131,8 +131,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .dot {
   display: inline-block;
-  width: 1.0625rem;
-  height: 1.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
   border-radius: 50%;
   vertical-align: middle;
   margin-right: 0.75rem;
@@ -884,7 +884,7 @@ header {
   transition: all 0.2s;
   opacity: 1;
 }
-.layoutWrapper.is-active .gnbWrapper .navCtrlBtn .ctrlBtn {
+.layoutWrapper.is-active .navCtrlBtn .ctrlBtn {
   background-position: 0px -60px !important;
 }
 .layoutWrapper.is-active .contWrapper {
@@ -924,7 +924,8 @@ header {
 .gnbWrapper .gnb {
   padding: 1.25rem 0;
 }
-.gnbWrapper .navCtrlBtn {
+
+.navCtrlBtn {
   width: 2.25rem;
   height: 2.25rem;
   padding: 0.3125rem 0.5rem;
@@ -932,7 +933,7 @@ header {
   cursor: pointer;
   position: relative;
 }
-.gnbWrapper .navCtrlBtn::before {
+.navCtrlBtn::before {
   width: 0;
   height: 2.5rem;
   height: 2.25rem;
@@ -942,19 +943,20 @@ header {
   top: 0;
   transition: all 0.01s ease;
 }
-.gnbWrapper .navWrapper {
+
+.navWrapper {
   height: calc(100vh - 105px);
   margin-top: 0.625rem;
   overflow-y: auto;
 }
-.gnbWrapper .navWrapper > ul > li {
+.navWrapper > ul > li {
   position: relative;
 }
-.gnbWrapper .navWrapper > ul > li.is-active > a {
+.navWrapper > ul > li.is-active > a {
   background: rgba(255, 255, 255, 0.3);
   position: relative;
 }
-.gnbWrapper .navWrapper > ul > li.is-active > a::before {
+.navWrapper > ul > li.is-active > a::before {
   content: "";
   width: 3px;
   height: 100%;
@@ -963,47 +965,47 @@ header {
   left: 0;
   top: 0;
 }
-.gnbWrapper .navWrapper > ul > li.is-active > a span {
+.navWrapper > ul > li.is-active > a span {
   opacity: 1;
 }
-.gnbWrapper .navWrapper > ul > li li.is-active {
+.navWrapper > ul > li li.is-active {
   background: rgba(255, 255, 255, 0.1);
 }
-.gnbWrapper .navWrapper > ul > li li.is-active span {
+.navWrapper > ul > li li.is-active span {
   opacity: 1;
 }
-.gnbWrapper .navWrapper li a {
+.navWrapper li a {
   display: flex;
   padding: 0.625rem 0.8125rem;
   padding-left: 0.9375rem;
   padding-right: 0;
 }
-.gnbWrapper .navWrapper li a span {
+.navWrapper li a span {
   opacity: 0.8;
 }
-.gnbWrapper .navWrapper li a:hover {
+.navWrapper li a:hover {
   background: rgba(255, 255, 255, 0.1);
 }
-.gnbWrapper .navWrapper li a:hover span {
+.navWrapper li a:hover span {
   opacity: 1;
 }
-.gnbWrapper .navWrapper li ul {
+.navWrapper li ul {
   opacity: 0;
   height: 0;
 }
-.gnbWrapper .navWrapper li ul.is-active {
+.navWrapper li ul.is-active {
   background: rgba(0, 0, 0, 0.2);
 }
-.gnbWrapper .navWrapper li ul li {
+.navWrapper li ul li {
   padding: 0;
   font-size: 0.875rem;
   position: relative;
 }
-.gnbWrapper .navWrapper li ul li a {
+.navWrapper li ul li a {
   padding-left: 2.125rem;
   position: relative;
 }
-.gnbWrapper .navWrapper li ul li a::before {
+.navWrapper li ul li a::before {
   content: "";
   width: 0.25rem;
   height: 0.0625rem;
@@ -1013,19 +1015,19 @@ header {
   left: 1.375rem;
   opacity: 0.5;
 }
-.gnbWrapper .navWrapper li ul li a:hover {
+.navWrapper li ul li a:hover {
   background: rgba(0, 0, 0, 0.1);
 }
-.gnbWrapper .navWrapper li ul li a:hover span {
+.navWrapper li ul li a:hover span {
   opacity: 1;
 }
-.gnbWrapper .navWrapper li ul li a:hover::before {
+.navWrapper li ul li a:hover::before {
   opacity: 1;
 }
-.gnbWrapper .navWrapper li ul li.is-active {
+.navWrapper li ul li.is-active {
   background: rgba(0, 0, 0, 0.1);
 }
-.gnbWrapper .navWrapper .menuTxt {
+.navWrapper .menuTxt {
   display: none;
   color: #fff;
   font-size: 0.9375rem;
@@ -1035,7 +1037,7 @@ header {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.gnbWrapper .navWrapper .depth2 {
+.navWrapper .depth2 {
   color: #fff;
   vertical-align: middle;
   text-indent: -10rem;
@@ -1531,7 +1533,7 @@ footer.toast button + button {
   width: auto;
 }
 .modalLayer .layerBox.smSize {
-  width: 23.75rem;
+  width: 25rem;
   padding: 2.8125rem;
 }
 .modalLayer .layerBox.smSize .modalHeader {
@@ -1661,12 +1663,15 @@ footer.toast button + button {
   text-align: left;
 }
 .modalCont h2, .modalCont h3 {
-  margin-bottom: 1.625rem;
+  margin-bottom: 2.5rem;
   text-align: center;
   font-size: 1.375rem;
 }
 .modalCont h2 + .filterList, .modalCont h3 + .filterList {
   margin-top: 0.625rem;
+}
+.modalCont h2 + .h3_sub, .modalCont h3 + .h3_sub {
+  margin-top: -30px;
 }
 .modalCont .h3_sub {
   text-align: center;
@@ -2446,6 +2451,20 @@ footer.toast button + button {
   color: #979797;
 }
 
+.joinRequest .inputList.flex h6,
+.joinRequest .inputList.flex label {
+  min-width: 5rem;
+}
+.joinRequest .inputList.flex li {
+  margin-bottom: 2rem;
+}
+.joinRequest .inputList.flex li .suffix {
+  margin-left: 0;
+}
+.joinRequest .inputList.flex input + input {
+  margin-top: 10px;
+}
+
 /* 프로젝트 등록 플로팅 */
 .floatingWrapper {
   width: 11.5625rem;
@@ -2457,6 +2476,17 @@ footer.toast button + button {
 .floatingWrapper.bottom {
   top: auto;
   bottom: 0;
+}
+.floatingWrapper.indicator {
+  width: auto;
+  right: 1.5625rem;
+  top: 16%;
+  transform: initial;
+}
+.floatingWrapper.indicator .floating {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
 }
 .floatingWrapper .floating {
   padding: 1.5rem;
@@ -2492,6 +2522,26 @@ footer.toast button + button {
 }
 .floatingWrapper button + button {
   margin-top: 0.625rem;
+}
+
+.floatingWrapper.indicator li {
+  margin-bottom: 2.5rem;
+  color: #a6a6b6;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+.floatingWrapper.indicator li::after {
+  width: 0.1875rem;
+  height: 1rem;
+  background-position: -100px -20px;
+  top: auto;
+  right: auto;
+  left: 50%;
+  bottom: -110%;
+  transform: translateX(-50%);
+}
+.floatingWrapper.indicator li.is-active {
+  color: #0460d2;
 }
 
 .quickView {
@@ -2942,7 +2992,7 @@ footer.toast button + button {
   background: #f2f2f2;
   position: absolute;
   top: 0;
-  right: -10px;
+  right: -20px;
 }
 
 table {
@@ -2965,9 +3015,6 @@ table tr th select.noBd {
 table tr th .hasBtn .onlyIco {
   width: 2.5rem;
   height: 2rem;
-}
-table tr {
-  border-bottom: 1px solid #dddddd;
 }
 table tr.bg {
   background: rgba(4, 96, 210, 0.02);
@@ -3033,6 +3080,7 @@ table tr td.left {
 }
 table tr td.right {
   text-align: right;
+  padding-right: 10px;
 }
 table tr td.hasToast {
   position: relative;
@@ -3046,6 +3094,9 @@ table tr td.hasToast .alertToast {
 table tbody th {
   color: #000000;
   background: #eaf2f8;
+}
+table tbody tr {
+  border-bottom: 1px solid #dddddd;
 }
 table tbody tr:hover {
   background: #eaf2f8;
@@ -3644,8 +3695,7 @@ table .dot {
   border: 1px solid #cccccc;
 }
 .tabBtnWrap .tabBtn a .more2 {
-  margin-left: 5px;
-  margin-top: -3px;
+  margin-left: -2px;
 }
 .tabBtnWrap .tabBtn a.is-active {
   color: #fff;
@@ -3899,7 +3949,7 @@ button.round,
   min-width: 2.75rem;
   width: auto;
   padding: 0 0.4375rem;
-  height: 1.625rem;
+  height: 1.5625rem;
   line-height: 1.5rem;
   color: #000000;
   font-size: 0.8125rem;
@@ -4078,7 +4128,7 @@ span.button {
   margin-right: 2px;
   display: inline-block;
   min-width: 2.75rem;
-  height: 1.375rem;
+  height: 1.4375rem;
   line-height: 1.375rem;
   text-align: center;
   color: #666666;
@@ -4334,7 +4384,7 @@ input[type=password]::placeholder {
 }
 .inputList.flex li {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   margin-bottom: 1rem;
   gap: 0.625rem;
 }
@@ -4351,6 +4401,9 @@ input[type=password]::placeholder {
 }
 .inputList.flex li input {
   margin-top: 0;
+}
+.inputList.flex li .suffix {
+  width: 100%;
 }
 .inputList.flex li.flexStr {
   align-items: start;
@@ -6884,7 +6937,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-position: -100px -20px;
 }
 .ico.more2 {
-  width: 1.25rem;
+  width: 0.9375rem;
   height: 1.25rem;
   background-position: -140px -100px;
   padding: 0 3px;
@@ -7151,6 +7204,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 
 .boxTop {
   text-align: right;
+  font-size: 14px;
 }
 
 .boxListWrap {
@@ -7699,20 +7753,28 @@ h1 {
   left: -40px;
   bottom: 0;
 }
-.pageTit .breadCrumb {
+.pageTit .suffix {
+  display: flex;
+}
+.pageTit .suffix button {
+  width: 7.5rem;
+  line-height: 2.25rem;
+}
+
+.breadCrumb {
   font-size: 1.25rem;
   font-weight: 700;
 }
-.pageTit .breadCrumb .flex {
+.breadCrumb .flex {
   align-items: center;
 }
-.pageTit .breadCrumb li {
+.breadCrumb li {
   margin-left: 3.4375rem;
   position: relative;
   color: #a6a6b6;
   cursor: pointer;
 }
-.pageTit .breadCrumb li::after {
+.breadCrumb li::after {
   content: "";
   width: 1.125rem;
   height: 0.1875rem;
@@ -7722,19 +7784,19 @@ h1 {
   top: 50%;
   right: -36px;
 }
-.pageTit .breadCrumb li:last-child::after {
+.breadCrumb li:last-child::after {
   display: none;
 }
-.pageTit .breadCrumb li a,
-.pageTit .breadCrumb li span {
+.breadCrumb li a,
+.breadCrumb li span {
   color: #a6a6b6;
   cursor: pointer;
 }
-.pageTit .breadCrumb li.is-active a,
-.pageTit .breadCrumb li.is-active span {
+.breadCrumb li.is-active a,
+.breadCrumb li.is-active span {
   color: #0460d2;
 }
-.pageTit .breadCrumb li.is-active {
+.breadCrumb li.is-active {
   color: #0460d2;
 }
 
@@ -8342,6 +8404,7 @@ h6 + .h6_sub {
   width: 6.625rem;
   font-size: 0.875rem;
   color: #0460d2;
+  line-height: 1.2;
 }
 .accWrap.indexType .accBox {
   border-radius: 0;
@@ -8447,6 +8510,7 @@ h6 + .h6_sub {
   max-width: 75%;
   font-weight: 500;
   font-size: 1.0625rem;
+  line-height: 1.2;
   cursor: pointer;
 }
 .accBox .projTit .round {
@@ -8553,6 +8617,7 @@ h6 + .h6_sub {
   text-align: left;
   width: auto;
   max-width: 75%;
+  line-height: 1.2;
 }
 .innerList .suffix {
   font-size: 0.875rem;
@@ -8730,7 +8795,7 @@ h6 + .h6_sub {
 
 .loginBox {
   width: 25rem;
-  padding: 2.5rem;
+  padding: 2.5rem 2.5rem 1.875rem 2.5rem;
   font-size: 0.875rem;
   margin: 1.875rem auto;
   text-align: left;
@@ -8741,13 +8806,13 @@ h6 + .h6_sub {
   margin-bottom: 0.625rem;
 }
 .loginBox button {
-  margin-top: 2rem;
+  margin-top: 1.6875rem;
   width: 100%;
   font-size: 1.125rem;
 }
 
 .subLogin {
-  margin-top: 1.875rem;
+  margin-top: 1.25rem;
   font-size: 0.875rem;
 }
 .subLogin li {

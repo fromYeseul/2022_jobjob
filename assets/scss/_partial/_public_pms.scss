@@ -155,6 +155,12 @@ $thSales_pms : #61519f;
 $thBuy_pms : #3e9894;
 $thInner_pms : #5b6f87;
 
+$thSales2_pms : #8483b4;
+$thBuy2_pms : #83acb4;
+$thInner2_pms : #7d8da0;
+
+$trClk_pms : #eaf0f8;
+
 $h5Under_pms: #7a7a7a;
 
 $a_pms : #2a73cb;
@@ -206,8 +212,8 @@ $highlight_pms : #5aa2ef;
 
 .dot{
     display: inline-block;
-    width: rem(17);
-    height: rem(17);
+    width: rem(10);
+    height: rem(10);
     border-radius: 50%;
     vertical-align: middle;
     margin-right: rem(12);
@@ -372,7 +378,9 @@ $highlight_pms : #5aa2ef;
 
 .flex_1_1{
     display: flex;
-    >.prefix{flex: 1 1 51%;} // 11.01 50 -> 51수정
+    // >.prefix{flex: 1 1 51%;} // 11.01 50 -> 51수정
+                                //공통으로 쓰는 부분인데 1:1 의 목적에 맞아야해요..
+    >.prefix{flex: 1 1 50%;}
     >.suffix{flex: 2 1 50%;}
 }
 .flex_2_1{

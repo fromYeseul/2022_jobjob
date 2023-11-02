@@ -93,14 +93,22 @@
 
                     <div class="pageTit">
                         <h2>사업현황 등록(필수항목 확인하기)</h2>
-                        <div class="breadCrumb">
+
+                        <!--231101 수정-ys-->
+                        <div class="suffix">
+                            <button class="white">취소</button>
+                            <button class="">등록</button>
+                        </div>
+                        <!--//231101 수정-ys-->
+
+                        <!-- <div class="breadCrumb">
                             <ul class="flex">
                                 <li class="is-active" aria-controls="bizStateRegi0">기본정보</li>
                                 <li aria-controls="bizStateRegi1">매출/매입</li>
                                 <li aria-controls="bizStateRegi2">계약</li>
                                 <li aria-controls="bizStateRegi3">청구/입금스케줄</li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                     
                     <div class="regiPartWrapper">  
@@ -251,7 +259,7 @@
                         </div>   
 
                         <div class="regiPart" id="bizStateRegi1">
-                            <h3>2. 매출/매입</h3>
+                            <h3>2. 계약 현황</h3>
                             <div class="boxWrap">
                                 <div class="flexLeft">
                                     <div class="prefix tableSort">     
@@ -267,7 +275,8 @@
                                             <div class="flex">
                                                 <ul class="tabBtnWrap autoSize">
                                                     <li class="tabBtn">
-                                                        <a href="#onC-1" class="is-active w65">전체</a>
+                                                        <!-- <a href="#onC-1" class="is-active w65">전체</a>    //11.01 -->
+                                                        <a href="#onC-1" class="is-active">전체</a>
                                                     </li>
                                                     <li class="tabBtn">
                                                         <a href="#onC-2" class="">비삼성
@@ -345,8 +354,8 @@
                                                                             <option value="dog">초급</option>
                                                                         </select>
                                                                     </td>
-                                                                    <td><input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id=""></td>
-                                                                    <td><input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                                                     <td>1.0</td>
                                                                     <td class="right">8,000,000</td>
                                                                     <td class="right">200,000</td>
@@ -480,17 +489,17 @@
                                             <div class="flex">
                                                 <ul class="tabBtnWrap autoSize">
                                                     <li class="tabBtn">
-                                                        <a href="#onA-1" class="">매입계획</a><!--하단 jquery에서 id사용중-->
+                                                        <a href="#onA-1" class="is-active">매입계획</a><!--하단 jquery에서 id사용중-->
                                                     </li>
                                                     <li class="tabBtn">
-                                                        <a href="#onA-2" class="is-active">투입현황</a><!--하단 jquery에서 id사용중-->
+                                                        <a href="#onA-2" class="">투입현황</a><!--하단 jquery에서 id사용중-->
                                                     </li>                                                        
                                                 </ul>
                                                 <button class="white smSize">+ 행추가</button>
                                             </div>
                                             <!--//230915 수정-ys -->
                                             <div class="tabContWrap">
-                                                <div id="onA-1" class="tabCont">
+                                                <div id="onA-1" class="tabCont is-active">
                                                     <div class="tableBox">
                                                         <table>
                                                             <colgroup>
@@ -553,7 +562,7 @@
                                                         </table>
                                                     </div>
                                                 </div>
-                                                <div id="onA-2" class="tabCont is-active">
+                                                <div id="onA-2" class="tabCont">
                                                     <div class="flexTable">
                                                         <div class="tableBox">
                                                             <table>
@@ -823,12 +832,12 @@
                                                                         </td>                                                      
                                                                         <!--//매입-->
 
-                                                                        <!--내부-->
-                                                                        <!-- <td></td> 231101 제거-ys-->
-                                                                        <td colspan="3" class="hideI"></td>
+                                                                        <!--내부n 231101 수정-->
+                                                                        <td></td>
+                                                                        <td colspan="2" class="hideI"></td>
                                                                         <!--//내부-->
 
-                                                                        <td colspan="3"></td>
+                                                                        <td colspan="2"></td>
                                                                     </tr>
                                                                 </tfoot>
                                                             </table>
@@ -1129,12 +1138,12 @@
                                                                 </td>                                                      
                                                                 <!--//매입-->
 
-                                                                <!--내부-->
-                                                                <!-- <td></td> -->
-                                                                <td colspan="3" class="hideI"></td>
+                                                                <!--내부n 231101 수정-->
+                                                                <td></td>
+                                                                <td colspan="2" class="hideI"></td>
                                                                 <!--//내부-->
 
-                                                                <td colspan="3"></td>
+                                                                <td colspan="2"></td>
                                                             </tr>
                                                         </tfoot>
                                                     </table>
@@ -1148,8 +1157,8 @@
                         </div>
 
                         <div class="regiPart" id="bizStateRegi2">
-                            <h3>3. 계약</h3>
-                            <div class="boxWrap flex_1_1">
+                            <h3>3. 계약 목록</h3>
+                            <div class="boxWrap flex"><!--231101 수정-ys-->
                                 <div class="prefix tableSort">
                                     <div class="tabWrapper" id="contractAll">
                                         <!--230915 수정-ys -->
@@ -1160,7 +1169,7 @@
                                                 </li>
                                             </ul>
                                             <div class="flex">
-                                                <button class="white smSize">계약분리</button>
+                                                <button class="white smSize">계약생성</button>
                                                 <button class="onlyIco lowSize">
                                                     <i class="ico refresh"></i>
                                                 </button>
@@ -1432,7 +1441,7 @@
 
                         <div class="regiPart" id="bizStateRegi3">
                             <h3>4. 청구/입금스케줄</h3>
-                            <div class="boxWrap flex_4_3">
+                            <div class="boxWrap flex"><!--231101 수정-ys-->
                                 <div class="prefix tableSort">     
                                     <h4 class="mainC">청구 스케줄</h4><!--등록화면에서는 없음-ys -->                             
                                     <div class="tableTop">
@@ -1622,14 +1631,17 @@
         </section>
     </section>
 
-    <!--플로팅메뉴-->
-    <div class="floatingWrapper bottom">
-        <div class="floating">
-            <!-- <h5>이 프로젝트를</h5> 230718 삭제-ys -->
-            <button class="white">취소</button>
-            <button class="white">임시저장</button>
-            <button class="white">미리보기</button>
-            <button class="" id="saveBtn">등록완료??</button>
+    <!--플로팅메뉴 231101 수정-ys-->
+    <div class="floatingWrapper indicator">
+        <div class="floating ">
+            <div class="breadCrumb">
+                <ul class="">
+                    <li class="is-active" aria-controls="bizStateRegi0">기본정보</li>
+                    <li aria-controls="bizStateRegi1">계약 현황</li>
+                    <li aria-controls="bizStateRegi2">계약 목록</li>
+                    <li aria-controls="bizStateRegi3">청구/입금</li>
+                </ul>
+            </div>
         </div>
     </div>
     <!--//플로팅메뉴-->
@@ -3224,6 +3236,29 @@
     <script>
         selectBox();
 
+        //breadCrumb 스크롤
+        function regiScroll(){        
+            let regiPartWrapper = document.querySelector('.regiPartWrapper');
+            let breadCrumbs = document.querySelectorAll('.breadCrumb li');
+            
+            regiPartWrapper.addEventListener('scroll',function(){
+
+                for(let i=0; i<breadCrumbs.length; i++){
+                    breadCrumbs[i].classList.remove('is-active');
+                    let target = document.getElementById('bizStateRegi' + i).getBoundingClientRect().top;
+                    if(target <180){
+                        for(let j=0; j<breadCrumbs.length; j++){
+                            breadCrumbs[j].classList.remove('is-active');
+                        }
+                        breadCrumbs[i].classList.add('is-active');
+                    }
+                }
+            });
+        }
+        regiScroll();
+
+
+
         //select 옵션선택시 레드컬러변경
         $(document).ready(function() {
             $('.redOpt').change(function() {
@@ -3289,9 +3324,10 @@
         //2. 탭바뀔때 table 사이즈
         $("a").on("click", function(e){
             let tabHref = e.target.getAttribute('href');
+            let firTh = $('tr:first-child th');
 
             if(tabHref === '#onA-1'){
-                $(this).parents('.flexLeft .suffix').css('width', "767px");
+                $(this).parents('.flexLeft .suffix').css('width', "775px");
             }else if(tabHref === '#onA-2'){
                 $(this).parents('.flexLeft .suffix').css('width', "1200px");
                 $("#onA-2").find('.extend').parent('th').addClass('fold');
@@ -3299,7 +3335,10 @@
                 $("#onA-2").find('.fold').removeClass('is-active');
                 $("#onA-2").find('.hideS').removeClass('on');
                 $("#onA-2").find('.hideB').removeClass('on');
-                $("#onA-2").find('.hideI').removeClass('on');                
+                $("#onA-2").find('.hideI').removeClass('on');         
+                
+                console.log(firTh);
+                $(firTh).attr('colspan', '1');
             }
         })
     </script>
