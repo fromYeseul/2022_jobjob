@@ -131,10 +131,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .dot {
   display: inline-block;
-  width: 0.625rem;
-  height: 0.625rem;
+  width: 1.0625rem;
+  height: 1.0625rem;
   border-radius: 50%;
-  vertical-align: middle;
+  vertical-align: sub;
   margin-right: 0.75rem;
 }
 
@@ -1665,7 +1665,7 @@ footer.toast button + button {
 .modalCont h2, .modalCont h3 {
   margin-bottom: 2.5rem;
   text-align: center;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
 }
 .modalCont h2 + .filterList, .modalCont h3 + .filterList {
   margin-top: 0.625rem;
@@ -1739,6 +1739,9 @@ footer.toast button + button {
 .modalCont .divideBox {
   margin-top: 1.875rem;
 }
+.modalCont .stepBox {
+  height: 15rem;
+}
 
 .modalFooter {
   max-width: 510px;
@@ -1763,8 +1766,7 @@ footer.toast button + button {
 .modalFooter.single {
   width: 50%;
   max-width: 12.5rem;
-  margin: 1.875rem auto;
-  margin-bottom: 0;
+  margin-top: 3.125rem;
 }
 .modalFooter button {
   flex: 2 1 0;
@@ -2452,17 +2454,95 @@ footer.toast button + button {
 }
 
 .joinRequest .inputList.flex h6,
-.joinRequest .inputList.flex label {
+.joinRequest .inputList.flex label,
+.infoRevise .inputList.flex h6,
+.infoRevise .inputList.flex label {
   min-width: 5rem;
 }
-.joinRequest .inputList.flex li {
-  margin-bottom: 2rem;
+.joinRequest .inputList.flex li + li,
+.infoRevise .inputList.flex li + li {
+  margin-top: 2rem;
 }
-.joinRequest .inputList.flex li .suffix {
-  margin-left: 0;
+.joinRequest .inputList.flex li .hasBtn input,
+.infoRevise .inputList.flex li .hasBtn input {
+  flex: 1 1 auto;
 }
-.joinRequest .inputList.flex input + input {
+.joinRequest .inputList.flex li .hasBtn button,
+.infoRevise .inputList.flex li .hasBtn button {
+  width: 4.375rem;
+  background: #fff;
+  border: 1px solid #0460d2;
+}
+.joinRequest .inputList.flex input + input,
+.infoRevise .inputList.flex input + input {
   margin-top: 10px;
+}
+.joinRequest + .single,
+.infoRevise + .single {
+  margin-top: 1.875rem;
+  max-width: 7.5rem;
+}
+
+.joinReqClr,
+.mailCerti,
+.managerCerti,
+.changeIdStep {
+  text-align: center;
+}
+.joinReqClr img,
+.mailCerti img,
+.managerCerti img,
+.changeIdStep img {
+  margin: 1.25rem;
+}
+.joinReqClr p,
+.mailCerti p,
+.managerCerti p,
+.changeIdStep p {
+  font-weight: bold;
+  margin: 0.9375rem 0;
+}
+.joinReqClr p.manager,
+.mailCerti p.manager,
+.managerCerti p.manager,
+.changeIdStep p.manager {
+  margin-top: 0.625rem;
+  font-size: 0.9375rem;
+}
+.joinReqClr .step,
+.joinReqClr .stepBox,
+.mailCerti .step,
+.mailCerti .stepBox,
+.managerCerti .step,
+.managerCerti .stepBox,
+.changeIdStep .step,
+.changeIdStep .stepBox {
+  margin: 1.875rem 0;
+}
+
+.certiExpire {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.findId .inputList.flex li.center,
+.changeId .inputList.flex li.center,
+.changePw .inputList.flex li.center {
+  justify-content: center;
+}
+.findId .inputList.flex li h6,
+.findId .inputList.flex li label,
+.changeId .inputList.flex li h6,
+.changeId .inputList.flex li label,
+.changePw .inputList.flex li h6,
+.changePw .inputList.flex li label {
+  width: 9.0625rem;
+  min-width: auto;
+}
+
+.changeId .inputList,
+.changePw .inputList {
+  height: 23.125rem;
 }
 
 /* 프로젝트 등록 플로팅 */
@@ -3340,7 +3420,6 @@ table span.layerOpen {
 }
 table .dot {
   margin-right: 4px;
-  vertical-align: sub;
 }
 
 .listTop.flex {
@@ -3365,6 +3444,13 @@ table .dot {
 .listTop select,
 .listTop .select {
   margin-right: 0.625rem;
+}
+.listTop button {
+  width: auto;
+  line-height: 1.75rem;
+  padding: 0 0.375rem;
+  font-weight: 400;
+  font-size: 0.875rem;
 }
 
 .listBottom {
@@ -3839,14 +3925,6 @@ button + button.txtType, button + .button.txtType,
 .button + .button.txtType {
   margin-left: 0.9375rem;
 }
-button.auto,
-.button.auto {
-  width: auto;
-}
-button.lowSize,
-.button.lowSize {
-  line-height: 1.875rem;
-}
 button.xsSize,
 .button.xsSize {
   width: 2.8125rem;
@@ -4095,8 +4173,9 @@ button.need,
   background: #fff;
   border-color: #ff1236;
 }
-button.save,
-.button.save {
+button.save, button.send,
+.button.save,
+.button.send {
   color: #fff;
   background: #0460d2;
   border: 0;
@@ -4129,7 +4208,7 @@ span.button {
   display: inline-block;
   min-width: 2.75rem;
   height: 1.4375rem;
-  line-height: 1.375rem;
+  line-height: 1.3125rem;
   text-align: center;
   color: #666666;
   font-size: 0.75rem;
@@ -4271,6 +4350,7 @@ input[type=password]::placeholder {
 .hasBtn {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 .hasBtn.full {
   width: 100%;
@@ -4280,9 +4360,6 @@ input[type=password]::placeholder {
 }
 .hasBtn input {
   padding-left: 0.4375rem;
-}
-.hasBtn input + button {
-  margin-left: 0.4375rem;
 }
 .hasBtn .button,
 .hasBtn button {
@@ -7350,6 +7427,13 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   margin-right: 15px;
   vertical-align: middle;
 }
+.boxWrap.titType .head button {
+  width: auto;
+  line-height: 1.75rem;
+  padding: 0 0.375rem;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
 .boxWrap.titType .cont {
   padding: 1.875rem;
 }
@@ -8793,6 +8877,28 @@ h6 + .h6_sub {
   background: #e5effa;
 }
 
+.stepBox ul {
+  padding: 0 2.1875rem;
+}
+.stepBox li {
+  font-weight: bold;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  color: #949393;
+  background: #f5f6f9;
+  border-radius: 10px;
+}
+.stepBox li.is-active {
+  color: #000000;
+}
+.stepBox li + li {
+  margin-top: 1.125rem;
+}
+.stepBox li .round {
+  margin-left: 0.625rem;
+  vertical-align: initial;
+}
+
 .loginBox {
   width: 25rem;
   padding: 2.5rem 2.5rem 1.875rem 2.5rem;
@@ -9718,8 +9824,18 @@ h6 + .h6_sub {
   background: #fff;
   border: 1px solid #cccccc;
 }
+.recruitAdmin .projCont {
+  gap: 5px;
+}
 .recruitAdmin .projCont .alertToast {
   left: 20%;
+}
+.recruitAdmin .projCont button {
+  padding: 0 0.375rem;
+  width: auto;
+  line-height: 1.75rem;
+  font-weight: 400;
+  font-size: 0.875rem;
 }
 
 .chipBox {
