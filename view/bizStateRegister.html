@@ -296,8 +296,13 @@
                                                     <li class="tabBtn">
                                                         <a href="#onC-4" class="">+</a>
                                                     </li>
-                                                </ul>                                                
-                                                <button class="white smSize">+ 행추가</button>
+                                                </ul>      
+                                                <!--231115 수정-ys-->       
+                                                <!-- <button class="white smSize">+ 행추가</button>                                    -->
+                                                <button class="onlyIco midSize">
+                                                    <i class="ico addLine"></i>
+                                                </button>
+                                                <!--//231115 수정-ys-->
                                             </div>
                                             <!--//230915 수정-ys -->
                                             <div class="tabContWrap">
@@ -495,7 +500,19 @@
                                                         <a href="#onA-2" class="">투입현황</a><!--하단 jquery에서 id사용중-->
                                                     </li>                                                        
                                                 </ul>
-                                                <button class="white smSize">+ 행추가</button>
+                                                <!--231115 수정-ys-->    
+                                                <div class="suffix">                                                                                       
+                                                    <button class="onlyIco midSize none"><!--tab2 클릭시 none제거 script (하단)-->
+                                                        <i class="ico corporation"></i>
+                                                    </button>                                        
+                                                    <button class="onlyIco midSize">
+                                                        <i class="ico addLine"></i>
+                                                    </button>                                        
+                                                    <button class="onlyIco midSize none"><!--tab2 클릭시 none제거 script (하단)-->
+                                                        <i class="ico addLine_chked"></i>
+                                                    </button>
+                                                </div>   
+                                                <!--//231115 수정-ys-->
                                             </div>
                                             <!--//230915 수정-ys -->
                                             <div class="tabContWrap">
@@ -855,20 +872,35 @@
                                 </div>
 
                                 <!--하단테이블-->
-                                <div class="tabWrapper mt20" id="onActual">
-                                    <!--230915 수정-ys -->
-                                    <ul class="tabBtnWrap autoSize">
-                                        <li class="tabBtn">
-                                            <a href="#onAA2" class="is-active">투입현황</a>
+                                <div class="tabWrapper mt20" id="onActual">   
+                                    <!--231115 수정-ys-->          
+                                    <div class="flex">      
+                                        <!--230915 수정-ys -->
+                                        <ul class="tabBtnWrap autoSize">
+                                            <li class="tabBtn">
+                                                <a href="#onAA2" class="is-active">투입현황</a>
+                                            </li>
+                                        </ul>
+                                        <!--//230915 수정-ys -->
 
-                                            <button class="white smSize">+ 행추가</button>
-                                        </li>
-                                    </ul>
-                                    <!--//230915 수정-ys -->
+                                        <div class="suffix absol"><!--231115 하단에 있을때는 absol 추가-ys-->                                                                              
+                                            <button class="onlyIco midSize">
+                                                <i class="ico corporation"></i>
+                                            </button>                                        
+                                            <button class="onlyIco midSize">
+                                                <i class="ico addLine"></i>
+                                            </button>                                        
+                                            <button class="onlyIco midSize">
+                                                <i class="ico addLine_chked"></i>
+                                            </button>
+                                        </div>
+                                    </div>                 
+                                    <!--//231115 수정-ys-->
+
                                     <div class="tabContWrap">
                                         <div id="onAA2" class="tabCont is-active">
                                             <div class="flexTable flexLeft">
-                                                <div class="tableBox suffix">
+                                                <div class="tableBox suffix" style="width: 2000px;">
                                                     <table>
                                                         <thead>
                                                             <tr>
@@ -885,15 +917,15 @@
                                                                 <th rowspan="2">등급</th>
 
                                                                 <!--매출-->
-                                                                <th colspan="1" class="sales">매출<i class="ico extend sales"></i></th>
+                                                                <th colspan="6" class="sales">매출<i class="ico extend sales is-active"></i></th><!--231115 하단에 보일때는 모두 펼침-->
                                                                 <!--//매출-->
 
                                                                 <!--매입-->
-                                                                <th colspan="1" class="buy">매입 <i class="ico extend buy"></i></th>
+                                                                <th colspan="6" class="buy">매입 <i class="ico extend buy is-active"></i></th>
                                                                 <!--//매입-->
 
                                                                 <!--내부-->
-                                                                <th colspan="1" class="inner">내부 <i class="ico extend inner"></i></th>
+                                                                <th colspan="3" class="inner">내부 <i class="ico extend inner is-active"></i></th>
                                                                 <!--//내부-->
 
                                                                 <th rowspan="2" width="100px" class="fold">비고</th>
@@ -901,27 +933,27 @@
                                                             </tr>
                                                             <tr>
                                                                 <!--매출-->
-                                                                <th width="100px" class="fold hideS sales">시작일</th>
-                                                                <th width="100px" class="hideS sales">종료일</th>
-                                                                <th width="80px" class="sales">MM</th>
-                                                                <th class="hideS sales">단가</th>
-                                                                <th class="hideS sales">제경비</th>
-                                                                <th class="hideS sales">합계</th>
+                                                                <th width="100px" class="fold hideS sales on">시작일</th><!--231115 하단에 보일때는 모두 펼침-->
+                                                                <th width="100px" class="hideS sales on">종료일</th>
+                                                                <th width="80px" class="sales on">MM</th>
+                                                                <th class="hideS sales on">단가</th>
+                                                                <th class="hideS sales on">제경비</th>
+                                                                <th class="hideS sales on">합계</th>
                                                                 <!--//매출-->
 
                                                                 <!--매입-->
-                                                                <th width="100px" class="fold hideB buy">실투입</th>
-                                                                <th width="100px" class="hideB buy">종료일</th>
-                                                                <th width="80px" class="buy">MM</th>
-                                                                <th class="hideB buy">단가</th>
-                                                                <th class="hideB buy">제경비</th>
-                                                                <th width="100px" class="hideB buy">합계</th>
+                                                                <th width="100px" class="fold hideB buy on">실투입</th>
+                                                                <th width="100px" class="hideB buy on">종료일</th>
+                                                                <th width="80px" class="buy on">MM</th>
+                                                                <th class="hideB buy on">단가</th>
+                                                                <th class="hideB buy on">제경비</th>
+                                                                <th width="100px" class="hideB buy on">합계</th>
                                                                 <!--//매입-->
 
                                                                 <!--내부-->
-                                                                <th class="inner">거래</th>
-                                                                <th class="hideI inner">부서</th>
-                                                                <th class="hideI inner">이관매출</th>
+                                                                <th class="inner on">거래</th>
+                                                                <th class="hideI inner on">부서</th>
+                                                                <th class="hideI inner on">이관매출</th>
                                                                 <!--//내부-->
                                                             </tr>
                                                         </thead>
@@ -971,50 +1003,50 @@
 
                                                                 
                                                                 <!--매출-->
-                                                                <td class="fold hideS">
+                                                                <td class="fold hideS on">
                                                                     <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                 </td>
-                                                                <td class="hideS">
+                                                                <td class="hideS on">
                                                                     <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                 </td>
-                                                                <td class="fold offS">1.0</td>
-                                                                <td class="right hideS"><input type="text"></td>
-                                                                <td class="right hideS"><span class="underL">100,000</span></td>
-                                                                <td class="right hideS"><b class="dark">9,100,000</b></td>                                                                        
+                                                                <td class="offS on">1.0</td>
+                                                                <td class="right hideS on"><input type="text"></td>
+                                                                <td class="right hideS on"><span class="underL">100,000</span></td>
+                                                                <td class="right hideS on"><b class="dark">9,100,000</b></td>                                                                        
                                                                 <!--//매출-->
 
                                                                 
                                                                 <!--매입-->
-                                                                <td class="fold hideB">
+                                                                <td class="fold hideB on">
                                                                     <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                 </td>
-                                                                <td class="hideB">
+                                                                <td class="hideB on">
                                                                     <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                 </td>
-                                                                <td class="fold offB">1.0</td>
-                                                                <td class="right hideB">9,000,000</td>
-                                                                <td class="right hideB"><span class="underL">100,000</span></td>
-                                                                <td class="right hideB"><b class="dark">9,100,000</b></td>
+                                                                <td class="offB on">1.0</td>
+                                                                <td class="right hideB on">9,000,000</td>
+                                                                <td class="right hideB on"><span class="underL">100,000</span></td>
+                                                                <td class="right hideB on"><b class="dark">9,100,000</b></td>
                                                                 <!--//매입-->
 
                                                                 <!--내부-->
-                                                                <td class="fold">
+                                                                <td class="fold on">
                                                                     <select class="xxsSize" name="" id="">
                                                                         <option value="Y">Y</option>
                                                                         <option value="N">N</option>
                                                                     </select>
                                                                 </td>
-                                                                <td class="hideI">
+                                                                <td class="hideI on">
                                                                     <select name="" id="">
                                                                         <option value="1">플롯폼사업</option>
                                                                         <option value="2">미래융합사업</option>
                                                                     </select>
                                                                 </td>
-                                                                <td class="hideI"><input type="text"></td>
+                                                                <td class="hideI on"><input type="text"></td>
                                                                 <!-- <td class="right hideI"><span class="emp"> 1,000,000</span></td> -->
                                                                 <!--//내부-->
 
-                                                                <td class="fold">
+                                                                <td class="">
                                                                     <textarea rows="1"></textarea>
                                                                 </td>
                                                                 <td>
@@ -1064,50 +1096,50 @@
                                                                 </td>                                                                        
                                                             
                                                                 <!--매출-->
-                                                                <td class="fold hideS">
+                                                                <td class="fold hideS on">
                                                                     <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                 </td>
-                                                                <td class="hideS">
+                                                                <td class="hideS on">
                                                                     <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                 </td>
-                                                                <td class="fold offS">1.0</td>
-                                                                <td class="right hideS">100,000</td>
-                                                                <td class="right hideS"><span class="underL">0</span></td>
-                                                                <td class="right hideS"><b class="dark">9,100,000</b></td>                                                                        
+                                                                <td class="offS on">1.0</td>
+                                                                <td class="right hideS on">100,000</td>
+                                                                <td class="right hideS on"><span class="underL">0</span></td>
+                                                                <td class="right hideS on"><b class="dark">9,100,000</b></td>                                                                        
                                                                 <!--//매출-->
 
                                                                 
                                                                 <!--매입-->
-                                                                <td class="fold hideB">
+                                                                <td class="fold hideB on">
                                                                     <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                 </td>
-                                                                <td class="hideB">
+                                                                <td class="hideB on">
                                                                     <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                 </td>
-                                                                <td class="fold offB">1.0</td>
-                                                                <td class="right hideB"><input type="text" value="900,000"></td>
-                                                                <td class="right hideB"><button class="bdType xsSize">입력</button></td>
-                                                                <td class="right hideB"><b class="dark">9,100,000</b></td>
+                                                                <td class="offB on">1.0</td>
+                                                                <td class="right hideB on"><input type="text" value="900,000"></td>
+                                                                <td class="right hideB on"><button class="bdType xsSize">입력</button></td>
+                                                                <td class="right hideB on"><b class="dark">9,100,000</b></td>
                                                                 <!--//매입-->
 
                                                                 <!--내부-->
-                                                                <td class="fold">
+                                                                <td class="fold on">
                                                                     <select class="xxsSize" name="" id="">
                                                                         <option value="Y">Y</option>
                                                                         <option value="N">N</option>
                                                                     </select>
                                                                 </td>
-                                                                <td class="hideI">
+                                                                <td class="hideI on">
                                                                     <select name="" id="">
                                                                         <option value="1">플롯폼사업</option>
                                                                         <option value="2">미래융합사업</option>
                                                                     </select>
                                                                 </td>
-                                                                <td class="hideI"><input type="text"></td>
+                                                                <td class="hideI on"><input type="text"></td>
                                                                 <!-- <td class="right hideI"><span class="emp"> 1,000,000</span></td> -->
                                                                 <!--//내부-->
 
-                                                                <td class="fold">
+                                                                <td class="">
                                                                     <textarea rows="1"></textarea>
                                                                 </td>
                                                                 <td>
@@ -1120,21 +1152,21 @@
                                                                 <td colspan="8"></td>
                                                                                                                                         
                                                                 <!--매출-->
-                                                                <td colspan="2" class="hideS"></td>
+                                                                <td colspan="2" class="hideS on"></td>
                                                                 <td>4.00</td>
-                                                                <td class="right hideS">26,000,000</td>
-                                                                <td class="right hideS">760,000</td>
-                                                                <td class="right hideS"> 
+                                                                <td class="right hideS on">26,000,000</td>
+                                                                <td class="right hideS on">760,000</td>
+                                                                <td class="right hideS on"> 
                                                                     <b class="dark">267,600,000</b>
                                                                 </td>                                                                        
                                                                 <!--//매출-->
                                                                                                                                         
                                                                 <!--매입-->
-                                                                <td colspan="2" class="hideB"></td>
+                                                                <td colspan="2" class="hideB on"></td>
                                                                 <td>4.00</td>
-                                                                <td class="right hideB">26,000,000</td>
-                                                                <td class="right hideB">760,000</td>
-                                                                <td class="right hideB"> 
+                                                                <td class="right hideB on">26,000,000</td>
+                                                                <td class="right hideB on">760,000</td>
+                                                                <td class="right hideB on"> 
                                                                     <b class="dark">267,600,000</b>
                                                                     <br>
                                                                     <b class="marked">(32,400,000)</b>
@@ -1143,7 +1175,7 @@
 
                                                                 <!--내부n 231101 수정-->
                                                                 <td></td>
-                                                                <td colspan="2" class="hideI"></td>
+                                                                <td colspan="2" class="hideI on"></td>
                                                                 <!--//내부-->
 
                                                                 <td colspan="2"></td>
@@ -3324,13 +3356,18 @@
             }
         });
 
-        //2. 탭바뀔때 table 사이즈
+        //2. 탭바뀔때 table 사이즈 - 231115 수정
         $("a").on("click", function(e){
             let tabHref = e.target.getAttribute('href');
             let firTh = $('tr:first-child th');
 
+            let addBtn = $('button').has('.addLine_chked');
+            let corBtn = $('button').has('.corporation');
+
             if(tabHref === '#onA-1'){
-                $(this).parents('.flexLeft .suffix').css('width', "775px");
+                $(this).parents('.flexLeft .suffix').css('width', "775px");   
+                $(addBtn).addClass('none');
+                $(corBtn).addClass('none');
             }else if(tabHref === '#onA-2'){
                 $(this).parents('.flexLeft .suffix').css('width', "1200px");
                 $("#onA-2").find('.extend').parent('th').addClass('fold');
@@ -3338,9 +3375,10 @@
                 $("#onA-2").find('.fold').removeClass('is-active');
                 $("#onA-2").find('.hideS').removeClass('on');
                 $("#onA-2").find('.hideB').removeClass('on');
-                $("#onA-2").find('.hideI').removeClass('on');         
+                $("#onA-2").find('.hideI').removeClass('on');      
+                $(addBtn).removeClass('none');
+                $(corBtn).removeClass('none');
                 
-                console.log(firTh);
                 $(firTh).attr('colspan', '1');
             }
         })
