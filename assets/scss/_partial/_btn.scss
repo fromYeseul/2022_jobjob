@@ -307,7 +307,22 @@ span{
     padding: 0 rem(6);
     background: $tableBorder;
     border-radius: rem(20);
-    border: 0;
+    border: 0;    
+    &.scround{
+        padding: 0;
+        min-width: auto;
+        width: rem(23);
+        line-height: rem(17);
+        height: rem(17);
+        font-size: rem(10);
+        color: $white;
+        border-radius: rem(5); 
+        background: $mainColor;
+    }
+    &.updated{
+        color: $white;
+        background: $highlight;
+    }
 }
 .point{
     display: inline-block;

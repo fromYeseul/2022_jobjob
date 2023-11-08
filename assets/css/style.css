@@ -742,7 +742,7 @@ header {
 .contWrapper .contLayout .projReqList, .contWrapper .contLayout .genMember, .contWrapper .contLayout .projProgList, .contWrapper .contLayout .sendHistory,
 .contWrapper .contLayout .recruitList, .contWrapper .contLayout .recruitAdmin, .contWrapper .contLayout .recruitDetail,
 .contWrapper .contLayout .sendedOfferList, .contWrapper .contLayout .sendedOfferDetail, .contWrapper .contLayout .talentedSearch,
-.contWrapper .contLayout .clientBuy, .contWrapper .contLayout .clientSales, .contWrapper .contLayout .bizState {
+.contWrapper .contLayout .clientBuy, .contWrapper .contLayout .clientSales, .contWrapper .contLayout .bizState, .contWrapper .contLayout .resumeList {
   height: calc(100vh - 60px);
   padding: 1.875rem 1.875rem;
   overflow-y: auto;
@@ -4222,6 +4222,21 @@ span.button {
   background: #dddddd;
   border-radius: 1.25rem;
   border: 0;
+}
+.label.scround {
+  padding: 0;
+  min-width: auto;
+  width: 1.4375rem;
+  line-height: 1.0625rem;
+  height: 1.0625rem;
+  font-size: 0.625rem;
+  color: #fff;
+  border-radius: 0.3125rem;
+  background: #0460d2;
+}
+.label.updated {
+  color: #fff;
+  background: #009ce0;
 }
 
 .point {
@@ -8631,6 +8646,7 @@ h6 + .h6_sub {
   border: 1px solid #cccccc;
 }
 .accBox.is-active {
+  padding-bottom: 0;
   border: 1px solid #0460d2;
 }
 .accBox.is-active i.smPlus {
@@ -8774,7 +8790,8 @@ h6 + .h6_sub {
   width: 3.875rem;
   color: #a6a6b6;
 }
-.innerList .innerProj {
+.innerList .innerProj,
+.innerList .innerResume {
   width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -9772,6 +9789,74 @@ h6 + .h6_sub {
 }
 .memRegister .empty {
   grid-column: 7/9;
+}
+
+.resumeList {
+  width: 100%;
+}
+.resumeList .tableTop {
+  margin-top: 3.75rem;
+}
+.resumeList .accWrap {
+  margin-top: 0.625rem;
+}
+.resumeList .accBox.is-active .accHead {
+  padding-bottom: 0.3125rem;
+}
+.resumeList .accHead .prefix {
+  gap: 25px;
+  font-weight: 700;
+}
+.resumeList .accHead .prefix label {
+  margin-right: 4px;
+  vertical-align: -2px;
+}
+.resumeList .accHead .suffix {
+  color: #999;
+}
+.resumeList .accHead .suffix .suffix {
+  width: 6.875rem;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.resumeList .accHead .suffix .onlyIco {
+  margin-left: 0;
+}
+.resumeList .innerList {
+  padding: 0.75rem 1.5625rem;
+  cursor: initial;
+}
+.resumeList .innerList:hover {
+  background: #e5effa;
+}
+.resumeList .innerList + .innerList {
+  border-top: 1px solid #dbdbdb;
+}
+.resumeList .innerList .prefix .tag {
+  width: 2.1875rem;
+}
+.resumeList .innerList .prefix .tag .label {
+  vertical-align: 3px;
+}
+.resumeList .innerList .prefix .innerResume {
+  color: #0460d2;
+  font-size: 0.875rem;
+}
+.resumeList .innerList .suffix input {
+  width: 42.8125rem;
+  height: 2.125rem;
+}
+.resumeList .innerList .suffix .record {
+  width: 6.875rem;
+  text-align: center;
+}
+.resumeList .innerList .suffix .record .label {
+  margin-right: 0;
+  width: 5.5rem;
+}
+.resumeList .innerList .suffix .record .sOrder {
+  font-size: 0.8125rem;
 }
 
 .sendHistory {

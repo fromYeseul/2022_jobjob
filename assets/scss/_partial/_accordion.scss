@@ -131,6 +131,7 @@
     border:1px solid $layoutColor;
     // overflow: hidden;  
     &.is-active{
+        padding-bottom: 0;
         border:1px solid $mainColor;
         i.smPlus{
             height: rem(2);
@@ -177,12 +178,12 @@
         font-size: rem(17);
         line-height: 1.2;
         cursor: pointer;
-            .round{
-                // margin-right: rem(10);
-                // margin-top: 2px;
-                width: rem(62);
-                color: $cancel;
-            }
+        .round{
+            // margin-right: rem(10);
+            // margin-top: 2px;
+            width: rem(62);
+            color: $cancel;
+        }
         i{
             margin-right: 4px;
         }
@@ -279,7 +280,8 @@
             color: $cancel;
         }
     }
-    .innerProj{
+    .innerProj,
+    .innerResume{
         @include ellipsis;
         // width: 84%;
         width: auto;
