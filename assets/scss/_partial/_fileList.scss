@@ -45,3 +45,35 @@
         margin-top: rem(35);
     }
 }
+
+.uploadList{
+    ul{
+        padding-right: rem(10);
+        height: rem(180);
+        overflow-y: scroll;
+    }
+    li{
+        height: rem(56);
+        @include sideArray;
+        gap: 25px;
+        border-bottom: 1px solid $layoutColor;
+        input[type=checkbox]{
+            & + label{
+                margin-bottom: 0;
+            }
+        }
+        .ellipsis{
+            width: 60%;
+            a{
+                color: $mainColor;
+            }
+        }
+        .upHis{
+            width: rem(180);
+            color: $highlight;
+        }
+    }
+    & + .btnType{
+        margin-top: rem(22);
+    }
+}

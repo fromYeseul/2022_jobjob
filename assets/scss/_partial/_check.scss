@@ -139,7 +139,7 @@ input[type=radio]{
                 border-radius: 50%;
                 background: $white;
                 position: absolute;
-                left: 24px;  
+                left: 4px;  
                 top: 3px;  
                 transform: translateX(0);
                 transition: all .3s ease ;
@@ -155,7 +155,7 @@ input[type=radio]{
                 }            
                 &::after{
                     background: $white;
-                    transform: translateX(-20px);
+                    transform: translateX(20px);
                 }
             }
             &:disabled{
@@ -173,6 +173,25 @@ input[type=radio]{
                 color: $inputGray;
                 background:$inputDisable;
                 cursor: not-allowed;
+            }
+        }
+        &.wide{
+            & + label{
+                &::before{
+                    width: 74px;
+                    background-image: url(../img/bgSwitch_wide_off.png);
+                }   
+            }
+            &:checked{
+                & + label{  
+                    &::before{
+                        width: 74px;
+                        background-image: url(../img/bgSwitch_wide_on.png);
+                    }          
+                    &::after{
+                        transform: translateX(49px);
+                    }
+                }
             }
         }
     }

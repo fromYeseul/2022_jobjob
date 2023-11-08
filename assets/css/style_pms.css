@@ -737,6 +737,12 @@ button.rBdType:disabled, button.rBdType.disabled,
 .button.rBdType.disabled {
   opacity: 0.5;
 }
+button.onlyIco.midSize,
+.button.onlyIco.midSize {
+  width: 1.875rem;
+  line-height: 1.875rem;
+  height: 1.875rem;
+}
 button.save,
 .button.save {
   background: #2a55aa;
@@ -971,12 +977,23 @@ table tfoot td {
 .bizStateRegister .boxWrap.flex {
   gap: 40px;
 }
+.bizStateRegister .tabWrapper {
+  position: relative;
+}
 .bizStateRegister .tabWrapper.mt20 .tabBtn button {
   margin-left: 40.3125rem;
 }
 .bizStateRegister .tabWrapper .flex {
   justify-content: space-between;
   align-items: center;
+}
+.bizStateRegister .tabWrapper .suffix {
+  display: flex;
+}
+.bizStateRegister .tabWrapper .suffix.absol {
+  position: absolute;
+  top: 0;
+  left: 510px;
 }
 .bizStateRegister .tabBtnWrap .tabBtn {
   line-height: 2.125rem;

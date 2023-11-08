@@ -365,7 +365,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .none {
-  display: none;
+  display: none !important;
 }
 
 .is-hidden {
@@ -2989,6 +2989,10 @@ footer.toast button + button {
   width: 8.75rem;
   background-color: #fff;
 }
+.condition > ul li input[type=text].xsSize {
+  width: 8.125rem;
+  height: 2.75rem;
+}
 .condition > ul li input[type=text].smSize {
   width: 15.625rem;
 }
@@ -5032,6 +5036,15 @@ input[type=file] {
   align-items: flex-end;
 }
 
+label.btnType {
+  line-height: 2.75rem;
+  padding: 0 0.9375rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  color: #0460d2;
+  border: 1px solid #0460d2;
+}
+
 /* 칩타입 */
 .inputObj {
   display: inline-block;
@@ -5459,7 +5472,7 @@ input[type=radio].chkSwitch + label::after {
   border-radius: 50%;
   background: #fff;
   position: absolute;
-  left: 24px;
+  left: 4px;
   top: 3px;
   transform: translateX(0);
   transition: all 0.3s ease;
@@ -5474,7 +5487,7 @@ input[type=radio].chkSwitch:checked + label::before {
 input[type=checkbox].chkSwitch:checked + label::after,
 input[type=radio].chkSwitch:checked + label::after {
   background: #fff;
-  transform: translateX(-20px);
+  transform: translateX(20px);
 }
 input[type=checkbox].chkSwitch:checked:disabled,
 input[type=radio].chkSwitch:checked:disabled {
@@ -5494,6 +5507,20 @@ input[type=radio].chkSwitch:disabled + label {
   color: #cccccc;
   background: #f8f8f8;
   cursor: not-allowed;
+}
+input[type=checkbox].chkSwitch.wide + label::before,
+input[type=radio].chkSwitch.wide + label::before {
+  width: 74px;
+  background-image: url(../img/bgSwitch_wide_off.png);
+}
+input[type=checkbox].chkSwitch.wide:checked + label::before,
+input[type=radio].chkSwitch.wide:checked + label::before {
+  width: 74px;
+  background-image: url(../img/bgSwitch_wide_on.png);
+}
+input[type=checkbox].chkSwitch.wide:checked + label::after,
+input[type=radio].chkSwitch.wide:checked + label::after {
+  transform: translateX(49px);
 }
 
 /* 버튼타입 체크박스 */
@@ -5982,6 +6009,36 @@ input[type=radio]:disabled + label {
 }
 .fileBox.fileBox {
   margin-top: 2.1875rem;
+}
+
+.uploadList ul {
+  padding-right: 0.625rem;
+  height: 11.25rem;
+  overflow-y: scroll;
+}
+.uploadList li {
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border-bottom: 1px solid #cccccc;
+}
+.uploadList li input[type=checkbox] + label {
+  margin-bottom: 0;
+}
+.uploadList li .ellipsis {
+  width: 60%;
+}
+.uploadList li .ellipsis a {
+  color: #0460d2;
+}
+.uploadList li .upHis {
+  width: 11.25rem;
+  color: #009ce0;
+}
+.uploadList + .btnType {
+  margin-top: 1.375rem;
 }
 
 select {
@@ -6826,6 +6883,9 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   vertical-align: middle;
   background-image: url(../img/icoGroup.png);
 }
+.ico.disabled {
+  cursor: not-allowed !important;
+}
 .ico.search {
   width: 1.125rem;
   height: 1.125rem;
@@ -7054,6 +7114,21 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 0.75rem;
   height: 0.125rem;
   background-position: -40px -180px;
+}
+.ico.addLine {
+  width: 1.125rem;
+  height: 0.9375rem;
+  background-position: -160px -260px;
+}
+.ico.addLine_chked {
+  width: 0.875rem;
+  height: 0.875rem;
+  background-position: -180px -260px;
+}
+.ico.corporation {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  background-position: -160px -240px;
 }
 .ico.reduce {
   width: 1.125rem;
@@ -7436,6 +7511,9 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .boxWrap.titType .cont {
   padding: 1.875rem;
+}
+.boxWrap h5 {
+  font-weight: 500;
 }
 
 .boxList {
@@ -7924,6 +8002,10 @@ h4 .dNear {
 
 h5 {
   font-size: 1rem;
+}
+h5 + .h5_sub {
+  color: #aaa;
+  margin-left: 1.25rem;
 }
 
 h6 {
@@ -9632,6 +9714,9 @@ h6 + .h6_sub {
 }
 .memRegister .flexEnd + .flexCenter {
   margin-top: -20px;
+}
+.memRegister .uploadList {
+  margin-top: 0.9375rem;
 }
 .memRegister .inputGroup {
   height: 4.375rem;
