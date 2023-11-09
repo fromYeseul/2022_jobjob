@@ -970,10 +970,6 @@ table tfoot td {
 .bizStateRegister .boxWrap > .suffix {
   width: 48.4375rem;
 }
-.bizStateRegister .boxWrap > .prefix .tabBtn a,
-.bizStateRegister .boxWrap > .suffix .tabBtn a {
-  border-radius: 4px 4px 0 0;
-}
 .bizStateRegister .boxWrap.flex {
   gap: 40px;
 }
@@ -1012,10 +1008,13 @@ table tfoot td {
 .bizStateRegister .tableTop .hasTooltip .tooltip {
   top: 150%;
 }
-.bizStateRegister table input[type=text] {
+.bizStateRegister table input[type=text],
+.bizStateRegister table input[type=number] {
+  padding: 0.5rem 0.25rem;
   background: #fff;
 }
-.bizStateRegister table input[type=text].dateType {
+.bizStateRegister table input[type=text].dateType,
+.bizStateRegister table input[type=number].dateType {
   padding: 0.125rem;
   text-align: center;
   background: #fff;
@@ -1047,6 +1046,33 @@ table tfoot td {
 }
 .bizStateRegister table tr:nth-child(2) th.inner {
   background: #7d8da0;
+}
+
+#bsDetail1 tbody,
+#bsDetail1 tfoot {
+  font-size: 0.8125rem;
+}
+#bsDetail1 tbody input,
+#bsDetail1 tbody select,
+#bsDetail1 tfoot input,
+#bsDetail1 tfoot select {
+  font-size: 0.8125rem;
+}
+#bsDetail1 tbody input.txtRight,
+#bsDetail1 tbody select.txtRight,
+#bsDetail1 tfoot input.txtRight,
+#bsDetail1 tfoot select.txtRight {
+  font-size: 0.75rem;
+}
+#bsDetail1 tbody input::placeholder,
+#bsDetail1 tbody select::placeholder,
+#bsDetail1 tfoot input::placeholder,
+#bsDetail1 tfoot select::placeholder {
+  font-size: 0.8125rem;
+}
+#bsDetail1 tbody .ellipsis,
+#bsDetail1 tfoot .ellipsis {
+  font-size: 0.75rem;
 }
 
 .flexLeft {

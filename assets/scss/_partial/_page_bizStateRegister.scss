@@ -71,11 +71,11 @@
         >.prefix,
         >.suffix{
             width: rem(775);
-            .tabBtn{
-                a{
-                    border-radius: 4px 4px 0 0;
-                }
-            }
+            // .tabBtn{
+            //     a{
+            //         border-radius: 4px 4px 0 0;
+            //     }
+            // }
         }
         &.flex{
             gap: 40px;
@@ -131,7 +131,9 @@
 
     table{
         //pms
-        input[type=text]{
+        input[type=text],
+        input[type=number]{
+            padding: rem(8) rem(4);
             background: $white; //11.01추가
             // text-align : right; //11.01추가
             &.dateType{  
@@ -197,6 +199,26 @@
     }
 }
 
+//2.계약현황 요청 css
+#bsDetail1{
+    tbody,
+    tfoot{
+        font-size: rem(13);
+        input,
+        select{
+            font-size: rem(13);
+            &.txtRight{
+                font-size: rem(12);
+            }
+            &::placeholder{
+                font-size: rem(13);
+            }
+        }
+        .ellipsis{
+            font-size: rem(12);
+        }
+    }    
+}
 
 
 .flexLeft{

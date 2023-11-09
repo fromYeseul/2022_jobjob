@@ -113,7 +113,7 @@
                     
                     <div class="regiPartWrapper">  
                         
-                        <div class="regiPart" id="bizStateRegi0">
+                        <div class="regiPart" id="bsDetail0">
                             <h3>1. 기본정보</h3>
                             
                             <div class="boxWrap hasTooltip">                                
@@ -167,14 +167,14 @@
                                             <input class="dateType" type="text" placeholder="종료일">
                                         </li>
                                         <li>
-                                            <h6 class="need">검수</h6>
+                                            <h6 class="">검수</h6><!--231115 need제거-ys-->
                                             <select class="full" name="" id="">
                                                 <option value="">Y</option>
                                                 <option value="">N</option>
                                             </select>
                                         </li>
                                         <li>
-                                            <h6 class="need">계약상태</h6>
+                                            <h6 class="">계약상태</h6><!--231115 need제거-ys-->
                                             <select class="full redOpt" name="" id=""><!--미계약/변경미계약 선택시 red컬러 (하단 script)-->
                                                 <option value="0">발주서</option>
                                                 <option value="1">미계약</option>
@@ -182,7 +182,7 @@
                                             </select>
                                         </li>
                                         <li>
-                                            <h6 class="need">턴키</h6>
+                                            <h6 class="">턴키</h6><!--231115 need제거-ys-->
                                             <input id="s2" type="checkbox" class="chkSwitch">
                                             <label for="s2" class="mt10"></label>
                                         </li> 
@@ -258,7 +258,7 @@
                             </div>
                         </div>   
 
-                        <div class="regiPart" id="bizStateRegi1">
+                        <div class="regiPart" id="bsDetail1">
                             <h3>2. 계약 현황</h3>
                             <div class="boxWrap">
                                 <div class="flexLeft">
@@ -362,7 +362,9 @@
                                                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                                                     <td>1.0</td>
-                                                                    <td class="right">8,000,000</td>
+                                                                    <td class="right">
+                                                                        <input type="text" class="txtRight" value="10,000" disabled="">
+                                                                    </td>
                                                                     <td class="right">200,000</td>
                                                                     <td class="right">8,200,000</td>
                                                                     <td><i class="ico delete_bg"></i></td>
@@ -591,13 +593,13 @@
                                                                             <input type="checkbox" id="tt3">
                                                                             <label for="tt3"></label>
                                                                         </th>
-                                                                        <th rowspan="2">그룹</th>
-                                                                        <th rowspan="2">계약상태</th>
-                                                                        <th rowspan="2">상태</th>
-                                                                        <th rowspan="2">소속/부서</th>
-                                                                        <th rowspan="2">투입인력</th>
-                                                                        <th rowspan="2">직무/모듈</th>
-                                                                        <th rowspan="2">등급</th>
+                                                                        <th rowspan="2" width="90px">그룹</th>
+                                                                        <th rowspan="2" width="105px">계약상태</th>
+                                                                        <th rowspan="2" width="85x">상태</th>
+                                                                        <th rowspan="2" width="120px">소속/부서</th>
+                                                                        <th rowspan="2" width="95px">투입인력</th>
+                                                                        <th rowspan="2" width="120px">직무/모듈</th>
+                                                                        <th rowspan="2" width="85px">등급</th>
 
                                                                         <th colspan="1" class="fold sales">매출<i class="ico extend sales"></i></th>
                                                                         <th colspan="1" class="fold buy">매입 <i class="ico extend buy"></i></th>
@@ -1193,7 +1195,7 @@
                             </div>
                         </div>
 
-                        <div class="regiPart" id="bizStateRegi2">
+                        <div class="regiPart" id="bsDetail2">
                             <h3>3. 계약 목록</h3>
                             <div class="boxWrap flex"><!--231101 수정-ys-->
                                 <div class="prefix tableSort">
@@ -1478,7 +1480,7 @@
                             </div>
                         </div>
 
-                        <div class="regiPart" id="bizStateRegi3">
+                        <div class="regiPart" id="bsDetail3">
                             <h3>4. 청구/입금스케줄</h3>
                             <div class="boxWrap flex"><!--231101 수정-ys-->
                                 <div class="prefix tableSort">     
@@ -1500,7 +1502,7 @@
                                             </select>
                                         </div>
                                         <div class="suffix">
-                                            <button class="smSize" type="button">수정</button>
+                                            <button class="smSize" type="button">생성</button>
                                         </div>
                                     </div>
                                     <div class="tableBox">
@@ -2637,7 +2639,7 @@
     <!--//인력검색-->
 
     <!--청구스케줄, 입금스케줄 팝업-->
-    <div id="" class="modalLayer center">
+    <div id="" class="modalLayer center is-active">
         <div class="layerBox mid-laSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -2674,48 +2676,53 @@
                             <option value="cat">30일</option>
                         </select>
 
+                        <input type="text" class="lowSize">
                         <button class="smSize">적용</button>
                     </div>
                     <div class="suffix">
                         <button type="button" class="onlyIco smSize"><i class="ico smPlus"></i></button>
                         청구회차 추가
-                        <button class="bdType mid-lowSize">청구스케줄동기화</button>
+                        <!-- 231115 삭제 <button class="bdType mid-lowSize">청구스케줄동기화</button> -->
                     </div>                   
                 </div>
                 <div class="">     
                     <!--thead 고정용 table-->
                     <div class="tableBox">
                         <table class="hasInput">
+                            <!-- 231115 수정-ys -->
                             <thead>
                                 <tr>
-                                    <th width="140px">청구회차</th>
-                                    <th width="148px">청구일자</th>
-                                    <th width="148px">청구금액</th>
-                                    <th width="148px">계산서발행</th>
-                                    <th width="148px">검수일자</th>
+                                    <th width="140px" colspan="2">청구회차</th>
+                                    <!-- 231115 삭제 <th width="148px">청구일자</th> -->
+                                    <th width="160px">청구금액</th>
+                                    <th width="180px">계산서발행</th>
+                                    <th width="180px">검수일자</th>
                                     <th width="120px">분배율(%)</th>
                                     <th>비고</th>
-                                    <th width="50px">삭제</th>
+                                    <th width="70px">삭제</th>
                                 </tr>
                             </thead>
+                            <!-- //231115 수정-ys -->
                         </table>
                     </div>
                     <!--thead 고정용 table-->
                         
                     <div class="tableBox absolBody">    
                         <table class="hasInput">
+                            <!-- 231115 수정-ys -->
                             <colgroup>
                                 <col width="4%">
-                                <col width="10%">
-                                <col width="15%">
-                                <col width="15%">
-                                <col width="15%">
-                                <col width="15%">
-
                                 <col width="12%">
-                                <col width="24%">
+                                <col width="16%">
+                                <col width="18%">
+                                <col width="18%">
+
+                                <!-- <col width="18%"> -->
+                                <col width="15%">
+                                <col width="30%">
                                 <col width="5%">
                             </colgroup>
+                            <!-- //231115 수정-ys -->
                             <tbody>
                                 <tr>
                                     <th>1회</th>
@@ -2723,7 +2730,7 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
+                                    <!-- 231115 삭제 <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td> -->
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2737,7 +2744,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2751,7 +2757,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2765,7 +2770,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2779,7 +2783,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2793,7 +2796,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2807,7 +2809,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2821,7 +2822,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2835,7 +2835,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2849,7 +2848,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2863,7 +2861,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2877,7 +2874,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2891,7 +2887,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -2905,7 +2900,6 @@
                                       <input type="checkbox" id="chargeClear" class="hasTxt">
                                       <label for="chargeClear">청구완료</label>
                                     </th>
-                                    <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td class="txtRight">1,000,000</td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
                                     <td><input class="dateType" type="text" placeholder="연도 - 월 - 일" id=""></td>
@@ -3351,11 +3345,19 @@
             let buyOn = $('.extend.buy').hasClass('is-active');
             let innerOn = $('.extend.inner').hasClass('is-active');
 
+            console.log(salesOn);
+            console.log(buyOn);
+            console.log(innerOn);
             if(salesOn === true && buyOn === true && innerOn === true){
+                console.log(salesOn);
+                console.log(buyOn);
+                console.log(innerOn);
                 $(this).parents('.flexLeft .suffix').css('width', "2100px");
-            }else if(salesOn !== true && buyOn !== true && innerOn !== true){     
+            }else if(salesOn !== true && buyOn !== true && innerOn !== true){ 
+                console.log('false');    
                 $(this).parents('.flexLeft .suffix').css('width', "1200px");
             }else if(salesOn === true || buyOn === true || innerOn === true){
+                console.log('trueOrfalse');
                 $(this).parents('.flexLeft .suffix').css('width', "1800px");
             }
         });
