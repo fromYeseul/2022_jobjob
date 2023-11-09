@@ -589,6 +589,7 @@
                                                                 <!--231101 수정-ys -->
                                                                 <thead>
                                                                     <tr>
+                                                                        <!--231115 수정-ys-->
                                                                         <th rowspan="2" width="30px">
                                                                             <input type="checkbox" id="tt3">
                                                                             <label for="tt3"></label>
@@ -600,6 +601,7 @@
                                                                         <th rowspan="2" width="95px">투입인력</th>
                                                                         <th rowspan="2" width="120px">직무/모듈</th>
                                                                         <th rowspan="2" width="85px">등급</th>
+                                                                        <!--//231115 수정-ys-->
 
                                                                         <th colspan="1" class="fold sales">매출<i class="ico extend sales"></i></th>
                                                                         <th colspan="1" class="fold buy">매입 <i class="ico extend buy"></i></th>
@@ -3341,23 +3343,17 @@
 
         //2. table 축소,확장시 너비 조절
         $(".extend").on("click", function(){
-            let salesOn = $('.extend.sales').hasClass('is-active');
-            let buyOn = $('.extend.buy').hasClass('is-active');
-            let innerOn = $('.extend.inner').hasClass('is-active');
-
-            console.log(salesOn);
-            console.log(buyOn);
-            console.log(innerOn);
+            let salesOn = $('#onA-2 .extend.sales').hasClass('is-active');
+            let buyOn = $('#onA-2 .extend.buy').hasClass('is-active');
+            let innerOn = $('#onA-2 .extend.inner').hasClass('is-active');
+            // let salesOn = $('.extend.sales').hasClass('is-active');
+            // let buyOn = $('.extend.buy').hasClass('is-active');
+            // let innerOn = $('.extend.inner').hasClass('is-active');
             if(salesOn === true && buyOn === true && innerOn === true){
-                console.log(salesOn);
-                console.log(buyOn);
-                console.log(innerOn);
                 $(this).parents('.flexLeft .suffix').css('width', "2100px");
             }else if(salesOn !== true && buyOn !== true && innerOn !== true){ 
-                console.log('false');    
                 $(this).parents('.flexLeft .suffix').css('width', "1200px");
             }else if(salesOn === true || buyOn === true || innerOn === true){
-                console.log('trueOrfalse');
                 $(this).parents('.flexLeft .suffix').css('width', "1800px");
             }
         });
