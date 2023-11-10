@@ -1100,6 +1100,13 @@
         grid-column: 1/4;
         &.basic{
             grid-column: 2/5;
+            .info{                
+                display: flex;
+                gap: 5px;
+                input{
+                    flex-grow: 1;
+                }
+            }
         }
     }
     .conAdmin{
@@ -1112,7 +1119,7 @@
         grid-column: 1/5;
     }
     .dateType{
-        width: rem(110) !important;
+        width: rem(114) !important;
     }
     .range{
         margin: 0 4px;

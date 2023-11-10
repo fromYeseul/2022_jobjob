@@ -1,18 +1,22 @@
-//pms
-$headerSub : #a2bce2;
-
-$gnbTxt : #646464;
-
-
-
-
-
 
 //메인컬러
 $mainColor : #0460d2;
 $bgColor : #f2f2f7;
 $layoutColor : #cccccc;
 //$layoutColor : #ff0000;
+
+$gradiTop: $mainColor;
+$gradiMid: #1983cb;
+$gradiBom: #47b892;
+
+
+$gradient: $gradiTop, $gradiMid, $gradiBom; 
+@mixin gradient($direction, $gradient) { 
+    background: -webkit-linear-gradient($direction, $gradient);
+    background: -moz-linear-gradient($direction, $gradient);
+    background: -o-linear-gradient($direction, $gradient);
+    background: linear-gradient($direction, $gradient);  
+}
 
 //상태컬러
 $error : #ff1236;
@@ -58,6 +62,7 @@ $accPrefixGray : #4b4b4b;
 $accSuffixGray : #676767;
 $addHeadGray : #999;
 $accBorderBottom : #b6b6b6;
+$accListBorder : #dbdbdb;
 $accDate : #b0a6b6;
 $projBox : #e3e3e7;
 $projBoxBorder : #dcdcdc;
@@ -136,6 +141,7 @@ $copyRight : #9c9b9b;
 
 //---------pms--------//
 $header_pms : #205391;
+$headerSub : #a2bce2;
 $mainColor_pms : #2a55aa;
 
 $loginBg_pms : #f8f8f8;
