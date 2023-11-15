@@ -148,7 +148,7 @@ $btnBd_pms: #3a6ccf;
 $tab_pms : #2a55aa;
 
 $th_pms : #8c98a6;
-$bodyTh_pms : #f5f5f5;
+$bodyTh_pms : #e2eaf5; //f5f5f5 -> #e2eaf5
 $tfoot_pms : #eee;
 
 $thSales_pms : #61519f;
@@ -239,15 +239,17 @@ $highlight_pms : #5aa2ef;
         background: $cancel;
     }
 }
-.sReject,
+.sReject{
+    color: $delay; 
+}
 .sDanger{
-    color: $delay;
+    color: $black; 
     .dot{
         background: $delay;
     }
 }
 .sSafe{
-    color: $safe;
+    color: $black;
     .dot{
         background: $safe;
     }
