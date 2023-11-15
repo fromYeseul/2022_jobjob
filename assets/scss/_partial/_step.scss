@@ -1,0 +1,24 @@
+
+.stepBox{
+    ul{
+        padding: 0 rem(35);
+    }
+    li{
+        font-weight: bold;
+        padding: rem(20) rem(24);    
+        text-align: left;
+        color: $stepTxt;
+        background: $stepBg;
+        border-radius: 10px;
+        &.is-active{
+            color: $black;
+        }
+        & + li{
+            margin-top: rem(18);
+        }
+        .round{
+            margin-left: rem(10);
+            vertical-align: initial;
+        }
+    }
+}

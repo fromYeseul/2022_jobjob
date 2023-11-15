@@ -71,17 +71,18 @@
         >.prefix,
         >.suffix{
             width: rem(775);
-            .tabBtn{
-                a{
-                    border-radius: 4px 4px 0 0;
-                }
-            }
+            // .tabBtn{
+            //     a{
+            //         border-radius: 4px 4px 0 0;
+            //     }
+            // }
         }
         &.flex{
             gap: 40px;
         }
     }
     .tabWrapper{
+        position: relative;
         &.mt20{
             .tabBtn{
                 button{
@@ -92,6 +93,14 @@
         .flex{
             justify-content: space-between;
             align-items: center;
+        }
+        .suffix{
+            display: flex;
+            &.absol{
+                position: absolute;
+                top: 0;
+                left: 510px;
+            }
         }
     }
     .tabBtnWrap{
@@ -122,7 +131,9 @@
 
     table{
         //pms
-        input[type=text]{
+        input[type=text],
+        input[type=number]{
+            padding: rem(8) rem(4);
             background: $white; //11.01추가
             // text-align : right; //11.01추가
             &.dateType{  
@@ -144,19 +155,19 @@
     }
     
 
-     
-    button{
-        &.smSize,
-        &.midSize,
-        &.save{
-            background: $mainColor_pms;
-            border: 1px solid $mainColor_pms;
-        }
-        &.white{
-            background: $white;
-            border: 1px solid $inputGray;
-        }
-    }
+    //231201
+    // button{
+    //     &.smSize,
+    //     &.midSize,
+    //     &.save{
+    //         background: $mainColor_pms;
+    //         border: 1px solid $mainColor_pms;
+    //     }
+    //     &.white{
+    //         background: $white;
+    //         border: 1px solid $inputGray;
+    //     }
+    // }
     .tabBtnWrap{
         .tabBtn{
             a{
@@ -193,6 +204,26 @@
     }
 }
 
+//2.계약현황 요청 css
+#bsDetail1{
+    tbody,
+    tfoot{
+        font-size: rem(13);
+        input,
+        select{
+            font-size: rem(13);
+            &.txtRight{
+                font-size: rem(12);
+            }
+            &::placeholder{
+                font-size: rem(13);
+            }
+        }
+        .ellipsis{
+            font-size: rem(12);
+        }
+    }    
+}
 
 
 .flexLeft{

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인</title>
+    <title>로그인 | 가입신청</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
@@ -43,7 +43,7 @@
     </section>
 
     <!--가입신청 팝업-->
-    <div id="recruitJob" class="modalLayer center is-active">
+    <div id="" class="modalLayer center is-active">
         <div class="layerBox smSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -103,6 +103,125 @@
         <div class="layerDim"></div>    
     </div>
     <!--//가입신청 팝업-->
+
+    <!--가입신청완료 팝업-->
+    <div id="" class="modalLayer center is-active">
+        <div class="layerBox smSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont joinReqClr"><!--팝업고유클래스-->
+                <h3>가입 신청 완료</h3>  
+
+                <img src="../assets/img/icoClear.png" alt="">
+                
+
+                <p>abc@echoit.co.kr(으)로 발송된 <br> 인증 메일을 확인해 주세요.</p>
+                <p class="marked">인증기한 : 2023년 11월03일 11시까지</p>
+
+                <div class="stepBox">
+                    <ul>
+                        <li>STEP 01. 메일 인증</li>
+                        <li>STEP 02. 담당자 승인</li>
+                    </ul>
+                </div>
+
+                <p class="manager">담당자 : <span class="mainC">홍길동 010-1234-5678</span></p>
+
+            </div>
+            <div class="modalFooter single">
+                <button class="xlSize">확인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//가입신청완료 팝업-->
+
+    <!--메일인증대기 팝업-->
+    <div id="" class="modalLayer center is-active">
+        <div class="layerBox smSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont mailCerti"><!--팝업고유클래스-->
+                <h3>메일 인증 대기중</h3>  
+
+                <img src="../assets/img/icoHold.png" alt="">
+                
+
+                <p>abc@echoit.co.kr(으)로 발송된 <br> 인증 메일을 확인해 주세요.</p>
+                <p class="marked">인증기한 : 2023년 11월03일 11시까지</p>
+
+                <div class="stepBox">
+                    <ul>
+                        <li class="is-active">STEP 01. 메일 인증</li>
+                        <li>STEP 02. 담당자 승인</li>
+                    </ul>
+                </div>
+
+                <p class="manager">담당자 : <span class="mainC">홍길동 010-1234-5678</span></p>
+
+            </div>
+            <div class="modalFooter single">
+                <button class="xlSize">인증메일 재발송</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//메일인증대기 팝업-->
+
+    <!--담당자승인대기 팝업-->
+    <div id="" class="modalLayer center is-active">
+        <div class="layerBox smSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>   
+            </div>
+            <div class="modalCont managerCerti"><!--팝업고유클래스-->
+                <h3>담당자 승인 대기중</h3>  
+
+                <img src="../assets/img/icoHold.png" alt="">
+                
+                <p class="mainC">이메일 인증이 완료되었습니다. </p>
+                <p>관리자가 가입승인을 완료하면 <br> 서비스를 이용하실 수 있습니다.</p>
+                
+                <div class="stepBox">
+                    <ul>
+                        <li>STEP 01. 메일 인증</li>
+                        <li class="is-active">STEP 02. 담당자 승인</li>
+                    </ul>
+                </div>
+
+                <p class="manager">담당자 : <span class="mainC">홍길동 010-1234-5678</span></p>
+
+            </div>
+            <div class="modalFooter single">
+                <button class="xlSize">로그인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//담당자승인대기 팝업-->
+
+    <!--메일인증만료 팝업-->
+    <div class="modalLayer center is-active">
+        <div class="layerBox smSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+            <div class="modalCont certiExpire">
+                <h3>인증 기한이 만료되었습니다.</h3>
+                <b>
+                    기존 가입 신청 정보는 삭제되었으므로 <br>
+                    다시 가입신청을 해주시기 바랍니다.
+                </b>
+            </div>
+            <div class="modalFooter single">
+                <button class="layerClose">가입신청</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//메일인증만료 팝업-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>

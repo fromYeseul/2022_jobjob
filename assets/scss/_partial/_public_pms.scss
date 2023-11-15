@@ -1,18 +1,22 @@
-//pms
-$headerSub : #a2bce2;
-
-$gnbTxt : #646464;
-
-
-
-
-
 
 //메인컬러
 $mainColor : #0460d2;
 $bgColor : #f2f2f7;
 $layoutColor : #cccccc;
 //$layoutColor : #ff0000;
+
+$gradiTop: $mainColor;
+$gradiMid: #1983cb;
+$gradiBom: #47b892;
+
+
+$gradient: $gradiTop, $gradiMid, $gradiBom; 
+@mixin gradient($direction, $gradient) { 
+    background: -webkit-linear-gradient($direction, $gradient);
+    background: -moz-linear-gradient($direction, $gradient);
+    background: -o-linear-gradient($direction, $gradient);
+    background: linear-gradient($direction, $gradient);  
+}
 
 //상태컬러
 $error : #ff1236;
@@ -58,6 +62,7 @@ $accPrefixGray : #4b4b4b;
 $accSuffixGray : #676767;
 $addHeadGray : #999;
 $accBorderBottom : #b6b6b6;
+$accListBorder : #dbdbdb;
 $accDate : #b0a6b6;
 $projBox : #e3e3e7;
 $projBoxBorder : #dcdcdc;
@@ -66,6 +71,9 @@ $chipFont : #495762; //0913 J 추가
 $accepGray : #aaa;
 
 $boxTitBg : #f2f2f2;
+
+$stepTxt : #949393;
+$stepBg : #f5f6f9;
 
 $tableSort: $boxTitBg;
 $tableBgGray : $gnbGray;
@@ -133,6 +141,7 @@ $copyRight : #9c9b9b;
 
 //---------pms--------//
 $header_pms : #205391;
+$headerSub : #a2bce2;
 $mainColor_pms : #2a55aa;
 
 $loginBg_pms : #f8f8f8;
@@ -144,6 +153,14 @@ $navArrow_pms : #808080;
 $h1Sub_pms : #58585a;
 
 $btnBd_pms: #3a6ccf;
+
+$labelTxt1_pms: #218dbc;
+$labelBg1_pms: #e1f1f8;
+$labelBd1_pms: #cfe3ec;
+
+$labelTxt2_pms: #8073b3;
+$labelBg2_pms: #f3f1f9;
+$labelBd2_pms: #ced1dd;
 
 $tab_pms : #2a55aa;
 
@@ -215,7 +232,7 @@ $highlight_pms : #5aa2ef;
     width: rem(10);
     height: rem(10);
     border-radius: 50%;
-    vertical-align: middle;
+    // vertical-align: middle;
     margin-right: rem(12);
 }
 .underL{
@@ -257,6 +274,18 @@ $highlight_pms : #5aa2ef;
 .sChecking{
     color: $checking;
 }
+
+.dot{
+    vertical-align: middle;
+    &.sDanger{
+        background: $delay;
+    }
+    &.sSafe{
+        background: $safe;
+    }
+}
+
+
 
 //평가별 색상
 .eHigh{

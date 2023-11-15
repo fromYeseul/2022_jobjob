@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MYPEOPLE | NODATA</title>
+    <title>이력서</title>
     
     <link rel="stylesheet" href="../assets/css/style.css">
 
@@ -16,10 +16,6 @@
                 <a href="#" class="logo">
                     <img src="../assets/img/icoLogo.png" alt="">
                 </a>
-            </div>
-            <div class="center">
-                <a href="#">My Project</a>
-                <a href="#" class="is-active">My People</a>
             </div>
             <div class="suffix">
                 <ul>
@@ -55,114 +51,206 @@
         </section>   
         
         <section class="contWrapper">
-            <section class="contLayout noResize"><!--noResize : 우측패널 오픈시 사이즈 변경x-->
-                <section class="myPeoList">
-                    <div class="tabWrapper" id="tab01">
-                        <ul class="tabBtnWrap underType wideSize">
-                            <li class="tabBtn prefix">
-                                <a href="#myPeoA-1" class="is-active">가용예정인력(3)</a>
+            <section class="contLayout">
+                <section class="resumeList">
+                    <h2>이력서</h2>
+                    <div class="condition">
+                        <ul>
+                            <li>
+                                <p class="condiTit">구분</p>  
+                                <div class="chkWrap btnType">
+                                    <input type="checkbox" id="reqChkAll" class="chkAll">
+                                    <label for="reqChkAll">전체</label>
+                                    
+                                    <input type="checkbox" id="reqChk_2" class="chkEach" >
+                                    <label for="reqChk_2">협력</label>
+                                    
+                                    <input type="checkbox" id="reqChk_3" class="chkEach" >
+                                    <label for="reqChk_3">대행</label>  
+                        
+                                    <input type="checkbox" id="reqChk_4" class="chkEach" >
+                                    <label for="reqChk_4">프리</label>                                         
+                                </div>
                             </li>
-                            <li class="tabBtn center">
-                                <a href="#myPeoA-2">추천검토인력(3)</a>
+                            <li>
+                                <label class="condiTit" for="nm">이름</label>
+                                <input type="text" class="xsSize" id="nm" placeholder="이름 입력">
                             </li>
-                            <li class="tabBtn suffix">
-                                <a href="#myPeoA-3">투입확정인력(10)</a>
+                            <li>
+                                <label class="condiTit" for="pn">전화번호</label>
+                                <input type="text" class="xsSize" id="pn" placeholder="숫자만 입력">
+                            </li>
+                            <li class="hasBtn">
+                                <label class="condiTit" for="memo">메모</label>
+                                <input type="text" class="smSize" id="memo" placeholder="검색어 입력">
+                                <button>
+                                    <i class="ico search white"></i>
+                                </button>
                             </li>
                         </ul>
-                        <div class="tabContWrap">
-                            <div id="myPeoA-1" class="tabCont is-active">
-                                <div class="usableMan">
-                                    <div class="condition inList"><!-- 230724 클래스 추가 -ys -->
-                                        <ul>
-                                            <li>
-                                                <select>
-                                                    <option value="">내부관리용 가용일</option>
-                                                    <option value="001">프로젝트 종료일</option>
-                                                    <option value="002">직접등록</option>
-                                                </select>
-                                            </li>
-                                            <li>
-                                                <input class="dateType" type="text" placeholder="시작일" id="datepicker">
-                                                <span class="range">~</span>                                                    
-                                                <input class="dateType" type="text" placeholder="종료일" id="datepicker">
-                                            </li>
-                                            <li class="hasBtn">
-                                                <input type="text" id="project2" maxlength="20" placeholder="이름, 스킬">
-                                                <button>
-                                                    <i class="ico search white"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>                                      
-                                    <div class="listTop flexCenter flex">   
-                                        <div class="left">                                  
-                                            <input type="checkbox" id="chkAll" class="hasTxt">
-                                            <label for="chkAll"> 0 / 4</label>
-                                            
-                                            <input type="checkbox" id="chkLevel" class="hasTxt">
-                                            <label for="chkLevel"> 등급으로 보기</label>
-                                        </div>   
-                                        <button class="white">선택삭제</button><!--231201 클래스제거-ys-->
+                    </div>
+                    
+     
+                    <div class="tableTop">
+                        <div class="listTop flex">
+                            <div class="select mid-lowSize">
+                                <span class="selDefault">10개씩</span>
+                                <ul class="optionList">
+                                    <li class="optionItem">20개씩</li>
+                                    <li class="optionItem">50개씩</li>
+                                    <li class="optionItem">100개씩</li>
+                                </ul>
+                            </div>
+                            
+                            <input type="checkbox" id="object" class="hasTxt">
+                            <input type="hidden">
+                            <label for="object">업데이트 대상</label>
+                        </div>                     
+                    </div>
+
+                    <div class="accWrap">                        
+                        <div class="accBox">
+                            <div class="nodata">
+                                게시물이 없습니다.
+                                <button class="bdType">새로운 프로젝트 등록</button>
+                            </div>
+                        </div>
+
+                        <div class="accBox is-active">
+                            <div class="accHead">
+                                <div class="prefix">
+                                    <div class="resuNm">
+                                        <input type="checkbox" id="bookMark2" class="bMark" name="bMark" checked="">
+                                        <label for="bookMark2"></label>
+                                        김재윤
                                     </div>
-                                    <div class="yScroll">  
-                                        <div class="nodata">가용할 수 있는 회원이 없습니다.</div>                               
-                                    </div>
-                                    <div class="listBottom">
-                                        <button class="white">+ 목록추가</button>
-                                        <button class="">연락하기</button>
+                                    <div class="resuPn">010-2222-1111</div>
+                                    <div class="resuEm">gildong-hong@echoit.co.kr</div>
+                                </div>  
+                                <div class="suffix">
+                                    <span>경력수정일 2023.11.11</span>
+                                    <div class="suffix">
+                                        <button type="button" class="onlyIco lowSize"><i class="ico change"></i></button>
+                                        <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div id="myPeoA-2" class="tabCont">
-                                <div class="recomMan">
-                                    <div class="listTop flexCenter">   
-                                        <div class="left">                                  
-                                            <input type="checkbox" id="chkAll" class="hasTxt">
-                                            <label for="chkAll"> 0 / 4</label>
-                                            
-                                            <input type="checkbox" id="chkLevel" class="hasTxt">
-                                            <label for="chkLevel">인정등급</label><!--230712 수정 -ys -->
-                                        </div>   
+
+                            <div class="accInner">
+                                <ul>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <div class="tag">
+                                                <span class="label scround">UP</span>
+                                            </div>
+                                            <div class="innerResume">23년 9월 삼성 SDS 제출용 이력서.pptx</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <input type="text" placeholder="메모입력">
+                                            <div class="record">
+                                                <span class="sOrder">2023.01.13 Update</span>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <div class="tag"></div>
+                                            <div class="innerResume">23년 9월 삼성 SDS 제출용 이력서23년 9월 삼성 SDS 제출용 이력서23년 9월 삼성 SDS 제출용 이력서23년 9월 삼성 SDS 제출용 이력서.pptx</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <input type="text" value="메모테스트 메모테스트" readonly="readonly">
+                                            <div class="record">
+                                                <span class="label updated">업데이트 완료</span>
+                                            </div>                                     
+                                        </div>
+                                    </li>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <div class="tag"></div>
+                                            <div class="innerResume">23년 9월 삼성 SDS 제출용 이력서.pptx</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <input type="text" value="메모테스트 메모테스트" readonly="readonly">
+                                            <div class="record">
+                                                <span class="label updated">업데이트 완료</span>
+                                            </div>                                     
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accBox">
+                            <div class="accHead">
+                                <div class="prefix">
+                                    <div class="resuNm">
+                                        <input type="checkbox" id="bookMark2" class="bMark" name="bMark" checked="">
+                                        <label for="bookMark2"></label>
+                                        김재윤
                                     </div>
-                                    <div class="yScroll nodata">
-                                        가용할 수 있는 회원이 없습니다.  2222                             
-                                    </div>
-                                    <div class="listBottom">
-                                        <button class="white">+ 목록추가</button>
-                                        <button class="">연락하기</button>
+                                    <div class="resuPn">010-2222-1111</div>
+                                    <div class="resuEm">gildong-hong@echoit.co.kr</div>
+                                </div>  
+                                <div class="suffix">
+                                    <span>경력수정일 2023.11.11</span>
+                                    <div class="suffix">
+                                        <button type="button" class="onlyIco lowSize"><i class="ico change"></i></button>
+                                        <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div id="myPeoA-3" class="tabCont">
-                                <div class="setMan">
-                                    <div class="listTop flexCenter">   
-                                        <div class="left">                                  
-                                            <input type="checkbox" id="chkAll" class="hasTxt">
-                                            <label for="chkAll"> 0 / 4</label>
-                                            
-                                            <input type="checkbox" id="chkLevel" class="hasTxt">
-                                            <label for="chkLevel">인정등급</label><!--230712 수정 -ys -->
-                                        </div>   
-                                    </div>
-                                    <div class="yScroll nodata">
-                                        가용할 수 있는 회원이 없습니다.   3333                            
-                                    </div>
-                                    <div class="listBottom">
-                                        <button class="white">+ 목록추가</button>
-                                        <button class="">연락하기</button>
-                                    </div>
-                                </div>
+
+                            <div class="accInner">
+                                <ul>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <div class="tag">
+                                                <span class="label scround">UP</span>
+                                            </div>
+                                            <div class="innerResume">23년 9월 삼성 SDS 제출용 이력서.pptx</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <input type="text" placeholder="메모입력">
+                                            <div class="record">
+                                                <span class="dNone">2023.01.13 Update</span>
+                                            </div>                                            
+                                        </div>
+                                    </li>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <div class="tag"></div>
+                                            <div class="innerResume">23년 9월 삼성 SDS 제출용 이력서23년 9월 삼성 SDS 제출용 이력서23년 9월 삼성 SDS 제출용 이력서23년 9월 삼성 SDS 제출용 이력서.pptx</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <input type="text" value="메모테스트 메모테스트" readonly="readonly">
+                                            <div class="record">
+                                                <span class="label updated">업데이트 완료</span>
+                                            </div>                                     
+                                        </div>
+                                    </li>
+                                    <li class="innerList">
+                                        <div class="prefix">
+                                            <div class="tag">
+                                                <span class="label scround">UP</span>
+                                            </div>
+                                            <div class="innerResume">23년 9월 삼성 SDS 제출용 이력서.pptx</div>
+                                        </div>
+                                        <div class="suffix">
+                                            <input type="text" value="메모테스트 메모테스트" readonly="readonly">
+                                            <div class="record">
+                                                <span class="label updated">업데이트 완료</span>
+                                            </div>                                     
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </section>
-                <section class="myPeoDetail nodata">
-                        프로젝트에 지원 이력이 없습니다.
+                
                 </section>
             </section>
         </section>
-
-
+                
         <!--우측패널-->
         <div class="rPanelLayer">
             <div class="rPanelBox">
@@ -459,5 +547,10 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>
+    <script>
+        $(".accBox .onlyIco").on("click", function(){
+            $(this).parents(".accBox").toggleClass("is-active");
+        });
+    </script>
 </body>
 </html>

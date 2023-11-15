@@ -1,0 +1,77 @@
+.resumeList{
+    width: 100%;
+    .tableTop{
+        margin-top: rem(60);
+    }
+    .accWrap{
+        margin-top: rem(10);
+    }
+    .accBox{
+        &.is-active{
+            .accHead{
+                padding-bottom: rem(5);
+            }
+        }
+    }
+    .accHead{
+        .prefix{
+            gap: 25px;
+            font-weight: 700;
+            label{
+                margin-right: 4px;
+                vertical-align: -2px;
+            }
+        }
+        .suffix{
+            color: $addHeadGray;
+            .suffix{
+                width: rem(110);
+                display: flex;
+                justify-content: center;
+                gap: 12px;
+            }
+            .onlyIco{
+                margin-left: 0;
+            }
+        }
+    }
+    .innerList{
+        padding: rem(12) rem(25);
+        cursor: initial;
+        &:hover{
+            background: $selHover;
+        }
+        & + .innerList{
+            border-top:1px solid $accListBorder;
+        }
+        .prefix{
+            .tag{
+                width: rem(35);
+                .label{
+                    vertical-align: 3px;
+                }
+            }
+            .innerResume{
+                color: $mainColor;
+                font-size: rem(14);
+            }
+        }
+        .suffix{
+            input{
+                width: rem(685);
+                height: rem(34);
+            }
+            .record{
+                width: rem(110);
+                text-align: center;
+                .label{
+                    margin-right: 0;
+                    width: rem(88);
+                }
+                .sOrder{
+                    font-size: rem(13);
+                }
+            }
+        }
+    }
+}
