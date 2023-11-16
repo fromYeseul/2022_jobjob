@@ -742,10 +742,14 @@ header {
 .contWrapper .contLayout .projReqList, .contWrapper .contLayout .genMember, .contWrapper .contLayout .projProgList, .contWrapper .contLayout .sendHistory,
 .contWrapper .contLayout .recruitList, .contWrapper .contLayout .recruitAdmin, .contWrapper .contLayout .recruitDetail,
 .contWrapper .contLayout .sendedOfferList, .contWrapper .contLayout .sendedOfferDetail, .contWrapper .contLayout .talentedSearch,
-.contWrapper .contLayout .clientBuy, .contWrapper .contLayout .clientSales, .contWrapper .contLayout .bizState, .contWrapper .contLayout .resumeList {
+.contWrapper .contLayout .clientBuy, .contWrapper .contLayout .clientSales, .contWrapper .contLayout .bizState, .contWrapper .contLayout .resumeList,
+.contWrapper .contLayout .dashboard {
   height: calc(100vh - 60px);
   padding: 1.875rem 1.875rem;
   overflow-y: auto;
+}
+.contWrapper .contLayout .dashboard {
+  padding: 1.875rem 3.875rem 1.875rem 3.875rem;
 }
 .contWrapper .contLayout .default {
   width: 100%;
@@ -2353,7 +2357,7 @@ footer.toast button + button {
   grid-template-columns: 95px 100px 80px 120px 100px 130px 140px;
 }
 .contractDetail .cont {
-  height: 58vh;
+  height: 57vh;
   overflow-y: auto;
 }
 .contractDetail .underBg {
@@ -2375,6 +2379,13 @@ footer.toast button + button {
 .contractDetail .conDCount.basic {
   grid-column: 2/5;
 }
+.contractDetail .conDCount.basic .info {
+  display: flex;
+  gap: 5px;
+}
+.contractDetail .conDCount.basic .info input {
+  flex-grow: 1;
+}
 .contractDetail .conAdmin {
   grid-column: 6/8;
 }
@@ -2385,7 +2396,7 @@ footer.toast button + button {
   grid-column: 1/5;
 }
 .contractDetail .dateType {
-  width: 6.875rem !important;
+  width: 7.125rem !important;
 }
 .contractDetail .range {
   margin: 0 4px;
@@ -3011,6 +3022,9 @@ footer.toast button + button {
 .condition .select.autoSize,
 .condition select.autoSize {
   height: 2.75rem;
+}
+.condition.right ul {
+  justify-content: flex-end;
 }
 .condition.inList {
   margin-top: 0;
@@ -5783,8 +5797,8 @@ input[type=radio]:disabled + label {
 .tabType input[type=radio]:checked + label {
   color: #fff;
   font-size: 0.9375rem;
-  background-color: #0460d2;
-  border: 1px solid #0460d2;
+  background-color: #2a55aa;
+  border: 1px solid #2a55aa;
 }
 .tabType.midSize input[type=check] + label,
 .tabType.midSize input[type=radio] + label {
@@ -7054,6 +7068,9 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   height: 1rem;
   background-position: -160px -60px;
   cursor: pointer;
+}
+.ico.preview.is-active {
+  background-position: 0 -240px;
 }
 .ico.preview_w {
   width: 1.125rem;
@@ -8726,6 +8743,9 @@ h6 + .h6_sub {
 .accHead .suffix .onlyIco {
   margin-left: 1.5rem;
   min-width: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+  height: 2rem;
 }
 
 .accInner {
