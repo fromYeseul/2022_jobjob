@@ -1,0 +1,193 @@
+.dashboard{
+    overflow: hidden;
+    //height: 100%;
+    // padding: 1.875rem 3.875rem 0 3.875rem  !important;
+    // width: 1250px;
+    table{
+        //tfoot없음
+        // tfoot{
+        //     td{
+        //         background: #e2e2e2;
+        //         padding: 0 rem(10);
+        //     }
+        // }
+        // &.chkType{
+        thead{
+            height: rem(38);
+            margin-top: 10px;
+        }
+        tr{                
+            td{
+                height: rem(38);
+                &.left{
+                    // padding-left: rem(40);                            
+                    padding-left: rem(20);                            
+                }
+                &.right{
+                    // padding-right: rem(40);         
+                    padding-right: rem(20);         
+                }
+            }
+        }
+        // }   
+        .dot{
+            // margin-right: 4px;
+            vertical-align: baseline;
+            margin: 0 rem(8);
+        }         
+    }
+    .accBox{
+        .prefix{
+            width: 20%;
+        }
+    }
+}
+
+
+.dashboard{
+    .condition{
+        margin-top: -30px;
+        .condiTit{
+            margin-right: rem(20);
+        }
+        .hasBtn{
+            align-items: baseline;
+        }
+    }
+    .contentFlex{
+        margin-top: rem(10);
+        display: flex;
+        gap: 20px;
+        .boxWrap{
+            padding: rem(30) rem(20);
+            &.prefix{
+                padding: rem(30) rem(20);
+                flex: 8 1 0;
+            }
+            &.suffix{
+                padding: rem(30);
+                flex: 9 1 0;
+            }
+            h4{
+                color: $dashboardTit_pms;
+            }
+            .h4_sub{
+                margin-left: rem(13);
+                color: $dashboardSub_pms;
+                font-weight: normal;
+            }
+        }
+        .noticeBoard{
+            margin-top: rem(20);
+            padding: rem(25) rem(50);
+            @include sideArray;
+            border-radius: 10px;
+            background: $notiBoardBg_pms;
+            border: 1px solid $notiBoardBd_pms;
+            .prefix,
+            .suffix{
+                @include heightArray;
+            }
+            h1{
+                margin-left: rem(20);
+                font-size: rem(34);
+            }
+            .suffix{
+                h1{
+                    color: $notiTit_pms;
+                }
+            }
+        }
+    }
+    .accWrap{
+        margin-top: rem(30);
+        height: rem(328);
+        @include scroll_0;
+    }
+    .accHead{
+        .projTit{
+            padding-left: rem(20);
+            position: relative;
+            &::before{
+                content:'';
+                width: rem(11);
+                height: rem(11);
+                background: $part_sapBiz;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+            &.sapStr{
+                &::before{background: $part_sapStr;}
+            }
+            &.sapUni{
+                &::before{background: $part_sapUni;}
+            }
+            &.exBiz{
+                &::before{background: $part_exBiz;}
+            }
+            &.fuFus{
+                &::before{background: $part_fuFus;}
+            }
+            &.platf{
+                &::before{background: $part_platf;}
+            }
+            &.cloud{
+                &::before{background: $part_cloud;}
+            }
+        }
+        .suffix{
+            ul{
+                display: flex;
+                gap: rem(30);
+                color: $black;
+            }
+            .label{
+                margin-right: rem(10);
+                vertical-align: text-top;
+            }
+        }
+    }
+    .accInner{
+        padding: 0 rem(30);
+        padding-bottom: rem(20);
+    }
+}
+
+//반원그래프
+.halfGraph{
+    margin-top: rem(40);
+    height: rem(250);
+}
+//원그래프
+.circleGraph{
+    margin-top: rem(70);
+    height: rem(160);
+    ul{
+        display: flex;
+        max-width: rem(760);
+        li{
+            width: 20%;
+            position: relative;
+            .numVal{
+                font-size: rem(16);
+                font-weight: 500;
+                position: absolute;
+                left: 50%;
+                top: 58%;
+                transform: translateX(-50%);
+                &.pro{color: $val_pro;}
+                &.income{color: $val_income;}
+                &.input{color: $val_input;}
+                &.cont{color: $val_cont;}
+                &.fin{color: $val_fin;}
+            }
+        }
+    }
+}
+//막대그래프
+.barGraph{
+    margin-top: rem(10);
+    height: rem(280);
+}
