@@ -97,13 +97,12 @@
                             </div>
                             
                             <div class="halfGraph">
-                                <canvas id="halfChart" style="width:750px; height:250px;"></canvas>
-
+                                <canvas id="halfChart" style="width:40vw; height:25vh;"></canvas>
                             </div>
                             <div class="circleGraph">
                                 <ul>
                                     <li>
-                                        <canvas id="cChart_pro"></canvas>
+                                        <canvas id="cChart_pro" style="width:100%;"></canvas>
                                         <span class="numVal pro">80</span>
                                     </li>
                                     <li>
@@ -128,7 +127,7 @@
                         <div class="boxWrap suffix">
                             <h4>전년대비 매출 비교</h4>
                             <div class="barGraph">
-                                <canvas id="barChart" style="width:850px; height: 300px;"></canvas>
+                                <canvas id="barChart" style="width:44vw; height: 100%;"></canvas>
                             </div>
 
                             <div class="accWrap">  
@@ -867,7 +866,7 @@
 
         const barChart = document.getElementById('barChart');
       
-        //도넛
+        //반도넛
         new Chart(halfChart, {
           type: 'doughnut',
           data: {            

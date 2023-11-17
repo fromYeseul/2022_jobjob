@@ -105,7 +105,7 @@
     }
     .tabBtnWrap{
         .tabBtn{
-            min-width: 71px;
+            // min-width:30px;
             line-height: rem(34);
             a{
                 border-bottom-left-radius: 0;
@@ -135,6 +135,7 @@
         input[type=text],
         input[type=number]{
             padding: rem(8) rem(4);
+            padding: rem(8) rem(3);
             background: $white; //11.01추가
             // text-align : right; //11.01추가
             &.dateType{  
@@ -210,6 +211,11 @@
     tbody,
     tfoot{
         font-size: rem(13);
+        br{
+            & + b{
+                font-size: rem(12);
+            }
+        }
         input,
         select{
             font-size: rem(13);

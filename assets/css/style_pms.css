@@ -875,7 +875,7 @@ table tfoot td {
 }
 .dashboard .accWrap {
   margin-top: 1.875rem;
-  height: 20.5rem;
+  height: calc(75vh - 361px);
   overflow-y: auto;
 }
 .dashboard .accWrap::-webkit-scrollbar {
@@ -929,16 +929,14 @@ table tfoot td {
 
 .halfGraph {
   margin-top: 2.5rem;
-  height: 15.625rem;
 }
 
 .circleGraph {
   margin-top: 4.375rem;
-  height: 10rem;
 }
 .circleGraph ul {
   display: flex;
-  max-width: 47.5rem;
+  max-width: 42vw;
 }
 .circleGraph ul li {
   width: 20%;
@@ -1170,7 +1168,6 @@ table tfoot td {
   left: 630px;
 }
 .bizStateRegister .tabBtnWrap .tabBtn {
-  min-width: 71px;
   line-height: 2.125rem;
 }
 .bizStateRegister .tabBtnWrap .tabBtn a {
@@ -1190,6 +1187,7 @@ table tfoot td {
 .bizStateRegister table input[type=text],
 .bizStateRegister table input[type=number] {
   padding: 0.5rem 0.25rem;
+  padding: 0.5rem 0.1875rem;
   background: #fff;
 }
 .bizStateRegister table input[type=text].dateType,
@@ -1233,6 +1231,10 @@ table tfoot td {
 #bsDetail1 tbody,
 #bsDetail1 tfoot {
   font-size: 0.8125rem;
+}
+#bsDetail1 tbody br + b,
+#bsDetail1 tfoot br + b {
+  font-size: 0.75rem;
 }
 #bsDetail1 tbody input,
 #bsDetail1 tbody select,

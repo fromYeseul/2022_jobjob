@@ -2168,15 +2168,18 @@ footer.toast button + button {
 .clientAdmin .tableBox tfoot td {
   padding: 10px 5px !important;
 }
-.clientAdmin .tableBox tfoot input {
-  height: 2rem;
-  background: #fff;
-}
-.clientAdmin .tableBox tfoot button {
+.clientAdmin .tableBox tfoot td:last-child button {
   margin-left: 4px;
   width: 60px;
   height: 32px;
   line-height: 2rem;
+}
+.clientAdmin .tableBox tfoot .inputIco {
+  width: 100%;
+}
+.clientAdmin .tableBox tfoot input {
+  height: 2rem;
+  background: #fff;
 }
 .clientAdmin .modalFooter {
   position: relative;
@@ -3817,7 +3820,7 @@ table .dot {
   position: relative;
 }
 .tabBtnWrap.autoSize a {
-  padding: 0 0.5rem;
+  padding: 0 0.375rem;
   min-width: auto;
 }
 .tabBtnWrap.autoSize .absol {

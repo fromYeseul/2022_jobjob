@@ -864,16 +864,21 @@
         tfoot{
             td{
                 padding: 10px 5px !important;
+                &:last-child{
+                    button{
+                        margin-left: 4px;
+                        width: 60px;
+                        height: 32px;
+                        line-height: rem(32);
+                    }
+                }
+            }
+            .inputIco{
+                width: 100%;
             }
             input{
                 height: rem(32);
                 background: $white;
-            }
-            button{
-                margin-left: 4px;
-                width: 60px;
-                height: 32px;
-                line-height: rem(32);
             }
         }
     }
