@@ -918,13 +918,16 @@
                                         <div class="suffix absol"><!--231115 하단에 있을때는 absol 추가-ys-->                                                                              
                                             <button class="onlyIco midSize">
                                                 <i class="ico corporation"></i>
-                                            </button>                                        
-                                            <button class="onlyIco midSize">
-                                                <i class="ico addLine"></i>
-                                            </button>                                        
+                                            </button>                                          
                                             <button class="onlyIco midSize">
                                                 <i class="ico addLine_chked"></i>
-                                            </button>
+                                            </button>                                      
+                                            <button class="onlyIco midSize">
+                                                <i class="ico addLine"></i>
+                                            </button>           
+                                            <button class="onlyIco midSize"><!--231130 추가-ys-->
+                                                <i class="ico removeLine"></i>
+                                            </button>      
                                         </div>
                                     </div>                 
                                     <!--//231115 수정-ys-->
@@ -3297,193 +3300,199 @@
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
             </div>
-            <div class="modalCont contractDetail">
-                <h2>계약상세</h2>
+            <div class="modalCont contractDetail turn">
+                <h2>계약상세22</h2>
 
-                <div class="boxTop">P-A0000-A0000-A0000(23)</div><!--231101 추가-ys-->
+                <div class="boxTop">P-A0000-A0000-A0000(23)</div>
                 <div class="boxWrap titType">
                     <div class="head">
                         <h3><span class="label">종료</span>[종료] 대기업 B2B 주문 프로세스 개선 기획자 모집</h3>
-                        <button class="rBdType">계약삭제</button><!--231201 클래스제거-ys-->
+                        <button class="rBdType">계약삭제</button>
                     </div>
                     <div class="cont">
-                        <h5 class="underBg mt0">기본정보</h5>
-                        <div class="inputList">
-                            <ul class="grid col7">
-                                <li>
-                                    <h6>계약구분</h6>
-                                    <div class="info">법인사업</div>                                
-                                </li>
-                                <li>
-                                    <h6>계약처명</h6>
-                                    <div class="info">매그넘브릿지</div>                                
-                                </li>
-                                <li>
-                                    <h6>대표자명</h6>
-                                    <div class="info">김경민</div>                                
-                                </li>
-                                <!-- <li>
-                                    <h6>주민등록번호</h6>
-                                    <div class="info">780808-1111111</div>                                
-                                </li>
-                                <li>
-                                    <h6>대행여부</h6>
-                                    <div class="info">
-                                        <input type="checkbox" id="e1" class="hasTxt">
-                                        <label for="e1">대행</label>
-                                    </div>                                
-                                </li> -->
+                        <div class="contentFlex">
+                            <div class="prefix">
+                                <h5 class="underBg mt0">기본정보</h5>
+                                <div class="inputList">
+                                    <ul class="grid col4">
+                                        <li>
+                                            <h6>계약구분</h6>
+                                            <div class="info">법인사업</div>                                
+                                        </li>
+                                        <li>
+                                            <h6>계약처명</h6>
+                                            <div class="info">매그넘브릿지</div>                                
+                                        </li>
+                                        <li>
+                                            <h6>대표자명</h6>
+                                            <div class="info">김경민</div>                                
+                                        </li>              
+                                        <li>
+                                            <h6>사업자번호</h6>
+                                            <div class="info">111-22-3333</div>    
+                                        </li>
 
-                                <li>
-                                    <h6>사업자번호</h6>
-                                    <div class="info">111-22-3333</div>    
-                                </li>
-                                <li>
-                                    <h6>공급구분</h6>
-                                    <div class="info">라이선스</div>    
-                                </li>
-                                <li class="conSkill"><!--231101 클래스추가-ys-->
-                                    <h6>기술구분</h6>
-                                    <div class="info">WEB</div>                                
-                                </li>
-                                <!-- <li>
-                                    <h6>계약번호</h6>
-                                    <div class="info">5055-11</div>                                
-                                </li>
-
-
-                                <li>
-                                    <h6>투입인력</h6>
-                                    <div class="info">1 명</div>                                
-                                </li> -->
-
-                                <!--231101 추가-ys-->
-                                <li>
-                                    <h6>계약유형</h6>
-                                    <div class="info">
-                                        <select class="full" name="" id="">
-                                            <option value="0">주문서</option>
-                                            <option value="1">주문서</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <!--//231101 추가-ys-->
-                                <li>
-                                    <h6>계약상태</h6>
-                                    <div class="info">
-                                        <select class="full redOpt" name="" id=""><!--미계약/변경미계약 선택시 red컬러 (하단 script)-->
-                                            <option value="0">발주서</option>
-                                            <option value="1">미계약</option>
-                                            <option value="2">변경미계약</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <li class="conDTerm">
-                                    <h6>계약기간</h6>
-                                    <div class="info">
-                                        <input class="dateType" type="text" placeholder="시작일" value="2023.08.07">
-                                        <span class="range">~</span>
-                                        <input class="dateType" type="text" placeholder="종료일">
-                                    </div>        
-                                    <div class="error is-active">실투입과 불일치</div>                        
-                                </li>
-                                <li>
-                                    <h6>수량 <!--<span class="ml10"><i class="ico refresh"></i>--></span></h6>
-                                    <div class="info">
-                                        <input class="full" type="text">
-                                    </div>        
-                                    <div class="error is-active">실투입과 불일치</div>                             
-                                </li>
-                                <li>
-                                    <h6>단가</h6>
-                                    <div class="info">
-                                        <input class="midSize txtRight" type="text"> 원
-                                    </div>        
-                                    <div class="error is-active">실투입과 불일치</div>                             
-                                </li>
-                                <li>
-                                    <h6>계약금액</h6>
-                                    <div class="info">
-                                        <b>96,000,000 원</b>
-                                    </div>                                    
-                                </li>
-
-
-                                <li>
-                                    <h6>턴키</h6>
-                                    <div class="info">
-                                        <input id="s32" type="checkbox" class="chkSwitch">
-                                        <label for="s32" class="mt10"></label>
-                                    </div>
-                                </li>                                
-                                <li class="conDCount basic"><!--231101 턴키있을때 basic 추가-ys-->
-                                    <h6>입금정보</h6>
-                                    <div class="info">
-                                        <!-- <input class="midSize" type="text" placeholder="은행명">                                         -->
-                                        <!--select가 아니고??-->
-                                        <select class=""><!--231101 select로..-ys-->
-                                            <option value="00">우리은행</option>
-                                            <option value="01">신한은행</option>
-                                            <option value="02">카카오뱅크카카오뱅크</option>
-                                        </select>
-                                        <input class="" type="text" placeholder="계좌번호 입력"><!--231101 클래스제거-ys-->
-                                    </div>                                    
-                                </li>
-                                <li>
-                                    <h6>지급일</h6>
-                                    <div class="info">
-                                        <select class="full">
-                                            <option value="00">1일</option>
-                                            <option value="01">10일</option>
-                                            <option value="02">20일</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h6>소싱담당</h6>
-                                    <div class="info">
-                                        <select class="full" >
-                                            <option value="000">선택</option>
-                                            <option value="001">홍길동</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <li class="conAdmin basic"><!--231101 클래스추가/턴키있을때 basic 추가-ys-->
-                                    <h6>담당자</h6>
-                                    <div class="info">
-                                        <button class="bdType midSize">담당자 지정</button><!--231101 클래스수정-ys-->
-                                        <span class="mainC ml5">4명</span>
-                                    </div>
-                                </li>
-                                <li class="conDFile">                                            
-                                    <h6>첨부파일</h6>
-                                    <div class="uploadBox">
-                                        <div class="inputGroup upload">
-                                            <div class="drop">
-                                                <i class="ico fileUpload"></i>
-                                                <label for="fileUpload">
-                                                    파일을 첨부해주세요.<br>
-                                                    (파일 최대 5개, 100MB 이하)                                                      
-                                                </label>
+                                        <li>
+                                            <h6>기술구분</h6>
+                                            <div class="info">WEB</div>                                
+                                        </li>            
+                                        <li>
+                                            <h6>대행여부</h6>
+                                            <div class="info">                                                
+                                                <input type="checkbox" id="ee1" class="hasTxt">
+                                                <label for="ee1">대행</label>
+                                            </div>    
+                                        </li>
+                                        <li>
+                                            <h6>턴키</h6>
+                                            <div class="info">
+                                                <input id="s22" type="checkbox" class="chkSwitch">
+                                                <label for="s22" class="mt10"></label>
                                             </div>
-                                            <div class="list">
-                                                <ul class="list_ul">
-                                                    <li>
-                                                        <span class="fileName">test.JPG</span>
-                                                        <span class="volume">45 KB</span>
-                                                        <i class="ico delete_bg"></i>
-                                                    </li>
-                                                </ul>
+                                        </li>  
+                                        <li>
+                                            <h6>담당자</h6>
+                                            <div class="info">
+                                                <button class="bdType midSize">담당자 지정</button>
+                                                <span class="mainC ml5">44명</span>
                                             </div>
-                                        </div>
-                                    
-                                        <label for="cycleDocument22" class="">직접선택</label>
-                                        <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="">
-                                    </div>
-                                </li>
-                            </ul>
+                                        </li> 
+
+                                        <li>
+                                            <h6>계약상태</h6>
+                                            <div class="info">
+                                                <select class="full redOpt" name="" id=""><!--미계약/변경미계약 선택시 red컬러 (하단 script)-->
+                                                    <option value="0">발주서</option>
+                                                    <option value="1">미계약</option>
+                                                    <option value="2">변경미계약</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="conDTerm">
+                                            <h6>계약기간</h6>
+                                            <div class="info">
+                                                <input class="dateType" type="text" placeholder="시작일" value="2023.08.07">
+                                                <span class="range">~</span>
+                                                <input class="dateType" type="text" placeholder="종료일">
+                                            </div>        
+                                        </li>
+                                        <li>
+                                            <h6>소싱담당</h6>
+                                            <div class="info">
+                                                <select class="full" >
+                                                    <option value="000">선택</option>
+                                                    <option value="001">홍길동</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                              
+                                        <li class="conDCount">
+                                            <h6>입금정보</h6>
+                                            <div class="info">
+                                                <select class="wideSize">
+                                                    <option value="00">우리은행</option>
+                                                    <option value="01">신한은행</option>
+                                                    <option value="02">카카오뱅크카카오뱅크</option>
+                                                </select>
+                                                <input class="full" type="text" placeholder="계좌번호 입력">
+                                            </div>                                    
+                                        </li>
+                                        <li>
+                                            <h6>지급일</h6>
+                                            <div class="info">
+                                                <select class="full">
+                                                    <option value="00">1일</option>
+                                                    <option value="01">10일</option>
+                                                    <option value="02">20일</option>
+                                                </select>
+                                            </div>
+                                        </li>
+        
+                                        <li class="conDFile">                                            
+                                            <h6>첨부파일</h6>
+                                            <div class="uploadBox">
+                                                <div class="inputGroup upload">
+                                                    <div class="drop">
+                                                        <i class="ico fileUpload"></i>
+                                                        <label for="fileUpload">
+                                                            파일을 첨부해주세요.<br>
+                                                            (파일 최대 5개, 100MB 이하)                                                      
+                                                        </label>
+                                                    </div>
+                                                    <div class="list">
+                                                        <ul class="list_ul">
+                                                            <li>
+                                                                <span class="fileName">test.JPG</span>
+                                                                <span class="volume">45 KB</span>
+                                                                <i class="ico delete_bg"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                                <label for="cycleDocument22" class="">직접선택</label>
+                                                <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="suffix divideBox">
+                                <div class="inputList top">
+                                    <ul class="grid col2">
+                                        <li class="conMan">
+                                            <h5>투입인력</h5>
+                                            <div class="info">1명</div>    
+                                        </li>
+                                        <li>
+                                            <h6>총 M/M</h6>
+                                            <div class="info">
+                                                <input type="text" class="full">
+                                            </div>    
+                                        </li>
+                                        <li>
+                                            <h6>합계</h6>
+                                            <div class="info">
+                                                <input type="text" class="midSize txtRight">
+                                                원
+                                            </div>    
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="inputList center">
+                                    <ul class="grid col2">
+                                        <li class="conSupply">
+                                            <h5>공급</h5>
+                                            <div class="info">라이센스</div>    
+                                        </li>
+                                        <li>
+                                            <h6>수량</h6>
+                                            <div class="info">
+                                                <input type="text" class="full">
+                                            </div>    
+                                        </li>
+                                        <li>
+                                            <h6>합계</h6>
+                                            <div class="info">
+                                                <input type="text" class="midSize txtRight">
+                                                원
+                                            </div>    
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="inputList bottom">
+                                    <ul class="grid col2">
+                                        <li class="conPrice">
+                                            <h5>계약금액</h5>
+                                            <div class="info txtRight">
+                                                <input type="text" class="midSize txtRight">
+                                                원
+                                            </div>    
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        
                         <div class="tableTop">
                             <h5 class="underBg">투입인력</h5>
                             <div class="suffix">
