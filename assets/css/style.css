@@ -2363,46 +2363,47 @@ footer.toast button + button {
   height: 57vh;
   overflow-y: auto;
 }
-.contractDetail .underBg {
-  margin-top: 2.5rem;
-}
-.contractDetail .info {
-  margin-top: 0.9375rem;
-  color: #444;
-}
-.contractDetail .conSkill {
+.contractDetail .cont .conSkill {
   grid-column: 6/8;
 }
-.contractDetail .conDTerm {
+.contractDetail .cont .conDTerm {
   grid-column: 3/5;
 }
-.contractDetail .conDCount {
+.contractDetail .cont .conDCount {
   grid-column: 1/4;
 }
-.contractDetail .conDCount.basic {
+.contractDetail .cont .conDCount.basic {
   grid-column: 2/5;
 }
-.contractDetail .conDCount.basic .info {
+.contractDetail .cont .conDCount.basic .info {
   display: flex;
   gap: 5px;
 }
-.contractDetail .conDCount.basic .info input {
+.contractDetail .cont .conDCount.basic .info input {
   flex-grow: 1;
 }
-.contractDetail .conAdmin {
+.contractDetail .cont .conAdmin {
   grid-column: 6/8;
 }
-.contractDetail .conAdmin.basic {
+.contractDetail .cont .conAdmin.basic {
   grid-column: 7/8;
 }
-.contractDetail .conDFile {
+.contractDetail .cont .conDFile {
   grid-column: 1/5;
 }
-.contractDetail .dateType {
+.contractDetail .cont .dateType {
   width: 7.125rem !important;
 }
-.contractDetail .range {
+.contractDetail .cont .range {
   margin: 0 4px;
+}
+.contractDetail .underBg {
+  margin-top: 2.5rem;
+}
+.contractDetail .info,
+.contractDetail .uploadBox {
+  margin-top: 0.9375rem;
+  color: #444;
 }
 .contractDetail .tableTop .prefix,
 .contractDetail .tableTop .suffix {
@@ -2419,6 +2420,72 @@ footer.toast button + button {
 }
 .contractDetail .commentBox .comment {
   width: 820px;
+}
+.contractDetail.turn .col2 {
+  row-gap: 1.25rem;
+  column-gap: 4.375rem;
+  grid-template-columns: 80px 120px;
+}
+.contractDetail.turn .col2 .conMan,
+.contractDetail.turn .col2 .conSupply,
+.contractDetail.turn .col2 .conPrice {
+  grid-column: 1/3;
+}
+.contractDetail.turn .col2 .conPrice input {
+  font-weight: 700;
+}
+.contractDetail.turn .col4 {
+  row-gap: 1.25rem;
+  column-gap: 1.875rem;
+  grid-template-columns: repeat(4, 136px);
+}
+.contractDetail.turn .conDTerm {
+  grid-column: 2/4;
+}
+.contractDetail.turn .conDCount {
+  grid-column: 1/4;
+}
+.contractDetail.turn .conDCount .info {
+  display: flex;
+  gap: 5px;
+}
+.contractDetail.turn .dateType {
+  width: 8.375rem !important;
+}
+.contractDetail.turn .range {
+  margin: 0 10px;
+}
+.contractDetail .contentFlex {
+  display: flex;
+  gap: 60px;
+}
+.contractDetail .contentFlex .prefix {
+  flex: 5 1 0;
+}
+.contractDetail .contentFlex .suffix {
+  flex: 3 1 0;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+}
+.contractDetail .contentFlex .suffix.divideBox {
+  margin-top: 0;
+  margin-left: 0;
+  flex-direction: column;
+}
+.contractDetail .contentFlex .suffix div {
+  border: 0;
+}
+.contractDetail .contentFlex .suffix div.top {
+  padding-top: 2.5rem;
+  padding-bottom: 0.9375rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid #cccccc;
+}
+.contractDetail .contentFlex .suffix div.bottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 1px solid #cccccc;
 }
 
 .contractCreate h5,
@@ -4229,7 +4296,7 @@ span.button {
   display: inline-block;
   min-width: 2.75rem;
   height: 1.4375rem;
-  line-height: 1.3125rem;
+  line-height: 1.4375rem;
   text-align: center;
   color: #666666;
   font-size: 0.75rem;
@@ -7151,14 +7218,19 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-position: -40px -180px;
 }
 .ico.addLine {
-  width: 1.125rem;
-  height: 0.9375rem;
-  background-position: -160px -260px;
-}
-.ico.addLine_chked {
   width: 0.875rem;
   height: 0.875rem;
   background-position: -180px -260px;
+}
+.ico.removeLine {
+  width: 0.75rem;
+  height: 0.125rem;
+  background-position: -40px -180px;
+}
+.ico.addLine_chked {
+  width: 1.125rem;
+  height: 0.9375rem;
+  background-position: -160px -260px;
 }
 .ico.corporation {
   width: 1.0625rem;
@@ -8460,7 +8532,7 @@ h6 + .h6_sub {
 }
 
 .regiPart {
-  margin-top: 2.8125rem;
+  margin-top: 1.5625rem;
 }
 .regiPart:last-child {
   padding-bottom: 3.125rem;
@@ -8473,7 +8545,7 @@ h6 + .h6_sub {
   padding: 1.5625rem;
 }
 .regiPart .boxWrap.noTit {
-  margin-top: 3.125rem;
+  margin-top: 1.875rem;
 }
 .regiPart .boxWrap.flex, .regiPart .boxWrap.flex_1_1,
 .regiPart .boxWrap .flex_1_2,
@@ -9944,6 +10016,7 @@ h6 + .h6_sub {
   width: 100%;
 }
 .rightAdmin .right .tableBox {
+  margin-top: 0.625rem;
   padding-right: 0.1875rem;
   height: 30rem;
   overflow-y: auto;
