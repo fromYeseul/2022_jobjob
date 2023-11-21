@@ -2694,7 +2694,7 @@ footer.toast button + button {
 .floatingWrapper.indicator li::after {
   width: 0.1875rem;
   height: 1rem;
-  background-position: -100px -20px;
+  background-position: 0 -320px;
   top: auto;
   right: auto;
   left: 50%;
@@ -3106,6 +3106,9 @@ footer.toast button + button {
 }
 .condition.inList ul li {
   margin-left: 0;
+}
+.condition.inList ul li.hasBtn {
+  display: flex;
 }
 
 .tableTop {
@@ -3701,6 +3704,8 @@ table .dot {
 }
 .infoList .info button {
   margin-left: 0.625rem;
+  height: 1.25rem;
+  line-height: 1.125rem;
 }
 .infoList .infoBox {
   margin-top: 0.625rem;
@@ -3877,7 +3882,7 @@ table .dot {
   border: 1px solid #0460d2;
 }
 .tabBtnWrap .tabBtn a.is-active .more2 {
-  background-position: -160px -100px;
+  background-position: -60px -320px;
 }
 .tabBtnWrap input + label {
   margin-left: 1rem;
@@ -4022,7 +4027,7 @@ button.smSize,
 .button.smSize {
   min-width: 3.75rem;
   width: auto;
-  line-height: 1.75rem;
+  line-height: 1.875rem;
   padding: 0 0.375rem;
   font-weight: 400;
   font-size: 0.875rem;
@@ -4470,10 +4475,6 @@ input[type=password]::placeholder {
 }
 .hasBtn .button + input,
 .hasBtn button + input {
-  margin-left: 0.4375rem;
-}
-.hasBtn .button + .inputIco,
-.hasBtn button + .inputIco {
   margin-left: 0.4375rem;
 }
 .hasBtn .inputIco {
@@ -5482,19 +5483,19 @@ input[type=radio] + label::before {
   width: 1.125rem;
   height: 1.125rem;
   background-image: url(../img/icoGroup.png);
-  background-position: 0px 0px;
+  background-position: 0px -100px;
 }
 input[type=checkbox]:checked + label::before,
 input[type=radio]:checked + label::before {
-  background-position: -20px 0;
+  background-position: -20px -100px;
 }
 input[type=checkbox]:checked:disabled + label::before,
 input[type=radio]:checked:disabled + label::before {
-  background-position: -100px -140px;
+  background-position: -20px -120px;
 }
 input[type=checkbox]:disabled + label::before,
 input[type=radio]:disabled + label::before {
-  background-position: -80px -140px;
+  background-position: 0 -120px;
 }
 input[type=checkbox].hasTxt + label::before,
 input[type=radio].hasTxt + label::before {
@@ -5517,11 +5518,11 @@ input[type=radio] + input[type=hidden] + label::before {
   height: 1.125rem;
   vertical-align: -3px;
   background-image: url(../img/icoGroup.png);
-  background-position: 0px 0px;
+  background-position: 0px -100px;
 }
 input[type=checkbox]:checked + input[type=hidden] + label::before,
 input[type=radio]:checked + input[type=hidden] + label::before {
-  background-position: -20px 0;
+  background-position: -20px -100px;
 }
 input[type=checkbox]:disabled + label,
 input[type=radio]:disabled + label {
@@ -5543,7 +5544,7 @@ input[type=radio].bMark + label {
   width: 1.125rem;
   height: 1.125rem;
   background-image: url(../img/icoGroup.png);
-  background-position: 0px -40px;
+  background-position: 0px -180px;
   vertical-align: sub;
 }
 input[type=checkbox].bMark + label::before,
@@ -5552,7 +5553,7 @@ input[type=radio].bMark + label::before {
 }
 input[type=checkbox].bMark:checked + label,
 input[type=radio].bMark:checked + label {
-  background-position: -20px -40px;
+  background-position: -20px -180px;
 }
 input[type=checkbox].chkSwitch + label::before,
 input[type=radio].chkSwitch + label::before {
@@ -5810,10 +5811,10 @@ input[type=radio].chkSwitch.wide:checked + label::after {
 
 /* 라디오박스 */
 input[type=radio] + label::before {
-  background-position: 0px -20px;
+  background-position: 0px -140px;
 }
 input[type=radio]:checked + label::before {
-  background-position: -20px -20px;
+  background-position: -20px -140px;
 }
 input[type=radio]:disabled + label {
   color: #cccccc;
@@ -6945,11 +6946,11 @@ table.tree {
 }
 
 .treegrid-expander-collapsed::after {
-  background-position: -80px -180px;
+  background-position: -140px -180px;
 }
 
 .treegrid-expander-expanded::after {
-  background-position: -100px -180px;
+  background-position: -120px -180px;
 }
 
 tr.loading > td > .treegrid-container > .treegrid-expander::after {
@@ -6988,197 +6989,192 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .ico.search {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -80px 0px;
+  background-position: -320px 300px;
 }
 .ico.search.white {
-  background-position: -140px -160px;
+  background-position: -340px -300px;
 }
 .ico.excDown {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -120px -100px;
+  background-position: -40px -340px;
   vertical-align: -3px;
 }
 .ico.download {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -40px 0;
+  background-position: 0 -340px;
   cursor: pointer;
 }
 .ico.filter {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -60px 0;
+  background-position: -80px -340px;
 }
 .ico.map {
   width: 1.25rem;
   height: 1.125rem;
-  background-position: -160px -140px;
+  background-position: -80px -360px;
 }
 .ico.file {
   width: 1rem;
   height: 1.125rem;
-  background-position: -80px -40px;
+  background-position: -80px -380px;
 }
 .ico.fileUpload {
   width: 1.25rem;
   height: 1.25rem;
-  background-position: -140px 0;
+  background-position: -40px -360px;
 }
 .ico.delete {
   width: 0.8125rem;
   height: 0.75rem;
   vertical-align: inherit;
-  background-position: -60px -20px;
+  background-position: -80px -300px;
   cursor: pointer;
 }
 .ico.delete_bg {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -140px -60px;
+  background-position: -160px -300px;
   cursor: pointer;
 }
 .ico.delete_bin {
   width: 1.125rem;
   height: 1.125rem;
   vertical-align: inherit;
-  background-position: -60px -40px;
+  background-position: -180px -340px;
   cursor: pointer;
 }
 .ico.gray_bin {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -140px -140px;
+  background-position: -160px -340px;
 }
 .ico.refresh {
-  width: 1.25rem;
-  height: 1.125rem;
-  background-position: -180px 0;
+  width: 1.1875rem;
+  height: 1rem;
+  background-position: -320px -320px;
 }
 .ico.refresh_g {
   width: 1.1875rem;
   height: 1rem;
-  background-position: -160px -120px;
+  background-position: -340px -320px;
 }
 .ico.setting {
   width: 1.125rem;
   height: 1.125rem;
   vertical-align: sub;
-  background-position: -100px 0;
+  background-position: -80px -320px;
   cursor: pointer;
 }
 .ico.sort {
   width: 1.125rem;
   height: 0.1875rem;
-  background-position: -120px -20px;
+  background-position: -20px -320px;
 }
 .ico.change {
-  width: 1.25rem;
-  height: 1.125rem;
-  background-position: -160px 0;
+  width: 1.0625rem;
+  height: 1.0625rem;
+  background-position: -160px -380px;
   cursor: pointer;
 }
 .ico.resume {
   width: 1rem;
   height: 1.0625rem;
-  background-position: -180px -160px;
+  background-position: -20px -380px;
 }
 .ico.resume_b {
   width: 1rem;
   height: 1.0625rem;
-  background-position: -160px -160px;
+  background-position: 0 -380px;
   cursor: pointer;
 }
 .ico.manager {
   width: 0.9375rem;
   height: 1.125rem;
-  background-position: -180px -140px;
+  background-position: -40px -380px;
 }
 .ico.lock {
   width: 0.6875rem;
   height: 0.875rem;
-  background-position: -160px -80px;
+  background-position: -280px -340px;
 }
 .ico.lock_b {
   width: 0.9375rem;
   height: 1.125rem;
   vertical-align: -1px;
-  background-position: -180px -180px;
+  background-position: -240px -340px;
 }
 .ico.lock_b_sm {
   width: 0.75rem;
   height: 0.9375rem;
   vertical-align: -1px;
-  background-position: -180px -200px;
+  background-position: -260px -340px;
 }
 .ico.shield {
   width: 0.875rem;
   height: 1rem;
-  background-position: -80px -160px;
+  background-position: -240px -360px;
 }
 .ico.fixed {
   width: 0.875rem;
   height: 0.9375rem;
   vertical-align: -1px;
   margin-right: 5px;
-  background-position: -180px -80px;
+  background-position: -300px -340px;
 }
 .ico.letter {
   width: 1.125rem;
-  height: 0.75rem;
-  background-position: -180px -100px;
+  height: 0.875rem;
+  background-position: -360px -440px;
 }
 .ico.save {
   width: 0.9375rem;
   height: 0.9375rem;
-  background-position: -180px -120px;
+  background-position: 0 -360px;
 }
 .ico.preview {
   width: 1.125rem;
   height: 1rem;
-  background-position: -160px -60px;
+  background-position: -320px -340px;
   cursor: pointer;
 }
 .ico.preview.is-active {
-  background-position: 0 -240px;
+  background-position: -340px -340px;
 }
 .ico.preview_w {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -159px -220px;
+  background-position: -360px -340px;
 }
 .ico.edit {
   width: 0.75rem;
   height: 0.75rem;
-  background-position: -120px -140px;
+  background-position: -180px -380px;
   vertical-align: initial;
   cursor: pointer;
 }
 .ico.signal_sm {
   width: 0.6875rem;
   height: 0.625rem;
-  background-position: -180px -240px;
-}
-.ico.signal_mid {
-  width: 0.8125rem;
-  height: 0.8125rem;
-  background-position: -180px -220px;
+  background-position: -160px -360px;
 }
 .ico.signal_la {
   width: 1.625rem;
   height: 1.375rem;
-  background-position: -120px -240px;
+  background-position: 0 -40px;
   vertical-align: -2px;
 }
 .ico.more {
   width: 0.1875rem;
   height: 1.125rem;
-  background-position: -100px -20px;
+  background-position: 0 -320px;
 }
 .ico.more2 {
   width: 0.9375rem;
   height: 1.25rem;
-  background-position: -140px -100px;
+  background-position: -40px -320px;
   padding: 0 3px;
   cursor: pointer;
 }
@@ -7186,115 +7182,100 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 0.75rem;
   height: 0.75rem;
   vertical-align: -1px;
-  background-position: -60px -20px;
+  background-position: -80px -300px;
   cursor: pointer;
 }
 .ico.smClose.w, .ico.smClose.white {
-  background-position: -80px -20px;
+  background-position: -100px -300px;
 }
 .ico.layerClose {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -40px -20px;
-}
-.ico.plus {
-  width: 1.125rem;
-  height: 1.125rem;
-  background-position: -20px -180px;
+  background-position: 0 -300px;
 }
 .ico.minus {
   width: 1.125rem;
   height: 0.125rem;
-  background-position: 0 -180px;
+  background-position: -120px -100px;
 }
-.ico.smPlus {
+.ico.plus {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -140px -100px;
+}
+.ico.smMinus, .ico.removeLine {
+  width: 0.75rem;
+  height: 0.125rem;
+  background-position: -120px -120px;
+}
+.ico.smPlus, .ico.addLine {
   width: 0.75rem;
   height: 0.75rem;
-  background-position: -60px -180px;
-}
-.ico.smMinus {
-  width: 0.75rem;
-  height: 0.125rem;
-  background-position: -40px -180px;
-}
-.ico.addLine {
-  width: 0.875rem;
-  height: 0.875rem;
-  background-position: -180px -260px;
-}
-.ico.removeLine {
-  width: 0.75rem;
-  height: 0.125rem;
-  background-position: -40px -180px;
+  background-position: -140px -120px;
 }
 .ico.addLine_chked {
   width: 1.125rem;
   height: 0.9375rem;
-  background-position: -160px -260px;
+  background-position: -140px -140px;
 }
 .ico.corporation {
   width: 1.0625rem;
   height: 1.0625rem;
-  background-position: -160px -240px;
+  background-position: -240px -380px;
 }
 .ico.reduce {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -100px -180px;
+  background-position: -120px -160px;
   cursor: pointer;
 }
 .ico.extend {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -80px -180px;
+  background-position: -140px -160px;
   cursor: pointer;
 }
 .ico.extend.is-active {
-  background-position: -100px -180px;
+  background-position: -120px -160px;
 }
 .ico.layoutF {
   width: 1.9375rem;
   height: 1.75rem;
-  background-position: 0 -200px;
+  background-position: -80px 0;
   cursor: pointer;
 }
 .ico.layoutF.is-active {
-  background-position: -40px -200px;
+  background-position: -120px 0;
 }
 .ico.layoutG {
   width: 1.9375rem;
   height: 1.75rem;
-  background-position: -80px -200px;
+  background-position: -160px 0;
   cursor: pointer;
 }
 .ico.layoutG.is-active {
-  background-position: -120px -200px;
+  background-position: -200px 0;
 }
 .ico.qMark, .ico.qMark2 {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -160px -20px;
+  background-position: -240px -300px;
   margin-left: 2px;
 }
 .ico.top {
   width: 2.125rem;
   height: 2.125rem;
-  background-position: -40px -60px;
-}
-.ico.bottom {
-  width: 2.125rem;
-  height: 2.125rem;
-  background-position: -60px -60px;
-}
-.ico.up {
-  width: 0.8125rem;
-  height: 0.5625rem;
-  background-position: -120px -180px;
+  background-position: 0px 0px;
 }
 .ico.down {
   width: 0.8125rem;
   height: 0.5625rem;
-  background-position: -140px -180px;
+  background-position: -80px -140px;
+}
+.ico.up {
+  width: 0.8125rem;
+  height: 0.5625rem;
+  background-position: -100px -140px;
 }
 .ico.arrow {
   width: 1rem;
@@ -7304,18 +7285,18 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .ico.memo {
   width: 1.0625rem;
   height: 1.0625rem;
-  background-position: -140px -40px;
+  background-position: -320px -380px;
   vertical-align: -2px;
 }
 .ico.pull {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -40px -160px;
+  background-position: -80px -160px;
 }
 .ico.push {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -60px -160px;
+  background-position: -100px -160px;
 }
 .ico.expand {
   width: 0.75rem;
@@ -7330,53 +7311,52 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .ico.list {
   width: 1.125rem;
   height: 0.75rem;
-  background-position: -140px -20px;
+  background-position: -160px -320px;
 }
 .ico.pageList {
   width: 1rem;
   height: 1.125rem;
-  background-position: -120px -60px;
+  background-position: -320px -360px;
   cursor: pointer;
 }
 .ico.pageList_w {
   width: 0.6875rem;
   height: 0.8125rem;
-  background-position: -160px -200px;
+  background-position: -340px -360px;
 }
 .ico.pagingLeft {
   width: 0.625rem;
   height: 1.125rem;
-  background-position: 0 -100px;
+  background-position: -40px -100px;
 }
 .ico.pagingLeft.is-active {
-  background-position: -20px -100px;
+  background-position: -40px -120px;
 }
 .ico.pagingRight {
   width: 0.625rem;
   height: 1.125rem;
-  background-position: 0 -120px;
+  background-position: -60px -100px;
 }
 .ico.pagingRight.is-active {
-  background-position: -20px -120px;
+  background-position: -60px -120px;
 }
 .ico.pagingFirst {
   width: 0.8125rem;
   height: 1.125rem;
-  background-position: 0 -140px;
+  background-position: -40px -140px;
 }
 .ico.pagingFirst.is-active {
-  background-position: -20px -140px;
+  background-position: -40px -160px;
 }
 .ico.pagingLast {
   width: 0.8125rem;
   height: 1.125rem;
-  background-position: 0 -160px;
+  background-position: -60px -140px;
 }
 .ico.pagingLast.is-active {
-  background-position: -20px -160px;
+  background-position: -60px -160px;
 }
 
-/* HEADER 아이콘 */
 /* GNB 아이콘 */
 .gnb .ico {
   width: 1.375rem;
@@ -7942,6 +7922,8 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .divideBox h5 {
   margin-bottom: 0.625rem;
   color: #838ca3;
+  font-weight: 500;
+  text-align: left;
 }
 .divideBox > div {
   padding: 1.25rem;
@@ -7967,6 +7949,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .divideBox .history li {
   margin-bottom: 0.3125rem;
+  text-align: left;
 }
 .divideBox .history li p {
   font-weight: 500;
@@ -8048,7 +8031,7 @@ h1 {
   width: 1.125rem;
   height: 0.1875rem;
   background: url(../img/icoGroup.png);
-  background-position: -120px -20px;
+  background-position: -20px -320px;
   position: absolute;
   top: 50%;
   right: -36px;
@@ -8261,7 +8244,7 @@ h6 + .h6_sub {
   width: 15px;
   height: 11px;
   background-image: url(../img/icoGroup.png);
-  background-position: -180px -40px;
+  background-position: 0 -400px;
   right: 14px;
   top: 12px;
 }
@@ -8292,17 +8275,17 @@ h6 + .h6_sub {
   width: 9px;
   height: 7px;
   background-image: url(../img/icoGroup.png);
-  background-position: -180px -60px;
+  background-position: -20px -400px;
   position: absolute;
   right: 0;
   bottom: 2px;
 }
 .phoImg.is-signal::after {
   content: "";
-  width: 0.8125rem;
+  width: 0.875rem;
   height: 0.8125rem;
   background-image: url(../img/icoGroup.png);
-  background-position: -180px -220px;
+  background-position: -160px -360px;
   position: absolute;
   right: 0;
   bottom: -1px;
@@ -8386,7 +8369,7 @@ h6 + .h6_sub {
 .trgBox .phoImg.is-special::after {
   width: 9px;
   height: 7px;
-  background-position: -180px -60px;
+  background-position: -20px -400px;
   right: 5px;
   top: 6px;
 }
@@ -8470,7 +8453,7 @@ h6 + .h6_sub {
 .offeredMem .phoImg.is-special::after {
   width: 9px;
   height: 7px;
-  background-position: -180px -60px;
+  background-position: -20px -400px;
   right: 35px;
   top: 10px;
 }
@@ -8638,7 +8621,7 @@ h6 + .h6_sub {
   border-bottom: 0;
 }
 .accWrap.flatType .accBox.is-active i.arrow {
-  background-position: -100px -120px;
+  background-position: -80px -120px;
   vertical-align: 2px;
 }
 .accWrap.flatType .accBox.disabled {
@@ -8649,7 +8632,7 @@ h6 + .h6_sub {
   color: #999;
 }
 .accWrap.flatType .accBox.disabled i.arrow {
-  background-position: -120px -120px;
+  background-position: -80px -100px;
 }
 .accWrap.flatType .accBox.nodata {
   height: 6.25rem;
@@ -8738,12 +8721,12 @@ h6 + .h6_sub {
   border: 1px solid #cccccc;
 }
 .accBox.is-active {
-  padding-bottom: 0;
+  padding-bottom: 0.625rem;
   border: 1px solid #0460d2;
 }
 .accBox.is-active i.smPlus {
   height: 0.125rem;
-  background-position: 0 -180px;
+  background-position: -120px -100px;
 }
 .accBox.is-active .accInner {
   display: block;
@@ -9418,7 +9401,7 @@ h6 + .h6_sub {
   grid-column: 1/3;
 }
 #myPeoA-1 .condition li.hasBtn input {
-  width: 25.25rem;
+  width: 100%;
 }
 #myPeoA-1 .condition li.hasBtn button {
   line-height: 2.375rem;
@@ -9673,41 +9656,31 @@ h6 + .h6_sub {
   margin: 10px 0;
   min-height: 1.25rem;
 }
-.resume > .prefix .mid li::before {
-  content: "";
-  width: 1rem;
-  height: 1rem;
-  background-image: url(../img/icoGroup.png);
-  background-position: -40px -184px;
-  position: absolute;
-  top: 2px;
-  left: -20px;
-}
 .resume > .prefix .mid li.birth {
   margin-left: 1.5rem;
 }
 .resume > .prefix .mid li.birth::before {
-  background-position: -40px -100px;
+  background-position: -320px -400px;
 }
 .resume > .prefix .mid li.pNum {
   margin-left: 1.5rem;
 }
 .resume > .prefix .mid li.pNum::before {
-  background-position: -60px -100px;
+  background-position: -340px -400px;
   left: -18px;
 }
 .resume > .prefix .mid li.mail {
   margin-left: 1.5rem;
 }
 .resume > .prefix .mid li.mail::before {
-  background-position: -80px -100px;
+  background-position: -360px -400px;
   top: 6px;
 }
 .resume > .prefix .mid li.address {
   margin-left: 1.5rem;
 }
 .resume > .prefix .mid li.address::before {
-  background-position: -100px -100px;
+  background-position: -380px -400px;
   left: -19px;
 }
 .resume > .prefix .bottom {
@@ -10390,7 +10363,7 @@ h6 + .h6_sub {
   width: 1rem;
   height: 1rem;
   background-image: url(../img/icoGroup.png);
-  background-position: -120px -80px;
+  background-position: -340px -420px;
   position: absolute;
   top: 6px;
   left: -20px;
@@ -10404,7 +10377,7 @@ h6 + .h6_sub {
   display: none;
 }
 .compoWrapper .titWrapper .toolBox li.mail::before {
-  background-position: -140px -80px;
+  background-position: -360px -420px;
   top: 11px;
   left: -22px;
 }
@@ -10959,7 +10932,7 @@ h6 + .h6_sub {
   position: relative;
 }
 .searchRequire .filterCustom li .more2 {
-  padding: 0 6px;
+  padding: 0 10px;
 }
 .searchRequire .filterCustom li.is-active {
   background: #0460d2;
@@ -10968,7 +10941,7 @@ h6 + .h6_sub {
   color: #fff;
 }
 .searchRequire .filterCustom li.is-active .more2 {
-  background-position: -160px -100px;
+  background-position: -60px -320px;
 }
 .searchRequire .filterCustom li.info {
   display: block;
