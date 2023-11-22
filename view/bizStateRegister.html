@@ -121,7 +121,10 @@
                                     <!-- <h3>[종료] 대기업 B2B 주문 프로세스 개선 기획자 모집</h3> -->
                                     <ul class="grid col6">
                                         <li class="bizProjNm">
-                                            <label class="need" for="">프로젝트명</label>
+                                            <div class="flex">
+                                                <label class="need" for="">프로젝트명</label>
+                                                <span class="mainC">주관부서 : 대외사업본부<i class="ico out"></i></span>
+                                            </div>
                                             <input class="full" type="text" id="" placeholder="(필수) 프로젝트 명을 입력하세요.">
                                         </li>
                                         <li>
@@ -239,7 +242,8 @@
                                         </li>             
                                         <li class="">
                                             <h6 class="need">코드</h6>
-                                            <input class="full" type="text" id="" value="A10255" readonly>
+                                            <!-- 2311390 수정 <input class="full" type="text" id="" value="A10255" readonly> -->
+                                            <span class="subInfo">B0110 <i class="ico out"></i></span> 
                                         </li>          
                                         <li class="bizInsurance">
                                             <h6 class="">보험</h6>
@@ -263,11 +267,26 @@
                             <div class="boxWrap">
                                 <div class="flexLeft">
                                     <div class="prefix tableSort">     
-                                        <div class="tableTop left">
+                                        <!-- <div class="tableTop left">
                                             <h4 class="mainC">계약기준</h4>
                                             <input type="checkbox" id="e1" class="hasTxt">
                                             <label for="e1" class="ml10">삼성SDS등급적용</label>     
+                                        </div> -->
+
+                                        <!--231130 수정-ys-->
+                                        <div class="tableTop">
+                                            <div class="prefix">
+                                                <h4 class="mainC">계약기준</h4>
+                                                <input type="checkbox" id="e1" class="hasTxt">
+                                                <label for="e1" class="ml10">삼성SDS등급적용</label>  
+                                            </div>
+                                            <div class="suffix">
+                                                <button class="onlyIco midSize"><i class="ico split"></i></button>
+                                                <button class="onlyIco midSize"><i class="ico synch"></i></button>
+                                                <button class="onlyIco midSize"><i class="ico addLine"></i></button>
+                                            </div>
                                         </div>
+                                        <!--//231130 수정-ys-->
 
                                         <div class="tabWrapper" id="onContract">
                                             
@@ -323,18 +342,19 @@
                                                     </li>
                                                 </ul>    
 
-                                                <!--231115 수정-ys-->       
+                                                <!--231115 수정-ys / 231130 asis 이동-->       
                                                 <!-- <button class="white smSize">+ 행추가</button>                                    -->
-                                                <button class="onlyIco midSize">
+                                                <!-- <button class="onlyIco midSize">
                                                     <i class="ico addLine"></i>
-                                                </button>
-                                                <!--//231115 수정-ys-->
+                                                </button> -->
+                                                <!--//231115 수정-ys / 231130 asis 이동-->
                                             </div>
                                             <!--//230915 수정-ys -->
                                             <div class="tabContWrap">
                                                 <div id="onC-1" class="tabCont is-active">
                                                     <div class="tableBox">
                                                         <table>
+                                                            <!-- 231130 수정-ys
                                                             <colgroup>
                                                                 <col width="10%">
                                                                 <col>
@@ -346,24 +366,48 @@
                                                                 <col width="9%">
                                                                 <col width="13%">
                                                                 <col width="6%">
+                                                            </colgroup> -->
+                                                            <colgroup>
+                                                                <col width="40px">
+                                                                <col width="80px">
+                                                                <col width="70px">
+                                                                <col width="70px">
+                                                                <col width="85px">
+
+                                                                <col width="85px">
+                                                                <col width="50px">
+                                                                <col width="85px">
+                                                                <col width="75px">
+                                                                <col>
+
+                                                                <col width="45px">
                                                             </colgroup>
                                                             <thead>
                                                                 <tr>
+                                                                    <th></th><!--231130 추가-ys-->
                                                                     <th>그룹</th>
                                                                     <!-- <th>직무/모듈</th> -->
                                                                     <th>구분</th>
                                                                     <th>등급</th>
                                                                     <th>시작일</th>
+
                                                                     <th>종료일</th>
-                                                                    <th>MM(수량)</th>
+                                                                    <th>M/M<br>(수량)</th>
                                                                     <th>매출단가</th>
                                                                     <th>제경비</th>
-                                                                    <th>매출합</th>
+                                                                    <th>매출합계</th>
+
                                                                     <th>삭제</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
+                                                                    <!--231130 추가-ys-->
+                                                                    <td>
+                                                                        <input type="checkbox" id="tt3">
+                                                                        <label for="tt3"></label>
+                                                                    </td>
+                                                                    <!--//231130 추가-ys-->
                                                                     <td>
                                                                         <select name="" id="">
                                                                             <option value="">비삼성</option>
@@ -396,6 +440,10 @@
                                                                     <td><i class="ico delete_bg"></i></td>
                                                                 </tr>
                                                                 <tr>
+                                                                    <td>
+                                                                        <input type="checkbox" id="t2t3">
+                                                                        <label for="t2t3"></label>
+                                                                    </td>
                                                                     <td>
                                                                         <select name="" id="">
                                                                             <option value="">비삼성</option>
@@ -433,13 +481,19 @@
                                                                 </tr>
                                                             </tbody>
                                                             <tfoot>
-                                                                <tr>
+                                                                <!-- <tr>
                                                                     <td colspan="5"></td>
                                                                     <td>5.5</td>
                                                                     <td class="right">17,000,000</td>
                                                                     <td class="right">200,000</td>
                                                                     <td class="right"><b class="dark">42,200,000</b></td>
                                                                     <td></td>
+                                                                </tr> -->
+                                                                <tr>
+                                                                    <td colspan="5"></td>
+                                                                    <td class="right">총M/M : <b class="dark">4</b></td>
+                                                                    <td colspan="2" class="right">총제경비 : <b class="dark">44,000</b></td>
+                                                                    <td colspan="3" class="sortL">매출합계 : <b class="dark ">85,020,000</b></td>
                                                                 </tr>
                                                             </tfoot>
                                                         </table>
@@ -1720,7 +1774,7 @@
 
 
     <!--계약상세 팝업-->
-    <div id="" class="modalLayer center">
+    <div id="" class="modalLayer center is-active">
         <div class="layerBox mid-laSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -3408,6 +3462,7 @@
                                             </div>
                                         </li>
         
+                                        <!-- 231130 이동-ys 
                                         <li class="conDFile">                                            
                                             <h6>첨부파일</h6>
                                             <div class="uploadBox">
@@ -3433,21 +3488,21 @@
                                                 <label for="cycleDocument22" class="">직접선택</label>
                                                 <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="">
                                             </div>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
                             <div class="suffix divideBox">
                                 <div class="inputList top">
-                                    <ul class="grid col2">
+                                    <ul class="grid"><!--231130 수정-ys-->
                                         <li class="conMan">
-                                            <h5>투입인력</h5>
+                                            <h6>투입인력</h6><!--231130 수정-ys-->
                                             <div class="info">1명</div>    
                                         </li>
                                         <li>
                                             <h6>총 M/M</h6>
                                             <div class="info">
-                                                <input type="text" class="full">
+                                                <input type="text" class="smSize txtRight"><!--231130 수정-ys-->
                                             </div>    
                                         </li>
                                         <li>
@@ -3460,9 +3515,9 @@
                                     </ul>
                                 </div>
                                 <div class="inputList center">
-                                    <ul class="grid col2">
+                                    <ul class="grid"><!--231130 수정-ys-->
                                         <li class="conSupply">
-                                            <h5>공급</h5>
+                                            <h6>공급</h6>
                                             <div class="info">라이센스</div>    
                                         </li>
                                         <li>
@@ -3481,9 +3536,9 @@
                                     </ul>
                                 </div>
                                 <div class="inputList bottom">
-                                    <ul class="grid col2">
+                                    <ul class="grid"><!--231130 수정-ys-->
                                         <li class="conPrice">
-                                            <h5>계약금액</h5>
+                                            <h6>계약금액</h6>
                                             <div class="info txtRight">
                                                 <input type="text" class="midSize txtRight">
                                                 원
@@ -3493,6 +3548,38 @@
                                 </div>
                             </div>
                         </div>
+                        <!--231130 이동-ys-->
+                        <div class="inputList">
+                            <ul class="grid col3">
+                                <li class="conDFile">                                            
+                                    <h6>첨부파일</h6>
+                                    <div class="uploadBox">
+                                        <div class="inputGroup upload">
+                                            <div class="drop">
+                                                <i class="ico fileUpload"></i>
+                                                <label for="fileUpload">
+                                                    파일을 첨부해주세요.<br>
+                                                    (파일 최대 5개, 100MB 이하)                                                      
+                                                </label>
+                                            </div>
+                                            <div class="list">
+                                                <ul class="list_ul">
+                                                    <li>
+                                                        <span class="fileName">test.JPG</span>
+                                                        <span class="volume">45 KB</span>
+                                                        <i class="ico delete_bg"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    
+                                        <label for="cycleDocument22" class="">직접선택</label>
+                                        <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--//231130 이동-ys-->
                         <div class="tableTop">
                             <h5 class="underBg">투입인력</h5>
                             <div class="suffix">

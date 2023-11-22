@@ -1126,12 +1126,25 @@ table tfoot td {
 .bizStateRegister .bizFile {
   grid-column: 1/4;
 }
+.bizStateRegister .bizProjNm .flex,
+.bizStateRegister .bizFile .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bizStateRegister .bizProjNm i,
+.bizStateRegister .bizFile i {
+  margin-left: 5px;
+}
 .bizStateRegister .bizInsurance {
   grid-column: 5/7;
 }
 .bizStateRegister .bizInsurance label {
   margin-right: 1.25rem;
   line-height: 44px;
+}
+.bizStateRegister li i {
+  margin-left: 5px;
 }
 .bizStateRegister select.others {
   color: #ff1236;
@@ -1185,6 +1198,9 @@ table tfoot td {
 }
 .bizStateRegister .tableTop .hasTooltip .tooltip {
   top: 150%;
+}
+.bizStateRegister .tableTop .suffix {
+  gap: 2px;
 }
 .bizStateRegister table input[type=text],
 .bizStateRegister table input[type=number] {

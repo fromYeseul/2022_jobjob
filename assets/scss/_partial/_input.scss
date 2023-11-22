@@ -648,20 +648,25 @@ input[type=file] {
             display: flex;
             font-size: rem(14);
             align-items: center;
-            // & + .list{
-            //     // margin-top: rem(10);
-            // }
+            & + .list{
+                margin-top: rem(10);
+            }
         }
         .list{
             .list_ul{
                 display: block;
+                max-height: rem(180);
+                overflow-y: auto;
                 li{
-                    margin-top: 10px;
+                    // margin-top: 10px;
                     @include sideArray;
                     padding: 0 rem(4);
                     border-radius: rem(4);                   
                     &:hover{
                         background: $selHover;
+                    }
+                    & + li{
+                        margin-top: 10px;
                     }
                     .delete{
                         margin-left: rem(10);
@@ -694,7 +699,8 @@ input[type=file] {
         padding: 0 rem(15);
         display: inline-block;
         
-        font-weight: 700;
+        // font-weight: 700;
+        font-weight: rem(15);
         text-align: center;
         border-radius: rem(6);
 

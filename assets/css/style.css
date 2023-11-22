@@ -1129,6 +1129,9 @@ header .suffix li.userTeam {
 header .suffix li.userTeam::after {
   display: none;
 }
+header .suffix li.userTeam a {
+  cursor: initial;
+}
 header .suffix li .black {
   padding: 0 5px;
   line-height: 22px;
@@ -2421,18 +2424,10 @@ footer.toast button + button {
 .contractDetail .commentBox .comment {
   width: 820px;
 }
-.contractDetail.turn .col2 {
+.contractDetail.turn .col3 {
   row-gap: 1.25rem;
-  column-gap: 4.375rem;
-  grid-template-columns: 80px 120px;
-}
-.contractDetail.turn .col2 .conMan,
-.contractDetail.turn .col2 .conSupply,
-.contractDetail.turn .col2 .conPrice {
-  grid-column: 1/3;
-}
-.contractDetail.turn .col2 .conPrice input {
-  font-weight: 700;
+  column-gap: 1.875rem;
+  grid-template-columns: repeat(3, 300px);
 }
 .contractDetail.turn .col4 {
   row-gap: 1.25rem;
@@ -2448,6 +2443,9 @@ footer.toast button + button {
 .contractDetail.turn .conDCount .info {
   display: flex;
   gap: 5px;
+}
+.contractDetail.turn .conDFile {
+  grid-column: 1/3;
 }
 .contractDetail.turn .dateType {
   width: 8.375rem !important;
@@ -2468,24 +2466,43 @@ footer.toast button + button {
   border-radius: 6px;
 }
 .contractDetail .contentFlex .suffix.divideBox {
+  padding: 20px;
   margin-top: 0;
   margin-left: 0;
   flex-direction: column;
+  background: #f9f9f9;
+}
+.contractDetail .contentFlex .suffix.divideBox li {
+  display: flex;
+  align-items: center;
+  height: 2.8125rem;
+}
+.contractDetail .contentFlex .suffix.divideBox li h6 {
+  width: 6.25rem;
+}
+.contractDetail .contentFlex .suffix.divideBox li .info {
+  margin-top: 0;
 }
 .contractDetail .contentFlex .suffix div {
+  padding: 0;
   border: 0;
+  position: relative;
 }
-.contractDetail .contentFlex .suffix div.top {
-  padding-top: 2.5rem;
-  padding-bottom: 0.9375rem;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom: 1px solid #cccccc;
+.contractDetail .contentFlex .suffix div.top, .contractDetail .contentFlex .suffix div.center {
+  padding-bottom: 20px;
+}
+.contractDetail .contentFlex .suffix div.top::after, .contractDetail .contentFlex .suffix div.center::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #cccccc;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
 }
 .contractDetail .contentFlex .suffix div.bottom {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-top: 1px solid #cccccc;
+  margin-top: 1.25rem;
 }
 
 .contractCreate h5,
@@ -5080,11 +5097,15 @@ input[type=file] {
   font-size: 0.875rem;
   align-items: center;
 }
+.inputGroup.upload .drop + .list {
+  margin-top: 0.625rem;
+}
 .inputGroup.upload .list .list_ul {
   display: block;
+  max-height: 11.25rem;
+  overflow-y: auto;
 }
 .inputGroup.upload .list .list_ul li {
-  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -5093,6 +5114,9 @@ input[type=file] {
 }
 .inputGroup.upload .list .list_ul li:hover {
   background: #e5effa;
+}
+.inputGroup.upload .list .list_ul li + li {
+  margin-top: 10px;
 }
 .inputGroup.upload .list .list_ul li .delete {
   margin-left: 0.625rem;
@@ -5122,7 +5146,7 @@ input[type=file] {
   line-height: 2.625rem;
   padding: 0 0.9375rem;
   display: inline-block;
-  font-weight: 700;
+  font-weight: 0.9375rem;
   text-align: center;
   border-radius: 0.375rem;
   font-size: 1rem;
@@ -7140,8 +7164,9 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-position: -320px -340px;
   cursor: pointer;
 }
-.ico.preview.is-active {
-  background-position: -340px -340px;
+.ico.preview.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 .ico.preview_w {
   width: 1.125rem;
@@ -7165,6 +7190,22 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   height: 1.375rem;
   background-position: 0 -40px;
   vertical-align: -2px;
+}
+.ico.out {
+  width: 1rem;
+  height: 1rem;
+  background-position: -160px -400px;
+  vertical-align: -2px;
+}
+.ico.split {
+  width: 1rem;
+  height: 1rem;
+  background-position: -80px -400px;
+}
+.ico.synch {
+  width: 1rem;
+  height: 1rem;
+  background-position: -240px -320px;
 }
 .ico.more {
   width: 0.1875rem;
@@ -11191,6 +11232,10 @@ h6 + .h6_sub {
   width: 30px;
   border: 0;
   box-shadow: none;
+}
+.ui-state-hover.ui-corner-all.ui-datepicker-close,
+.ui-widget-content .ui-state-hover.ui-corner-all.ui-datepicker-close {
+  width: auto;
 }
 .ui-state-hover.ui-datepicker-current,
 .ui-widget-content .ui-state-hover.ui-datepicker-current {
