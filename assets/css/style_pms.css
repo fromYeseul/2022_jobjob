@@ -65,17 +65,19 @@
   background: #a6a6b6;
 }
 
-.sReject,
-.sDanger {
+.sReject {
   color: #ff1236;
 }
-.sReject .dot,
+
+.sDanger {
+  color: #000000;
+}
 .sDanger .dot {
   background: #ff1236;
 }
 
 .sSafe {
-  color: #08c97c;
+  color: #000000;
 }
 .sSafe .dot {
   background: #08c97c;
@@ -556,10 +558,6 @@
   color: #739acb;
 }
 
-.contWrapper {
-  padding-right: 0;
-}
-
 .layoutWrapper.is-active .gnbWrapper, .layoutWrapper.is-hover .gnbWrapper {
   background: #fff;
 }
@@ -776,7 +774,7 @@ table tbody tr:hover {
   background: #f3f4f7;
 }
 table tbody tr th {
-  background: #f5f5f5;
+  background: #e2eaf5;
 }
 table tr th {
   background: #8c98a6;
@@ -793,6 +791,184 @@ table a {
 }
 table tfoot td {
   background: #eee;
+}
+
+.dashboard {
+  overflow: hidden;
+}
+.dashboard table thead {
+  height: 2.375rem;
+  margin-top: 10px;
+}
+.dashboard table tr td {
+  height: 2.375rem;
+}
+.dashboard table tr td.left {
+  padding-left: 1.25rem;
+}
+.dashboard table tr td.right {
+  padding-right: 1.25rem;
+}
+.dashboard table .dot {
+  vertical-align: baseline;
+  margin: 0 0.5rem;
+}
+.dashboard .accBox .prefix {
+  width: 20%;
+}
+
+.dashboard .condition {
+  margin-top: -30px;
+}
+.dashboard .condition .condiTit {
+  margin-right: 1.25rem;
+}
+.dashboard .condition .hasBtn {
+  align-items: baseline;
+}
+.dashboard .contentFlex {
+  margin-top: 0.625rem;
+  display: flex;
+  gap: 20px;
+}
+.dashboard .contentFlex .boxWrap {
+  padding: 1.875rem 1.25rem;
+}
+.dashboard .contentFlex .boxWrap.prefix {
+  padding: 1.875rem 1.25rem;
+  flex: 8 1 0;
+}
+.dashboard .contentFlex .boxWrap.suffix {
+  padding: 1.875rem;
+  flex: 9 1 0;
+}
+.dashboard .contentFlex .boxWrap h4 {
+  color: #1f60af;
+}
+.dashboard .contentFlex .boxWrap .h4_sub {
+  margin-left: 0.8125rem;
+  color: #ababab;
+  font-weight: normal;
+}
+.dashboard .contentFlex .noticeBoard {
+  margin-top: 1.25rem;
+  padding: 1.5625rem 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: #eaf2f8;
+  border: 1px solid #dee8f0;
+}
+.dashboard .contentFlex .noticeBoard .prefix,
+.dashboard .contentFlex .noticeBoard .suffix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard .contentFlex .noticeBoard h1 {
+  margin-left: 1.25rem;
+  font-size: 2.125rem;
+}
+.dashboard .contentFlex .noticeBoard .suffix h1 {
+  color: #1e6ee7;
+}
+.dashboard .accWrap {
+  margin-top: 1.875rem;
+  height: calc(75vh - 361px);
+  overflow-y: auto;
+}
+.dashboard .accWrap::-webkit-scrollbar {
+  width: 0;
+}
+.dashboard .accHead .projTit {
+  padding-left: 1.25rem;
+  position: relative;
+}
+.dashboard .accHead .projTit::before {
+  content: "";
+  width: 0.6875rem;
+  height: 0.6875rem;
+  background: #304e94;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.dashboard .accHead .projTit.sapStr::before {
+  background: #0d60c8;
+}
+.dashboard .accHead .projTit.sapUni::before {
+  background: #17a6f2;
+}
+.dashboard .accHead .projTit.exBiz::before {
+  background: #24c9cb;
+}
+.dashboard .accHead .projTit.fuFus::before {
+  background: #13be6f;
+}
+.dashboard .accHead .projTit.platf::before {
+  background: #8c98a6;
+}
+.dashboard .accHead .projTit.cloud::before {
+  background: #575d64;
+}
+.dashboard .accHead .suffix ul {
+  display: flex;
+  gap: 1.875rem;
+  color: #000000;
+}
+.dashboard .accHead .suffix .label {
+  margin-right: 0.625rem;
+  vertical-align: text-top;
+}
+.dashboard .accInner {
+  padding: 0 1.875rem;
+  padding-bottom: 1.25rem;
+}
+
+.halfGraph {
+  margin-top: 2.5rem;
+}
+
+.circleGraph {
+  margin-top: 4.375rem;
+}
+.circleGraph ul {
+  display: flex;
+  max-width: 40vw;
+}
+.circleGraph ul li {
+  width: 20%;
+  position: relative;
+}
+.circleGraph ul li .numVal {
+  font-size: 1rem;
+  font-weight: 500;
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  transform: translateX(-50%);
+}
+.circleGraph ul li .numVal.pro {
+  color: #932ab6;
+}
+.circleGraph ul li .numVal.income {
+  color: #00a65a;
+}
+.circleGraph ul li .numVal.input {
+  color: #f56954;
+}
+.circleGraph ul li .numVal.cont {
+  color: #3c8dbc;
+}
+.circleGraph ul li .numVal.fin {
+  color: #39cccc;
+}
+
+.barGraph {
+  margin-top: 0.625rem;
+  height: 17.5rem;
 }
 
 .clientBuy .tableTop {
@@ -898,14 +1074,16 @@ table tfoot td {
 .bizState .tableTop {
   margin-top: 1.875rem;
 }
+.bizState .sideScroll {
+  height: calc(100vh - 391px);
+  overflow-y: auto;
+}
+.bizState .sideScroll .tableBox {
+  width: 150rem;
+}
 .bizState tfoot td {
   padding: 0 6px;
   background: #e6e6e6;
-}
-.bizState .relative {
-  position: absolute;
-  bottom: 15px;
-  width: 97%;
 }
 
 .bizStateRegister {
@@ -989,7 +1167,7 @@ table tfoot td {
 .bizStateRegister .tabWrapper .suffix.absol {
   position: absolute;
   top: 0;
-  left: 510px;
+  left: 630px;
 }
 .bizStateRegister .tabBtnWrap .tabBtn {
   line-height: 2.125rem;
@@ -1011,6 +1189,7 @@ table tfoot td {
 .bizStateRegister table input[type=text],
 .bizStateRegister table input[type=number] {
   padding: 0.5rem 0.25rem;
+  padding: 0.5rem 0.1875rem;
   background: #fff;
 }
 .bizStateRegister table input[type=text].dateType,
@@ -1018,6 +1197,9 @@ table tfoot td {
   padding: 0.125rem;
   text-align: center;
   background: #fff;
+}
+.bizStateRegister table td.wide {
+  width: 150px !important;
 }
 .bizStateRegister .tabBtnWrap .tabBtn a.is-active {
   background-color: #2a55aa;
@@ -1051,6 +1233,10 @@ table tfoot td {
 #bsDetail1 tbody,
 #bsDetail1 tfoot {
   font-size: 0.8125rem;
+}
+#bsDetail1 tbody br + b,
+#bsDetail1 tfoot br + b {
+  font-size: 0.75rem;
 }
 #bsDetail1 tbody input,
 #bsDetail1 tbody select,

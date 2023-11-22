@@ -864,16 +864,21 @@
         tfoot{
             td{
                 padding: 10px 5px !important;
+                &:last-child{
+                    button{
+                        margin-left: 4px;
+                        width: 60px;
+                        height: 32px;
+                        line-height: rem(32);
+                    }
+                }
+            }
+            .inputIco{
+                width: 100%;
             }
             input{
                 height: rem(32);
                 background: $white;
-            }
-            button{
-                margin-left: 4px;
-                width: 60px;
-                height: 32px;
-                line-height: rem(32);
             }
         }
     }
@@ -1080,49 +1085,51 @@
         grid-template-columns: 95px 100px 80px 120px 100px 130px 140px;
     }
     .cont{
-        height: 58vh;
+        height: 57vh;
         overflow-y: auto;
+        
+        .conSkill{
+            grid-column: 6/8;
+        }
+        .conDTerm{
+            grid-column: 3/5;
+        }
+        .conDCount{
+            grid-column: 1/4;
+            &.basic{
+                grid-column: 2/5;
+                .info{                
+                    display: flex;
+                    gap: 5px;
+                    input{
+                        flex-grow: 1;
+                    }
+                }
+            }
+        }
+        .conAdmin{
+            grid-column: 6/8;
+            &.basic{
+                grid-column: 7/8;
+            }
+        }
+        .conDFile{
+            grid-column: 1/5;
+        }
+        .dateType{
+            width: rem(114) !important;
+        }
+        .range{
+            margin: 0 4px;
+        }
     }
     .underBg{
         margin-top: rem(40);
     }
-    .info{
+    .info,
+    .uploadBox{
         margin-top: rem(15);
         color: $subInfo;
-    }
-    .conSkill{
-        grid-column: 6/8;
-    }
-    .conDTerm{
-        grid-column: 3/5;
-    }
-    .conDCount{
-        grid-column: 1/4;
-        &.basic{
-            grid-column: 2/5;
-            .info{                
-                display: flex;
-                gap: 5px;
-                input{
-                    flex-grow: 1;
-                }
-            }
-        }
-    }
-    .conAdmin{
-        grid-column: 6/8;
-        &.basic{
-            grid-column: 7/8;
-        }
-    }
-    .conDFile{
-        grid-column: 1/5;
-    }
-    .dateType{
-        width: rem(114) !important;
-    }
-    .range{
-        margin: 0 4px;
     }
 
     .tableTop{
@@ -1145,6 +1152,77 @@
             width: 820px;
         }
     } 
+    //턴키
+    &.turn{
+        .col2{
+            row-gap: rem(20);
+            column-gap: rem(70);
+            grid-template-columns: 80px 120px;
+            .conMan,
+            .conSupply,
+            .conPrice{
+                grid-column: 1/3;
+            }
+            .conPrice{
+                input{
+                    font-weight: 700;
+                }                
+            }
+        }
+        .col4{
+            row-gap: rem(20);
+            column-gap: rem(30);
+            grid-template-columns: repeat(4, 136px);
+        }
+        .conDTerm{
+            grid-column: 2/4;
+        }
+        .conDCount{
+            grid-column: 1/4;
+            .info{
+                display: flex;
+                gap: 5px;
+            }
+        }
+        .dateType{
+            width: rem(134) !important;
+        }
+        .range{
+            margin: 0 10px;
+        }
+    }
+    .contentFlex{
+        display: flex;
+        gap: 60px;
+        .prefix{
+            flex: 5 1 0;
+        }
+        .suffix{
+            flex: 3 1 0;
+            border: 1px solid $layoutColor;
+            border-radius: 6px;
+            &.divideBox{
+                margin-top: 0;
+                margin-left: 0;
+                flex-direction: column;
+            }
+            div{
+                border:0;
+                &.top{
+                    padding-top: rem(40);
+                    padding-bottom: rem(15);
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border-bottom: 1px solid $layoutColor;
+                }
+                &.bottom{
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                    border-top: 1px solid $layoutColor;
+                }
+            }
+        }
+    }
 }
 
 //사업현황 등록 - 계약생성, 인력추가

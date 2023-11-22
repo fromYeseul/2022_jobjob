@@ -18,19 +18,19 @@ input[type=radio]{
             height: rem(18);
             // vertical-align: -3px;
             background-image: url(../img/icoGroup.png);
-            background-position: 0px 0px;
+            background-position: 0px -100px;
         }
     }
     &:checked{
         + label{
             &::before{
-                background-position: -20px 0;
+                background-position: -20px -100px;
             }
         }
         &:disabled{
             + label{
                 &::before{
-                    background-position: -100px -140px;
+                    background-position: -20px -120px;
                 }
             }
         }  
@@ -38,7 +38,7 @@ input[type=radio]{
     &:disabled{
         + label{
             &::before{
-                background-position: -80px -140px;
+                background-position: 0 -120px;
             }
         }
     }        
@@ -66,7 +66,7 @@ input[type=radio]{
                 height: rem(18);
                 vertical-align: -3px;
                 background-image: url(../img/icoGroup.png);
-                background-position: 0px 0px;
+                background-position: 0px -100px;
             }
         }
     }
@@ -74,7 +74,7 @@ input[type=radio]{
         + input[type=hidden]{
             + label{
                 &::before{
-                    background-position: -20px 0;
+                    background-position: -20px -100px;
                 }
             }
         }
@@ -106,7 +106,7 @@ input[type=radio]{
             width: rem(18);
             height: rem(18);
             background-image: url(../img/icoGroup.png);
-            background-position: 0px -40px;
+            background-position: 0px -180px;
             vertical-align: sub;
             &::before{
                 display: none;
@@ -114,7 +114,7 @@ input[type=radio]{
         }
         &:checked{
             & + label{
-                background-position: -20px -40px;
+                background-position: -20px -180px;
             }
         }
     }
@@ -478,13 +478,13 @@ input[type=radio]{
 input[type=radio]{
     + label{
         &::before{
-            background-position: 0px -20px;
+            background-position: 0px -140px;
         }
     }
     &:checked{
         + label{
             &::before{
-                background-position: -20px -20px;
+                background-position: -20px -140px;
             }
         }
     }  

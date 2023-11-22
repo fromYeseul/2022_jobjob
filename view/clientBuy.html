@@ -87,7 +87,7 @@
             </div>
         </section> 
         
-        <section class="contWrapper">
+        <section class="contWrapper noRight">
             <section class="contLayout">
                 <section class="clientBuy">
                     <h2>거래처(매입)<button class="laSize">신규등록</button></h2>
@@ -374,9 +374,9 @@
                 <div class="tableBox">
                     <table>
                         <colgroup>
-                            <col width="8%">
-                            <col width="30%">
-                            <col width="8%">
+                            <!-- <col width="8%"> 231130 제거-ys-->
+                            <col width="25%">
+                            <col width="15%">
 
                             <col>
                             <col>
@@ -384,23 +384,23 @@
                         </colgroup>
                         <thead>
                             <tr>
-                                <th width="73px">
+                                <!-- <th width="73px">
                                     <input type="checkbox" id="note">
                                     <label for="note"></label>
-                                </th>
-                                <th width="265px;">담당역할</th>
-                                <th width="100px;">이름</th>
+                                </th> -->
+                                <th width="240px;">담당역할</th>
+                                <th width="150px;">이름</th>
                                 <th width="160px;">이메일</th>
-                                <th width="170px;">연락처</th>
-                                <th width="170px;">부서</th>
+                                <th width="180px;">연락처</th>
+                                <th width="220px;">부서</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>
+                                <!-- <td>
                                     <input type="checkbox" id="note2">
                                     <label for="note2"></label>
-                                </td>
+                                </td> -->
                                 <td class="ellipsis">서버총괄</td>
                                 <td>김기동</td>
                                 <td>abc@echoit.co.kr</td>
@@ -408,10 +408,6 @@
                                 <td>인프라 구매파트</td>
                             </tr>
                             <tr>
-                                <td>
-                                    <input type="checkbox" id="note2">
-                                    <label for="note2"></label>
-                                </td>
                                 <td class="ellipsis">세금계산서</td>
                                 <td>홍길동</td>
                                 <td>abdbfc@echoit.co.kr</td>
@@ -419,10 +415,6 @@
                                 <td>서비스 구매그룹</td>
                             </tr>
                             <tr>
-                                <td>
-                                    <input type="checkbox" id="note2">
-                                    <label for="note2"></label>
-                                </td>
                                 <td class="ellipsis">세금계산서 세금계산서 세금계산서 세금계산서 세금계산서 세금계산서</td>
                                 <td>황길동</td>
                                 <td>abc1234@echoit.co.kr</td>
@@ -430,10 +422,6 @@
                                 <td>총무팀</td>
                             </tr>
                             <tr>
-                                <td>
-                                    <input type="checkbox" id="note2">
-                                    <label for="note2"></label>
-                                </td>
                                 <td class="ellipsis">UI 개발툴</td>
                                 <td>황길동</td>
                                 <td>abc1234@echoit.co.kr</td>
@@ -441,7 +429,7 @@
                                 <td>총무팀</td>
                             </tr>
                             <tr>
-                                <td class="nodata" colspan="6"><!--데이터 없을때-->
+                                <td class="nodata" colspan="5"><!--데이터 없을때-->
                                     담당자가 없습니다.<br>
                                     역할과 이름, 이메일, 연락처, 부서를 입력 후 추가버튼을 눌러주세요.
                                 </td>
@@ -453,9 +441,9 @@
                 <div class="tableBox">
                     <table>
                         <colgroup>
-                            <col width="8%">
-                            <col width="30%">
-                            <col width="8%">
+                            <!-- <col width="8%"> -->
+                            <col width="25%">
+                            <col width="15%">
 
                             <col>
                             <col>
@@ -463,8 +451,15 @@
                         </colgroup>
                         <tfoot>
                             <tr>
-                                <td></td>
-                                <td><input type="text" class="full" placeholder="역할 입력"></td>
+                                <!-- <td></td> -->
+                                <td>
+                                    <!-- 231130 수정-ys
+                                        <input type="text" class="full" placeholder="역할 입력"> -->
+                                    <div class="inputIco">
+                                        <input type="text" class="" maxlength="" placeholder="검색어를 입력하세요.">
+                                        <button class="ico smClose"></button>
+                                    </div>
+                                </td>
                                 <td><input type="text" class="full" placeholder="이름 입력"></td>
                                 <td><input type="text" class="full" placeholder="이메일 입력"></td>
                                 <td><input type="text" class="full" placeholder="연락처 입력"></td>

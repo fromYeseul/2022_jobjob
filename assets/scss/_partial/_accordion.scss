@@ -15,7 +15,7 @@
                     border-bottom:0;
                 }
                 i.arrow{
-                    background-position: -100px -120px;
+                    background-position: -80px -120px;
                     vertical-align: 2px;
                 }
             }
@@ -26,7 +26,7 @@
                     color: $addHeadGray;
                 }
                 i.arrow{
-                    background-position: -120px -120px;
+                    background-position: -80px -100px;
                 }  
             }
             &.nodata{
@@ -131,11 +131,11 @@
     border:1px solid $layoutColor;
     // overflow: hidden;  
     &.is-active{
-        padding-bottom: 0;
+        padding-bottom: rem(10);
         border:1px solid $mainColor;
         i.smPlus{
             height: rem(2);
-            background-position: 0 -180px;
+            background-position: -120px -100px;
         }
         .accInner{
             display: block;
@@ -212,6 +212,9 @@
             // margin-left: rem(36);
             margin-left: rem(24);
             min-width: rem(32);
+            width: rem(32);
+            line-height: rem(32);
+            height: rem(32);
         }
     }
 } 
