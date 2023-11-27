@@ -242,7 +242,7 @@
                                         </li>             
                                         <li class="">
                                             <h6 class="need">코드</h6>
-                                            <!-- 2311390 수정 <input class="full" type="text" id="" value="A10255" readonly> -->
+                                            <!-- 231130 수정 <input class="full" type="text" id="" value="A10255" readonly> -->
                                             <span class="subInfo">B0110 <i class="ico out"></i></span> 
                                         </li>          
                                         <li class="bizInsurance">
@@ -481,7 +481,8 @@
                                                                 </tr>
                                                             </tbody>
                                                             <tfoot>
-                                                                <!-- <tr>
+                                                                <!-- 231130 수정-ys
+                                                                <tr>
                                                                     <td colspan="5"></td>
                                                                     <td>5.5</td>
                                                                     <td class="right">17,000,000</td>
@@ -1786,7 +1787,8 @@
                 <div class="boxWrap titType">
                     <div class="head">
                         <h3><span class="label">종료</span>[종료] 대기업 B2B 주문 프로세스 개선 기획자 모집</h3>
-                        <button class="rBdType">계약삭제</button><!--231201 클래스제거-ys-->
+                        <button class="rBdType">계약삭제</button><!--231130 클래스제거-ys-->
+                        <!--<button class="bdType">계약수정</button> 231130 추가-ys-->
                     </div>
                     <div class="cont">
                         <h5 class="underBg mt0">기본정보</h5>
@@ -2724,7 +2726,7 @@
     <!--//인력검색-->
 
     <!--청구스케줄, 입금스케줄 팝업-->
-    <div id="" class="modalLayer center">
+    <div id="" class="modalLayer center is-active">
         <div class="layerBox mid-laSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -3769,6 +3771,26 @@
         <div class="layerDim"></div> 
     </div>
     <!--//계약상세2 팝업-->
+
+    
+    <!--닫기버튼있는 컨펌창 -231130 추가-->
+    <div id="layer002" class="modalLayer center is-active">
+        <div class="layerBox confirmType">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h4>안내사항</h4>
+            </div>
+            <div class="modalCont">
+                법인/FREE 여부를 선택해주세요.
+            </div>
+            <div class="modalFooter">                
+                <button class="white layerClose">취소</button>
+                <button class="layerClose">확인</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//닫기버튼있는 컨펌창 -231130 추가-->
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
