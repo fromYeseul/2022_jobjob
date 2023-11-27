@@ -43,12 +43,23 @@
     .bizProjNm,
     .bizFile{
         grid-column: 1/4;
+        .flex{
+            @include sideArray;
+        }
+        i{
+            margin-left: 5px;
+        }
     }
     .bizInsurance{
         grid-column: 5/7;
         label{
             margin-right: rem(20);
             line-height: 44px;
+        }
+    }
+    li{        
+        i{
+            margin-left: 5px;
         }
     }
     select{
@@ -127,6 +138,9 @@
             .tooltip{
                 top: 150%;
             }
+        }
+        .suffix{
+            gap:2px;
         }
     }
 
