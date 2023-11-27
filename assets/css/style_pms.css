@@ -784,6 +784,15 @@ table tr th.fold {
   height: auto;
 }
 table tr.is-active {
+  background: #eaf0f8;
+}
+table tr.is-active:hover {
+  background: #eaf0f8;
+}
+table tr.is-filter {
+  background: #f8f2f2;
+}
+table tr.is-filter:hover {
   background: #f8f2f2;
 }
 table a {
@@ -1223,6 +1232,10 @@ table tfoot td {
 .bizStateRegister table td button {
   font-size: 13px;
 }
+.bizStateRegister table td b {
+  display: inline-block;
+  min-width: 1.5625rem;
+}
 .bizStateRegister .tabBtnWrap .tabBtn a.is-active {
   background-color: #2a55aa;
   border: 1px solid #2a55aa;
@@ -1255,10 +1268,6 @@ table tfoot td {
 #bsDetail1 tbody,
 #bsDetail1 tfoot {
   font-size: 0.8125rem;
-}
-#bsDetail1 tbody br + b,
-#bsDetail1 tfoot br + b {
-  font-size: 0.75rem;
 }
 #bsDetail1 tbody input,
 #bsDetail1 tbody textarea,
@@ -1312,6 +1321,9 @@ table tfoot td {
 }
 .flexLeft > .suffix .tabCont:first-child th {
   height: 3.1875rem;
+}
+.flexLeft > .suffix tfoot td {
+  text-align: right;
 }
 .flexLeft .tableBox td.fold {
   height: 1.625rem;

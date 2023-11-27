@@ -168,11 +168,14 @@
             &.wide{
                 width: 150px !important;
             }
-
             button{ 
                 // &.bdType{
                     font-size: 13px; // 11.23추가
                 //  }
+            }
+            b{
+                display: inline-block;
+                min-width: rem(25);
             }
         }
     }
@@ -232,11 +235,11 @@
     tbody,
     tfoot{
         font-size: rem(13);
-        br{
-            & + b{
-                font-size: rem(12);
-            }
-        }
+        // br{
+        //     & + b{
+        //         font-size: rem(12);
+        //     }
+        // }
         input,
         textarea,
         select{
@@ -294,7 +297,12 @@
         //             background: #f8f2f2;  //#eaf6f9
         //         }
         //     }
-        // }
+        // }        
+        tfoot{
+            td{
+                text-align: right;
+            }
+        }
     }   
      
     .tableBox{

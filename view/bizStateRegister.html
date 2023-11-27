@@ -440,7 +440,7 @@
                                                                     <td class="right">8,200,000</td>
                                                                     <td><i class="ico delete_bg"></i></td>
                                                                 </tr>
-                                                                <tr>
+                                                                <tr class="is-active">
                                                                     <td>
                                                                         <input type="checkbox" id="t2t3">
                                                                         <label for="t2t3"></label>
@@ -636,7 +636,7 @@
                                                                     <td class="left ellipsis">메모입력 메모입력 메모입력 메모입력</td>
                                                                     <td><i class="ico delete_bg"></i></td>
                                                                 </tr>
-                                                                <tr>
+                                                                <tr class="is-filter">
                                                                     <td>
                                                                         <select name="" id="">
                                                                             <option value="">선택</option>
@@ -994,6 +994,65 @@
                                     <!--//231115 수정-ys-->
 
                                     <div class="tabContWrap">
+                                        <!-- <div id="onAA2" class="tabCont is-active">
+                                            <div class="flexTable flexLeft">
+                                                <div class="tableBox suffix" style="width: 2300px;">
+                                                    <table>
+                                                        <tfoot>                                                       
+                                                            <tr>
+                                                                <td colspan="8"></td>
+                                                                <td colspan="2" class="hideS on"></td>
+                                                                <td class="">
+                                                                    총 M/M : <b class="dark">4.2</b>
+                                                                    <br>
+                                                                    총수량 : <b class="dark">0</b>
+                                                                </td>
+                                                                <td></td>
+                                                                <td>
+                                                                    총제경비 : 
+                                                                    <br>
+                                                                    <b class="dark">210,000,000</b>
+                                                                </td>
+                                                                <td>
+                                                                    매출합계 : 
+                                                                    <br>
+                                                                    <b class=" dark">210,000,000</b>
+                                                                </td>       
+                                                                <td colspan="2" class="hideB on"></td>
+                                                                <td>
+                                                                    총 M/M : <b class="dark">4.2</b>
+                                                                    <br>
+                                                                    총수량 : <b class="dark">0</b>
+                                                                </td>
+                                                                <td></td>
+                                                                <td>
+                                                                    총제경비 : 
+                                                                    <br>
+                                                                    <b class="dark">210,000</b>
+                                                                </td>
+                                                                <td>
+                                                                    매출합계 : 
+                                                                    <br>
+                                                                    <b class=" dark">210,000,000</b>
+                                                                </td>                    
+                                                                <td></td>
+                                                                <td colspan="2" class="hideI on"></td>
+                                                                <td colspan="2"></td>
+                                                            </tr>      
+                                                            <tr>
+                                                                <td colspan="14" style="height: 20px; padding-top: 0;">
+                                                                    ⓐ - ⓑ = <b class="dark">64,000,000</b>
+                                                                </td>
+                                                                <td colspan="6" style="height: 20px; padding-top: 0;">
+                                                                    ⓑ - ⓒ = <b class="marked">-2,000,000</b>
+                                                                </td>
+                                                                <td colspan="5" style="height: 20px; padding-top: 0;"></td>
+                                                            </tr>      
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div> -->
                                         <div id="onAA2" class="tabCont is-active">
                                             <div class="flexTable flexLeft">
                                                 <div class="tableBox suffix" style="width: 2300px;">
@@ -1034,7 +1093,7 @@
                                                                 <th width="80px" class="sales on">M/M</th>
                                                                 <th class="hideS sales on">단가</th>
                                                                 <th class="hideS sales on">제경비</th>
-                                                                <th class="hideS sales on">합계</th>
+                                                                <th class="hideS sales on">합계ⓐⓑⓒ</th>
                                                                 <!--//매출-->
 
                                                                 <!--매입-->
@@ -1245,40 +1304,41 @@
                                                                 </td>
                                                             </tr>
                                                         </tbody>
-                                                        <tfoot>
+                                                        <!--231130 수정-ys-->
+                                                        <tfoot>           
                                                             <tr>
                                                                 <td colspan="8"></td>
-                                                                                                                                        
-                                                                <!--매출-->
-                                                                <td colspan="2" class="hideS on"></td>
-                                                                <td>4.00</td>
-                                                                <td class="right hideS on">26,000,000</td>
-                                                                <td class="right hideS on">760,000</td>
-                                                                <td class="right hideS on"> 
-                                                                    <b class="dark">267,600,000</b>
-                                                                </td>                                                                        
-                                                                <!--//매출-->
-                                                                                                                                        
-                                                                <!--매입-->
-                                                                <td colspan="2" class="hideB on"></td>
-                                                                <td>4.00</td>
-                                                                <td class="right hideB on">26,000,000</td>
-                                                                <td class="right hideB on">760,000</td>
-                                                                <td class="right hideB on"> 
-                                                                    <b class="dark">267,600,000</b>
+                                                                <td class="hideS on"></td>
+                                                                <td class="">
+                                                                    총 M/M : <b class="dark">4.2</b>
                                                                     <br>
-                                                                    <b class="marked">(32,400,000)</b>
-                                                                </td>                                                      
-                                                                <!--//매입-->
-
-                                                                <!--내부n 231101 수정-->
+                                                                    총수량 : <b class="dark">0</b>
+                                                                </td>
+                                                                <td colspan="2">
+                                                                    총제경비 : <b class="dark">210,000,000</b></td>
+                                                                <td colspan="2">
+                                                                    매출합계 : <b class=" dark">210,000,000</b>
+                                                                    <br>
+                                                                    ⓐ - ⓑ = <b class="dark">64,000,000</b>
+                                                                </td>                                                                     
+                                                                <td class="hideB on"></td>
+                                                                <td>
+                                                                    총 M/M : <b class="dark">4.2</b>
+                                                                    <br>
+                                                                    총수량 : <b class="dark">0</b>
+                                                                </td>
+                                                                <td colspan="2">총제경비 : <b class="dark">210,000</b></td>
+                                                                <td colspan="2">
+                                                                    매출합계 : <b class=" dark">210,000,000</b>
+                                                                    <br>
+                                                                    ⓑ - ⓒ = <b class="marked">-2,000,000</b>
+                                                                </td>                                                                          
                                                                 <td></td>
                                                                 <td colspan="2" class="hideI on"></td>
-                                                                <!--//내부-->
-
                                                                 <td colspan="2"></td>
-                                                            </tr>
+                                                            </tr>           
                                                         </tfoot>
+                                                        <!--//231130 수정-ys-->
                                                     </table>
                                                 </div>
                                             </div>
@@ -1784,7 +1844,7 @@
 
 
     <!--계약상세 팝업-->
-    <div id="" class="modalLayer center is-active">
+    <div id="" class="modalLayer center">
         <div class="layerBox mid-laSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -2735,7 +2795,7 @@
     <!--//인력검색-->
 
     <!--청구스케줄, 입금스케줄 팝업-->
-    <div id="" class="modalLayer center is-active">
+    <div id="" class="modalLayer center">
         <div class="layerBox mid-laSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -3360,7 +3420,7 @@
     
 
     <!--계약상세2 팝업 231117 추가-->
-    <div id="" class="modalLayer center is-active">
+    <div id="" class="modalLayer center">
         <div class="layerBox mid-laSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -3783,7 +3843,7 @@
 
     
     <!--닫기버튼있는 컨펌창 -231130 추가-->
-    <div id="layer002" class="modalLayer center is-active">
+    <div id="layer002" class="modalLayer center">
         <div class="layerBox confirmType">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -3878,7 +3938,7 @@
         });
 
 
-        //2. table 축소,확장시 너비 조절
+        //2. table 축소,확장시 너비 조절 - 231130 수정
         $(".extend").on("click", function(){
             let salesOn = $('#onA-2 .extend.sales').hasClass('is-active');
             let buyOn = $('#onA-2 .extend.buy').hasClass('is-active');
@@ -3886,73 +3946,28 @@
             // let salesOn = $('.extend.sales').hasClass('is-active');
             // let buyOn = $('.extend.buy').hasClass('is-active');
             // let innerOn = $('.extend.inner').hasClass('is-active');
-            // if(salesOn === true && buyOn === true && innerOn === true){
-            //     $(this).parents('.flexLeft .suffix').css('width', "2812px"); //모두 펼침
-            // }
-
-            // else if(salesOn !== true && buyOn !== true && innerOn !== true){  
-            //     $(this).parents('.flexLeft .suffix').css('width', "1540px"); //모두 접힘
-            // }
-
-            // else if(salesOn !== true && buyOn !== true && innerOn === true){
-            //     $(this).parents('.flexLeft .suffix').css('width', "1753px"); //내부만 펼침
-            // }
-            
-            // else if(salesOn !== true && buyOn === true && innerOn !== true){
-            //     $(this).parents('.flexLeft .suffix').css('width', "2072px"); //매입만 펼침
-            // } 
-
-            // else if(salesOn === true && buyOn !== true && innerOn !== true){
-            //     $(this).parents('.flexLeft .suffix').css('width', "2072px"); //매출만 펼침
-            // }
-
-            // else if(salesOn !== true && buyOn === true && innerOn === true){ //매출만 접힘
-            //     $(this).parents('.flexLeft .suffix').css('width', "2282px");
-            // }           
-
-            // else if(salesOn === true && buyOn !== true && innerOn === true){ //매입만 접힘
-            //     $(this).parents('.flexLeft .suffix').css('width', "2282px");
-            // }
-
-            // else if(salesOn === true && buyOn === true && innerOn !== true){ //내부만 접힘
-            //     $(this).parents('.flexLeft .suffix').css('width', "2602px");
-            // }
 
             if(salesOn === true && buyOn === true && innerOn === true){
                 $(this).parents('.flexLeft .suffix').css('width', "2517px"); //모두 펼침
+            }
+            else if(salesOn === true && buyOn !== true && innerOn !== true){
+                $(this).parents('.flexLeft .suffix').css('width', "1912px"); //매출or매입만 펼침
+            }
+            else if(salesOn !== true && buyOn !== true && innerOn === true){
+                $(this).parents('.flexLeft .suffix').css('width', "1653px"); //내부만 펼침
+            }
+
+            else if(salesOn === true && buyOn === true && innerOn !== true){ //매출,매입 펼침
+                $(this).parents('.flexLeft .suffix').css('width', "2344px");
+            } 
+            else if(salesOn === true && buyOn !== true && innerOn === true){ //매출(or 매입), 내부 펼침
+                $(this).parents('.flexLeft .suffix').css('width', "2085px");
             }
 
             else if(salesOn !== true && buyOn !== true && innerOn !== true){  
                 $(this).parents('.flexLeft .suffix').css('width', "1480px"); //모두 접힘
             }
-
-            else if(salesOn !== true && buyOn !== true && innerOn === true){
-                $(this).parents('.flexLeft .suffix').css('width', "1653px"); //내부만 펼침
-            }
-            
-            else if(salesOn !== true && buyOn === true && innerOn !== true){
-                $(this).parents('.flexLeft .suffix').css('width', "1912px"); //매입만 펼침
-            } 
-
-            else if(salesOn === true && buyOn !== true && innerOn !== true){
-                $(this).parents('.flexLeft .suffix').css('width', "1912px"); //매출만 펼침
-            }
-
-            else if(salesOn !== true && buyOn === true && innerOn === true){ //매출만 접힘
-                $(this).parents('.flexLeft .suffix').css('width', "2085px");
-            }           
-
-            else if(salesOn === true && buyOn !== true && innerOn === true){ //매입만 접힘
-                $(this).parents('.flexLeft .suffix').css('width', "2085px");
-            }
-
-            else if(salesOn === true && buyOn === true && innerOn !== true){ //내부만 접힘
-                $(this).parents('.flexLeft .suffix').css('width', "2344px");
-            }
-
-
-            
-        });
+        }); 
 
         //2. 탭바뀔때 table 사이즈 - 231115 수정
         $("a").on("click", function(e){
