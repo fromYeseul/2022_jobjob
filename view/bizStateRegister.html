@@ -243,8 +243,16 @@
                                         </li>             
                                         <li class="">
                                             <h6 class="need">코드</h6>
+
                                             <!-- 231130 수정 <input class="full" type="text" id="" value="A10255" readonly> -->
-                                            <span class="subInfo">B0110 <i class="ico out"></i></span> 
+                                            <!-- <span class="subInfo">B0110 <i class="ico out"></i></span>  -->
+
+                                            <!-- 231130 수정 -ys-->
+                                            <div class="inputIco">
+                                                <input type="text" value="B0110" readonly>
+                                                <button class="txtType" type="button"><i class="ico out"></i></button>
+                                            </div>
+                                            <!-- //231130 수정 -ys-->
                                         </li>          
                                         <li class="bizInsurance">
                                             <h6 class="">보험</h6>
@@ -396,7 +404,7 @@
                                                                     <th>M/M<br>(수량)</th>
                                                                     <th>매출단가</th>
                                                                     <th>제경비</th>
-                                                                    <th>매출합계</th>
+                                                                    <th>매출합계 ⓐ</th>
 
                                                                     <th>삭제</th>
                                                                 </tr>
@@ -491,12 +499,19 @@
                                                                     <td class="right"><b class="dark">42,200,000</b></td>
                                                                     <td></td>
                                                                 </tr> -->
+
+                                                                <!--231130 수정-ys-->
                                                                 <tr>
                                                                     <td colspan="5"></td>
-                                                                    <td class="right">총M/M : <b class="dark">4</b></td>
+                                                                    <td class="right">
+                                                                        총M/M : <b class="dark">4</b>
+                                                                        <br>
+                                                                        총수량 : <b class="dark">0</b>
+                                                                    </td>
                                                                     <td colspan="2" class="right">총제경비 : <b class="dark">44,000</b></td>
                                                                     <td colspan="3" class="sortL">매출합계 : <b class="dark ">85,020,000</b></td>
                                                                 </tr>
+                                                                <!--//231130 수정-ys-->
                                                             </tfoot>
                                                         </table>
                                                     </div>
@@ -525,7 +540,7 @@
                                                                     <th>소속</th>
                                                                     <th>투입</th>
                                                                     <th>계약기간</th>
-                                                                    <th>M/M</th>
+                                                                    <th>M/M(수량)</th>
                                                                     <th>계약단가</th>
                                                                     <th>합계</th>
                                                                     <th>메모</th>
@@ -614,7 +629,7 @@
                                                             <thead>
                                                                 <tr>
                                                                     <th>그룹</th>
-                                                                    <th>M/M</th>
+                                                                    <th>M/M<br>(수량)</th>
                                                                     <th>매입단가</th>
                                                                     <th>매입합계</th>
                                                                     <th>비고</th>
@@ -652,13 +667,24 @@
                                                                 </tr>
                                                             </tbody>
                                                             <tfoot>
+                                                                <!--231130 수정-ys
                                                                 <tr>
                                                                     <td colspan="6" class="right">
                                                                         <b>ratio</b> <b class="marked">31.4%</b>
                                                                         <b class="ml40">GP</b> <b class="marked">154,000,000</b>
                                                                         <span class="sortL">매입합계 <b class="dark">26,000,000</b></span>
                                                                     </td>
+                                                                </tr>-->
+                                                                <!--231130 수정-ys-->
+                                                                <tr>
+                                                                    <td colspan="4" class="right">
+                                                                        GP : <b class="dark">154,000,000</b>
+                                                                        <br>
+                                                                        (ratio <b class="marked">31.4%</b>)
+                                                                    </td>
+                                                                    <td colspan="2" class="sortL">매입합계 : <b class="dark ">85,020,000</b></td>
                                                                 </tr>
+                                                                <!--//231130 수정-ys-->
                                                             </tfoot>
                                                         </table>
                                                     </div>
@@ -697,7 +723,7 @@
                                                                         <!--매출-->
                                                                         <th width="100px" class="fold hideS sales">시작일</th>
                                                                         <th width="100px" class="hideS sales">종료일</th>
-                                                                        <th width="80px" class="sales">M/M</th>
+                                                                        <th width="80px" class="sales">M/M(수량)</th>
                                                                         <th class="hideS sales">단가</th>
                                                                         <th class="hideS sales">제경비</th>
                                                                         <th class="hideS sales">합계</th>
@@ -706,7 +732,7 @@
                                                                         <!--매입-->
                                                                         <th width="100px" class="fold hideB buy">실투입</th>
                                                                         <th width="100px" class="hideB buy">종료일</th>
-                                                                        <th width="80px" class="buy">M/M</th>
+                                                                        <th width="80px" class="buy">M/M(수량)</th>
                                                                         <th class="hideB buy">단가</th>
                                                                         <th class="hideB buy">제경비</th>
                                                                         <th width="100px" class="hideB buy">합계</th>
@@ -974,7 +1000,7 @@
                                                 <a href="#onAA2" class="is-active">투입현황</a>
                                             </li>
                                         </ul>
-                                        <!--//230915 수정-ys -->inside
+                                        <!--//230915 수정-ys -->
 
                                         <div class="suffix absol"><!--231115 하단에 있을때는 absol 추가-ys-->                                
                                             <button class="onlyIco midSize"><!--231130 추가-ys-->    
@@ -1058,7 +1084,7 @@
                                         </div> -->
                                         <div id="onAA2" class="tabCont is-active">
                                             <div class="flexTable flexLeft">
-                                                <div class="tableBox suffix" style="width: 2300px;">
+                                                <div class="tableBox suffix" style="width: 2517px;">
                                                     <table>
                                                         <thead>
                                                             <tr>
@@ -1086,26 +1112,26 @@
                                                                 <th colspan="3" class="inner">내부 <i class="ico extend inner is-active"></i></th>
                                                                 <!--//내부-->
 
-                                                                <th rowspan="2" width="100px" class="fold">비고</th>
+                                                                <th rowspan="2" width="320px" class="fold">비고</th>
                                                                 <th  rowspan="2"width="40px">삭제</th>
                                                             </tr>
                                                             <tr>
                                                                 <!--매출-->
                                                                 <th width="100px" class="fold hideS sales on">시작일</th><!--231115 하단에 보일때는 모두 펼침-->
                                                                 <th width="100px" class="hideS sales on">종료일</th>
-                                                                <th width="80px" class="sales on">M/M</th>
+                                                                <th width="80px" class="sales on">M/M(수량)</th>
                                                                 <th class="hideS sales on">단가</th>
                                                                 <th class="hideS sales on">제경비</th>
-                                                                <th class="hideS sales on">합계ⓐⓑⓒ</th>
+                                                                <th class="hideS sales on">매출합계 ⓑ</th>
                                                                 <!--//매출-->
 
                                                                 <!--매입-->
                                                                 <th width="100px" class="fold hideB buy on">실투입</th>
                                                                 <th width="100px" class="hideB buy on">종료일</th>
-                                                                <th width="80px" class="buy on">M/M</th>
+                                                                <th width="80px" class="buy on">M/M(수량)</th>
                                                                 <th class="hideB buy on">단가</th>
                                                                 <th class="hideB buy on">제경비</th>
-                                                                <th width="100px" class="hideB buy on">합계</th>
+                                                                <th width="100px" class="hideB buy on">매입합계 ⓒ</th>
                                                                 <!--//매입-->
 
                                                                 <!--내부-->
@@ -1129,7 +1155,12 @@
                                                                     </select>
                                                                 </td>
                                                                 <td>
-                                                                    <i class="ico exMark"></i><!--231130 추가-ys-->
+                                                                    <!--231130 추가-ys-->
+                                                                    <button class="txtType" type="button">
+                                                                        <i class="ico exMark"></i>
+                                                                    </button>
+                                                                    <!--//231130 추가-ys-->
+                                                                    
                                                                     <i class="ico preview"></i>
                                                                     <span class="marked">미계약</span>
                                                                 </td>
@@ -1323,7 +1354,7 @@
                                                                 <td colspan="2">
                                                                     매출합계 : <b class=" dark">210,000,000</b>
                                                                     <br>
-                                                                    ⓐ - ⓑ = <b class="dark">64,000,000</b>
+                                                                    ⓐ - ⓑ = <b class="subGray2">64,000,000</b>
                                                                 </td>                                                                     
                                                                 <td class="hideB on"></td>
                                                                 <td>
@@ -1335,7 +1366,7 @@
                                                                 <td colspan="2">
                                                                     매출합계 : <b class=" dark">210,000,000</b>
                                                                     <br>
-                                                                    ⓑ - ⓒ = <b class="marked">-2,000,000</b>
+                                                                    ⓐ - ⓒ = <b class="marked">-2,000,000</b>
                                                                 </td>                                                                          
                                                                 <td></td>
                                                                 <td colspan="2" class="hideI on"></td>
@@ -1399,7 +1430,7 @@
                                                                 <th>소속</th>
                                                                 <th>투입</th>
                                                                 <th>계약기간</th>
-                                                                <th>M/M</th>
+                                                                <th>M/M(수량)</th>
                                                                 <!-- 231115 변경 <th>계약단가</th>
                                                                 <th>합계</th> -->
                                                                 <th>공급</th>
@@ -1517,7 +1548,7 @@
                                                                 <th>등급/직무</th>
                                                                 <th>투입인력</th>
                                                                 <th>실투입기간</th>
-                                                                <th>M/M</th>
+                                                                <th>M/M(수량)</th>
                                                                 <th>매입단가</th>
                                                                 <th>제경비</th>
                                                                 <th>매입합계</th>
@@ -1575,7 +1606,7 @@
                                                                 <th>결제방법</th>
                                                                 <th>항목</th>
                                                                 <th>실투입기간</th>
-                                                                <th>M/M</th>
+                                                                <th>M/M(수량)</th>
                                                                 <th>단가</th>
                                                                 <th>제외금액</th>
                                                                 <th>합계</th>
@@ -1823,21 +1854,77 @@
                                 <!--//등록화면에서는 없음-ys -->
                             </div>
                         </div>
+
+                        <div class="regiPart">
+                            <h3>5. ???</h3>
+                            <div class="boxWrap">
+                                <div class="commentBox">
+                                    <div class="commentInput">
+                                        <span class="writer self">한아라(나)</span>
+                                        <div class="comment">
+                                            <input type="text" class="full">
+                                        </div>
+                                        <button class="midSize">입력</button>
+                                    </div>
+                                    <div class="commentList">
+                                        <ul>
+                                            <li>
+                                                <span class="writer self">한아라(나)</span>
+                                                <div class="comment">
+                                                    <input type="text" class="full" value="안녕하세요">
+                                                    <div class="rightBtn">
+                                                        <button class="round save">저장</button>
+                                                        <button class="round off">취소</button>
+                                                    </div>
+                                                </div>
+                                                <span class="date">2024.01.12 02:37:03 PM</span>
+                                            </li>
+                                            <li>
+                                                <span class="writer self">한아라(나)</span>
+                                                <div class="comment">
+                                                    <input type="text" class="full" readonly="">
+                                                    <div class="rightBtn">
+                                                        <i class="ico more2"></i>
+                                                        <div class="moreList is-active">
+                                                            <button class="square is-active">수정</button>
+                                                            <button class="square is-active">삭제</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="date">2024.01.12 02:37:03 PM</span>
+                                            </li>
+                                            <li>
+                                                <span class="writer">홍길동</span>
+                                                <div class="comment">
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                </div>
+                                                <span class="date">2024.01.12 02:37:03 PM</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div> 
-    <!--플로팅메뉴 231101 수정-ys-->
-    <div class="floatingWrapper indicator">
-        <div class="floating ">
-            <div class="breadCrumb">
-                <ul class="">
-                    <li class="is-active" aria-controls="bizStateRegi0">기본정보</li>
-                    <li aria-controls="bizStateRegi1">계약 현황</li>
-                    <li aria-controls="bizStateRegi2">계약 목록</li>
-                    <li aria-controls="bizStateRegi3">청구/입금</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--//플로팅메뉴-->    
+                    <!--플로팅메뉴 231101 수정-ys-->
+                    <div class="floatingWrapper indicator">
+                        <div class="floating ">
+                            <div class="breadCrumb">
+                                <ul class="">
+                                    <li class="is-active" aria-controls="bizStateRegi0">기본정보</li>
+                                    <li aria-controls="bizStateRegi1">계약 현황</li>
+                                    <li aria-controls="bizStateRegi2">계약 목록</li>
+                                    <li aria-controls="bizStateRegi3">청구/입금</li>
+                                    <li aria-controls="bizStateRegi4">???</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//플로팅메뉴-->    
                 </section>
                 
             </section>
@@ -2390,7 +2477,7 @@
                                             </div>                              
                                         </li>
                                         <li>
-                                            <h6>M/M</h6>
+                                            <h6>M/M(수량)</h6>
                                             <div class="info">
                                                 1
                                                 <!-- <input class="smSize" type="text" value="1.2"> -->
@@ -3168,7 +3255,7 @@
                                     <th width="100px">항목</th>
                                     <th width="110px">시작</th>
                                     <th width="110px">종료</th>
-                                    <th width="60px">M/M</th>
+                                    <th width="60px">M/M(수량)</th>
                                     <th width="90px">단가</th>
                                     <th width="110px">제외금액</th>
                                     <th width="90px">합계</th>
@@ -3598,7 +3685,7 @@
                                         <li>
                                             <h6>수량</h6>
                                             <div class="info">
-                                                <input type="text" class="full">
+                                                <input type="text" class="smSize">
                                             </div>    
                                         </li>
                                         <li>
@@ -3986,7 +4073,7 @@
                 $(addBtn).addClass('none');
                 $(corBtn).addClass('none');
             }else if(tabHref === '#onA-2'){
-                $(this).parents('.flexLeft .suffix').css('width', "2300px");
+                $(this).parents('.flexLeft .suffix').css('width', "1480px");
                 $("#onA-2").find('.extend').parent('th').addClass('fold');
                 $("#onA-2").find('.extend').removeClass('is-active');
                 $("#onA-2").find('.fold').removeClass('is-active');

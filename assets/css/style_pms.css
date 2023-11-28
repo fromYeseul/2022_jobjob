@@ -1020,9 +1020,6 @@ table tfoot td {
 .clientRegister .uploadBox label {
   margin-bottom: 0;
 }
-.clientRegister .commentBox {
-  width: 90%;
-}
 
 .clientRegister .clientCNm {
   grid-column: 1/3;
@@ -1152,9 +1149,6 @@ table tfoot td {
   margin-right: 1.25rem;
   line-height: 44px;
 }
-.bizStateRegister li i {
-  margin-left: 5px;
-}
 .bizStateRegister select.others {
   color: #ff1236;
 }
@@ -1236,8 +1230,8 @@ table tfoot td {
   display: inline-block;
   min-width: 1.5625rem;
 }
-.bizStateRegister table .ico + .ico {
-  margin-left: 0.25rem;
+.bizStateRegister table td .txtType {
+  padding: 0 0.5rem;
 }
 .bizStateRegister .tabBtnWrap .tabBtn a.is-active {
   background-color: #2a55aa;
@@ -1268,10 +1262,6 @@ table tfoot td {
   background: #7d8da0;
 }
 
-#bsDetail1 tbody,
-#bsDetail1 tfoot {
-  font-size: 0.8125rem;
-}
 #bsDetail1 tbody input,
 #bsDetail1 tbody textarea,
 #bsDetail1 tbody select,
@@ -1307,9 +1297,6 @@ table tfoot td {
   gap: 40px;
   overflow-x: auto;
 }
-.flexLeft::-webkit-scrollbar-track {
-  background-color: transparent;
-}
 .flexLeft > .prefix {
   flex-shrink: 0;
   width: 775px;
@@ -1327,6 +1314,13 @@ table tfoot td {
 }
 .flexLeft > .suffix tfoot td {
   text-align: right;
+  padding-right: 10px;
+}
+.flexLeft > .suffix tfoot td.sortL {
+  text-align: center;
+}
+.flexLeft > .suffix tfoot td.sortL::before {
+  left: 35px;
 }
 .flexLeft .tableBox td.fold {
   height: 1.625rem;

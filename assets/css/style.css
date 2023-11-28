@@ -2354,6 +2354,10 @@ footer.toast button + button {
   display: none;
 }
 
+.contractDetail h2,
+.contractDetail h3 {
+  margin-bottom: 1.25rem;
+}
 .contractDetail .boxWrap {
   margin-top: 10px;
 }
@@ -2363,7 +2367,7 @@ footer.toast button + button {
   grid-template-columns: 95px 100px 80px 120px 100px 130px 140px;
 }
 .contractDetail .cont {
-  height: 57vh;
+  height: 60vh;
   overflow-y: auto;
 }
 .contractDetail .cont .conSkill {
@@ -2425,6 +2429,7 @@ footer.toast button + button {
   width: 820px;
 }
 .contractDetail.turn .col3 {
+  margin-top: 20px;
   row-gap: 1.25rem;
   column-gap: 1.875rem;
   grid-template-columns: repeat(3, 300px);
@@ -2438,6 +2443,7 @@ footer.toast button + button {
   grid-column: 2/4;
 }
 .contractDetail.turn .conDCount {
+  margin-bottom: 0;
   grid-column: 1/4;
 }
 .contractDetail.turn .conDCount .info {
@@ -2466,16 +2472,20 @@ footer.toast button + button {
   border-radius: 6px;
 }
 .contractDetail .contentFlex .suffix.divideBox {
-  padding: 20px;
+  padding: 1.25rem 1.5625rem;
   margin-top: 0;
   margin-left: 0;
   flex-direction: column;
   background: #f9f9f9;
 }
 .contractDetail .contentFlex .suffix.divideBox li {
+  margin-bottom: 0.625rem;
   display: flex;
   align-items: center;
   height: 2.8125rem;
+}
+.contractDetail .contentFlex .suffix.divideBox li:last-child {
+  margin-bottom: 0;
 }
 .contractDetail .contentFlex .suffix.divideBox li h6 {
   width: 6.25rem;
@@ -4451,17 +4461,26 @@ input[type=password]::placeholder {
   width: 100%;
   background: white;
 }
+.inputIco button,
 .inputIco .ico {
+  display: inline-block;
   position: absolute;
   top: 50%;
+  left: auto;
   right: 0.4375rem;
   transform: translateY(-50%);
 }
+.inputIco button.is-active,
 .inputIco .ico.is-active {
   width: 10px;
 }
+.inputIco button + input,
 .inputIco .ico + input {
   padding-left: 2.125rem;
+}
+.inputIco button i.ico,
+.inputIco .ico i.ico {
+  left: auto;
 }
 .inputIco i.ico {
   left: 0.875rem;
@@ -7164,9 +7183,8 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-position: -320px -340px;
   cursor: pointer;
 }
-.ico.preview.is-none, .ico.preview.is-disabled {
+.ico.preview.is-none {
   opacity: 0.5;
-  cursor: not-allowed;
 }
 .ico.preview_w {
   width: 1.125rem;
@@ -7623,7 +7641,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   padding: 0;
 }
 .boxWrap.titType .head {
-  padding: 1.25rem 1.5625rem;
+  padding: 0.9375rem 1.5625rem;
   background: #f2f2f2;
 }
 .boxWrap.titType .head h3 {
@@ -8595,9 +8613,6 @@ h6 + .h6_sub {
 .regiPart .boxWrap .inputList span {
   font-weight: 300;
 }
-.regiPart .boxWrap .inputList span.subInfo {
-  line-height: 2.75rem;
-}
 .regiPart .boxWrap .inputList label label {
   float: right;
   margin-right: 0;
@@ -9011,15 +9026,26 @@ h6 + .h6_sub {
 }
 
 .commentBox .writer {
-  width: 100px;
+  flex-shrink: 0;
+  width: 6.25rem;
   text-align: center;
 }
 .commentBox .writer.self {
   color: #009ce0;
 }
 .commentBox .comment {
-  max-width: 980px;
-  flex-grow: 2;
+  flex-grow: 1;
+}
+.commentBox .comment button {
+  width: 2.75rem;
+}
+.commentBox button {
+  flex-shrink: 0;
+  width: 6.25rem;
+}
+.commentBox .date {
+  flex-shrink: 0;
+  width: 8.75rem;
 }
 
 .commentInput {
@@ -9031,12 +9057,13 @@ h6 + .h6_sub {
 }
 .commentInput::after {
   content: "";
-  width: calc(100% + 187px);
+  width: calc(100% + 55px);
   height: 1px;
   background: #cccccc;
   position: absolute;
   bottom: 0;
-  left: -25px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .commentList li {

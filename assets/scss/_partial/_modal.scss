@@ -1074,6 +1074,10 @@
 
 //사업현황 등록 - 계약상세
 .contractDetail{
+    h2,
+    h3{
+        margin-bottom: rem(20);
+    }
     .boxWrap{
         margin-top: 10px;
     }
@@ -1085,7 +1089,7 @@
         grid-template-columns: 95px 100px 80px 120px 100px 130px 140px;
     }
     .cont{
-        height: 57vh;
+        height: 60vh;
         overflow-y: auto;
         
         .conSkill{
@@ -1155,6 +1159,7 @@
     //턴키
     &.turn{
         .col3{
+            margin-top: 20px;
             row-gap: rem(20);
             column-gap: rem(30);
             grid-template-columns: repeat(3, 300px);
@@ -1168,6 +1173,7 @@
             grid-column: 2/4;
         }
         .conDCount{
+            margin-bottom: 0;
             grid-column: 1/4;
             .info{
                 display: flex;
@@ -1195,15 +1201,19 @@
             border: 1px solid $layoutColor;
             border-radius: 6px;
             &.divideBox{
-                padding: 20px;
+                padding: rem(20) rem(25);
                 margin-top: 0;
                 margin-left: 0;
                 flex-direction: column;
                 background: $divideBg_pms;
                 li{
+                    margin-bottom: rem(10);
                     display: flex;
                     align-items: center;
                     height: rem(45);
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
                     h6{
                         width: rem(100);
                     }

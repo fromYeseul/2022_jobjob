@@ -1,15 +1,30 @@
 
 .commentBox{
     .writer{
-        width: 100px;
+        flex-shrink: 0;
+        width: rem(100);
         text-align: center;
         &.self{
             color: $highlight;
         }
     }
+    // .comment{
+    //     max-width: 980px;
+    //     flex-grow: 2;
+    // }
     .comment{
-        max-width: 980px;
-        flex-grow: 2;
+        flex-grow: 1;
+        button{
+            width: rem(44);
+        }
+    }
+    button{
+        flex-shrink: 0;
+        width: rem(100);
+    }
+    .date{
+        flex-shrink: 0;
+        width: rem(140);
     }
 }
 
@@ -21,12 +36,13 @@
     position: relative;
     &::after{
         content:'';
-        width: calc(100% + 187px);
+        width: calc(100% + 55px);
         height: 1px;
         background: $layoutColor;
         position: absolute;
         bottom: 0;
-        left: -25px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 .commentList{

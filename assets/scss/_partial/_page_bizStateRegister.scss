@@ -57,11 +57,11 @@
             line-height: 44px;
         }
     }
-    li{        
-        i{
-            margin-left: 5px;
-        }
-    }
+    // li{        
+    //     i{
+    //         margin-left: 5px;
+    //     }
+    // }
     select{
         &.others{
             color: $error;
@@ -177,12 +177,10 @@
                 display: inline-block;
                 min-width: rem(25);
             }
-        }
-        .ico{
-            & + .ico{
-                margin-left: rem(4);
+            .txtType{
+                padding: 0 rem(8);
             }
-        }   
+        } 
     }
     
 
@@ -233,13 +231,16 @@
             }
         }
     }
+    // .commentBox{
+    //     width: 90%;
+    // }
 }
 
 //2.계약현황 요청 css
 #bsDetail1{
     tbody,
     tfoot{
-        font-size: rem(13);
+        //font-size: rem(13);
         // br{
         //     & + b{
         //         font-size: rem(12);
@@ -269,9 +270,9 @@
     gap: 40px;  // 20 -> 40
     // flex-wrap: nowrap;
     overflow-x: auto;
-    &::-webkit-scrollbar-track {
-        background-color: transparent;
-    }
+    // &::-webkit-scrollbar-track {
+    //     background-color: transparent;
+    // }
     >.prefix{
         flex-shrink: 0;
         // width: 783px; //820 -> 783
@@ -306,6 +307,13 @@
         tfoot{
             td{
                 text-align: right;
+                padding-right: 10px;
+                &.sortL{
+                    text-align: center;
+                    &::before{
+                        left: 35px;
+                    }
+                }
             }
         }
     }   

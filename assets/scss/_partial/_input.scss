@@ -63,9 +63,12 @@ input[type=password]{
         width: 100%;
         background: white; //신규추가
     }
+    button,
     .ico{
+        display: inline-block;
         position: absolute;
         top: 50%;
+        left: auto;
         right:rem(7);
         transform: translateY(-50%);
         &.is-active{
@@ -73,6 +76,9 @@ input[type=password]{
         }
         + input{
             padding-left: rem(34);
+        }
+        i.ico{
+            left:auto;
         }
     }
     i.ico{
