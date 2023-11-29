@@ -1571,7 +1571,7 @@ footer.toast button + button {
   max-width: 20.625rem;
 }
 .modalLayer .layerBox.laSize {
-  width: auto;
+  width: 90.625rem;
   max-width: 90.625rem;
   overflow-x: auto;
   padding: 2.5rem 2.375rem;
@@ -2317,6 +2317,10 @@ footer.toast button + button {
   height: 33.75rem;
 }
 
+.chargeSet .tableTop + div,
+.exceptCharge .tableTop + div {
+  height: 25rem;
+}
 .chargeSet .tableBox.absolBody,
 .exceptCharge .tableBox.absolBody {
   height: auto;
@@ -2415,9 +2419,6 @@ footer.toast button + button {
 .contractDetail .tableTop .prefix,
 .contractDetail .tableTop .suffix {
   gap: 0;
-}
-.contractDetail .commentBox .commentInput {
-  padding-bottom: 10px;
 }
 .contractDetail .commentBox .commentInput::after {
   display: none;
@@ -3522,6 +3523,13 @@ table .attached {
   text-decoration: underline;
   position: relative;
   cursor: pointer;
+}
+table .attached.ellipsis {
+  display: inline-block;
+  max-width: 80%;
+}
+table .attached.ellipsis + button {
+  vertical-align: 4px;
 }
 table a {
   color: #0460d2;
@@ -8612,6 +8620,7 @@ h6 + .h6_sub {
 }
 .regiPart .boxWrap .inputList span {
   font-weight: 300;
+  cursor: pointer;
 }
 .regiPart .boxWrap .inputList label label {
   float: right;
@@ -9025,9 +9034,12 @@ h6 + .h6_sub {
   border-radius: 0.375rem;
 }
 
+.commentBox {
+  max-width: 99.375rem;
+}
 .commentBox .writer {
   flex-shrink: 0;
-  width: 5rem;
+  width: 6.25rem;
   color: #aaa;
 }
 .commentBox .writer.self {
@@ -9039,10 +9051,6 @@ h6 + .h6_sub {
 .commentBox .comment {
   flex-grow: 1;
 }
-.commentBox .comment button {
-  width: 2.5rem;
-  line-height: 1.375rem;
-}
 .commentBox input {
   height: 2.375rem;
 }
@@ -9052,9 +9060,16 @@ h6 + .h6_sub {
   width: 4.0625rem;
   line-height: 36px;
 }
+.commentBox .rightBtn,
 .commentBox .date {
+  display: flex;
   flex-shrink: 0;
   width: 8.75rem;
+}
+.commentBox .rightBtn button,
+.commentBox .date button {
+  width: 2.5rem;
+  line-height: 1.375rem;
 }
 
 .commentInput {
@@ -9073,6 +9088,7 @@ h6 + .h6_sub {
 }
 .commentList li {
   display: flex;
+  align-items: center;
   gap: 10px;
   margin-top: 10px;
   min-height: 2.25rem;
@@ -9082,22 +9098,12 @@ h6 + .h6_sub {
 }
 .commentList li .writer::before {
   content: "";
-  width: 4px;
-  height: 4px;
+  width: 2px;
+  height: 2px;
   background: #c8c8c8;
   position: absolute;
   top: 8px;
   left: -10px;
-}
-.commentList li.edit {
-  align-items: center;
-}
-.commentList li.edit .rightBtn {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  z-index: 1;
 }
 .commentList .comment {
   display: flex;
@@ -9112,6 +9118,10 @@ h6 + .h6_sub {
 }
 .commentList .comment .content {
   width: 94%;
+  padding-left: 8px;
+}
+.commentList .comment .rightBtn {
+  width: 50px;
 }
 .commentList .comment .txtType {
   margin-top: 0;
