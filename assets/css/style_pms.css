@@ -19,21 +19,6 @@
   margin-top: 1.5625rem;
 }
 
-.sortL {
-  padding: 0 30px;
-  position: relative;
-}
-.sortL::before {
-  content: "";
-  width: 1px;
-  height: 20px;
-  background: #c1c3c5;
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-}
-
 .dot {
   display: inline-block;
   width: 0.625rem;
@@ -1084,11 +1069,15 @@ table tfoot td {
   margin-top: 1.875rem;
 }
 .bizState .sideScroll {
-  height: calc(100vh - 391px);
+  height: calc(100vh - 397px);
   overflow-y: auto;
 }
 .bizState .sideScroll .tableBox {
   width: 150rem;
+}
+.bizState table.hasInput tr td {
+  height: 2.75rem;
+  font-size: 0.8125rem;
 }
 .bizState tfoot td {
   padding: 0 6px;

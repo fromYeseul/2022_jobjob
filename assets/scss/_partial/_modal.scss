@@ -249,7 +249,8 @@
     h2, h3{
         margin-bottom: rem(40);
         text-align: center;
-        font-size: rem(20);
+        // font-size: rem(20);
+        font-size: rem(22);
         & + .filterList{
             margin-top: rem(10);
         }
@@ -866,6 +867,7 @@
         }
         tfoot{
             td{
+                height: rem(52);
                 padding: 10px 5px !important;
                 &:last-child{
                     button{
@@ -1094,22 +1096,25 @@
         row-gap: rem(20);
         column-gap: rem(50);
         // grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr;
-        grid-template-columns: 95px 100px 80px 120px 100px 130px 140px;
+        // grid-template-columns: 95px 100px 80px 120px 100px 130px 140px;
+        grid-template-columns: 95px 110px 100px 100px 100px 130px 140px;
     }
     .cont{
         height: 60vh;
         overflow-y: auto;
-        
-        .conSkill{
-            grid-column: 6/8;
+        .conDCom{
+            grid-column: 2/4;
         }
+        // .conSkill{
+        //     grid-column: 6/8;
+        // }
         .conDTerm{
-            grid-column: 3/5;
+            grid-column: 2/4;
         }
         .conDCount{
             grid-column: 1/4;
-            &.basic{
-                grid-column: 2/5;
+            // &.basic{
+            //     grid-column: 2/5;
                 .info{                
                     display: flex;
                     gap: 5px;
@@ -1117,13 +1122,13 @@
                         flex-grow: 1;
                     }
                 }
-            }
+            // }
         }
         .conAdmin{
             grid-column: 6/8;
-            &.basic{
-                grid-column: 7/8;
-            }
+            // &.basic{
+            //     grid-column: 7/8;
+            // }
         }
         .conDFile{
             grid-column: 1/5;

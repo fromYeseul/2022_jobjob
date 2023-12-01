@@ -1998,7 +1998,7 @@
                                     <h6>계약구분</h6>
                                     <div class="info">법인사업</div>                                
                                 </li>
-                                <li>
+                                <li class="conDCom"><!--231215 추가-ys-->
                                     <h6>계약처명</h6>
                                     <div class="info">매그넘브릿지</div>                                
                                 </li>
@@ -2041,17 +2041,7 @@
                                     <div class="info">1 명</div>                                
                                 </li> -->
 
-                                <!--231101 추가-ys-->
-                                <li>
-                                    <h6>계약유형</h6>
-                                    <div class="info">
-                                        <select class="full" name="" id="">
-                                            <option value="0">주문서</option>
-                                            <option value="1">주문서</option>
-                                        </select>
-                                    </div>
-                                </li>
-                                <!--//231101 추가-ys-->
+                                
                                 <li>
                                     <h6>계약상태</h6>
                                     <div class="info">
@@ -2071,6 +2061,19 @@
                                     </div>        
                                     <div class="error is-active">실투입과 불일치</div>                        
                                 </li>
+                                <!--231215 이동-ys-->
+                                <!--231101 추가-ys-->
+                                <li>
+                                    <h6>계약유형</h6>
+                                    <div class="info">
+                                        <select class="full" name="" id="">
+                                            <option value="0">주문서</option>
+                                            <option value="1">주문서</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <!--//231101 추가-ys-->
+                                <!--//231215 이동-ys-->
                                 <li>
                                     <h6>수량 <!--<span class="ml10"><i class="ico refresh"></i>--></span></h6>
                                     <div class="info">
@@ -2093,13 +2096,14 @@
                                 </li>
 
 
+                                <!-- 231215 삭제-ys
                                 <li>
                                     <h6>턴키</h6>
                                     <div class="info">
                                         <input id="s32" type="checkbox" class="chkSwitch">
                                         <label for="s32" class="mt10"></label>
                                     </div>
-                                </li>                                
+                                </li>                                 -->
                                 <li class="conDCount basic"><!--231101 턴키있을때 basic 추가-ys-->
                                     <h6>입금정보</h6>
                                     <div class="info">
@@ -3308,7 +3312,7 @@
     <!--//청구스케줄, 입금스케줄 팝업-->
 
     <!--제경비입력 팝업-->
-    <div id="" class="modalLayer center">
+    <div id="" class="modalLayer center is-active">
         <div class="layerBox laSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -3344,6 +3348,7 @@
                                 <tr>
                                     <th width="55px">No.</th>
                                     <th width="110px">결제방법</th>
+                                    <!-- <th width="110px" style="display: none">결제방법</th> -->
                                     <th width="110px">항목</th>
                                     <th width="125px">시작</th>
                                     <th width="125px">종료</th>
@@ -3351,6 +3356,7 @@
                                     <th width="70px">M/M(수량)</th>
                                     <th width="110px">단가</th>
                                     <th width="110px">제외금액</th>
+                                    <!-- <th width="110px" style="display: none">제외금액</th> -->
                                     <th width="120px">합계</th>
                                     <th width="120px">파일</th>
                                     <th width="auto">비고</th>
@@ -3383,6 +3389,7 @@
                             <colgroup>
                                 <col width="4%">
                                 <col width="8%">
+                                <!-- <col width="8%" style="display: none"> -->
                                 <col width="8%">
                                 <col width="9%">
                                 <col width="9%">
@@ -3391,6 +3398,7 @@
                                 <col width="5%">
                                 <col width="8%">
                                 <col width="8%">
+                                <!-- <col width="8%" style="display: none"> -->
                                 <col width="8%">
 
                                 <col width="10%">
@@ -3408,6 +3416,7 @@
                                         </select>
                                     </td>
                                     <td>
+                                    <!-- <td style="display: none"> -->
                                         <select name="" id="">
                                             <option value="">choose</option>
                                             <option value="dog" disabled="">Dog</option>
@@ -3425,7 +3434,10 @@
                                     </td>
                                     <td>1.0</td>
                                     <td class="right"><input class="txtRight" type="text"></td>
-                                    <td class="right"><input class="txtRight" type="text"></td>
+                                    <td class="right">
+                                    <!-- <td class="right" style="display: none"> -->
+                                        <input class="txtRight" type="text">
+                                    </td>
                                     <td class="right">140,000</td>
                                     <td><button class="bdType xsSize">첨부</button></td>
                                     <td><textarea rows="1"></textarea></td>
@@ -3867,7 +3879,7 @@
                                         <li class="conPrice">
                                             <h6>계약금액</h6>
                                             <div class="info txtRight">
-                                                <input type="text" class="midSize txtRight">
+                                                <input type="text" class="midSize txtRight emph">
                                                 원
                                             </div>    
                                         </li>

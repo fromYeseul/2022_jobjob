@@ -4,12 +4,22 @@
         margin-top: rem(30);
     }
     .sideScroll{
-        height: calc(100vh - 391px);
+        height: calc(100vh - 397px);
         overflow-y: auto;
         .tableBox{
            width: rem(2400); 
         }
     } 
+    table{
+        &.hasInput{
+            tr{
+                td{
+                    height: rem(44);
+                    font-size: rem(13);
+                }
+            }
+        }
+    }
     tfoot{
         td{
             padding: 0 6px;
