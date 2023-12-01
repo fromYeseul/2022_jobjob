@@ -302,7 +302,8 @@ input[type=date]{
     //width: rem(140);
     padding: rem(8) rem(10);
     border-radius: rem(4);
-    border:1px solid $inputGray;   
+    border:1px solid $inputGray;  
+    cursor: pointer; 
     &::placeholder{
         color: $placeholder;
         font-size: rem(14);
@@ -310,6 +311,7 @@ input[type=date]{
     &:read-only{
         color: $subGray;
         background: $bgColor;
+        cursor: initial; 
         &:focus{        
             border: 1px solid $activeGray; // inputGray -> activeGray로
             outline: 0;
@@ -321,6 +323,7 @@ input[type=date]{
         // background: transparent;
         color: $titleGray;
         background:$inputDisable;
+        cursor: not-allowed;
         &::placeholder{
             color: $inputGray;
         }

@@ -4656,6 +4656,7 @@ input[type=date] {
   padding: 0.5rem 0.625rem;
   border-radius: 0.25rem;
   border: 1px solid #cccccc;
+  cursor: pointer;
 }
 input[type=text]::placeholder,
 input[type=number]::placeholder,
@@ -4672,6 +4673,7 @@ input[type=month]:read-only,
 input[type=date]:read-only {
   color: #8f8f8f;
   background: #f2f2f7;
+  cursor: initial;
 }
 input[type=text]:read-only:focus,
 input[type=number]:read-only:focus,
@@ -4688,6 +4690,7 @@ input[type=month]:disabled,
 input[type=date]:disabled {
   color: #a6a6b6;
   background: #f8f8f8;
+  cursor: not-allowed;
 }
 input[type=text]:disabled::placeholder,
 input[type=number]:disabled::placeholder,
