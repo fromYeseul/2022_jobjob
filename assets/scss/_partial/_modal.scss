@@ -1075,6 +1075,9 @@
     }
 }
 .exceptCharge{
+    table{
+        font-size: rem(13);
+    }
     .right{
         &::after{
             display: none;
@@ -1097,47 +1100,45 @@
         column-gap: rem(50);
         // grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr;
         // grid-template-columns: 95px 100px 80px 120px 100px 130px 140px;
-        grid-template-columns: 95px 110px 100px 100px 100px 130px 140px;
+        // grid-template-columns: 95px 110px 100px 100px 100px 130px 140px;
+        grid-template-columns: 110px 125px 85px 95px 95px 120px 140px;
     }
     .cont{
-        height: 60vh;
+        height: calc(100vh - 370px);
         overflow-y: auto;
-        .conDCom{
-            grid-column: 2/4;
-        }
-        // .conSkill{
-        //     grid-column: 6/8;
+        // .conDCom{
+        //     grid-column: 2/4;
         // }
         .conDTerm{
             grid-column: 2/4;
         }
         .conDCount{
             grid-column: 1/4;
-            // &.basic{
-            //     grid-column: 2/5;
-                .info{                
-                    display: flex;
-                    gap: 5px;
-                    input{
-                        flex-grow: 1;
-                    }
+            .info{                
+                display: flex;
+                gap: 5px;
+                input{
+                    flex-grow: 1;
                 }
-            // }
+            }
         }
         .conAdmin{
             grid-column: 6/8;
-            // &.basic{
-            //     grid-column: 7/8;
-            // }
         }
         .conDFile{
             grid-column: 1/5;
+        }
+        .basic{
+            //턴키없을때
+            .conDCom{
+                grid-column: 2/4;
+            }
         }
         .dateType{
             width: rem(114) !important;
         }
         .range{
-            margin: 0 4px;
+            margin: 0 9px;
         }
     }
     .underBg{

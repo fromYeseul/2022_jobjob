@@ -2358,6 +2358,9 @@ footer.toast button + button {
   transform: translateY(-50%);
 }
 
+.exceptCharge table {
+  font-size: 0.8125rem;
+}
 .exceptCharge .right::after {
   display: none;
 }
@@ -2372,14 +2375,11 @@ footer.toast button + button {
 .contractDetail .col7 {
   row-gap: 1.25rem;
   column-gap: 3.125rem;
-  grid-template-columns: 95px 110px 100px 100px 100px 130px 140px;
+  grid-template-columns: 110px 125px 85px 95px 95px 120px 140px;
 }
 .contractDetail .cont {
-  height: 60vh;
+  height: calc(100vh - 370px);
   overflow-y: auto;
-}
-.contractDetail .cont .conDCom {
-  grid-column: 2/4;
 }
 .contractDetail .cont .conDTerm {
   grid-column: 2/4;
@@ -2400,11 +2400,14 @@ footer.toast button + button {
 .contractDetail .cont .conDFile {
   grid-column: 1/5;
 }
+.contractDetail .cont .basic .conDCom {
+  grid-column: 2/4;
+}
 .contractDetail .cont .dateType {
   width: 7.125rem !important;
 }
 .contractDetail .cont .range {
-  margin: 0 4px;
+  margin: 0 9px;
 }
 .contractDetail .underBg {
   margin-top: 2.5rem;
@@ -3533,6 +3536,16 @@ table .attached.ellipsis {
 table .attached.ellipsis + button {
   vertical-align: 4px;
 }
+table .attached.noDown {
+  color: #666666;
+  text-decoration: none;
+  cursor: initial;
+}
+table span.attached {
+  color: #666666;
+  text-decoration: none;
+  cursor: initial;
+}
 table a {
   color: #0460d2;
   cursor: pointer;
@@ -4653,7 +4666,7 @@ input[type=password],
 input[type=month],
 input[type=date] {
   font-size: 0.875rem;
-  padding: 0.5rem 0.625rem;
+  padding: 0.5rem 0.25rem;
   border-radius: 0.25rem;
   border: 1px solid #cccccc;
   cursor: pointer;
