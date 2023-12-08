@@ -20,6 +20,7 @@
         height: rem(18);
         background-position: -40px -340px;
         vertical-align: -3px;
+        margin-right: 4px;
     }
     &.download{        
         width: rem(18);
@@ -41,6 +42,7 @@
         width: rem(16);
         height: rem(18);
         background-position: -80px -380px;
+        cursor: pointer;
     }
     &.fileUpload{
         width: rem(20);
@@ -71,6 +73,15 @@
         width: rem(18);
         height: rem(18);  
         background-position: -160px -340px;
+    }
+    &.gray_bin_sm{
+        width: rem(11);
+        height: rem(13);  
+        background-position: -200px -340px;
+        vertical-align: -1px;
+        &:hover{
+            background-position: -220px -340px;
+        }
     }
     &.refresh{
         width: rem(19);
@@ -170,10 +181,8 @@
         height: rem(16);
         background-position: -320px -340px;
         cursor: pointer;
-        &.is-disabled{
+        &.is-none{
             opacity: .5;
-            cursor: not-allowed;
-            // background-position: -340px -340px;
         }
     }
     &.preview_w{
@@ -187,6 +196,9 @@
         background-position: -180px -380px;
         vertical-align: initial;
         cursor: pointer;
+        &:hover{
+            background-position: -200px -380px;
+        }
     }
     &.signal_sm{
         width: rem(11);
@@ -211,14 +223,24 @@
         vertical-align: -2px;
     }
     &.split{
-        width: rem(16);
-        height: rem(16);
+        width: rem(17);
+        height: rem(14);
         background-position: -80px -400px;
     }
     &.synch{
-        width: rem(16);
+        width: rem(17);
         height: rem(16);
         background-position: -240px -320px;
+    }
+    &.inside{
+        width: rem(19);
+        height: rem(18);
+        background-position: -260px -380px;
+    }
+    &.exMark{
+        width: rem(3);
+        height: rem(15);
+        background-position: -200px -360px;
     }
 
 

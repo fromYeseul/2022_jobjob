@@ -25,19 +25,19 @@ label{
     // }
 }
 
-input[type=text],
-input[type=password],
-textarea{
-    font-size: rem(14);
-    padding: rem(16);
-    border-radius: rem(4);
-    border:1px solid $inputGray;   
-    resize: none; 
-    cursor: pointer;
-    &:focus{        
-        outline: 1px solid $mainColor;
-    }
-}
+// input[type=text],
+// input[type=password],
+// textarea{
+//     font-size: rem(14);
+//     padding: rem(16);
+//     border-radius: rem(4);
+//     border:1px solid $inputGray;   
+//     resize: none; 
+//     cursor: pointer;
+//     &:focus{        
+//         outline: 1px solid $mainColor;
+//     }
+// }
 
 /* INPUT */
 input[type=text],
@@ -63,9 +63,12 @@ input[type=password]{
         width: 100%;
         background: white; //신규추가
     }
+    button,
     .ico{
+        display: inline-block;
         position: absolute;
         top: 50%;
+        left: auto;
         right:rem(7);
         transform: translateY(-50%);
         &.is-active{
@@ -73,6 +76,9 @@ input[type=password]{
         }
         + input{
             padding-left: rem(34);
+        }
+        i.ico{
+            left:auto;
         }
     }
     i.ico{
@@ -294,9 +300,11 @@ input[type=month],
 input[type=date]{
     font-size: rem(14);
     //width: rem(140);
-    padding: rem(8) rem(10);
+    // padding: rem(8) rem(10);
+    padding: rem(8) rem(4);
     border-radius: rem(4);
-    border:1px solid $inputGray;   
+    border:1px solid $inputGray;  
+    cursor: pointer; 
     &::placeholder{
         color: $placeholder;
         font-size: rem(14);
@@ -304,6 +312,7 @@ input[type=date]{
     &:read-only{
         color: $subGray;
         background: $bgColor;
+        cursor: initial; 
         &:focus{        
             border: 1px solid $activeGray; // inputGray -> activeGray로
             outline: 0;
@@ -315,6 +324,7 @@ input[type=date]{
         // background: transparent;
         color: $titleGray;
         background:$inputDisable;
+        cursor: not-allowed;
         &::placeholder{
             color: $inputGray;
         }

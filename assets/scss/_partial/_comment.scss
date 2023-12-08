@@ -1,61 +1,135 @@
 
 .commentBox{
+    max-width: rem(1590);
     .writer{
-        width: 100px;
-        text-align: center;
+        flex-shrink: 0;
+        width: rem(100);
+        color:$boxHead;
         &.self{
             color: $highlight;
         }
+        .ellipsis{
+            display: inline-block;
+        }
     }
+    // .comment{
+    //     max-width: 980px;
+    //     flex-grow: 2;
+    // }
     .comment{
-        max-width: 980px;
-        flex-grow: 2;
+        flex-grow: 1;
+    }    
+    input{
+        height: rem(38);
+    }
+    button{
+        flex-shrink: 0;
+        min-width: auto;
+        width: rem(65);
+        line-height: rem(50);
+    }
+    .rightBtn,
+    .date{
+        display: flex;
+        flex-shrink: 0;
+        width: rem(140);
+        button{
+            width: rem(40);
+            line-height: rem(22);
+        }
     }
 }
 
 .commentInput{
+    padding: rem(20) rem(26);
+    padding-right: 74px;
+    border-radius: rem(6);
+    background: $commentBoxBg_pms;
     display: flex;
     align-items: center;
     gap:10px;
-    padding-bottom: rem(30);
-    position: relative;
-    &::after{
-        content:'';
-        width: calc(100% + 187px);
-        height: 1px;
-        background: $layoutColor;
-        position: absolute;
-        bottom: 0;
-        left: -25px;
-    }
 }
 .commentList{
+    padding: rem(10) rem(25);
+    padding-right: 0;
     li{
         display: flex;
         align-items: center;
-        justify-content: center;
         gap:10px;
         margin-top: 10px;
-        min-height: rem(44);
+        // min-height: rem(44);
+        min-height: rem(36);
+        .writer{    
+            position: relative;
+            &::before{
+                content:'';
+                width: 2px;
+                height: 2px;
+                background: $dotGray;
+                position: absolute;
+                top: 8px;
+                left: -10px;
+            }
+        }
+        // &.edit{
+        //     align-items: center;
+        //     .rightBtn{
+        //         position: absolute;
+        //         top: 50%;
+        //         right: 10px;
+        //         transform: translateY(-50%);
+        //         z-index: 1;
+        //     }
+        // }
     }
     .comment{
+        display: flex;
+        gap: 20px;
         position: relative;
         input{
-            padding-right: 50px;
+            padding-right: 120px;
             &:read-only{
                 background: $white;
             }
         }
+        .content{
+            width: 94%;
+            padding-left: 8px;
+        }
         .rightBtn{
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            z-index: 1;
+            width: 50px;
+        }
+        // .content{
+        //     flex-grow: 1;
+        //     & + .rightBtn{
+        //         flex-shrink: 0;
+        //         width: rem(50);
+        //     }
+        // } 
+        .txtType{
+            margin-top: 0;
+            width: auto;
+            & + .txtType{
+                margin-left: 5px;
+            }
         }
     }
     .date{
         color:$boxHead;
-        font-size: 14px;
+        font-size: 12px;
+    }
+    .txtType{
+        margin-top: 15px;
+        width: 100%;
+        text-decoration: underline;
+        text-decoration-color: $black;
+        &.is-active{
+            .ico{
+                transform: rotate(180deg);
+            }
+        }
+        .ico{
+            margin-right: 5px;
+        }
     }
 }

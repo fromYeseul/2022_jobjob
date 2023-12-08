@@ -183,6 +183,7 @@ $thBuy2_pms : #83acb4;
 $thInner2_pms : #7d8da0;
 
 $trClk_pms : #eaf0f8;
+$trFilter_pms : #f8f2f2;
 
 $h5Under_pms: #7a7a7a;
 
@@ -210,7 +211,7 @@ $val_input: #f56954;
 $val_cont: #3c8dbc;
 $val_fin: #39cccc;
 
-
+$commentBoxBg_pms : #f3f3f3;
 
 
 
@@ -332,7 +333,8 @@ $val_fin: #39cccc;
 }
 
 
-.mainC{
+.mainC,
+.emp{
     color: $mainColor;
 }
 .subInfo{
@@ -346,11 +348,12 @@ $val_fin: #39cccc;
 .important{
     color: $error;
 }
-.emp{
-    color: $mainColor;
-}
 .dark{
     color: $black;
+}
+.emph{
+    font-weight: bold;
+    font-size: rem(16) !important;
 }
 
 //마이프로젝트-직무추천-설정팝업
@@ -554,6 +557,7 @@ $val_fin: #39cccc;
 .mr5{margin-right: rem(5) !important;}
 .mr10{margin-right: rem(10) !important;}
 
+.ml0{margin-left: rem(0) !important;}
 .ml5{margin-left: rem(5) !important;}
 .ml10{margin-left: rem(10) !important;}
 .ml15{margin-left: rem(15) !important;}

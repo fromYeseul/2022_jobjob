@@ -558,6 +558,25 @@ table{
         text-decoration: underline;
         position: relative;
         cursor:pointer;
+        &.ellipsis{
+            display: inline-block;
+            max-width: 80%;
+            & + button{
+                vertical-align: 4px;
+            }
+        }
+        &.noDown{
+            color: $disable;
+            text-decoration: none;
+            cursor: initial;
+        }
+    }
+    span{
+        &.attached{
+            color: $disable;
+            text-decoration: none;
+            cursor:initial;
+        }
     }
     a{
         color: $mainColor;
@@ -619,6 +638,7 @@ table{
 .listBottom{
     width: 100%;
     padding-top: rem(10); //1130 20 -> 10 수정
+    // padding-top: rem(20);
     @include flex_2_3;
     font-size: rem(14);
     &.pagingType{
