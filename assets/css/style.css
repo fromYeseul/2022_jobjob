@@ -474,6 +474,10 @@ h1, h2, h3, h4, h5, h6, p {
   margin-right: 0.625rem !important;
 }
 
+.ml0 {
+  margin-left: 0rem !important;
+}
+
 .ml5 {
   margin-left: 0.3125rem !important;
 }
@@ -750,8 +754,12 @@ header {
   padding: 1.875rem 1.875rem;
   overflow-y: auto;
 }
+.contWrapper .contLayout .bizState {
+  padding-bottom: 0;
+}
 .contWrapper .contLayout .dashboard {
-  padding: 1.875rem 3.875rem 1.875rem 3.875rem;
+  width: 100%;
+  padding: 1.625rem 2.1875rem;
 }
 .contWrapper .contLayout .default {
   width: 100%;
@@ -2153,7 +2161,7 @@ footer.toast button + button {
 
 .clientAdmin .tableBox {
   padding-top: 1.875rem;
-  height: 31.25rem;
+  height: calc(100vh - 406px);
 }
 .clientAdmin .tableBox thead {
   position: absolute;
@@ -3596,7 +3604,7 @@ table .dot {
 
 .listBottom {
   width: 100%;
-  padding-top: 1.25rem;
+  padding-top: 0.625rem;
   display: flex;
   font-size: 0.875rem;
 }
@@ -4910,7 +4918,7 @@ input[type=text].dateType {
   padding: 0.625rem 0.625rem;
   padding-right: 1.875rem;
   width: 8.75rem;
-  background: url(../img/icoCal.png) right 10px top 50% no-repeat;
+  background: url(../img/icoCal.png) right 6px top 50% no-repeat;
   background-color: #fff;
 }
 input[type=text].dateType.editType {
@@ -7074,6 +7082,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 1rem;
   height: 1.125rem;
   background-position: -80px -380px;
+  cursor: pointer;
 }
 .ico.fileUpload {
   width: 1.25rem;
@@ -9073,7 +9082,7 @@ h6 + .h6_sub {
   flex-shrink: 0;
   min-width: auto;
   width: 4.0625rem;
-  line-height: 36px;
+  line-height: 3.125rem;
 }
 .commentBox .rightBtn,
 .commentBox .date {

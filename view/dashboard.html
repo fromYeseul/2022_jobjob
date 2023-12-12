@@ -84,58 +84,98 @@
 
                     <div class="contentFlex">
                         <div class="boxWrap prefix">
-                            <h4>매출실적<span class="h4_sub">2023.01 ~ 2023.04.20</span></h4>
-                            <div class="noticeBoard">
-                                <div class="prefix">
-                                    <span class="label">총매입</span>
-                                    <h1>12,059,800,000원</h1>
+                            <div class="top">
+                                <div class="dashTit">
+                                    <h4>매출실적<span class="h4_sub">2023.01 ~ 2023.04.20</span></h4>
+                                    <span class="unit">(단위: 천원)</span>
                                 </div>
-                                <div class="suffix">
-                                    <span class="label">이익금</span>
-                                    <h1>368,500,000원</h1>
+                                <div class="noticeBoard">
+                                    <div class="prefix">
+                                        <span class="label">총건수</span>
+                                        <h1>104<span>건</span></h1>                                    
+                                    </div>
+                                    <div class="center">
+                                        <span class="label">총매입</span>
+                                        <h1>12,059,800</h1>
+                                    </div>
+                                    <div class="suffix">
+                                        <span class="label">이익금</span>
+                                        <h1>368,500<span>(3.5<span class="unit">%</span>)</span></h1>                                    
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <div class="halfGraph">
-                                <canvas id="halfChart" style="width:40vw; height:25vh;"></canvas>
+
+                            <div class="mid">
+                                <div class="dashTit">
+                                    <h4>부서별 실적</h4>    
+                                </div>
+                                <div class="halfGraph">      
+                                    <canvas id="halfChart" style="width:100%; height:25vh;"></canvas>
+                                </div>
+                                <div class="labels">
+                                    <ul>
+                                        <li class="sapBiz"><span>막대</span>SAP사업</li>
+                                        <li class="sapStr"><span>막대</span>SAP전략</li>
+                                        <li class="sapUni"><span>막대</span>SAP융합</li>
+                                        <li class="exBiz"><span>막대</span>대외사업</li>
+                                        <li class="fuFus"><span>막대</span>미래융합</li>
+                                        <li class="platf"><span>막대</span>플랫폼</li>
+                                        <li class="cloud"><span>막대</span>클라우드</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="circleGraph">
-                                <ul>
-                                    <li>
-                                        <canvas id="cChart_pro" style="width:100%;"></canvas>
-                                        <span class="numVal pro">80</span>
-                                    </li>
-                                    <li>
-                                        <canvas id="cChart_income"></canvas>
-                                        <span class="numVal income">20</span>
-                                    </li>
-                                    <li>
-                                        <canvas id="cChart_input"></canvas>
-                                        <span class="numVal input">30</span>
-                                    </li>
-                                    <li>
-                                        <canvas id="cChart_cont"></canvas>
-                                        <span class="numVal cont">50</span>
-                                    </li>
-                                    <li>
-                                        <canvas id="cChart_fin"></canvas>
-                                        <span class="numVal fin">25</span>
-                                    </li>
-                                </ul>
+
+                            <div class="bottom">
+                                <div class="dashTit">
+                                    <h4>전년 대비 <br> 매출 비교</h4>    
+                                </div>
+                                <div class="barGraph">     
+                                    <canvas id="barChart" style="width:100%; height:26vh;"></canvas>
+                                </div>
+                                <!-- <div class="circleGraph">
+                                    <ul>
+                                        <li>
+                                            <canvas id="cChart_pro" style="width:100%;"></canvas>
+                                            <span class="numVal pro">80</span>
+                                        </li>
+                                        <li>
+                                            <canvas id="cChart_income"></canvas>
+                                            <span class="numVal income">20</span>
+                                        </li>
+                                        <li>
+                                            <canvas id="cChart_input"></canvas>
+                                            <span class="numVal input">30</span>
+                                        </li>
+                                        <li>
+                                            <canvas id="cChart_cont"></canvas>
+                                            <span class="numVal cont">50</span>
+                                        </li>
+                                        <li>
+                                            <canvas id="cChart_fin"></canvas>
+                                            <span class="numVal fin">25</span>
+                                        </li>
+                                    </ul>
+                                </div> -->
+                                
+                                <div class="labels">
+                                    <ul>
+                                        <li class="lastY"><span>막대</span>2022</li>
+                                        <li class="thisY"><span>막대</span>2023</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="boxWrap suffix">
-                            <h4>전년대비 매출 비교</h4>
-                            <div class="barGraph">
-                                <canvas id="barChart" style="width:42vw; height: 100%;"></canvas>
-                            </div>
+                            <h4>상태별 계약현황<span class="h4_sub">전체</span></h4>
+                            <div class="" style="width: 100%; height: 30vh;background: #ddd;">그래프 자리</div>
 
                             <div class="accWrap">  
                                 <div class="accBox">
                                     <div class="accHead">
                                         <div class="prefix">
                                             <div class="projTit sapBiz">SAP사업SAP사업SAP사업</div>
-                                            <!-- <div class="projTit sapStr">SAP전략</div>
+                                            <!-- 샘플
+                                            <div class="projTit sapStr">SAP전략</div>
                                             <div class="projTit sapUni">SAP융합</div>
                                             <div class="projTit exBiz">대외사업</div>
                                             <div class="projTit fuFus">미래융합</div>
@@ -891,7 +931,8 @@
             responsive: false,
             plugins: {
                 legend: {
-                    position: 'right',
+                    // position: 'right',
+                    display: false
                 }
             },
             borderWidth: 0
@@ -899,6 +940,43 @@
         });
 
 
+
+        //막대
+        new Chart(barChart, {
+          type: 'bar',
+          data: {
+            labels: ['SAP사업', 'SAP전략', 'SAP융합', '대외사업', '미래융합', '플랫폼', '클라우드'],
+            datasets:[
+                {
+                    abel:'2022',
+                    backgroundColor : 'rgba(210, 214, 222, 1)',
+                    data: [10, 32, 14, 76, 40, 90, -10]
+                }   ,
+                {
+                    label:'2023',
+                    backgroundColor : 'rgba(80, 103, 164, 1)',
+                    data: [30, 60, 24, 10, 60, 40, 1]
+                }               
+            ]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: false
+              }
+            },
+            responsive: false,
+            plugins: {
+                legend: {
+                    // position: 'right'
+                    display: false
+                }
+            }
+          }
+        });
+
+
+        
         //진행
         new Chart(cChart_pro, {
           type: 'doughnut',
@@ -1035,39 +1113,6 @@
           }
         });
 
-
-        //막대
-        new Chart(barChart, {
-          type: 'bar',
-          data: {
-            labels: ['SAP사업', 'SAP전략', 'SAP융합', '대외사업', '미래융합', '플랫폼', '클라우드'],
-            datasets:[
-                {
-                    label:'2022',
-                    backgroundColor : 'rgba(210, 214, 222, 1)',
-                    data: [10, 32, 14, 76, 40, 90, -10]
-                }   ,
-                {
-                    label:'2023',
-                    backgroundColor : 'rgba(80, 103, 164, 1)',
-                    data: [30, 60, 24, 10, 60, 40, 1]
-                }               
-            ]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: false
-              }
-            },
-            responsive: false,
-            plugins: {
-                legend: {
-                    position: 'left'
-                }
-            }
-          }
-        });
 
       </script>
 </body>

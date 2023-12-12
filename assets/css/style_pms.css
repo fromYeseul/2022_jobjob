@@ -844,9 +844,81 @@ table tfoot td {
   color: #ababab;
   font-weight: normal;
 }
+.dashboard .contentFlex .boxWrap .mid,
+.dashboard .contentFlex .boxWrap .bottom {
+  margin-top: 1.875rem;
+  margin-right: 3.125rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.dashboard .contentFlex .boxWrap .mid .dashTit,
+.dashboard .contentFlex .boxWrap .bottom .dashTit {
+  width: 6.25rem;
+}
+.dashboard .contentFlex .boxWrap .mid {
+  margin-right: 1.75rem;
+}
+.dashboard .contentFlex .boxWrap .bottom {
+  margin-top: 2.5rem;
+}
+.dashboard .contentFlex .boxWrap .bottom .labels ul {
+  gap: 20px;
+}
+.dashboard .contentFlex .boxWrap .labels ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25vh;
+}
+.dashboard .contentFlex .boxWrap .labels li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dashboard .contentFlex .boxWrap .labels li span {
+  display: inline-block;
+  width: 1.25rem;
+  height: 0.875rem;
+  text-indent: -99999px;
+  background: #d2d6de;
+}
+.dashboard .contentFlex .boxWrap .labels li.thisY span {
+  background: #5067a4;
+}
+.dashboard .contentFlex .boxWrap .labels li.sapBiz span {
+  background: #304e94;
+}
+.dashboard .contentFlex .boxWrap .labels li.sapStr span {
+  background: #0d60c8;
+}
+.dashboard .contentFlex .boxWrap .labels li.sapUni span {
+  background: #17a6f2;
+}
+.dashboard .contentFlex .boxWrap .labels li.exBiz span {
+  background: #24c9cb;
+}
+.dashboard .contentFlex .boxWrap .labels li.fuFus span {
+  background: #13be6f;
+}
+.dashboard .contentFlex .boxWrap .labels li.platf span {
+  background: #8c98a6;
+}
+.dashboard .contentFlex .boxWrap .labels li.cloud span {
+  background: #575d64;
+}
+.dashboard .contentFlex .dashTit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard .contentFlex .dashTit .unit {
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
 .dashboard .contentFlex .noticeBoard {
-  margin-top: 1.25rem;
-  padding: 1.5625rem 3.125rem;
+  margin-top: 0.9375rem;
+  padding: 1.5625rem 2.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -855,25 +927,38 @@ table tfoot td {
   border: 1px solid #dee8f0;
 }
 .dashboard .contentFlex .noticeBoard .prefix,
+.dashboard .contentFlex .noticeBoard .center,
 .dashboard .contentFlex .noticeBoard .suffix {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .dashboard .contentFlex .noticeBoard h1 {
-  margin-left: 1.25rem;
-  font-size: 2.125rem;
+  margin-left: 0.9375rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.dashboard .contentFlex .noticeBoard h1 span {
+  margin-left: 5px;
+  font-size: 1.375rem;
+}
+.dashboard .contentFlex .noticeBoard h1 span.unit {
+  margin-left: 0;
+  font-size: 1.125rem;
 }
 .dashboard .contentFlex .noticeBoard .suffix h1 {
   color: #1e6ee7;
 }
 .dashboard .accWrap {
   margin-top: 1.875rem;
-  height: calc(75vh - 361px);
+  height: calc(75vh - 339px);
   overflow-y: auto;
 }
 .dashboard .accWrap::-webkit-scrollbar {
   width: 0;
+}
+.dashboard .accBox:last-child {
+  margin-bottom: 0;
 }
 .dashboard .accHead .projTit {
   padding-left: 1.25rem;
@@ -921,13 +1006,6 @@ table tfoot td {
   padding-bottom: 1.25rem;
 }
 
-.halfGraph {
-  margin-top: 2.5rem;
-}
-
-.circleGraph {
-  margin-top: 4.375rem;
-}
 .circleGraph ul {
   display: flex;
   max-width: 40vw;
@@ -958,11 +1036,6 @@ table tfoot td {
 }
 .circleGraph ul li .numVal.fin {
   color: #39cccc;
-}
-
-.barGraph {
-  margin-top: 0.625rem;
-  height: 17.5rem;
 }
 
 .clientBuy .tableTop {
@@ -1069,13 +1142,13 @@ table tfoot td {
   margin-top: 1.875rem;
 }
 .bizState .sideScroll {
-  height: calc(100vh - 397px);
+  height: calc(100vh - 377px);
   overflow-y: auto;
 }
 .bizState .sideScroll .tableBox {
   width: 150rem;
 }
-.bizState table.hasInput tr td {
+.bizState table tr td {
   height: 2.75rem;
   font-size: 0.8125rem;
 }
