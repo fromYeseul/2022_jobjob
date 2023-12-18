@@ -1036,7 +1036,12 @@
 //사업현황 등록 - 청구스케줄, 제경비입력
 .chargeSet,
 .exceptCharge{
-    .tableTop{        
+    .tableTop{    
+        input[type=text],
+        select,
+        button{
+            height: rem(36);
+        }   
         & + div{
             height: rem(400);
         }
