@@ -1,5 +1,23 @@
 .bizStateRegister{
     width: 100%;
+    input{
+        &.editType{
+        width: 40px !important ;
+        height: rem(28) !important ;
+        background: transparent !important ;
+        padding: 0;
+        margin-right:10px;
+        text-align: center;
+        font-size: 12px;
+        padding-left: rem(4);
+        border: 0;
+
+            &:focus{      
+            border: 01px solid #ddd;      
+            outline: 1px solid #eee;
+            }
+        }
+    }
     .regiPartWrapper{        
         padding-left: rem(50);
         padding-right: rem(126);
@@ -125,7 +143,7 @@
             }
             &:first-child{
                 a{
-                    min-width: rem(65);
+                    min-width: rem(60);
                     border-top-left-radius: rem(4);
                 }                
             }
@@ -161,7 +179,7 @@
                 //     text-align: center;
                 //     background: white;
                 // }
-            }
+            }            
         }
         tfoot{
             td{
