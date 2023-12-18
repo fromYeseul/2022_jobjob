@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>외주 매출/매입</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style_pms.css">
+
+</head>
+<body>
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/pms/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li>
+                        <span aria-controls="showLevel" class="layerOpen">등급보기설정
+                    </span></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="is-active">
+                            <a alerttoast="" href="#"><i class="ico home"></i><span class="menuTxt">홈</span></a>
+                        </li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">고객문의</span></a></li>
+                                <li><a href="#"><span class="depth2">운영자관리</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        
+        <section class="contWrapper noRight">
+            <section class="contLayout">
+                <section class="sourcingTotal">
+                    <h2>외주 매출/매입</h2>
+                    <div class="condition">
+                        <ul>
+                            <li>
+                                <p class="condiTit">조회년도</p>
+                                <select>
+                                    <option value="">2023</option>
+                                    <option value="001">1</option>
+                                    <option value="002">2</option>
+                                    <option value="003">3</option>
+                                    <option value="004">4</option>
+                                    <option value="005">5</option>
+                                </select>
+                            </li>
+                             <li>
+                                <p class="condiTit">주관그룹</p>
+                                <div class="select laSize">
+                                    <span class="selDefault is-active">전체</span>
+                                    <ul class="optionList">
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_1" class="hasTxt">
+                                            <label for="optChk_1">SAP 사업</label>
+                                        </li>                                        
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_2" class="hasTxt">
+                                            <label for="optChk_2">SAP 전략</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_3" class="hasTxt">
+                                            <label for="optChk_3">SAP 융합</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_4" class="hasTxt">
+                                            <label for="optChk_4">대외사업</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_5" class="hasTxt">
+                                            <label for="optChk_5">미래융합사업</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_5" class="hasTxt">
+                                            <label for="optChk_5">플랫폼</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_5" class="hasTxt">
+                                            <label for="optChk_5">클라우드</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>  
+                            
+                            <li>
+                                <label class="condiTit" for="project2">사업유형</label>
+                                <select class="mid-laSize">
+                                    <option value="">전체</option>
+                                    <option value="001">법인</option>
+                                    <option value="002">사업</option>
+                                    <option value="002">개인</option>
+                                </select>
+                            </li>
+                            <li class="hasBtn">
+                                <label class="condiTit" for="project2">검색어</label>                                
+                                <input type="text" class="smSize" id="project2" maxlength="20" placeholder="거래처명 또는 거래처코드">
+                                <button>
+                                    <i class="ico search white"></i>
+                                </button>
+                            </li>                               
+                        </ul>
+                    </div>
+                       
+                    <div class="tableTop">
+                        <select class="smSize">
+                            <option class="optionItem" value="10">10개씩</option>
+                            <option class="optionItem" value="20" selected="">20개씩</option>
+                            <option class="optionItem" value="50">50개씩</option>
+                            <option class="optionItem" value="100">100개씩</option>
+                        </select>
+
+                        <span class="txtRight ml15">
+                            <button class="white mid-lowSize ml15"><i class="ico excDown"></i>엑셀 다운로드 </button>
+                        </span>
+                        
+                    </div>
+
+                    <div class=""> 
+                        <!--thead 고정용 table-->
+                        <div class="tableBox">    
+                            <table class="hasInput">
+                                <colgroup>
+                                    <col width="40px">
+                                    <col width="60px">
+                                    <col width="45px">
+                                    <col width="130px">
+                                    <col width="90px"> 
+
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">      
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px"> 
+
+                                    <col width="90px"> 
+                                    <col width="80px">
+                                    <col width="95px">
+                                </colgroup>
+                                <thead>
+                                    <th>No.</th>
+                                    <th>부서</th>
+                                    <th>유형</th>
+                                    <th>거래처</th>
+                                    <th>2022년</th>
+
+                                    <th>2023.01</th>
+                                    <th>2023.02</th>
+                                    <th>2023.03</th>
+                                    <th>2023.04</th>
+                                    <th>2023.05</th>
+                                    <th>2023.06</th>
+                                    <th>2023.07</th>
+                                    <th>2023.08</th>
+                                    <th>2023.09</th>
+                                    <th>2023.10</th>
+                                    <th>2023.11</th>
+                                    <th>2023.12</th>
+
+                                    <th>2024년</th>
+                                    <th>제경비</th>
+                                    <th>2023 합계</th>
+                                </thead>
+                            </table>
+                        </div>
+                        <!--//thead 고정용 table-->
+
+                        <div class="tableBox absolBody">    
+                            <table class="hasInput">
+                                <colgroup>
+                                    <col width="40px">
+                                    <col width="60px">
+                                    <col width="45px">
+                                    <col width="130px">
+                                    <col width="90px"> 
+
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">      
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px"> 
+
+                                    <col width="90px"> 
+                                    <col width="80px">
+                                    <col width="95px">
+                                </colgroup>
+                                <tbody>                                
+                                    <tr>
+                                        <td>07</td>
+                                        <td>SAP사업</td>
+                                        <td>법인</td>
+                                        <td class="ellipsis center"><a href="#">CJ프레시웨이</a></td>
+                                        <td class="right">
+                                            <p>513,758,000</p>
+                                            <p class="tBuy">469,700,000</p>
+                                        </td>
+
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                    </tr>                                                                       
+                                    <tr>
+                                        <td>07</td>
+                                        <td>SAP사업</td>
+                                        <td>법인</td>
+                                        <td class="ellipsis center"><a href="#">CJ프레시웨이</a></td>
+                                        <td class="right">
+                                            <p>513,758,000</p>
+                                            <p class="tBuy">469,700,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                        <td class="right">
+                                            <p>40,550,000</p>
+                                            <p class="tBuy">37,000,000</p>
+                                        </td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!--tfoot 고정용 table-->
+                        <div class="tableBox">
+                            <table>
+                                <colgroup>
+                                    <col width="40px">
+                                    <col width="60px">
+                                    <col width="45px">
+                                    <col width="130px">
+                                    <col width="90px"> 
+
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">      
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px">  
+                                    <col width="90px"> 
+
+                                    <col width="90px"> 
+                                    <col width="80px">
+                                    <col width="95px">
+                                </colgroup>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4">합계</td>
+
+                                        <td class="right">
+                                            <span class="black"><b>113,758,000</span>
+                                            <br>
+                                            <span class="tBuy">109,700,000</span>
+                                        </td>
+
+                                        <td class="right">
+                                            <span class="black"><b>93,758,000</span>
+                                            <br>
+                                            <span class="tBuy">69,700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>93,758,000</span>
+                                            <br>
+                                            <span class="tBuy">69,700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>93,758,000</span>
+                                            <br>
+                                            <span class="tBuy">69,700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>93,758,000</span>
+                                            <br>
+                                            <span class="tBuy">69,700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>93,758,000</span>
+                                            <br>
+                                            <span class="tBuy">69,700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>93,758,000</span>
+                                            <br>
+                                            <span class="tBuy">69,700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>93,758,000</span>
+                                            <br>
+                                            <span class="tBuy">69,700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>93,758,000</span>
+                                            <br>
+                                            <span class="tBuy">69,700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>93,758,000</span>
+                                            <br>
+                                            <span class="tBuy">69,700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>93,758,000</span>
+                                            <br>
+                                            <span class="tBuy">69,700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>93,758,000</span>
+                                            <br>
+                                            <span class="tBuy">69,700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>93,758,000</span>
+                                            <br>
+                                            <span class="tBuy">69,700,000</span>
+                                        </td>
+
+                                        <td class="right">
+                                            <span class="black"><b>113,758,000</span>
+                                            <br>
+                                            <span class="tBuy"><b>109,700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>658,000</span>
+                                            <br>
+                                            <span class="tBuy">700,000</span>
+                                        </td>
+                                        <td class="right">
+                                            <span class="black"><b>113,758,000</span>
+                                            <br>
+                                            <span class="tBuy">109,700,000</span>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div> 
+                        <!--//tfoot 고정용 table-->
+                    </div>
+                </section>
+            </section>
+        </section>
+                
+        
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
