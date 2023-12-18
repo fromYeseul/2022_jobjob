@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>사업현황</title>
+    <title>투입유형별 매입/매출</title>
     
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/style_pms.css">
@@ -942,32 +942,20 @@
                     </div>
                 </section>
             </section>
-        </section>
-                
-        
+        </section>               
     </section>
+
     <!--선정기준 팝업-->
-    <div id="" class="modalLayer center clientAdmin is-active"><!--id바뀌면 말씀해주세요-->
+    <div id="" class="modalLayer center is-active">
         <div class="layerBox midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
                 <h3>2023년 1월 매출/매입</h3>
                 <div class="h3_sub">전체 - 정직원</div>
             </div>
-            <div class="modalCont center">
-                <!-- <div class="tableTop right">
-                    <button class="white mid-lowSize">선택삭제</button>
-                </div> -->
+            <div class="modalCont selectBases"><!--팝업 고유클래스-->
                 <div class="tableBox">
-                    <table> 
-                        <colgroup>
-                            <col width="90px">
-                            <col>
-                            <col width="160px">
-                            <col width="80px">
-                            <col width="100px">
-                            <col width="100px">
-                        </colgroup>                      
+                    <table>                    
                         <thead>
                             <tr>
                                 <th width="90px;">투입/공급</th>
@@ -978,10 +966,22 @@
                                 <th width="100px;">매입</th>
                             </tr>
                         </thead>
+                    </table>
+                </div>
+                <div class="tableBox absolBody">
+                    <table> 
+                        <colgroup>
+                            <col width="90px">
+                            <col>
+                            <col width="160px">
+                            <col width="80px">
+                            <col width="100px">
+                            <col width="100px">
+                        </colgroup>           
                         <tbody>
                             <tr>
                                 <td>김재윤</td>
-                                <td class="ellipsis left">프로젝트명 A 프로젝트명 B</td>
+                                <td class="ellipsis">프로젝트명 A 프로젝트명 B프로젝트명 A 프로젝트명 B프로젝트명 A 프로젝트명 B프로젝트명 A 프로젝트명 B</td>
                                 <td>2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td class="right">6,000,000</td>
@@ -989,7 +989,7 @@
                             </tr>
                             <tr>
                                 <td>홍길동</td>
-                                <td class="ellipsis left">프로젝트명 A 프로젝트명 B</td>
+                                <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
                                 <td>2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td class="right">6,000,000</td>
@@ -997,7 +997,7 @@
                             </tr>
                             <tr>
                                 <td>김연아</td>
-                                <td class="ellipsis left">프로젝트명 A 프로젝트명 B</td>
+                                <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
                                 <td>2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td class="right">6,000,000</td>
@@ -1005,7 +1005,7 @@
                             </tr>
                             <tr>
                                 <td>손연재</td>
-                                <td class="ellipsis left">프로젝트명 A 프로젝트명 B</td>
+                                <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
                                 <td>2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td class="right">6,000,000</td>
@@ -1013,7 +1013,7 @@
                             </tr>
                             <tr>
                                 <td>박세리</td>
-                                <td class="ellipsis left">프로젝트명 A 프로젝트명 B</td>
+                                <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
                                 <td>2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td class="right">6,000,000</td>
@@ -1021,7 +1021,7 @@
                             </tr>
                             <tr>
                                 <td>심청이</td>
-                                <td class="ellipsis left">프로젝트명 A 프로젝트명 B</td>
+                                <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
                                 <td>2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td class="right">6,000,000</td>
@@ -1029,7 +1029,7 @@
                             </tr>
                             <tr>
                                 <td>장화와 홍련</td>
-                                <td class="ellipsis left">프로젝트명 A 프로젝트명 B</td>
+                                <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
                                 <td>2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td class="right">6,000,000</td>
@@ -1037,7 +1037,7 @@
                             </tr>
                             <tr>
                                 <td>손흥민</td>
-                                <td class="ellipsis left">프로젝트명 A 프로젝트명 B</td>
+                                <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
                                 <td>2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td class="right">6,000,000</td>
@@ -1045,7 +1045,7 @@
                             </tr>
                             <tr>
                                 <td>박지성</td>
-                                <td class="ellipsis left">프로젝트명 A 프로젝트명 B</td>
+                                <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
                                 <td>2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td class="right">6,000,000</td>
@@ -1053,7 +1053,7 @@
                             </tr>
                             <tr>
                                 <td>홍길동</td>
-                                <td class="ellipsis left">프로젝트명 A 프로젝트명 B</td>
+                                <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
                                 <td>2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td class="right">6,000,000</td>
@@ -1087,40 +1087,11 @@
                         </tfoot>
                     </table>
                 </div>
-                
-                <colgroup>
-                    <col width="50px">
-                    <col width="80px">
-                    <col width="70px">
-                    <col width="100px"> 
-
-                    <col width="85px">  
-                    <col width="85px">  
-                    <col width="85px">      
-                    <col width="85px">  
-                    <col width="85px">  
-                    <col width="85px">  
-                    <col width="85px">  
-                    <col width="85px">  
-                    <col width="85px">  
-                    <col width="85px">  
-                    <col width="85px">  
-                    <col width="85px"> 
-
-                    <col width="100px"> 
-                    <col width="90px">
-                    <col width="100px">
-                    <col width="160px">
-                </colgroup>
                 <!--//tfoot고정용 table-->
             </div>
             
-            <div class="modalFooter">
-                <!-- <div class="alertToast is-active" id="toast01">
-                    저장되었습니다. <i class="ico smClose w"></i>
-                </div> -->
+            <div class="modalFooter single">
                 <button class="white prefix layerOpen" aria-controls="del-confirm">닫기</button>
-                <!-- <button class="suffix">저장</button> -->
             </div>
         </div>        
         <div class="layerDim"></div>    
@@ -1128,28 +1099,5 @@
     <!--//선정기준 팝업-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>
-    <script>        
-        selectBox();
-
-        //테이블영역스크롤
-        function tableScroll(){      
-            let bizState = document.querySelector('.bizState');
-            let absolBody = document.querySelector('.bizState .absolBody');
-
-            absolBody.addEventListener('wheel', moveScroll);
-
-            function moveScroll(e){
-                console.log(absolBody.scrollTop);
-                if(e.deltaY > 0){
-                    contLayout.classList.add('is-active');
-                    absolBody.classList.add('is-active');
-                }else{
-                    contLayout.classList.remove('is-active');
-                    absolBody.classList.remove('is-active');
-                }  
-            }
-        }
-        //tableScroll();
-    </script>
 </body>
 </html>
