@@ -52,6 +52,7 @@
             }
             td{
                 height: rem(32);
+                padding: rem(4) !important;
             }
         }
         input[type=checkbox]{
@@ -1341,13 +1342,19 @@
     }
 }
 
-//투입유형별 매출 - 월별 매입/매출
 //프로젝트별 매출집계 - 월별 매입/매출 
-.monthData,
-.projMonthly{
-    .absolBody{
-        height: auto;
-        max-height: rem(300);
+//투입유형별 매출/매입 - 월별 매입/매출
+//외주 매출/매입
+.projMonthly,
+.insertMonthly,
+.sourcingMonthly
+{
+    height: rem(680);
+    .h3_sub{
+        & + .tableBox{
+            margin-top: rem(20);
+            max-height: rem(585);
+        }
     }
 }
 
