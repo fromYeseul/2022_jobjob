@@ -19,8 +19,8 @@
         left: 0;
         right: 0;
         .layerBox{
-            overflow-y: auto;
-            max-height: 95%;
+            // overflow-y: auto;
+            // max-height: 95%;
             padding: rem(30);
             top:50%;
             left: 50%; 
@@ -51,6 +51,7 @@
             }
             td{
                 height: rem(32);
+                padding: rem(4) !important;
             }
         }
         input[type=checkbox]{
@@ -129,11 +130,11 @@
         }
         &.mid-laSize{
             width: rem(1000);
-            padding: rem(40) rem(30);
+            // padding: rem(40) rem(30);
         }
         &.mid-laSize2{
             width: rem(1200);
-            padding: rem(40) rem(30);
+            // padding: rem(40) rem(30);
             .modalFooter{
                 max-width: rem(330);
             }
@@ -1094,7 +1095,12 @@
 //사업현황 등록 - 청구스케줄, 제경비입력
 .chargeSet,
 .exceptCharge{
-    .tableTop{        
+    .tableTop{    
+        input[type=text],
+        select,
+        button{
+            height: rem(36);
+        }   
         & + div{
             height: rem(400);
         }
@@ -1393,6 +1399,39 @@
         color: $filePopSub;
     }
 }
+
+//프로젝트별 매출집계 - 월별 매입/매출 
+//투입유형별 매출/매입 - 월별 매입/매출
+//외주 매출/매입
+.projMonthly,
+.insertMonthly,
+.sourcingMonthly
+{
+    height: rem(680);
+    .h3_sub{
+        & + .tableBox{
+            margin-top: rem(20);
+            max-height: rem(585);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //로그인 - 가입신청, 내정보수정

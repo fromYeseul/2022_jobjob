@@ -135,17 +135,49 @@
     }
     .tabBtnWrap{
         .tabBtn{
-            // min-width:30px;
             line-height: rem(34);
             a{
+                width:rem(62);
+                padding: 0 3px;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
             }
             &:first-child{
                 a{
-                    min-width: rem(60);
+                    width:rem(60);
                     border-top-left-radius: rem(4);
                 }                
+            }
+            &:last-child{
+                a{
+                    width: auto;
+                    padding: 0 rem(6);
+                }                
+            }
+            input{
+                width: rem(40);
+                height: rem(26);
+                padding: 0 2px;
+                // background: transparent;
+            }
+            .editInput{
+                width:rem(64);
+                padding: 0 3px;
+                background-color: $tab_pms;
+                border: 1px solid $tab_pms;  
+                
+            }
+        }
+    }
+    .moveBtn{
+        button{
+            &:disabled{                    
+                .goLt{
+                    background-position: -40px -180px;
+                }
+                .goRgt{
+                    background-position: -60px -180px;
+                }
             }
         }
     }
@@ -184,6 +216,9 @@
         tfoot{
             td{
                 height: rem(58);
+                &:last-child{
+                    padding-right: 20px;
+                }
             }
         }
         td{

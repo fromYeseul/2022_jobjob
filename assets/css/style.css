@@ -116,6 +116,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .sortL {
   padding: 0 30px;
+  padding-right: 0;
   position: relative;
 }
 .sortL::before {
@@ -452,6 +453,10 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: #f2f2f7;
 }
 
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
 ::-webkit-scrollbar-thumb {
   border-radius: 6px;
   background-color: #cccccc;
@@ -472,6 +477,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .mr10 {
   margin-right: 0.625rem !important;
+}
+
+.ml0 {
+  margin-left: 0rem !important;
 }
 
 .ml5 {
@@ -745,13 +754,17 @@ header {
 .contWrapper .contLayout .recruitList, .contWrapper .contLayout .recruitAdmin, .contWrapper .contLayout .recruitDetail,
 .contWrapper .contLayout .sendedOfferList, .contWrapper .contLayout .sendedOfferDetail, .contWrapper .contLayout .talentedSearch,
 .contWrapper .contLayout .clientBuy, .contWrapper .contLayout .clientSales, .contWrapper .contLayout .bizState, .contWrapper .contLayout .resumeList,
-.contWrapper .contLayout .dashboard {
+.contWrapper .contLayout .dashboard, .contWrapper .contLayout .insertType, .contWrapper .contLayout .projTotal, .contWrapper .contLayout .salesLedger, .contWrapper .contLayout .sourcingTotal {
   height: calc(100vh - 60px);
-  padding: 1.875rem 1.875rem;
+  padding: 1.875rem 1.875rem 1.25rem 1.875rem;
   overflow-y: auto;
 }
+.contWrapper .contLayout .bizState {
+  padding-bottom: 0;
+}
 .contWrapper .contLayout .dashboard {
-  padding: 1.875rem 3.875rem 1.875rem 3.875rem;
+  width: 100%;
+  padding: 1.625rem 2.1875rem;
 }
 .contWrapper .contLayout .default {
   width: 100%;
@@ -1469,8 +1482,6 @@ footer.toast button + button {
   right: 0;
 }
 .modalLayer.center .layerBox {
-  overflow-y: auto;
-  max-height: 95%;
   padding: 1.875rem;
   top: 50%;
   left: 50%;
@@ -1496,6 +1507,7 @@ footer.toast button + button {
 }
 .modalLayer.absol table td {
   height: 2rem;
+  padding: 0.25rem !important;
 }
 .modalLayer.absol input[type=checkbox] + label {
   font-size: 0.875rem;
@@ -1563,11 +1575,9 @@ footer.toast button + button {
 }
 .modalLayer .layerBox.mid-laSize {
   width: 62.5rem;
-  padding: 2.5rem 1.875rem;
 }
 .modalLayer .layerBox.mid-laSize2 {
   width: 75rem;
-  padding: 2.5rem 1.875rem;
 }
 .modalLayer .layerBox.mid-laSize2 .modalFooter {
   max-width: 20.625rem;
@@ -2153,7 +2163,7 @@ footer.toast button + button {
 
 .clientAdmin .tableBox {
   padding-top: 1.875rem;
-  height: 31.25rem;
+  height: calc(100vh - 406px);
 }
 .clientAdmin .tableBox thead {
   position: absolute;
@@ -2321,6 +2331,14 @@ footer.toast button + button {
   height: 33.75rem;
 }
 
+.chargeSet .tableTop input[type=text],
+.chargeSet .tableTop select,
+.chargeSet .tableTop button,
+.exceptCharge .tableTop input[type=text],
+.exceptCharge .tableTop select,
+.exceptCharge .tableTop button {
+  height: 2.25rem;
+}
 .chargeSet .tableTop + div,
 .exceptCharge .tableTop + div {
   height: 25rem;
@@ -2565,6 +2583,18 @@ footer.toast button + button {
 #fileList .h3_sub {
   margin-top: -10px;
   color: #979797;
+}
+
+.projMonthly,
+.insertMonthly,
+.sourcingMonthly {
+  height: 42.5rem;
+}
+.projMonthly .h3_sub + .tableBox,
+.insertMonthly .h3_sub + .tableBox,
+.sourcingMonthly .h3_sub + .tableBox {
+  margin-top: 1.25rem;
+  max-height: 36.5625rem;
 }
 
 .joinRequest .inputList.flex h6,
@@ -3071,6 +3101,22 @@ footer.toast button + button {
   border-top: transparent;
 }
 
+.loading {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.loading img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* 테이블 검색 조건 */
 .condition {
   margin-top: 1.875rem;
@@ -3278,6 +3324,9 @@ table tr td.nodata {
   height: 13.75rem;
   font-weight: 500;
   background: transparent;
+}
+table tr td.center {
+  text-align: center;
 }
 table tr td.left {
   text-align: left;
@@ -3596,7 +3645,7 @@ table .dot {
 
 .listBottom {
   width: 100%;
-  padding-top: 1.25rem;
+  padding-top: 0.625rem;
   display: flex;
   font-size: 0.875rem;
 }
@@ -3942,7 +3991,7 @@ table .dot {
   position: relative;
 }
 .tabBtnWrap.autoSize a {
-  padding: 0 0.375rem;
+  padding: 0 0.625rem;
   min-width: auto;
 }
 .tabBtnWrap.autoSize .absol {
@@ -4910,7 +4959,7 @@ input[type=text].dateType {
   padding: 0.625rem 0.625rem;
   padding-right: 1.875rem;
   width: 8.75rem;
-  background: url(../img/icoCal.png) right 10px top 50% no-repeat;
+  background: url(../img/icoCal.png) right 6px top 50% no-repeat;
   background-color: #fff;
 }
 input[type=text].dateType.editType {
@@ -7074,6 +7123,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 1rem;
   height: 1.125rem;
   background-position: -80px -380px;
+  cursor: pointer;
 }
 .ico.fileUpload {
   width: 1.25rem;
@@ -7113,6 +7163,12 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .ico.gray_bin_sm:hover {
   background-position: -220px -340px;
+}
+.ico.w_bin_sm {
+  width: 0.6875rem;
+  height: 0.8125rem;
+  background-position: -160px -420px;
+  cursor: pointer;
 }
 .ico.refresh {
   width: 1.1875rem;
@@ -7447,6 +7503,16 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .ico.pagingLast.is-active {
   background-position: -60px -160px;
+}
+.ico.goLt {
+  width: 0.5625rem;
+  height: 1rem;
+  background-position: -40px -200px;
+}
+.ico.goRgt {
+  width: 0.5625rem;
+  height: 1rem;
+  background-position: -60px -200px;
 }
 
 /* GNB 아이콘 */
@@ -8152,6 +8218,9 @@ h2 button {
   margin-left: 1.25rem;
   vertical-align: 3px;
 }
+h2 .hasTxt + label {
+  margin-left: 15px;
+}
 
 h3,
 .h3 {
@@ -8714,7 +8783,7 @@ h6 + .h6_sub {
   border-bottom: 0;
 }
 .accWrap.flatType .accBox.is-active i.arrow {
-  background-position: -80px -120px;
+  background-position: -100px -120px;
   vertical-align: 2px;
 }
 .accWrap.flatType .accBox.disabled {
@@ -8858,7 +8927,7 @@ h6 + .h6_sub {
   gap: 4px;
   width: auto;
   max-width: 75%;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.0625rem;
   line-height: 1.2;
   cursor: pointer;
@@ -9073,7 +9142,7 @@ h6 + .h6_sub {
   flex-shrink: 0;
   min-width: auto;
   width: 4.0625rem;
-  line-height: 36px;
+  line-height: 3.125rem;
 }
 .commentBox .rightBtn,
 .commentBox .date {
@@ -9804,28 +9873,27 @@ h6 + .h6_sub {
   margin: 10px 0;
   min-height: 1.25rem;
 }
-.resume > .prefix .mid li.birth {
+.resume > .prefix .mid li.birth, .resume > .prefix .mid li.pNum, .resume > .prefix .mid li.mail, .resume > .prefix .mid li.address {
   margin-left: 1.5rem;
 }
-.resume > .prefix .mid li.birth::before {
+.resume > .prefix .mid li.birth::before, .resume > .prefix .mid li.pNum::before, .resume > .prefix .mid li.mail::before, .resume > .prefix .mid li.address::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../img/icoGroup.png);
+  background-position: -40px -184px;
+  position: absolute;
+  top: 2px;
+  left: -20px;
   background-position: -320px -400px;
-}
-.resume > .prefix .mid li.pNum {
-  margin-left: 1.5rem;
 }
 .resume > .prefix .mid li.pNum::before {
   background-position: -340px -400px;
   left: -18px;
 }
-.resume > .prefix .mid li.mail {
-  margin-left: 1.5rem;
-}
 .resume > .prefix .mid li.mail::before {
   background-position: -360px -400px;
   top: 6px;
-}
-.resume > .prefix .mid li.address {
-  margin-left: 1.5rem;
 }
 .resume > .prefix .mid li.address::before {
   background-position: -380px -400px;

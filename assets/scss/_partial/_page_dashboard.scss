@@ -48,7 +48,8 @@
     .condition{
         margin-top: -30px;
         .condiTit{
-            margin-right: rem(20);
+            margin-left: rem(20);
+            margin-right: rem(5);
         }
         .hasBtn{
             align-items: baseline;
@@ -59,7 +60,12 @@
         display: flex;
         gap: 20px;
         .boxWrap{
+            display: flex;
+    flex-direction: column;
+    justify-content: space-between;
             padding: rem(30) rem(20);
+            height: calc(100vh - 175px);
+            overflow: hidden;
             &.prefix{
                 padding: rem(30) rem(20);
                 flex: 8 1 0;
@@ -76,21 +82,113 @@
                 color: $dashboardSub_pms;
                 font-weight: normal;
             }
+            .mid,
+            .bottom{
+                margin-top: rem(30);
+                margin-right: rem(40);
+                display: flex;
+                align-items: flex-start;   
+                justify-content: space-between;
+                // gap: 40px; 
+                .dashTit{
+                    width: rem(100);
+                }
+            }
+            // .mid{
+            //     margin-right: rem(28);
+            // }
+            .bottom{
+                margin-top: rem(40);
+                margin-right: rem(60);
+                .labels{      
+                    ul{
+                        gap: 20px;
+                    }
+                }
+            }
+            .labels{      
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 25vh;
+                }
+                li{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    span{
+                        display: inline-block;
+                        width: rem(20);
+                        height: rem(14);
+                        text-indent: -99999px;
+                        background: $lastY;
+                    }
+                    &.thisY{
+                        span{background: $thisY;}
+                    }
+
+                    &.part01{
+                        span{background: $part01;}
+                    }
+                    &.part02{
+                        span{background: $part02;}
+                    }
+                    &.part03{
+                        span{background: $part03;}
+                    }
+                    &.part04{
+                        span{background: $part04;}
+                    }
+                    &.part05{
+                        span{background: $part05;}
+                    }
+                    &.part06{
+                        span{background: $part06;}
+                    }
+                    &.part07{
+                        span{background: $part07;}
+                    }
+                    &.part08{
+                        span{background: $part08;}
+                    }
+                    &.part09{
+                        span{background: $part09;}
+                    }
+                }
+            }
+        }
+        .dashTit{
+            @include sideArray;
+            .unit{
+                font-size: rem(13);
+                font-weight: 600;
+            }
         }
         .noticeBoard{
-            margin-top: rem(20);
-            padding: rem(25) rem(50);
+            margin-top: rem(15);
+            padding: rem(25) rem(36);
             @include sideArray;
             border-radius: 10px;
             background: $notiBoardBg_pms;
             border: 1px solid $notiBoardBd_pms;
             .prefix,
+            .center,
             .suffix{
                 @include heightArray;
             }
             h1{
-                margin-left: rem(20);
-                font-size: rem(34);
+                margin-left: rem(15);
+                font-size: rem(32);
+                font-weight: 700;
+                span{
+                    margin-left: 5px;
+                    font-size: rem(22);
+                    &.unit{
+                        margin-left: 0;
+                        font-size: rem(18);
+                    }
+                }
             }
             .suffix{
                 h1{
@@ -101,9 +199,15 @@
     }
     .accWrap{
         margin-top: rem(30);
+        padding-bottom: 1px;
         // height: rem(328);
-        height: calc(75vh - 361px);
+        height: calc(100vh - 570px);
         @include scroll_0;
+    }
+    .accBox{
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
     .accHead{
         .projTit{
@@ -113,29 +217,35 @@
                 content:'';
                 width: rem(11);
                 height: rem(11);
-                background: $part_sapBiz;
+                background: $part01;
                 position: absolute;
                 top: 50%;
                 left: 0;
                 transform: translateY(-50%);
             }
-            &.sapStr{
-                &::before{background: $part_sapStr;}
+            &.part02{
+                &::before{background: $part02;}
             }
-            &.sapUni{
-                &::before{background: $part_sapUni;}
+            &.part03{
+                &::before{background: $part03;}
             }
-            &.exBiz{
-                &::before{background: $part_exBiz;}
+            &.part04{
+                &::before{background: $part04;}
             }
-            &.fuFus{
-                &::before{background: $part_fuFus;}
+            &.part05{
+                &::before{background: $part05;}
             }
-            &.platf{
-                &::before{background: $part_platf;}
+            &.part06{
+                &::before{background: $part06;}
             }
-            &.cloud{
-                &::before{background: $part_cloud;}
+            &.part07{
+                &::before{background: $part07;}
+            }
+            &.part08{
+                &::before{background: $part08;}
+            }
+            &.part09{
+                &::before{background: $part09;}
             }
         }
         .suffix{
@@ -158,13 +268,9 @@
 
 //반원그래프
 .halfGraph{
-    margin-top: rem(40);
-    // height: rem(250);
 }
 //원그래프
 .circleGraph{
-    margin-top: rem(70);
-    // height: rem(160);
     ul{
         display: flex;
         max-width: 40vw;
@@ -188,7 +294,7 @@
     }
 }
 //막대그래프
-.barGraph{
-    margin-top: rem(10);
-    height: rem(280);
-}
+// .barGraph{
+//     margin-top: rem(10);
+//     height: rem(280);
+// }

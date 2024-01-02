@@ -197,13 +197,21 @@ $notiTit_pms : #1e6ee7;
 $notiBoardBd_pms : #dee8f0; 
 $notiBoardBg_pms : #eaf2f8; 
 
-$part_sapBiz : #304e94;
-$part_sapStr : #0d60c8;
-$part_sapUni : #17a6f2;
-$part_exBiz : #24c9cb;
-$part_fuFus : #13be6f;
-$part_platf : #8c98a6;
-$part_cloud : #575d64;
+// $part_sapBiz : #304e94;
+// $part_sapStr : #0d60c8;
+// $part_sapUni : #17a6f2;
+// $part_exBiz : #24c9cb;
+// $part_fuFus : #13be6f;
+// $part_platf : #8c98a6;
+// $part_cloud : #575d64;
+
+$part01 : #304e94;
+$part02 : #0d60c8;
+$part03 : #17a6f2;
+$part04 : #24c9cb;
+$part05 : #13be6f;
+$part06 : #8c98a6;
+$part07 : #575d64;
 
 $val_pro: #932ab6;
 $val_income: #00a65a;
@@ -241,6 +249,7 @@ $commentBoxBg_pms : #f3f3f3;
 }
 .sortL{
     padding: 0 30px;
+    padding-right: 0;
     position: relative;
     &::before{
         content: '';
@@ -355,6 +364,7 @@ $commentBoxBg_pms : #f3f3f3;
     font-weight: bold;
     font-size: rem(16) !important;
 }
+.specify{}
 
 //마이프로젝트-직무추천-설정팝업
 .addSet{
@@ -540,6 +550,9 @@ $commentBoxBg_pms : #f3f3f3;
 ::-webkit-scrollbar-track {
     border-radius: 5px;
     background-color: $scrollTrack; //#f2f2f7
+}
+::-webkit-scrollbar-corner{
+    background-color: transparent; 
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 6px;
