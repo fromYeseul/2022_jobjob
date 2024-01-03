@@ -61,8 +61,8 @@
         gap: 20px;
         .boxWrap{
             display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+            flex-direction: column;
+            justify-content: space-between;
             padding: rem(30) rem(20);
             height: calc(100vh - 175px);
             overflow: hidden;
@@ -154,6 +154,15 @@
                     }
                     &.part09{
                         span{background: $part09;}
+                    }
+                    &.part10{
+                        span{background: $part10;}
+                    }
+                    &.part11{
+                        span{background: $part11;}
+                    }
+                    &.part12{
+                        span{background: $part12;}
                     }
                 }
             }
@@ -247,6 +256,15 @@
             &.part09{
                 &::before{background: $part09;}
             }
+            &.part10{
+                &::before{background: $part10;}
+            }
+            &.part11{
+                &::before{background: $part11;}
+            }
+            &.part12{
+                &::before{background: $part12;}
+            }
         }
         .suffix{
             ul{
@@ -270,29 +288,29 @@
 .halfGraph{
 }
 //원그래프
-.circleGraph{
-    ul{
-        display: flex;
-        max-width: 40vw;
-        li{
-            width: 20%;
-            position: relative;
-            .numVal{
-                font-size: rem(16);
-                font-weight: 500;
-                position: absolute;
-                left: 50%;
-                top: 58%;
-                transform: translateX(-50%);
-                &.pro{color: $val_pro;}
-                &.income{color: $val_income;}
-                &.input{color: $val_input;}
-                &.cont{color: $val_cont;}
-                &.fin{color: $val_fin;}
-            }
-        }
-    }
-}
+// .circleGraph{
+//     ul{
+//         display: flex;
+//         max-width: 40vw;
+//         li{
+//             width: 20%;
+//             position: relative;
+//             .numVal{
+//                 font-size: rem(16);
+//                 font-weight: 500;
+//                 position: absolute;
+//                 left: 50%;
+//                 top: 58%;
+//                 transform: translateX(-50%);
+//                 &.pro{color: $val_pro;}
+//                 &.income{color: $val_income;}
+//                 &.input{color: $val_input;}
+//                 &.cont{color: $val_cont;}
+//                 &.fin{color: $val_fin;}
+//             }
+//         }
+//     }
+// }
 //막대그래프
 // .barGraph{
 //     margin-top: rem(10);

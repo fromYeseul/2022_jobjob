@@ -135,37 +135,16 @@
     }
     .tabBtnWrap{
         .tabBtn{
-            line-height: rem(34);
+            line-height: rem(34);   
             a{
-                width:rem(62);
-                padding: 0 3px;
+                width:rem(80);
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
-            }
+            }         
             &:first-child{
                 a{
-                    width:rem(60);
                     border-top-left-radius: rem(4);
                 }                
-            }
-            &:last-child{
-                a{
-                    width: auto;
-                    padding: 0 rem(6);
-                }                
-            }
-            input{
-                width: rem(40);
-                height: rem(26);
-                padding: 0 2px;
-                // background: transparent;
-            }
-            .editInput{
-                width:rem(64);
-                padding: 0 3px;
-                background-color: $tab_pms;
-                border: 1px solid $tab_pms;  
-                
             }
         }
     }
@@ -320,6 +299,40 @@
             font-size: rem(12);
         }
     }    
+    .prefix{
+        .tabBtn{
+            // line-height: rem(34);
+            a{
+                width:rem(62);
+                padding: 0 3px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            // &:first-child{
+            //     a{
+            //         width:rem(60);
+            //     }                
+            // }
+            &:last-child{
+                a{
+                    width: auto;
+                    padding: 0 rem(6);
+                }                
+            }
+            input{
+                width: rem(40);
+                height: rem(26);
+                padding: 0 2px;
+                // background: transparent;
+            }
+            .editInput{
+                width:rem(64);
+                padding: 0 3px;
+                background-color: $tab_pms;
+                border: 1px solid $tab_pms;                  
+            }
+        }
+    }
 }
 
 

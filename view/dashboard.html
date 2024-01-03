@@ -123,6 +123,7 @@
                                     <canvas id="halfChart" style="width:100%; height:25vh;"></canvas>
                                 </div>
                                 <div class="labels">
+                                    <!--240101 수정 ys-->
                                     <ul>
                                         <li class="part01"><span>막대</span>AI 전략</li>
                                         <li class="part02"><span>막대</span>SAP</li>
@@ -133,7 +134,14 @@
                                         <li class="part07"><span>막대</span>R&D 센터</li>
                                         <li class="part08"><span>막대</span>영업전략</li>
                                         <li class="part09"><span>막대</span>CSO</li>
+
+                                        <!--240101 예비
+                                        <li class="part10"><span>막대</span>CSO</li>
+                                        <li class="part11"><span>막대</span>CSO</li>
+                                        <li class="part12"><span>막대</span>CSO</li>                                    
+                                        -->
                                     </ul>
+                                    <!--//240101 수정 ys-->
                                 </div>
                             </div>
 
@@ -179,718 +187,710 @@
                         </div>
                         <div class="boxWrap suffix">
                             <h4>상태별 계약현황<span class="h4_sub">전체</span></h4>
-                            <div class="">
+                            <div class=""><!--240101 시안용 이미지 추가 ys-->
                                 <img src="../assets/img/chart_sample.png" style="width: 100%;">
                             </div>
-
-                                <div class="accWrap">  
-                                    <div class="accBox">
-                                        <div class="accHead">
-                                            <div class="prefix">
-                                                <div class="projTit part01">AI 전략</div>
-                                                <!-- 샘플
-                                                <div class="projTit sapStr">SAP전략</div>
-                                                <div class="projTit sapUni">SAP융합</div>
-                                                <div class="projTit exBiz">대외사업</div>
-                                                <div class="projTit fuFus">미래융합</div>
-                                                <div class="projTit platf">플랫폼</div>
-                                                <div class="projTit cloud">클라우드</div> -->
-                                                <span class="count offer">22</span>
-                                            </div>  
-                                            <div class="suffix">
-                                                <ul>
-                                                    <li>
-                                                        <span class="label">총매출</span>
-                                                        <span>1,988,000,000 원</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">총매입</span>                                                   
-                                                        <span> 1,388,000,000 원</span>
-                                                    </li>
-                                                    <li class="mainC">
-                                                        <span class="label">이익금</span>
-                                                        <b>8,000,000 원</b>                                                  
-                                                        <span>(46.4%)</span>                                                    
-                                                    </li>
-                                                </ul>
-                                                <button type="button" class="onlyIco"><i class="ico smPlus"></i></button>
-                                            </div>                                
-                                        </div>
-            
-                                        <div class="accInner">                                    
-                                            <div class="tableBox">    
-                                                <table class="chkType">
-                                                    <colgroup>
-                                                        <col width="13%">
-                                                        <col>
-                                                        <col width="16%;">
-                                                        <col width="18%;">
-                                                        <col width="16%">
-                                                        <col width="12%">
-                                                        <col width="14%">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>구분</th>
-                                                            <th>투입</th>
-                                                            <th>매출 (계약)</th>
-                                                            <th>매입 (실투입)</th>
-                                                            <th>총 M/M</th>
-                                                            <th>이익금</th> 
-                                                            <th>이익률 (%)</th>                    
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>                                
-                                                        <tr>
-                                                            <td><span class="">정규</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">69,500,000</td>
-                                                            <td class="right">68,800,000</td>                                        
-                                                            <td>14.3</td> 
-                                                            <td class="right">8,000,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">1.1</span>
-                                                            </td>                                                                                            
-                                                        </tr>  
-                                                        <tr>
-                                                            <td><span class="">프리</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">88,000,000</td>
-                                                            <td class="right">72,000,000</td>                                        
-                                                            <td>38.0</td>  
-                                                            <td class="right">8,000,000</td>                                      
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">22.2</span>
-                                                            </td>
-                                                            
-                                                        </tr>                                
-                                                        <tr>
-                                                            <td><span class="">법인</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">2,000,000</td>
-                                                            <td class="right">1,000,000</td>                                        
-                                                            <td>10.0</td>   
-                                                            <td class="right">1,900,000</td>                                     
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">100.0</span>
-                                                            </td>
-                                                            
-                                                        </tr> 
-                                                        <tr>
-                                                            <td><span class="">공급</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">8,890,000</td>
-                                                            <td class="right">7,050,000</td>                                        
-                                                            <td>12.0</td> 
-                                                            <td class="right">1,400,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">26.0</span>
-                                                            </td>                                                        
-                                                        </tr>                               
-                                                        <tr>
-                                                            <td><span class="">관리</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">3,352,000,000</td>
-                                                            <td class="right">1,988,000,000</td>                                        
-                                                            <td>67.5</td> 
-                                                            <td class="right">8,000,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">68.6</span>
-                                                            </td>                                                    
-                                                        </tr>  
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
+                            <div class="accWrap">  
+                                <div class="accBox">
+                                    <div class="accHead">
+                                        <div class="prefix">
+                                            <div class="projTit part01">AI 전략</div><!--240101 클래스수정 ~part12까지 ys-->
+                                            <span class="count offer">22</span>
+                                        </div>  
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>
+                                                    <span class="label">총매출</span>
+                                                    <span>1,988,000,000 원</span>
+                                                </li>
+                                                <li>
+                                                    <span class="label">총매입</span>                                                   
+                                                    <span> 1,388,000,000 원</span>
+                                                </li>
+                                                <li class="mainC">
+                                                    <span class="label">이익금</span>
+                                                    <b>8,000,000 원</b>                                                  
+                                                    <span>(46.4%)</span>                                                    
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="onlyIco"><i class="ico smPlus"></i></button>
+                                        </div>                                
                                     </div>
-            
-                                    <div class="accBox is-active">
-                                        <div class="accHead">
-                                            <div class="prefix">
-                                                <div class="projTit part02">SAP</div>
-                                                <span class="count offer">2</span>
-                                            </div>  
-                                            <div class="suffix">
-                                                <ul>
-                                                    <li>
-                                                        <span class="label">총매출</span>
-                                                        <span>1,788,000,000 원</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">총매입</span>                                                   
-                                                        <span>1,808,000,000 원</span>
-                                                    </li>
-                                                    <li class="marked">
-                                                        <span class="label">이익금</span>
-                                                        <strong>- 8,000,000 원</strong>                                                  
-                                                        <span>(-1.4%)</span>                                                    
-                                                    </li>
-                                                </ul>
-                                                <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
-                                            </div>     
-                                        </div>
-            
-                                        <div class="accInner">                                    
-                                            <div class="tableBox">    
-                                                <table class="chkType">
-                                                    <colgroup>
-                                                        <col width="13%">
-                                                        <col>
-                                                        <col width="16%;">
-                                                        <col width="18%;">
-                                                        <col width="16%">
-                                                        <col width="12%">
-                                                        <col width="14%">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>구분</th>
-                                                            <th>투입</th>
-                                                            <th>매출 (계약)</th>
-                                                            <th>매입 (실투입)</th>
-                                                            <th>총 M/M</th>
-                                                            <th>이익금</th> 
-                                                            <th>이익률 (%)</th>                    
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>                                
-                                                        <tr>
-                                                            <td><span class="">정규</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">69,500,000</td>
-                                                            <td class="right">68,800,000</td>                                        
-                                                            <td>14.3</td> 
-                                                            <td class="right">8,000,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">1.1</span>
-                                                            </td>                                                                                            
-                                                        </tr>                          
-                                                        <tr>
-                                                            <td><span class="">관리</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">3,352,000,000</td>
-                                                            <td class="right">1,988,000,000</td>                                        
-                                                            <td>67.5</td> 
-                                                            <td class="right">8,000,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">68.6</span>
-                                                            </td>                                                    
-                                                        </tr>  
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="accBox">
-                                        <div class="accHead">
-                                            <div class="prefix">
-                                                <div class="projTit part03">SAP 전략</div>
-                                                <span class="count offer">0</span>
-                                            </div>  
-                                            <div class="suffix">
-                                                <ul>
-                                                    <li>
-                                                        <span class="label">총매출</span>
-                                                        <span>1,788,000,000 원</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">총매입</span>                                                   
-                                                        <span>1,808,000,000 원</span>
-                                                    </li>
-                                                    <li class="mainC">
-                                                        <span class="label">이익금</span>
-                                                        <strong>- 8,000,000 원</strong>                                                  
-                                                        <span>(-1.4%)</span>                                                    
-                                                    </li>
-                                                </ul>
-                                                <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
-                                            </div>     
-                                        </div>
-            
-                                        <div class="accInner">                                    
-                                            <div class="tableBox">    
-                                                <table class="chkType">
-                                                    <colgroup>
-                                                        <col width="13%">
-                                                        <col>
-                                                        <col width="16%;">
-                                                        <col width="18%;">
-                                                        <col width="16%">
-                                                        <col width="12%">
-                                                        <col width="14%">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>구분</th>
-                                                            <th>투입</th>
-                                                            <th>매출 (계약)</th>
-                                                            <th>매입 (실투입)</th>
-                                                            <th>총 M/M</th>
-                                                            <th>이익금</th> 
-                                                            <th>이익률 (%)</th>                    
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>                                
-                                                        <tr>
-                                                            <td><span class="">정규</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">69,500,000</td>
-                                                            <td class="right">68,800,000</td>                                        
-                                                            <td>14.3</td> 
-                                                            <td class="right">8,000,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">1.1</span>
-                                                            </td>                                                                                            
-                                                        </tr>  
-                                                        <tr>
-                                                            <td><span class="">프리</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">88,000,000</td>
-                                                            <td class="right">72,000,000</td>                                        
-                                                            <td>38.0</td>  
-                                                            <td class="right">8,000,000</td>                                      
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">22.2</span>
-                                                            </td>
-                                                            
-                                                        </tr>                                
-                                                        <tr>
-                                                            <td><span class="">법인</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">2,000,000</td>
-                                                            <td class="right">1,000,000</td>                                        
-                                                            <td>10.0</td>   
-                                                            <td class="right">1,900,000</td>                                     
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">100.0</span>
-                                                            </td>
-                                                            
-                                                        </tr> 
-                                                        <tr>
-                                                            <td><span class="">공급</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">8,890,000</td>
-                                                            <td class="right">7,050,000</td>                                        
-                                                            <td>12.0</td> 
-                                                            <td class="right">1,400,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">26.0</span>
-                                                            </td>                                                        
-                                                        </tr>                               
-                                                        <tr>
-                                                            <td><span class="">관리</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">3,352,000,000</td>
-                                                            <td class="right">1,988,000,000</td>                                        
-                                                            <td>67.5</td> 
-                                                            <td class="right">8,000,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">68.6</span>
-                                                            </td>                                                    
-                                                        </tr>  
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>        
-            
-                                    <div class="accBox">
-                                        <div class="accHead">
-                                            <div class="prefix">
-                                                <div class="projTit part04">SAP DS</div>
-                                                <span class="count offer">1</span>
-                                            </div>  
-                                            <div class="suffix">
-                                                <ul>
-                                                    <li>
-                                                        <span class="label">총매출</span>
-                                                        <span>1,788,000,000 원</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">총매입</span>                                                   
-                                                        <span>1,808,000,000 원</span>
-                                                    </li>
-                                                    <li class="marked">
-                                                        <span class="label">이익금</span>
-                                                        <strong>- 8,000,000 원</strong>                                                  
-                                                        <span>(-1.4%)</span>                                                    
-                                                    </li>
-                                                </ul>
-                                                <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
-                                            </div>     
-                                        </div>
-            
-                                        <div class="accInner">                                    
-                                            <div class="tableBox">    
-                                                <table class="chkType">
-                                                    <colgroup>
-                                                        <col width="13%">
-                                                        <col>
-                                                        <col width="16%;">
-                                                        <col width="18%;">
-                                                        <col width="16%">
-                                                        <col width="12%">
-                                                        <col width="14%">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>구분</th>
-                                                            <th>투입</th>
-                                                            <th>매출 (계약)</th>
-                                                            <th>매입 (실투입)</th>
-                                                            <th>총 M/M</th>
-                                                            <th>이익금</th> 
-                                                            <th>이익률 (%)</th>                    
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>                                
-                                                        <tr>
-                                                            <td><span class="">정규</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">69,500,000</td>
-                                                            <td class="right">68,800,000</td>                                        
-                                                            <td>14.3</td> 
-                                                            <td class="right">8,000,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">1.1</span>
-                                                            </td>                                                                                            
-                                                        </tr>  
-                                                        <tr>
-                                                            <td><span class="">프리</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">88,000,000</td>
-                                                            <td class="right">72,000,000</td>                                        
-                                                            <td>38.0</td>  
-                                                            <td class="right">8,000,000</td>                                      
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">22.2</span>
-                                                            </td>
-                                                            
-                                                        </tr>                                
-                                                        <tr>
-                                                            <td><span class="">법인</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">2,000,000</td>
-                                                            <td class="right">1,000,000</td>                                        
-                                                            <td>10.0</td>   
-                                                            <td class="right">1,900,000</td>                                     
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">100.0</span>
-                                                            </td>
-                                                            
-                                                        </tr> 
-                                                        <tr>
-                                                            <td><span class="">공급</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">8,890,000</td>
-                                                            <td class="right">7,050,000</td>                                        
-                                                            <td>12.0</td> 
-                                                            <td class="right">1,400,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">26.0</span>
-                                                            </td>                                                        
-                                                        </tr>                               
-                                                        <tr>
-                                                            <td><span class="">관리</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">3,352,000,000</td>
-                                                            <td class="right">1,988,000,000</td>                                        
-                                                            <td>67.5</td> 
-                                                            <td class="right">8,000,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">68.6</span>
-                                                            </td>                                                    
-                                                        </tr>  
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="accBox">
-                                        <div class="accHead">
-                                            <div class="prefix">
-                                                <div class="projTit part05">IT 전략</div>
-                                                <span class="count offer">2</span>
-                                            </div>  
-                                            <div class="suffix">
-                                                <ul>
-                                                    <li>
-                                                        <span class="label">총매출</span>
-                                                        <span>1,788,000,000 원</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">총매입</span>                                                   
-                                                        <span>1,808,000,000 원</span>
-                                                    </li>
-                                                    <li class="mainC">
-                                                        <span class="label">이익금</span>
-                                                        <strong>- 8,000,000 원</strong>                                                  
-                                                        <span>(-1.4%)</span>                                                    
-                                                    </li>
-                                                </ul>
-                                                <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
-                                            </div>     
-                                        </div>
-            
-                                        <div class="accInner">                                    
-                                            <div class="tableBox">    
-                                                <table class="chkType">
-                                                    <colgroup>
-                                                        <col width="13%">
-                                                        <col>
-                                                        <col width="16%;">
-                                                        <col width="18%;">
-                                                        <col width="16%">
-                                                        <col width="12%">
-                                                        <col width="14%">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>구분</th>
-                                                            <th>투입</th>
-                                                            <th>매출 (계약)</th>
-                                                            <th>매입 (실투입)</th>
-                                                            <th>총 M/M</th>
-                                                            <th>이익금</th> 
-                                                            <th>이익률 (%)</th>                    
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>                                
-                                                        <tr>
-                                                            <td><span class="">정규</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">69,500,000</td>
-                                                            <td class="right">68,800,000</td>                                        
-                                                            <td>14.3</td> 
-                                                            <td class="right">8,000,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">1.1</span>
-                                                            </td>                                                                                            
-                                                        </tr>  
-                                                        <tr>
-                                                            <td><span class="">프리</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">88,000,000</td>
-                                                            <td class="right">72,000,000</td>                                        
-                                                            <td>38.0</td>  
-                                                            <td class="right">8,000,000</td>                                      
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">22.2</span>
-                                                            </td>
-                                                            
-                                                        </tr>                                
-                                                        <tr>
-                                                            <td><span class="">법인</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">2,000,000</td>
-                                                            <td class="right">1,000,000</td>                                        
-                                                            <td>10.0</td>   
-                                                            <td class="right">1,900,000</td>                                     
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">100.0</span>
-                                                            </td>
-                                                            
-                                                        </tr> 
-                                                        <tr>
-                                                            <td><span class="">공급</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">8,890,000</td>
-                                                            <td class="right">7,050,000</td>                                        
-                                                            <td>12.0</td> 
-                                                            <td class="right">1,400,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">26.0</span>
-                                                            </td>                                                        
-                                                        </tr>                               
-                                                        <tr>
-                                                            <td><span class="">관리</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">3,352,000,000</td>
-                                                            <td class="right">1,988,000,000</td>                                        
-                                                            <td>67.5</td> 
-                                                            <td class="right">8,000,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">68.6</span>
-                                                            </td>                                                    
-                                                        </tr>  
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="accBox">
-                                        <div class="accHead">
-                                            <div class="prefix">
-                                                <div class="projTit part06">TCS</div>
-                                                <span class="count offer">3</span>
-                                            </div>  
-                                            <div class="suffix">
-                                                <ul>
-                                                    <li>
-                                                        <span class="label">총매출</span>
-                                                        <span>1,788,000,000 원</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">총매입</span>                                                   
-                                                        <span>1,808,000,000 원</span>
-                                                    </li>
-                                                    <li class="marked">
-                                                        <span class="label">이익금</span>
-                                                        <strong>- 8,000,000 원</strong>                                                  
-                                                        <span>(-1.4%)</span>                                                    
-                                                    </li>
-                                                </ul>
-                                                <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
-                                            </div>     
-                                        </div>
-            
-                                        <div class="accInner">                                    
-                                            <div class="tableBox">    
-                                                <table class="chkType">
-                                                    <colgroup>
-                                                        <col width="13%">
-                                                        <col>
-                                                        <col width="16%;">
-                                                        <col width="18%;">
-                                                        <col width="16%">
-                                                        <col width="12%">
-                                                        <col width="14%">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>구분</th>
-                                                            <th>투입</th>
-                                                            <th>매출 (계약)</th>
-                                                            <th>매입 (실투입)</th>
-                                                            <th>총 M/M</th>
-                                                            <th>이익금</th> 
-                                                            <th>이익률 (%)</th>                    
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>                                
-                                                        <tr>
-                                                            <td><span class="">정규</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">69,500,000</td>
-                                                            <td class="right">68,800,000</td>                                        
-                                                            <td>14.3</td> 
-                                                            <td class="right">8,000,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">1.1</span>
-                                                            </td>                                                                                            
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="accBox">
-                                        <div class="accHead">
-                                            <div class="prefix">
-                                                <div class="projTit part07">R&D센터</div>
-                                                <span class="count offer">2</span>
-                                            </div>  
-                                            <div class="suffix">
-                                                <ul>
-                                                    <li>
-                                                        <span class="label">총매출</span>
-                                                        <span>1,788,000,000 원</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="label">총매입</span>                                                   
-                                                        <span>1,808,000,000 원</span>
-                                                    </li>
-                                                    <li class="mainC">
-                                                        <span class="label">이익금</span>
-                                                        <strong>- 8,000,000 원</strong>                                                  
-                                                        <span>(-1.4%)</span>                                                    
-                                                    </li>
-                                                </ul>
-                                                <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
-                                            </div>     
-                                        </div>
-            
-                                        <div class="accInner">                                    
-                                            <div class="tableBox">    
-                                                <table class="chkType">
-                                                    <colgroup>
-                                                        <col width="13%">
-                                                        <col>
-                                                        <col width="16%;">
-                                                        <col width="18%;">
-                                                        <col width="16%">
-                                                        <col width="12%">
-                                                        <col width="14%">
-                                                    </colgroup>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>구분</th>
-                                                            <th>투입</th>
-                                                            <th>매출 (계약)</th>
-                                                            <th>매입 (실투입)</th>
-                                                            <th>총 M/M</th>
-                                                            <th>이익금</th> 
-                                                            <th>이익률 (%)</th>                    
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>                                
-                                                        <tr>
-                                                            <td><span class="">정규</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">69,500,000</td>
-                                                            <td class="right">68,800,000</td>                                        
-                                                            <td>14.3</td> 
-                                                            <td class="right">8,000,000</td>                                       
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">1.1</span>
-                                                            </td>                                                                                            
-                                                        </tr>  
-                                                        <tr>
-                                                            <td><span class="">프리</span></td>
-                                                            <td>3</td>
-                                                            <td class="right">88,000,000</td>
-                                                            <td class="right">72,000,000</td>                                        
-                                                            <td>38.0</td>  
-                                                            <td class="right">8,000,000</td>                                      
-                                                            <td class="left">
-                                                                <span class="dot sSafe"></span>
-                                                                <span class="dark">22.2</span>
-                                                            </td>                                                        
-                                                        </tr>   
-                                                    </tbody>
-                                                </table>
-                                            </div>
+        
+                                    <div class="accInner">                                    
+                                        <div class="tableBox">    
+                                            <table class="chkType">
+                                                <colgroup>
+                                                    <col width="13%">
+                                                    <col>
+                                                    <col width="16%;">
+                                                    <col width="18%;">
+                                                    <col width="16%">
+                                                    <col width="12%">
+                                                    <col width="14%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>상태</th>
+                                                        <th>건수</th>
+                                                        <th>매출 (계약)</th>
+                                                        <th>매입 (실투입)</th>
+                                                        <th>총 M/M</th>
+                                                        <th>이익금</th> 
+                                                        <th>이익률 (%)</th>                    
+                                                    </tr>
+                                                </thead>
+                                                <tbody>                                
+                                                    <tr>
+                                                        <td><span class="sReject">미계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">69,500,000</td>
+                                                        <td class="right">68,800,000</td>                                        
+                                                        <td>14.3</td> 
+                                                        <td class="right">8,000,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">1.1</span>
+                                                        </td>                                                                                            
+                                                    </tr>  
+                                                    <tr>
+                                                        <td><span class="">계약완료</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">88,000,000</td>
+                                                        <td class="right">72,000,000</td>                                        
+                                                        <td>38.0</td>  
+                                                        <td class="right">8,000,000</td>                                      
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">22.2</span>
+                                                        </td>
+                                                        
+                                                    </tr>                                
+                                                    <tr>
+                                                        <td><span class="sReject">변경미계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">2,000,000</td>
+                                                        <td class="right">1,000,000</td>                                        
+                                                        <td>10.0</td>   
+                                                        <td class="right">1,900,000</td>                                     
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">100.0</span>
+                                                        </td>
+                                                        
+                                                    </tr> 
+                                                    <tr>
+                                                        <td><span class="">변경완료</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">8,890,000</td>
+                                                        <td class="right">7,050,000</td>                                        
+                                                        <td>12.0</td> 
+                                                        <td class="right">1,400,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">26.0</span>
+                                                        </td>                                                        
+                                                    </tr>                               
+                                                    <tr>
+                                                        <td><span class="">비계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">3,352,000,000</td>
+                                                        <td class="right">1,988,000,000</td>                                        
+                                                        <td>67.5</td> 
+                                                        <td class="right">8,000,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">68.6</span>
+                                                        </td>                                                    
+                                                    </tr>  
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
+        
+                                <div class="accBox is-active">
+                                    <div class="accHead">
+                                        <div class="prefix">
+                                            <div class="projTit part02">SAP</div>
+                                            <span class="count offer">2</span>
+                                        </div>  
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>
+                                                    <span class="label">총매출</span>
+                                                    <span>1,788,000,000 원</span>
+                                                </li>
+                                                <li>
+                                                    <span class="label">총매입</span>                                                   
+                                                    <span>1,808,000,000 원</span>
+                                                </li>
+                                                <li class="marked">
+                                                    <span class="label">이익금</span>
+                                                    <strong>- 8,000,000 원</strong>                                                  
+                                                    <span>(-1.4%)</span>                                                    
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </div>     
+                                    </div>
+        
+                                    <div class="accInner">                                    
+                                        <div class="tableBox">    
+                                            <table class="chkType">
+                                                <colgroup>
+                                                    <col width="13%">
+                                                    <col>
+                                                    <col width="16%;">
+                                                    <col width="18%;">
+                                                    <col width="16%">
+                                                    <col width="12%">
+                                                    <col width="14%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>상태</th>
+                                                        <th>건수</th>
+                                                        <th>매출 (계약)</th>
+                                                        <th>매입 (실투입)</th>
+                                                        <th>총 M/M</th>
+                                                        <th>이익금</th> 
+                                                        <th>이익률 (%)</th>                    
+                                                    </tr>
+                                                </thead>
+                                                <tbody>                                
+                                                    <tr>
+                                                        <td><span class="sReject">미계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">69,500,000</td>
+                                                        <td class="right">68,800,000</td>                                        
+                                                        <td>14.3</td> 
+                                                        <td class="right">8,000,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">1.1</span>
+                                                        </td>                                                                                            
+                                                    </tr>                          
+                                                    <tr>
+                                                        <td><span class="">비계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">3,352,000,000</td>
+                                                        <td class="right">1,988,000,000</td>                                        
+                                                        <td>67.5</td> 
+                                                        <td class="right">8,000,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">68.6</span>
+                                                        </td>                                                    
+                                                    </tr>  
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="accBox">
+                                    <div class="accHead">
+                                        <div class="prefix">
+                                            <div class="projTit part03">SAP 전략</div>
+                                            <span class="count offer">0</span>
+                                        </div>  
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>
+                                                    <span class="label">총매출</span>
+                                                    <span>1,788,000,000 원</span>
+                                                </li>
+                                                <li>
+                                                    <span class="label">총매입</span>                                                   
+                                                    <span>1,808,000,000 원</span>
+                                                </li>
+                                                <li class="mainC">
+                                                    <span class="label">이익금</span>
+                                                    <strong>- 8,000,000 원</strong>                                                  
+                                                    <span>(-1.4%)</span>                                                    
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </div>     
+                                    </div>
+        
+                                    <div class="accInner">                                    
+                                        <div class="tableBox">    
+                                            <table class="chkType">
+                                                <colgroup>
+                                                    <col width="13%">
+                                                    <col>
+                                                    <col width="16%;">
+                                                    <col width="18%;">
+                                                    <col width="16%">
+                                                    <col width="12%">
+                                                    <col width="14%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>상태</th>
+                                                        <th>건수</th>
+                                                        <th>매출 (계약)</th>
+                                                        <th>매입 (실투입)</th>
+                                                        <th>총 M/M</th>
+                                                        <th>이익금</th> 
+                                                        <th>이익률 (%)</th>                    
+                                                    </tr>
+                                                </thead>
+                                                <tbody>                                
+                                                    <tr>
+                                                        <td><span class="sReject">미계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">69,500,000</td>
+                                                        <td class="right">68,800,000</td>                                        
+                                                        <td>14.3</td> 
+                                                        <td class="right">8,000,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">1.1</span>
+                                                        </td>                                                                                            
+                                                    </tr>  
+                                                    <tr>
+                                                        <td><span class="">계약완료</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">88,000,000</td>
+                                                        <td class="right">72,000,000</td>                                        
+                                                        <td>38.0</td>  
+                                                        <td class="right">8,000,000</td>                                      
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">22.2</span>
+                                                        </td>
+                                                        
+                                                    </tr>                                
+                                                    <tr>
+                                                        <td><span class="sReject">변경미계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">2,000,000</td>
+                                                        <td class="right">1,000,000</td>                                        
+                                                        <td>10.0</td>   
+                                                        <td class="right">1,900,000</td>                                     
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">100.0</span>
+                                                        </td>
+                                                        
+                                                    </tr> 
+                                                    <tr>
+                                                        <td><span class="">변경완료</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">8,890,000</td>
+                                                        <td class="right">7,050,000</td>                                        
+                                                        <td>12.0</td> 
+                                                        <td class="right">1,400,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">26.0</span>
+                                                        </td>                                                        
+                                                    </tr>                               
+                                                    <tr>
+                                                        <td><span class="">비계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">3,352,000,000</td>
+                                                        <td class="right">1,988,000,000</td>                                        
+                                                        <td>67.5</td> 
+                                                        <td class="right">8,000,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">68.6</span>
+                                                        </td>                                                    
+                                                    </tr>  
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>        
+        
+                                <div class="accBox">
+                                    <div class="accHead">
+                                        <div class="prefix">
+                                            <div class="projTit part04">SAP DS</div>
+                                            <span class="count offer">1</span>
+                                        </div>  
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>
+                                                    <span class="label">총매출</span>
+                                                    <span>1,788,000,000 원</span>
+                                                </li>
+                                                <li>
+                                                    <span class="label">총매입</span>                                                   
+                                                    <span>1,808,000,000 원</span>
+                                                </li>
+                                                <li class="marked">
+                                                    <span class="label">이익금</span>
+                                                    <strong>- 8,000,000 원</strong>                                                  
+                                                    <span>(-1.4%)</span>                                                    
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </div>     
+                                    </div>
+        
+                                    <div class="accInner">                                    
+                                        <div class="tableBox">    
+                                            <table class="chkType">
+                                                <colgroup>
+                                                    <col width="13%">
+                                                    <col>
+                                                    <col width="16%;">
+                                                    <col width="18%;">
+                                                    <col width="16%">
+                                                    <col width="12%">
+                                                    <col width="14%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>상태</th>
+                                                        <th>건수</th>
+                                                        <th>매출 (계약)</th>
+                                                        <th>매입 (실투입)</th>
+                                                        <th>총 M/M</th>
+                                                        <th>이익금</th> 
+                                                        <th>이익률 (%)</th>                    
+                                                    </tr>
+                                                </thead>
+                                                <tbody>                                
+                                                    <tr>
+                                                        <td><span class="sReject">미계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">69,500,000</td>
+                                                        <td class="right">68,800,000</td>                                        
+                                                        <td>14.3</td> 
+                                                        <td class="right">8,000,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">1.1</span>
+                                                        </td>                                                                                            
+                                                    </tr>  
+                                                    <tr>
+                                                        <td><span class="">계약완료</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">88,000,000</td>
+                                                        <td class="right">72,000,000</td>                                        
+                                                        <td>38.0</td>  
+                                                        <td class="right">8,000,000</td>                                      
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">22.2</span>
+                                                        </td>
+                                                        
+                                                    </tr>                                
+                                                    <tr>
+                                                        <td><span class="sReject">변경미계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">2,000,000</td>
+                                                        <td class="right">1,000,000</td>                                        
+                                                        <td>10.0</td>   
+                                                        <td class="right">1,900,000</td>                                     
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">100.0</span>
+                                                        </td>
+                                                        
+                                                    </tr> 
+                                                    <tr>
+                                                        <td><span class="">변경완료</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">8,890,000</td>
+                                                        <td class="right">7,050,000</td>                                        
+                                                        <td>12.0</td> 
+                                                        <td class="right">1,400,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">26.0</span>
+                                                        </td>                                                        
+                                                    </tr>                               
+                                                    <tr>
+                                                        <td><span class="">비계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">3,352,000,000</td>
+                                                        <td class="right">1,988,000,000</td>                                        
+                                                        <td>67.5</td> 
+                                                        <td class="right">8,000,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">68.6</span>
+                                                        </td>                                                    
+                                                    </tr>  
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="accBox">
+                                    <div class="accHead">
+                                        <div class="prefix">
+                                            <div class="projTit part05">IT 전략</div>
+                                            <span class="count offer">2</span>
+                                        </div>  
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>
+                                                    <span class="label">총매출</span>
+                                                    <span>1,788,000,000 원</span>
+                                                </li>
+                                                <li>
+                                                    <span class="label">총매입</span>                                                   
+                                                    <span>1,808,000,000 원</span>
+                                                </li>
+                                                <li class="mainC">
+                                                    <span class="label">이익금</span>
+                                                    <strong>- 8,000,000 원</strong>                                                  
+                                                    <span>(-1.4%)</span>                                                    
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </div>     
+                                    </div>
+        
+                                    <div class="accInner">                                    
+                                        <div class="tableBox">    
+                                            <table class="chkType">
+                                                <colgroup>
+                                                    <col width="13%">
+                                                    <col>
+                                                    <col width="16%;">
+                                                    <col width="18%;">
+                                                    <col width="16%">
+                                                    <col width="12%">
+                                                    <col width="14%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>상태</th>
+                                                        <th>건수</th>
+                                                        <th>매출 (계약)</th>
+                                                        <th>매입 (실투입)</th>
+                                                        <th>총 M/M</th>
+                                                        <th>이익금</th> 
+                                                        <th>이익률 (%)</th>                    
+                                                    </tr>
+                                                </thead>
+                                                <tbody>                                
+                                                    <tr>
+                                                        <td><span class="sReject">미계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">69,500,000</td>
+                                                        <td class="right">68,800,000</td>                                        
+                                                        <td>14.3</td> 
+                                                        <td class="right">8,000,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">1.1</span>
+                                                        </td>                                                                                            
+                                                    </tr>  
+                                                    <tr>
+                                                        <td><span class="">계약완료</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">88,000,000</td>
+                                                        <td class="right">72,000,000</td>                                        
+                                                        <td>38.0</td>  
+                                                        <td class="right">8,000,000</td>                                      
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">22.2</span>
+                                                        </td>
+                                                        
+                                                    </tr>                                
+                                                    <tr>
+                                                        <td><span class="sReject">변경미계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">2,000,000</td>
+                                                        <td class="right">1,000,000</td>                                        
+                                                        <td>10.0</td>   
+                                                        <td class="right">1,900,000</td>                                     
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">100.0</span>
+                                                        </td>
+                                                        
+                                                    </tr> 
+                                                    <tr>
+                                                        <td><span class="">변경완료</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">8,890,000</td>
+                                                        <td class="right">7,050,000</td>                                        
+                                                        <td>12.0</td> 
+                                                        <td class="right">1,400,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">26.0</span>
+                                                        </td>                                                        
+                                                    </tr>                               
+                                                    <tr>
+                                                        <td><span class="">비계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">3,352,000,000</td>
+                                                        <td class="right">1,988,000,000</td>                                        
+                                                        <td>67.5</td> 
+                                                        <td class="right">8,000,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">68.6</span>
+                                                        </td>                                                    
+                                                    </tr>  
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="accBox">
+                                    <div class="accHead">
+                                        <div class="prefix">
+                                            <div class="projTit part06">TCS</div>
+                                            <span class="count offer">3</span>
+                                        </div>  
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>
+                                                    <span class="label">총매출</span>
+                                                    <span>1,788,000,000 원</span>
+                                                </li>
+                                                <li>
+                                                    <span class="label">총매입</span>                                                   
+                                                    <span>1,808,000,000 원</span>
+                                                </li>
+                                                <li class="marked">
+                                                    <span class="label">이익금</span>
+                                                    <strong>- 8,000,000 원</strong>                                                  
+                                                    <span>(-1.4%)</span>                                                    
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </div>     
+                                    </div>
+        
+                                    <div class="accInner">                                    
+                                        <div class="tableBox">    
+                                            <table class="chkType">
+                                                <colgroup>
+                                                    <col width="13%">
+                                                    <col>
+                                                    <col width="16%;">
+                                                    <col width="18%;">
+                                                    <col width="16%">
+                                                    <col width="12%">
+                                                    <col width="14%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>상태</th>
+                                                        <th>건수</th>
+                                                        <th>매출 (계약)</th>
+                                                        <th>매입 (실투입)</th>
+                                                        <th>총 M/M</th>
+                                                        <th>이익금</th> 
+                                                        <th>이익률 (%)</th>                    
+                                                    </tr>
+                                                </thead>
+                                                <tbody>                                
+                                                    <tr>
+                                                        <td><span class="sReject">미계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">69,500,000</td>
+                                                        <td class="right">68,800,000</td>                                        
+                                                        <td>14.3</td> 
+                                                        <td class="right">8,000,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">1.1</span>
+                                                        </td>                                                                                            
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="accBox">
+                                    <div class="accHead">
+                                        <div class="prefix">
+                                            <div class="projTit part07">R&D센터</div>
+                                            <span class="count offer">2</span>
+                                        </div>  
+                                        <div class="suffix">
+                                            <ul>
+                                                <li>
+                                                    <span class="label">총매출</span>
+                                                    <span>1,788,000,000 원</span>
+                                                </li>
+                                                <li>
+                                                    <span class="label">총매입</span>                                                   
+                                                    <span>1,808,000,000 원</span>
+                                                </li>
+                                                <li class="mainC">
+                                                    <span class="label">이익금</span>
+                                                    <strong>- 8,000,000 원</strong>                                                  
+                                                    <span>(-1.4%)</span>                                                    
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                        </div>     
+                                    </div>
+        
+                                    <div class="accInner">                                    
+                                        <div class="tableBox">    
+                                            <table class="chkType">
+                                                <colgroup>
+                                                    <col width="13%">
+                                                    <col>
+                                                    <col width="16%;">
+                                                    <col width="18%;">
+                                                    <col width="16%">
+                                                    <col width="12%">
+                                                    <col width="14%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>상태</th>
+                                                        <th>건수</th>
+                                                        <th>매출 (계약)</th>
+                                                        <th>매입 (실투입)</th>
+                                                        <th>총 M/M</th>
+                                                        <th>이익금</th> 
+                                                        <th>이익률 (%)</th>                    
+                                                    </tr>
+                                                </thead>
+                                                <tbody>                                
+                                                    <tr>
+                                                        <td><span class="sReject">미계약</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">69,500,000</td>
+                                                        <td class="right">68,800,000</td>                                        
+                                                        <td>14.3</td> 
+                                                        <td class="right">8,000,000</td>                                       
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">1.1</span>
+                                                        </td>                                                                                            
+                                                    </tr>  
+                                                    <tr>
+                                                        <td><span class="">계약완료</span></td>
+                                                        <td>3</td>
+                                                        <td class="right">88,000,000</td>
+                                                        <td class="right">72,000,000</td>                                        
+                                                        <td>38.0</td>  
+                                                        <td class="right">8,000,000</td>                                      
+                                                        <td class="left">
+                                                            <span class="dot sSafe"></span>
+                                                            <span class="dark">22.2</span>
+                                                        </td>                                                        
+                                                    </tr>   
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -899,11 +899,6 @@
         
     </section>
     
-    <div class="box">
-        <div class="top"></div>
-        <div class="bottom"></div>
-    </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>
@@ -926,7 +921,7 @@
 
         const barChart = document.getElementById('barChart');
       
-        //반도넛
+        //반도넛 - 240101 수정
         new Chart(halfChart, {
           type: 'doughnut',
           data: {            
@@ -962,7 +957,7 @@
 
 
 
-        //막대
+        //막대 - 240101 수정
         new Chart(barChart, {
           type: 'bar',
           data: {        
