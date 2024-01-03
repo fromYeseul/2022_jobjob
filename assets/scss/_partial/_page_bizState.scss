@@ -1,29 +1,73 @@
 .bizState{
     width: 100%;
     .tableTop{
-        margin-top: rem(30);
+        margin-top: rem(10);  // 30 -> 10
     }
+<<<<<<< HEAD
+    .sideScroll{
+        height: calc(100vh - 350px);   // 372 ->350
+=======
     .tableBox{
         max-height: calc(100vh - 371px);
+>>>>>>> origin/master
         overflow-y: auto;
-        table{
+        table  {
             font-size: 13px; //1130추가
+            input, textarea{            
+                font-size: 13px; 
+                &::placeholder{
+                font-size: 13px; 
+                }
+            }
         }
     }
     table{
         // &.hasInput{
             tr{
                 td{
-                    height: rem(44);
+                    height: rem(41);   // 44->41
                     font-size: rem(13);
                 }
             }
         // }
+        &.hasInput{
+            tr{
+                // &:hover{
+                //     background: transparent;
+                // }
+                td{
+                    padding: rem(4.9);
+                    height: rem(46);
+                } 
+            }
+            tfoot{
+                td{
+                    padding: 0 6px;
+                    background: $tfootGray;
+                }
+            }
+        }
     }
     tfoot{
         td{
             padding: 0 6px;
             background: $tfootGray;
+        }
+    }
+    input {
+        &.editType{
+            width: 100%;
+            height: rem(30);   // 36 -> 30
+            padding: 0.4rem; //0.625rem 0.625rem -> 0.4rem
+            padding-right: 1.875rem;
+            //border: 0 !important; 추가
+            font-size: 13px; //추가
+            background: url(../img/icoCal.png) right 5px top 50% no-repeat; // right 10px -> 5px
+            background-color: #fff;
+            &:focus{
+                color: $black;
+                border: 1px solid #ccc;
+            }
         }
     }
     // .relative{

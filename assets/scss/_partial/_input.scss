@@ -391,7 +391,7 @@ input[type=date]{
         color: $tableGray;
         &:focus{
             color: $black;
-            background: $white;
+            //background: $white;
         }
         &::placeholder{
             color: $cancel;
@@ -400,7 +400,7 @@ input[type=date]{
             border:1px solid $inputGray;  
             &:read-only{
                 color: $subGray;
-                background: $white;
+                background: $inputDisable; //  $white -> $inputDisable
                 &:focus{        
                     border: 1px solid $inputGray;
                     outline: 0;
