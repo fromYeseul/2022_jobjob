@@ -16,6 +16,24 @@
         align-items: center;
         gap: 10px;
     }
+
+    select{
+        min-width: rem(80);
+        width: rem(70);
+        height: rem(36);
+    }
+    button{
+        min-width: rem(90);
+        width: auto;
+        line-height: rem(34);
+        padding: 0 rem(15);
+    }
+    input[type=checkbox], 
+    input[type=radio]{
+        & + label{
+            font-size: rem(14);
+        }
+    }
 }
 .tableBox{
     overflow-y: auto;
@@ -36,6 +54,17 @@
         &::-webkit-scrollbar-track {
             background-color: $white;
         }
+    }
+    &.sticky{   
+          thead th,
+          tfoot td {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+          }      
+          tfoot td {
+            bottom: 0;
+          }
     }
 }
 .tableSort{
@@ -497,6 +526,14 @@ table{
     //         }
     //     }
     // }
+    &.lowType{
+        tr{
+            td{
+                height: rem(41);   // 44->41
+                font-size: rem(13);
+            }
+        }
+    }
 
 
 

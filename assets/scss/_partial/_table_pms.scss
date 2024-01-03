@@ -31,12 +31,20 @@ table{
             } 
         }
     }
-    a{
-        color: $a_pms;
-    }
     tfoot{
         td{
-            background: $tfoot_pms;
+            padding: 0 6px;
+            // background: $tfoot_pms;
+            background: $tfootGray; //J
         }
+    }
+    input, textarea{            
+        font-size: rem(13); 
+        &::placeholder{
+            font-size: rem(13); 
+        }
+    }
+    a{
+        color: $a_pms;
     }
 }
