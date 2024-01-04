@@ -342,8 +342,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -497,6 +497,10 @@
   padding: 0 1.875rem;
 }
 
+.pl10 {
+  padding-left: 0.625rem !important;
+}
+
 .cke_screen_reader_only {
   height: 0 !important;
 }
@@ -627,32 +631,20 @@ header .suffix li a {
 .gnb .ico.project {
   background-position: -60px -60px;
 }
-.gnb .ico.homepage {
-  background-position: -60px 0;
+.gnb .ico.bizstate {
+  background-position: -60px -150px;
 }
-.gnb .ico.event {
-  background-position: -60px 0;
+.gnb .ico.tcount {
+  background-position: -60px -120px;
 }
-.gnb .ico.ask {
-  background-position: -60px 0;
+.gnb .ico.ledger {
+  background-position: -60px -210px;
 }
-.gnb .ico.stats {
-  background-position: -60px 0;
+.gnb .ico.calculation {
+  background-position: -60px -180px;
 }
 .gnb .ico.admin {
   background-position: -60px -90px;
-}
-.gnb .ico.system {
-  background-position: -60px -120px;
-}
-.gnb .ico.commonCode {
-  background-position: -60px 0;
-}
-.gnb .ico.recruit {
-  background-position: -60px -150px;
-}
-.gnb .ico.bizAdmin {
-  background-position: -60px -150px;
 }
 
 .ico.ctrlBtn {
@@ -671,32 +663,20 @@ header .suffix li a {
 .navWrapper li.is-active .ico.project {
   background-position: -90px -60px;
 }
-.navWrapper li.is-active .ico.homepage {
-  background-position: -90px 0;
+.navWrapper li.is-active .ico.bizstate {
+  background-position: -90px -150px;
 }
-.navWrapper li.is-active .ico.event {
-  background-position: -90px 0;
+.navWrapper li.is-active .ico.tcount {
+  background-position: -90px -120px;
 }
-.navWrapper li.is-active .ico.ask {
-  background-position: -90px 0;
+.navWrapper li.is-active .ico.ledger {
+  background-position: -90px -210px;
 }
-.navWrapper li.is-active .ico.stats {
-  background-position: -90px 0;
+.navWrapper li.is-active .ico.calculation {
+  background-position: -90px -180px;
 }
 .navWrapper li.is-active .ico.admin {
   background-position: -90px -90px;
-}
-.navWrapper li.is-active .ico.system {
-  background-position: -90px -120px;
-}
-.navWrapper li.is-active .ico.commonCode {
-  background-position: -90px 0;
-}
-.navWrapper li.is-active .ico.recruit {
-  background-position: -90px -150px;
-}
-.navWrapper li.is-active .ico.bizAdmin {
-  background-position: -90px -150px;
 }
 
 button,
@@ -755,6 +735,21 @@ h1 {
   color: #5aa2ef;
 }
 
+input[type=text].dateType.editType {
+  width: 100%;
+  height: 1.875rem;
+  padding: 0.4rem;
+  padding-right: 1.25rem;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  background: url(../img/icoCal.png) right 2px top 55% no-repeat;
+  background-color: #fff;
+}
+input[type=text].dateType.editType:focus {
+  color: #000000;
+  background: url(../img/icoCal.png) right 2px top 55% no-repeat;
+}
+
 table tbody tr:hover {
   background: #f3f4f7;
 }
@@ -780,11 +775,18 @@ table tr.is-filter {
 table tr.is-filter:hover {
   background: #f8f2f2;
 }
+table tfoot td {
+  padding: 0 6px;
+  background: #e6e6e6;
+}
+table input, table textarea {
+  font-size: 0.8125rem;
+}
+table input::placeholder, table textarea::placeholder {
+  font-size: 0.8125rem;
+}
 table a {
   color: #2a73cb;
-}
-table tfoot td {
-  background: #eee;
 }
 
 .accWrap.flatType .accBox.is-active .accHead {
@@ -831,7 +833,12 @@ table tfoot td {
   gap: 20px;
 }
 .dashboard .contentFlex .boxWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 1.875rem 1.25rem;
+  height: calc(100vh - 175px);
+  overflow: hidden;
 }
 .dashboard .contentFlex .boxWrap.prefix {
   padding: 1.875rem 1.25rem;
@@ -852,7 +859,7 @@ table tfoot td {
 .dashboard .contentFlex .boxWrap .mid,
 .dashboard .contentFlex .boxWrap .bottom {
   margin-top: 1.875rem;
-  margin-right: 3.125rem;
+  margin-right: 2.5rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -861,11 +868,9 @@ table tfoot td {
 .dashboard .contentFlex .boxWrap .bottom .dashTit {
   width: 6.25rem;
 }
-.dashboard .contentFlex .boxWrap .mid {
-  margin-right: 1.75rem;
-}
 .dashboard .contentFlex .boxWrap .bottom {
   margin-top: 2.5rem;
+  margin-right: 3.75rem;
 }
 .dashboard .contentFlex .boxWrap .bottom .labels ul {
   gap: 20px;
@@ -891,26 +896,41 @@ table tfoot td {
 .dashboard .contentFlex .boxWrap .labels li.thisY span {
   background: #5067a4;
 }
-.dashboard .contentFlex .boxWrap .labels li.sapBiz span {
-  background: #304e94;
+.dashboard .contentFlex .boxWrap .labels li.part01 span {
+  background: #453189;
 }
-.dashboard .contentFlex .boxWrap .labels li.sapStr span {
+.dashboard .contentFlex .boxWrap .labels li.part02 span {
+  background: #234595;
+}
+.dashboard .contentFlex .boxWrap .labels li.part03 span {
   background: #0d60c8;
 }
-.dashboard .contentFlex .boxWrap .labels li.sapUni span {
+.dashboard .contentFlex .boxWrap .labels li.part04 span {
   background: #17a6f2;
 }
-.dashboard .contentFlex .boxWrap .labels li.exBiz span {
+.dashboard .contentFlex .boxWrap .labels li.part05 span {
   background: #24c9cb;
 }
-.dashboard .contentFlex .boxWrap .labels li.fuFus span {
-  background: #13be6f;
+.dashboard .contentFlex .boxWrap .labels li.part06 span {
+  background: #4ed87a;
 }
-.dashboard .contentFlex .boxWrap .labels li.platf span {
+.dashboard .contentFlex .boxWrap .labels li.part07 span {
+  background: #1ba274;
+}
+.dashboard .contentFlex .boxWrap .labels li.part08 span {
   background: #8c98a6;
 }
-.dashboard .contentFlex .boxWrap .labels li.cloud span {
+.dashboard .contentFlex .boxWrap .labels li.part09 span {
   background: #575d64;
+}
+.dashboard .contentFlex .boxWrap .labels li.part10 span {
+  background: #d0ed77;
+}
+.dashboard .contentFlex .boxWrap .labels li.part11 span {
+  background: #8a66c6;
+}
+.dashboard .contentFlex .boxWrap .labels li.part12 span {
+  background: #d9ce52;
 }
 .dashboard .contentFlex .dashTit {
   display: flex;
@@ -956,7 +976,8 @@ table tfoot td {
 }
 .dashboard .accWrap {
   margin-top: 1.875rem;
-  height: calc(75vh - 340px);
+  padding-bottom: 1px;
+  height: calc(100vh - 570px);
   overflow-y: auto;
 }
 .dashboard .accWrap::-webkit-scrollbar {
@@ -973,29 +994,44 @@ table tfoot td {
   content: "";
   width: 0.6875rem;
   height: 0.6875rem;
-  background: #304e94;
+  background: #453189;
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
 }
-.dashboard .accHead .projTit.sapStr::before {
+.dashboard .accHead .projTit.part02::before {
+  background: #234595;
+}
+.dashboard .accHead .projTit.part03::before {
   background: #0d60c8;
 }
-.dashboard .accHead .projTit.sapUni::before {
+.dashboard .accHead .projTit.part04::before {
   background: #17a6f2;
 }
-.dashboard .accHead .projTit.exBiz::before {
+.dashboard .accHead .projTit.part05::before {
   background: #24c9cb;
 }
-.dashboard .accHead .projTit.fuFus::before {
-  background: #13be6f;
+.dashboard .accHead .projTit.part06::before {
+  background: #4ed87a;
 }
-.dashboard .accHead .projTit.platf::before {
+.dashboard .accHead .projTit.part07::before {
+  background: #1ba274;
+}
+.dashboard .accHead .projTit.part08::before {
   background: #8c98a6;
 }
-.dashboard .accHead .projTit.cloud::before {
+.dashboard .accHead .projTit.part09::before {
   background: #575d64;
+}
+.dashboard .accHead .projTit.part10::before {
+  background: #d0ed77;
+}
+.dashboard .accHead .projTit.part11::before {
+  background: #8a66c6;
+}
+.dashboard .accHead .projTit.part12::before {
+  background: #d9ce52;
 }
 .dashboard .accHead .suffix ul {
   display: flex;
@@ -1009,38 +1045,6 @@ table tfoot td {
 .dashboard .accInner {
   padding: 0 1.875rem;
   padding-bottom: 1.25rem;
-}
-
-.circleGraph ul {
-  display: flex;
-  max-width: 40vw;
-}
-.circleGraph ul li {
-  width: 20%;
-  position: relative;
-}
-.circleGraph ul li .numVal {
-  font-size: 1rem;
-  font-weight: 500;
-  position: absolute;
-  left: 50%;
-  top: 58%;
-  transform: translateX(-50%);
-}
-.circleGraph ul li .numVal.pro {
-  color: #932ab6;
-}
-.circleGraph ul li .numVal.income {
-  color: #00a65a;
-}
-.circleGraph ul li .numVal.input {
-  color: #f56954;
-}
-.circleGraph ul li .numVal.cont {
-  color: #3c8dbc;
-}
-.circleGraph ul li .numVal.fin {
-  color: #39cccc;
 }
 
 .clientBuy .tableTop {
@@ -1153,15 +1157,6 @@ table tfoot td {
 .bizState .tableBox table {
   font-size: 13px;
 }
-.bizState table tr td {
-  height: 2.75rem;
-  font-size: 0.8125rem;
-}
-.bizState tfoot td {
-  padding: 0 6px;
-  background: #e6e6e6;
-}
-
 .bizStateRegister {
   width: 100%;
 }
@@ -1275,29 +1270,12 @@ table tfoot td {
   line-height: 2.125rem;
 }
 .bizStateRegister .tabBtnWrap .tabBtn a {
-  width: 3.875rem;
-  padding: 0 3px;
+  width: 5rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 .bizStateRegister .tabBtnWrap .tabBtn:first-child a {
-  width: 3.75rem;
   border-top-left-radius: 0.25rem;
-}
-.bizStateRegister .tabBtnWrap .tabBtn:last-child a {
-  width: auto;
-  padding: 0 0.375rem;
-}
-.bizStateRegister .tabBtnWrap .tabBtn input {
-  width: 2.5rem;
-  height: 1.625rem;
-  padding: 0 2px;
-}
-.bizStateRegister .tabBtnWrap .tabBtn .editInput {
-  width: 4rem;
-  padding: 0 3px;
-  background-color: #2a55aa;
-  border: 1px solid #2a55aa;
 }
 .bizStateRegister .moveBtn button:disabled .goLt {
   background-position: -40px -180px;
@@ -1405,6 +1383,27 @@ table tfoot td {
 #bsDetail1 tfoot .ellipsis {
   font-size: 0.75rem;
 }
+#bsDetail1 .prefix .tabBtn a {
+  width: 3.875rem;
+  padding: 0 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#bsDetail1 .prefix .tabBtn:last-child a {
+  width: auto;
+  padding: 0 0.375rem;
+}
+#bsDetail1 .prefix .tabBtn input {
+  width: 2.5rem;
+  height: 1.625rem;
+  padding: 0 2px;
+}
+#bsDetail1 .prefix .tabBtn .editInput {
+  width: 4rem;
+  padding: 0 3px;
+  background-color: #2a55aa;
+  border: 1px solid #2a55aa;
+}
 
 .flexLeft {
   padding-bottom: 0.625rem;
@@ -1467,9 +1466,8 @@ table tfoot td {
 .insertType .tableTop {
   margin-top: 1.875rem;
 }
-.insertType .absolBody {
-  height: auto;
-  max-height: calc(100vh - 419px);
+.insertType .tableBox {
+  max-height: calc(100vh - 350px);
 }
 .insertType table td {
   padding-right: 0.625rem;
@@ -1510,6 +1508,9 @@ table tfoot td {
   padding: 0.5rem 0.25rem;
   font-weight: bold;
 }
+.projTotal .yScroll {
+  max-height: calc(100vh - 333px);
+}
 .projTotal .accWrap {
   padding: 0.3125rem 1.5625rem;
   border: 1px solid #cccccc;
@@ -1548,17 +1549,6 @@ table tfoot td {
   padding: 1.375rem 2.375rem;
 }
 
-.salesLedger .tableTop {
-  margin-top: 1.875rem;
-}
-.salesLedger .sideScroll {
-  height: calc(100vh - 371px);
-  overflow-y: auto;
-}
-.salesLedger .sideScroll table {
-  font-size: 13px;
-}
-
 .sourcingTotal .tableTop {
   margin-top: 1.875rem;
 }
@@ -1584,6 +1574,75 @@ table tfoot td {
 }
 .sourcingTotal tfoot td.center {
   padding-right: 0.25rem;
+}
+
+.empTotal .tableTop {
+  margin-top: 1.875rem;
+}
+.empTotal .tableBox {
+  max-height: calc(100vh - 350px);
+}
+.empTotal table td {
+  padding-right: 0.625rem;
+  text-align: right;
+  font-size: 0.8125rem;
+}
+.empTotal table td.center {
+  padding-right: 0.25rem;
+}
+.empTotal table .ellipsis {
+  text-align: center;
+}
+.empTotal tfoot td {
+  padding: 0.5rem 0.625rem;
+  font-weight: bold;
+  background: #e6e6e6;
+}
+.empTotal tfoot td.center {
+  padding-right: 0.25rem;
+}
+
+.bizIncome .tableTop {
+  margin-top: 1.875rem;
+}
+.bizIncome .tableBox {
+  max-height: calc(100vh - 371px);
+}
+.bizIncome .tableBox .flex {
+  gap: 4px;
+}
+.bizIncome .tableBox .flex span {
+  margin-right: 20px;
+}
+.bizIncome .tableBox .flex span + button {
+  margin-left: -20px;
+}
+
+.purchaseLedger {
+  width: 100%;
+}
+.purchaseLedger .tableTop {
+  margin-top: 1.875rem;
+}
+.purchaseLedger .tableBox {
+  max-height: calc(100vh - 371px);
+}
+.purchaseLedger .tableBox .flex {
+  gap: 4px;
+}
+.purchaseLedger .tableBox .flex span {
+  margin-left: 23px;
+}
+.purchaseLedger .tableBox .flex span.comp {
+  margin-left: 0;
+}
+.purchaseLedger .tableBox .flex span.comp + span {
+  margin-left: 0;
+}
+.purchaseLedger .modalLayer.absol {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
 }
 
 /*# sourceMappingURL=style_pms.css.map */

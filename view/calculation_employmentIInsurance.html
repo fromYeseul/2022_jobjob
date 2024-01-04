@@ -93,62 +93,65 @@
                     <div class="condition">
                         <ul>
                             <li>
-                                <p class="condiTit">사업부</p>
-                                <div class="select">
-                                    <span class="selDefault is-active">전체</span>
-                                    <ul class="optionList">
-                                        <li class="optionItem">
-                                            <input type="checkbox" id="optChk_1" class="hasTxt">
-                                            <label for="optChk_1">SAP 사업</label>
-                                        </li>                                        
-                                        <li class="optionItem">
-                                            <input type="checkbox" id="optChk_2" class="hasTxt">
-                                            <label for="optChk_2">SAP 전략</label>
-                                        </li>
-                                        <li class="optionItem">
-                                            <input type="checkbox" id="optChk_3" class="hasTxt">
-                                            <label for="optChk_3">SAP 융합</label>
-                                        </li>
-                                        <li class="optionItem">
-                                            <input type="checkbox" id="optChk_4" class="hasTxt">
-                                            <label for="optChk_4">대외사업</label>
-                                        </li>
-                                        <li class="optionItem">
-                                            <input type="checkbox" id="optChk_5" class="hasTxt">
-                                            <label for="optChk_5">미래융합사업</label>
-                                        </li>
-                                        <li class="optionItem">
-                                            <input type="checkbox" id="optChk_5" class="hasTxt">
-                                            <label for="optChk_5">플랫폼</label>
-                                        </li>
-                                        <li class="optionItem">
-                                            <input type="checkbox" id="optChk_5" class="hasTxt">
-                                            <label for="optChk_5">클라우드</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>  
-                            <li>
-                                <p class="condiTit">조회년도</p>
+                                <p class="condiTit">귀속년도</p>
                                 <select>
-                                    <option value="">2023년</option>
-                                    <option value="001">1</option>
-                                    <option value="002">2</option>
-                                    <option value="003">3</option>
-                                    <option value="004">4</option>
-                                    <option value="005">5</option>
+                                    <option value="">2024년</option>
+                                    <option value="001">2023년</option>
+                                    <option value="002">2022년</option>
+                                    <option value="003">2021년</option>
                                 </select>
                             </li>
                             <li>
                                 <p class="condiTit">조회월</p>
                                 <select>
-                                    <option value="">당월</option>
-                                    <option value="001">1</option>
-                                    <option value="002">2</option>
-                                    <option value="003">3</option>
-                                    <option value="004">4</option>
-                                    <option value="005">5</option>
+                                    <option value="">1월</option>
+                                    <option value="001">2월</option>
+                                    <option value="002">3월</option>
+                                    <option value="003">4월</option>
+                                    <option value="004">5월</option>
+                                    <option value="005">6월</option>
                                 </select>
+                            </li>
+                            <li>
+                                <p class="condiTit">사업부</p>
+                                
+                                <div class="select laSize">
+                                    <span class="selDefault is-active">전체</span>
+                                    <ul class="optionList">
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_1" class="hasTxt">
+                                            <label for="optChk_1">AI 전략</label>
+                                        </li>                                        
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_2" class="hasTxt">
+                                            <label for="optChk_2">SAP</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_3" class="hasTxt">
+                                            <label for="optChk_3">SAP DS</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_4" class="hasTxt">
+                                            <label for="optChk_4">IT 전략</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_5" class="hasTxt">
+                                            <label for="optChk_5">TCS</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_6" class="hasTxt">
+                                            <label for="optChk_6">R&D 센터</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_7" class="hasTxt">
+                                            <label for="optChk_7">영업전략</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_8" class="hasTxt">
+                                            <label for="optChk_8">CSO</label>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>                                                  
                             
                             <li>
@@ -1423,114 +1426,156 @@
                 <div class="tableBox">
                     <table>
                         <colgroup>
-                            <col width="7%">
-                            <col width="14%">
+                            <col width="40px">
+                            <col width="6%">
+                            <col width="13%">
                             <col width="15%">
                             <col width="15%">
                             <col width="10%">
-                            <col width="6%">
+                            <col width="7%">
                             <col width="">
                         </colgroup>
                         <thead>
                             <tr>
-                                <th width="52px;">No.</th>
-                                <th width="103px;">이름</th>
+                                <th width="40px"><input type="checkbox" id="tt3"><label for="tt3"></label></th>
+                                <th width="45px;">No.</th>
+                                <th width="96px;">이름</th>
                                 <th width="110px;">주민등록번호</th>
                                 <th width="110px;">근로자원부번호</th>
                                 <th width="74px;">보험료</th>
-                                <th width="50px;">결과</th>
-                                <th width="240px;">사유</th>
+                                <th width="55px;">업로드</th>
+                                <th width="212px;">사유</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <td>
+                                    <input type="checkbox" id="t3">
+                                    <label for="t3"></label>
+                                </td>
                                 <td>15</td>
-                                <td><a href="#">서수박</a></td>
+                                <td>서수박</a></td>
                                 <td>850505-1******</td>
                                 <td>10253898057</td>
                                 <td class="right">60,690</td>
-                                <td><span class="tBuy">실패</span></td>
+                                <td><span class="tBuy">불가</span></td>
                                 <td>주민등록번호와 일치하는 회원 없음</td>
                             </tr>
                             <tr>
+                                <td>
+                                    <input type="checkbox" id="t3">
+                                    <label for="t3"></label>
+                                </td>
                                 <td>14</td>
-                                <td><a href="#">김메론</a></td>
+                                <td>김메론</a></td>
                                 <td>850505-1******</td>
                                 <td>10253898057</td>
                                 <td class="right">60,690</td>
-                                <td><span class="tBuy">실패</span></td>
+                                <td><span class="tBuy">불가</span></td>
                                 <td>근로자원부번호와 일치하는 회원 없음</td>
                             </tr>
                             <tr>
+                                <td>
+                                    <input type="checkbox" id="t3">
+                                    <label for="t3"></label>
+                                </td>
                                 <td>13</td>
-                                <td><a href="#">윤망고</a></td>
+                                <td>윤망고</a></td>
                                 <td>850505-1******</td>
                                 <td>10253898057</td>
                                 <td class="right">60,690</td>
-                                <td>성공</td>
+                                <td>가능</td>
                                 <td></td>
                             </tr>
                             <tr>
+                                <td>
+                                    <input type="checkbox" id="t3">
+                                    <label for="t3"></label>
+                                </td>
                                 <td>12</td>
-                                <td><a href="#">천배</a></td>
+                                <td>천배</a></td>
                                 <td>850505-1******</td>
                                 <td>10253898057</td>
                                 <td class="right">60,690</td>
-                                <td>성공</td>
+                                <td>가능</td>
                                 <td></td>
                             </tr>
                             <tr>
+                                <td>
+                                    <input type="checkbox" id="t3">
+                                    <label for="t3"></label>
+                                </td>
                                 <td>11</td>
-                                <td><a href="#">강키위</a></td>
+                                <td>강키위</a></td>
                                 <td>850505-1******</td>
                                 <td>10253898057</td>
                                 <td class="right">60,690</td>
-                                <td><span class="tBuy">실패</span></td>
+                                <td><span class="tBuy">불가</span></td>
                                 <td>파일에 주민등록번호 없음</td>
                             </tr>
                             <tr>
+                                <td>
+                                    <input type="checkbox" id="t3">
+                                    <label for="t3"></label>
+                                </td>
                                 <td>10</td>
-                                <td><a href="#">진감자</a></td>
+                                <td>진감자</a></td>
                                 <td>850505-1******</td>
                                 <td>10253898057</td>
                                 <td class="right">60,690</td>
-                                <td><span class="tBuy">실패</span></td>
+                                <td><span class="tBuy">불가</span></td>
                                 <td>파일에 근로자원부번호 없음</td>
                             </tr>
                             <tr>
+                                <td>
+                                    <input type="checkbox" id="t3">
+                                    <label for="t3"></label>
+                                </td>
                                 <td>9</td>
-                                <td><a href="#">이사과</a></td>
+                                <td>이사과</a></td>
                                 <td>850505-1******</td>
                                 <td>10253898057</td>
                                 <td class="right">60,690</td>
-                                <td>성공</td>
+                                <td>가능</td>
                                 <td></td>
                             </tr>
                             <tr>
+                                <td>
+                                    <input type="checkbox" id="t3">
+                                    <label for="t3"></label>
+                                </td>
                                 <td>8</td>
-                                <td><a href="#">왕참외</a></td>
+                                <td>왕참외</a></td>
                                 <td>850505-1******</td>
                                 <td>10253898057</td>
                                 <td class="right">60,690</td>
-                                <td>성공</td>
+                                <td>가능</td>
                                 <td></td>
                             </tr>
                             <tr>
+                                <td>
+                                    <input type="checkbox" id="t3">
+                                    <label for="t3"></label>
+                                </td>
                                 <td>7</td>
-                                <td><a href="#">한석류</a></td>
+                                <td>한석류</a></td>
                                 <td>850505-1******</td>
                                 <td>10253898057</td>
                                 <td class="right">60,690</td>
-                                <td><span class="tBuy">실패</span></td>
+                                <td><span class="tBuy">불가</span></td>
                                 <td>파일에 이름이 없거나  또는 불일치</td>
                             </tr>
                             <tr>
+                                <td>
+                                    <input type="checkbox" id="t3">
+                                    <label for="t3"></label>
+                                </td>
                                 <td>6</td>
-                                <td><a href="#">신귤</a></td>
+                                <td>신귤</a></td>
                                 <td>850505-1******</td>
                                 <td>10253898057</td>
                                 <td class="right">60,690</td>
-                                <td>성공</td>
+                                <td>가능</td>
                                 <td></td>
                             </tr>
 
@@ -1541,12 +1586,35 @@
             
             <div class="modalFooter">
                 <button class="white">닫기</button>
-                <button class="">저장</button>
+                <button class="">적용</button>
             </div>
         </div>        
         <div class="layerDim"></div>    
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../assets/js/script.js"></script>        
+    <script src="../assets/js/script.js"></script>  
+    <script>        
+        selectBox();
+
+        //테이블영역스크롤
+        function tableScroll(){      
+            let bizState = document.querySelector('.bizState');
+            let absolBody = document.querySelector('.bizState .absolBody');
+
+            absolBody.addEventListener('wheel', moveScroll);
+
+            function moveScroll(e){
+                console.log(absolBody.scrollTop);
+                if(e.deltaY > 0){
+                    contLayout.classList.add('is-active');
+                    absolBody.classList.add('is-active');
+                }else{
+                    contLayout.classList.remove('is-active');
+                    absolBody.classList.remove('is-active');
+                }  
+            }
+        }
+        //tableScroll();
+    </script>      
 </body>
 </html>

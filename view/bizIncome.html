@@ -172,27 +172,18 @@
                     <div class="tableBox sticky">    
                         <table class="lowType">
                             <colgroup>
-                                <col width="40px">
-                                <col width="40px">
-                                <col width="95px">
+                                <col width="40px" span="2">
+                                <col width="100px">
                                 <col width="90px">                                      
                                 <col width="50px">       
                                 <col width="360px"> 
                                 <col width="60px"> 
                                 <col width="120px">  <!--주민등록번호-->                                          
                                 <col width="160px"> 
-                                <col width="90px">  
-                                <col width="90px">  
-                                <col width="80px"> 
-
-                                        
-                                <col width="80px">  
-                                <col width="80px">  
-                                <col width="90px">  
-                                <col width="110px">  
-                                <col width="110px">  
-                                <col width="130px">  
-                                <col width="120px">
+                                <col width="90px" span="2"> 
+                                <col width="80px" span="4"> 
+                                <col width="110px" span="2">  
+                                <col width="120px" span="2">  
                                 <col width="70px">
                                 <col width="90px">                                          
                                 <col width="240px">
@@ -234,9 +225,7 @@
                                         <label for="ff1"></label>
                                     </td>
                                     <td>14</td>                                                                                         
-                                    <td>
-                                        <input class="dateType editType" type="text" value="2023.01">
-                                    </td>
+                                    <td><input class="dateType editType" type="text" value="2023.01.01"></td>
                                     <td>SAP전략</td>
                                     <td>기타</td>                                            
                                     <td class="ellipsis">
@@ -259,10 +248,13 @@
                                     <td>123-245689-111</td>
                                                                                 
                                     <td>말일</td> 
-                                    <td>2023.11.30
-                                        <button type="button" class="txtType">
-                                            <i class="ico gray_bin_sm"></i>
-                                        </button>
+                                    <td>
+                                        <div class="flex">
+                                            <span>2023.11.30</span>
+                                            <button class="txtType" type="button">
+                                                <i class="ico gray_bin_sm"></i>
+                                            </button>
+                                        </div>
                                     </td>                            
                                     <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
                                     <td><i class="ico delete_bg"></i></td>
@@ -273,7 +265,7 @@
                                         <label for="ff2"></label>
                                     </td>
                                     <td>13</td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01"></td>                                                                                     
+                                    <td><input class="dateType editType" type="text" value="2023.01.01"></td>                                                                                     
                                     <td>대외사업</td>
                                     <td>SAP</td>
                                     <td class="ellipsis">
@@ -296,7 +288,11 @@
                                     <td>123-245689-111</td>
                                                                                 
                                     <td>말일</td> 
-                                    <td>2023.11.30</td>                         
+                                    <td>
+                                        <div class="flex">
+                                            <span>2023.11.30</span>
+                                        </div>
+                                    </td>                         
                                     <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
                                     <td><i class="ico delete_bg"></i></td>
                                 </tr>
@@ -363,7 +359,14 @@
                                     <td>123-245689-111</td>
                                                                                 
                                     <td>말일</td> 
-                                    <td>2023.11.30</td>                               
+                                    <td>
+                                        <div class="flex">
+                                            <span>2023.11.30</span>
+                                            <button class="txtType" type="button">
+                                                <i class="ico gray_bin_sm"></i>
+                                            </button>
+                                        </div>
+                                    </td>                               
                                     <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
                                     <td><i class="ico delete_bg"></i></td>
                                 </tr>                             
@@ -398,10 +401,13 @@
                                     <td>123-245689-111</td>
                                                                                 
                                     <td>말일</td> 
-                                    <td>2023.11.30
-                                        <button type="button" class="txtType">
-                                            <i class="ico gray_bin_sm"></i>
-                                        </button>
+                                    <td>
+                                        <div class="flex">
+                                            <span>2023.11.30</span>
+                                            <button class="txtType" type="button">
+                                                <i class="ico gray_bin_sm"></i>
+                                            </button>
+                                        </div>
                                     </td>                            
                                     <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
                                     <td><i class="ico delete_bg"></i></td>
@@ -435,7 +441,11 @@
                                     <td>123-245689-111</td>
                                                                                 
                                     <td>말일</td> 
-                                    <td>2023.11.30</td>                         
+                                    <td>
+                                        <div class="flex">
+                                            <span>2023.11.30</span>
+                                        </div>
+                                    </td>                         
                                     <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
                                     <td><i class="ico delete_bg"></i></td>
                                 </tr>
@@ -502,7 +512,14 @@
                                     <td>123-245689-111</td>
                                                                                 
                                     <td>말일</td> 
-                                    <td>2023.11.30</td>                               
+                                    <td>
+                                        <div class="flex">
+                                            <span>2023.11.30</span>
+                                            <button class="txtType" type="button">
+                                                <i class="ico gray_bin_sm"></i>
+                                            </button>
+                                        </div>
+                                    </td>                               
                                     <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
                                     <td><i class="ico delete_bg"></i></td>
                                 </tr>                                             
@@ -537,10 +554,13 @@
                                     <td>123-245689-111</td>
                                                                                 
                                     <td>말일</td> 
-                                    <td>2023.11.30
-                                        <button type="button" class="txtType">
-                                            <i class="ico gray_bin_sm"></i>
-                                        </button>
+                                    <td>
+                                        <div class="flex">
+                                            <span>2023.11.30</span>
+                                            <button class="txtType" type="button">
+                                                <i class="ico gray_bin_sm"></i>
+                                            </button>
+                                        </div>
                                     </td>                            
                                     <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
                                     <td><i class="ico delete_bg"></i></td>
@@ -574,7 +594,14 @@
                                     <td>123-245689-111</td>
                                                                                 
                                     <td>말일</td> 
-                                    <td>2023.11.30</td>                         
+                                    <td>
+                                        <div class="flex">
+                                            <span>2023.11.30</span>
+                                            <button class="txtType" type="button">
+                                                <i class="ico gray_bin_sm"></i>
+                                            </button>
+                                        </div>
+                                    </td>                         
                                     <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
                                     <td><i class="ico delete_bg"></i></td>
                                 </tr>
@@ -641,7 +668,14 @@
                                     <td>123-245689-111</td>
                                                                                 
                                     <td>말일</td> 
-                                    <td>2023.11.30</td>                               
+                                    <td>
+                                        <div class="flex">
+                                            <span>2023.11.30</span>
+                                            <button class="txtType" type="button">
+                                                <i class="ico gray_bin_sm"></i>
+                                            </button>
+                                        </div>
+                                    </td>                               
                                     <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
                                     <td><i class="ico delete_bg"></i></td>
                                 </tr>                                   
