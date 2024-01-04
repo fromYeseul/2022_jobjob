@@ -1,0 +1,28 @@
+.purchaseLedger{
+    width: 100%;
+    .tableTop{
+        margin-top: rem(30); 
+    }
+    .tableBox{
+        max-height: calc(100vh - 371px);
+        .flex{
+            gap: 4px;
+            span{
+                margin-left: 23px;
+                &.comp{
+                    margin-left: 0;
+                    & + span{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .modalLayer{
+        &.absol{
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+        }
+    }
+}

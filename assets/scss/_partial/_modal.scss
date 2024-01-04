@@ -233,7 +233,8 @@
         }
         tfoot{
             td{
-                padding: 10px !important;
+                // padding: 10px !important;
+                padding: 10px;
             }
         }
     }
@@ -1420,9 +1421,11 @@
 //프로젝트별 매출집계 - 월별 매입/매출 
 //투입유형별 매출/매입 - 월별 매입/매출
 //외주 매출/매입
+//정직원 매출/매입
 .projMonthly,
 .insertMonthly,
-.sourcingMonthly
+.sourcingMonthly,
+.empMonthly
 {
     height: rem(680);
     .h3_sub{
@@ -1430,6 +1433,16 @@
             margin-top: rem(20);
             max-height: rem(585);
         }
+    }
+    .ellipsis{
+        padding-left: rem(10);
+    }
+    td{
+        padding: rem(4) rem(10);
+        text-align: right;
+    }
+    tfoot{
+        font-weight: bold;
     }
 }
 

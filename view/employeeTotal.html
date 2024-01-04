@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>외주 매출/매입</title>
+    <title>정직원 매출/매입</title>
     
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/style_pms.css">
-
 </head>
 <body>
 
@@ -27,8 +26,6 @@
                         <span aria-controls="showLevel" class="layerOpen">등급보기설정
                     </span></li>
                     <li><a href="#">로그아웃</a></li>
-                    <li><a href="#">로그아웃a</a></li>
-                    <li><a href="#">로그아웃s</a></li>
                 </ul>
             </div>
         </header>
@@ -40,26 +37,46 @@
                 </div>
                 <nav class="navWrapper">
                     <ul>
-                        <li class="is-active">
-                            <a alerttoast="" href="#"><i class="ico home"></i><span class="menuTxt">홈</span></a>
+                        <li>
+                            <a alerttoast="" href="dashboard.html"><i class="ico home"></i><span class="menuTxt">홈</span></a>
                         </li>
-                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span></a>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">멤버</span></a>
                             <ul>
-                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
-                                <li><a href="#"><span class="depth2">고객문의</span></a></li>
-                                <li><a href="#"><span class="depth2">운영자관리</span></a></li>
-                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
-                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                                <li><a href="#"><span class="depth2">직원</span></a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">거래처</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">매출거래처</span></a></li>
+                                <li><a href="#"><span class="depth2">매입거래처</span></a></li>
                             </ul>
                         </li>
-                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span></a>
+
+                        <li><a href="#"><i class="ico bizstate"></i><span class="menuTxt">사업관리</span></a>
                             <ul>
-                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
-                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                                <li><a href="#"><span class="depth2">사업현황</span></a></li>
                             </ul>
                         </li>
-                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>
-                        
+                        <li class="is-active"><a href="#"><i class="ico ledger"></i><span class="menuTxt">매출/매입집계</span></a>
+                            <ul>                                
+                                <li><a href="project_Sum.html"><span class="depth2">프로젝트별 매출/매입</span></a></li>
+                                <li><a href="inputType_Sum.html"><span class="depth2">투입유형별 매출/매입</span></a></li>
+                                <li class="is-active"><a href="sourcing_Sum.html"><span class="depth2">외주 매출/매입</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico tcount"></i><span class="menuTxt">매입원장</span></a>
+                            <ul>
+                                <li><a href="businessIncomeStatement.html"><span class="depth2">사업소득명세서</span></a></li>
+                                <li><a href="PurchaseLedger.html"><span class="depth2">매입원장(법인/개인)</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico calculation"></i><span class="menuTxt">보험료 대사</span></a>
+                            <ul>
+                                <li><a href="calculation_industrialAccident.html"><span class="depth2">산재보험료대사</span></a></li>
+                                <li><a href="calculation_employmentIInsurance.html"><span class="depth2">고용보험료대사</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>                        
                     </ul>
                 </nav>
             </div>
@@ -67,8 +84,8 @@
         
         <section class="contWrapper noRight">
             <section class="contLayout">
-                <section class="sourcingTotal">
-                    <h2>외주 매출/매입</h2>
+                <section class="empTotal">
+                    <h2>정직원 매출/매입</h2>
                     <div class="condition">
                         <ul>
                             <li>
@@ -82,8 +99,8 @@
                                     <option value="005">5</option>
                                 </select>
                             </li>
-                             <li>
-                                <p class="condiTit">주관그룹</p>
+                            <li>
+                                <p class="condiTit">사업부</p>
                                 <div class="select laSize">
                                     <span class="selDefault">전체</span>
                                     <ul class="optionList">
@@ -118,9 +135,46 @@
                                     </ul>
                                 </div>
                             </li>  
+
+                            <li>
+                                <p class="condiTit">본부</p>
+                                <div class="select laSize">
+                                    <span class="selDefault is-active">전체</span>
+                                    <ul class="optionList">
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_1" class="hasTxt">
+                                            <label for="optChk_1">SAP 사업</label>
+                                        </li>                                        
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_2" class="hasTxt">
+                                            <label for="optChk_2">SAP 전략</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_3" class="hasTxt">
+                                            <label for="optChk_3">SAP 융합</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_4" class="hasTxt">
+                                            <label for="optChk_4">대외사업</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_5" class="hasTxt">
+                                            <label for="optChk_5">미래융합사업</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_5" class="hasTxt">
+                                            <label for="optChk_5">플랫폼</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_5" class="hasTxt">
+                                            <label for="optChk_5">클라우드</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>  
                             
                             <li>
-                                <label class="condiTit" for="project2">사업유형</label>
+                                <label class="condiTit" for="project2">재직유형</label>
                                 <select class="mid-laSize">
                                     <option value="">전체</option>
                                     <option value="001">법인</option>
@@ -128,9 +182,30 @@
                                     <option value="002">개인</option>
                                 </select>
                             </li>
+
+                            <li>
+                                <label class="condiTit" for="project2">재직상태</label>
+                                <select class="mid-laSize">
+                                    <option value="">전체</option>
+                                    <option value="001">법인</option>
+                                    <option value="002">사업</option>
+                                    <option value="002">개인</option>
+                                </select>
+                            </li>
+
+                            <li>
+                                <label class="condiTit" for="project2">직급</label>
+                                <select class="mid-laSize">
+                                    <option value="">전체</option>
+                                    <option value="001">법인</option>
+                                    <option value="002">사업</option>
+                                    <option value="002">개인</option>
+                                </select>
+                            </li>
+
                             <li class="hasBtn">
                                 <label class="condiTit" for="project2">검색어</label>                                
-                                <input type="text" class="smSize" id="project2" maxlength="20" placeholder="거래처명 또는 거래처코드">
+                                <input type="text" class="smSize" id="project2" maxlength="20" placeholder="이름 또는 사번">
                                 <button>
                                     <i class="ico search white"></i>
                                 </button>
@@ -145,26 +220,29 @@
                             <option class="optionItem" value="50">50개씩</option>
                             <option class="optionItem" value="100">100개씩</option>
                         </select> -->
-                        <button class="white"><i class="ico excDown"></i>엑셀 다운로드 </button>                        
+
+                        <button class="white"><i class="ico excDown"></i>엑셀 다운로드 </button>
                     </div>
+
                     <div class="tableBox sticky">    
                         <table class="">
                             <colgroup>
                                 <col width="40px">
-                                <col width="70px">
-                                <col width="50px">
-                                <col width="150px">
-                                <col width="93px" span="14"><!--작년~올해--> 
-                                <col width="95px">
+                                <col width="70px" span="3">
+                                <col width="45px" span="2">
+                                <col width="90px" span="17">
                                 <col>
                             </colgroup>
                             <thead>
                                 <th>No.</th>
-                                <th>부서</th>
+                                <th>사번</th>
+                                <th>사업부</th>
+                                <th>본부(파트)</th>
                                 <th>유형</th>
-                                <th>거래처</th>
-                                <th>2022년</th>
+                                <th>상태</th>
+                                <th>이름(직급)</th>
 
+                                <th>2022년</th>
                                 <th>2023.01</th>
                                 <th>2023.02</th>
                                 <th>2023.03</th>
@@ -177,228 +255,153 @@
                                 <th>2023.10</th>
                                 <th>2023.11</th>
                                 <th>2023.12</th>
-
                                 <th>2024년</th>
+
                                 <th>제경비</th>
                                 <th>2023 합계</th>
                             </thead>
                             <tbody>                                
                                 <tr>
                                     <td class="center">07</td>
-                                    <td class="center">SAP사업</td>
-                                    <td class="center">법인</td>
-                                    <td class="ellipsis">
-                                        <a href="#">CJ프레시웨이CJ프레시웨이CJ프레시웨이CJ프레시웨이</a>
-                                    </td>
+                                    <td class="center">20010012</td>
+                                    <td class="center">SAP 전략</td>
+                                    <td class="center">AI RPA</td>
+                                    <td class="center">정규 </td>
+                                    <td class="center">재직 </td>
+                                    <td class="ellipsis"><a href="#">한진아 책임</a></td>
                                     <td>
                                         <p>513,758,000</p>
                                         <p class="marked">469,700,000</p>
                                     </td>
 
                                     <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="tBuy">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000,000</p>
-                                        <p class="marked">37,000,000,000</p>
-                                    </td>
-                                </tr>                               
-                                <tr>
-                                    <td class="center">07</td>
-                                    <td class="center">SAP사업</td>
-                                    <td class="center">법인</td>
-                                    <td class="ellipsis">
-                                        <a href="#">CJ프레시웨이<a>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
                                         <p>513,758,000</p>
                                         <p class="marked">469,700,000</p>
                                     </td>
-
                                     <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
-                                    </td>
-                                    <td class="right">
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
-                                        p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
-                                        <p>40,550,000</p>
-                                        <p class="tBuy">37,000,000</p>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
-                                        <p>40,550,000</p>
-                                        <p class="marked">37,000,000</p>
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
                                     </td>
                                     <td>
-                                        <p>40,550,000,000</p>
-                                        <p class="marked">37,000,000,000</p>
-                                    </td>
-                                </tr>  
+                                        <p>513,758,000</p>
+                                        <p class="marked">469,700,000</p>
+                                    </td>  
+                                </tr> 
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td class="center" colspan="4">합계</td>
-
+                                    <td colspan="7" class="center">합계</td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
-                                    </td>
-
-                                    <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>165,900,000</p>
+                                        <p class="marked">128,500,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
-                                    </td>
-
-                                    <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                     <td>
-                                        <p>113,758,000</p>
-                                        <p class="marked">109,700,000</p>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
+                                    </td>
+                                    <td>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
+                                    </td>
+                                    <td>
+                                        <p>93,758,000</p>
+                                        <p class="marked">69,700,000</p>
                                     </td>
                                 </tr>
                             </tfoot>
@@ -406,20 +409,19 @@
                     </div>
                 </section>
             </section>
-        </section>
+        </section>     
     </section>
-
-
+    
     <!--월별 매입/매출-->
     <div id="" class="modalLayer center is-active">
         <div class="layerBox midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
             </div>
-            <div class="modalCont sourcingMonthly"><!--팝업 고유클래스-->
+            <div class="modalCont empMonthly"><!--팝업 고유클래스-->                
                 <h3>2023년 1월 매출/매입</h3>
-                <div class="h3_sub">전체 - 정직원</div>
-
+                <div class="h3_sub">한진아 책임</div>
+                
                 <div class="tableBox sticky">
                     <table> 
                         <colgroup>
@@ -427,19 +429,19 @@
                             <col width="200px">
                             <col width="60px">
                             <col width="100px" span="2">
-                        </colgroup>                 
+                        </colgroup>                      
                         <thead>
                             <tr>
                                 <th>프로젝트명</th>
-                                <th>2023.01 투입기간</th>
+                                <th>투입기간</th>
                                 <th>M/M(수량)</th>
                                 <th>매출</th>
                                 <th>매입</th>
                             </tr>
-                        </thead>        
+                        </thead>
                         <tbody>
                             <tr>
-                                <td class="ellipsis">프로젝트명 A 프로젝트명 B프로젝트명 A 프로젝트명 B프로젝트명 A </td>
+                                <td class="ellipsis">프로젝트명 A 프로젝트명 B프로젝트명 B프로젝트명 B프로젝트명 B</td>
                                 <td class="center">2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td>6,000,000</td>
@@ -500,19 +502,12 @@
                                 <td>1.00</td>
                                 <td>6,000,000</td>
                                 <td>4,800,000</td>
-                            </tr>
-                            <tr>
-                                <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
-                                <td class="center">2023.01.01 ~ 2023.01.31</td>
-                                <td>1.00</td>
-                                <td>6,000,000</td>
-                                <td>4,800,000</td>
-                            </tr>                  
+                            </tr>                        
                         </tbody>
                         <tfoot>
                             <tr>
                                 <td colspan="2" class="center">SUM</td>
-                                <td>8</td>
+                                <td>8.00</td>
                                 <td><span class="tSales">40,550,000</span></td>
                                 <td><span class="tBuy">37,000,000</span></td>
                             </tr>
@@ -555,8 +550,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            
+            </div>            
             <div class="modalFooter single">
                 <button class="white">닫기</button>
             </div>

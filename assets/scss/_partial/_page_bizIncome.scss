@@ -4,6 +4,15 @@
         margin-top: rem(30);
     }
     .tableBox{
-        max-height: calc(100vh - 371px);    
+        max-height: calc(100vh - 371px);            
+        .flex{
+            gap: 4px;
+            span{
+                margin-right: 20px;
+                & + button{
+                    margin-left: -20px;
+                }
+            }
+        }
     }
 }
