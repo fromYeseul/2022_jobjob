@@ -754,7 +754,7 @@
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
                 <h3>지급스케쥴</h3>
-                <div class="h3_sub">CJ프레시웨이</div>
+                <div class="h3_sub">CJ프레시웨이 주문프로세스 개선 및 UI/UX 개편 _ 오포도</div>
             </div>
             <div class="tableTop right">
                 <div class="suffix">
@@ -796,13 +796,13 @@
                         <tbody>
                             <tr>
                                 <td>1회</td>
-                                <td><input class="dateType hasDatepicker eLow"  type="text" value="2023.01" id="contractStartDate" name="startDate" maxlength="10" autocomplete="off" value="2023.01"></td>
-                                <td>완료</td>
+                                <td><input class="dateType hasDatepicker" disabled type="text" value="2023.01" id="contractStartDate" name="startDate" maxlength="10" autocomplete="off" value="2023.01"></td>
+                                <td><button class="round order">완료</button></td>
                                 <td class="right"><input type="text" class="txtRight" value="8,100,000" readonly></td>
                                 <td class="right">243,000</td>
                                 <td class="right">24,300</td>
-                                <td class="right">20,850</td>
-                                <td class="right">56,620</td>
+                                <td class="right"><input type="text" class="txtRight" size="12" maxlength="14" value="20,850" readonly></td>
+                                <td class="right"><input type="text" class="txtRight" size="12" maxlength="14" value="56,620" readonly></td>
                                 <td class="right">7,757,600</td>
                                 <td><i class="ico delete_bg" onclick="bizState.clickEvent('standard','delete',this)"></i></td>
                             </tr>
@@ -813,8 +813,8 @@
                                 <td class="right"><input type="text" class="txtRight" value="8,100,000"></td>
                                 <td class="right">243,000</td>
                                 <td class="right">24,300</td>
-                                <td class="right">20,850</td>
-                                <td class="right">56,620</td>
+                                <td class="right"><input type="text" class="txtRight" size="12" maxlength="14" value="20,850"></td>
+                                <td class="right"><input type="text" class="txtRight" size="12" maxlength="14" value="56,620"></td>
                                 <td class="right">7,757,600</td>
                                 <td><i class="ico delete_bg" onclick="bizState.clickEvent('standard','delete',this)"></i></td>
                             </tr>                        
@@ -825,32 +825,32 @@
                                 <td class="right"><input type="text" class="txtRight" value="8,100,000"></td>
                                 <td class="right">243,000</td>
                                 <td class="right">24,300</td>
-                                <td class="right">20,850</td>
-                                <td class="right">56,620</td>
+                                <td class="right"><input type="text" class="txtRight" size="12" maxlength="14" value="20,850"></td>
+                                <td class="right"><input type="text" class="txtRight" size="12" maxlength="14" value="56,620"></td>
                                 <td class="right">7,757,600</td>
                                 <td><i class="ico delete_bg" onclick="bizState.clickEvent('standard','delete',this)"></i></td>
                             </tr>
                             <tr>
                                 <td>4회</td>
-                                <td><input class="dateType hasDatepicker"  type="text" value="2023.01" id="contractStartDate" name="startDate" maxlength="10" autocomplete="off" value="2023.04"></td>
+                                <td><input class="dateType hasDatepicker eLow"  type="text" value="2023.01" id="contractStartDate" name="startDate" maxlength="10" autocomplete="off" value="2023.04"></td>
                                 <td>예정</td>
                                 <td class="right"><input type="text" class="txtRight" value="8,100,000"></td>
                                 <td class="right">243,000</td>
                                 <td class="right">24,300</td>
-                                <td class="right">20,850</td>
-                                <td class="right">56,620</td>
+                                <td class="right"><input type="text" class="txtRight" size="12" maxlength="14" value="20,850"></td>
+                                <td class="right"><input type="text" class="txtRight" size="12" maxlength="14" value="56,620"></td>
                                 <td class="right">7,757,600</td>
                                 <td><i class="ico delete_bg" onclick="bizState.clickEvent('standard','delete',this)"></i></td>
                             </tr>
                             <tr>
                                 <td>5회</td>
                                 <td><input class="dateType hasDatepicker eHigh"  type="text" value="2023.01" id="contractStartDate" name="startDate" maxlength="10" autocomplete="off" value="2023.05"></td>
-                                <td>완료</td>
+                                <td><button class="round order">완료</button></td>
                                 <td class="right"><input type="text" class="txtRight" value="8,100,000"></td>
                                 <td class="right">243,000</td>
                                 <td class="right">24,300</td>
-                                <td class="right">20,850</td>
-                                <td class="right">56,620</td>
+                                <td class="right"><input type="text" class="txtRight" size="12" maxlength="14" value="20,850"></td>
+                                <td class="right"><input type="text" class="txtRight" size="12" maxlength="14" value="56,620"></td>
                                 <td class="right">7,757,600</td>
                                 <td><i class="ico delete_bg" onclick="bizState.clickEvent('standard','delete',this)"></i></td>
                             </tr>
@@ -891,10 +891,10 @@
             </div>
             
             <div class="modalFooter">    
-                <div class="alertToast is-active" id="toast01">
+                <!-- <div class="alertToast is-active" id="toast01">
                     저장되었습니다.
                     <i class="ico smClose white"></i>
-                </div>
+                </div> -->
 
                 <button class="white">닫기</button>
                 <button class="">저장</button>
@@ -903,106 +903,94 @@
         <div class="layerDim"></div> 
     </div>
 
-    <div id="upload" class="modalLayer center upload is-active"><!--id바뀌면 말씀해주세요-->
+    <div id="" class="modalLayer center is-active"><!--id바뀌면 말씀해주세요-->
         <div class="layerBox midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
-                <h3>{산재}보험 근로자원부번호 수정</h3>               
+                <h3>{산재}보험 근로자원부번호 수정</h3>  
+                <div class="h3_sub">CJ프레시웨이 주문프로세스 개선 및 UI/UX 개편 _ 오포도</div>                           
             </div>
-            <div class="modalCont center">
-                <div class="h3_sub"> 지급완료건이 존재하는 경우 변경할 수 없습니다. <br>공단에 신고된 실제 원부번호를 수정하는 것이 아니며, 다른 계약과 고용/산재보험료를 합산하거나 <br>원부번호 보정이 필요할 때 사용합니다.</div>                    
-                
+            
+            <div class="modalCont center">    
                 <div class="mt15">
                     <table>
                         
                         <thead>
                             <tr>
-                                <th width="70px;">회차</th>
-                                <th width="90px;">지급예정일</th>
-                                <th width="70px;">지급여부</th>
-                                <th width="130px;">현재 원부번호</th>
-                                <th width="220px;">변경 원부번호</th>
-                                <th width="160px;">결과</th>
+                                <th width="100px;">회차</th>
+                                <th width="120px;">지급예정일</th>
+                                <th width="100px;">지급여부</th>
+                                <th width="180px;">현재 원부번호</th>
+                                <th width="240px;">변경 원부번호</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr class="is-active">
                                 <td>1회</td>
                                 <td>2013.01.01</a></td>
-                                <td>완료</td>
+                                <td><button class="round order">완료</button></td>
                                 <td>10253898057</td>
-                                <td class="flex">
-                                    <span><input type="text" class="lowSize" size="12" maxlength="14" placeholder="변경불가" readonly></span>                                    
-                                </div></td>
-                                <td>-</td>
+                                <td>변경 불가</td>
                             </tr>
                             <tr>
                                 <td>2회</td>
                                 <td>2013.02.01</a></td>
                                 <td>미지급</td>
-                                <td>10253898057</td>
-                                <td class="flex">
-                                    <span><input type="text" class="lowSize" size="12" maxlength="14" placeholder="숫자만 입력"></span>
-                                    <span><button class="bdType smSize ml5">중복확인</button></span>
-                                </div></td>
-                                <td>-</td>
+                                <td rowspan="6">10253898057</td>
+                                <td rowspan="6" class="left">
+                                    <div class="flex">
+                                        <span><input type="text" class="lowSize" size="12" maxlength="14" placeholder="숫자만 입력"></span>
+                                        <span><button class="bdType smSize ml5">중복확인</button></span>
+                                    </div>
+                                    <br>
+                                    <div class="flex">
+                                        <span><input type="text" class="lowSize" size="12" value="10253898058" maxlength="14" placeholder="숫자만 입력"></span>
+                                        <span><button class="smSize ml5">적용하기</button></span> 
+                                    </div>
+                                    <div class="eHigh">중복없음</div>
+                                    <div class="eLow">변경불가(기지급 존재)</div>
+                                    <div><button class="txtType" type="button" title="CJ프레시웨이 기능개선">
+                                        <i class="ico exMark"></i>
+                                        </button> 기계약과 원부번호 중복</div>
+                                        
+                                </td>
                             </tr>
                             <tr>
                                 <td>3회</td>
                                 <td>2013.03.01</a></td>
                                 <td>예정</td>
-                                <td>10253898057</td>
-                                <td class="flex">
-                                    <span><input type="text" class="lowSize" size="12" value="10253898058" maxlength="14" placeholder="숫자만 입력"></span>
-                                    <span><button class="smSize ml5">적용하기</button></span> 
-                                </div></td>
-                                <td >중복없음</td>
                             </tr>
                             <tr>
                                 <td>4회</td>
                                 <td>2013.04.01</a></td>
-                                <td>예정</td>
-                                <td>10253898057</td>
-                                <td class="flex">
-                                    <span><input type="text" class="lowSize"size="12"  maxlength="14" placeholder="숫자만 입력"></span>
-                                    <span><button class="bdType smSize ml5">중복확인</button></span>
-                                </div></td>
-                                <td class="eLow">변경불가(기지급 존재)</td>
+                                <td>예정</td>                               
                             </tr>
                             <tr>
                                 <td>5회</td>
                                 <td>2013.05.01</a></td>
-                                <td>예정</td>
-                                <td>10253898057</td>
-                                <td class="flex">
-                                    <span><input type="text" class="lowSize" size="12" maxlength="14" placeholder="숫자만 입력"></span>
-                                    <span><button class="bdType smSize ml5">중복확인</button></span>
-                                </div></td>
-                                <td class="eLow">변경불가(주민번호 상이)</td>
+                                <td>예정</td>                                
                             </tr>
                             <tr>
                                 <td>6회</td>
                                 <td>2013.06.01</a></td>
-                                <td>예정</td>
-                                <td>10253898057</td>
-                                <td class="flex">
-                                    <span><input type="text" class="lowSize" size="12" maxlength="14" placeholder="숫자만 입력"></span>
-                                    <span><button class="bdType smSize ml5">중복확인</button></span>
-                                </div></td>
-                                <td class="eHigh">
-                                    <button class="txtType" type="button" title="CJ프레시웨이 기능개선">
-                                    <i class="ico exMark"></i>
-                                     </button> 기계약과 원부번호 중복
-                                </td>
+                                <td>예정</td>                                                        
+                            </tr>
+                            <tr>
+                                <td>7회</td>
+                                <td>2013.06.01</a></td>
+                                <td>예정</td>                                                        
                             </tr>
                         </tbody>
                     </table>
-                </div>               
+                </div>                       
             </div>
-            
-            <div class="modalFooter">
+            <div class="bulletList">
+                <li>지급완료건이 존재하는 경우 변경할 수 없습니다. </li>
+                <li>공단에 신고된 실제 원부번호를 수정하는 것이 아니며, 다른 계약과 고용/산재보험료를 합산하거나 원부번호 보정이 필요할 때 사용합니다.   </li>
+            </div>     
+            <div class="modalFooter single">
                 <button class="white">닫기</button>
-                <button class="">수정완료</button>
+                <!-- <button class="">수정완료</button> -->
             </div>
         </div>        
         <div class="layerDim"></div>    

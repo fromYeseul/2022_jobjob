@@ -5,6 +5,35 @@
     }
 }
 
+.datepicker{
+    display: flex;
+    align-items: center;
+    padding: rem(8) rem(4);   
+    width: rem(140);   
+    height: rem(44);
+    background: $white;
+    border-radius: rem(4);
+    border:1px solid $inputGray;  
+    & + .datepicker{
+        margin-left: rem(3);
+    }
+    input{
+        border:0;
+        padding: 0;
+        width: calc(100% - 20px);
+        height: auto;
+        &:focus{        
+            border: 0;
+            outline: 0;
+        } 
+    }
+    img{
+        width: rem(16);
+        height: rem(17);
+    }
+}
+
+
 .ui-datepicker{
     //width:100%; 
     box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
@@ -22,6 +51,7 @@
     justify-content: center;
 }
 .ui-datepicker{
+    z-index: 100;
     select{
         &.ui-datepicker-year,
         &.ui-datepicker-month{
@@ -35,7 +65,19 @@
 }
 
 .ui-datepicker th{
+    padding: rem(6);
+    font-size: rem(14);
     background: $mainColor;
+}
+.ui-datepicker-calendar{
+    tr{
+        td{
+            height: rem(40);
+        }
+    }
+    button{
+        height: rem(24);
+    }
 }
 .ui-state-default, .ui-widget-content .ui-state-default{
     width: 100%;
@@ -60,7 +102,7 @@
 //타이틀
 .ui-datepicker .ui-datepicker-title,
 .ui-datepicker-title{
-    line-height: 40px;
+    line-height: rem(30);
     font-size: rem(16);
 }
 

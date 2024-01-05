@@ -131,8 +131,18 @@
                             </li>
                             <li>
                                 <p class="condiTit">사업기간</p>
-                                <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">
-                                <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">
+                                <div class="flex">
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일" id="datepicker">
+                                        <img src="../assets/img/icoCal.png" alt="">
+                                    </div>
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일" id="datepicker">
+                                        <img src="../assets/img/icoCal.png" alt="">
+                                    </div>
+                                </div>
+                                <!-- <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">
+                                <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">-->
                             </li>
                             <li>
                                 <p class="condiTit">주관부서</p>
@@ -415,6 +425,7 @@
     </section>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>        
         selectBox();
@@ -439,5 +450,13 @@
         }
         //tableScroll();
     </script>
+
+    <script>        
+        // datepicker test
+        $(function() {
+            $("#datepicker").datepicker();
+        });
+    </script>
+    
 </body>
 </html>
