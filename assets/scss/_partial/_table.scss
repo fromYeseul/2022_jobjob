@@ -60,15 +60,16 @@
         }
     }
     &.sticky{   
-          thead th,
-          tfoot td {
-            position: sticky;
-            top: 0;
-            z-index: 1;
-          }      
-          tfoot td {
-            bottom: 0;
-          }
+        border-bottom: 1px solid $tableBorder;
+        thead th,
+        tfoot td {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        }      
+        tfoot td {
+        bottom: 0;
+        }
     }
 }
 .tableSort{
@@ -125,7 +126,16 @@ table{
             td{
                 border-bottom: 0;
             }
-        }     
+        }   
+        &.disabled{
+            color: $subGray;
+            background: $bgColor;
+            opacity: 1;
+            cursor: initial;
+            &:hover{
+                background: $bgColor;
+            }
+        }  
         &.is-active{
             background: $bgColor;
         }
@@ -534,6 +544,9 @@ table{
         tr{
             td{
                 height: rem(41);   // 44->41
+                font-size: rem(13);
+            }
+            input{
                 font-size: rem(13);
             }
         }

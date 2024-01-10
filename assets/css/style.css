@@ -6,6 +6,7 @@ body, html {
   font-family: "NotoSansKR", sans-serif;
   font-weight: normal;
   letter-spacing: -0.5px;
+  font-size: 16px;
 }
 
 body {
@@ -57,42 +58,42 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: "NotoSansKR";
   font-style: thin;
   font-weight: 100;
-  src: url(../font/NotoSansKR-Thin.woff) format("woff");
+  src: url(../font/NotoSans-Thin.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "NotoSansKR";
   font-style: light;
   font-weight: 300;
-  src: url(../font/NotoSansKR-Light.woff) format("woff");
+  src: url(../font/NotoSans-Light.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "NotoSansKR";
   font-style: normal;
   font-weight: 400;
-  src: url(../font/NotoSansKR-Regular.woff) format("woff");
+  src: url(../font/NotoSans-Regular.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "NotoSansKR";
   font-style: medium;
   font-weight: 500;
-  src: url(../font/NotoSansKR-Medium.woff) format("woff");
+  src: url(../font/NotoSans-Medium.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "NotoSansKR";
   font-style: bold;
   font-weight: 700;
-  src: url(../font/NotoSansKR-Bold.woff) format("woff");
+  src: url(../font/NotoSans-Bold.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "NotoSansKR";
   font-style: black;
   font-weight: 900;
-  src: url(../font/NotoSansKR-Black.woff) format("woff");
+  src: url(../font/NotoSans-Black.woff2) format("woff2");
 }
 .underBg {
   display: inline-block;
@@ -696,7 +697,7 @@ header {
 
 /* //230512 추가 -ys */
 .contWrapper {
-  min-width: 120rem;
+  min-width: 1860px;
   width: 100%;
   padding-left: 3.25rem;
   padding-right: 3.25rem;
@@ -755,7 +756,7 @@ header {
 .contWrapper .contLayout .sendedOfferList, .contWrapper .contLayout .sendedOfferDetail, .contWrapper .contLayout .talentedSearch,
 .contWrapper .contLayout .clientBuy, .contWrapper .contLayout .clientSales, .contWrapper .contLayout .bizState, .contWrapper .contLayout .resumeList,
 .contWrapper .contLayout .dashboard, .contWrapper .contLayout .insertType, .contWrapper .contLayout .projTotal, .contWrapper .contLayout .salesLedger, .contWrapper .contLayout .sourcingTotal,
-.contWrapper .contLayout .bizIncome, .contWrapper .contLayout .purchaseLedger, .contWrapper .contLayout .empTotal {
+.contWrapper .contLayout .bizIncomeReport, .contWrapper .contLayout .purchaseLedger, .contWrapper .contLayout .empTotal {
   height: calc(100vh - 60px);
   padding: 1.875rem 1.875rem 1.25rem 1.875rem;
   overflow-y: auto;
@@ -1784,7 +1785,6 @@ footer.toast button + button {
 .modalFooter.single {
   width: 50%;
   max-width: 12.5rem;
-  margin-top: 3.125rem;
 }
 .modalFooter button {
   flex: 2 1 0;
@@ -2620,6 +2620,46 @@ footer.toast button + button {
   font-weight: bold;
 }
 
+.originNum {
+  height: 31.25rem;
+}
+.originNum .h3_sub + .tableBox {
+  margin-top: 1.25rem;
+  max-height: 25rem;
+}
+.originNum tr:hover {
+  background: initial;
+}
+.originNum .hasBtn button {
+  width: 6.25rem;
+  line-height: 1.75rem;
+  padding: 0 0.375rem;
+  font-size: 0.875rem;
+}
+
+.paySchedule {
+  height: 34.375rem;
+}
+.paySchedule .h3_sub + .tableTop {
+  margin-top: 1.25rem;
+}
+.paySchedule .tableBox {
+  max-height: 25rem;
+}
+.paySchedule table input {
+  text-align: right;
+}
+.paySchedule table td {
+  text-align: right;
+  padding: 0.25rem;
+}
+.paySchedule table tfoot {
+  font-weight: bold;
+}
+.paySchedule table tfoot td {
+  padding: 0.25rem;
+}
+
 .joinRequest .inputList.flex h6,
 .joinRequest .inputList.flex label,
 .infoRevise .inputList.flex h6,
@@ -3165,11 +3205,7 @@ footer.toast button + button {
 .condition > ul li {
   display: inline-block;
 }
-.condition > ul li input[type=text] {
-  width: 25rem;
-}
 .condition > ul li input[type=text].dateType {
-  width: 8.75rem;
   background-color: #fff;
 }
 .condition > ul li input[type=text].xsSize {
@@ -3238,6 +3274,10 @@ footer.toast button + button {
   width: 4.375rem;
   height: 2.25rem;
 }
+.tableTop input[type=text] {
+  min-width: 5rem;
+  height: 2.25rem;
+}
 .tableTop button {
   min-width: 5.625rem;
   width: auto;
@@ -3267,6 +3307,9 @@ footer.toast button + button {
 }
 .tableBox.absolBody::-webkit-scrollbar-track {
   background-color: #fff;
+}
+.tableBox.sticky {
+  border-bottom: 1px solid #dddddd;
 }
 .tableBox.sticky thead th,
 .tableBox.sticky tfoot td {
@@ -3320,6 +3363,15 @@ table tr.bg.is-active {
 }
 table tr:last-child td {
   border-bottom: 0;
+}
+table tr.disabled {
+  color: #8f8f8f;
+  background: #f2f2f7;
+  opacity: 1;
+  cursor: initial;
+}
+table tr.disabled:hover {
+  background: #f2f2f7;
 }
 table tr.is-active {
   background: #f2f2f7;
@@ -3572,6 +3624,9 @@ table.groupType tr.group {
 }
 table.lowType tr td {
   height: 2.5625rem;
+  font-size: 0.8125rem;
+}
+table.lowType tr input {
   font-size: 0.8125rem;
 }
 table .ellipsis {
@@ -5046,7 +5101,7 @@ input[type=text].dateType.noBg {
 }
 input[type=text].dateType.disabled, input[type=text].dateType:disabled {
   color: #a6a6b6;
-  background: url(../img/icoCal_dis.png) right 10px top 50% no-repeat;
+  background: url(../img/icoCal_dis.png) right 6px top 50% no-repeat;
   background-color: #f8f8f8;
 }
 
@@ -6291,8 +6346,9 @@ select {
   padding: 0 0.4375rem;
   padding-right: 0.625rem;
   min-width: 6.25rem;
-  height: 44px;
-  border-radius: 5px;
+  height: 2.75rem;
+  font-size: 0.875rem;
+  border-radius: 0.3125rem;
   border: 1px solid #cccccc;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -8209,6 +8265,7 @@ h1 {
 }
 .pageTit .suffix {
   display: flex;
+  gap: 0.625rem;
 }
 .pageTit .suffix button {
   width: 7.5rem;
@@ -9260,7 +9317,7 @@ h6 + .h6_sub {
   padding-left: 8px;
 }
 .commentList .comment .rightBtn {
-  width: 50px;
+  width: 3.125rem;
 }
 .commentList .comment .txtType {
   margin-top: 0;
@@ -9348,6 +9405,10 @@ h6 + .h6_sub {
   vertical-align: initial;
 }
 
+.loginTop h1 {
+  margin-top: 3.125rem;
+}
+
 .loginBox {
   width: 25rem;
   padding: 2.5rem 2.5rem 1.875rem 2.5rem;
@@ -9364,6 +9425,9 @@ h6 + .h6_sub {
   margin-top: 1.6875rem;
   width: 100%;
   font-size: 1.125rem;
+}
+.loginBox .error {
+  margin-top: 0.625rem;
 }
 
 .subLogin {
@@ -11384,6 +11448,35 @@ h6 + .h6_sub {
   width: 100%;
 }
 
+.datepicker {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.25rem;
+  width: 8.75rem;
+  height: 2.75rem;
+  background: #fff;
+  border-radius: 0.25rem;
+  border: 1px solid #cccccc;
+}
+.datepicker + .datepicker {
+  margin-left: 0.1875rem;
+}
+.datepicker input {
+  border: 0;
+  padding: 0;
+  width: calc(100% - 20px);
+  height: auto;
+}
+.datepicker input:focus {
+  border: 0;
+  outline: 0;
+}
+.datepicker img {
+  width: 1rem;
+  height: 1.0625rem;
+  padding: 0;
+}
+
 .ui-datepicker {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
@@ -11403,6 +11496,9 @@ h6 + .h6_sub {
   justify-content: center;
 }
 
+.ui-datepicker {
+  z-index: 100;
+}
 .ui-datepicker select.ui-datepicker-year, .ui-datepicker select.ui-datepicker-month {
   width: 40%;
   min-width: auto;
@@ -11412,7 +11508,16 @@ h6 + .h6_sub {
 }
 
 .ui-datepicker th {
+  padding: 0.375rem;
+  font-size: 0.875rem;
   background: #0460d2;
+}
+
+.ui-datepicker-calendar tr td {
+  height: 2.5rem;
+}
+.ui-datepicker-calendar button {
+  height: 1.5rem;
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default {
@@ -11437,7 +11542,7 @@ h6 + .h6_sub {
 
 .ui-datepicker .ui-datepicker-title,
 .ui-datepicker-title {
-  line-height: 40px;
+  line-height: 1.875rem;
   font-size: 1rem;
 }
 

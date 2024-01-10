@@ -8,6 +8,7 @@
     
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/style_pms.css">
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
 
 </head>
 <body>
@@ -132,13 +133,12 @@
                             <li>
                                 <p class="condiTit">사업기간</p>
                                 <div class="flex">
+                                    <!--240101 수정 ys-->
                                     <div class="datepicker">
-                                        <input type="text" placeholder="연-월-일" id="datepicker">
-                                        <img src="../assets/img/icoCal.png" alt="">
+                                        <input type="text" placeholder="연-월-일" id="datepicker1">
                                     </div>
                                     <div class="datepicker">
-                                        <input type="text" placeholder="연-월-일" id="datepicker">
-                                        <img src="../assets/img/icoCal.png" alt="">
+                                        <input type="text" placeholder="연-월-일" id="datepicker2">
                                     </div>
                                 </div>
                                 <!-- <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">
@@ -453,9 +453,29 @@
 
     <script>        
         // datepicker test
-        $(function() {
-            $("#datepicker").datepicker();
-        });
+        // $(function() {
+        //     $("#datepicker").datepicker();
+        // });
+
+            $(function(){
+                $("#datepicker1").datepicker({
+                    dateFormat:'yy/mm/dd'
+                    , showOn: 'button'
+                    , buttonImage: '../assets/img/icoCal.png'
+                    , buttonImageOnly: true
+                })
+            });
+            $(function(){
+                $("#datepicker2").datepicker({
+                    dateFormat:'yy/mm/dd'
+                    , showOn: 'button'
+                    , buttonImage: '../assets/img/icoCal.png'
+                    , buttonImageOnly: true
+                })
+            });
+
+       
+        
     </script>
     
 </body>

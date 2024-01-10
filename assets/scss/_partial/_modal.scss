@@ -378,7 +378,7 @@
     &.single{
         width: 50%;
         max-width: rem(200);
-        margin-top: rem(50);
+        // margin-top: rem(50);
     }
     button{        
         flex: 2 1 0;
@@ -1422,6 +1422,7 @@
 //투입유형별 매출/매입 - 월별 매입/매출
 //외주 매출/매입
 //정직원 매출/매입
+
 .projMonthly,
 .insertMonthly,
 .sourcingMonthly,
@@ -1446,8 +1447,57 @@
     }
 }
 
+//보험 근로자 원부번호
+.originNum{
+    height: rem(500);
+    .h3_sub{
+        & + .tableBox{
+            margin-top: rem(20);
+            max-height: rem(400);
+        }
+    }
+    tr{
+        &:hover{
+            background: initial;
+        }
+    }
+    .hasBtn{
+        button{
+            width: rem(100);
+            line-height: rem(28);
+            padding: 0 rem(6);
+            font-size: rem(14);
+        }
+    }
+}
 
-
+//지급스케줄
+.paySchedule{
+    height: rem(550);
+    .h3_sub{
+        & + .tableTop{
+            margin-top: rem(20);
+        }
+    }
+    .tableBox{
+        max-height: rem(400);
+    }
+    table{
+        input{
+            text-align: right;
+        }
+        td{
+            text-align: right;
+            padding: rem(4);
+        }
+        tfoot{
+            font-weight: bold;
+            td{                
+                padding: rem(4);
+            }
+        }
+    }
+}
 
 
 

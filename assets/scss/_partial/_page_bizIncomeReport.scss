@@ -8,11 +8,18 @@
         .flex{
             gap: 4px;
             span{
-                margin-right: 20px;
-                & + button{
-                    margin-left: -20px;
+                margin-left: 23px;
+                &.comp{
+                    margin-left: 0;
+                    & + span{
+                        margin-left: 0;
+                    }
                 }
             }
+        }
+        tfoot{
+            text-align: right;
+            font-weight: bold;
         }
     }
 }

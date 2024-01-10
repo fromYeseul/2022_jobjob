@@ -90,6 +90,14 @@
   color: #ff1236;
 }
 
+.sat {
+  color: #009ce0;
+}
+
+.sun {
+  color: #ff1236;
+}
+
 .dNear {
   color: #ff1236 !important;
 }
@@ -735,21 +743,6 @@ h1 {
   color: #5aa2ef;
 }
 
-input[type=text].dateType.editType {
-  width: 100%;
-  height: 1.875rem;
-  padding: 0.4rem;
-  padding-right: 1.25rem;
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  background: url(../img/icoCal.png) right 2px top 55% no-repeat;
-  background-color: #fff;
-}
-input[type=text].dateType.editType:focus {
-  color: #000000;
-  background: url(../img/icoCal.png) right 2px top 55% no-repeat;
-}
-
 table tbody tr:hover {
   background: #f3f4f7;
 }
@@ -1260,6 +1253,7 @@ table a {
 }
 .bizStateRegister .tabWrapper .suffix {
   display: flex;
+  gap: 0.3125rem;
 }
 .bizStateRegister .tabWrapper .suffix.absol {
   position: absolute;
@@ -1602,20 +1596,27 @@ table a {
   padding-right: 0.25rem;
 }
 
-.bizIncome .tableTop {
+.bizIncomeReport .tableTop {
   margin-top: 1.875rem;
 }
-.bizIncome .tableBox {
+.bizIncomeReport .tableBox {
   max-height: calc(100vh - 371px);
 }
-.bizIncome .tableBox .flex {
+.bizIncomeReport .tableBox .flex {
   gap: 4px;
 }
-.bizIncome .tableBox .flex span {
-  margin-right: 20px;
+.bizIncomeReport .tableBox .flex span {
+  margin-left: 23px;
 }
-.bizIncome .tableBox .flex span + button {
-  margin-left: -20px;
+.bizIncomeReport .tableBox .flex span.comp {
+  margin-left: 0;
+}
+.bizIncomeReport .tableBox .flex span.comp + span {
+  margin-left: 0;
+}
+.bizIncomeReport .tableBox tfoot {
+  text-align: right;
+  font-weight: bold;
 }
 
 .purchaseLedger {
