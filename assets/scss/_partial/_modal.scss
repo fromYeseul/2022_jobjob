@@ -1450,12 +1450,10 @@
 //보험 근로자 원부번호
 .originNum{
     height: rem(500);
-    .h3_sub{
-        & + .tableBox{
-            margin-top: rem(20);
-            max-height: rem(400);
-        }
-    }
+    .tableBox{
+        margin-top: rem(20);
+        max-height: rem(400);
+    }    
     tr{
         &:hover{
             background: initial;
@@ -1498,8 +1496,18 @@
         }
     }
 }
-
-
+.paySchedule,
+.pubFileUpload{
+    height: rem(550);
+    .h3_sub{
+        & + .tableTop{
+            margin-top: rem(20);
+        }
+    }
+    .tableBox{
+        max-height: rem(400);
+    }
+}
 
 
 

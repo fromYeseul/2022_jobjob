@@ -11,7 +11,6 @@
 
 </head>
 <body>
-
     <section class="layoutWrapper">
         <header>
             <div class="prefix">
@@ -85,8 +84,8 @@
         
         <section class="contWrapper noRight">
             <section class="contLayout">
-                <section class="bizState purchaseLedger">
-                    <h2>매입원장 (개인/법인) <button class="mid-lowSize" type="button">+ 추가</button></h2>
+                <section class="purchaseLedger">
+                    <h2>매입원장 (개인/법인)</h2>
 
                     <div class="condition">
                         <ul>                          
@@ -148,17 +147,14 @@
                             </li>  
                             <li>
                                 <p class="condiTit">조회일자</p>
-                                <select>
-                                    <option value="">전체</option>
-                                    <option value="001">계산서발행일</option>
-                                    <option value="002">지급예정일</option>
-                                </select>
-                                <select>
-                                    <option value="">01~10</option>
-                                    <option value="001">10~20</option>
-                                    <option value="002">20~말일</option>
-                                    <option value="003">말일</option>
-                                </select>
+                                <div class="flex">
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일" id="datepicker1" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/img/icoCal.png" alt="..." title="...">
+                                    </div>
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일" id="datepicker2" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/img/icoCal.png" alt="..." title="...">
+                                    </div>
+                                </div>
                             </li>                         
                             
                             <li>
@@ -213,8 +209,9 @@
                         <table class="lowType">
                             <colgroup>
                                 <col width="40px" span="2">
-                                <col width="100px" span="2"> 
-                                <col width="80px">  
+                                <col width="110px"> 
+                                <col width="95px"> 
+                                <col width="80px"> 
                                 <col width="170px">  
                                 <col width="60px" span="4"> 
                                 <col width="360px">  
@@ -244,6 +241,7 @@
                                 <th>기술구분</th>
                                 <!-- <th>상태</th> -->
                                 <th>프로젝트</th>
+                                <th>계약</th>
                                 <th>계약기간</th>
                                 <th>담당자</th>
                                 <th>지급횟수</th>
@@ -271,8 +269,8 @@
                                         <label for="ff1"></label>
                                     </td>
                                     <td>14</td>
-                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td> 
+                                    <td><input class="dateType sun" type="text" value="2023.01.21"></td><!--토요일 sat / 일요일 sun -->
+                                    <td><input class="dateType onGoing" type="text" value="2023.01"></td><!--수정된 상태 onGoing-->
                                     <td>SAP전략</td>
                                     <td><a href="#">동부씨엔아이(주)IT부문</a></td>
                                     <td>법인</td>
@@ -293,7 +291,7 @@
                                     </td>
                                     <td>2022.04.18 ~ 2023.05.17</td>
                                     <td><i class="ico preview"></i></td>
-                                    <td><div class="attached">1/4회</div></td>        
+                                    <td><span class="mainC">3/4회</span></td>         
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>                                
                                     <td class="right">150,000,000</td>          
@@ -324,8 +322,8 @@
                                         <label for="ff2"></label>
                                     </td>
                                     <td>13</td>
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td> 
+                                    <td><input class="dateType sat" type="text" value="2023.01.21"></td>  
+                                    <td><input class="dateType" type="text" value="2023.01"></td>
                                     <td>대외사업</td>
                                     <td><a href="#">파티엔</a></td>
                                     <td>법인</td>
@@ -340,7 +338,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><div class="attached">2/4회</div></td>        
+                                    <td><span class="mainC">2/4회</span></td>        
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -369,8 +367,8 @@
                                         <label for="ff3"></label>
                                     </td>
                                     <td>12</td>
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td> 
+                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
+                                    <td><input class="dateType" type="text" value="2023.01"></td>
                                     <td>플랫폼</td>
                                     <td><a href="#">주식회사지오아이에스</a></td>
                                     <td>법인</td>
@@ -390,7 +388,7 @@
                                     <td>
                                         <i class="ico preview"></i>												
                                     </td>
-                                    <td><div class="attached">3/4회</div></td>        
+                                    <td><span class="mainC">3/4회</span></td>          
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -421,8 +419,8 @@
                                         <label for="ff4"></label>
                                     </td>
                                     <td>3</td>
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td> 
+                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
+                                    <td><input class="dateType" type="text" value="2023.01"></td>
                                     <td>미래그룹</td>
                                     <td><a href="#">CJ올리브네트웍스</a></td>
                                     <td>법인</td>
@@ -442,7 +440,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><div class="attached">4/4회</div></td>        
+                                    <td><span class="mainC">3/4회</span></td>       
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -471,8 +469,8 @@
                                         <label for="ff5"></label>
                                     </td>
                                     <td>10</td>
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td> 
+                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
+                                    <td><input class="dateType" type="text" value="2023.01"></td>
                                     <td>SAP전략</td>
                                     <td><a href="#">주식회사에코아이티</a></td>
                                     <td>법인</td>
@@ -492,70 +490,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td>                                                
-                                        <div class="attached">3/4회</div>             
-
-                                        <div class="modalLayer absol is-active">
-                                            <div class="layerBox">
-                                                <div class="modalHeader">
-                                                    <!-- <button class="ico smClose"></button> -->
-                                                </div>
-                                                <div class="modalCont">
-                                                    <div class="tableBox">    
-                                                        <table class="chkType"> 
-                                                            <colgroup>
-                                                                <col width="40px">
-                                                                <col width="90px">
-                                                                <col width="">
-                                                                <col width="60px">
-                                                                <col width="100px">
-                                                                <col width="90px">
-                                                            </colgroup>                      
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>횟수</th>
-                                                                    <th>지급예정일자</th>
-                                                                    <th>거래처</th>
-                                                                    <th>투입인원</th>
-                                                                    <th>실지급액</th>
-                                                                    <th>지급예정금액</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>2</td>
-                                                                    <td>2023.01.01</td>
-                                                                    <td>주식회사에코아이티</td>
-                                                                    <td>3명</td>
-                                                                    <td class="right"><span class="comp">완</span> 2,000,000</td>
-                                                                    <td class="right">2,000,000</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>1</td>
-                                                                    <td>2023.02.01</td>
-                                                                    <td>주식회사에코아이티</td>
-                                                                    <td>3명</td>
-                                                                    <td class="right">-</td>
-                                                                    <td class="right">2,000,000</td>
-                                                                </tr> 
-                                                            </tbody>
-                                                            <tfoot>
-                                                                <tr class="p0">
-                                                                    <td colspan="4"></td>   
-                                                                    <td class="right">
-                                                                        <span class="black"><b>2,000,000</span>
-                                                                    </td>
-                                                                    <td class="right">                                                                                
-                                                                        <span class="tBuy">4,000,000</span>
-                                                                    </td>                                                                            
-                                                                </tr>
-                                                            </tfoot>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>        
+                                    <td><span class="mainC">3/4회</span></td>        
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -587,8 +522,8 @@
                                         <label for="ff6"></label>
                                     </td>
                                     <td>9</td>
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td> 
+                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
+                                    <td><input class="dateType" type="text" value="2023.01"></td>
                                     <td>SAP융합</td>
                                     <td><a href="#">(주)에이치엔엘시스템</a></td>
                                     <td>개인</td>
@@ -608,7 +543,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><div class="attached">3/3회</div></td>        
+                                    <td><span class="mainC">3/4회</span></td>       
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -637,8 +572,8 @@
                                         <label for="ff7"></label>
                                     </td>
                                     <td>8</td>
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td> 
+                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
+                                    <td><input class="dateType" type="text" value="2023.01"></td>
                                     <td>클라우드</td>
                                     <td><a href="#">중앙대학교 산학협력단</a></td>
                                     <td>법인</td>
@@ -658,7 +593,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><div class="attached">1/5회</span></td>        
+                                    <td><span class="mainC">3/4회</span></td>        
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -689,8 +624,8 @@
                                         <label for="ff8"></label>
                                     </td>
                                     <td>7</td>
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td> 
+                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
+                                    <td><input class="dateType" type="text" value="2023.01"></td>
                                     <td>플랫폼</td>
                                     <td><a href="#">주식회사 에코아이시티</a></td>
                                     <td>법인</td>
@@ -710,7 +645,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><div class="attached">2/5회</div></td>        
+                                    <td><span class="mainC">2/5회</span></td>        
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -734,8 +669,8 @@
                                         <label for="ff9"></label>
                                     </td>
                                     <td>6</td>
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td> 
+                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
+                                    <td><input class="dateType" type="text" value="2023.01"></td>
                                     <td>SAP전략</td>
                                     <td><a href="#">하이밸류컨설팅(주)</a></td>
                                     <td>법인</td>
@@ -750,7 +685,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><div class="attached">2/4회</div></td>        
+                                    <td><span class="mainC">3/4회</span></td>     
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -781,8 +716,8 @@
                                         <label for="ff10"></label>
                                     </td>
                                     <td>5</td>
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td> 
+                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
+                                    <td><input class="dateType" type="text" value="2023.01"></td>
                                     <td>SAP전략</td>
                                     <td><a href="#">삼성디스플레이(주)</a></td>
                                     <td>법인</td>
@@ -803,7 +738,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><div class="attached">1/4회</div></td>        
+                                    <td><span class="mainC">3/4회</span></td>       
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -827,8 +762,8 @@
                                         <label for="ff11"></label>
                                     </td>
                                     <td>4</td>
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td> 
+                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
+                                    <td><input class="dateType" type="text" value="2023.01"></td>
                                     <td>SAP전략</td>
                                     <td><a href="#">주식회사 에스에프에이반도체</a></td>
                                     <td>법인</td>
@@ -848,7 +783,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><div class="attached">3/5회</div></td>        
+                                    <td><span class="mainC">3/4회</span></td>      
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -880,8 +815,8 @@
                                         <label for="ff4"></label>
                                     </td>
                                     <td>11</td>
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType editType" type="text" value="2023.01.21"></td> 
+                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
+                                    <td><input class="dateType" type="text" value="2023.01"></td>
                                     <td>미래그룹</td>
                                     <td><a href="#">CJ올리브네트웍스</a></td>
                                     <td>법인</td>
@@ -902,7 +837,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><div class="attached">4/4회</div></td>        
+                                    <td><span class="mainC">3/4회</span></td>         
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -929,25 +864,13 @@
                             <tfoot>
                                 <tr>
                                     <td colspan="14"></td>
-                                    <td class="right">
-                                        <span class="black"><b>450,000,000</b></span>
-                                    </td>
+                                    <td>450,000,000</td>
 
-                                    <td class="right">
-                                        <span class="black"><b>1,100,000</b></span>
-                                    </td>
-                                    <td class="right">
-                                        <span class="black"><b>1,500,000,000</b></span>
-                                    </td>
-                                    <td class="right">
-                                        <span class="black"><b>400,000</b></span>
-                                    </td>
-                                    <td class="right">
-                                        <span class="black"><b>800,000</b></span>
-                                    </td>
-                                    <td class="right">
-                                        <span class="black"><b>4,500,000</b></span>
-                                    </td>
+                                    <td>1,100,000</td>
+                                    <td>1,500,000,000</td>
+                                    <td>400,000</td>
+                                    <td>800,000</td>
+                                    <td>4,500,000</td>
                                     <td colspan="9"></td>
                                 </tr>
                             </tfoot>
@@ -995,175 +918,24 @@
         </section>                        
     </section>
 
-    <div id="datepickerTest" class="modalLayer center">
-        <div class="layerBox smMidSize"><!--230901 클래스추가-ys -->
+    <!--귀속월 선택-->
+    <div class="modalLayer center is-active">
+        <div class="layerBox smMidSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
             </div>
             <div class="modalCont"> 
-                <h3>귀속월 선택</h3>      
-
-                <div id="datepicker" style="width: 100%;"></div>
-
-                <div class="listBottom">
-                    <button class="white">취소</button>
-                    <button class="">등록</button>
-                </div>
+                <h3>지급일자 선택</h3>      
+                <div id="datepicker"></div>
+            </div>
+            <div class="modalFooter">
+                <button class="white">취소</button>
+                <button class="">등록</button>
             </div>
         </div>        
         <div class="layerDim"></div>    
     </div>
-
-    <div id="" class="modalLayer center clientAdmin  is-active"><!--id바뀌면 말씀해주세요-->
-        <div class="layerBox midSize">
-            <div class="modalHeader">
-                <button class="ico layerClose"></button>
-                <h3>지급스케쥴</h3>
-                <div class="h3_sub">CJ프레시웨이</div>
-            </div>
-            <div class="tableTop right">
-                <button type="button" class="onlyIco smSize"><i class="ico smPlus"></i></button>
-            </div>
-            <div class="modalCont center">
-                
-                <div class="">
-                    <table> 
-                        <colgroup>
-                            <col width="50px">
-                            <col width="95px">
-                            <col width="65px">
-                            <col width="90px">
-                            <col width="70px">
-                            <col width="80px">
-                            <col width="75px">
-                            <col width="75px">
-                            <col width="100px">
-                            <col width="40px">
-                        </colgroup>                      
-                        <thead>
-                            <tr>
-                                <th width="50px">회차</th>
-                                <th width="95px">지급예정일</th>
-                                <th width="65px">지급여부</th>
-                                <th width="90px">공급가</th>
-                                <th width="70px">부가세</th>
-                                <th width="80px">매입합계</th>
-                                <th width="75px">산재보험</th>
-                                <th width="75px">고용보험</th>
-                                <th width="100px">차인지급액</th>
-                                <th width="40px">삭제</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1회</td>
-                                <td><input class="dateType hasDatepicker eLow" disabled="" type="text" value="2023.01" id="contractStartDate" name="startDate" maxlength="10" autocomplete="off"></td>
-                                <td>완료</td>
-                                <td class="right"><input type="text" class="txtRight" value="8,100,000" readonly=""></td>
-                                <td class="right">243,000</td>
-                                <td class="right">24,300</td>
-                                <td class="right">20,850</td>
-                                <td class="right">56,620</td>
-                                <td class="right">7,757,600</td>
-                                <td><i class="ico delete_bg" onclick="bizState.clickEvent('standard','delete',this)"></i></td>
-                            </tr>
-                            <tr>
-                                <td>2회</td>
-                                <td><input class="dateType hasDatepicker" type="text" value="2023.01" id="contractStartDate" name="startDate" maxlength="10" autocomplete="off"></td>
-                                <td>미지급</td>
-                                <td class="right"><input type="text" class="txtRight" value="8,100,000"></td>
-                                <td class="right">243,000</td>
-                                <td class="right">24,300</td>
-                                <td class="right">20,850</td>
-                                <td class="right">56,620</td>
-                                <td class="right">7,757,600</td>
-                                <td><i class="ico delete_bg" onclick="bizState.clickEvent('standard','delete',this)"></i></td>
-                            </tr>                        
-                            <tr>
-                                <td>3회</td>
-                                <td><input class="dateType hasDatepicker onGoing" type="text" value="2023.01" id="contractStartDate" name="startDate" maxlength="10" autocomplete="off"></td>
-                                <td>예정</td>
-                                <td class="right"><input type="text" class="txtRight" value="8,100,000"></td>
-                                <td class="right">243,000</td>
-                                <td class="right">24,300</td>
-                                <td class="right">20,850</td>
-                                <td class="right">56,620</td>
-                                <td class="right">7,757,600</td>
-                                <td><i class="ico delete_bg" onclick="bizState.clickEvent('standard','delete',this)"></i></td>
-                            </tr>
-                            <tr>
-                                <td>4회</td>
-                                <td><input class="dateType hasDatepicker" type="text" value="2023.01" id="contractStartDate" name="startDate" maxlength="10" autocomplete="off"></td>
-                                <td>예정</td>
-                                <td class="right"><input type="text" class="txtRight" value="8,100,000"></td>
-                                <td class="right">243,000</td>
-                                <td class="right">24,300</td>
-                                <td class="right">20,850</td>
-                                <td class="right">56,620</td>
-                                <td class="right">7,757,600</td>
-                                <td><i class="ico delete_bg" onclick="bizState.clickEvent('standard','delete',this)"></i></td>
-                            </tr>
-                            <tr>
-                                <td>5회</td>
-                                <td><input class="dateType hasDatepicker eHigh" type="text" value="2023.01" id="contractStartDate" name="startDate" maxlength="10" autocomplete="off"></td>
-                                <td>완료</td>
-                                <td class="right"><input type="text" class="txtRight" value="8,100,000"></td>
-                                <td class="right">243,000</td>
-                                <td class="right">24,300</td>
-                                <td class="right">20,850</td>
-                                <td class="right">56,620</td>
-                                <td class="right">7,757,600</td>
-                                <td><i class="ico delete_bg" onclick="bizState.clickEvent('standard','delete',this)"></i></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!--tfoot고정용 table-->
-                <div class="">
-                    <table>
-                        <colgroup>
-                            <col width="50px">
-                            <col width="95px">
-                            <col width="65px">
-                            <col width="90px">
-                            <col width="70px">
-                            <col width="80px">
-                            <col width="75px">
-                            <col width="75px">
-                            <col width="100px">
-                            <col width="40px">
-                        </colgroup>
-                        <tfoot>
-                           
-                            <tr>
-                                <td colspan="3"><b class="emp">총 계약금액 : 113,758,000</b></td>
-                                <td class="right"><b>42,750,000</b></td>
-                                <td class="right"><b>104,300</b></td>
-                                <td class="right"><b>104,300</b></td>
-                                <td class="right"><b>100,850</b></td>
-                                <td class="right"><b>106,620</b></td>
-                                <td class="right"><b>32,750,600</b></td>
-                                <td></td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-                <!--//tfoot고정용 table-->
-            </div>
-            
-            <div class="modalFooter">    
-                <div class="alertToast is-active" id="toast01">
-                    저장되었습니다.
-                    <i class="ico smClose white"></i>
-                </div>
-
-                <button class="white">닫기</button>
-                <button class="">저장</button>
-            </div>
-        </div>
-        <div class="layerDim"></div> 
-    </div>
-
+    <!--//귀속월 선택-->
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

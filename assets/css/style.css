@@ -58,42 +58,42 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: "NotoSansKR";
   font-style: thin;
   font-weight: 100;
-  src: url(../font/NotoSans-Thin.woff2) format("woff2");
+  src: url(../font/NotoSansKR-Thin.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "NotoSansKR";
   font-style: light;
   font-weight: 300;
-  src: url(../font/NotoSans-Light.woff2) format("woff2");
+  src: url(../font/NotoSansKR-Light.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "NotoSansKR";
   font-style: normal;
   font-weight: 400;
-  src: url(../font/NotoSans-Regular.woff2) format("woff2");
+  src: url(../font/NotoSansKR-Regular.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "NotoSansKR";
   font-style: medium;
   font-weight: 500;
-  src: url(../font/NotoSans-Medium.woff2) format("woff2");
+  src: url(../font/NotoSansKR-Medium.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "NotoSansKR";
   font-style: bold;
   font-weight: 700;
-  src: url(../font/NotoSans-Bold.woff2) format("woff2");
+  src: url(../font/NotoSansKR-Bold.woff2) format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "NotoSansKR";
   font-style: black;
   font-weight: 900;
-  src: url(../font/NotoSans-Black.woff2) format("woff2");
+  src: url(../font/NotoSansKR-Black.woff2) format("woff2");
 }
 .underBg {
   display: inline-block;
@@ -755,8 +755,8 @@ header {
 .contWrapper .contLayout .recruitList, .contWrapper .contLayout .recruitAdmin, .contWrapper .contLayout .recruitDetail,
 .contWrapper .contLayout .sendedOfferList, .contWrapper .contLayout .sendedOfferDetail, .contWrapper .contLayout .talentedSearch,
 .contWrapper .contLayout .clientBuy, .contWrapper .contLayout .clientSales, .contWrapper .contLayout .bizState, .contWrapper .contLayout .resumeList,
-.contWrapper .contLayout .dashboard, .contWrapper .contLayout .insertType, .contWrapper .contLayout .projTotal, .contWrapper .contLayout .salesLedger, .contWrapper .contLayout .sourcingTotal,
-.contWrapper .contLayout .bizIncomeReport, .contWrapper .contLayout .purchaseLedger, .contWrapper .contLayout .empTotal {
+.contWrapper .contLayout .dashboard, .contWrapper .contLayout .insertType, .contWrapper .contLayout .projTotal, .contWrapper .contLayout .salesLedger, .contWrapper .contLayout .sourcingTotal, .contWrapper .contLayout .empTotal,
+.contWrapper .contLayout .bizIncomeReport, .contWrapper .contLayout .purchaseLedger, .contWrapper .contLayout .eiCheck, .contWrapper .contLayout .wcCheck {
   height: calc(100vh - 60px);
   padding: 1.875rem 1.875rem 1.25rem 1.875rem;
   overflow-y: auto;
@@ -2623,7 +2623,7 @@ footer.toast button + button {
 .originNum {
   height: 31.25rem;
 }
-.originNum .h3_sub + .tableBox {
+.originNum .tableBox {
   margin-top: 1.25rem;
   max-height: 25rem;
 }
@@ -2658,6 +2658,19 @@ footer.toast button + button {
 }
 .paySchedule table tfoot td {
   padding: 0.25rem;
+}
+
+.paySchedule,
+.pubFileUpload {
+  height: 34.375rem;
+}
+.paySchedule .h3_sub + .tableTop,
+.pubFileUpload .h3_sub + .tableTop {
+  margin-top: 1.25rem;
+}
+.paySchedule .tableBox,
+.pubFileUpload .tableBox {
+  max-height: 25rem;
 }
 
 .joinRequest .inputList.flex h6,
@@ -3227,6 +3240,9 @@ footer.toast button + button {
 .condition .hasBtn .hasTxt + label {
   margin-left: 1.25rem;
 }
+.condition .hasBtn input {
+  width: 25rem;
+}
 .condition .select.autoSize,
 .condition select.autoSize {
   height: 2.75rem;
@@ -3263,11 +3279,24 @@ footer.toast button + button {
 .tableTop.right {
   justify-content: flex-end;
 }
+.tableTop.center {
+  width: 80%;
+  margin: 1.25rem auto;
+}
+.tableTop.center .hasBtn {
+  width: 100%;
+}
 .tableTop .prefix,
 .tableTop .suffix {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.625rem;
+}
+.tableTop .prefix .refer,
+.tableTop .suffix .refer {
+  display: flex;
+  gap: 0.625rem;
+  font-size: 0.875rem;
 }
 .tableTop select {
   min-width: 5rem;
@@ -3287,6 +3316,14 @@ footer.toast button + button {
 .tableTop input[type=checkbox] + label,
 .tableTop input[type=radio] + label {
   font-size: 0.875rem;
+}
+.tableTop .hasBtn input[type=text] {
+  height: 2.75rem;
+}
+.tableTop .hasBtn button {
+  min-width: auto;
+  width: auto;
+  line-height: 2.75rem;
 }
 
 .tableBox {
@@ -4660,6 +4697,7 @@ input[type=password]::placeholder {
 }
 .hasBtn input {
   padding-left: 0.4375rem;
+  flex-grow: 1;
 }
 .hasBtn .button,
 .hasBtn button {
@@ -7607,12 +7645,12 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .ico.goLt {
   width: 0.5625rem;
   height: 1rem;
-  background-position: -40px -200px;
+  background-position: -40px -180px;
 }
 .ico.goRgt {
   width: 0.5625rem;
   height: 1rem;
-  background-position: -60px -200px;
+  background-position: -60px -180px;
 }
 
 /* GNB 아이콘 */
@@ -7859,6 +7897,15 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .boxWrap h5 {
   font-weight: 500;
+}
+.boxWrap .tableTop .prefix,
+.boxWrap .tableTop .suffix {
+  gap: 0.3125rem;
+}
+.boxWrap .tableTop select,
+.boxWrap .tableTop input[type=text] {
+  min-width: auto;
+  height: 1.875rem;
 }
 
 .boxList {
@@ -11619,7 +11666,7 @@ h6 + .h6_sub {
   width: 15px;
   height: 15px;
   background-image: url(../img/icoDatepicker.png);
-  text-indent: -999px;
+  text-indent: -9999px;
 }
 .ui-widget-header .ui-icon.ui-icon-circle-triangle-w {
   background-position: 0 0;

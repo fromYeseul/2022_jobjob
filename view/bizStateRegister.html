@@ -292,6 +292,7 @@
                                             <div class="suffix">
                                                 <button class="onlyIco midSize"><i class="ico split"></i></button>
                                                 <button class="onlyIco midSize"><i class="ico synch"></i></button>
+                                                <button class="onlyIco midSize"><i class="ico addLine_chked"></i></button><!--240115 추가-ys-->
                                                 <button class="onlyIco midSize"><i class="ico addLine"></i></button>
                                             </div>
                                         </div>
@@ -415,7 +416,7 @@
                                                                 <col width="9%">
                                                                 <col width="13%">
                                                                 <col width="6%">
-                                                            </colgroup> -->
+                                                            </colgroup>
                                                             <colgroup>
                                                                 <col width="40px">
                                                                 <col width="80px">
@@ -430,6 +431,19 @@
                                                                 <col>
 
                                                                 <col width="45px">
+                                                            </colgroup> -->
+                                                            <colgroup>
+                                                                <col width="35px">
+                                                                <col width="75px">
+                                                                <col width="65px" span="3">
+                                                                <col width="80px">
+                                                                <col width="80px">
+                                                                <col width="50px">
+                                                                <col width="85px">
+                                                                <col width="75px">
+                                                                <col>
+
+                                                                <col width="40px">
                                                             </colgroup>
                                                             <thead>
                                                                 <tr>
@@ -437,6 +451,7 @@
                                                                     <th>그룹</th>
                                                                     <!-- <th>직무/모듈</th> -->
                                                                     <th>구분</th>
+                                                                    <th>기타</th><!--231130 추가-ys-->
                                                                     <th>등급</th>
                                                                     <th>시작일</th>
 
@@ -471,6 +486,12 @@
                                                                             <option value="dog">공급</option>
                                                                         </select>
                                                                     </td>
+
+                                                                    <!--240115 추가-ys-->
+                                                                    <td>
+                                                                        <input type="text">
+                                                                    </td>
+                                                                    <!--//240115 추가-ys-->
                                                                     <td>
                                                                         <select name="" id="">
                                                                             <option value="">특급</option>
@@ -508,6 +529,9 @@
                                                                         </select>
                                                                     </td>
                                                                     <td>
+                                                                        <input type="text">
+                                                                    </td>
+                                                                    <td>
                                                                         <select name="" id="">
                                                                             <option value="">특급</option>
                                                                             <option value="cat">고급</option>
@@ -543,7 +567,7 @@
                                                                 <!--231130 수정-ys-->
                                                                 <tr>
                                                                     <td colspan="5"></td>
-                                                                    <td class="right">
+                                                                    <td class="right" colspan="2"><!-- 240115 수정-ys-->
                                                                         총M/M : <b class="dark">4</b>
                                                                         <br>
                                                                         총수량 : <b class="dark">0</b>
@@ -608,17 +632,23 @@
                                                 <div id="onA-1" class="tabCont is-active">
                                                     <div class="tableBox">
                                                         <table>
+                                                            <!--240115 수정-ys-->
                                                             <colgroup>
                                                                 <col width="10%">
-                                                                <col width="5%">
-                                                                <col width="15%">
-                                                                <col width="15%">
-                                                                <col width="20%">
-                                                                <col width="5%">
+                                                                <col width="9%">
+                                                                <col width="9%">
+                                                                <col width="7%">
+                                                                <col width="12%">
+                                                                <col width="14%">
+                                                                <col>
+                                                                <col width="6%">
                                                             </colgroup>
+                                                            <!--//240115 수정-ys-->
                                                             <thead>
                                                                 <tr>
                                                                     <th>그룹</th>
+                                                                    <th>구분</th><!--240115 추가-ys-->
+                                                                    <th>등급</th><!--240115 추가-ys-->
                                                                     <th>M/M<br>(수량)</th>
                                                                     <th>매입단가</th>
                                                                     <th>매입합계</th>
@@ -635,6 +665,20 @@
                                                                             <option value="dog">삼성B</option>
                                                                         </select>
                                                                     </td>
+                                                                    <td>
+                                                                        <select name="" id="">
+                                                                            <option value="">선택</option>
+                                                                            <option value="cat">삼성A</option>
+                                                                            <option value="dog">삼성B</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select name="" id="">
+                                                                            <option value="">선택</option>
+                                                                            <option value="cat">삼성A</option>
+                                                                            <option value="dog">삼성B</option>
+                                                                        </select>
+                                                                    </td>
                                                                     <td>2.0</td>
                                                                     <td class="right">8,000,000</td>
                                                                     <td class="right">16,000,000</td>
@@ -642,6 +686,20 @@
                                                                     <td><i class="ico delete_bg"></i></td>
                                                                 </tr>
                                                                 <tr class="is-filter">
+                                                                    <td>
+                                                                        <select name="" id="">
+                                                                            <option value="">선택</option>
+                                                                            <option value="cat">삼성A</option>
+                                                                            <option value="dog">삼성B</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select name="" id="">
+                                                                            <option value="">선택</option>
+                                                                            <option value="cat">삼성A</option>
+                                                                            <option value="dog">삼성B</option>
+                                                                        </select>
+                                                                    </td>
                                                                     <td>
                                                                         <select name="" id="">
                                                                             <option value="">선택</option>
@@ -667,12 +725,14 @@
                                                                 </tr>-->
                                                                 <!--231130 수정-ys-->
                                                                 <tr>
-                                                                    <td colspan="4" class="right">
+                                                                    <td colspan="6" class="right"><!--240115 수정-ys-->
                                                                         GP : <b class="dark">154,000,000</b>
                                                                         <br>
                                                                         (ratio <b class="marked">31.4%</b>)
                                                                     </td>
-                                                                    <td colspan="2" class="sortL">매입합계 : <b class="dark ">85,020,000</b></td>
+                                                                    <td colspan="2" class="sortL">
+                                                                        매입합계 : <b class="dark ">85,020,000</b>
+                                                                    </td>
                                                                 </tr>
                                                                 <!--//231130 수정-ys-->
                                                             </tfoot>
@@ -731,7 +791,7 @@
                                                                         <!--내부-->
                                                                         <th class="fold inner">거래</th>
                                                                         <th class="hideI inner">부서</th>
-                                                                        <th class="hideI inner">이관매출</th>
+                                                                        <th class="hideI inner">상태</th><!--240115 수정-ys-->
                                                                         <!--//내부-->
                                                                     </tr>
                                                                 </thead>
@@ -826,7 +886,13 @@
                                                                                 <option value="">미래융합</option>
                                                                             </select>
                                                                         </td>
-                                                                        <td class="hideI"><input type="text"></td>
+                                                                        <td class="hideI">
+                                                                            <!-- <input type="text"> -->
+                                                                            <!--240115 수정-ys-->
+                                                                            <button class="xsSize">적용</button>
+                                                                            <button class="bdType xsSize">변경</button>
+                                                                            <!--//240115 수정-ys-->
+                                                                        </td>
                                                                         <!-- <td class="right hideI"><span class="emp"> 1,000,000</span></td> -->
                                                                         <!--//내부-->
 
@@ -1127,7 +1193,7 @@
                                                                 <!--내부-->
                                                                 <th class="inner on">거래</th>
                                                                 <th class="hideI inner on">부서</th>
-                                                                <th class="hideI inner on">이관매출</th>
+                                                                <th class="hideI inner on">상태</th><!--240115 수정-ys-->
                                                                 <!--//내부-->
                                                             </tr>
                                                         </thead>
@@ -1223,7 +1289,12 @@
                                                                         <option value="">미래융합</option>
                                                                     </select>
                                                                 </td>
-                                                                <td class="hideI on"><input type="text"></td>
+                                                                <td class="hideI on">
+                                                                    <!-- <input type="text">                                                                 -->
+                                                                    <!--240115 수정-ys-->
+                                                                    <button class="bdType xsSize">변경</button>
+                                                                    <!--//240115 수정-ys-->
+                                                                </td>
                                                                 <!-- <td class="right hideI"><span class="emp"> 1,000,000</span></td> -->
                                                                 <!--//내부-->
 
@@ -1317,7 +1388,9 @@
                                                                         <option value="">미래융합</option>
                                                                     </select>
                                                                 </td>
-                                                                <td class="hideI on"><input type="text"></td>
+                                                                <td class="hideI on">
+                                                                    <button class="xsSize">적용</button>
+                                                                </td>
                                                                 <!-- <td class="right hideI"><span class="emp"> 1,000,000</span></td> -->
                                                                 <!--//내부-->
 
@@ -1502,19 +1575,34 @@
                                 </div>
                                 <div class="suffix">
                                     <div class="tabWrapper" id="contractClass">
-                                        <ul class="tabBtnWrap autoSize">
-                                            <li class="tabBtn prefix">
-                                                <a href="#contract-01" class="is-active">투입인력</a>
-                                            </li>
-                                            <li class="tabBtn center">
-                                                <a href="#contract-02">제경비</a>
-                                            </li>
-                                            <!-- <div class="h6_sub">동일 소속으로 투입된 인력입니다.</div> 투입인력 active 시 보임 -->
-                                            <div class="h6_sub">'매입합산제외' 항목으로 입력된 제경비는 매입합계금액에 합산되지 않습니다.</div><!--제경비 active 시 보임-->
-                                            <!-- <div class="suffix">
-                                                <button class="white smSize">계약분리</button>
-                                            </div> -->
-                                        </ul>
+                                        <div class="flex">
+                                            <ul class="tabBtnWrap autoSize">
+                                                <li class="tabBtn">
+                                                    <a href="#contract-01" class="is-active">투입인력</a>
+                                                </li>
+                                                <li class="tabBtn">
+                                                    <a href="#contract-02">제경비</a>
+                                                </li>
+                                                <!--240115 추가-ys-->
+                                                <li class="tabBtn">
+                                                    <a href="#contract-03">지급스케쥴</a>
+                                                </li>
+                                                <!--//240115 추가-ys-->
+
+                                                <!-- <div class="h6_sub">동일 소속으로 투입된 인력입니다.</div> 투입인력 active 시 보임 -->
+                                                <div class="h6_sub">'매입합산제외' 항목으로 입력된 제경비는 매입합계금액에 합산되지 않습니다.</div><!--제경비 active 시 보임-->
+                                                <!-- <div class="suffix">
+                                                    <button class="white smSize">계약분리</button>
+                                                </div> -->                                            
+                                            </ul>
+                                            
+                                            <!--240115 추가-ys-->
+                                            <div class="suffix">
+                                                <button class="white smSize">수정</button>
+                                            </div>
+                                            <!--//240115 추가-ys-->
+                                        </div>
+
                                         <div class="tabContWrap">
                                             <div id="contract-01" class="tabCont is-active">
                                                 <div class="tableBox">
@@ -1653,6 +1741,74 @@
                                                     </table>
                                                 </div>
                                             </div>
+                                            <!--240115 추가-ys-->
+                                            <div id="contract-03" class="tabCont">
+                                                <div class="tableBox">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>회차</th>
+                                                                <th>지급예정일</th>
+                                                                <th>지급여부</th>
+                                                                <th>공급가</th>
+                                                                <th>부가세</th>
+                                                                <th>매입합계</th>
+                                                                <th>산재보험</th>
+                                                                <th>고용보험</th>
+                                                                <th>차인지급액</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1회</td>  
+                                                                <td>yyyy.mm.dd</td>
+                                                                <td><button class="round order">완료</button></td>  
+                                                                <td>500,000,000</td>  
+                                                                <td>500,000</td>  
+                                                                <td>550,000,000</td>  
+                                                                <td>123,456</td>
+                                                                <td>23,456</td>  
+                                                                <td>567,567,000</td>  
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2회</td>  
+                                                                <td>yyyy.mm.dd</td>
+                                                                <td>예정</td>  
+                                                                <td>500,000,000</td>  
+                                                                <td>500,000</td>  
+                                                                <td>550,000,000</td>  
+                                                                <td>123,456</td>
+                                                                <td>23,456</td>  
+                                                                <td>567,567,000</td>  
+                                                            </tr>
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td colspan="3"><b class="dark">합계</b></td>
+                                                                <td class="right">
+                                                                    <b class="dark">265,100,000</b>
+                                                                </td>
+                                                                <td class="right">
+                                                                    <b class="dark">265,100,000</b>
+                                                                </td>
+                                                                <td class="right">
+                                                                    <b class="dark">265,100,000</b>
+                                                                </td>
+                                                                <td class="right">
+                                                                    <b class="dark">265,100,000</b>
+                                                                </td>
+                                                                <td class="right">
+                                                                    <b class="dark">265,100,000</b>
+                                                                </td>
+                                                                <td class="right">
+                                                                    <b class="dark">265,100,000</b>
+                                                                </td>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <!--//240115 추가-ys-->
                                         </div>
                                     </div>
                                 </div>
@@ -3380,7 +3536,7 @@
     <!--//청구스케줄, 입금스케줄 팝업-->
 
     <!--제경비입력 팝업-->
-    <div id="" class="modalLayer center is-active">
+    <div id="" class="modalLayer center">
         <div class="layerBox laSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>

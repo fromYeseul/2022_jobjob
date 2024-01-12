@@ -10,11 +10,23 @@
     &.right{
             justify-content: flex-end;
     }
+    &.center{
+        width: 80%;
+        margin: rem(20) auto;
+        .hasBtn{
+            width: 100%;
+        }
+    }
     .prefix,
     .suffix{
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: rem(10);
+        .refer{
+            display: flex;
+            gap: rem(10);
+            font-size: rem(14);
+        }
     }
 
     select{
@@ -36,6 +48,16 @@
     input[type=radio]{
         & + label{
             font-size: rem(14);
+        }
+    }
+    .hasBtn{
+        input[type=text]{
+            height: rem(44);
+        }
+        button{
+            min-width: auto;
+            width: auto;
+            line-height: rem(44);
         }
     }
 }

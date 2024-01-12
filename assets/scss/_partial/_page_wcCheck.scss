@@ -1,0 +1,25 @@
+.wcCheck{
+    //width: 100%;
+    .tableTop{
+        margin-top: rem(30);
+    }
+    .tableBox{
+        max-height: calc(100vh - 371px);    
+        td{
+            text-align: right;
+            p{
+                color: $black;
+                &.subInfo{
+                    color: $cancel;
+                }
+                &.marked{
+                    color: $error;
+                }
+            }
+        }       
+        tfoot{
+            text-align: right;
+            font-weight: bold;
+        }
+    }
+}
