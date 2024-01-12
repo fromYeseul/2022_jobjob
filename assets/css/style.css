@@ -2646,6 +2646,9 @@ footer.toast button + button {
 .paySchedule .tableBox {
   max-height: 25rem;
 }
+.paySchedule table .datepicker input {
+  text-align: left;
+}
 .paySchedule table input {
   text-align: right;
 }
@@ -3684,15 +3687,12 @@ table .ellipsis .dNear + a,
 table .ellipsis .label + a {
   margin-left: 0.3125rem;
 }
+table .datepicker,
 table input,
 table input[type=text] {
   width: 100%;
   height: 2rem;
   background: transparent;
-}
-table input[type=text].dateType,
-table input[type=text][type=text].dateType {
-  width: 100%;
 }
 table .inputIco {
   width: calc(100% - 26px);
@@ -6946,6 +6946,7 @@ select.onGoing:focus {
   font-size: 14px;
   letter-spacing: -0.25px;
   text-align: left;
+  white-space: nowrap;
   padding: 0.3125rem 0.625rem;
   padding-right: 1.875rem;
   min-width: 12.5rem;
@@ -8853,6 +8854,9 @@ h6 + .h6_sub {
 .regiPart .boxWrap .inputList span {
   font-weight: 300;
   cursor: pointer;
+}
+.regiPart .boxWrap .inputList span.range {
+  cursor: initial;
 }
 .regiPart .boxWrap .inputList label label {
   float: right;
@@ -11504,6 +11508,28 @@ h6 + .h6_sub {
   background: #fff;
   border-radius: 0.25rem;
   border: 1px solid #cccccc;
+}
+.datepicker.sat input {
+  color: #009ce0;
+}
+.datepicker.sun input {
+  color: #ff1236;
+}
+.datepicker.onGoing {
+  border: 1px solid #ffc812;
+}
+.datepicker.onGoing input {
+  color: #ffc812;
+}
+.datepicker.disabled {
+  opacity: 1;
+}
+.datepicker.disabled input {
+  color: #a6a6b6;
+  cursor: not-allowed;
+}
+.datepicker.disabled input::placeholder {
+  color: #cccccc;
 }
 .datepicker + .datepicker {
   margin-left: 0.1875rem;

@@ -38,7 +38,7 @@
                 <nav class="navWrapper">
                     <ul>
                         <li class="noDepth">
-                            <a alertToast href="#"><i class="ico home"></i><span class="menuTxt">홈</span></a>
+                            <a href="#"><i class="ico home"></i><span class="menuTxt">홈</span></a>
                         </li>
                         <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span></a>
                             <ul>
@@ -165,9 +165,18 @@
                                         </li>
                                         <li class="bizTerm">
                                             <h6 class="need">사업기간</h6>
-                                            <input class="dateType" type="text" placeholder="시작일">
+                                            <div class="flex">
+                                                <div class="datepicker">
+                                                    <input type="text" placeholder="연-월-일" id="datepicker1" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/img/icoCal.png" alt="..." title="...">
+                                                </div>
+                                                <span class="range">~</span>
+                                                <div class="datepicker">
+                                                    <input type="text" placeholder="연-월-일" id="datepicker2" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/img/icoCal.png" alt="..." title="...">
+                                                </div>
+                                            </div>
+                                            <!-- <input class="dateType" type="text" placeholder="시작일">
                                             <span class="range">~</span>
-                                            <input class="dateType" type="text" placeholder="종료일">
+                                            <input class="dateType" type="text" placeholder="종료일"> -->
                                         </li>
                                         <li>
                                             <h6 class="">검수</h6><!--231115 need제거-ys-->
@@ -3191,7 +3200,7 @@
     <!--//인력검색-->
 
     <!--청구스케줄, 입금스케줄 팝업-->
-    <div id="" class="modalLayer center">
+    <div id="" class="modalLayer center is-active">
         <div class="layerBox mid-laSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -3522,7 +3531,7 @@
             </div>      
 
             <div class="modalFooter">    
-                <div class="alertToast is-active" id="toast01">
+                <div class="alertToast is-active">
                     저장되었습니다.
                     <i class="ico smClose white"></i>
                 </div>

@@ -87,6 +87,7 @@
             <section class="contLayout">
                 <section class="bizIncomeReport">
                     <h2>사업소득명세서</h2>
+
                     <div class="condition">
                         <ul>
                             <li>
@@ -125,10 +126,10 @@
                                 <p class="condiTit">지급예정일</p>                                
                                 <div class="flex">
                                     <div class="datepicker">
-                                        <input type="text" placeholder="연-월-일" id="datepicker1" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/img/icoCal.png" alt="..." title="...">
+                                        <input type="text" placeholder="연-월-일">
                                     </div>
                                     <div class="datepicker">
-                                        <input type="text" placeholder="연-월-일" id="datepicker2" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/img/icoCal.png" alt="..." title="...">
+                                        <input type="text" placeholder="연-월-일">
                                     </div>
                                 </div>
                             </li>
@@ -145,11 +146,11 @@
                             </li>     
                             <li>
                                 <label class="condiTit" for="p2">이름</label>                                
-                                <input type="text" id="p2" maxlength="20" placeholder="이름">
+                                <input type="text" id="p2" placeholder="이름">
                             </li> 
                             <li class="hasBtn">
                                 <label class="condiTit" for="p3">계약명</label>                                
-                                <input type="text"  class="smSize" id="p3" maxlength="20" placeholder="검색어 입력">
+                                <input type="text" class="smSize" id="p3" placeholder="검색어 입력">
                                 <button>
                                     <i class="ico search white"></i>
                                 </button>
@@ -180,7 +181,7 @@
                         <table class="lowType">
                             <colgroup>
                                 <col width="40px" span="2">
-                                <col width="95px">
+                                <col width="85px">                                      
                                 <col width="90px">                                      
                                 <col width="50px">       
                                 <col width="360px"> 
@@ -233,7 +234,9 @@
                                     </td>
                                     <td>14</td>                                                                                         
                                     <td>
-                                        <input class="dateType onGoing" type="text" value="2023.01"><!--수정했을때 onGoing-->
+                                        <div class="datepicker onGoing"><!--수정했을때 onGoing-->
+                                            <input type="text" placeholder="연-월" value="2024.01" id="datepicker00">
+                                        </div>
                                     </td>
                                     <td>SAP전략</td>
                                     <td>기타</td>                                            
@@ -276,7 +279,9 @@
                                     </td>
                                     <td>13</td>                                                                                        
                                     <td>
-                                        <input class="dateType" type="text" value="2023.01">
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월" value="2024.12">
+                                        </div>
                                     </td>
                                     <td>대외사업</td>
                                     <td>SAP</td>
@@ -319,7 +324,9 @@
                                     </td>
                                     <td>12</td>                                                                                                                                                     
                                     <td>
-                                        <input class="dateType" type="text" value="2023.01">
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월" value="2024.12">
+                                        </div>
                                     </td>
                                     <td>플랫폼</td>
                                     <td>SBW</td>
@@ -354,7 +361,9 @@
                                     </td>
                                     <td>11</td>                                                                                                                                                  
                                     <td>
-                                        <input class="dateType" type="text" value="2023.01">
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월" value="2024.12">
+                                        </div>
                                     </td> 
                                     <td>미래그룹</td>
                                     <td>WEB</td>
@@ -398,7 +407,9 @@
                                     </td>
                                     <td>14</td>                                                                                                                                               
                                     <td>
-                                        <input class="dateType" type="text" value="2023.01">
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월" value="2024.12">
+                                        </div>
                                     </td>
                                     <td>SAP전략</td>
                                     <td>기타</td>                                            
@@ -509,8 +520,8 @@
                 <div class="tableBox sticky">
                     <table> 
                         <colgroup>
-                            <col width="40px">
-                            <col width="115px">
+                            <col width="50px">
+                            <col width="105px">
                             <col width="65px">
                             <col width="90px">
                             <col width="75px" span="4">
@@ -535,7 +546,9 @@
                             <tr class="disabled">
                                 <td class="center">1회</td>
                                 <td>
-                                    <input class="dateType" type="text" value="2023.01.01" disabled>
+                                    <div class="datepicker sat disabled"><!--토요일일때 sat / 일요일 sun-->
+                                        <input type="text" placeholder="연-월-월" value="2024.01.01" id="datepicker11">
+                                    </div>
                                 </td>
                                 <td class="center"><button class="round order">완료</button></td>
                                 <td><input type="text" value="8,100,000" readonly></td>
@@ -549,7 +562,9 @@
                             <tr>
                                 <td class="center">2회</td>
                                 <td>
-                                    <input class="dateType sat" type="text" value="2023.01.30"><!--토요일일때 sat-->
+                                    <div class="datepicker sat"><!--토요일일때 sat / 일요일 sun-->
+                                        <input type="text" placeholder="연-월-일" value="2024.01.01">
+                                    </div>
                                 </td>
                                 <td class="center">미지급</td>
                                 <td><input type="text" value="8,100,000"></td>
@@ -563,7 +578,9 @@
                             <tr>
                                 <td class="center">3회</td>
                                 <td>
-                                    <input class="dateType sun" type="text" value="2023.01.01"><!--일요일일때 sun-->
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일" value="2024.01.01">
+                                    </div>
                                 </td>
                                 <td class="center"><button class="round order">완료</button></td>
                                 <td><input type="text" value="8,100,000" readonly></td>
@@ -576,7 +593,11 @@
                             </tr>
                             <tr>
                                 <td class="center">4회</td>
-                                <td><input class="dateType" type="text" value="2023.01.30"></td>
+                                <td>
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일" value="2024.01.01">
+                                    </div>
+                                </td>
                                 <td class="center">미지급</td>
                                 <td><input type="text" value="8,100,000"></td>
                                 <td>243,000</td>
@@ -586,9 +607,13 @@
                                 <td>7,757,600</td>
                                 <td class="center"><i class="ico delete_bg"></i></td>
                             </tr>   
-                            <tr>
+                            <tr class="disabled">
                                 <td class="center">5회</td>
-                                <td><input class="dateType" type="text" value="2023.01.01" disabled></td>
+                                <td>
+                                    <div class="datepicker disabled">
+                                        <input type="text" placeholder="연-월-일" value="2024.01.01">
+                                    </div>
+                                </td>
                                 <td class="center"><button class="round order">완료</button></td>
                                 <td><input type="text" value="8,100,000" readonly></td>
                                 <td>243,000</td>
@@ -600,7 +625,11 @@
                             </tr>
                             <tr>
                                 <td class="center">6회</td>
-                                <td><input class="dateType" type="text" value="2023.01.30"></td>
+                                <td>
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일" value="2024.01.01">
+                                    </div>
+                                </td>
                                 <td class="center">미지급</td>
                                 <td><input type="text" value="8,100,000"></td>
                                 <td>243,000</td>
@@ -747,6 +776,23 @@
     <!--//보험 근로자원부번호 수정-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../assets/js/script.js"></script>     
+    <script>  
+        $(function(){
+            $("#datepicker00").datepicker({
+                dateFormat:'yy/mm/dd'
+                , showOn: 'button'
+                , buttonImage: '../assets/img/icoCal.png'
+                , buttonImageOnly: true
+            })
+            $("#datepicker11").datepicker({
+                dateFormat:'yy/mm'
+                , showOn: 'button'
+                , buttonImage: '../assets/img/icoCal.png'
+                , buttonImageOnly: true
+            })
+        });
+    </script>
 </body>
 </html>

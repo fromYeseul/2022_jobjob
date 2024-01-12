@@ -149,26 +149,22 @@
                                 <p class="condiTit">조회일자</p>
                                 <div class="flex">
                                     <div class="datepicker">
-                                        <input type="text" placeholder="연-월-일" id="datepicker1" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/img/icoCal.png" alt="..." title="...">
+                                        <input type="text" placeholder="연-월-일">
                                     </div>
                                     <div class="datepicker">
-                                        <input type="text" placeholder="연-월-일" id="datepicker2" class="hasDatepicker"><img class="ui-datepicker-trigger" src="../assets/img/icoCal.png" alt="..." title="...">
+                                        <input type="text" placeholder="연-월-일">
                                     </div>
                                 </div>
                             </li>                         
                             
                             <li>
                                 <label class="condiTit" for="project2">지급여부</label>
-                                <select class="mid-laSize">
+                                <select>
                                     <option value="">전체</option>
                                     <option value="001">법인</option>
                                     <option value="002">개인</option>
                                 </select>
                             </li>
-                            <!-- <li>
-                                <label class="condiTit" for="project2">투입인원</label>                                
-                                <input type="text" class="smSize" id="project2" maxlength="20" placeholder="이름" style="width: 130px">
-                            </li>  -->
                             <li class="hasBtn">
                                 <label class="condiTit" for="project2">검색구분</label>
                                 <select class="mid-laSize">
@@ -195,12 +191,10 @@
                             <label for="c01">계산서 미발행</label>
                         </div>
                         <div class="suffix">
-                            <!-- <button class="white">영세율 처리</button> -->
                             <button class="white">지급처리</button>
                             <button class="white">
                                 <i class="ico excDown"></i>엑셀 다운로드
                             </button>
-                            <!-- <button class="bdType">홈텍스 불러오기</button> -->
                             <button>저장</button>
                         </div>
                     </div>
@@ -209,8 +203,8 @@
                         <table class="lowType">
                             <colgroup>
                                 <col width="40px" span="2">
-                                <col width="110px"> 
-                                <col width="95px"> 
+                                <col width="100px"> 
+                                <col width="85px"> 
                                 <col width="80px"> 
                                 <col width="170px">  
                                 <col width="60px" span="4"> 
@@ -239,7 +233,6 @@
                                 <th>유형</th>
                                 <th>투입인원</th>
                                 <th>기술구분</th>
-                                <!-- <th>상태</th> -->
                                 <th>프로젝트</th>
                                 <th>계약</th>
                                 <th>계약기간</th>
@@ -269,14 +262,19 @@
                                         <label for="ff1"></label>
                                     </td>
                                     <td>14</td>
-                                    <td><input class="dateType sun" type="text" value="2023.01.21"></td><!--토요일 sat / 일요일 sun -->
-                                    <td><input class="dateType onGoing" type="text" value="2023.01"></td><!--수정된 상태 onGoing-->
+                                    <td>
+                                        <div class="datepicker sun"><!--토요일 sat / 일요일 sun -->
+                                            <input type="text" placeholder="연-월-일" value="2024.01.01" id="datepicker0">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="datepicker onGoing"><!--수정된 상태 onGoing-->
+                                            <input type="text" placeholder="연-월" value="2024.01" id="datepicker00">
+                                        </div>
+                                    </td>
                                     <td>SAP전략</td>
                                     <td><a href="#">동부씨엔아이(주)IT부문</a></td>
                                     <td>법인</td>
-                                    <!-- <td title="김재윤, 박재윤, 홍길동, 김연아, 박지성">
-                                        <span class="underL">5명</span>
-                                    </td> -->
                                     <td>
                                         <span class="hasTooltip">                                   
                                             <span class="underL">5명</span>
@@ -291,7 +289,7 @@
                                     </td>
                                     <td>2022.04.18 ~ 2023.05.17</td>
                                     <td><i class="ico preview"></i></td>
-                                    <td><span class="mainC">3/4회</span></td>         
+                                    <td><span class="layerOpen">3/4회</span></td>         
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>                                
                                     <td class="right">150,000,000</td>          
@@ -322,8 +320,16 @@
                                         <label for="ff2"></label>
                                     </td>
                                     <td>13</td>
-                                    <td><input class="dateType sat" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType" type="text" value="2023.01"></td>
+                                    <td>
+                                        <div class="datepicker sat"><!--토요일 sat / 일요일 sun -->
+                                            <input type="text" placeholder="연-월-일" value="2024.01.01">
+                                        </div>
+                                    </td>  
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월" value="2024.01">
+                                        </div>
+                                    </td>
                                     <td>대외사업</td>
                                     <td><a href="#">파티엔</a></td>
                                     <td>법인</td>
@@ -338,7 +344,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><span class="mainC">2/4회</span></td>        
+                                    <td><span class="layerOpen">2/4회</span></td>        
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -367,8 +373,16 @@
                                         <label for="ff3"></label>
                                     </td>
                                     <td>12</td>
-                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType" type="text" value="2023.01"></td>
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월-일">
+                                        </div>
+                                    </td>  
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월">
+                                        </div>
+                                    </td>
                                     <td>플랫폼</td>
                                     <td><a href="#">주식회사지오아이에스</a></td>
                                     <td>법인</td>
@@ -388,7 +402,7 @@
                                     <td>
                                         <i class="ico preview"></i>												
                                     </td>
-                                    <td><span class="mainC">3/4회</span></td>          
+                                    <td><span class="layerOpen">3/4회</span></td>          
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -419,8 +433,16 @@
                                         <label for="ff4"></label>
                                     </td>
                                     <td>3</td>
-                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType" type="text" value="2023.01"></td>
+                                    <td>                                        
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월-일">
+                                        </div>
+                                    </td>  
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월">
+                                        </div>
+                                    </td>
                                     <td>미래그룹</td>
                                     <td><a href="#">CJ올리브네트웍스</a></td>
                                     <td>법인</td>
@@ -440,7 +462,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><span class="mainC">3/4회</span></td>       
+                                    <td><span class="layerOpen">3/4회</span></td>       
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -469,8 +491,16 @@
                                         <label for="ff5"></label>
                                     </td>
                                     <td>10</td>
-                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType" type="text" value="2023.01"></td>
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월-일">
+                                        </div>
+                                    </td>  
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월">
+                                        </div>
+                                    </td>
                                     <td>SAP전략</td>
                                     <td><a href="#">주식회사에코아이티</a></td>
                                     <td>법인</td>
@@ -490,7 +520,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><span class="mainC">3/4회</span></td>        
+                                    <td><span class="layerOpen">3/4회</span></td>        
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -522,8 +552,16 @@
                                         <label for="ff6"></label>
                                     </td>
                                     <td>9</td>
-                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType" type="text" value="2023.01"></td>
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월-일">
+                                        </div>
+                                    </td>  
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월">
+                                        </div>
+                                    </td>
                                     <td>SAP융합</td>
                                     <td><a href="#">(주)에이치엔엘시스템</a></td>
                                     <td>개인</td>
@@ -543,7 +581,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><span class="mainC">3/4회</span></td>       
+                                    <td><span class="layerOpen">3/4회</span></td>       
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -572,8 +610,16 @@
                                         <label for="ff7"></label>
                                     </td>
                                     <td>8</td>
-                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType" type="text" value="2023.01"></td>
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월-일">
+                                        </div>
+                                    </td>  
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월">
+                                        </div>
+                                    </td>
                                     <td>클라우드</td>
                                     <td><a href="#">중앙대학교 산학협력단</a></td>
                                     <td>법인</td>
@@ -593,7 +639,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><span class="mainC">3/4회</span></td>        
+                                    <td><span class="layerOpen">3/4회</span></td>        
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -624,8 +670,16 @@
                                         <label for="ff8"></label>
                                     </td>
                                     <td>7</td>
-                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType" type="text" value="2023.01"></td>
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월-일">
+                                        </div>
+                                    </td>  
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월">
+                                        </div>
+                                    </td>
                                     <td>플랫폼</td>
                                     <td><a href="#">주식회사 에코아이시티</a></td>
                                     <td>법인</td>
@@ -645,7 +699,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><span class="mainC">2/5회</span></td>        
+                                    <td><span class="layerOpen">2/5회</span></td>        
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -669,8 +723,16 @@
                                         <label for="ff9"></label>
                                     </td>
                                     <td>6</td>
-                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType" type="text" value="2023.01"></td>
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월-일">
+                                        </div>
+                                    </td>  
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월">
+                                        </div>
+                                    </td>
                                     <td>SAP전략</td>
                                     <td><a href="#">하이밸류컨설팅(주)</a></td>
                                     <td>법인</td>
@@ -685,7 +747,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><span class="mainC">3/4회</span></td>     
+                                    <td><span class="layerOpen">3/4회</span></td>     
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -716,8 +778,16 @@
                                         <label for="ff10"></label>
                                     </td>
                                     <td>5</td>
-                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType" type="text" value="2023.01"></td>
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월-일">
+                                        </div>
+                                    </td>  
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월">
+                                        </div>
+                                    </td>
                                     <td>SAP전략</td>
                                     <td><a href="#">삼성디스플레이(주)</a></td>
                                     <td>법인</td>
@@ -738,7 +808,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><span class="mainC">3/4회</span></td>       
+                                    <td><span class="layerOpen">3/4회</span></td>       
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -762,8 +832,16 @@
                                         <label for="ff11"></label>
                                     </td>
                                     <td>4</td>
-                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType" type="text" value="2023.01"></td>
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월-일">
+                                        </div>
+                                    </td>  
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월">
+                                        </div>
+                                    </td>
                                     <td>SAP전략</td>
                                     <td><a href="#">주식회사 에스에프에이반도체</a></td>
                                     <td>법인</td>
@@ -783,7 +861,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><span class="mainC">3/4회</span></td>      
+                                    <td><span class="layerOpen">3/4회</span></td>      
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -815,8 +893,16 @@
                                         <label for="ff4"></label>
                                     </td>
                                     <td>11</td>
-                                    <td><input class="dateType" type="text" value="2023.01.21"></td>  
-                                    <td><input class="dateType" type="text" value="2023.01"></td>
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월-일">
+                                        </div>
+                                    </td>  
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월">
+                                        </div>
+                                    </td>
                                     <td>미래그룹</td>
                                     <td><a href="#">CJ올리브네트웍스</a></td>
                                     <td>법인</td>
@@ -837,7 +923,7 @@
                                     <td>
                                         <i class="ico preview" onclick=""></i>												
                                     </td>
-                                    <td><span class="mainC">3/4회</span></td>         
+                                    <td><span class="layerOpen">3/4회</span></td>         
                                     <td class="right">50,000,000</td>   
                                     <td class="right">110,000</td>
                                 
@@ -943,8 +1029,22 @@
     <script src="../assets/js/script.js"></script>
     <script>        
         // datepicker test
-        $(function() {
-            $("#datepicker").datepicker();
+        // $(function() {
+        //     $("#datepicker").datepicker();
+        // });
+        $(function(){
+            $("#datepicker0").datepicker({
+                dateFormat:'yy/mm/dd'
+                , showOn: 'button'
+                , buttonImage: '../assets/img/icoCal.png'
+                , buttonImageOnly: true
+            })
+            $("#datepicker00").datepicker({
+                dateFormat:'yy/mm'
+                , showOn: 'button'
+                , buttonImage: '../assets/img/icoCal.png'
+                , buttonImageOnly: true
+            })
         });
     </script>  
     

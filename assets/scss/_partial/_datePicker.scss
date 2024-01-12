@@ -14,9 +14,36 @@
     background: $white;
     border-radius: rem(4);
     border:1px solid $inputGray;  
+    &.sat{
+        input{
+            color: $highlight;
+        }
+    }
+    &.sun{
+        input{
+            color: $error;
+        }
+    }
+    &.onGoing{
+        border:1px solid $onGoing;
+        input{
+            color: $onGoing;
+        }
+    }
+    &.disabled{
+        opacity: 1;
+        input{
+            color: $titleGray;
+            cursor: not-allowed;
+            &::placeholder{
+                color: $inputGray;
+            }
+        }
+    }
     & + .datepicker{
         margin-left: rem(3);
     }
+    
     input{
         border:0;
         padding: 0;
