@@ -441,26 +441,29 @@
 
                                                                 <col width="45px">
                                                             </colgroup> -->
+
+                                                            <!--240115 수정-ys-->
                                                             <colgroup>
                                                                 <col width="35px">
                                                                 <col width="75px">
                                                                 <col width="65px" span="3">
-                                                                <col width="80px">
-                                                                <col width="80px">
+                                                                <col width="80px" span="2">
                                                                 <col width="50px">
                                                                 <col width="85px">
                                                                 <col width="75px">
                                                                 <col>
+                                                                <col width="20px">
 
                                                                 <col width="40px">
                                                             </colgroup>
+                                                            <!--//240115 추가-ys-->
                                                             <thead>
                                                                 <tr>
                                                                     <th></th><!--231130 추가-ys-->
                                                                     <th>그룹</th>
                                                                     <!-- <th>직무/모듈</th> -->
                                                                     <th>구분</th>
-                                                                    <th>기타</th><!--231130 추가-ys-->
+                                                                    <th>기타</th><!--240115 추가-ys-->
                                                                     <th>등급</th>
                                                                     <th>시작일</th>
 
@@ -469,6 +472,7 @@
                                                                     <th>매출단가</th>
                                                                     <th>제경비</th>
                                                                     <th>매출합계 ⓐ</th>
+                                                                    <th></th><!--240115 추가-ys-->
 
                                                                     <th>삭제</th>
                                                                 </tr>
@@ -497,9 +501,7 @@
                                                                     </td>
 
                                                                     <!--240115 추가-ys-->
-                                                                    <td>
-                                                                        <input type="text">
-                                                                    </td>
+                                                                    <td><input type="text"></td>
                                                                     <!--//240115 추가-ys-->
                                                                     <td>
                                                                         <select name="" id="">
@@ -516,6 +518,28 @@
                                                                     </td>
                                                                     <td class="right">200,000</td>
                                                                     <td class="right">8,200,000</td>
+
+                                                                    <!--240115 추가-ys-->
+                                                                    <td>
+                                                                        <i class="ico setting_sm is-active"></i>
+                                                                        <div class="modalLayer absol is-active">
+                                                                            <div class="layerBox autoSize">
+                                                                                <div class="modalCont">                                  
+                                                                                    <div class="flex">                                                                                                                                        
+                                                                                        <input type="checkbox" id="f1" class="hasTxt">
+                                                                                        <label for="f">M/M 제외</label>
+                                                                                        
+                                                                                        <input type="checkbox" id="f2" class="hasTxt">
+                                                                                        <label for="f2">단가 제외</label>
+
+                                                                                        <button class="smSize">적용</button>
+                                                                                    </div>       
+                                                                                </div>
+                                                                            </div>        
+                                                                        </div>
+                                                                    </td>
+                                                                    <!--//240115 추가-ys-->
+
                                                                     <td><i class="ico delete_bg"></i></td>
                                                                 </tr>
                                                                 <tr class="is-active">
@@ -559,6 +583,7 @@
                                                                     <td class="right">
                                                                         <span class="marked">-1,000,000</span>
                                                                     </td>
+                                                                    <td><i class="ico setting_sm is-active"></i></td>
                                                                     <td><i class="ico delete_bg"></i></td>
                                                                 </tr>
                                                             </tbody>
@@ -582,7 +607,7 @@
                                                                         총수량 : <b class="dark">0</b>
                                                                     </td>
                                                                     <td colspan="2" class="right">총제경비 : <b class="dark">44,000</b></td>
-                                                                    <td colspan="3" class="sortL">매출합계 : <b class="dark ">85,020,000</b></td>
+                                                                    <td colspan="4" class="sortL">매출합계 : <b class="dark ">85,020,000</b></td>
                                                                 </tr>
                                                                 <!--//231130 수정-ys-->
                                                             </tfoot>
@@ -3545,7 +3570,7 @@
     <!--//청구스케줄, 입금스케줄 팝업-->
 
     <!--제경비입력 팝업-->
-    <div id="" class="modalLayer center is-active">
+    <div id="" class="modalLayer center">
         <div class="layerBox laSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -4542,6 +4567,13 @@
     </script>
 
     <script>
+        //240115 추가
+        var $setting_sm = $('.setting_sm');
+        $setting_sm.on('click', function(e){
+            $(this).toggleClass('is-active');
+            $(this).siblings('.modalLayer.absol').toggleClass('is-active');
+        });
+
         //231230 추가
         var $editA = $('.editA');
         $editA.on('dblclick', function(e){

@@ -362,6 +362,24 @@
         th{
             height: rem(51);
         }
+        .tableBox{
+            overflow-y: initial;
+        }
+        .modalLayer{
+            top: 90%;
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            .layerBox{
+                padding: rem(15) rem(20);
+                min-width: rem(300);
+                input[type=checkbox]{
+                    & + label{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
     }
     >.suffix{
         flex: 2 1 50%;
