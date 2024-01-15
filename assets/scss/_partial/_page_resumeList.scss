@@ -23,15 +23,39 @@
             }
         }
         .suffix{
+            gap: rem(10);
             color: $addHeadGray;
-            .suffix{
-                width: rem(110);
-                display: flex;
-                justify-content: center;
-                gap: 12px;
-            }
+            font-size: rem(13);
+            // .suffix{
+            //     width: rem(110);
+            //     display: flex;
+            //     justify-content: center;
+            //     gap: 12px;
+            // }
             .onlyIco{
                 margin-left: 0;
+            }
+        }
+    }
+    .accInner{
+        overflow-y: auto;
+        max-height: rem(180);
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        .txtType{
+            margin-top: 15px;
+            width: 100%;
+            text-decoration: underline;
+            text-decoration-color: $black;
+            &.is-active{
+                .ico{
+                    transform: rotate(180deg);
+                }
+            }
+            .ico{
+                margin-right: 5px;
             }
         }
     }
@@ -62,8 +86,8 @@
                 height: rem(34);
             }
             .record{
-                width: rem(110);
-                text-align: center;
+                width: rem(160);
+                text-align: right;
                 .label{
                     margin-right: 0;
                     width: rem(88);

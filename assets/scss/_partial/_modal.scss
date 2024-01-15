@@ -1020,6 +1020,37 @@
     }
 }
 
+.memRevise{
+    .memRegister{
+        padding: rem(20);
+        height: rem(580);
+        overflow-y: auto;
+        background: $bgColor;        
+        .regiPartWrapper{
+            padding: 0;
+            height: auto;
+        }
+    }
+    .regiPart{
+        &:first-child{
+            margin-top: 0;
+        }
+        &:last-child{
+            padding-bottom: 0;
+        }
+        h3{
+            margin-bottom: 0;
+            text-align: left;
+            & + .h3_sub{
+                margin-top: 0;
+            }
+        }
+        .h3_sub{
+            text-align: left;
+        }
+    }
+}
+
 //거래처등록-회사검색
 //사업현황등록-인력검색
 //..? upload내에서 사용되는 곳이 없음
@@ -1110,6 +1141,10 @@
     }
 }
 
+
+
+
+
 //사업현황 등록 - 청구스케줄, 제경비입력
 .chargeSet,
 .exceptCharge{
@@ -1127,6 +1162,11 @@
         &.absolBody{
             height: auto;
             max-height: 300px;
+        }
+        input[type=text]{
+            &.dateType{
+                width: 100%;
+            }
         }
     }
     tr{

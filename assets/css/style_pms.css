@@ -643,10 +643,10 @@ header .suffix li a {
   background-position: -60px -150px;
 }
 .gnb .ico.tcount {
-  background-position: -60px -120px;
+  background-position: -60px -210px;
 }
 .gnb .ico.ledger {
-  background-position: -60px -210px;
+  background-position: -60px -120px;
 }
 .gnb .ico.calculation {
   background-position: -60px -180px;
@@ -675,10 +675,10 @@ header .suffix li a {
   background-position: -90px -150px;
 }
 .navWrapper li.is-active .ico.tcount {
-  background-position: -90px -120px;
+  background-position: -90px -210px;
 }
 .navWrapper li.is-active .ico.ledger {
-  background-position: -90px -210px;
+  background-position: -90px -120px;
 }
 .navWrapper li.is-active .ico.calculation {
   background-position: -90px -180px;
@@ -1094,7 +1094,12 @@ table a {
 .clientRegister .clientCode {
   grid-column: 5/6;
 }
-.clientRegister .clientAdd,
+.clientRegister .clientAdd {
+  grid-column: 3/5;
+}
+.clientRegister .clientNum {
+  grid-column: 3/5;
+}
 .clientRegister .clientFile {
   grid-column: 1/3;
 }
@@ -1294,6 +1299,7 @@ table a {
 }
 .bizStateRegister table input[type=text].dateType,
 .bizStateRegister table input[type=number].dateType {
+  width: 100%;
   padding: 0.125rem;
   text-align: center;
   background: #fff;

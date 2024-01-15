@@ -165,7 +165,7 @@
                                                     <option value="">미사용</option>
                                                 </select>
                                             </li>
-
+                                        
                                             <li>
                                                 <label class="need" for="">대표자명</label>
                                                 <input class="full" type="text">
@@ -178,12 +178,22 @@
                                                 <span class="hyphen">-</span>
                                                 <input class="smSize" type="text">
                                             </li>
+                                            <!--240115 추가-ys-->
+                                            <li class="clientNum">
+                                                <label for="">대표자 주민번호</label>
+                                                <input class="full" type="text" placeholder="숫자만 입력">
+                                            </li>
+                                            <!--//240115 추가-ys-->
                                             <li>
                                                 <label for="">대표번호</label>
                                                 <input class="full" type="text" placeholder="숫자만 입력">
                                             </li>
                                             <li>
                                                 <label for="">팩스번호</label>
+                                                <input class="full" type="text" placeholder="숫자만 입력">
+                                            </li>
+                                            <li>
+                                                <label for="">이메일</label>
                                                 <input class="full" type="text" placeholder="숫자만 입력">
                                             </li>
                                             <!-- 230901 삭제 -ys <li>
@@ -195,30 +205,18 @@
                                             </li> -->
 
                                             <!-- 230901 이동 tobe -ys -->
-                                            <li class="clientManager">
+                                            <!-- <li class="clientManager">
                                                 <h6>담당자</h6>
                                                 <button class="midSize">담당자 지정</button>
                                                 <span class="mainC ml5">4명</span>
-                                            </li>
+                                            </li> -->
                                             <!-- //230901 이동 tobe -ys -->
 
                                             
                                             <li class="clientAdd">
                                                 <h6 class="need">주소</h6>
                                                 <input class="full" type="text" id="" placeholder="상세주소"> <!--230814 수정 -ys -->
-                                            </li>
-                                            <li class="clientAccount">
-                                                <h6 class="need">계좌정보</h6><!--230814 글자수정 -ys-->
-                                                <div class="flex mt6">
-                                                    <select class="laSize" name="" id="">
-                                                        <option value="">은행선택</option>
-                                                        <option value="">신한은행</option>
-                                                        <option value="">국민은행</option>
-                                                        <option value="">우리은행</option>
-                                                    </select>
-                                                    <input class="full ml5" type="text" id="" placeholder="계좌번호">                                                             
-                                                </div>
-                                            </li>       
+                                            </li>     
                                             <li class="clientPayday"><!--230816 추가 -ys -->
                                                 <h6>지급일</h6>
                                                 <select class="full" name="" id="">
@@ -253,7 +251,20 @@
                                                     <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="">
                                                 </div>
                                             </li>             
-                                            <!--//230814 수정 -ys -->       
+                                            <!--//230814 수정 -ys -->                                                  
+                                            
+                                            <li class="clientAccount">
+                                                <h6 class="need">계좌정보</h6><!--230814 글자수정 -ys-->
+                                                <div class="flex mt6">
+                                                    <select class="laSize" name="" id="">
+                                                        <option value="">은행선택</option>
+                                                        <option value="">신한은행</option>
+                                                        <option value="">국민은행</option>
+                                                        <option value="">우리은행</option>
+                                                    </select>
+                                                    <input class="full ml5" type="text" id="" placeholder="계좌번호">                                                             
+                                                </div>
+                                            </li>  
                                             
                                             <!--230816 추가 -ys -->
                                             <li class="clientCode">
@@ -273,6 +284,9 @@
                                     </form>
                                     <!--//230816 법인/개인 소득 (매입) -ys -->
 
+                                    <br>
+                                    <br>
+                                    <br>
                                     
                                     <!--230816 사업 소득 (매출) -ys -->
                                     <form action="">
@@ -667,7 +681,7 @@
 
 
     <!--회사검색-->
-    <div id="compSearch" class="modalLayer center compSearch is-active"><!--230816 클래스추가 -ys -->
+    <div id="compSearch" class="modalLayer center compSearch"><!--230816 클래스추가 -ys -->
         <div class="layerBox sm-midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
