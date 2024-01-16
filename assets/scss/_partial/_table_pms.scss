@@ -13,11 +13,16 @@ table{
     tr{
         th{
             background: $gnbGray;   
+            font-size: rem(13); 
             font-weight: 400;   //11.01 추가     
             &.fold{
                 height: auto;
             }            
         }   
+        td{
+            height: rem(41);
+            font-size: rem(13); 
+        }
         &.is-active{
             background: $trClk_pms;
             &:hover{
@@ -37,8 +42,8 @@ table{
             // background: $tfoot_pms;
             background: $tfootGray; //J
         }
-    }
-    input, textarea{            
+    }       
+    input, textarea, select, button{            
         font-size: rem(13); 
         &::placeholder{
             font-size: rem(13); 

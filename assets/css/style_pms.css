@@ -751,10 +751,15 @@ table tbody tr th {
 }
 table tr th {
   background: #8c98a6;
+  font-size: 0.8125rem;
   font-weight: 400;
 }
 table tr th.fold {
   height: auto;
+}
+table tr td {
+  height: 2.5625rem;
+  font-size: 0.8125rem;
 }
 table tr.is-active {
   background: #eaf0f8;
@@ -772,10 +777,10 @@ table tfoot td {
   padding: 0 6px;
   background: #e6e6e6;
 }
-table input, table textarea {
+table input, table textarea, table select, table button {
   font-size: 0.8125rem;
 }
-table input::placeholder, table textarea::placeholder {
+table input::placeholder, table textarea::placeholder, table select::placeholder, table button::placeholder {
   font-size: 0.8125rem;
 }
 table a {
@@ -1406,10 +1411,14 @@ table a {
 }
 #bsDetail1 .modalLayer .layerBox {
   padding: 0.9375rem 1.25rem;
-  min-width: 18.75rem;
+  min-width: 12.8125rem;
+  white-space: nowrap;
 }
 #bsDetail1 .modalLayer .layerBox input[type=checkbox] + label {
   margin-bottom: 0;
+}
+#bsDetail1 .modalLayer .layerBox .flex {
+  gap: 10px;
 }
 
 .flexLeft {
