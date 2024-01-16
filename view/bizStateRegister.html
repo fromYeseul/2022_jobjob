@@ -674,6 +674,7 @@
                                                                 <col width="7%">
                                                                 <col width="12%">
                                                                 <col width="14%">
+                                                                <col width="4%">
                                                                 <col>
                                                                 <col width="6%">
                                                             </colgroup>
@@ -686,6 +687,7 @@
                                                                     <th>M/M<br>(수량)</th>
                                                                     <th>매입단가</th>
                                                                     <th>매입합계</th>
+                                                                    <th></th>
                                                                     <th>비고</th>
                                                                     <th>삭제</th>
                                                                 </tr>
@@ -716,6 +718,26 @@
                                                                     <td>2.0</td>
                                                                     <td class="right">8,000,000</td>
                                                                     <td class="right">16,000,000</td>
+                                                                    <!--240115 추가-ys-->
+                                                                    <td>
+                                                                        <i class="ico setting_sm is-active"></i>
+                                                                        <div class="modalLayer absol is-active">
+                                                                            <div class="layerBox autoSize">
+                                                                                <div class="modalCont">                                  
+                                                                                    <div class="flex">                                                                                                                                        
+                                                                                        <input type="checkbox" id="f1" class="hasTxt">
+                                                                                        <label for="f">M/M 제외</label>
+                                                                                        
+                                                                                        <input type="checkbox" id="f2" class="hasTxt">
+                                                                                        <label for="f2">단가 제외</label>
+
+                                                                                        <button class="smSize">적용</button>
+                                                                                    </div>       
+                                                                                </div>
+                                                                            </div>        
+                                                                        </div>
+                                                                    </td>
+                                                                    <!--//240115 추가-ys-->
                                                                     <td class="left ellipsis">메모입력 메모입력 메모입력 메모입력</td>
                                                                     <td><i class="ico delete_bg"></i></td>
                                                                 </tr>
@@ -744,6 +766,24 @@
                                                                     <td><input class="" type="text" id=""></td>
                                                                     <td><input class="txtRight" type="text" id=""></td>
                                                                     <td><input class="txtRight" type="text" id=""></td>
+                                                                    <td>
+                                                                        <i class="ico setting_sm"></i>
+                                                                        <div class="modalLayer absol">
+                                                                            <div class="layerBox autoSize">
+                                                                                <div class="modalCont">                                  
+                                                                                    <div class="flex">                                                                                                                                        
+                                                                                        <input type="checkbox" id="f1" class="hasTxt">
+                                                                                        <label for="f">M/M 제외</label>
+                                                                                        
+                                                                                        <input type="checkbox" id="f2" class="hasTxt">
+                                                                                        <label for="f2">단가 제외</label>
+
+                                                                                        <button class="smSize">적용</button>
+                                                                                    </div>       
+                                                                                </div>
+                                                                            </div>        
+                                                                        </div>
+                                                                    </td>
                                                                     <td><textarea rows="1" placeholder="특이사항 메모 입력"></textarea></td>
                                                                     <td><i class="ico delete_bg"></i></td>
                                                                 </tr>
@@ -759,7 +799,7 @@
                                                                 </tr>-->
                                                                 <!--231130 수정-ys-->
                                                                 <tr>
-                                                                    <td colspan="6" class="right"><!--240115 수정-ys-->
+                                                                    <td colspan="7" class="right"><!--240115 수정-ys-->
                                                                         GP : <b class="dark">154,000,000</b>
                                                                         <br>
                                                                         (ratio <b class="marked">31.4%</b>)
@@ -801,7 +841,7 @@
                                                                         
                                                                         <th rowspan="2" width="320px" class="fold">비고</th>
                                                                         <th rowspan="2" width="85px">수정일</th>
-                                                                        <th  rowspan="2"width="40px">삭제</th>
+                                                                        <th rowspan="2"width="40px">삭제</th>
                                                                     </tr>
                                                                     <tr>
                                                                         <!--매출-->
@@ -811,6 +851,7 @@
                                                                         <th class="hideS sales">단가</th>
                                                                         <th class="hideS sales">제경비</th>
                                                                         <th class="hideS sales">합계</th>
+                                                                        <th class="hideS sales"></th>
                                                                         <!--//매출-->
 
                                                                         <!--매입-->
@@ -820,6 +861,7 @@
                                                                         <th class="hideB buy">단가</th>
                                                                         <th class="hideB buy">제경비</th>
                                                                         <th width="100px" class="hideB buy">합계</th>
+                                                                        <th width="100px" class="hideB buy"></th>
                                                                         <!--//매입-->
 
                                                                         <!--내부-->
@@ -889,7 +931,27 @@
                                                                         <td class="fold offS">1.0</td>
                                                                         <td class="right hideS"><input type="text"></td>
                                                                         <td class="right hideS"><span class="underL">100,000</span></td>
-                                                                        <td class="right hideS"><b class="dark">9,100,000</b></td>                                                                        
+                                                                        <td class="right hideS"><b class="dark">9,100,000</b></td>
+                                                                        <!--240115 추가-ys-->
+                                                                        <td class="right hideS">
+                                                                            <i class="ico setting_sm"></i>
+                                                                            <div class="modalLayer absol">
+                                                                                <div class="layerBox autoSize">
+                                                                                    <div class="modalCont">                                  
+                                                                                        <div class="flex">                                                                                                                                        
+                                                                                            <input type="checkbox" id="f1" class="hasTxt">
+                                                                                            <label for="f">M/M 제외</label>
+                                                                                            
+                                                                                            <input type="checkbox" id="f2" class="hasTxt">
+                                                                                            <label for="f2">단가 제외</label>
+
+                                                                                            <button class="smSize">적용</button>
+                                                                                        </div>       
+                                                                                    </div>
+                                                                                </div>        
+                                                                            </div>
+                                                                        </td>
+                                                                        <!--//240115 추가-ys-->                                                                       
                                                                         <!--//매출-->
 
                                                                         
@@ -904,6 +966,26 @@
                                                                         <td class="right hideB">9,000,000</td>
                                                                         <td class="right hideB"><span class="underL">100,000</span></td>
                                                                         <td class="right hideB"><b class="dark">9,100,000</b></td>
+                                                                        <!--240115 추가-ys-->
+                                                                        <td class="right hideB">
+                                                                            <i class="ico setting_sm"></i>
+                                                                            <div class="modalLayer absol">
+                                                                                <div class="layerBox autoSize">
+                                                                                    <div class="modalCont">                                  
+                                                                                        <div class="flex">                                                                                                                                        
+                                                                                            <input type="checkbox" id="f1" class="hasTxt">
+                                                                                            <label for="f">M/M 제외</label>
+                                                                                            
+                                                                                            <input type="checkbox" id="f2" class="hasTxt">
+                                                                                            <label for="f2">단가 제외</label>
+
+                                                                                            <button class="smSize">적용</button>
+                                                                                        </div>       
+                                                                                    </div>
+                                                                                </div>        
+                                                                            </div>
+                                                                        </td>
+                                                                        <!--//240115 추가-ys-->  
                                                                         <!--//매입-->
 
                                                                         <!--내부-->
@@ -1073,8 +1155,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div id="onA-3" class="tabCont">00</div>
-                                                <div id="onA-4" class="tabCont">11</div>
                                             </div>
                                         </div>
                                     </div>
@@ -1190,12 +1270,12 @@
                                                                 <th rowspan="2" width="140px">직무/모듈</th>
                                                                 <th rowspan="2" width="80px">등급</th>
 
-                                                                <!--매출-->
-                                                                <th colspan="6" class="sales">매출<i class="ico extend sales is-active"></i></th><!--231115 하단에 보일때는 모두 펼침-->
+                                                                <!--매출--><!--240115 수정-ys-->
+                                                                <th colspan="7" class="sales">매출<i class="ico extend sales is-active"></i></th><!--231115 하단에 보일때는 모두 펼침-->
                                                                 <!--//매출-->
 
                                                                 <!--매입-->
-                                                                <th colspan="6" class="buy">매입 <i class="ico extend buy is-active"></i></th>
+                                                                <th colspan="7" class="buy">매입 <i class="ico extend buy is-active"></i></th>
                                                                 <!--//매입-->
 
                                                                 <!--내부-->
@@ -1203,7 +1283,7 @@
                                                                 <!--//내부-->
 
                                                                 <th rowspan="2" width="320px" class="fold">비고</th>
-                                                                <th  rowspan="2"width="40px">삭제</th>
+                                                                <th rowspan="2"width="40px">삭제</th>
                                                             </tr>
                                                             <tr>
                                                                 <!--매출-->
@@ -1213,6 +1293,7 @@
                                                                 <th class="hideS sales on">단가</th>
                                                                 <th class="hideS sales on">제경비</th>
                                                                 <th class="hideS sales on">매출합계 ⓑ</th>
+                                                                <th width="20px" class="hideS sales on"></th>
                                                                 <!--//매출-->
 
                                                                 <!--매입-->
@@ -1222,6 +1303,7 @@
                                                                 <th class="hideB buy on">단가</th>
                                                                 <th class="hideB buy on">제경비</th>
                                                                 <th width="100px" class="hideB buy on">매입합계 ⓒ</th>
+                                                                <th width="20px" class="hideB buy on"></th>
                                                                 <!--//매입-->
 
                                                                 <!--내부-->
@@ -1292,7 +1374,28 @@
                                                                 <td class="offS on">1.0</td>
                                                                 <td class="right hideS on"><input type="text"></td>
                                                                 <td class="right hideS on"><span class="underL">100,000</span></td>
-                                                                <td class="right hideS on"><b class="dark">9,100,000</b></td>                                                                        
+                                                                <td class="right hideS on"><b class="dark">9,100,000</b></td>     
+                                                                
+                                                                <!--240115 추가-ys-->
+                                                                <td class="right hideS on">
+                                                                    <i class="ico setting_sm"></i>
+                                                                    <div class="modalLayer absol">
+                                                                        <div class="layerBox autoSize">
+                                                                            <div class="modalCont">                                  
+                                                                                <div class="flex">                                                                                                                                        
+                                                                                    <input type="checkbox" id="f1" class="hasTxt">
+                                                                                    <label for="f">M/M 제외</label>
+                                                                                    
+                                                                                    <input type="checkbox" id="f2" class="hasTxt">
+                                                                                    <label for="f2">단가 제외</label>
+
+                                                                                    <button class="smSize">적용</button>
+                                                                                </div>       
+                                                                            </div>
+                                                                        </div>        
+                                                                    </div>
+                                                                </td>
+                                                                <!--//240115 추가-ys-->                                                                    
                                                                 <!--//매출-->
 
                                                                 
@@ -1307,6 +1410,26 @@
                                                                 <td class="right hideB on">9,000,000</td>
                                                                 <td class="right hideB on"><span class="underL">100,000</span></td>
                                                                 <td class="right hideB on"><b class="dark">9,100,000</b></td>
+                                                                <!--240115 추가-ys-->
+                                                                <td class="right hideB on">
+                                                                    <i class="ico setting_sm"></i>
+                                                                    <div class="modalLayer absol">
+                                                                        <div class="layerBox autoSize">
+                                                                            <div class="modalCont">                                  
+                                                                                <div class="flex">                                                                                                                                        
+                                                                                    <input type="checkbox" id="f1" class="hasTxt">
+                                                                                    <label for="f">M/M 제외</label>
+                                                                                    
+                                                                                    <input type="checkbox" id="f2" class="hasTxt">
+                                                                                    <label for="f2">단가 제외</label>
+
+                                                                                    <button class="smSize">적용</button>
+                                                                                </div>       
+                                                                            </div>
+                                                                        </div>        
+                                                                    </div>
+                                                                </td>
+                                                                <!--//240115 추가-ys--> 
                                                                 <!--//매입-->
 
                                                                 <!--내부-->
@@ -1391,7 +1514,26 @@
                                                                 <td class="offS on">1.0</td>
                                                                 <td class="right hideS on">100,000</td>
                                                                 <td class="right hideS on"><span class="underL">0</span></td>
-                                                                <td class="right hideS on"><b class="dark">9,100,000</b></td>                                                                        
+                                                                <td class="right hideS on"><b class="dark">9,100,000</b></td> 
+
+                                                                <td class="right hideS on">
+                                                                    <i class="ico setting_sm"></i>
+                                                                    <div class="modalLayer absol">
+                                                                        <div class="layerBox autoSize">
+                                                                            <div class="modalCont">                                  
+                                                                                <div class="flex">                                                                                                                                        
+                                                                                    <input type="checkbox" id="f1" class="hasTxt">
+                                                                                    <label for="f">M/M 제외</label>
+                                                                                    
+                                                                                    <input type="checkbox" id="f2" class="hasTxt">
+                                                                                    <label for="f2">단가 제외</label>
+
+                                                                                    <button class="smSize">적용</button>
+                                                                                </div>       
+                                                                            </div>
+                                                                        </div>        
+                                                                    </div>
+                                                                </td>                                                                  
                                                                 <!--//매출-->
 
                                                                 
@@ -1406,6 +1548,25 @@
                                                                 <td class="right hideB on"><input type="text" value="900,000"></td>
                                                                 <td class="right hideB on"><button class="bdType xsSize">입력</button></td>
                                                                 <td class="right hideB on"><b class="dark">9,100,000</b></td>
+
+                                                                <td class="right hideB on">
+                                                                    <i class="ico setting_sm"></i>
+                                                                    <div class="modalLayer absol">
+                                                                        <div class="layerBox autoSize">
+                                                                            <div class="modalCont">                                  
+                                                                                <div class="flex">                                                                                                                                        
+                                                                                    <input type="checkbox" id="f1" class="hasTxt">
+                                                                                    <label for="f">M/M 제외</label>
+                                                                                    
+                                                                                    <input type="checkbox" id="f2" class="hasTxt">
+                                                                                    <label for="f2">단가 제외</label>
+
+                                                                                    <button class="smSize">적용</button>
+                                                                                </div>       
+                                                                            </div>
+                                                                        </div>        
+                                                                    </div>
+                                                                </td>
                                                                 <!--//매입-->
 
                                                                 <!--내부-->
@@ -1441,7 +1602,7 @@
                                                             <tr>
                                                                 <td colspan="8"></td>
                                                                 <td class="hideS on"></td>
-                                                                <td class="">
+                                                                <td class="" colspan="2"><!--240115 수정-ys-->
                                                                     총 M/M : <b class="dark">4.2</b>
                                                                     <br>
                                                                     총수량 : <b class="dark">0</b>
@@ -1454,12 +1615,13 @@
                                                                     ⓐ - ⓑ = <b class="subGray2">64,000,000</b>
                                                                 </td>                                                                     
                                                                 <td class="hideB on"></td>
-                                                                <td>
+                                                                <td colspan="2"><!--240115 수정-ys-->
                                                                     총 M/M : <b class="dark">4.2</b>
                                                                     <br>
                                                                     총수량 : <b class="dark">0</b>
                                                                 </td>
-                                                                <td colspan="2">총제경비 : <b class="dark">210,000</b></td>
+                                                                <td colspan="2">
+                                                                    총제경비 : <b class="dark">210,000</b></td>
                                                                 <td colspan="2">
                                                                     매출합계 : <b class=" dark">210,000,000</b>
                                                                     <br>
@@ -4487,7 +4649,7 @@
             $(this).parents('table').find('.fold.offS').toggleClass('is-active');
             $(this).parents('.tableBox').find('.hideS').toggleClass('on');
 
-            $(this).parent('th').attr('colspan', (_, attr) => attr == 6 ? 1 : 6);
+            $(this).parent('th').attr('colspan', (_, attr) => attr == 7 ? 1 : 7);   //240115 수정 ys
         });
         //매입
         $(".flexTable .extend.buy").on("click", function(){
@@ -4496,7 +4658,7 @@
             $(this).parents('table').find('.fold.offB').toggleClass('is-active');
             $(this).parents('.tableBox').find('.hideB').toggleClass('on');
 
-            $(this).parent('th').attr('colspan', (_, attr) => attr == 6 ? 1 : 6);
+            $(this).parent('th').attr('colspan', (_, attr) => attr == 7 ? 1 : 7);
         });
         //내부
         $(".flexTable .extend.inner").on("click", function(){

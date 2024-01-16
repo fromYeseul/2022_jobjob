@@ -1087,18 +1087,11 @@ table a {
 .clientRegister .clientCNm {
   grid-column: 1/3;
 }
-.clientRegister .clientWeb,
 .clientRegister .clientAccount {
   grid-column: 3/5;
 }
 .clientRegister .clientCode {
   grid-column: 5/6;
-}
-.clientRegister .clientAdd {
-  grid-column: 3/5;
-}
-.clientRegister .clientNum {
-  grid-column: 3/5;
 }
 .clientRegister .clientFile {
   grid-column: 1/3;
@@ -1405,6 +1398,19 @@ table a {
   background-color: #2a55aa;
   border: 1px solid #2a55aa;
 }
+#bsDetail1 .modalLayer {
+  top: 90%;
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#bsDetail1 .modalLayer .layerBox {
+  padding: 0.9375rem 1.25rem;
+  min-width: 18.75rem;
+}
+#bsDetail1 .modalLayer .layerBox input[type=checkbox] + label {
+  margin-bottom: 0;
+}
 
 .flexLeft {
   padding-bottom: 0.625rem;
@@ -1421,19 +1427,6 @@ table a {
 }
 .flexLeft > .prefix .tableBox {
   overflow-y: initial;
-}
-.flexLeft > .prefix .modalLayer {
-  top: 90%;
-  right: auto;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.flexLeft > .prefix .modalLayer .layerBox {
-  padding: 0.9375rem 1.25rem;
-  min-width: 18.75rem;
-}
-.flexLeft > .prefix .modalLayer .layerBox input[type=checkbox] + label {
-  margin-bottom: 0;
 }
 .flexLeft > .suffix {
   flex: 2 1 50%;

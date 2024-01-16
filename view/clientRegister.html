@@ -158,6 +158,13 @@
                                                 <label for="">홈페이지</label>
                                                 <input class="full" type="text">
                                             </li>
+                                            <li><!--240115 추가-ys-->
+                                                <h6 class="need">과세유형</h6>
+                                                <select class="full" name="" id="">
+                                                    <option value="">사용</option>
+                                                    <option value="">미사용</option>
+                                                </select>
+                                            </li>
                                             <li>
                                                 <h6 class="need">사용상태</h6>
                                                 <select class="full" name="" id="">
@@ -172,11 +179,12 @@
                                             </li>
                                             <li>
                                                 <label class="" for="">대표자 연락처</label><!--230816 클래스삭제-ys -->
-                                                <input class="smSize" type="text">
+                                                <input class="full" type="text">
+                                                <!-- <input class="smSize" type="text">
                                                 <span class="hyphen">-</span>
                                                 <input class="smSize" type="text">
                                                 <span class="hyphen">-</span>
-                                                <input class="smSize" type="text">
+                                                <input class="smSize" type="text"> -->
                                             </li>
                                             <!--240115 추가-ys-->
                                             <li class="clientNum">
@@ -217,6 +225,20 @@
                                                 <h6 class="need">주소</h6>
                                                 <input class="full" type="text" id="" placeholder="상세주소"> <!--230814 수정 -ys -->
                                             </li>     
+
+                                            <li class="clientAccount"><!--240115 이동-ys-->
+                                                <h6 class="need">계좌정보</h6><!--230814 글자수정 -ys-->
+                                                <div class="flex mt6">
+                                                    <select class="laSize" name="" id="">
+                                                        <option value="">은행선택</option>
+                                                        <option value="">신한은행</option>
+                                                        <option value="">국민은행</option>
+                                                        <option value="">우리은행</option>
+                                                    </select>
+                                                    <input class="full ml5" type="text" id="" placeholder="계좌번호">                                                             
+                                                </div>
+                                            </li> 
+
                                             <li class="clientPayday"><!--230816 추가 -ys -->
                                                 <h6>지급일</h6>
                                                 <select class="full" name="" id="">
@@ -252,19 +274,7 @@
                                                 </div>
                                             </li>             
                                             <!--//230814 수정 -ys -->                                                  
-                                            
-                                            <li class="clientAccount">
-                                                <h6 class="need">계좌정보</h6><!--230814 글자수정 -ys-->
-                                                <div class="flex mt6">
-                                                    <select class="laSize" name="" id="">
-                                                        <option value="">은행선택</option>
-                                                        <option value="">신한은행</option>
-                                                        <option value="">국민은행</option>
-                                                        <option value="">우리은행</option>
-                                                    </select>
-                                                    <input class="full ml5" type="text" id="" placeholder="계좌번호">                                                             
-                                                </div>
-                                            </li>  
+                                             
                                             
                                             <!--230816 추가 -ys -->
                                             <li class="clientCode">
