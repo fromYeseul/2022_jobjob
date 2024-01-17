@@ -1554,7 +1554,44 @@
     }
 }
 
-
+.turnkeyInsert{
+    position: relative;
+    h4{
+        font-weight: 500;
+    }
+    .layerClose{
+        position: absolute;
+        right: 20px;
+        top: -10px;
+    }
+    .tableTop {
+        .suffix{
+            gap: 4px;
+        }
+    }
+    .tableBox{
+        height: rem(590);
+        font-size: 13px;
+        
+        th{
+            &.sales{background: $thSales_pms;}
+            &.buy{background: $thBuy_pms;}
+        }     
+        tfoot{
+            td{
+                height: rem(58);
+            }
+        }
+    }
+    input[type=text]{
+        background: $white;
+        &.dateType{  
+            width: 100%;
+            padding: rem(2);
+            background: $white;
+        }            
+    }
+}
 
 
 

@@ -601,7 +601,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .p0-30 {
-  padding: 0 1.875rem;
+  padding: 0 1.875rem !important;
+}
+
+.p30-0 {
+  padding: 1.875rem 0 !important;
 }
 
 .cke_screen_reader_only {
@@ -2705,6 +2709,42 @@ footer.toast button + button {
 .paySchedule .tableBox,
 .pubFileUpload .tableBox {
   max-height: 25rem;
+}
+
+.turnkeyInsert {
+  position: relative;
+}
+.turnkeyInsert h4 {
+  font-weight: 500;
+}
+.turnkeyInsert .layerClose {
+  position: absolute;
+  right: 20px;
+  top: -10px;
+}
+.turnkeyInsert .tableTop .suffix {
+  gap: 4px;
+}
+.turnkeyInsert .tableBox {
+  height: 36.875rem;
+  font-size: 13px;
+}
+.turnkeyInsert .tableBox th.sales {
+  background: #61519f;
+}
+.turnkeyInsert .tableBox th.buy {
+  background: #3e9894;
+}
+.turnkeyInsert .tableBox tfoot td {
+  height: 3.625rem;
+}
+.turnkeyInsert input[type=text] {
+  background: #fff;
+}
+.turnkeyInsert input[type=text].dateType {
+  width: 100%;
+  padding: 0.125rem;
+  background: #fff;
 }
 
 .joinRequest .inputList.flex h6,
@@ -11586,9 +11626,6 @@ h6 + .h6_sub {
 }
 .datepicker.onGoing {
   border: 1px solid #ffc812;
-}
-.datepicker.onGoing input {
-  color: #ffc812;
 }
 .datepicker.disabled {
   opacity: 1;

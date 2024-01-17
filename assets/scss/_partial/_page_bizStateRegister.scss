@@ -430,10 +430,6 @@
         td{
             &.fold{
                 height: rem(26); //추가
-                border-left: 1px solid $tableBorder; //b2b4b7 -> ddd
-                &.is-active{
-                    border-left: 0;
-                }
             }
         }
         // tfoot{
@@ -461,5 +457,16 @@
     display: none;
     &.on{
         display: table-cell;
+    }
+}
+
+col{
+    &.hideS,
+    &.hideB,
+    &.hideI{
+        //display: none;
+        &.on{
+            display: table-column;
+        }
     }
 }

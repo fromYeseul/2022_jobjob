@@ -22,6 +22,12 @@ table{
         td{
             height: rem(41);
             font-size: rem(13); 
+            &.fold{
+                border-left: 1px solid $tableBorder;
+                &.is-active{
+                    border-left: 0;
+                }
+            }
         }
         &.is-active{
             background: $trClk_pms;
@@ -43,7 +49,7 @@ table{
             background: $tfootGray; //J
         }
     }       
-    input, textarea, select, button{            
+    input, input[type=text], textarea, select, button{            
         font-size: rem(13); 
         &::placeholder{
             font-size: rem(13); 
