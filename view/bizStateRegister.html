@@ -7,8 +7,8 @@
     <title>사업현황 등록</title>
     
     <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
-    <link rel="stylesheet" href="../assets/css/style_pms.css">
     <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="../assets/css/style_pms.css">
 </head>
 <body>
 
@@ -816,65 +816,100 @@
                                                 </div>
                                                 <div id="onA-2" class="tabCont">
                                                     <div class="flexTable">
-                                                        <div class="tableBox">
+                                                        <div class="tableBox suffix" style="width:2260px">
                                                             <table>
-                                                                
-                                                                <!--231101 수정-ys -->
+                                                                <!--240115 추가 ys-->
+                                                                <colgroup>
+                                                                    <col width="40px">
+                                                                    <col width="80px">
+                                                                    <col width="110px">
+                                                                    <col width="85px">
+                                                                    <col width="130px">
+                                                                    <col width="110px">
+                                                                    <col width="140px">
+                                                                    <col width="80px">
+        
+                                                                    <col width="80px" span="2" class="hideS on">
+                                                                    <col width="60px">
+                                                                    <col width="80px" span="3" class="hideS on">
+                                                                    <col width="20px" class="hideB on">
+                                                                    
+                                                                    <col width="80px" span="2" class="hideB on">
+                                                                    <col width="60px">
+                                                                    <col width="80px" span="3" class="hideB on">
+                                                                    <col width="20px" class="hideB on">
+                                                                    
+                                                                    <col width="50px">
+                                                                    <col width="100px" class="hideI on">
+                                                                    <col width="50px" class="hideI on">
+        
+                                                                    <col width="150px">
+                                                                    <col width="70px">
+                                                                    <col width="50px">
+                                                                </colgroup>
+                                                                <!--240115 추가 ys-->
                                                                 <thead>
                                                                     <tr>
-                                                                        <!--231115 수정-ys-->
-                                                                        <th rowspan="2" width="40px">
+                                                                        <th rowspan="2">
                                                                             <input type="checkbox" id="tt3">
                                                                             <label for="tt3"></label>
                                                                         </th>
-                                                                        <th rowspan="2" width="80px">그룹</th>
-                                                                        <th rowspan="2" width="110px">계약상태</th>
-                                                                        <th rowspan="2" width="85px">상태</th>
-                                                                        <th rowspan="2" width="130px">소속/부서</th>
-                                                                        <th rowspan="2" width="110px">투입인력</th>
-                                                                        <th rowspan="2" width="140px">직무/모듈</th>
-                                                                        <th rowspan="2" width="80px">등급</th>
-                                                                        <!--//231115 수정-ys-->
-
-                                                                        <th colspan="1" class="fold sales">매출<i class="ico extend sales"></i></th>
-                                                                        <th colspan="1" class="fold buy">매입 <i class="ico extend buy"></i></th>
-                                                                        <th colspan="1" class="fold inner">내부 <i class="ico extend inner"></i></th>
-                                                                        
-                                                                        <th rowspan="2" width="320px" class="fold">비고</th>
-                                                                        <th rowspan="2" width="85px">수정일</th>
-                                                                        <th rowspan="2"width="40px">삭제</th>
+                                                                        <th rowspan="2">그룹222</th>
+                                                                        <th rowspan="2">계약상태</th>
+                                                                        <th rowspan="2">상태</th>
+                                                                        <th rowspan="2">소속/부서</th>
+                                                                        <th rowspan="2">투입인력</th>
+                                                                        <th rowspan="2">직무/모듈</th>
+                                                                        <th rowspan="2">등급</th>
+        
+                                                                        <!--매출--><!--240115 수정-ys-->
+                                                                        <th colspan="7" class="sales">매출<i class="ico extend sales is-active"></i></th><!--231115 하단에 보일때는 모두 펼침-->
+                                                                        <!--//매출-->
+        
+                                                                        <!--매입-->
+                                                                        <th colspan="7" class="buy">매입 <i class="ico extend buy is-active"></i></th>
+                                                                        <!--//매입-->
+        
+                                                                        <!--내부-->
+                                                                        <th colspan="3" class="inner">내부 <i class="ico extend inner is-active"></i></th>
+                                                                        <!--//내부-->
+        
+                                                                        <th rowspan="2" class="fold">비고</th>
+                                                                        <th rowspan="2">수정일</th>
+                                                                        <th rowspan="2">삭제</th>
                                                                     </tr>
+                                                                    
+                                                                    <!--240115 width제거 ys-->
                                                                     <tr>
                                                                         <!--매출-->
-                                                                        <th width="100px" class="fold hideS sales">시작일</th>
-                                                                        <th width="100px" class="hideS sales">종료일</th>
-                                                                        <th width="80px" class="sales">M/M(수량)</th>
-                                                                        <th class="hideS sales">단가</th>
-                                                                        <th class="hideS sales">제경비</th>
-                                                                        <th class="hideS sales">합계</th>
-                                                                        <th class="hideS sales"></th>
+                                                                        <th class="fold hideS sales on">시작일</th><!--231115 하단에 보일때는 모두 펼침-->
+                                                                        <th class="hideS sales on">종료일</th>
+                                                                        <th class="sales on">M/M<br>(수량)</th>
+                                                                        <th class="hideS sales on">단가</th>
+                                                                        <th class="hideS sales on">제경비</th>
+                                                                        <th class="hideS sales on">매출합계 ⓑ</th>
+                                                                        <th class="hideS sales on"></th>
                                                                         <!--//매출-->
-
+        
                                                                         <!--매입-->
-                                                                        <th width="100px" class="fold hideB buy">실투입</th>
-                                                                        <th width="100px" class="hideB buy">종료일</th>
-                                                                        <th width="80px" class="buy">M/M(수량)</th>
-                                                                        <th class="hideB buy">단가</th>
-                                                                        <th class="hideB buy">제경비</th>
-                                                                        <th width="100px" class="hideB buy">합계</th>
-                                                                        <th width="100px" class="hideB buy"></th>
+                                                                        <th class="fold hideB buy on">실투입</th>
+                                                                        <th class="hideB buy on">종료일</th>
+                                                                        <th class="buy on">M/M<br>(수량)</th>
+                                                                        <th class="hideB buy on">단가</th>
+                                                                        <th class="hideB buy on">제경비</th>
+                                                                        <th class="hideB buy on">매입합계 ⓒ</th>
+                                                                        <th class="hideB buy on"></th>
                                                                         <!--//매입-->
-
+        
                                                                         <!--내부-->
-                                                                        <th class="fold inner">거래</th>
-                                                                        <th class="hideI inner">부서</th>
-                                                                        <th class="hideI inner">상태</th><!--240115 수정-ys-->
+                                                                        <th class="inner on">거래</th>
+                                                                        <th class="hideI inner on">부서</th>
+                                                                        <th class="hideI inner on">상태</th><!--240115 수정-ys-->
                                                                         <!--//내부-->
                                                                     </tr>
+                                                                    <!--//240115 width제거 ys-->
                                                                 </thead>
-                                                                <!--//231101 수정-ys -->
                                                                 <tbody>
-                                                                    <!--231101 수정-ys -->
                                                                     <tr>
                                                                         <td>
                                                                             <input type="checkbox" id="t3">
@@ -888,6 +923,12 @@
                                                                             </select>
                                                                         </td>
                                                                         <td>
+                                                                            <!--231130 추가-ys-->
+                                                                            <button class="txtType" type="button">
+                                                                                <i class="ico exMark"></i>
+                                                                            </button>
+                                                                            <!--//231130 추가-ys-->
+                                                                            
                                                                             <i class="ico preview"></i>
                                                                             <span class="marked">미계약</span>
                                                                         </td>
@@ -905,36 +946,34 @@
                                                                             <i class="ico edit"></i>
                                                                             최은영
                                                                         </td>
-                                                                        <!--231115 말줄임추가-ys-->
-                                                                        <td class="ellipsis">
-                                                                            <!-- <select name="" id="">
+                                                                        <td>
+                                                                            <select name="" id="">
                                                                                 <option value="">ABAP</option>
                                                                                 <option value="cat">CON</option>
-                                                                            </select> -->
-                                                                            <i class="ico edit"></i>
-                                                                            ABAPABA PABAPABAP ABAPABAPABAPABAP
+                                                                            </select>
                                                                         </td>
-                                                                        <!--//231115 말줄임추가-ys-->
                                                                         <td>
                                                                             <select name="" id="">
                                                                                 <option value="">초급</option>
                                                                                 <option value="cat">중급</option>
                                                                             </select>
                                                                         </td>
+        
                                                                         
                                                                         <!--매출-->
-                                                                        <td class="fold hideS">
+                                                                        <td class="fold hideS on">
                                                                             <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                         </td>
-                                                                        <td class="hideS">
+                                                                        <td class="hideS on">
                                                                             <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                         </td>
-                                                                        <td class="fold offS">1.0</td>
-                                                                        <td class="right hideS"><input type="text"></td>
-                                                                        <td class="right hideS"><span class="underL">100,000</span></td>
-                                                                        <td class="right hideS"><b class="dark">9,100,000</b></td>
+                                                                        <td class="offS on">1.0</td>
+                                                                        <td class="right hideS on"><input type="text"></td>
+                                                                        <td class="right hideS on"><span class="underL">100,000</span></td>
+                                                                        <td class="right hideS on"><b class="dark">9,100,000</b></td>     
+                                                                        
                                                                         <!--240115 추가-ys-->
-                                                                        <td class="right hideS">
+                                                                        <td class="hideS on">
                                                                             <i class="ico setting_sm"></i>
                                                                             <div class="modalLayer absol">
                                                                                 <div class="layerBox autoSize">
@@ -945,30 +984,31 @@
                                                                                             
                                                                                             <input type="checkbox" id="f2" class="hasTxt">
                                                                                             <label for="f2">단가 제외</label>
-
+        
                                                                                             <button class="smSize">적용</button>
                                                                                         </div>       
                                                                                     </div>
                                                                                 </div>        
                                                                             </div>
                                                                         </td>
-                                                                        <!--//240115 추가-ys-->                                                                       
+                                                                        <!--//240115 추가-ys-->                                                                    
                                                                         <!--//매출-->
-
+        
                                                                         
                                                                         <!--매입-->
-                                                                        <td class="fold hideB">
+                                                                        <td class="fold hideB on">
                                                                             <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                         </td>
-                                                                        <td class="hideB">
+                                                                        <td class="hideB on">
                                                                             <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                         </td>
-                                                                        <td class="fold offB">1.0</td>
-                                                                        <td class="right hideB">9,000,000</td>
-                                                                        <td class="right hideB"><span class="underL">100,000</span></td>
-                                                                        <td class="right hideB"><b class="dark">9,100,000</b></td>
+                                                                        <td class="offB on">1.0</td>
+                                                                        <td class="right hideB on">9,000,000</td>
+                                                                        <td class="right hideB on"><span class="underL">100,000</span></td>
+                                                                        <td class="right hideB on"><b class="dark">9,100,000</b></td>
+                                                                        
                                                                         <!--240115 추가-ys-->
-                                                                        <td class="right hideB">
+                                                                        <td class="hideB on">
                                                                             <i class="ico setting_sm"></i>
                                                                             <div class="modalLayer absol">
                                                                                 <div class="layerBox autoSize">
@@ -979,50 +1019,49 @@
                                                                                             
                                                                                             <input type="checkbox" id="f2" class="hasTxt">
                                                                                             <label for="f2">단가 제외</label>
-
+        
                                                                                             <button class="smSize">적용</button>
                                                                                         </div>       
                                                                                     </div>
                                                                                 </div>        
                                                                             </div>
                                                                         </td>
-                                                                        <!--//240115 추가-ys-->  
+                                                                        <!--//240115 추가-ys--> 
                                                                         <!--//매입-->
-
+        
                                                                         <!--내부-->
-                                                                        <td class="fold">
+                                                                        <td class="fold on">
                                                                             <select class="" name="" id="">
                                                                                 <option value="Y">Y</option>
                                                                                 <option value="N">N</option>
                                                                             </select>
                                                                         </td>
-                                                                        <td class="hideI">
+                                                                        <td class="hideI on">
                                                                             <select name="" id="">
                                                                                 <option value="">플랫폼</option>
                                                                                 <option value="">SAP사업</option>
                                                                                 <option value="">미래융합</option>
                                                                             </select>
                                                                         </td>
-                                                                        <td class="hideI">
-                                                                            <!-- <input type="text"> -->
+                                                                        <td class="hideI on">
+                                                                            <!-- <input type="text">                                                                 -->
                                                                             <!--240115 수정-ys-->
-                                                                            <button class="xsSize">적용</button>
                                                                             <button class="bdType xsSize">변경</button>
                                                                             <!--//240115 수정-ys-->
                                                                         </td>
                                                                         <!-- <td class="right hideI"><span class="emp"> 1,000,000</span></td> -->
                                                                         <!--//내부-->
-
-                                                                        
-                                                                        <td class="fold">
+        
+                                                                        <td class="">
                                                                             <textarea rows="1"></textarea>
                                                                         </td>
-                                                                        <td>2023.11.15</td>
+                                                                        
+                                                                        <td>2024.01.01</td>
                                                                         <td>
                                                                             <i class="ico delete_bg"></i>
                                                                         </td>
                                                                     </tr>                                                                  
-                                                                    <tr class="is-active">
+                                                                    <tr>
                                                                         <td>
                                                                             <input type="checkbox" id="t3">
                                                                             <label for="t3"></label>
@@ -1050,7 +1089,10 @@
                                                                         <td>
                                                                             <button class="bdType xsSize">검색</button>
                                                                         </td>
-                                                                        <td><button class="bdType xsSize">검색</button></td>
+                                                                        <td>
+                                                                            <!-- <button class="bdType xsSize">검색</button> -->
+                                                                            <button class="bdType xsSize window">window</button>
+                                                                        </td>
                                                                         <td>
                                                                             <select name="" id="">
                                                                                 <option value="">ABAP</option>
@@ -1065,95 +1107,135 @@
                                                                         </td>                                                                        
                                                                     
                                                                         <!--매출-->
-                                                                        <td class="fold hideS">
+                                                                        <td class="fold hideS on">
                                                                             <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                         </td>
-                                                                        <td class="hideS">
+                                                                        <td class="hideS on">
                                                                             <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                         </td>
-                                                                        <td class="fold offS">1.0</td>
-                                                                        <td class="right hideS">100,000</td>
-                                                                        <td class="right hideS"><span class="underL">0</span></td>
-                                                                        <td class="right hideS"><b class="dark">9,100,000</b></td>         
-                                                                        <td class="right hideS"><i class="ico setting_sm"></i></td>                                                               
+                                                                        <td class="offS on">1.0</td>
+                                                                        <td class="right hideS on">100,000</td>
+                                                                        <td class="right hideS on"><span class="underL">0</span></td>
+                                                                        <td class="right hideS on"><b class="dark">9,100,000</b></td> 
+        
+                                                                        <td class="hideS on">
+                                                                            <i class="ico setting_sm"></i>
+                                                                            <div class="modalLayer absol">
+                                                                                <div class="layerBox autoSize">
+                                                                                    <div class="modalCont">                                  
+                                                                                        <div class="flex">                                                                                                                                        
+                                                                                            <input type="checkbox" id="f1" class="hasTxt">
+                                                                                            <label for="f">M/M 제외</label>
+                                                                                            
+                                                                                            <input type="checkbox" id="f2" class="hasTxt">
+                                                                                            <label for="f2">단가 제외</label>
+        
+                                                                                            <button class="smSize">적용</button>
+                                                                                        </div>       
+                                                                                    </div>
+                                                                                </div>        
+                                                                            </div>
+                                                                        </td>                                                                  
                                                                         <!--//매출-->
-
+        
                                                                         
                                                                         <!--매입-->
-                                                                        <td class="fold hideB">
+                                                                        <td class="fold hideB on">
                                                                             <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                         </td>
-                                                                        <td class="hideB">
+                                                                        <td class="hideB on">
                                                                             <input class="dateType noBg" type="text" placeholder="연도 - 월 - 일" id="">
                                                                         </td>
-                                                                        <td class="fold offB">1.0</td>
-                                                                        <td class="right hideB"><input type="text" value="900,000"></td>
-                                                                        <td class="right hideB"><button class="bdType xsSize">입력</button></td>
-                                                                        <td class="right hideB"><b class="dark">9,100,000</b></td>
-                                                                        <td class="right hideB"><i class="ico setting_sm"></i></td>
+                                                                        <td class="offB on">1.0</td>
+                                                                        <td class="right hideB on"><input type="text" value="900,000"></td>
+                                                                        <td class="right hideB on"><button class="bdType xsSize">입력</button></td>
+                                                                        <td class="right hideB on"><b class="dark">9,100,000</b></td>
+        
+                                                                        <td class="hideB on">
+                                                                            <i class="ico setting_sm"></i>
+                                                                            <div class="modalLayer absol">
+                                                                                <div class="layerBox autoSize">
+                                                                                    <div class="modalCont">                                  
+                                                                                        <div class="flex">                                                                                                                                        
+                                                                                            <input type="checkbox" id="f1" class="hasTxt">
+                                                                                            <label for="f">M/M 제외</label>
+                                                                                            
+                                                                                            <input type="checkbox" id="f2" class="hasTxt">
+                                                                                            <label for="f2">단가 제외</label>
+        
+                                                                                            <button class="smSize">적용</button>
+                                                                                        </div>       
+                                                                                    </div>
+                                                                                </div>        
+                                                                            </div>
+                                                                        </td>
                                                                         <!--//매입-->
-
+        
                                                                         <!--내부-->
-                                                                        <td class="fold">
+                                                                        <td class="fold on">
                                                                             <select class="" name="" id="">
                                                                                 <option value="Y">Y</option>
                                                                                 <option value="N">N</option>
                                                                             </select>
                                                                         </td>
-                                                                        <td class="hideI">
+                                                                        <td class="hideI on">
                                                                             <select name="" id="">
                                                                                 <option value="">플랫폼</option>
                                                                                 <option value="">SAP사업</option>
                                                                                 <option value="">미래융합</option>
                                                                             </select>
                                                                         </td>
-                                                                        <td class="hideI"><input type="text"></td>
+                                                                        <td class="hideI on">
+                                                                            <button class="xsSize">적용</button>
+                                                                        </td>
                                                                         <!-- <td class="right hideI"><span class="emp"> 1,000,000</span></td> -->
-                                                                        <!--//내부-->                                                                       
-                                                                        <td class="fold">
+                                                                        <!--//내부-->
+        
+                                                                        <td class="">
                                                                             <textarea rows="1"></textarea>
                                                                         </td>
-                                                                        <td>2023.11.15</td>
+                                                                        <td>2024.01.01</td>
                                                                         <td>
                                                                             <i class="ico delete_bg"></i>
                                                                         </td>
                                                                     </tr>
-                                                                    <!--//231101 수정-ys -->
                                                                 </tbody>
-                                                                <tfoot>
+                                                                <!--231130 수정-ys-->
+                                                                <tfoot>           
                                                                     <tr>
                                                                         <td colspan="8"></td>
-                                                                                                                                                
-                                                                        <!--매출-->
-                                                                        <td colspan="2" class="hideS"></td>
-                                                                        <td>4.00</td>
-                                                                        <td class="right hideS">26,000,000</td>
-                                                                        <td class="right hideS">760,000</td>
-                                                                        <td colspan="2" class="right hideS"> 
-                                                                            <b class="dark">267,600,000</b>
-                                                                        </td>                                                                        
-                                                                        <!--//매출-->
-                                                                                                                                                
-                                                                        <!--매입-->
-                                                                        <td colspan="2" class="hideB"></td>
-                                                                        <td>4.00</td>
-                                                                        <td class="right hideB">26,000,000</td>
-                                                                        <td class="right hideB">760,000</td>
-                                                                        <td colspan="2" class="right hideB"> 
-                                                                            <b class="dark">267,600,000</b>
+                                                                        <td class="hideS on"></td>
+                                                                        <td class="" colspan="2"><!--240115 수정-ys-->
+                                                                            총 M/M : <b class="dark">4.2</b>
                                                                             <br>
-                                                                            <b class="marked">(32,400,000)</b>
-                                                                        </td>                                                      
-                                                                        <!--//매입-->
-
-                                                                        <!--내부n 231101 수정-->
+                                                                            총수량 : <b class="dark">0</b>
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                            총제경비 : <b class="dark">210,000,000</b></td>
+                                                                        <td colspan="2">
+                                                                            매출합계 : <b class=" dark">210,000,000</b>
+                                                                            <br>
+                                                                            ⓐ - ⓑ = <b class="subGray2">64,000,000</b>
+                                                                        </td>                                                                     
+                                                                        <td class="hideB on"></td>
+                                                                        <td colspan="2"><!--240115 수정-ys-->
+                                                                            총 M/M : <b class="dark">4.2</b>
+                                                                            <br>
+                                                                            총수량 : <b class="dark">0</b>
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                            총제경비 : <b class="dark">210,000</b></td>
+                                                                        <td colspan="2">
+                                                                            매출합계 : <b class=" dark">210,000,000</b>
+                                                                            <br>
+                                                                            ⓐ - ⓒ = <b class="marked">-2,000,000</b>
+                                                                        </td>                                                                          
                                                                         <td></td>
-                                                                        <td colspan="2" class="hideI"></td>
-                                                                        <!--//내부-->
-
+                                                                        <td colspan="2" class="hideI on"></td>
                                                                         <td colspan="3"></td>
-                                                                    </tr>
+                                                                    </tr>           
                                                                 </tfoot>
+                                                                <!--//231130 수정-ys-->
                                                             </table>
                                                         </div>
                                                     </div>
@@ -1271,20 +1353,21 @@
                                                             <col width="80px">
 
                                                             <col width="80px" span="2" class="hideS on">
-                                                            <col width="50px">
+                                                            <col width="60px">
                                                             <col width="80px" span="3" class="hideS on">
                                                             <col width="20px" class="hideB on">
                                                             
                                                             <col width="80px" span="2" class="hideB on">
-                                                            <col width="50px">
+                                                            <col width="60px">
                                                             <col width="80px" span="3" class="hideB on">
                                                             <col width="20px" class="hideB on">
                                                             
-                                                            <col width="70px">
+                                                            <col width="50px">
                                                             <col width="100px" class="hideI on">
                                                             <col width="50px" class="hideI on">
 
                                                             <col width="150px">
+                                                            <col width="70px">
                                                             <col width="50px">
                                                         </colgroup>
                                                         <!--240115 추가 ys-->
@@ -1314,8 +1397,9 @@
                                                                 <th colspan="3" class="inner">내부 <i class="ico extend inner is-active"></i></th>
                                                                 <!--//내부-->
 
-                                                                <th rowspan="2" width="320px" class="fold">비고</th>
-                                                                <th rowspan="2"width="40px">삭제</th>
+                                                                <th rowspan="2" class="fold">비고</th>
+                                                                <th rowspan="2">수정일</th>
+                                                                <th rowspan="2">삭제</th>
                                                             </tr>
                                                             
                                                             <!--240115 width제거 ys-->
@@ -1494,6 +1578,7 @@
                                                                 <td class="">
                                                                     <textarea rows="1"></textarea>
                                                                 </td>
+                                                                <td>2024.01.01</td>
                                                                 <td>
                                                                     <i class="ico delete_bg"></i>
                                                                 </td>
@@ -1631,6 +1716,7 @@
                                                                 <td class="">
                                                                     <textarea rows="1"></textarea>
                                                                 </td>
+                                                                <td>2024.01.01</td>
                                                                 <td>
                                                                     <i class="ico delete_bg"></i>
                                                                 </td>
@@ -1668,7 +1754,7 @@
                                                                 </td>                                                                          
                                                                 <td></td>
                                                                 <td colspan="2" class="hideI on"></td>
-                                                                <td colspan="2"></td>
+                                                                <td colspan="3"></td>
                                                             </tr>           
                                                         </tfoot>
                                                         <!--//231130 수정-ys-->
@@ -4610,23 +4696,26 @@
     <!--//계약상세2 팝업-->
 
     <!--240130 턴키 투입 인력 추가-ys -->
-    <div id="dialog" class="modalLayer center is-active">
+    <div class="modalLayer center is-active">
         <div class="layerBox laSize p30-0">
             <div class="modalCont turnkeyInsert">
-                <h4 class="mainC">턴키 투입 인력</h4>
                 <button class="ico layerClose"></button>
+                <h4 class="mainC">턴키 투입 인력</h4>
         
                 <div class="tableTop right">
                     <div class="suffix">
                         <button type="button" class="onlyIco smSize"><i class="ico addLine_chked"></i></button>
                         <button type="button" class="onlyIco smSize"><i class="ico smPlus"></i></button>
+                        <button type="button" class="onlyIco smSize"><i class="ico smMinus"></i></button>
                     </div>                   
                 </div>
                 <div class="tableBox sticky">
                     <table>
                         <colgroup>
                             <col width="40px">
-                            <col width="100px" span="3">
+                            <col width="100px">
+                            <col width="60px">
+                            <col width="100px">
                             <col width="60px">
         
                             <col width="85px" span="2">
@@ -4645,10 +4734,7 @@
                         </colgroup>
                         <thead>
                             <tr>
-                                <th>
-                                    <input type="checkbox" id="tt3">
-                                    <label for="tt3">??</label>
-                                </th>
+                                <th></th>
                                 <th>투입유형</th>
                                 <th>투입인력</th>
                                 <th>노트</th>
@@ -4662,7 +4748,7 @@
         
                                 <th class="buy fold">매입 시작일</th>
                                 <th class="buy">매입 종료일</th>
-                                <th class="buy">MM<br>수량</th>
+                                <th class="buy">MM<br>(수량)</th>
                                 <th class="buy">단가</th>
                                 <th class="buy">매입합계</th>
                                 
@@ -4695,7 +4781,6 @@
                                     </select>
                                 </td>
                                 
-                                <!--매출-->
                                 <td class="fold">
                                     <input class="dateType" type="text" placeholder="yyyy.mm.dd">
                                 </td>
@@ -4705,9 +4790,7 @@
                                 <td><input type="text" class="txtRight"></td>
                                 <td><input type="text" class="txtRight"></td>
                                 <td class="right">200,000</td>
-                                <!--//매출-->
                                 
-                                <!--매입-->
                                 <td class="fold">
                                     <input class="dateType" type="text" placeholder="yyyy.mm.dd">
                                 </td>
@@ -4717,7 +4800,7 @@
                                 <td><input type="text" class="txtRight"></td>
                                 <td><input type="text" class="txtRight"></td>
                                 <td class="right">200,000</td>
-                                <!--매입-->
+                                
                                 
                                 <td class="fold"><input type="text"></td>
                                 <td>2024.01.16</td>
@@ -4743,7 +4826,7 @@
                                     총수량 : <b class="dark">0</b>
                                 </td>
                                 <td colspan="2" class="right">
-                                    매출합계 : <b class=" dark">210,000,000</b>
+                                    매입합계 : <b class=" dark">210,000,000</b>
                                 </td>                                
                                 <td colspan="3"></td>
                             </tr>           
@@ -4761,7 +4844,7 @@
     </div>
     <!--//240130 턴키 투입 인력 추가-ys -->
 
-
+    <div class="dialog"></div>
 
     
     <!--닫기버튼있는 컨펌창 -231130 추가-->
@@ -4792,19 +4875,14 @@
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
 
-    <script>  
-        // $( function() {
-        //     $( "#dialog" ).dialog();
-        // } );
-    </script>
     <script>
         selectBox();
 
         //240130 턴키 투입인력 윈도우팝업 추가 -ys
-        $(".window").click(function(e){
-            e.preventDefault();
-            window.open("biz_turnkeyInsert.html","windowpopup","width=1500, height=800, left=20, top=50, scroollbars=0, menubar=0, toolbar=0")
-        });
+        // $(".window").click(function(e){
+        //     e.preventDefault();
+        //     window.open("biz_turnkeyInsert.html","windowpopup","width=1500, height=800, left=20, top=50, scroollbars=0, menubar=0, toolbar=0")
+        // });
 
         //breadCrumb 스크롤
         function regiScroll(){        
