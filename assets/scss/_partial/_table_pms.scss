@@ -1,3 +1,10 @@
+.tableTop{
+    margin-top: rem(20);
+    & + .sticky{
+        max-height: calc(100vh - 360px);
+    }
+}
+
 table{
     tbody{ 
         tr{
@@ -53,6 +60,12 @@ table{
         font-size: rem(13); 
         &::placeholder{
             font-size: rem(13); 
+        }
+    }
+    input[type=checkbox],
+    input[type=radio]{
+        + label{
+            font-size: rem(13);
         }
     }
     a{
