@@ -19,14 +19,14 @@ select{
     border: 1px solid $mainColor;
   }
   &:disabled {
-    // opacity: 0.5;
-    cursor: not-allowed;
-    color: $titleGray;
+    opacity: 1;
     background: url(../img/icoSelect_dis.png) no-repeat calc(100% - 6px);
-    background-color:$inputDisable;
+    color: $disabledTxt;
+    background-color:$disabledBg;
+    border: 1px solid $disabledBd;
+    cursor: not-allowed;
   }
   option{
-    // zoom: 1.2;
     &:disabled{
       color: $titleGray;
       background-color:$inputDisable;

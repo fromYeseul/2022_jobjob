@@ -7,7 +7,7 @@
     <title>styleGuide | jobjob</title>
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style_pms.css">
     
 </head>
 <body class="styleguide">    
@@ -426,6 +426,9 @@
                     <div class="tabBtnWrap">
                         <ul class="">
                             <li class="tabBtn">
+                                <a href="#style-disabled" class="is-active">disabled</a>
+                            </li>
+                            <li class="tabBtn">
                                 <a href="#style-color">Color</a>
                             </li>
                             <li class="tabBtn">
@@ -438,7 +441,7 @@
                                 <a href="#style-text">Text</a>
                             </li>
                             <li class="tabBtn">
-                                <a href="#style-button" class="is-active">Button</a>
+                                <a href="#style-button">Button</a>
                             </li>
                             <li class="tabBtn">
                                 <a href="#style-input">Input</a>
@@ -472,6 +475,46 @@
                     <!--//list-->
                     <!--content-->
                     <div class="tabContWrap">
+                        <div id="style-disabled" class="tabCont is-active">
+                            <div class="">
+                                <button class="" disabled>button</button>
+                                <br>
+                                <br>
+                                <button class="warning" disabled>button</button>
+                                <br>
+                                <br>
+                                <button class="white" disabled>button</button>
+                                <br>
+                                <br>
+                                <button class="bdType" disabled>button</button>
+                                <br>
+                                <br>
+                                <button class="rBdType" disabled>button</button>
+                                <br>
+                                <br>
+                                <input class="" type="text" placeholder="placeholder" disabled>
+                                <br>
+                                <br>
+                                <input class="" type="text" value="value" readonly>
+                                <input class="" type="text" value="value" disabled>
+                                <br>
+                                <br>
+                                <input class="dateType" type="text" value="value" disabled>
+                                <br>
+                                <br>
+                                <select name="" id="" disabled>
+                                    <option value="">choose</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                </select>
+                                <br>
+                                <br>
+                                <div class="datepicker disabled">
+                                    <input type="text" placeholder="연-월-일">
+                                    <img src="../assets/img/icoCal.png">
+                                </div>
+                            </div>
+                        </div>
                         <div id="style-color" class="tabCont">
                             <h2>Color</h2>
                             <div class="">
@@ -647,7 +690,7 @@
                                 <span class="point">중요</span>
                             </div>
                         </div>
-                        <div id="style-button" class="tabCont is-active">     <!--버튼 수정 완료 230316-->
+                        <div id="style-button" class="tabCont">     <!--버튼 수정 완료 230316-->
                             <h2>Button</h2>
                             <div class="btn">
                                 <div class="clip mt20"><span>Default Button</span></div>    

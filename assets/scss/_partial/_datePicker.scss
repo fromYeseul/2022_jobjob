@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     padding: rem(8) rem(4);   
-    width: rem(140);   
+    width: rem(110);   
     height: rem(44);
     background: $white;
     border-radius: rem(4);
@@ -31,16 +31,20 @@
         }
     }
     &.disabled{
-        opacity: 1;
-        color: $titleGray;
-        background:$inputDisable;
+        background:$disabledBg;
+        border: 1px solid $disabledBd;
         cursor: not-allowed;
         input{
-            color: $titleGray;
+            color: $disabledTxt;
+            border:0;
+            background:$disabledBg;
             cursor: not-allowed;
             &::placeholder{
                 color: $inputGray;
             }
+        }
+        img{
+            opacity: .3;
         }
     }
     & + .datepicker{

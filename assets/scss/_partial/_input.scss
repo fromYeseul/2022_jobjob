@@ -310,21 +310,20 @@ input[type=date]{
         color: $placeholder;
         font-size: rem(14);
     }
-    &:read-only{
-        color: $subGray;
-        background: $bgColor;
-        cursor: initial; 
-        &:focus{        
-            border: 1px solid $activeGray; // inputGray -> activeGray로
-            outline: 0;
-        } 
-    }
+    // &:read-only{
+    //     color: $subGray;
+    //     background: $bgColor;
+    //     cursor: initial; 
+    //     &:focus{        
+    //         border: 1px solid $activeGray; // inputGray -> activeGray로
+    //         outline: 0;
+    //     } 
+    // }
+    &:read-only,
     &:disabled{
-        // color: $inputGray;
-        // //pointer-events: none;
-        // background: transparent;
-        color: $titleGray;
-        background:$inputDisable;
+        color: $disabledTxt;
+        background:$disabledBg;
+        border: 1px solid $disabledBd;
         cursor: not-allowed;
         &::placeholder{
             color: $inputGray;
@@ -481,9 +480,10 @@ input[type=text]{
         }
         &.disabled,
         &:disabled{
-            color: $titleGray;
+            color: $disabledTxt;
+            border: 1px solid $disabledBd;
             background: url(../img/icoCal_dis.png) right 6px top 50% no-repeat;
-            background-color:$inputDisable;
+            background-color:$disabledBg;
         }
     }
     &.onGoing{

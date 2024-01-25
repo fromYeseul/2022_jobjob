@@ -46,9 +46,14 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    .prefix{
+    &.start{
+        justify-content: flex-start;
+    }
+    .prefix,
+    .suffix{
         display: flex;
         align-items: center;
+        gap: 2px;
     }
     h3{
         margin-right: rem(30);

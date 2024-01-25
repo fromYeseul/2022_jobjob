@@ -1,3 +1,6 @@
+
+
+
 button, 
 .button{
     display: inline-block;  //다른태그에서 필요
@@ -18,9 +21,9 @@ button,
         cursor:not-allowed;
         // color: $cancel;
         // background-color: $white;
-        color: $inputGray;
-        background:$inputDisable;
-        border: 1px solid $inputGray;
+        color: $disabledTxt;
+        background:$disabledBg;
+        border: 1px solid $disabledBd;
         i{
             opacity: .3;
         }
@@ -39,13 +42,6 @@ button,
             margin-left: rem(15);
         }
     }
-    //231201
-    // &.auto{
-    //     width: auto;
-    // }
-    // &.lowSize{
-    //     line-height: rem(30);
-    // }
     &.xsSize{
         width: rem(45);
         line-height: rem(30);
