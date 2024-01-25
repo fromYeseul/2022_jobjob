@@ -241,6 +241,7 @@
 }
 
 .modalHeader{
+    margin-bottom: rem(30);
     text-align: center;
     @include clear_float;
     // .layerClose,
@@ -251,7 +252,7 @@
         float: right;
     }
     h2, h3{
-        margin-bottom: rem(40);  // 20->40
+        //margin-bottom: rem(40);  // 20->40
         font-size: rem(22);
     }
     & + .momodalCont{
@@ -879,20 +880,6 @@
 //거래처 - 거래처 담당자
 .clientAdmin{
     .tableBox{
-            // margin-top: rem(62);  //padding->margin
-            // height: calc(100vh - 482px);  // 406->482
-            padding-top: rem(30);
-            height: calc(100vh - 406px);
-            thead{
-                position: absolute;
-                top: 46px;
-                //top: -30px;   // 46 -> -30
-                z-index: 2;
-            }
-        &:last-child{
-            padding-top: 0;
-            height: 55px;
-        }
         td{
             height: rem(44);
             font-size: rem(13);
@@ -1412,54 +1399,7 @@
     }
 }
 
-//사업현황 등록 - 계약생성, 인력추가
-.contractCreate,
-.mMSupply{
-    h5{
-        color: $beigeTit;
-    }
-    .cont{
-        display: flex;
-        gap: 40px;
-        >.prefix{
-            flex: 3 1 0;
-        }
-        >.suffix{
-            flex: 2 1 0;
-            height: 5px;            
-            .inputList{
-                margin-top: 10px;
-                padding: 20px 15px;
-                border-top: 1px solid $h5Under_pms;
-            }
-        }
-    }
-    .col2{
-        row-gap: rem(20);
-        column-gap: rem(50);
-        grid-template-columns: 1fr 1fr;
-    }
-    .info{
-        margin-top: rem(10);
-        color: $subInfo;
-    }
-    .tableBox{
-        height: 480px;
-        overflow-y: auto;
-    }
-    // .putMm{
-    //     grid-row: 1/4;
-    // }
-    // .conDTerm{
-    //     grid-column: 2/4;
-    // }
-    // .dateType{
-    //     width: rem(120) !important;
-    // }
-    // .range{
-    //     margin: 0 10px;
-    // }
-}
+
 
 #fileList{
     .h3_sub{

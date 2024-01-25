@@ -1,0 +1,47 @@
+.modalLayer{
+    .tableTop{
+        & + .sticky{
+            height: calc(100vh - 360px);
+        }
+    }
+}
+
+
+//사업현황 등록 - 계약생성, 인력추가
+.contractCreate,
+.mMSupply{
+    h5{
+        color: $beigeTit;
+    }
+    .cont{
+        display: flex;
+        gap: 40px;
+        >.prefix{
+            flex: 3 1 0;
+        }
+        >.suffix{
+            flex: 2 1 0;
+            height: 5px;            
+            .inputList{
+                margin-top: 10px;
+                padding: 20px 15px;
+                border-top: 1px solid $h5Under_pms;
+            }
+        }
+    }
+    .col2{
+        row-gap: rem(20);
+        column-gap: rem(50);
+        grid-template-columns: 1fr 1fr;
+    }
+    .info{
+        margin-top: rem(10);
+        color: $subInfo;
+    }
+    
+    .tableTop{
+        & + .sticky{
+            height: calc(100vh - 530px);;
+        }
+    }
+}
