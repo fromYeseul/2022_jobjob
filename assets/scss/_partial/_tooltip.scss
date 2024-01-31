@@ -106,8 +106,22 @@
                 border-top-color: transparent;
                 border-right-color: $tooltipGray;
             }
+        }        
+        .yScroll{
+            padding-top: 0;
+            height: auto;
+            max-height: rem(90);
+            overflow: auto;
+            &::-webkit-scrollbar {
+                width: 2px;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $subInfo;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $disable;
+            }
         }
-        
         p{
             font-weight: 700;
             margin-bottom: rem(6);

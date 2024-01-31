@@ -5568,9 +5568,17 @@ input[type=checkbox]:checked + label::before,
 input[type=radio]:checked + label::before {
   background-position: -20px -100px;
 }
+input[type=checkbox]:checked:disabled + label,
+input[type=radio]:checked:disabled + label {
+  opacity: 0.5;
+}
 input[type=checkbox]:checked:disabled + label::before,
 input[type=radio]:checked:disabled + label::before {
   background-position: -20px -120px;
+}
+input[type=checkbox]:disabled + label,
+input[type=radio]:disabled + label {
+  opacity: 0.5;
 }
 input[type=checkbox]:disabled + label::before,
 input[type=radio]:disabled + label::before {
@@ -5605,6 +5613,7 @@ input[type=radio]:checked + input[type=hidden] + label::before {
 }
 input[type=checkbox]:disabled + label,
 input[type=radio]:disabled + label {
+  opacity: 0.5;
   color: #cccccc;
   background: transparent;
   cursor: not-allowed;
@@ -6722,6 +6731,25 @@ select.onGoing:focus {
   border-top-color: transparent;
   border-right-color: #58585e;
 }
+.hasTooltip .tooltip .yScroll,
+.is-signal .tooltip .yScroll {
+  padding-top: 0;
+  height: auto;
+  max-height: 5.625rem;
+  overflow: auto;
+}
+.hasTooltip .tooltip .yScroll::-webkit-scrollbar,
+.is-signal .tooltip .yScroll::-webkit-scrollbar {
+  width: 2px;
+}
+.hasTooltip .tooltip .yScroll::-webkit-scrollbar-track,
+.is-signal .tooltip .yScroll::-webkit-scrollbar-track {
+  background-color: #444;
+}
+.hasTooltip .tooltip .yScroll::-webkit-scrollbar-thumb,
+.is-signal .tooltip .yScroll::-webkit-scrollbar-thumb {
+  background-color: #666666;
+}
 .hasTooltip .tooltip p,
 .is-signal .tooltip p {
   font-weight: 700;
@@ -7312,10 +7340,16 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   height: 0.9375rem;
   background-position: -200px -360px;
 }
+.ico.exMark_round {
+  width: 0.75rem;
+  height: 0.75rem;
+  vertical-align: -1px;
+  background-position: -220px -360px;
+}
 .ico.advice {
-  width: 1.3125rem;
-  height: 1.1875rem;
-  background-position: -40px -40px;
+  width: 1.25rem;
+  height: 1.125rem;
+  background-position: -220px -300px;
 }
 .ico.more {
   width: 0.1875rem;
@@ -10488,7 +10522,7 @@ header .suffix {
   color: #fff;
 }
 header .suffix li::after {
-  background: #fff;
+  display: none;
 }
 header .suffix li.userTeam a {
   color: #a2bce2;
@@ -10771,6 +10805,13 @@ table a {
   align-items: center;
   justify-content: space-between;
   gap: 5px;
+}
+.contractDetail .tableBox {
+  overflow: visible;
+}
+.contractDetail .tableBox .tooltip {
+  width: 13.75rem;
+  text-align: left;
 }
 .contractDetail .underBg {
   margin-top: 2.5rem;
@@ -11627,7 +11668,7 @@ table a {
 #bsDetail1 .modalLayer {
   top: 50%;
   right: auto;
-  left: 100%;
+  left: 0;
   transform: translateY(-50%);
   border: 1px solid #cccccc;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);

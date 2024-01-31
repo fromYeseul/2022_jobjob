@@ -30,6 +30,7 @@ input[type=radio]{
         }
         &:disabled{
             + label{
+                opacity: .5;
                 &::before{
                     background-position: -20px -120px;
                 }
@@ -38,6 +39,7 @@ input[type=radio]{
     } 
     &:disabled{
         + label{
+            opacity: .5;
             &::before{
                 background-position: 0 -120px;
             }
@@ -83,9 +85,10 @@ input[type=radio]{
     }   
     &:disabled{
         + label{
-                color: $inputGray;
-                background:transparent;
-                cursor: not-allowed;
+            opacity: .5;
+            color: $inputGray;
+            background:transparent;
+            cursor: not-allowed;
         }
     }      
     &.hasTxt{
