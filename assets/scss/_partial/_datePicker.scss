@@ -5,11 +5,13 @@
     }
 }
 
+
+
 .datepicker{
     display: flex;
     align-items: center;
     padding: rem(8) rem(4);   
-    width: rem(110);   
+    // width: rem(110);   
     height: rem(44);
     background: $white;
     border-radius: rem(4);
@@ -50,8 +52,7 @@
     & + .datepicker{
         margin-left: rem(3);
     }
-    
-    input{
+    input[type=text]{
         border:0;
         padding: 0;
         width: calc(100% - 20px);
@@ -59,7 +60,7 @@
         &:focus{        
             border: 0;
             outline: 0;
-        } 
+        }
     }
     img{
         width: rem(16);

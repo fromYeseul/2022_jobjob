@@ -201,8 +201,10 @@
         height: rem(16);
         background-position: -320px -340px;
         cursor: pointer;
-        &.is-none{
+        &.is-none,
+        &.disabled{
             opacity: .5;
+            cursor:not-allowed;
         }
     }
     &.preview_w{
@@ -261,6 +263,11 @@
         width: rem(3);
         height: rem(15);
         background-position: -200px -360px;
+    }
+    &.advice{
+        width: rem(21);
+        height: rem(19);
+        background-position: -40px -40px;
     }
 
 

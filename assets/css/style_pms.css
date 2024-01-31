@@ -39,6 +39,9 @@ input, select, textarea, fieldset, button {
   font-weight: normal;
   letter-spacing: -0.5px;
 }
+input.txtRight, input.right, select.txtRight, select.right, textarea.txtRight, textarea.right, fieldset.txtRight, fieldset.right, button.txtRight, button.right {
+  letter-spacing: initial;
+}
 
 table {
   table-layout: fixed;
@@ -1123,6 +1126,11 @@ header .center.title h3 {
 header .suffix {
   flex: 1 1 48%;
   text-align: right;
+}
+header .suffix ul {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 header .suffix li {
   display: inline-block;
@@ -2425,162 +2433,6 @@ footer.toast button + button {
   display: none;
 }
 
-.contractDetail h2,
-.contractDetail h3 {
-  margin-bottom: 1.25rem;
-}
-.contractDetail .boxWrap {
-  margin-top: 10px;
-}
-.contractDetail .col7 {
-  row-gap: 1.25rem;
-  column-gap: 3.125rem;
-  grid-template-columns: 110px 125px 85px 95px 95px 120px 140px;
-}
-.contractDetail .cont {
-  height: calc(100vh - 370px);
-  overflow-y: auto;
-}
-.contractDetail .cont .conDTerm {
-  grid-column: 2/4;
-}
-.contractDetail .cont .conDCount {
-  grid-column: 1/4;
-}
-.contractDetail .cont .conDCount .info {
-  display: flex;
-  gap: 5px;
-}
-.contractDetail .cont .conDCount .info input {
-  flex-grow: 1;
-}
-.contractDetail .cont .conAdmin {
-  grid-column: 6/8;
-}
-.contractDetail .cont .conDFile {
-  grid-column: 1/5;
-}
-.contractDetail .cont .basic .conDCom {
-  grid-column: 2/4;
-}
-.contractDetail .cont .dateType {
-  width: 7.125rem !important;
-}
-.contractDetail .cont .range {
-  margin: 0 9px;
-}
-.contractDetail .underBg {
-  margin-top: 2.5rem;
-}
-.contractDetail .info,
-.contractDetail .uploadBox {
-  margin-top: 0.9375rem;
-  color: #444;
-}
-.contractDetail .tableTop .prefix,
-.contractDetail .tableTop .suffix {
-  gap: 0;
-}
-.contractDetail td {
-  height: 44px;
-  font-size: 0.8125rem;
-}
-.contractDetail .commentBox .commentInput::after {
-  display: none;
-}
-.contractDetail .commentBox .writer {
-  text-align: left;
-}
-.contractDetail .commentBox .comment .content {
-  width: 91%;
-}
-.contractDetail.turn .col3 {
-  margin-top: 20px;
-  row-gap: 1.25rem;
-  column-gap: 1.875rem;
-  grid-template-columns: repeat(3, 300px);
-}
-.contractDetail.turn .col4 {
-  row-gap: 1.25rem;
-  column-gap: 1.875rem;
-  grid-template-columns: repeat(4, 136px);
-}
-.contractDetail.turn .conDTerm {
-  grid-column: 2/4;
-}
-.contractDetail.turn .conDCount {
-  margin-bottom: 0;
-  grid-column: 1/4;
-}
-.contractDetail.turn .conDCount .info {
-  display: flex;
-  gap: 5px;
-}
-.contractDetail.turn .conDFile {
-  grid-column: 1/3;
-}
-.contractDetail.turn .dateType {
-  width: 8.375rem !important;
-}
-.contractDetail.turn .range {
-  margin: 0 10px;
-}
-.contractDetail .contentFlex {
-  display: flex;
-  gap: 60px;
-}
-.contractDetail .contentFlex .prefix {
-  flex: 5 1 0;
-}
-.contractDetail .contentFlex .suffix {
-  flex: 3 1 0;
-  border: 1px solid #cccccc;
-  border-radius: 6px;
-}
-.contractDetail .contentFlex .suffix.divideBox {
-  padding: 1.25rem 1.5625rem;
-  margin-top: 0;
-  margin-left: 0;
-  flex-direction: column;
-  background: #f9f9f9;
-}
-.contractDetail .contentFlex .suffix.divideBox li {
-  margin-bottom: 0.625rem;
-  display: flex;
-  align-items: center;
-  height: 2.8125rem;
-}
-.contractDetail .contentFlex .suffix.divideBox li:last-child {
-  margin-bottom: 0;
-}
-.contractDetail .contentFlex .suffix.divideBox li h6 {
-  width: 6.25rem;
-}
-.contractDetail .contentFlex .suffix.divideBox li .info {
-  margin-top: 0;
-}
-.contractDetail .contentFlex .suffix div {
-  padding: 0;
-  border: 0;
-  position: relative;
-}
-.contractDetail .contentFlex .suffix div.top, .contractDetail .contentFlex .suffix div.center {
-  padding-bottom: 20px;
-}
-.contractDetail .contentFlex .suffix div.top::after, .contractDetail .contentFlex .suffix div.center::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background: #cccccc;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-}
-.contractDetail .contentFlex .suffix div.bottom {
-  margin-top: 1.25rem;
-}
-
 #fileList .h3_sub {
   margin-top: -10px;
   color: #979797;
@@ -2636,15 +2488,6 @@ footer.toast button + button {
   font-size: 0.875rem;
 }
 
-.paySchedule {
-  height: 34.375rem;
-}
-.paySchedule .h3_sub + .tableTop {
-  margin-top: 1.25rem;
-}
-.paySchedule .tableBox {
-  max-height: 25rem;
-}
 .paySchedule table .datepicker input {
   text-align: left;
 }
@@ -2662,17 +2505,9 @@ footer.toast button + button {
   padding: 0.25rem;
 }
 
-.paySchedule,
-.pubFileUpload {
-  height: 34.375rem;
-}
 .paySchedule .h3_sub + .tableTop,
 .pubFileUpload .h3_sub + .tableTop {
   margin-top: 1.25rem;
-}
-.paySchedule .tableBox,
-.pubFileUpload .tableBox {
-  max-height: 25rem;
 }
 
 .joinRequest .inputList.flex h6,
@@ -3239,7 +3074,8 @@ footer.toast button + button {
   background: #6b6b6b;
   border: 1px solid #6b6b6b;
 }
-.condition .hasBtn .hasTxt + label {
+.condition .hasBtn .button + .hasTxt + label,
+.condition .hasBtn button + .hasTxt + label {
   margin-left: 1.25rem;
 }
 .condition .hasBtn input {
@@ -3265,6 +3101,9 @@ footer.toast button + button {
 }
 .condition.inList ul li.hasBtn {
   display: flex;
+}
+.condition .datepicker {
+  width: 6.875rem;
 }
 
 .tableTop {
@@ -7417,8 +7256,9 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-position: -320px -340px;
   cursor: pointer;
 }
-.ico.preview.is-none {
+.ico.preview.is-none, .ico.preview.disabled {
   opacity: 0.5;
+  cursor: not-allowed;
 }
 .ico.preview_w {
   width: 1.125rem;
@@ -7471,6 +7311,11 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 0.1875rem;
   height: 0.9375rem;
   background-position: -200px -360px;
+}
+.ico.advice {
+  width: 1.3125rem;
+  height: 1.1875rem;
+  background-position: -40px -40px;
 }
 .ico.more {
   width: 0.1875rem;
@@ -9617,7 +9462,6 @@ h6 + .h6_sub {
   display: flex;
   align-items: center;
   padding: 0.5rem 0.25rem;
-  width: 6.875rem;
   height: 2.75rem;
   background: #fff;
   border-radius: 0.25rem;
@@ -9655,13 +9499,13 @@ h6 + .h6_sub {
 .datepicker + .datepicker {
   margin-left: 0.1875rem;
 }
-.datepicker input {
+.datepicker input[type=text] {
   border: 0;
   padding: 0;
   width: calc(100% - 20px);
   height: auto;
 }
-.datepicker input:focus {
+.datepicker input[type=text]:focus {
   border: 0;
   outline: 0;
 }
@@ -10843,8 +10687,12 @@ table a {
   margin-top: 1.5rem;
 }
 
+.modalLayer .tableTop {
+  margin-top: 0;
+}
 .modalLayer .tableTop + .sticky {
   height: calc(100vh - 360px);
+  border-bottom: 0;
 }
 
 .contractCreate h5,
@@ -10887,6 +10735,143 @@ table a {
   height: calc(100vh - 530px);
 }
 
+.contractDetail h2,
+.contractDetail h3 {
+  margin-bottom: 1.25rem;
+}
+.contractDetail .boxWrap {
+  margin-top: 10px;
+}
+.contractDetail .col7 {
+  row-gap: 1.25rem;
+  column-gap: 3.125rem;
+  grid-template-columns: 110px 125px 85px 95px 95px 130px 140px;
+}
+.contractDetail .cont {
+  height: calc(100vh - 370px);
+  overflow-y: auto;
+}
+.contractDetail .cont .conDTerm {
+  grid-column: 2/4;
+}
+.contractDetail .cont .conDCount {
+  grid-column: 1/4;
+}
+.contractDetail .cont .conDFile {
+  grid-column: 1/5;
+}
+.contractDetail .cont .basic .conDCom {
+  grid-column: 2/4;
+}
+.contractDetail .cont .dateType {
+  width: 7.125rem !important;
+}
+.contractDetail .cont .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.contractDetail .underBg {
+  margin-top: 2.5rem;
+}
+.contractDetail .info,
+.contractDetail .uploadBox {
+  margin-top: 0.9375rem;
+  color: #444;
+}
+.contractDetail .commentBox .commentInput::after {
+  display: none;
+}
+.contractDetail .commentBox .writer {
+  text-align: left;
+}
+.contractDetail .commentBox .comment .content {
+  width: 91%;
+}
+.contractDetail.turn .col3 {
+  margin-top: 20px;
+  row-gap: 1.25rem;
+  column-gap: 1.875rem;
+  grid-template-columns: repeat(3, 300px);
+}
+.contractDetail.turn .col4 {
+  row-gap: 1.25rem;
+  column-gap: 1.875rem;
+  grid-template-columns: repeat(4, 138px);
+}
+.contractDetail.turn .conDTerm {
+  grid-column: 2/4;
+}
+.contractDetail.turn .conDCount {
+  margin-bottom: 0;
+  grid-column: 1/4;
+}
+.contractDetail.turn .conDFile {
+  grid-column: 1/3;
+}
+.contractDetail.turn .dateType {
+  width: 8.375rem !important;
+}
+.contractDetail .contentFlex {
+  display: flex;
+  gap: 60px;
+}
+.contractDetail .contentFlex .prefix {
+  flex: 5 1 0;
+}
+.contractDetail .contentFlex .suffix {
+  flex: 3 1 0;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+}
+.contractDetail .contentFlex .suffix.divideBox {
+  padding: 1.25rem 1.5625rem;
+  margin-top: 0;
+  margin-left: 0;
+  flex-direction: column;
+  background: #f9f9f9;
+}
+.contractDetail .contentFlex .suffix.divideBox li {
+  margin-bottom: 0.625rem;
+  display: flex;
+  align-items: center;
+}
+.contractDetail .contentFlex .suffix.divideBox li:last-child {
+  margin-bottom: 0;
+}
+.contractDetail .contentFlex .suffix.divideBox li h6 {
+  width: 6.25rem;
+}
+.contractDetail .contentFlex .suffix.divideBox li .info {
+  margin-top: 0;
+}
+.contractDetail .contentFlex .suffix.divideBox .conSupply,
+.contractDetail .contentFlex .suffix.divideBox .conPrice {
+  margin-top: 10px;
+  position: relative;
+}
+.contractDetail .contentFlex .suffix.divideBox .conSupply::before,
+.contractDetail .contentFlex .suffix.divideBox .conPrice::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #cccccc;
+  position: absolute;
+  left: 50%;
+  top: -15px;
+  transform: translateX(-50%);
+}
+.contractDetail .contentFlex .suffix > div,
+.contractDetail .contentFlex .suffix ul {
+  padding: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
 .turnkeyInsert {
   position: relative;
 }
@@ -10901,7 +10886,7 @@ table a {
 .turnkeyInsert .layerClose {
   position: absolute;
   right: 0;
-  top: -10px;
+  top: -20px;
 }
 .turnkeyInsert .tableTop .suffix {
   gap: 4px;
@@ -10926,6 +10911,108 @@ table a {
   width: 100%;
   padding: 0.125rem;
   background: #fff;
+}
+
+.memRegister .breadCrumb {
+  font-size: 1.125rem;
+}
+.memRegister .regiPartWrapper {
+  height: calc(100vh - 128px);
+}
+.memRegister .regiPartWrapper button.round {
+  width: 4.125rem;
+  vertical-align: text-bottom;
+}
+.memRegister .regiPartWrapper button.round i {
+  margin-right: 3px;
+}
+.memRegister .boxWrap .flex {
+  align-items: center;
+  justify-content: space-between;
+}
+.memRegister .boxWrap .prefix {
+  display: flex;
+}
+.memRegister .inputList .flexCenter {
+  gap: 0.625rem;
+}
+.memRegister .inputList .flexCenter li {
+  margin-bottom: 0;
+}
+.memRegister .inputList .flexCenter + .flexCenter {
+  margin-top: 0.625rem;
+}
+.memRegister .inputList .grid + .grid {
+  margin-top: 0.625rem;
+}
+.memRegister .inputList .ulGroup + .ulGroup {
+  margin-top: 1.875rem;
+  padding-top: 1.875rem;
+  border-top: 1px solid #f2f2f7;
+}
+.memRegister .flexEnd + .flexEnd {
+  margin-top: -20px;
+}
+.memRegister .flexEnd + .flexCenter {
+  margin-top: -20px;
+}
+.memRegister .uploadList {
+  margin-top: 0.9375rem;
+}
+.memRegister .inputGroup {
+  height: 4.375rem;
+}
+.memRegister .inputGroup.upload {
+  padding: 26px 20px;
+  height: auto;
+}
+.memRegister .profile {
+  height: 18.75rem;
+}
+.memRegister .specialJob,
+.memRegister .skillExp,
+.memRegister .detailJob,
+.memRegister .added {
+  grid-column: 1/6;
+}
+.memRegister .specialJob {
+  margin-bottom: 0 !important;
+}
+.memRegister .projName {
+  grid-column: 2/4;
+}
+.memRegister .clientComp,
+.memRegister .useTool {
+  display: flex;
+  gap: 0.625rem;
+  grid-column: 1/4;
+}
+.memRegister .clientComp .full,
+.memRegister .useTool .full {
+  width: 50%;
+}
+.memRegister .careerEtc {
+  grid-column: 4/6;
+}
+.memRegister .jobCondi {
+  margin-bottom: 0.625rem;
+}
+.memRegister .jobCondi2 {
+  display: flex;
+  align-items: end;
+  margin-bottom: 0.625rem !important;
+}
+.memRegister .preferPosi {
+  grid-column: 2/6;
+}
+.memRegister .preferPosi .inputGroup {
+  height: auto;
+}
+.memRegister .gridBtn {
+  grid-column: 7/9;
+}
+.memRegister .empty {
+  grid-column: 7/9;
 }
 
 .dashboard {
@@ -10982,6 +11069,10 @@ table a {
 .dashboard .contentFlex .boxWrap.suffix {
   padding: 1.875rem;
   flex: 9 1 0;
+}
+.dashboard .contentFlex .boxWrap.suffix .flex_1_2 {
+  gap: 30px;
+  align-items: center;
 }
 .dashboard .contentFlex .boxWrap h4 {
   color: #1f60af;
@@ -11332,11 +11423,9 @@ table a {
   grid-column: 4/6;
 }
 .bizStateRegister .bizTerm .flex {
+  gap: 27px;
   align-items: center;
   justify-content: space-between;
-}
-.bizStateRegister .bizTerm .datepicker {
-  width: 11rem;
 }
 .bizStateRegister .bizProjNm,
 .bizStateRegister .bizFile {
@@ -11536,13 +11625,15 @@ table a {
   border: 1px solid #2a55aa;
 }
 #bsDetail1 .modalLayer {
-  top: 90%;
+  top: 50%;
   right: auto;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 100%;
+  transform: translateY(-50%);
+  border: 1px solid #cccccc;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 #bsDetail1 .modalLayer .layerBox {
-  padding: 0.9375rem 1.25rem;
+  padding: 0.5625rem 0.625rem;
   min-width: 12.8125rem;
   white-space: nowrap;
 }
@@ -11765,7 +11856,7 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   width: 100%;
 }
 .purchaseLedger .tableBox {
-  max-height: calc(100vh - 371px);
+  max-height: calc(100vh - 354px);
 }
 .purchaseLedger .tableBox .flex {
   gap: 4px;
@@ -11795,6 +11886,9 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 .eiCheck .tableBox td {
   text-align: right;
 }
+.eiCheck .tableBox td.center {
+  text-align: center;
+}
 .eiCheck .tableBox td p {
   color: #000000;
 }
@@ -11814,6 +11908,9 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 }
 .wcCheck .tableBox td {
   text-align: right;
+}
+.wcCheck .tableBox td.center {
+  text-align: center;
 }
 .wcCheck .tableBox td p {
   color: #000000;

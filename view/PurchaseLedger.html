@@ -8,6 +8,7 @@
     
     <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
     <link rel="stylesheet" href="../assets/css/style_pms.css">
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
 
 </head>
 <body>
@@ -147,12 +148,12 @@
                             </li>  
                             <li>
                                 <p class="condiTit">조회일자</p>
-                                <div class="flex">
+                                <div class="flex">                                    
                                     <div class="datepicker">
-                                        <input type="text" placeholder="연-월-일">
+                                        <input type="text" placeholder="시작일" id="datepicker1">
                                     </div>
                                     <div class="datepicker">
-                                        <input type="text" placeholder="연-월-일">
+                                        <input type="text" placeholder="연-월-일" id="datepicker2">
                                     </div>
                                 </div>
                             </li>                         
@@ -1005,7 +1006,7 @@
     </section>
 
     <!--귀속월 선택-->
-    <div class="modalLayer center is-active">
+    <div class="modalLayer center">
         <div class="layerBox smMidSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>   
@@ -1033,8 +1034,20 @@
         //     $("#datepicker").datepicker();
         // });
         $(function(){
-            $("#datepicker0").datepicker({
+            $("#datepicker1").datepicker({
                 dateFormat:'yy/mm/dd'
+                , showOn: 'button'
+                , buttonImage: '../assets/img/icoCal.png'
+                , buttonImageOnly: true
+            })
+            $("#datepicker2").datepicker({
+                dateFormat:'yy/mm'
+                , showOn: 'button'
+                , buttonImage: '../assets/img/icoCal.png'
+                , buttonImageOnly: true
+            })
+            $("#datepicker0").datepicker({
+                dateFormat:'yy/mm'
                 , showOn: 'button'
                 , buttonImage: '../assets/img/icoCal.png'
                 , buttonImageOnly: true

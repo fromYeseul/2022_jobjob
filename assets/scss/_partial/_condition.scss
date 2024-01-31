@@ -50,11 +50,11 @@
             width: rem(44);
             background: $searchbtnGray;
             border: 1px solid $searchbtnGray;
-        }
-        .hasTxt{
-            & + label{
-                margin-left: rem(20);
-            }        
+            & + .hasTxt{
+                & + label{
+                    margin-left: rem(20);
+                }        
+            }
         }
         input{
             width: rem(400);
@@ -87,5 +87,8 @@
                 }
             }
         }
+    }
+    .datepicker{
+        width: rem(110);   
     }
 }

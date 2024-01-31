@@ -1215,200 +1215,7 @@
     }
 }
 
-//사업현황 등록 - 계약상세
-.contractDetail{
-    h2,
-    h3{
-        margin-bottom: rem(20);
-    }
-    .boxWrap{
-        margin-top: 10px;
-    }
-    .col7{
-        // width: 90%;
-        row-gap: rem(20);
-        column-gap: rem(50);
-        // grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr;
-        // grid-template-columns: 95px 100px 80px 120px 100px 130px 140px;
-        // grid-template-columns: 95px 110px 100px 100px 100px 130px 140px;
-        grid-template-columns: 110px 125px 85px 95px 95px 120px 140px;
-    }
-    .cont{
-        height: calc(100vh - 370px);
-        overflow-y: auto;
-        // .conDCom{
-        //     grid-column: 2/4;
-        // }
-        .conDTerm{
-            grid-column: 2/4;
-        }
-        .conDCount{
-            grid-column: 1/4;
-            .info{                
-                display: flex;
-                gap: 5px;
-                input{
-                    flex-grow: 1;
-                }
-            }
-        }
-        .conAdmin{
-            grid-column: 6/8;
-        }
-        .conDFile{
-            grid-column: 1/5;
-        }
-        .basic{
-            //턴키없을때
-            .conDCom{
-                grid-column: 2/4;
-            }
-        }
-        .dateType{
-            width: rem(114) !important;
-        }
-        .range{
-            margin: 0 9px;
-        }
-    }
-    .underBg{
-        margin-top: rem(40);
-    }
-    .info,
-    .uploadBox{
-        margin-top: rem(15);
-        color: $subInfo;
-    }
 
-    .tableTop{
-        .prefix,
-        .suffix{
-            gap: 0;
-        }
-    }
-    td{
-        height: 44px;
-        font-size: rem(13);
-    }
-    .commentBox{
-        .commentInput{
-            // padding-bottom: 10px;
-            &::after{
-                display: none;
-            }
-        }
-        .writer{
-            text-align: left;
-        }
-        .comment{
-            .content{
-                width: 91%;
-            }
-        }
-    } 
-    //턴키
-    &.turn{
-        .col3{
-            margin-top: 20px;
-            row-gap: rem(20);
-            column-gap: rem(30);
-            grid-template-columns: repeat(3, 300px);
-        }
-        .col4{
-            row-gap: rem(20);
-            column-gap: rem(30);
-            grid-template-columns: repeat(4, 136px);
-        }
-        .conDTerm{
-            grid-column: 2/4;
-        }
-        .conDCount{
-            margin-bottom: 0;
-            grid-column: 1/4;
-            .info{
-                display: flex;
-                gap: 5px;
-            }
-        }
-        .conDFile {
-            grid-column: 1/3;
-        }
-        .dateType{
-            width: rem(134) !important;
-        }
-        .range{
-            margin: 0 10px;
-        }
-    }
-    .contentFlex{
-        display: flex;
-        gap: 60px;
-        .prefix{
-            flex: 5 1 0;
-        }
-        .suffix{
-            flex: 3 1 0;
-            border: 1px solid $layoutColor;
-            border-radius: 6px;
-            &.divideBox{
-                padding: rem(20) rem(25);
-                margin-top: 0;
-                margin-left: 0;
-                flex-direction: column;
-                background: $divideBg_pms;
-                li{
-                    margin-bottom: rem(10);
-                    display: flex;
-                    align-items: center;
-                    height: rem(45);
-                    &:last-child{
-                        margin-bottom: 0;
-                    }
-                    h6{
-                        width: rem(100);
-                    }
-                    .info{
-                        margin-top: 0;
-                    }
-                }
-            }
-            div{
-                padding: 0;
-                border:0;
-                position: relative;
-                &.top,
-                &.center{
-                    padding-bottom: 20px;
-                    &::after{
-                        content:'';
-                        width: 100%;
-                        height: 1px;
-                        background: $layoutColor;
-                        position: absolute;
-                        left: 50%;
-                        bottom: 0;
-                        transform: translateX(-50%);
-                    }
-                }
-                &.bottom{
-                    margin-top:rem(20);
-                }
-                // &.top{
-                //     padding-top: rem(40);
-                //     padding-bottom: rem(15);
-                //     border-bottom-left-radius: 0;
-                //     border-bottom-right-radius: 0;
-                //     border-bottom: 1px solid $layoutColor;
-                // }
-                // &.bottom{
-                //     border-top-left-radius: 0;
-                //     border-top-right-radius: 0;
-                //     border-top: 1px solid $layoutColor;
-                // }
-            }
-        }
-    }
-}
 
 
 
@@ -1472,15 +1279,6 @@
 
 //지급스케줄
 .paySchedule{
-    height: rem(550);
-    .h3_sub{
-        & + .tableTop{
-            margin-top: rem(20);
-        }
-    }
-    .tableBox{
-        max-height: rem(400);
-    }
     table{
         .datepicker{
             input{
@@ -1504,14 +1302,10 @@
 }
 .paySchedule,
 .pubFileUpload{
-    height: rem(550);
     .h3_sub{
         & + .tableTop{
             margin-top: rem(20);
         }
-    }
-    .tableBox{
-        max-height: rem(400);
     }
 }
 

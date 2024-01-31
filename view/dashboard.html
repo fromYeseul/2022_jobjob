@@ -27,6 +27,13 @@
                         <span aria-controls="showLevel" class="layerOpen">등급보기설정
                     </span></li>
                     <li><a href="#">로그아웃</a></li>
+                    <!--240130 추가-ys-->
+                    <li>
+                        <a href="https://kaned.notion.site/kaned/ePMS-14ee9b2df5d24cceb145cc8faebd5f84" title="도움말" target="_blank">
+                            <i class="ico advice"></i>
+                        </a>
+                    </li>
+                    <!--//240130 추가-ys-->
                 </ul>
             </div>
         </header>
@@ -79,11 +86,31 @@
                                     </select>
 
                                     <p class="condiTit">사업부서</p>
-                                    <select name="" id="">
-                                        <option value="">choose</option>
-                                        <option value="dog">Dog</option>
-                                        <option value="cat">CatCatCatCatCatCat</option>
-                                    </select>
+                                    <div class="select laSize is-active">
+                                        <span class="selDefault is-active">SAP 전략</span>
+                                        <ul class="optionList">
+                                            <li class="optionItem">
+                                                <input type="checkbox" id="optChk_1" class="hasTxt">
+                                                <label for="optChk_1">SAP 사업</label>
+                                            </li>                                        
+                                            <li class="optionItem">
+                                                <input type="checkbox" id="optChk_2" class="hasTxt">
+                                                <label for="optChk_2">SAP 전략</label>
+                                            </li>
+                                            <li class="optionItem">
+                                                <input type="checkbox" id="optChk_3" class="hasTxt">
+                                                <label for="optChk_3">SAP 융합</label>
+                                            </li>
+                                            <li class="optionItem">
+                                                <input type="checkbox" id="optChk_4" class="hasTxt">
+                                                <label for="optChk_4">대외사업</label>
+                                            </li>
+                                            <li class="optionItem">
+                                                <input type="checkbox" id="optChk_5" class="hasTxt">
+                                                <label for="optChk_5">미래융합사업</label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                     <button>
                                         <i class="ico search white"></i>
                                     </button>
@@ -187,8 +214,13 @@
                         </div>
                         <div class="boxWrap suffix">
                             <h4>상태별 계약현황<span class="h4_sub">전체</span></h4>
-                            <div class=""><!--240101 시안용 이미지 추가 ys-->
-                                <img src="../assets/img/chart_sample.png" style="width: 100%;">
+                            <div class="flex_1_2">                                
+                                <div class="pieGraph prefix">     
+                                    <canvas id="pieGraph" style="width:100%; height:20vh;"></canvas>
+                                </div>
+                                <div class="lineGraph suffix">     
+                                    <canvas id="lineGraph" style="width:100%; height:26vh;"></canvas>
+                                </div>
                             </div>
                             <div class="accWrap">  
                                 <div class="accBox">
@@ -912,14 +944,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         const halfChart = document.getElementById('halfChart');
-
-        const cChart_pro = document.getElementById('cChart_pro');
-        const cChart_income = document.getElementById('cChart_income');
-        const cChart_input = document.getElementById('cChart_input');
-        const cChart_cont = document.getElementById('cChart_cont');
-        const cChart_fin = document.getElementById('cChart_fin');
-
         const barChart = document.getElementById('barChart');
+        
+        const pieGraph = document.getElementById('pieGraph');
+        const lineGraph = document.getElementById('lineGraph');
       
         //반도넛 - 240101 수정
         new Chart(halfChart, {
@@ -955,8 +983,6 @@
           }
         });
 
-
-
         //막대 - 240101 수정
         new Chart(barChart, {
           type: 'bar',
@@ -991,145 +1017,55 @@
           }
         });
 
-
-        
-        //진행
-        new Chart(cChart_pro, {
-          type: 'doughnut',
-          data: {
+        //도넛 - 240130 수정
+        new Chart(pieGraph, {
+          type: 'pie',
+          data: {        
+            labels: ['진행', '무산', '예정', '종료'],
             datasets: [{
-              data: [88, 12],
+                data: [30, 10, 30, 30],
                 backgroundColor: [
-                    'rgba(147, 42, 182, 1)',
-                    'rgba(238, 238, 238, 1)'                    
-                ],
+                    '#ffc000',   //노랑 - 종료
+                    '#4473c5',  //파랑 - 예정
+                    '#a5a5a5',  //회색 - 무산
+                    '#ed7d31'  //오렌지 - 진행
+                ]
             }]
           },
           options: {
+            responsive: false,
             plugins: {
-                title: {
-                    display: true,
-                    text: '진행',
-                    color: '#2564b0',
-                    font: {
-                        size: 14
-                    }
+                legend: {
+                    display: false
                 }
-            },
-            cutout: 30,
-            borderWidth: 0
-          }
-        });
-        //이익
-        new Chart(cChart_income, {
-          type: 'doughnut',
-          data: {
-            datasets: [{
-              data: [18, 82],
-                backgroundColor: [
-                    'rgba(0, 166, 90, 1)',
-                    'rgba(238, 238, 238, 1)'
-                ],
-            }]
-          },
-          options: {
-            plugins: {
-                title: {
-                    display: true,
-                    text: '이익',
-                    color: '#2564b0',
-                    font: {
-                        size: 14
-                    }
-                }
-            },
-            cutout: 30,
-            borderWidth: 0
-          }
-        });
-        //투입
-        new Chart(cChart_input, {
-          type: 'doughnut',
-          data: {
-            datasets: [{
-              data: [30, 70],
-                backgroundColor: [
-                    'rgba(245, 105, 84, 1)',
-                    'rgba(238, 238, 238, 1)'
-                ],
-            }]
-          },
-          options: {
-            plugins: {
-                title: {
-                    display: true,
-                    text: '투입',
-                    color: '#2564b0',
-                    font: {
-                        size: 14
-                    }
-                }
-            },
-            cutout: 30,
-            borderWidth: 0
-          }
-        });
-        //계약
-        new Chart(cChart_cont, {
-          type: 'doughnut',
-          data: {
-            datasets: [{
-              data: [50, 50],
-                backgroundColor: [
-                    'rgba(60, 141, 188, 1)',
-                    'rgba(238, 238, 238, 1)'
-                ],
-            }]
-          },
-          options: {
-            plugins: {
-                title: {
-                    display: true,
-                    text: '계약',
-                    color: '#2564b0',
-                    font: {
-                        size: 14
-                    }
-                }
-            },
-            cutout: 30,
-            borderWidth: 0
-          }
-        });
-        //종료
-        new Chart(cChart_fin, {
-          type: 'doughnut',
-          data: {
-            datasets: [{
-              data: [25, 75],
-                backgroundColor: [
-                    'rgba(57, 204, 204, 1)',
-                    'rgba(238, 238, 238, 1)'
-                ],
-            }]
-          },
-          options: {
-            plugins: {
-                title: {
-                    display: true,
-                    text: '종료',
-                    color: '#2564b0',
-                    font: {
-                        size: 14
-                    }
-                }
-            },
-            cutout: 30,
-            borderWidth: 0
+            }
           }
         });
 
-
+        //라인 - 240130 수정
+        new Chart(lineGraph, {
+          type: 'line',
+          data: {        
+            labels: ['계약대기', '계약완료', '변경계약대기', '변경완료', '계약취소', '비계약'],
+            datasets: [{
+                label: '진행 프로젝트',
+                data: [30, 10, 40, 20, 10, 30],
+                fill: false,
+                pointRadius: 5,
+                pointHoverRadius: 8,
+                borderColor: '#ed7d31',
+                backgroundColor: '#ed7d31'
+            }]
+          },
+          options: {
+            responsive: false,
+            plugins: {
+                legend: {
+                    display: true
+                }
+            }
+          }
+        });
       </script>
 </body>
 </html>

@@ -53,6 +53,7 @@
     .bizTerm{
         grid-column: 4/6;
         .flex{
+            gap: 27px;
             align-items: center;
             justify-content: space-between;
         }
@@ -61,9 +62,9 @@
         //         width: rem(176) !important;
         //     }
         // }
-        .datepicker{
-            width: rem(176);
-        }
+        // .datepicker{
+        //     width: rem(176);
+        // }
     }
     .bizProjNm,
     .bizFile{
@@ -344,12 +345,14 @@
     }
     
     .modalLayer{
-        top: 90%;
+        top: 50%;
         right: auto;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 100%;
+        transform: translateY(-50%);
+        border: 1px solid $layoutColor;
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
         .layerBox{
-            padding: rem(15) rem(20);
+            padding: rem(9) rem(10);
             min-width: rem(205);
             white-space: nowrap;
             input[type=checkbox]{
