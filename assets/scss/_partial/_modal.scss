@@ -877,49 +877,6 @@
     }
 }
 
-//거래처 - 거래처 담당자
-.clientAdmin{
-    .tableBox{
-        td{
-            height: rem(44);
-            font-size: rem(13);
-            &.nodata{
-                // height: 469px;
-                height: calc(100vh - 360px - 85px);
-            }
-        }
-        tfoot{
-            td{
-                height: rem(52);
-                padding: 10px 5px !important;
-                &:last-child{
-                    button{
-                        margin-left: 4px;
-                        width: 60px;
-                        height: 32px;
-                        line-height: rem(32);
-                    }
-                }
-            }
-            .inputIco{
-                width: 100%;
-            }
-            input{
-                height: rem(32);
-                background: $white;
-            }
-        }
-    }
-    .modalFooter{
-        position: relative;
-    }
-    .alertToast{
-        top: -50%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
 
 #requireProject{
     .absol{
@@ -1227,34 +1184,6 @@
     }
 }
 
-//프로젝트별 매출집계 - 월별 매입/매출 
-//투입유형별 매출/매입 - 월별 매입/매출
-//외주 매출/매입
-//정직원 매출/매입
-
-.projMonthly,
-.insertMonthly,
-.sourcingMonthly,
-.empMonthly
-{
-    height: rem(680);
-    .h3_sub{
-        & + .tableBox{
-            margin-top: rem(20);
-            max-height: rem(585);
-        }
-    }
-    .ellipsis{
-        padding-left: rem(10);
-    }
-    td{
-        padding: rem(4) rem(10);
-        text-align: right;
-    }
-    tfoot{
-        font-weight: bold;
-    }
-}
 
 //보험 근로자 원부번호
 .originNum{
