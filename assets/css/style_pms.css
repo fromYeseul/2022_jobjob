@@ -1664,7 +1664,6 @@ footer.toast button + button {
 }
 
 .modalHeader {
-  margin-bottom: 1.875rem;
   text-align: center;
 }
 .modalHeader::after {
@@ -2189,7 +2188,7 @@ footer.toast button + button {
   font-size: 0.8125rem;
 }
 .clientAdmin .tableBox td.nodata {
-  height: 469px;
+  height: calc(100vh - 360px - 85px);
 }
 .clientAdmin .tableBox tfoot td {
   height: 3.25rem;
@@ -10839,7 +10838,7 @@ table a {
 .contractDetail.turn .col4 {
   row-gap: 1.25rem;
   column-gap: 1.875rem;
-  grid-template-columns: repeat(4, 138px);
+  grid-template-columns: 130px 160px 130px 140px;
 }
 .contractDetail.turn .conDTerm {
   grid-column: 2/4;
@@ -11413,7 +11412,7 @@ table a {
   width: 9.375rem;
 }
 .bizState .select .ellipsis {
-  width: 100%;
+  max-width: 100%;
 }
 .bizState .tableBox {
   max-height: calc(100vh - 371px);
@@ -11780,6 +11779,9 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   text-align: right;
   color: #000000;
   font-size: 0.8125rem;
+}
+.projTotal table td.ellipsis {
+  text-align: left;
 }
 .projTotal table tfoot td {
   padding: 0.5rem 0.25rem;
