@@ -4,7 +4,11 @@
     vertical-align: middle;
     background-image: url(../img/icoGroup.png);
     &.disabled{
+        opacity: .5;
         cursor: not-allowed !important;
+        &:hover{
+            opacity: .2;
+        }
     }
     //공통
     &.search{
@@ -110,6 +114,7 @@
         width: rem(12);
         height: rem(12);
         background-position: -100px -320px;
+        vertical-align: -1px;
         cursor:pointer;        
         &.is-active{
             background-position: -120px -320px;

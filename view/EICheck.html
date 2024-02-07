@@ -164,9 +164,14 @@
                         </div>
 
                         <div class="suffix">
-                            <div class="refer">
-                                <span>■ 공단부과금액</span>
-                                <span class="subGray">■ 당사반영금액</span>
+                            <div class="refer">                                
+                                <!--240215 수정-ys-->
+                                <ul>
+                                    <li><span>■ 공단부과금액</span></li>
+                                    <li><span class="subGray">■ 당사반영금액</span></li>
+                                    <li><span class="turnkey">미</span>미지급</li>
+                                </ul>     
+                                <!--//240215 수정-ys-->   
                             </div>
                         
                             <button class="white">
@@ -219,8 +224,18 @@
                                 <th>2023.11</th>
                                 <th>2023.12</th>
 
-                                <th>부과총액</th>
-                                <th>차액</th>
+                                <th>부과총액</th>                                
+                                <!--240215 수정-ys-->
+                                <th class="hasTooltip">
+                                    차액
+                                    <i class="ico qMark2"></i>
+                                    <div class="tooltip bottom">
+                                        <p>차액계산 기준</p>
+                                        공단부과금액과 당사반영금액이
+                                        모두 입력된 경우에만 차액 계산 
+                                    </div>         
+                                </th>
+                                <!--//240215 수정-ys-->
                                 <th>비고</th>
                                                                         
                             </thead>
@@ -480,15 +495,15 @@
             </div>
             <div class="modalCont pubFileUpload"><!--팝업 고유 클래스-->
                 <h3>공단파일 업로드</h3>
-                <div class="h3_sub">첨부된 파일명 기준으로 보험료가 적용되며 기존에 입력된 데이터가 있다면 덮어쓰기 됩니다. </div>
-
+                
                 <div class="tableTop center">
                     <div class="hasBtn">
-                        <input class="" type="text" value="고용보험료_2023_06.xlsx">
+                        <input class="" type="text" placeholder="파일명예시 : 고용보험료_2023_06.xlsx">
                         <button class="bdType">파일선택</button>
                     </div>
+                    <div class="h6_sub">고용보험료_귀속년_귀속월.xlsx 의 파일명으로 업로드하세요.</div><!--240215 추가-ys-->
                 </div> 
-                <div class="tableBox sticky">
+                <div class="tableBox sticky hasInfo"><!--240215 하단정보있는 타입-->
                     <table>
                         <colgroup>
                             <col width="40px" span="2">
@@ -685,7 +700,12 @@
 
                         </tbody>
                     </table>
-                </div>               
+                </div>  
+                <!--240215 수정-ys-->    
+                <div class="bulletList">
+                    <li>첨부된 파일명 기준으로 보험료가 적용되며 기존에 입력된 데이터가 있다면 덮어쓰기 됩니다.</li>
+                </div>    
+                <!--//240215 수정-ys-->         
             </div>
             
             <div class="modalFooter">

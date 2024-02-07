@@ -162,8 +162,13 @@
 
                         <div class="suffix">
                             <div class="refer">
-                                <span>■ 공단부과금액</span>
-                                <span class="subGray">■ 당사반영금액</span>
+                                <!--240215 수정-ys-->
+                                <ul>
+                                    <li><span>■ 공단부과금액</span></li>
+                                    <li><span class="subGray">■ 당사반영금액</span></li>
+                                    <li><span class="turnkey">미</span>미지급</li>
+                                </ul>     
+                                <!--//240215 수정-ys-->                           
                             </div>
                         
                             <button class="white">
@@ -175,6 +180,7 @@
                         </div>                        
                     </div>
 
+                    <div class="">
                     <div class="tableBox sticky">    
                         <table>
                             <colgroup>
@@ -216,7 +222,17 @@
                                 <th>2023.12</th>
 
                                 <th>부과총액</th>
-                                <th>차액</th>
+                                <!--240215 수정-ys-->
+                                <th class="hasTooltip">
+                                    차액
+                                    <i class="ico qMark2"></i>
+                                    <div class="tooltip bottom">
+                                        <p>차액계산 기준</p>
+                                        공단부과금액과 당사반영금액이
+                                        모두 입력된 경우에만 차액 계산 
+                                    </div>         
+                                </th>
+                                <!--//240215 수정-ys-->
                                 <th>비고</th>
                                                                         
                             </thead>
@@ -236,10 +252,10 @@
 
                                     <td>
                                         <p>60,690</p>
-                                        <p class="subInfo">60,690</p>
+                                        <p class="subInfo"><span class="turnkey">미</span>60,690</p>
                                     </td>
                                     <td>
-                                        <p>60,690</p>
+                                        <p><span class="turnkey">미</span>60,690</p>
                                         <p class="subInfo">60,690</p>
                                     </td>
                                     <td>
@@ -292,6 +308,706 @@
                                         <textarea rows="1" placeholder="특이사항 메모입력"></textarea>
                                     </td>
                                 </tr>                               
+                                <tr>                                            
+                                    <td class="center">14</td>
+                                    <td class="center">SAP전략</td>
+                                    <td class="center">기타</td>                                            
+                                    <td class="center"><i class="ico preview"></i></td>
+                                    <td class="center"><a href="#">감키위</a></td>
+                                    <td class="center">790601-2******</td>
+                                    <td class="center">10253898057</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>0</td>
+                                    <td>
+                                        <textarea rows="1" placeholder="특이사항 메모입력"></textarea>
+                                    </td>
+                                </tr>                          
+                                <tr>                                            
+                                    <td class="center">14</td>
+                                    <td class="center">SAP전략</td>
+                                    <td class="center">기타</td>                                            
+                                    <td class="center"><i class="ico preview"></i></td>
+                                    <td class="center"><a href="#">감키위</a></td>
+                                    <td class="center">790601-2******</td>
+                                    <td class="center">10253898057</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>0</td>
+                                    <td>
+                                        <textarea rows="1" placeholder="특이사항 메모입력"></textarea>
+                                    </td>
+                                </tr>                          
+                                <tr>                                            
+                                    <td class="center">14</td>
+                                    <td class="center">SAP전략</td>
+                                    <td class="center">기타</td>                                            
+                                    <td class="center"><i class="ico preview"></i></td>
+                                    <td class="center"><a href="#">감키위</a></td>
+                                    <td class="center">790601-2******</td>
+                                    <td class="center">10253898057</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>0</td>
+                                    <td>
+                                        <textarea rows="1" placeholder="특이사항 메모입력"></textarea>
+                                    </td>
+                                </tr>                          
+                                <tr>                                            
+                                    <td class="center">14</td>
+                                    <td class="center">SAP전략</td>
+                                    <td class="center">기타</td>                                            
+                                    <td class="center"><i class="ico preview"></i></td>
+                                    <td class="center"><a href="#">감키위</a></td>
+                                    <td class="center">790601-2******</td>
+                                    <td class="center">10253898057</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>0</td>
+                                    <td>
+                                        <textarea rows="1" placeholder="특이사항 메모입력"></textarea>
+                                    </td>
+                                </tr>                          
+                                <tr>                                            
+                                    <td class="center">14</td>
+                                    <td class="center">SAP전략</td>
+                                    <td class="center">기타</td>                                            
+                                    <td class="center"><i class="ico preview"></i></td>
+                                    <td class="center"><a href="#">감키위</a></td>
+                                    <td class="center">790601-2******</td>
+                                    <td class="center">10253898057</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>0</td>
+                                    <td>
+                                        <textarea rows="1" placeholder="특이사항 메모입력"></textarea>
+                                    </td>
+                                </tr>                          
+                                <tr>                                            
+                                    <td class="center">14</td>
+                                    <td class="center">SAP전략</td>
+                                    <td class="center">기타</td>                                            
+                                    <td class="center"><i class="ico preview"></i></td>
+                                    <td class="center"><a href="#">감키위</a></td>
+                                    <td class="center">790601-2******</td>
+                                    <td class="center">10253898057</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>0</td>
+                                    <td>
+                                        <textarea rows="1" placeholder="특이사항 메모입력"></textarea>
+                                    </td>
+                                </tr>                          
+                                <tr>                                            
+                                    <td class="center">14</td>
+                                    <td class="center">SAP전략</td>
+                                    <td class="center">기타</td>                                            
+                                    <td class="center"><i class="ico preview"></i></td>
+                                    <td class="center"><a href="#">감키위</a></td>
+                                    <td class="center">790601-2******</td>
+                                    <td class="center">10253898057</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>0</td>
+                                    <td>
+                                        <textarea rows="1" placeholder="특이사항 메모입력"></textarea>
+                                    </td>
+                                </tr>                          
+                                <tr>                                            
+                                    <td class="center">14</td>
+                                    <td class="center">SAP전략</td>
+                                    <td class="center">기타</td>                                            
+                                    <td class="center"><i class="ico preview"></i></td>
+                                    <td class="center"><a href="#">감키위</a></td>
+                                    <td class="center">790601-2******</td>
+                                    <td class="center">10253898057</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>0</td>
+                                    <td>
+                                        <textarea rows="1" placeholder="특이사항 메모입력"></textarea>
+                                    </td>
+                                </tr>                          
+                                <tr>                                            
+                                    <td class="center">14</td>
+                                    <td class="center">SAP전략</td>
+                                    <td class="center">기타</td>                                            
+                                    <td class="center"><i class="ico preview"></i></td>
+                                    <td class="center"><a href="#">감키위</a></td>
+                                    <td class="center">790601-2******</td>
+                                    <td class="center">10253898057</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>0</td>
+                                    <td>
+                                        <textarea rows="1" placeholder="특이사항 메모입력"></textarea>
+                                    </td>
+                                </tr>                          
+                                <tr>                                            
+                                    <td class="center">14</td>
+                                    <td class="center">SAP전략</td>
+                                    <td class="center">기타</td>                                            
+                                    <td class="center"><i class="ico preview"></i></td>
+                                    <td class="center"><a href="#">감키위</a></td>
+                                    <td class="center">790601-2******</td>
+                                    <td class="center">10253898057</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td class="center">2022.04.18</td>
+                                    <td class="center">2023.05.17</td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+
+                                    <td>
+                                        <p>60,690</p>
+                                        <p class="subInfo">60,690</p>
+                                    </td>
+                                    <td>0</td>
+                                    <td>
+                                        <textarea rows="1" placeholder="특이사항 메모입력"></textarea>
+                                    </td>
+                                </tr>                          
                                 <tr>                                            
                                     <td class="center">14</td>
                                     <td class="center">SAP전략</td>
@@ -426,7 +1142,7 @@
                             </tfoot>                                    
                         </table>
                     </div>
-
+                </div>
                     <div class="listBottom pagingType">                        
                         <div class="paging">
                             <ul>

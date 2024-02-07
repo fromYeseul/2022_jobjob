@@ -667,9 +667,6 @@ input[type=file] {
             display: flex;
             font-size: rem(14);
             align-items: center;
-            & + .list{
-                margin-top: rem(10);
-            }
         }
         .list{
             .list_ul{
@@ -677,15 +674,12 @@ input[type=file] {
                 max-height: rem(180);
                 overflow-y: auto;
                 li{
-                    // margin-top: 10px;
+                    margin-top: rem(10);
                     @include sideArray;
                     padding: 0 rem(4);
                     border-radius: rem(4);                   
                     &:hover{
                         background: $selHover;
-                    }
-                    & + li{
-                        margin-top: 10px;
                     }
                     .delete{
                         margin-left: rem(10);

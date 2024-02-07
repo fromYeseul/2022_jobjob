@@ -1664,6 +1664,7 @@ footer.toast button + button {
 }
 
 .modalHeader {
+  margin-bottom: 1.875rem;
   text-align: center;
 }
 .modalHeader::after {
@@ -2404,45 +2405,6 @@ footer.toast button + button {
   color: #979797;
 }
 
-.originNum {
-  height: 31.25rem;
-}
-.originNum .tableBox {
-  margin-top: 1.25rem;
-  max-height: 25rem;
-}
-.originNum tr:hover {
-  background: initial;
-}
-.originNum .hasBtn button {
-  width: 6.25rem;
-  line-height: 1.75rem;
-  padding: 0 0.375rem;
-  font-size: 0.875rem;
-}
-
-.paySchedule table .datepicker input {
-  text-align: left;
-}
-.paySchedule table input {
-  text-align: right;
-}
-.paySchedule table td {
-  text-align: right;
-  padding: 0.25rem;
-}
-.paySchedule table tfoot {
-  font-weight: bold;
-}
-.paySchedule table tfoot td {
-  padding: 0.25rem;
-}
-
-.paySchedule .h3_sub + .tableTop,
-.pubFileUpload .h3_sub + .tableTop {
-  margin-top: 1.25rem;
-}
-
 .joinRequest .inputList.flex h6,
 .joinRequest .inputList.flex label,
 .infoRevise .inputList.flex h6,
@@ -3001,6 +2963,12 @@ footer.toast button + button {
 .condition > ul li + li {
   margin-left: 0.9375rem;
 }
+.condition .flex {
+  gap: 0.3125rem;
+}
+.condition .flex .datepicker + .datepicker {
+  margin-left: 0;
+}
 .condition .hasBtn .button,
 .condition .hasBtn button {
   width: 2.75rem;
@@ -3071,6 +3039,11 @@ footer.toast button + button {
   display: flex;
   gap: 0.625rem;
   font-size: 0.875rem;
+}
+.tableTop .prefix .refer ul,
+.tableTop .suffix .refer ul {
+  display: flex;
+  gap: 0.625rem;
 }
 .tableTop select {
   min-width: 5rem;
@@ -4003,10 +3976,10 @@ button,
 button:disabled, button.disabled,
 .button:disabled,
 .button.disabled {
-  cursor: not-allowed;
-  color: #ccc;
-  background: #f8f8f8;
-  border: 1px solid #ccc;
+  cursor: not-allowed !important;
+  color: #ccc !important;
+  background: #f8f8f8 !important;
+  border: 1px solid #ccc !important;
 }
 button:disabled i, button.disabled i,
 .button:disabled i,
@@ -4225,6 +4198,12 @@ button.txtType,
 button.txtType.mainC,
 .button.txtType.mainC {
   color: #0460d2;
+}
+button.txtType:disabled, button.txtType.disabled,
+.button.txtType:disabled,
+.button.txtType.disabled {
+  background: transparent !important;
+  border: 0 !important;
 }
 button.txtType span,
 .button.txtType span {
@@ -5085,15 +5064,13 @@ input[type=file] {
   font-size: 0.875rem;
   align-items: center;
 }
-.inputGroup.upload .drop + .list {
-  margin-top: 0.625rem;
-}
 .inputGroup.upload .list .list_ul {
   display: block;
   max-height: 11.25rem;
   overflow-y: auto;
 }
 .inputGroup.upload .list .list_ul li {
+  margin-top: 0.625rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -5102,9 +5079,6 @@ input[type=file] {
 }
 .inputGroup.upload .list .list_ul li:hover {
   background: #e5effa;
-}
-.inputGroup.upload .list .list_ul li + li {
-  margin-top: 10px;
 }
 .inputGroup.upload .list .list_ul li .delete {
   margin-left: 0.625rem;
@@ -5501,17 +5475,9 @@ input[type=checkbox]:checked + label::before,
 input[type=radio]:checked + label::before {
   background-position: -20px -100px;
 }
-input[type=checkbox]:checked:disabled + label,
-input[type=radio]:checked:disabled + label {
-  opacity: 0.5;
-}
 input[type=checkbox]:checked:disabled + label::before,
 input[type=radio]:checked:disabled + label::before {
   background-position: -20px -120px;
-}
-input[type=checkbox]:disabled + label,
-input[type=radio]:disabled + label {
-  opacity: 0.5;
 }
 input[type=checkbox]:disabled + label::before,
 input[type=radio]:disabled + label::before {
@@ -5546,7 +5512,6 @@ input[type=radio]:checked + input[type=hidden] + label::before {
 }
 input[type=checkbox]:disabled + label,
 input[type=radio]:disabled + label {
-  opacity: 0.5;
   color: #cccccc;
   background: transparent;
   cursor: not-allowed;
@@ -5610,23 +5575,14 @@ input[type=radio].chkSwitch:checked + label::after {
   background: #fff;
   transform: translateX(20px);
 }
-input[type=checkbox].chkSwitch:checked:disabled,
-input[type=radio].chkSwitch:checked:disabled {
-  color: #cccccc;
-  background: #f8f8f8;
-  border: 1px solid #666666;
-  opacity: 0.2;
-}
-input[type=checkbox].chkSwitch:disabled,
-input[type=radio].chkSwitch:disabled {
-  color: #cccccc;
-  background: #f8f8f8;
+input[type=checkbox].chkSwitch:checked:disabled + label,
+input[type=radio].chkSwitch:checked:disabled + label {
+  opacity: 0.5;
   cursor: not-allowed;
 }
 input[type=checkbox].chkSwitch:disabled + label,
 input[type=radio].chkSwitch:disabled + label {
-  color: #cccccc;
-  background: #f8f8f8;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 input[type=checkbox].chkSwitch.wide + label::before,
@@ -7030,7 +6986,11 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-image: url(../img/icoGroup.png);
 }
 .ico.disabled {
+  opacity: 0.5;
   cursor: not-allowed !important;
+}
+.ico.disabled:hover {
+  opacity: 0.2;
 }
 .ico.search {
   width: 1.125rem;
@@ -7135,6 +7095,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 0.75rem;
   height: 0.75rem;
   background-position: -100px -320px;
+  vertical-align: -1px;
   cursor: pointer;
 }
 .ico.setting_sm.is-active {
@@ -9199,6 +9160,7 @@ h6 + .h6_sub {
 .commentList .comment .content {
   width: 94%;
   padding-left: 8px;
+  word-break: break-all;
 }
 .commentList .comment .rightBtn {
   width: 3.125rem;
@@ -9355,6 +9317,7 @@ h6 + .h6_sub {
   margin-top: 1.875rem;
   display: flex;
   justify-content: center;
+  gap: 0.625rem;
 }
 
 @media (min-width: 2200px) {
@@ -10645,6 +10608,44 @@ table a {
   color: #2a73cb;
 }
 
+.tabWrapper {
+  position: relative;
+}
+.tabWrapper.mt20 .tabBtn button {
+  margin-left: 40.3125rem;
+}
+.tabWrapper .flex {
+  justify-content: space-between;
+  align-items: center;
+}
+.tabWrapper .suffix {
+  display: flex;
+  gap: 0.3125rem;
+}
+.tabWrapper .suffix.absol {
+  position: absolute;
+  top: 3px;
+  left: 637px;
+}
+
+.tabBtnWrap .tabBtn {
+  line-height: 2.125rem;
+}
+.tabBtnWrap .tabBtn a {
+  width: 5.25rem;
+}
+.tabBtnWrap .tabBtn a.is-active {
+  background-color: #2a55aa;
+  border: 1px solid #2a55aa;
+}
+.tabBtnWrap .tabBtn:first-of-type a {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0;
+}
+.tabBtnWrap .tabBtn:last-of-type a {
+  border-bottom-right-radius: 0;
+}
+
 .accWrap.flatType .accBox.is-active .accHead {
   background: #e2eaf5;
 }
@@ -10665,8 +10666,22 @@ table a {
   height: calc(100vh - 360px);
   border-bottom: 0;
 }
+.modalLayer .sticky.hasInfo {
+  height: auto;
+  max-height: calc(100vh - 460px);
+}
 .modalLayer table td.nodata {
   height: calc(100vh - 360px - 85px);
+}
+
+.modalCont .tabBtnWrap {
+  justify-content: initial;
+}
+.modalCont .tabContWrap {
+  margin-top: 0;
+}
+.modalCont .tabContWrap .sticky {
+  margin-top: 0;
 }
 
 .clientAdmin .tableBox tfoot td {
@@ -10764,6 +10779,9 @@ table a {
   align-items: center;
   justify-content: space-between;
   gap: 5px;
+}
+.contractDetail .cont .error {
+  font-size: 0.8125rem;
 }
 .contractDetail .tableBox {
   overflow: visible;
@@ -10925,6 +10943,40 @@ table a {
 .sourcingMonthly tfoot,
 .empMonthly tfoot {
   font-weight: bold;
+}
+
+.originNum {
+  height: 31.25rem;
+}
+.originNum tr:hover {
+  background: initial;
+}
+.originNum .hasBtn button {
+  width: 6.25rem;
+  line-height: 1.75rem;
+  padding: 0 0.375rem;
+  font-size: 0.875rem;
+}
+
+.pubFileUpload .tableTop {
+  display: inherit;
+}
+
+.paySchedule table .datepicker input {
+  text-align: left;
+}
+.paySchedule table input {
+  text-align: right;
+}
+.paySchedule table td {
+  text-align: right;
+  padding: 0.25rem;
+}
+.paySchedule table tfoot {
+  font-weight: bold;
+}
+.paySchedule table tfoot td {
+  padding: 0.25rem;
 }
 
 .memRegister .breadCrumb {
@@ -11481,36 +11533,6 @@ table a {
 .bizStateRegister .boxWrap.flex {
   gap: 40px;
 }
-.bizStateRegister .tabWrapper {
-  position: relative;
-}
-.bizStateRegister .tabWrapper.mt20 .tabBtn button {
-  margin-left: 40.3125rem;
-}
-.bizStateRegister .tabWrapper .flex {
-  justify-content: space-between;
-  align-items: center;
-}
-.bizStateRegister .tabWrapper .suffix {
-  display: flex;
-  gap: 0.3125rem;
-}
-.bizStateRegister .tabWrapper .suffix.absol {
-  position: absolute;
-  top: 3px;
-  left: 637px;
-}
-.bizStateRegister .tabBtnWrap .tabBtn {
-  line-height: 2.125rem;
-}
-.bizStateRegister .tabBtnWrap .tabBtn a {
-  width: 5.25rem;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.bizStateRegister .tabBtnWrap .tabBtn:first-child a {
-  border-top-left-radius: 0.25rem;
-}
 .bizStateRegister .moveBtn button:disabled .goLt {
   background-position: -40px -180px;
 }
@@ -11550,19 +11572,12 @@ table a {
 .bizStateRegister table td.wide {
   width: 150px !important;
 }
-.bizStateRegister table td button {
-  font-size: 13px;
-}
 .bizStateRegister table td b {
   display: inline-block;
   min-width: 1.5625rem;
 }
 .bizStateRegister table td .txtType {
   padding: 0 0.5rem;
-}
-.bizStateRegister .tabBtnWrap .tabBtn a.is-active {
-  background-color: #2a55aa;
-  border: 1px solid #2a55aa;
 }
 .bizStateRegister table tr th.sales {
   background: #61519f;
@@ -11919,6 +11934,14 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   text-align: right;
   font-weight: bold;
 }
+.eiCheck .tableBox .hasTooltip {
+  z-index: 2;
+}
+.eiCheck .tableBox .hasTooltip .tooltip {
+  width: 11.875rem;
+  text-align: left;
+  top: 110%;
+}
 
 .wcCheck .tableBox {
   max-height: calc(100vh - 371px);
@@ -11941,6 +11964,14 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 .wcCheck .tableBox tfoot {
   text-align: right;
   font-weight: bold;
+}
+.wcCheck .tableBox .hasTooltip {
+  z-index: 2;
+}
+.wcCheck .tableBox .hasTooltip .tooltip {
+  width: 11.875rem;
+  text-align: left;
+  top: 110%;
 }
 
 /*# sourceMappingURL=style_pms.css.map */

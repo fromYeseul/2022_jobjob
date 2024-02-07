@@ -119,44 +119,6 @@
             gap: 40px;
         }
     }
-    .tabWrapper{
-        position: relative;
-        &.mt20{
-            .tabBtn{
-                button{
-                    margin-left: rem(645);
-                }
-            }
-        }
-        .flex{
-            justify-content: space-between;
-            align-items: center;
-        }
-        .suffix{
-            display: flex;
-            gap: rem(5);
-            &.absol{
-                position: absolute;
-                top: 3px;
-                left: 637px;  // 630 -> 637
-            }
-        }
-    }
-    .tabBtnWrap{
-        .tabBtn{
-            line-height: rem(34);   
-            a{
-                width:rem(84);
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-            }         
-            &:first-child{
-                a{
-                    border-top-left-radius: rem(4);
-                }                
-            }
-        }
-    }
     .moveBtn{
         button{
             &:disabled{                    
@@ -216,11 +178,11 @@
             &.wide{
                 width: 150px !important;
             }
-            button{ 
-                // &.bdType{
-                    font-size: 13px; // 11.23추가
-                //  }
-            }
+            // button{ 
+            //     // &.bdType{
+            //         font-size: 13px; // 11.23추가
+            //     //  }
+            // }
             b{
                 display: inline-block;
                 min-width: rem(25);
@@ -230,39 +192,9 @@
             }
         } 
     }
-    
-
-    //231201
-    // button{
-    //     &.smSize,
-    //     &.midSize,
-    //     &.save{
-    //         background: $mainColor_pms;
-    //         border: 1px solid $mainColor_pms;
-    //     }
-    //     &.white{
-    //         background: $white;
-    //         border: 1px solid $inputGray;
-    //     }
-    // }
-    .tabBtnWrap{
-        .tabBtn{
-            a{
-                &.is-active{
-                    background-color: $tab_pms;
-                    border: 1px solid $tab_pms;                    
-                }            
-            }
-        }
-    }
     table{
         tr{
-            th{
-                //height: rem(26); 11.01삭제
-                // &.sales{background: $thSales_pms; border: 0 !important;} //11.1 border: 0추가
-                // &.buy{background: $thBuy_pms; border: 0 !important;}
-                // &.inner{background: $thInner_pms; border: 0 !important;}
-                &.sales{background: $thSales_pms;}
+            th{&.sales{background: $thSales_pms;}
                 &.buy{background: $thBuy_pms;}
                 &.inner{background: $thInner_pms;}
                 .ico{
@@ -279,9 +211,6 @@
             }
         }
     }
-    // .commentBox{
-    //     width: 90%;
-    // }
 }
 
 //2.계약현황 요청 css

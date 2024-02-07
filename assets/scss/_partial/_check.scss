@@ -30,7 +30,7 @@ input[type=radio]{
         }
         &:disabled{
             + label{
-                opacity: .5;
+                // opacity: .5;
                 &::before{
                     background-position: -20px -120px;
                 }
@@ -39,7 +39,7 @@ input[type=radio]{
     } 
     &:disabled{
         + label{
-            opacity: .5;
+            // opacity: .5;
             &::before{
                 background-position: 0 -120px;
             }
@@ -85,7 +85,7 @@ input[type=radio]{
     }   
     &:disabled{
         + label{
-            opacity: .5;
+            // opacity: .5;
             color: $inputGray;
             background:transparent;
             cursor: not-allowed;
@@ -163,19 +163,15 @@ input[type=radio]{
                 }
             }
             &:disabled{
-                color: $inputGray;
-                background:$inputDisable;
-                border: 1px solid $disable;
-                opacity: .2;
+                & + label{
+                    opacity: .5;
+                    cursor: not-allowed;
+                }
             }
         }
         &:disabled{
-            color: $inputGray;
-            background:$inputDisable;
-            cursor: not-allowed;
             & + label{
-                color: $inputGray;
-                background:$inputDisable;
+                opacity: .5;
                 cursor: not-allowed;
             }
         }
