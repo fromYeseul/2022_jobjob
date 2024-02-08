@@ -148,7 +148,12 @@
                             </li>  
                             <li>
                                 <p class="condiTit">조회일자</p>
-                                <div class="flex">                                    
+                                <div class="flex">               
+                                    <select>
+                                        <option value="">전체</option>
+                                        <option value="001">계산서발행일</option>
+                                        <option value="002">계산서발행일</option>
+                                    </select>                     
                                     <div class="datepicker">
                                         <input type="text" placeholder="시작일" id="datepicker1">
                                     </div>
@@ -208,7 +213,7 @@
                                 <col width="85px"> 
                                 <col width="80px"> 
                                 <col width="170px">  
-                                <col width="60px" span="4"> 
+                                <col width="60px" span="3"> 
                                 <col width="360px">  
                                 <col width="160px">  
                                 <col width="60px" span="2">
@@ -234,7 +239,7 @@
                                 <th>유형</th>
                                 <th>투입인원</th>
                                 <th>기술구분</th>
-                                <th>프로젝트</th>
+                                <!-- <th>프로젝트</th> -->
                                 <th>계약</th>
                                 <th>계약기간</th>
                                 <th>담당자</th>
@@ -283,7 +288,8 @@
                                         </span>
                                     </td>
                                     <td>기타</td>
-                                    <td><button class="round">진행</button></td>
+                                    <!-- 240215 삭제 -ys 
+                                    <td><button class="round">진행</button></td> -->
                                     <td class="ellipsis">
                                         <span class="label">SM</span>
                                         <a href="#">SAMSUNG CAS ServiceSAMSUNG CAS ServiceSAMSUNG CAS ServiceSAMSUNG CAS Service</a>                                        
@@ -336,7 +342,6 @@
                                     <td>법인</td>
                                     <td>한진아</td>
                                     <td>SAP</td>
-                                    <td><button class="round cancel">무산</button></td>
                                     <td class="ellipsis">
                                         <span class="label">SM</span>
                                         <a href="#">CJ올리브네트웍스 모바일앱 서비스 협약서</a>                                        
@@ -394,7 +399,6 @@
                                         </span>
                                     </td>
                                     <td>SBW</td>
-                                    <td><button class="round">종료</button></td>
                                     <td class="ellipsis">
                                         <span class="label">SM</span>
                                         <a href="#">코웨이 영업정보시스템 WEB운영</a>                                        
@@ -454,7 +458,6 @@
                                         </span>
                                     </td>
                                     <td>WEB</td>
-                                    <td><button class="round">진행</button></td>
                                     <td class="ellipsis">
                                         <span class="label">SI</span>
                                         <a href="#">PROJECT MANAGEMENT SYSTEM. by echoit</a>                                        
@@ -512,7 +515,6 @@
                                         </span>
                                     </td>
                                     <td>WEB</td>
-                                    <td><button class="round">진행</button></td>
                                     <td class="ellipsis">
                                         <span class="label">SI</span>
                                         <a href="#">22년 CJ ENM AI솔루션 공급 외주</a>                                        
@@ -573,7 +575,6 @@
                                         </span>
                                     </td>
                                     <td>MDX</td>
-                                    <td><button class="round">진행</button></td>
                                     <td class="ellipsis">
                                         <span class="label">SI</span>
                                         <a href="#">CJ프레시웨이 주문프로세스 개선 및 UI/UX 개편</a>                                        
@@ -631,7 +632,6 @@
                                         </span>
                                     </td>
                                     <td>WEB</td>
-                                    <td><button class="round">진행</button></td>
                                     <td class="ellipsis">
                                         <span class="label">SM</span>
                                         <a href="#">골프존유통 F/O, B/O 유지보수 및 관리</a>                                        
@@ -691,7 +691,6 @@
                                         </span>
                                     </td>
                                     <td>WEB</td>
-                                    <td><button class="round">종료</button></td>
                                     <td class="ellipsis">
                                         <span class="label">SM</span>
                                         <a href="#">한국전력기술 FCM 운영 개발</a>                                        
@@ -739,7 +738,6 @@
                                     <td>법인</td>
                                     <td>박단비</td>
                                     <td>SAP</td>
-                                    <td><button class="round">진행</button></td>
                                     <td class="ellipsis">
                                         <span class="label">SM</span>
                                         <a href="#">한화큐셀 신규회사코드 추가 및 고도화, 신규회사 SAP ERP 안정화</a>                                        
@@ -800,7 +798,6 @@
                                     </td>
                                     
                                     <td>WEB</td>
-                                    <td><button class="round">진행</button></td>
                                     <td class="ellipsis">
                                         <span class="label">공급</span>
                                         <a href="#">삼성전자 DX부문 Next SCM 구축</a>                                        
@@ -853,7 +850,6 @@
                                         </span>
                                     </td>
                                     <td>WEB</td>
-                                    <td><button class="round">진행</button></td>
                                     <td class="ellipsis">
                                         <span class="label">SM</span>
                                         <a href="#">삼성전자 배송경쟁력 강화 및 Fulfilment 연계 개발 PMO	</a>                                        
@@ -915,7 +911,6 @@
                                     </td>
                                     
                                     <td>WEB</td>
-                                    <td><button class="round">진행</button></td>
                                     <td class="ellipsis">
                                         <span class="label">SI</span>
                                         <a href="#">PROJECT MANAGEMENT SYSTEM. by echoit</a>                                        
