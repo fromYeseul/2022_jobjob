@@ -11,7 +11,6 @@
         .tableBox{
             margin: rem(20) 0;
             height: rem(510);
-            padding-right: rem(20);
         }
     }
     .right{
@@ -22,6 +21,17 @@
     .hasBtn{
         input{
             width: 100%;
+        }
+    }
+    .tree{
+        tr{             
+            &.depth4{
+                .treegrid-expander {
+                    &::after{
+                        display: none;
+                    }
+                }
+            }   
         }
     }
 }

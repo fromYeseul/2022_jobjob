@@ -67,12 +67,23 @@ table{
         &.depth4{
             .treegrid-expander {
                 &::after{
-                    display: none;
+                    left: rem(75);
                 }
             }
             .rootCont{
                 margin-left: rem(105);
                 width: calc(100% - 105px);
+            }
+        }           
+        &.depth5{
+            .treegrid-expander {
+                &::after{
+                    display: none;
+                }
+            }
+            .rootCont{
+                margin-left: rem(130);
+                width: calc(100% - 130px);
             }
         }
         &.noDepth{
