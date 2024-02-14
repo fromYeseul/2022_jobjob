@@ -8,26 +8,12 @@
             &.round{
                 width: rem(66);
                 vertical-align: text-bottom;
-                // margin-bottom: rem(6);
-                //line-height: rem(30);
                 i{
                     margin-right: 3px;
                 }
             }
         }
     }
-    // .hasTooltip{
-    //     .tooltip{
-    //         &.left{
-    //             left: -165px;
-    //         }
-    //     }
-    // }
-    // .profile{
-    //     & + .inputList{
-    //         margin-left: rem(30);
-    //     }
-    // }
     .boxWrap{
         .flex{
             align-items: center;
@@ -91,7 +77,8 @@
     }
 
     .profile{
-        height: rem(300);
+        grid-row: 1 / 4;
+        // height: rem(300);
     }
 
     //그리드
@@ -140,17 +127,47 @@
     .empty{
         grid-column : 7/9;
     }
+}
 
-    //연-월-일 placeholder 제거
-    // input[type=month],   
-    // input[type=date]{   
-    //     &::-webkit-datetime-edit{
-    //         display: none;
-    //     }  
-    //     &::before{6
-    //         content: attr(data-placeholder);
-    //         width: 100%;
-    //         color: $placeholder;
-    //     }
-    // }
+//pms
+.memRegister{
+    .memBasic{
+        gap: rem(20) rem(50);
+        grid-template-columns: 220px 220px 10px 200px 200px;
+        li{
+            margin-bottom: 0;
+            .flex{
+                gap: rem(10);
+            }
+            input{
+                &.smSize{
+                    width: rem(80);
+                }
+            }
+            &.profile{
+                button{
+                    margin-top: rem(50);
+                    margin-bottom: 10px;
+                }                
+            }
+            &.memTag{
+                margin-left: -40px;
+            }
+            &.memDepart{
+                grid-column : 2/4;
+                .hasBtn{
+                    gap: rem(10);
+                }
+                input[type=text]{   
+                        width: rem(250);
+                }
+            }
+            &.memAdd{
+                grid-column : 2/4;
+            }
+            &.memAddD{
+                grid-column : 4/6;
+            }
+        }
+    }
 }
