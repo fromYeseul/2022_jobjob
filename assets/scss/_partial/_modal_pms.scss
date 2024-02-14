@@ -7,7 +7,8 @@
     }
     .sticky{
         margin-top: 10px;
-        height: calc(100vh - 360px);
+        // height: calc(100vh - 360px);
+        height: calc(100vh - 355px);
         border-bottom: 0;
         &.hasInfo{
             height: auto;
@@ -156,7 +157,9 @@
             //     flex-grow: 1;
             // }
         }
-        .error{
+        .error,
+        .eHigh{
+            margin-top: 5px;
             font-size: rem(13);
         }
     }
@@ -344,6 +347,9 @@
     td{
         padding: rem(4) rem(10);
         text-align: right;
+        &.ellipsis{
+            text-align: left;
+        }
     }
     tfoot{
         font-weight: bold;

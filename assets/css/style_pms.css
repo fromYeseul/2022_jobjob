@@ -8885,7 +8885,6 @@ h6 + .h6_sub {
   width: auto;
   max-width: 75%;
   font-weight: 600;
-  font-size: 1.0625rem;
   line-height: 1.2;
   cursor: pointer;
 }
@@ -10674,7 +10673,7 @@ table a {
 }
 .modalLayer .sticky {
   margin-top: 10px;
-  height: calc(100vh - 360px);
+  height: calc(100vh - 355px);
   border-bottom: 0;
 }
 .modalLayer .sticky.hasInfo {
@@ -10791,7 +10790,9 @@ table a {
   justify-content: space-between;
   gap: 5px;
 }
-.contractDetail .cont .error {
+.contractDetail .cont .error,
+.contractDetail .cont .eHigh {
+  margin-top: 5px;
   font-size: 0.8125rem;
 }
 .contractDetail .tableBox {
@@ -10948,6 +10949,12 @@ table a {
 .empMonthly td {
   padding: 0.25rem 0.625rem;
   text-align: right;
+}
+.projMonthly td.ellipsis,
+.insertMonthly td.ellipsis,
+.sourcingMonthly td.ellipsis,
+.empMonthly td.ellipsis {
+  text-align: left;
 }
 .projMonthly tfoot,
 .insertMonthly tfoot,
@@ -11998,30 +12005,30 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   border: 1px solid #cccccc;
   background: #fff;
 }
+.projTotal .accWrap .accHead {
+  font-size: 0.875rem;
+}
 .projTotal .accWrap .accHead .prefix {
   width: 65%;
 }
+.projTotal .accWrap .accHead .projTit {
+  font-size: 1rem;
+}
 .projTotal .accWrap .accHead .projCode {
-  width: 4.375rem;
-  font-size: 0.875rem;
+  width: 3.75rem;
   color: #444444;
 }
 .projTotal .accWrap .accHead .projGroup {
-  width: 5.3125rem;
+  width: 6.875rem;
   color: #444444;
 }
 .projTotal .accWrap .accHead .projType {
-  width: 4.0625rem;
-  font-size: 0.875rem;
+  width: 3.125rem;
   text-align: center;
 }
 .projTotal .accWrap .accHead .projCus {
-  width: 8.75rem;
-  font-size: 0.875rem;
+  width: 11.875rem;
   color: #0460d2;
-}
-.projTotal .accWrap .accHead .projDate {
-  font-size: 0.875rem;
 }
 .projTotal .accWrap .accHead .projSum {
   width: 9.375rem;
@@ -12131,6 +12138,7 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 }
 .eiCheck .tableBox td {
   text-align: right;
+  padding: 0.25rem 0.375rem;
 }
 .eiCheck .tableBox td.center {
   text-align: center;
@@ -12162,6 +12170,7 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 }
 .wcCheck .tableBox td {
   text-align: right;
+  padding: 0.25rem 0.375rem;
 }
 .wcCheck .tableBox td.center {
   text-align: center;
