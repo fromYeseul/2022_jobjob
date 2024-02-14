@@ -1601,7 +1601,6 @@ footer.toast button + button {
   max-width: 90.625rem;
   overflow-x: auto;
   padding: 2.5rem 2.375rem;
-  max-height: calc(100% - 100px);
 }
 .modalLayer .layerBox.laSize .modalFooter {
   width: 15rem;
@@ -2335,7 +2334,6 @@ footer.toast button + button {
 .compSearch .hasBtn button,
 .MmSearch .hasBtn .button,
 .MmSearch .hasBtn button {
-  width: 2.75rem;
   background: #6b6b6b;
   border: 1px solid #6b6b6b;
 }
@@ -4581,6 +4579,8 @@ input[type=password]::placeholder {
   margin-left: 0.25rem;
 }
 .inputList .hasBtn button {
+  flex-shrink: 0;
+  width: 50px;
   background: #6b6b6b;
   border: 1px solid #6b6b6b;
 }
@@ -11044,7 +11044,7 @@ table a {
   height: auto;
 }
 .memRegister .profile {
-  height: 18.75rem;
+  grid-row: 1/4;
 }
 .memRegister .specialJob,
 .memRegister .skillExp,
@@ -11090,6 +11090,225 @@ table a {
 }
 .memRegister .empty {
   grid-column: 7/9;
+}
+
+.memRegister .memBasic {
+  gap: 1.25rem 3.125rem;
+  grid-template-columns: 220px 220px 10px 200px 200px;
+}
+.memRegister .memBasic li {
+  margin-bottom: 0;
+}
+.memRegister .memBasic li .flex {
+  gap: 0.625rem;
+}
+.memRegister .memBasic li input.smSize {
+  width: 5rem;
+}
+.memRegister .memBasic li.profile button {
+  margin-top: 3.125rem;
+  margin-bottom: 10px;
+}
+.memRegister .memBasic li.memTag {
+  margin-left: -40px;
+}
+.memRegister .memBasic li.memDepart {
+  grid-column: 2/4;
+}
+.memRegister .memBasic li.memDepart .hasBtn {
+  gap: 0.625rem;
+}
+.memRegister .memBasic li.memDepart input[type=text] {
+  width: 15.625rem;
+}
+.memRegister .memBasic li.memAdd {
+  grid-column: 2/4;
+}
+.memRegister .memBasic li.memAddD {
+  grid-column: 4/6;
+}
+
+.sendHistory {
+  position: relative;
+}
+.sendHistory .tableTop {
+  margin-top: 1.875rem;
+}
+
+.sendHisDetail {
+  position: relative;
+}
+.sendHisDetail .boxWrap > div {
+  width: 50%;
+}
+
+.jobAdmin,
+.skillAdmin {
+  width: 100%;
+}
+.jobAdmin .regiPartWrapper,
+.skillAdmin .regiPartWrapper {
+  height: calc(100vh - 130px);
+}
+.jobAdmin .flexBw,
+.skillAdmin .flexBw {
+  margin-top: 0.9375rem;
+}
+.jobAdmin .boxWrap > div,
+.skillAdmin .boxWrap > div {
+  width: 60%;
+}
+.jobAdmin .boxWrap .left,
+.skillAdmin .boxWrap .left {
+  width: 25%;
+}
+.jobAdmin .boxWrap .left:first-child,
+.skillAdmin .boxWrap .left:first-child {
+  padding-bottom: 0;
+}
+.jobAdmin .boxWrap .left:first-child .optList,
+.skillAdmin .boxWrap .left:first-child .optList {
+  padding-bottom: 0;
+}
+.jobAdmin .boxWrap .left:first-child .optList ul,
+.skillAdmin .boxWrap .left:first-child .optList ul {
+  height: 31.25rem;
+}
+.jobAdmin .boxWrap .right .flexBw,
+.skillAdmin .boxWrap .right .flexBw {
+  width: 100%;
+  margin-top: 0;
+}
+.jobAdmin .divideBox,
+.skillAdmin .divideBox {
+  margin-top: 0.9375rem;
+}
+.jobAdmin .divideBox .inputList,
+.skillAdmin .divideBox .inputList {
+  height: 25.625rem;
+}
+
+.menuAdmin .boxWrap > div {
+  width: 60%;
+}
+
+.rightAdmin .regiPartWrapper {
+  height: calc(100vh - 140px);
+}
+.rightAdmin .boxWrap > div {
+  width: 60%;
+}
+.rightAdmin .divideBox {
+  margin-top: 1.875rem;
+}
+.rightAdmin .divideBox .left {
+  width: 30%;
+  min-width: 300px;
+}
+.rightAdmin .divideBox .right {
+  width: 70%;
+}
+.rightAdmin .optList ul {
+  height: 29.375rem;
+}
+.rightAdmin .right .inputList {
+  height: auto;
+}
+.rightAdmin .right .inputList .flexBw {
+  width: 100%;
+}
+.rightAdmin .right .tableBox {
+  margin-top: 0.625rem;
+  padding-right: 0.1875rem;
+  height: 30rem;
+  overflow-y: auto;
+  border-bottom: 1px solid #dddddd;
+}
+.rightAdmin .right .tableBox table td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.commonCode .regiPartWrapper {
+  height: calc(100vh - 140px);
+}
+.commonCode .boxWrap > div {
+  width: 70%;
+}
+.commonCode .left .tableBox {
+  margin: 1.25rem 0;
+  height: 31.875rem;
+}
+.commonCode .right .inputList {
+  height: 33.125rem;
+}
+.commonCode .hasBtn input {
+  width: 100%;
+}
+.commonCode .tree tr.depth4 .treegrid-expander::after {
+  display: none;
+}
+
+.groupAdmin .regiPartWrapper {
+  height: calc(100vh - 140px);
+}
+.groupAdmin .boxWrap > div {
+  width: 70%;
+}
+.groupAdmin .left .tableBox {
+  margin: 1.25rem 0;
+  height: 31.875rem;
+}
+.groupAdmin .right .inputList {
+  height: calc(100vh - 440px);
+}
+.groupAdmin .right .nodata {
+  padding: 4.375rem;
+  color: #000000;
+  font-size: 1rem;
+  flex-direction: column;
+  justify-content: initial;
+  gap: 0.9375rem;
+}
+.groupAdmin .right .nodata .mainC {
+  font-size: 0.8125rem;
+}
+.groupAdmin .tabWrapper .flex {
+  align-items: center;
+  justify-content: space-between;
+}
+.groupAdmin .tabWrapper .suffix {
+  display: flex;
+  gap: 0.3125rem;
+}
+.groupAdmin .inputList ul {
+  display: grid;
+  column-gap: 3.125rem;
+  grid-template-columns: 1fr 1fr;
+}
+.groupAdmin .inputList li {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+.groupAdmin .inputList li label {
+  margin-bottom: 0;
+  min-width: 5rem;
+}
+.groupAdmin .inputList .groupNote {
+  grid-column: 1/3;
+  align-items: baseline;
+}
+.groupAdmin .inputList .datepicker,
+.groupAdmin .inputList select,
+.groupAdmin .inputList input {
+  width: 100%;
+}
+.groupAdmin .bulletList {
+  color: #666666;
+}
+.groupAdmin .modalFooter::before {
+  top: -90px;
 }
 
 .dashboard {
@@ -11372,15 +11591,6 @@ table a {
   column-gap: 3.75rem;
   grid-template-columns: 1fr 1fr 50px 1fr 1fr 1fr;
 }
-.clientRegister .hasBtn input {
-  flex-grow: 1;
-}
-.clientRegister .hasBtn .button,
-.clientRegister .hasBtn button {
-  width: 2.75rem;
-  background: #6b6b6b;
-  border: 1px solid #6b6b6b;
-}
 .clientRegister .uploadBox {
   width: 40%;
 }
@@ -11485,13 +11695,6 @@ table a {
   column-gap: 3.75rem;
   grid-template-columns: 1fr 50px 1.8fr 1fr 1fr 130px;
   grid-template-columns: 1fr 50px 1.6fr 1fr 1fr 140px;
-}
-.bizStateRegister .hasBtn input {
-  flex-grow: 1;
-}
-.bizStateRegister .hasBtn .button,
-.bizStateRegister .hasBtn button {
-  width: 3.75rem;
 }
 .bizStateRegister .clientComp {
   grid-column: 1/3;
