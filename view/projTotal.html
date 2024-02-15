@@ -178,18 +178,18 @@
                         </button>
                     </div>
                     <div class="yScroll">
-                        <div class="accWrap flatType">                                         
+                        <div class="accWrap"><!--240215 클래스제거-ys-->                                 
                             <div class="accBox"><!--등록된 공고가 있을 때, 기본상태-->
                                 <div class="accHead">
                                     <div class="prefix">
-                                        <i class="ico arrow"></i>
+                                        <!-- <i class="ico arrow"></i> 240215 제거-ys-->
 
                                         <div class="projCode">B00040</div>
                                         <div class="projGroup">SAP 전략</div>
 
                                         <span class="label">SM</span>
                                         <div class="projTit">
-                                            테스트 주문프로세스 개선 프로젝트프로젝트
+                                            <a href="#">테스트 주문프로세스 개선 프로젝트프로젝트</a><!--240215 추가-ys-->
                                         </div>
                                     </div>  
                                     <div class="suffix">
@@ -199,6 +199,7 @@
                                         <span class="projCus">(주)에코아이시티</span>
                                         <span class="projDate">2022.04.18~2023.03.18</span>
                                         <span class="dark projSum"><b>124,000,000</b>원</span>
+                                        <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button><!--240215 추가-ys-->
                                     </div>
                                 </div>
 
@@ -376,7 +377,6 @@
                             <div class="accBox is-active"><!--등록된 공고가 있을 때, 기본상태-->
                                 <div class="accHead">
                                     <div class="prefix">
-                                        <i class="ico arrow"></i>
 
                                         <div class="projCode">B00040</div>
                                         <div class="projGroup">SAP 전략</div>
@@ -393,6 +393,8 @@
                                         <span class="projCus">CJ프레시웨이</span>
                                         <span class="projDate">2022.04.18~2023.03.18</span>
                                         <span class="dark projSum"><b>24,000,000</b>원</span>
+
+                                        <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
                                     </div>
                                 </div>
 
@@ -639,7 +641,6 @@
                             <div class="accBox disabled"><!--등록된 공고가 없는 상태-->
                                 <div class="accHead">
                                     <div class="prefix">
-                                        <i class="ico arrow"></i>
 
                                         <div class="projCode">B00040</div>
                                         <div class="projGroup">SAP 전략</div>
@@ -656,6 +657,7 @@
                                         <span class="projCus">CJ프레시웨이</span>
                                         <span class="projDate">2022.04.18~2023.03.18</span>
                                         <span class="dark projSum"><b>24,000,000</b>원</span>
+                                        <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
                                     </div>
                                 </div>
 
@@ -840,7 +842,7 @@
     </section>
 
     <!--프로젝트 월별 매입/매출-->
-    <div id="" class="modalLayer center is-active">
+    <div id="" class="modalLayer center">
         <div class="layerBox midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
@@ -984,11 +986,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>    
     <script>
-        //아코디언
-        $(".accBox .accHead").on("click", function(){
-            if( !($(this).parent(".accBox").hasClass('disabled')) ) {   //disabled 이 아닌accBox만
-                $(this).parent(".accBox").toggleClass("is-active");
-            }
+        //아코디언 - 240215 수정-ys-->
+        $(".accBox .onlyIco").on("click", function(){
+            $(this).parents(".accBox").toggleClass("is-active");
         });
     </script>
 </body>
