@@ -577,11 +577,568 @@
         <!--우측패널-->
     </section>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--회원상세 팝업 추가 240215-ys-->
+    <div class="modalLayer center">
+        <div class="layerBox laSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+            <div class="modalCont staffDetail"><!--팝업 고유 클래스-->
+                <h3>회원수정</h3>
+
+                <!--240115 memberDetail.html 동일-->
+                <section class="memDetail">
+                    <div class="tabWrapper" id="yes">
+                        <ul class="tabBtnWrap" id="test">
+                            <li class="tabBtn">
+                                <a href="#staffDetail-1" class="is-active">기본정보</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#staffDetail-2">프로젝트(43)</a>
+                            </li>
+                        </ul>
+                        <div class="tabContWrap">
+                            <div id="staffDetail-1" class="tabCont is-active">
+                                <div class="resumeWrapper">
+                                    <div class="resuTop">    
+                                            <button class="white">이력서 다운로드</button>
+                                    </div>
+    
+                                    <div class="resuBox">
+                                        <div class="resume">
+                                            <div class="prefix">
+                                                <div class="profile">
+                                                    <h3>정회원</h3>
+                                                    <span class="phoImg">
+                                                        <img class="photo" src="../assets/img/sample.png" alt="회원이미지">
+                                                    </span>                         
+                                                </div>
+                                                <div class="info">
+                                                    <div class="top">
+                                                        <h3>김미영</h3>
+                                                        <span> KIM MI YEONG</span>
+                                                        <p>(ID) my.kim@echoit.co.kr</p>
+                                                    </div>
+    
+                                                    <div class="mid">
+                                                        <ul>
+                                                            <li class="birth">1990.08.20</li>
+                                                            <li class="pNum">010-6923-1205</li>
+                                                            <li class="mail">abc@naver.com</li>
+                                                            <li class="address">서울 광진구 구의동 242-37 아이원 202호</li>
+                                                            <br>
+                                                            <li><b>소속</b>가나다 회사</li>
+                                                            <li><b>사업자 번호</b>1234567</li>
+                                                        </ul>
+                                                    </div>                           
+    
+                                                    <div class="bottom">
+                                                        <b>포트폴리오</b>                    
+                                                        <div class="portfolio">               
+                                                            <a class="download" href="#" download="">                                            
+                                                                <span>
+                                                                    <img src="../assets/img/icoPdf.png">
+                                                                    샘플 이력서_김미영샘플 이력서_김미영샘플 이력서_김미영.pdf
+                                                                </span>
+                                                            </a>
+                                                            <a class="download" href="#" download="">                                            
+                                                                <span>
+                                                                    <img src="../assets/img/icoPdf.png">
+                                                                    샘플 이력서_김미영샘플 이력서_김미영샘플 이력서_김미영.pdf
+                                                                </span>
+                                                            </a>
+                                                        </div>     
+                                                        <b>웹사이트</b>
+                                                        <a href="#" target="_blank">www.naver.com/aaa</a><!--230609 수정 -ys -->
+                                                    </div>                 
+                                                </div>                       
+                                            </div>
+    
+                                            <div class="suffix">
+                                                <div class="resuInfo">
+                                                    <div class="tabWrapper" id="memSkill">
+                                                        <h3>
+                                                            보유스킬
+                                                            <ul class="tabBtnWrap btnType smSize">
+                                                                <li class="tabBtn">
+                                                                    <a href="#skill-web" class="is-active">WEB</a>
+                                                                </li>
+                                                                <li class="tabBtn">
+                                                                    <a href="#skill-sap">SAP</a>
+                                                                </li>
+                                                            </ul>
+                                                        </h3>
+                                                        <div class="tabContWrap">
+                                                            <div id="skill-web" class="tabCont is-active">
+                                                                <div class="yScroll">
+                                                                    JAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSPJAVA,Trustform,JSP
+                                                                </div>
+                                                            </div>
+                                                            <div id="skill-sap" class="tabCont">
+                                                                <table class="rowType">
+                                                                    <colgroup>
+                                                                        <col width="110px">
+                                                                        <col>
+                                                                    </colgroup>
+                                                                    <tr>
+                                                                        <td>컨선팅 전문영역</td>
+                                                                        <td>기술/개발 컨설턴트</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>컨설팅 경험분야</td>
+                                                                        <td>Spring, LEGO</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="resuInfo">
+                                                    <h3>학력사항</h3>
+                                                    <div class="cont">
+                                                        <table class="noBd">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>졸업년월</th>
+                                                                    <th>학교명</th>
+                                                                    <th>전공</th>
+                                                                    <th>졸업유무</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>YYYY.MM</td>
+                                                                    <td>에코대학교(2,3년)</td>
+                                                                    <td>컴퓨터공학</td>
+                                                                    <td>졸업</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="resuInfo">
+                                                    <h3>회사경력</h3>
+                                                    <div class="cont">
+                                                        <table class="noBd">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>근무기간</th>
+                                                                    <th>회사명</th>
+                                                                    <th>직위</th>
+                                                                    <th>담당업무</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2020.03 - 재직중</td>
+                                                                    <td>에코아이티</td>
+                                                                    <td>매니저</td>
+                                                                    <td>서비스 기획</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2020.03 - 재직중</td>
+                                                                    <td>에코아이티</td>
+                                                                    <td>매니저</td>
+                                                                    <td>서비스 기획</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2020.03 - 재직중</td>
+                                                                    <td>에코아이티</td>
+                                                                    <td>매니저</td>
+                                                                    <td>서비스 기획</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="resuInfo">
+                                                    <h3>자격사항</h3>
+                                                    <div class="cont">
+                                                        <table class="noBd">
+                                                            <colgroup>  
+                                                                <col width="25%">
+                                                                <col width="25%">
+                                                                <col width="25%">
+                                                                <col width="25%">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>취득일</th>
+                                                                    <th>자격명</th>
+                                                                    <th>인증서(기관)</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2020.03</td>
+                                                                    <td>정보처리기사</td>
+                                                                    <td>한국산업인력</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2020.03</td>
+                                                                    <td>에코아이티마스터</td>
+                                                                    <td>한국산업인력</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="resuInfo">
+                                                    <h3>교육정보</h3>
+                                                    <div class="cont">
+                                                        <table class="noBd">
+                                                            <colgroup>  
+                                                                <col width="25%">
+                                                                <col width="25%">
+                                                                <col width="25%">
+                                                                <col width="25%">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>기간</th>
+                                                                    <th>교육명</th>
+                                                                    <th>주관사</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2020.03 - 2020.03</td>
+                                                                    <td>PM양성교육</td>
+                                                                    <td>삼성SDS</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2020.03 - 2020.03</td>
+                                                                    <td>PM양성교육</td>
+                                                                    <td>삼성SDS</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="resuInfo">
+                                                    <h3>남기고 싶은 말</h3>
+                                                    <div class="cont">
+                                                        안녕하세요. 개발자 김미영입니다. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자. 잘 부탁드립니다.
+                                                        안녕하세요. 안녕하세요. 개발자 김미영입니다. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자. 잘 부탁드립니다.
+                                                        안녕하세요. 안녕하세요. 개발자 김미영입니다. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자. 잘 부탁드립니다.
+                                                        안녕하세요. 안녕하세요. 개발자 김미영입니다. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자. 잘 부탁드립니다.
+                                                        안녕하세요. 안녕하세요. 개발자 김미영입니다. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                        안녕하세요. 개발자 김미영입니다. 잘 부탁드립니다.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="staffDetail-2" class="tabCont">  
+                                <div class="tabWrapper" id="memProj">
+                                    <ul class="tabBtnWrap btnType midSize">
+                                        <li class="tabBtn">
+                                            <a href="#proj-web" class="is-active">WEB(10)</a>
+                                        </li>
+                                        <li class="tabBtn">
+                                            <a href="#proj-sap">SAP(4)</a>
+                                        </li>
+                                        <li class="ml10">
+                                            <h5>WEB 경력 15년 1개월</h5>
+                                        </li>
+                                    </ul>
+                                    <div class="tabContWrap">
+                                        <div id="proj-web" class="tabCont xScroll is-active">
+                                            <div class="tableBox">
+                                                <table class="mixType">
+                                                    <colgroup>
+                                                        <col width="50px">
+                                                        <col width="15%">
+                                                        <col>
+                                                        <col>
+                                                        <col>
+    
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+    
+                                                        <col width="15%">
+                                                        <col>
+                                                        <col>
+    
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>No.</th>
+                                                            <th>프로젝트</th>
+                                                            <th colspan="2">기간(시작-종료)</th>
+                                                            <th>고객사</th>
+                                                            <th>근무회사</th>
+                                                            <th>역할</th>
+                                                            <th>OS</th>
+                                                            <th>언어</th>
+                                                            <th>DBMS</th>
+                                                            <th>TOOL</th>
+                                                            <th>기타</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="rowSpanType">
+                                                        <tr>
+                                                            <td rowspan="2">10</td>
+                                                            <td class="left">CJ프레시웨이 온리원푸드넷<br>UIUX 개선 2차</td>
+                                                            <td>2022.04</td>
+                                                            <td>진행중</td>
+                                                            <td>(주)CJ프레시웨이</td>
+                                                            <td>에코아이티</td>
+                                                            <td>에코아이티</td>
+                                                            <td>Windows, Linux, AWS</td>
+                                                            <td>JAVA</td>
+                                                            <td>Oracle, DB2 Spring, Nexacro, Xplatform, Xiplatform</td>
+                                                            <td></td>
+                                                            <td>FSP Server</td>
+                                                        </tr>
+                                                        <tr class="bg">
+                                                            <td colspan="6">
+                                                                <p>상세 업무 내용</p>
+                                                            </td>
+                                                            <td colspan="5" class="left">
+                                                                <div class="flex">
+                                                                    <ul>
+                                                                        <li>1. 상세 업무 내용</li>
+                                                                        <li>2. 상세 업무 내용</li>
+                                                                        <li>3. 상세 업무 내용</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+    
+                                        </div>
+                                        <div id="proj-sap" class="tabCont">
+                                            <div class="tableBox">                        
+                                                <table class="">
+                                                    <colgroup>
+                                                        <col width="56px;">
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col width="25%;">
+                                                        <col>
+                                                        <col>
+                                                        <col width="30%;">
+                                                    </colgroup>
+                                                    
+                                                    <thead>
+                                                        <tr>
+                                                            <th>No.</th>
+                                                            <th>고객명</th>
+                                                            <th>산업분야</th>
+                                                            <th colspan="2">기간(시작-종료)</th>
+                                                            <th>프로젝트명</th>
+                                                            <th>역할</th>
+                                                            <th>계약단가</th>
+                                                            <th>상세 구현 내용</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>삼성</td>
+                                                            <td>제조</td>
+                                                            <td>22.04.21</td>
+                                                            <td>22.05.21</td>
+                                                            <td class="ellipsis">
+                                                                [대외비] CJ프레시웨이 온리원푸드넷 UIUX [대외비] CJ프레시웨이 온리원푸드넷 UIUX
+    
+                                                            </td>
+                                                            <td>개발</td>
+                                                            <td><a href="#">800만원</a></td>
+                                                            <td class="left">상세 개발</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--//240115 memberDetail.html 동일-->
+            </div>
+            
+            <div class="modalFooter">
+                <button class="white">닫기</button>
+                <button class="">저장</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//회원상세 팝업 추가 240215-ys-->
+
+    <!--부서관리 팝업 추가 240215-ys-->
+    <div id="" class="modalLayer center">
+        <div class="layerBox midSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+            <div class="modalCont memDept"><!--팝업 고유클래스-->
+                <h3>부서관리</h3>
+
+                <div class="tableBox">
+                    <table class="tree">
+                        <tbody>
+                            <tr class="treegrid-1 depth1 expanded"><!--첫번째 항상 열림 expanded-->
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander treegrid-expander-expanded"></span>
+                                    <div class="rootCont">
+                                        <span>프로젝트-1</span>
+                                    </div>
+                                </div></td>
+                            </tr>
+
+                            <tr class="treegrid-2 treegrid-parent-1 depth2 noDepth"><!--위치설정 depth2, 하위메뉴 없을 때 noDepth-->
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander"></span>
+                                    <div class="rootCont">
+                                        <span>수주 프로젝트-2</span>
+                                    </div>
+                                </div></td>
+                            </tr>
+                            <tr class="treegrid-3 treegrid-parent-1 depth2 expanded">
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander treegrid-expander-expanded"></span>
+                                    <div class="rootCont">
+                                        <span>수주 프로젝트-2</span>
+                                    </div>
+                                </div></td>
+                            </tr>
+
+                            <tr class="treegrid-4 treegrid-parent-3 depth3 expanded">
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander treegrid-expander-expanded"></span>
+                                    <div class="rootCont">
+                                        <span>수주 프로젝트-3</span>
+                                    </div>
+                                </div></td>
+                            </tr>
+                            <tr class="treegrid-5 treegrid-parent-4 depth4 expanded">
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander treegrid-expander-expanded"></span>
+                                    <div class="rootCont">
+                                        <span>수주 프로젝트-4</span>
+                                    </div>
+                                </div></td>
+                            </tr>
+                            <tr class="treegrid-6 treegrid-parent-5 depth5">
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander"></span>
+                                    <div class="rootCont">
+                                        <span>수주 프로젝트-5</span>
+                                    </div>
+                                </div></td>
+                            </tr>
+                            <tr class="treegrid-6 treegrid-parent-5 depth5">
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander"></span>
+                                    <div class="rootCont disabled"><!--비활성화클래스 disabled-->
+                                        <span>수주 프로젝트-5</span>
+                                        <i class="ico smPlus"></i>
+                                    </div>
+                                </div></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr class="treegrid-1 depth1 expanded"><!--첫번째 항상 열림 expanded-->
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander treegrid-expander-expanded"></span>
+                                    <div class="rootCont">
+                                        <span>프로젝트-1</span>
+                                    </div>
+                                </div></td>
+                            </tr>
+
+                            <tr class="treegrid-2 treegrid-parent-1 depth2 noDepth"><!--위치설정 depth2, 하위메뉴 없을 때 noDepth-->
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander"></span>
+                                    <div class="rootCont">
+                                        <span>수주 프로젝트-2</span>
+                                    </div>
+                                </div></td>
+                            </tr>
+                            <tr class="treegrid-3 treegrid-parent-1 depth2 expanded">
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander treegrid-expander-expanded"></span>
+                                    <div class="rootCont">
+                                        <span>수주 프로젝트-2</span>
+                                    </div>
+                                </div></td>
+                            </tr>
+
+                            <tr class="treegrid-4 treegrid-parent-3 depth3 expanded">
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander treegrid-expander-expanded"></span>
+                                    <div class="rootCont">
+                                        <span>수주 프로젝트-3</span>
+                                    </div>
+                                </div></td>
+                            </tr>
+                            <tr class="treegrid-5 treegrid-parent-4 depth4 expanded">
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander treegrid-expander-expanded"></span>
+                                    <div class="rootCont">
+                                        <span>수주 프로젝트-4</span>
+                                    </div>
+                                </div></td>
+                            </tr>
+                            <tr class="treegrid-6 treegrid-parent-5 depth5">
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander"></span>
+                                    <div class="rootCont">
+                                        <span>수주 프로젝트-5</span>
+                                    </div>
+                                </div></td>
+                            </tr>
+                            <tr class="treegrid-6 treegrid-parent-5 depth5">
+                                <td><div class="treegrid-container" style="margin-left: 0px;"><span class="treegrid-expander"></span>
+                                    <div class="rootCont disabled"><!--비활성화클래스 disabled-->
+                                        <span>수주 프로젝트-5</span>
+                                        <i class="ico smPlus"></i>
+                                    </div>
+                                </div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="modalFooter single">
+                <button class="white">닫기</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//부서관리 팝업 추가 240215-ys-->
+
     <script src="../assets/js/script.js"></script>
-    <script>
-        selDefault.onclick = selectBox();
-        chkWrap.onclick = chkAll();
-    </script>
 </body>
 </html>
