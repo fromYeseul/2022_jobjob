@@ -6119,6 +6119,10 @@ input[type=radio]:disabled + label {
   width: 11.25rem;
   color: #009ce0;
 }
+.uploadList li .history {
+  width: 9.375rem;
+  text-align: right;
+}
 .uploadList + .btnType {
   margin-top: 1.375rem;
 }
@@ -6903,11 +6907,32 @@ table.tree {
   width: calc(100% - 105px);
 }
 .tree tr.depth5 .treegrid-expander::after {
-  display: none;
+  left: 6.25rem;
 }
 .tree tr.depth5 .rootCont {
   margin-left: 8.125rem;
   width: calc(100% - 130px);
+}
+.tree tr.depth6 .treegrid-expander::after {
+  left: 7.8125rem;
+}
+.tree tr.depth6 .rootCont {
+  margin-left: 9.6875rem;
+  width: calc(100% - 155px);
+}
+.tree tr.depth7 .treegrid-expander::after {
+  left: 9.375rem;
+}
+.tree tr.depth7 .rootCont {
+  margin-left: 11.25rem;
+  width: calc(100% - 180px);
+}
+.tree tr.depth8 .treegrid-expander::after {
+  display: none;
+}
+.tree tr.depth8 .rootCont {
+  margin-left: 12.8125rem;
+  width: calc(100% - 205px);
 }
 .tree tr.noDepth .treegrid-expander::after {
   display: none;
@@ -10698,6 +10723,11 @@ table a {
 }
 .modalCont .tabContWrap .sticky {
   margin-top: 0;
+}
+.modalCont th.fold,
+.modalCont td.fold {
+  text-align: center;
+  border-left: 1px solid #dddddd;
 }
 
 .clientAdmin .tableBox tfoot td {
