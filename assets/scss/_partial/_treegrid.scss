@@ -13,7 +13,7 @@ table{
         td{
             padding: rem(4) 0;
         }
-        .treegrid-expander {
+        .treegrid-expander{
             display: inline-block;
             // margin-right: rem(14);
             // width: rem(18);
@@ -81,12 +81,45 @@ table{
         &.depth5{
             .treegrid-expander {
                 &::after{
-                    display: none;
+                    left: rem(100);
                 }
             }
             .rootCont{
                 margin-left: rem(130);
                 width: calc(100% - 130px);
+            }
+        }      
+        &.depth6{
+            .treegrid-expander {
+                &::after{
+                    left: rem(125);
+                }
+            }
+            .rootCont{
+                margin-left: rem(155);
+                width: calc(100% - 155px);
+            }
+        }   
+        &.depth7{
+            .treegrid-expander{
+                &::after{
+                    left: rem(150);
+                }
+            }
+            .rootCont{
+                margin-left: rem(180);
+                width: calc(100% - 180px);
+            }
+        }  
+        &.depth8{
+            .treegrid-expander{
+                &::after{
+                    display: none;
+                }
+            }
+            .rootCont{
+                margin-left: rem(205);
+                width: calc(100% - 205px);
             }
         }
         &.noDepth{
