@@ -412,15 +412,25 @@
 //----------------공통
 //직원상세
 .staffDetail{
+    margin-top: -30px;
     .memDetail{
+        margin-top: rem(20);
         width: auto;
         background: $bgColor;   
+    }
+    .tabContWrap{
+        margin-top: rem(10);
     }
     .tabBtnWrap{
         .tabBtn{
             a{
                 width: auto;
-                border-radius: rem(4);
+            }
+            &:first-of-type{
+                border-bottom-left-radius : rem(4);
+            }
+            &:last-of-type{
+                border-bottom-right-radius : rem(4);
             }
         } 
     }
@@ -430,12 +440,60 @@
         }
     } 
     .resume{
+        .prefix{
+            padding: rem(40);
+            .top{
+                h3{
+                    margin-bottom: 0;
+                    display: block;
+                }
+            }
+        }
         .suffix{
             margin-left: 0;
             display: block;
             h3{
                 .tabBtnWrap{
                     float: right;
+                }
+            }
+        }
+        .mid{
+            padding-bottom: rem(30);
+            border-bottom:1px solid $titleGray;
+            li{
+                display: flex;
+                gap: rem(15);
+                b{
+                    flex-shrink: 0;
+	                width: rem(55);
+                    font-weight: 400;
+                    color: $subGray;
+                }
+            }
+        }
+    }
+    .memDetail{ 
+        .tabCont{
+            .tableBox{
+                margin-top: 0;
+                padding-right: 0;
+                height: calc(100vh - 500px);
+            }
+        }
+    }
+    table{
+        tr{
+            th{
+                font-weight: 500;
+            }
+            th,
+            td{
+                font-size: rem(14);
+            }
+            td{
+                &.nodata{
+                    height: calc(100vh - 360px - 175px);
                 }
             }
         }
