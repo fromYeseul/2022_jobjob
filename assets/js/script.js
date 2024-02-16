@@ -181,7 +181,7 @@ function layerPop(){
 }
 layerPop();
 
-$(document).on("click", layerPop());
+// $(document).on("click", layerPop());
 
 
 // 탭메뉴
