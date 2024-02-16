@@ -402,9 +402,9 @@
         </section>               
     </section>
 
-    <!--월별 매입/매출-->
+    <!--월별 매입/매출 240229 수정-ys-->
     <div id="" class="modalLayer center is-active">
-        <div class="layerBox midSize">
+        <div class="layerBox mid-laSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
             </div>
@@ -414,19 +414,24 @@
                 <div class="tableBox sticky">
                     <table> 
                         <colgroup>
-                            <col width="100px">
+                            <col width="8%">
+                            <col width="21%">
+                            <col width="16%">
+                            <col width="6%">
                             <col>
-                            <col width="180px">
-                            <col width="60px">
-                            <col width="100px" span="2">
+                            <col width="16%">
+                            <col width="6%">
+                            <col>
                         </colgroup>                      
                         <thead>
                             <tr>
                                 <th>투입/공급</th>
                                 <th>프로젝트명</th>
-                                <th>2023.01 투입기간</th>
-                                <th>M/M(수량)</th>
+                                <th class="fold">투입기간</th>
+                                <th>매출M/M</th>
                                 <th>매출</th>
+                                <th class="fold">투입기간</th>
+                                <th>매입M/M</th>
                                 <th>매입</th>
                             </tr>
                         </thead>      
@@ -434,41 +439,52 @@
                             <tr>
                                 <td class="center">김재윤</td>
                                 <td class="ellipsis">프로젝트명 A 프로젝트명 B프로젝트명 A 프로젝트명 B프로젝트명 A 프로젝트명 B프로젝트명 A 프로젝트명 B</td>
-                                <td class="center">2023.01.01 ~ 2023.01.31</td>
+                                <td class="center fold">2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td>6,000,000</td>
+                                <td class="center fold">2023.01.01 ~ 2023.01.31</td>
+                                <td>1.00</td>
                                 <td>4,800,000</td>
                             </tr>
                             <tr>
                                 <td class="center">홍길동</td>
                                 <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
-                                <td class="center">2023.01.01 ~ 2023.01.31</td>
+                                <td class="center fold">2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td>6,000,000</td>
+                                <td class="center fold">2023.01.01 ~ 2023.01.31</td>
+                                <td>1.00</td>
                                 <td>4,800,000</td>
                             </tr>
                             <tr>
                                 <td class="center">김연아</td>
                                 <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
-                                <td class="center">2023.01.01 ~ 2023.01.31</td>
+                                <td class="center fold">2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td>6,000,000</td>
+                                <td class="center fold">2023.01.01 ~ 2023.01.31</td>
+                                <td>1.00</td>
                                 <td>4,800,000</td>
                             </tr>
                             <tr>
                                 <td class="center">손연재</td>
                                 <td class="ellipsis">프로젝트명 A 프로젝트명 B</td>
-                                <td class="center">2023.01.01 ~ 2023.01.31</td>
+                                <td class="center fold">2023.01.01 ~ 2023.01.31</td>
                                 <td>1.00</td>
                                 <td>6,000,000</td>
+                                <td class="center fold">2023.01.01 ~ 2023.01.31</td>
+                                <td>1.00</td>
                                 <td>4,800,000</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="3" class="center"><b>SUM</b></td>
+                                <td colspan="2"></td>
+                                <td class="center fold"><b>매출합</b></td>
                                 <td>8</td>
                                 <td><span class="tSales">40,550,000</span></td>
+                                <td class="center fold"><b>매입합</b></td>
+                                <td>8</td>
                                 <td><span class="tBuy">37,000,000</span></td>
                             </tr>
                         </tfoot>
@@ -518,7 +534,7 @@
         </div>        
         <div class="layerDim"></div>    
     </div>
-    <!--//월별 매입/매출-->
+    <!--//월별 매입/매출 240229 수정-ys-->
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
