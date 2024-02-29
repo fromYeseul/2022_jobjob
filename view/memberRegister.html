@@ -91,7 +91,7 @@
                             
                             <div class="boxWrap hasTooltip">                                
                                 <div class="inputList">   
-                                    <ul class="grid g_3_4"><!--230516 수정 -ys -->
+                                    <ul class="grid memBasic job"><!--240301 클래스수정-ys-->
                                         <li class="r1_4"><!--230516 수정 -ys -->
                                             <div class="profile">
                                                 <i class="ico delete"></i>
@@ -104,7 +104,7 @@
                                             </div>
                                         </li>
 
-                                        <li>
+                                        <li class="memClass"><!--240301 클래스추가-ys-->
                                             <h6 class="need">소속</h6>
                                             <div class="tabType"><!--230915 mt10제거-->
                                                 <input type="radio" id="belong1" name="belong" value="belong1" checked="">
@@ -130,22 +130,25 @@
                                             </ul>
                                         </li>
 
+                                        <!--240301 수정-ys-->
                                         <li>                    
                                             <label class="need" for="memNm">이름</label>
-                                            
-                                            <!--230609 수정 -ys-->
-                                            <div class="flex mt5">
-                                                <input class="" type="text" id="memNm" placeholder="홍길동(필수)">                                         
-                                                <input class="ml5" type="text" id="memNm_Eng" placeholder="영문(선택)">           
-                                            </div>              
-                                            <!--//230609 수정 -ys-->                                                            
+                                            <div class="flex">
+                                                <input class="full" type="text" id="memNm" placeholder="홍길동(필수)">                                         
+                                                <input class="full" type="text" id="memNm_Eng" placeholder="영문(선택)">          
+                                            </div>
                                         </li>
+                                        <li class="memTag">                    
+                                            <label class="" for="Tag">Tag</label>
+                                            <input class="full" type="text" id="Tag">  
+                                        </li>
+                                        <!--//240301 수정-ys-->
                                         <li>
                                             <label class="need" for="">생년월일</label>
                                             <input class="full" type="text" id="" placeholder="850926-1******"> 
                                         </li>
 
-                                        <li>
+                                        <li class="memphone"><!--240301 클래스추가-ys-->
                                             <label class="need" for="">휴대폰 번호</label>
                                             <input class="full" type="text" id="" placeholder="- 를 제외한 숫자만 입력하세요."> 
                                         </li>
@@ -155,7 +158,7 @@
                                         </li>
 
                                         <!--230517 추가 -ys-->
-                                        <li>
+                                        <li class="memAdd"><!--240301 클래스추가-ys-->
                                             <label class="need" for="">주소</label>
                                             <div class="flex mt5">
                                                 <select class="full" name="" id="">

@@ -129,8 +129,26 @@
     }
 }
 
-//pms
+
+
+
 .memRegister{
+    //job
+    .memBasic{
+        &.job{
+            column-gap: 2.5rem;
+            grid-template-columns: 200px 375px 20px 425px;
+            .memTag{
+                margin-left: -30px;
+            }
+            .memClass,
+            .memphone,
+            .memAdd{
+                grid-column : 2/4;
+            }
+        }
+    }
+    //pms
     .memBasic{
         gap: rem(20) rem(50);
         grid-template-columns: 220px 220px 10px 200px 130px 120px;
