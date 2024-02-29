@@ -1,4 +1,14 @@
 /* 테이블 검색 조건 */
 .condition{
     margin-top: rem(24);
+    li{
+        &.sortL{
+            padding: 0 rem(15);
+            &::before{
+                height: rem(40);
+                left: 0px;
+                transform: translateY(-20%);
+            }
+        }
+    }
 }
