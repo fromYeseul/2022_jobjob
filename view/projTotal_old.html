@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트별 매출집계</title>
+    
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+    <link rel="stylesheet" href="../assets/css/style_pms.css">
+
+</head>
+<body>
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/pms/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li>
+                        <span aria-controls="showLevel" class="layerOpen">등급보기설정
+                    </span></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="is-active">
+                            <a alerttoast="" href="#"><i class="ico home"></i><span class="menuTxt">홈</span></a>
+                        </li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">고객문의</span></a></li>
+                                <li><a href="#"><span class="depth2">운영자관리</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>                        
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        
+        <section class="contWrapper noRight">
+            <section class="contLayout">
+                <section class="projTotal">
+                    <h2>프로젝트별 매출집계
+                        <input type="checkbox" id="license01" name="aa" class="hasTxt">
+                        <label for="license01">청구/입금기준으로 보기</label>
+                    </h2>
+                    <div class="condition">
+                        <ul>
+                            <li>
+                                <p class="condiTit">조회년도</p>
+                                <select>
+                                    <option value="">2023</option>
+                                    <option value="001">1</option>
+                                    <option value="002">2</option>
+                                    <option value="003">3</option>
+                                    <option value="004">4</option>
+                                    <option value="005">5</option>
+                                </select>
+                            </li>
+                            <li>
+                                <p class="condiTit">주관그룹</p>
+                                <div class="select laSize">
+                                    <span class="selDefault">SAP 전략</span>
+                                    <ul class="optionList">
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_1" class="hasTxt">
+                                            <label for="optChk_1">SAP 사업</label>
+                                        </li>                                        
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_2" class="hasTxt">
+                                            <label for="optChk_2">SAP 전략</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_3" class="hasTxt">
+                                            <label for="optChk_3">SAP 융합</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_4" class="hasTxt">
+                                            <label for="optChk_4">대외사업</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_5" class="hasTxt">
+                                            <label for="optChk_5">미래융합사업</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>                            
+                            <li>
+                                <p class="condiTit">기술구분</p>
+                                <select>
+                                    <option value="">전체</option>
+                                    <option value="001">1</option>
+                                    <option value="002">2</option>
+                                    <option value="003">3</option>
+                                    <option value="004">4</option>
+                                    <option value="005">5</option>
+                                </select>
+                            </li>
+                            <li>
+                                <p class="condiTit">사업유형</p>
+                                <select>
+                                    <option value="">전체</option>
+                                    <option value="001">1</option>
+                                    <option value="002">2</option>
+                                    <option value="003">3</option>
+                                    <option value="004">4</option>
+                                    <option value="005">5</option>
+                                </select>
+                            </li>
+                            <li>
+                                <p class="condiTit">진행상태</p>
+                                <select>
+                                    <option value="">전체</option>
+                                    <option value="001">1</option>
+                                    <option value="002">2</option>
+                                    <option value="003">3</option>
+                                    <option value="004">4</option>
+                                    <option value="005">5</option>
+                                </select>
+                            </li>
+                            <li>
+                                <p class="condiTit">사업기간</p>
+                                <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">
+                                <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">
+                            </li>
+                            
+                            <li class="hasBtn">
+                                <label class="condiTit" for="project2">구분</label>
+                                <select class="mid-laSize">
+                                    <option value="">프로젝트코드</option>
+                                    <option value="001">원청사</option>
+                                    <option value="002">고객사</option>
+                                    <option value="003">프로젝트</option>
+                                </select>
+                                <input type="text" class="smSize" maxlength="20" placeholder="검색어 입력">
+                                <button>
+                                    <i class="ico search white"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                       
+                    <div class="tableTop right">
+                        <!-- <select>
+                            <option class="optionItem" value="10">10개씩</option>
+                            <option class="optionItem" value="20" selected="">20개씩</option>
+                            <option class="optionItem" value="50">50개씩</option>
+                            <option class="optionItem" value="100">100개씩</option>
+                        </select> -->
+                        
+                        <button class="white">
+                            <i class="ico excDown"></i>엑셀 다운로드
+                        </button>
+                    </div>
+                    <div class="yScroll">
+                        <div class="accWrap"><!--240215 클래스제거-ys-->                                 
+                            <div class="accBox"><!--등록된 공고가 있을 때, 기본상태-->
+                                <div class="accHead">
+                                    <div class="prefix">
+                                        <!-- <i class="ico arrow"></i> 240215 제거-ys-->
+
+                                        <div class="projCode">B00040</div>
+                                        <div class="projGroup">SAP 전략</div>
+
+                                        <span class="label">SM</span>
+                                        <div class="projTit">
+                                            <a href="#">테스트 주문프로세스 개선 프로젝트프로젝트</a><!--240215 추가-ys-->
+                                        </div>
+                                    </div>  
+                                    <div class="suffix">
+                                        <button class="round">예정</button>
+
+                                        <span class="projType">SAP</span>
+                                        <span class="projCus">(주)에코아이시티</span>
+                                        <span class="projDate">2022.04.18~2023.03.18</span>
+                                        <span class="dark projSum"><b>124,000,000</b>원</span>
+                                        <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button><!--240215 추가-ys-->
+                                    </div>
+                                </div>
+
+                                <div class="accInner infoType">
+                                    <table class="chkType">
+                                        <colgroup>
+                                            <col width="90px" span="17">
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>구분</th>
+                                                <th>2022년</th>
+                                                <th>2023.01</th>
+                                                <th>2023.02</th>
+                                                <th>2023.03</th>
+                                                <th>2023.04</th>
+                                                <th>2023.05</th>
+                                                <th>2023.06</th>
+                                                <th>2023.07</th>
+                                                <th>2023.08</th>
+                                                <th>2023.09</th>
+                                                <th>2023.10</th>
+                                                <th>2023.11</th>
+                                                <th>2023.12</th>
+                                                <th>2024년</th>
+                                                <th>제경비</th>
+                                                <th>합계</th>
+                                                <th>비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="center">정규(10)</td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>115,900,000</p>
+                                                    <p class="marked">18,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>5,900,000</p>
+                                                    <p class="marked">9,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>5,900,000</p>
+                                                    <p class="marked">9,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">48,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">23,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>115,900,000</p>
+                                                    <p class="marked">18,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>5,900,000</p>
+                                                    <p class="marked">9,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">48,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">23,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>8,900,000</p>
+                                                    <p class="marked">0</p>
+                                                </td>
+                                                <td>
+                                                    <p>121,900,000</p>
+                                                    <p class="marked">21,990,000</p>
+                                                </td>
+                                                <td class="ellipsis">비고내용비고내용비고내용비 고내용비고내용비고내용</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td class="center">합계</td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>                                       
+                            <div class="accBox is-active"><!--등록된 공고가 있을 때, 기본상태-->
+                                <div class="accHead">
+                                    <div class="prefix">
+
+                                        <div class="projCode">B00040</div>
+                                        <div class="projGroup">SAP 전략</div>
+
+                                        <span class="label">SM</span>
+                                        <div class="projTit">
+                                            테스트 주문프로세스 개선 테스트 주문프로세스 개선 프로젝트프로젝트프로젝트프로젝트 테스트 주문프로세스 개선 프로젝트프로젝트 테스트 주문프로세스 개선 프로젝트프로젝트
+                                        </div>
+                                    </div>  
+                                    <div class="suffix">
+                                        <button class="round cancel">무산</button>
+
+                                        <span class="projType">SAP</span>
+                                        <span class="projCus">CJ프레시웨이</span>
+                                        <span class="projDate">2022.04.18~2023.03.18</span>
+                                        <span class="dark projSum"><b>24,000,000</b>원</span>
+
+                                        <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                    </div>
+                                </div>
+
+                                <div class="accInner infoType">
+                                    <table class="chkType">
+                                        <colgroup>
+                                            <col style="width:90px" span="17">
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>구분</th>
+                                                <th>2022년</th>
+                                                <th>2023.01</th>
+                                                <th>2023.02</th>
+                                                <th>2023.03</th>
+                                                <th>2023.04</th>
+                                                <th>2023.05</th>
+                                                <th>2023.06</th>
+                                                <th>2023.07</th>
+                                                <th>2023.08</th>
+                                                <th>2023.09</th>
+                                                <th>2023.10</th>
+                                                <th>2023.11</th>
+                                                <th>2023.12</th>
+                                                <th>2024년</th>
+                                                <th>제경비</th>
+                                                <th>합계</th>
+                                                <th>비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="center">정규(10)</td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>115,900,000</p>
+                                                    <p class="marked">18,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>5,900,000</p>
+                                                    <p class="marked">9,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>5,900,000</p>
+                                                    <p class="marked">9,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">48,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">23,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>115,900,000</p>
+                                                    <p class="marked">18,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>5,900,000</p>
+                                                    <p class="marked">9,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">48,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">23,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>8,900,000</p>
+                                                    <p class="marked">0</p>
+                                                </td>
+                                                <td>
+                                                    <p>121,900,000</p>
+                                                    <p class="marked">21,990,000</p>
+                                                </td>
+                                                <td class="ellipsis">비고내용비고내용비고내용비 고내용비고내용비고내용</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">프리(8)</td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>115,900,000</p>
+                                                    <p class="marked">18,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>5,900,000</p>
+                                                    <p class="marked">9,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>5,900,000</p>
+                                                    <p class="marked">9,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">48,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">23,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>115,900,000</p>
+                                                    <p class="marked">18,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>5,900,000</p>
+                                                    <p class="marked">9,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">48,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">23,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>8,900,000</p>
+                                                    <p class="marked">0</p>
+                                                </td>
+                                                <td>
+                                                    <p>121,900,000</p>
+                                                    <p class="marked">21,990,000</p>
+                                                </td>
+                                                <td class="ellipsis">비고내용비고내용비고내용비 고내용비고내용비고내용</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td class="center">합계</td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>    
+                            
+                            <div class="accBox disabled"><!--등록된 공고가 없는 상태-->
+                                <div class="accHead">
+                                    <div class="prefix">
+
+                                        <div class="projCode">B00040</div>
+                                        <div class="projGroup">SAP 전략</div>
+
+                                        <span class="label">SM</span>
+                                        <div class="projTit">
+                                            테스트 주문프로세스 개선 프로젝트프로젝트
+                                        </div>
+                                    </div>  
+                                    <div class="suffix">
+                                        <button class="round">진행</button>
+
+                                        <span class="projType">SAP</span>
+                                        <span class="projCus">CJ프레시웨이</span>
+                                        <span class="projDate">2022.04.18~2023.03.18</span>
+                                        <span class="dark projSum"><b>24,000,000</b>원</span>
+                                        <button type="button" class="onlyIco lowSize"><i class="ico smPlus"></i></button>
+                                    </div>
+                                </div>
+
+                                <div class="accInner infoType">
+                                    <table class="chkType">
+                                        <colgroup>
+                                            <col style="width:90px" span="17">
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>구분</th>
+                                                <th>2022년</th>
+                                                <th>2023.01</th>
+                                                <th>2023.02</th>
+                                                <th>2023.03</th>
+                                                <th>2023.04</th>
+                                                <th>2023.05</th>
+                                                <th>2023.06</th>
+                                                <th>2023.07</th>
+                                                <th>2023.08</th>
+                                                <th>2023.09</th>
+                                                <th>2023.10</th>
+                                                <th>2023.11</th>
+                                                <th>2023.12</th>
+                                                <th>2024년</th>
+                                                <th>제경비</th>
+                                                <th>합계</th>
+                                                <th>비고</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="center">정규(10)</td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>115,900,000</p>
+                                                    <p class="marked">18,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>5,900,000</p>
+                                                    <p class="marked">9,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>5,900,000</p>
+                                                    <p class="marked">9,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">48,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">23,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>115,900,000</p>
+                                                    <p class="marked">18,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>5,900,000</p>
+                                                    <p class="marked">9,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">48,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>235,900,000</p>
+                                                    <p class="marked">23,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>215,900,000</p>
+                                                    <p class="marked">28,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>8,900,000</p>
+                                                    <p class="marked">0</p>
+                                                </td>
+                                                <td>
+                                                    <p>121,900,000</p>
+                                                    <p class="marked">21,990,000</p>
+                                                </td>
+                                                <td class="ellipsis">비고내용비고내용비고내용비 고내용비고내용비고내용</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td>
+                                                    <p>165,900,000</p>
+                                                    <p class="marked">128,500,000</p>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+                
+        
+    </section>
+
+    <!--프로젝트 월별 매입/매출 240229 수정-ys-->
+    <div id="" class="modalLayer center is-active">
+        <div class="layerBox mid-laSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+            <div class="modalCont projMonthly"><!--팝업 고유클래스-->
+
+                <h3>2023년 1월 매출/매입</h3>
+                <div class="h3_sub">CJ올리브네트웍스 모바일앱 서비스 협약서</div>
+                <div class="tableBox sticky">
+                    <table>
+                        <colgroup> 
+                            <col width="12%">
+                            <col width="21%">
+                            <col width="8%">
+                            <col>
+                            <col width="21%">
+                            <col width="8%">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>투입/공급</th>
+                                <th class="fold">투입기간</th>
+                                <th>매출M/M</th>
+                                <th>매출단가</th>
+                                <th class="fold">투입기간</th>
+                                <th>매입M/M</th>
+                                <th>매입단가</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="center">홍길동</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>6,000,000</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>4,800,000</td>
+                            </tr>
+                            <tr>
+                                <td class="center">소프트웨어</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>6,000,000</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>4,800,000</td>
+                            </tr>
+                            <tr>
+                                <td class="center">하드웨어</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>6,000,000</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>4,800,000</td>
+                            </tr>
+                            <tr>
+                                <td class="center">라이선스</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>6,000,000</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>4,800,000</td>
+                            </tr>
+                            <tr>
+                                <td class="center">심청이</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>6,000,000</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>4,800,000</td>
+                            </tr>
+                            <tr>
+                                <td class="center">김연아</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>6,000,000</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>4,800,000</td>
+                            </tr>
+                            <tr>
+                                <td class="center">김연아</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>6,000,000</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>4,800,000</td>
+                            </tr>
+                            <tr>
+                                <td class="center">김연아</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>6,000,000</td>
+                                <td class="fold">2023.01.01 ~ 2023.12.31</td>
+                                <td>1.00</td>
+                                <td>4,800,000</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td class="fold">매출합</td>
+                                <td>8</td>
+                                <td><span class="tSales">40,550,000</span></td>
+                                <td class="fold">매입합</td>
+                                <td>8</td>
+                                <td><span class="tBuy">37,000,000</span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="listBottom pagingType">                        
+                    <div class="paging">
+                        <ul>
+                            <li class="pagingDouble">
+                                <a href="#">
+                                    <span class="ico pagingFirst"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="ico pagingLeft"></span>
+                                </a>
+                            </li>
+                            <li class="is-active"><a>1</a></li>
+                            <li><a>2</a></li>
+                            <li><a>3</a></li>
+                            <li><a>4</a></li>
+                            <li><a>5</a></li>
+                            <li><a>6</a></li>
+                            <li><a>7</a></li>
+                            <li><a>8</a></li>
+                            <li><a>9</a></li>
+                            <li><a>10</a></li>
+                            <li>
+                                <a href="#">
+                                    <span class="ico pagingRight is-active"></span>
+                                </a>
+                            </li>
+                            <li class="pagingDouble">
+                                <a href="#">
+                                    <span class="ico pagingLast is-active"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modalFooter single">
+                <button class="white prefix layerOpen" aria-controls="del-confirm">닫기</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//프로젝트 월별 매입/매출 240229 수정-ys-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>    
+    <script>
+        //아코디언 - 240215 수정-ys-->
+        $(".accBox .onlyIco").on("click", function(){
+            $(this).parents(".accBox").toggleClass("is-active");
+        });
+    </script>
+</body>
+</html>

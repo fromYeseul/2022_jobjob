@@ -175,10 +175,128 @@ table{
     .treegrid-container{
         display: flex;
     }
+    &.icoType{
+        tr{
+            .rootCont{
+                margin-left: rem(10);
+                height: rem(35);
+                border:0;
+                span{
+                    font-size: rem(14);
+                    font-weight: 500;
+                    color: $black;
+                }
+                .ico{
+                    margin-right: rem(2);
+                }
+                &::before{
+                    display: none;
+                }
+            }
+            .treegrid-expander{
+                &::after{
+                    width: rem(7);
+                    height: rem(10);
+                    position: absolute;
+                    left: 0;
+                    transform: translate(0, -50%);
+                    background-image: url(../img/icoGroup.png);
+                    background-position: -80px -180px;
+                }
+            }
+            .treegrid-expander-expanded{
+                &::after {
+                    width: rem(10);
+                    height: rem(7);
+                    background-position: -100px -180px;
+                }  
+            }
+            &.depth2{
+                .treegrid-expander {
+                    &::after{
+                        left: rem(25);
+                    }
+                }
+                .rootCont{
+                    margin-left: rem(35);
+                }
+            }
+            &.depth3{
+                .treegrid-expander {
+                    &::after{
+                        left: rem(50);
+                    }
+                }
+                .rootCont{
+                    margin-left: rem(60);
+                }     
+            }               
+            &.depth4{
+                .treegrid-expander {
+                    &::after{
+                        left: rem(75);
+                    }
+                }
+                .rootCont{
+                    margin-left: rem(85);
+                }
+            }           
+            &.depth5{
+                .treegrid-expander {
+                    &::after{
+                        left: rem(100);
+                    }
+                }
+                .rootCont{
+                    margin-left: rem(110);
+                }
+            }      
+            &.depth6{
+                .treegrid-expander {
+                    &::after{
+                        left: rem(125);
+                    }
+                }
+                .rootCont{
+                    margin-left: rem(135);
+                }
+            }   
+            &.depth7{
+                .treegrid-expander{
+                    &::after{
+                        left: rem(150);
+                    }
+                }
+                .rootCont{
+                    margin-left: rem(160);
+                }
+            }  
+            &.depth8{
+                .treegrid-expander{
+                    &::after{
+                        left: rem(175);
+                    }
+                }
+                .rootCont{
+                    margin-left: rem(185);
+                }
+            }
+            &.noDepth{
+                td, span{
+                    cursor: not-allowed;
+                }                
+                .treegrid-expander {
+                    &::after{
+                        display: inline-block !important;
+                        background-position: -80px -200px;
+                    }
+                }
+            }
+        }
+    }
 }
 .treegrid-expander-collapsed::after {background-position: -140px -180px;}    //+
-.treegrid-expander-expanded::after {background-position: -120px -180px;}    //-
-
+.treegrid-expander-expanded::after {background-position: -120px -180px;}  
 
 
 tr.loading>td>.treegrid-container>.treegrid-expander::after {

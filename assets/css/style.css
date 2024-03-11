@@ -2144,11 +2144,8 @@ footer.toast button + button {
   height: calc(100vh - 450px);
 }
 
-#isReopen .layerBox {
-  height: 660px;
-}
 #isReopen .hasDatepicker {
-  min-height: 457px;
+  min-height: 24.375rem;
 }
 
 #contactCare .tableBox {
@@ -6989,6 +6986,85 @@ table.tree {
 .tree .treegrid-container {
   display: flex;
 }
+.tree.icoType tr .rootCont {
+  margin-left: 0.625rem;
+  height: 2.1875rem;
+  border: 0;
+}
+.tree.icoType tr .rootCont span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #000000;
+}
+.tree.icoType tr .rootCont .ico {
+  margin-right: 0.125rem;
+}
+.tree.icoType tr .rootCont::before {
+  display: none;
+}
+.tree.icoType tr .treegrid-expander::after {
+  width: 0.4375rem;
+  height: 0.625rem;
+  position: absolute;
+  left: 0;
+  transform: translate(0, -50%);
+  background-image: url(../img/icoGroup.png);
+  background-position: -80px -180px;
+}
+.tree.icoType tr .treegrid-expander-expanded::after {
+  width: 0.625rem;
+  height: 0.4375rem;
+  background-position: -100px -180px;
+}
+.tree.icoType tr.depth2 .treegrid-expander::after {
+  left: 1.5625rem;
+}
+.tree.icoType tr.depth2 .rootCont {
+  margin-left: 2.1875rem;
+}
+.tree.icoType tr.depth3 .treegrid-expander::after {
+  left: 3.125rem;
+}
+.tree.icoType tr.depth3 .rootCont {
+  margin-left: 3.75rem;
+}
+.tree.icoType tr.depth4 .treegrid-expander::after {
+  left: 4.6875rem;
+}
+.tree.icoType tr.depth4 .rootCont {
+  margin-left: 5.3125rem;
+}
+.tree.icoType tr.depth5 .treegrid-expander::after {
+  left: 6.25rem;
+}
+.tree.icoType tr.depth5 .rootCont {
+  margin-left: 6.875rem;
+}
+.tree.icoType tr.depth6 .treegrid-expander::after {
+  left: 7.8125rem;
+}
+.tree.icoType tr.depth6 .rootCont {
+  margin-left: 8.4375rem;
+}
+.tree.icoType tr.depth7 .treegrid-expander::after {
+  left: 9.375rem;
+}
+.tree.icoType tr.depth7 .rootCont {
+  margin-left: 10rem;
+}
+.tree.icoType tr.depth8 .treegrid-expander::after {
+  left: 10.9375rem;
+}
+.tree.icoType tr.depth8 .rootCont {
+  margin-left: 11.5625rem;
+}
+.tree.icoType tr.noDepth td, .tree.icoType tr.noDepth span {
+  cursor: not-allowed;
+}
+.tree.icoType tr.noDepth .treegrid-expander::after {
+  display: inline-block !important;
+  background-position: -80px -200px;
+}
 
 .treegrid-expander-collapsed::after {
   background-position: -140px -180px;
@@ -7287,6 +7363,17 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 1.25rem;
   height: 1.125rem;
   background-position: -260px -300px;
+}
+.ico.folder {
+  width: 1.1875rem;
+  height: 0.9375rem;
+  background-position: 0px -420px;
+  vertical-align: -2px;
+}
+.ico.paper {
+  width: 0.9375rem;
+  height: 1.125rem;
+  background-position: -80px -420px;
 }
 .ico.more {
   width: 0.1875rem;
