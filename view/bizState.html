@@ -92,7 +92,7 @@
             <section class="contLayout">
                 <section class="bizState">
                     <h2>
-                        사업현황(그리드순서 확인필요)
+                        사업현황
                         <button class="laSize" type="button" onclick="javascript:location.href='/business/status/new/info/view';">신규등록</button>
                     </h2>
                     <div class="condition">
@@ -204,15 +204,17 @@
                     </div>
                        
                     <div class="tableTop">
-                        <select class="smSize">
-                            <option class="optionItem" value="10">10개씩</option>
-                            <option class="optionItem" value="20" selected="">20개씩</option>
-                            <option class="optionItem" value="50">50개씩</option>
-                            <option class="optionItem" value="100">100개씩</option>
-                        </select>
-
+                        <div class="prefix"><!--240315 수정-ys-->                      
+                            <select>
+                                <option class="optionItem" value="10">10개씩</option>
+                                <option class="optionItem" value="20" selected="">20개씩</option>
+                                <option class="optionItem" value="50">50개씩</option>
+                                <option class="optionItem" value="100">100개씩</option>
+                            </select>
+                            <span>총건수 : 256</span>
+                        </div>
                         
-                        <button class="white mid-lowSize">
+                        <button class="white">
                             <i class="ico excDown"></i>
                             사업현황 다운로드
                         </button>
