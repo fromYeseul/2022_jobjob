@@ -18,6 +18,7 @@ table{
             // margin-right: rem(14);
             // width: rem(18);
             position: relative;
+            cursor: pointer;
             &::after{
                 content: ' ';
                 display: inline-block;
@@ -191,6 +192,11 @@ table{
                 }
                 &::before{
                     display: none;
+                }                
+                &.is-active{
+                    span{
+                        color: $highlight;
+                    }
                 }
             }
             .treegrid-expander{
