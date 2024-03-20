@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자템플릿01</title>
+    <link rel="stylesheet" href="../assets/css/style_pms.css">
+</head>
+<body class="hasFooter">
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/pms/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li>
+                        <span aria-controls="showLevel" class="layerOpen">등급보기설정
+                    </span></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="is-active"><a href="#"><i class="ico home"></i><span class="menuTxt">홈</span><i></i></a></li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span><i></i></a></li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span><i></i></a></li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span><i></i></a></li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span><i></i></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span><i></i></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span><i></i></a></li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span><i></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>   
+        
+        <section class="contWrapper noRight"><!--우측패널 없는 페이지-->
+            <section class="contLayout">
+                
+                <section class="adminTemp">
+                    <div class="pageTit">
+                        <h2>관리자템플릿01</h2>
+                    </div>
+                    
+                    <div class="regiPartWrapper noInfo">        
+                        <div class="regiPart">
+                            <div class="boxWrap">
+                                <div class="condition">
+                                    <div class="prefix">
+                                        <ul>
+                                            <li>
+                                                <h6>검색조건</h6>
+                                                <select name="" id="">
+                                                    <option value="">2024년</option>
+                                                    <option value="dog" disabled="">2023년</option>
+                                                    <option value="cat">2022년</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <h6>검색조건</h6>
+                                                <div class="hasBtn">
+                                                    <input type="text" maxlength="" placeholder="역할그룹 검색">
+                                                    <button>
+                                                        <i class="ico search white"></i>
+                                                    </button>
+                                                    <input type="checkbox" class="hasTxt">
+                                                    <label for="license02">검색조건(체크)</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="suffix">
+                                        <span class="h6_sub">부가적인 설명글이 들어옵니다.</span>
+                                    </div>
+                                </div>
+
+                                <div class="divideBox">                                    
+                                    <div class="left">
+                                        <div class="tabWrapper" id="style-tab01">
+                                            <div class="flex">
+                                                <ul class="tabBtnWrap">
+                                                    <li class="tabBtn prefix">
+                                                        <a href="#tab-01" class="is-active">아이콘o</a>
+                                                    </li>
+                                                    <li class="tabBtn center">
+                                                        <a href="#tab-02">아이콘x</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="suffix">
+                                                    <select class="xsSize" name="" id="">
+                                                        <option value="">2024년</option>
+                                                        <option value="dog" disabled="">2023년</option>
+                                                        <option value="cat">2022년</option>
+                                                    </select>
+                                                    <select class="xsSize" name="" id="">
+                                                        <option value="">v1.0</option>
+                                                        <option value="dog" disabled="">v1.5</option>
+                                                        <option value="cat">v2.0</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="tabContWrap">
+                                                <div id="tab-01" class="tabCont is-active">
+                                                    <div class="cont hasFooter">
+                                                        <div class="tableBox">
+                                                            <table class="tree icoType">
+                                                                <tbody>
+                                                                    <tr class="treegrid-1 depth1 expanded"><!--첫번째 항상 열림 expanded-->
+                                                                        <td>
+                                                                            <div class="rootCont">
+                                                                                <span>
+                                                                                    <i class="ico folder"></i>
+                                                                                    프로젝트-1
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                
+                                                                    <tr class="treegrid-2 treegrid-parent-1 depth2 noDepth"><!--위치설정 depth2, 하위메뉴 없을 때 noDepth-->
+                                                                        <td>
+                                                                            <div class="rootCont">
+                                                                                <span>
+                                                                                    <i class="ico folder"></i>
+                                                                                    수주 프로젝트-2
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="treegrid-3 treegrid-parent-1 depth2 expanded">
+                                                                        <td>
+                                                                            <div class="rootCont is-active">
+                                                                                <span>
+                                                                                    <i class="ico folder"></i>
+                                                                                    수주 프로젝트-2
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                
+                                                                    <tr class="treegrid-4 treegrid-parent-3 depth3 expanded">
+                                                                        <td>
+                                                                            <div class="rootCont">
+                                                                                <span>
+                                                                                    <i class="ico folder"></i>
+                                                                                    수주 프로젝트-3
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="treegrid-5 treegrid-parent-4 depth4 expanded">
+                                                                        <td>
+                                                                            <div class="rootCont">
+                                                                                <span>
+                                                                                    <i class="ico folder"></i>
+                                                                                    수주 프로젝트-4
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="treegrid-6 treegrid-parent-5 depth5 noDepth"><!--하위depth없음-->
+                                                                        <td>
+                                                                            <div class="rootCont">
+                                                                                <span>
+                                                                                    <i class="ico paper"></i><!--마지막 depth 아이콘-->
+                                                                                    수주 프로젝트-5
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="treegrid-6 treegrid-parent-5 depth5 expanded">
+                                                                        <td>
+                                                                            <div class="rootCont">
+                                                                                <span>
+                                                                                    <i class="ico folder"></i>
+                                                                                    수주 프로젝트-5
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="treegrid-7 treegrid-parent-6 depth6 expanded">
+                                                                        <td>
+                                                                            <div class="rootCont">
+                                                                                <span>
+                                                                                    <i class="ico folder"></i>
+                                                                                    수주 프로젝트-6
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="treegrid-8 treegrid-parent-7 depth7 expanded">
+                                                                        <td>
+                                                                            <div class="rootCont">
+                                                                                <span>
+                                                                                    <i class="ico folder"></i>
+                                                                                    수주 프로젝트-7
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="treegrid-9 treegrid-parent-8 depth8 noDepth"><!--하위depth없음-->
+                                                                        <td>
+                                                                            <div class="rootCont">
+                                                                                <span>
+                                                                                    <i class="ico paper"></i>
+                                                                                    수주 프로젝트-8
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="tab-02" class="tabCont">
+                                                    <div class="tableBox">
+                                                        <table class="tree">
+                                                            <tbody>
+                                                                <tr class="treegrid-1 depth1 expanded">
+                                                                    <td>
+                                                                        <div class="rootCont">
+                                                                            <span>프로젝트-111</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+            
+                                                                <tr class="treegrid-2 treegrid-parent-1 depth2 noDepth">
+                                                                    <td>
+                                                                        <div class="rootCont">
+                                                                            <span>수주 프로젝트-2</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="treegrid-3 treegrid-parent-1 depth2 expanded">
+                                                                    <td>
+                                                                        <div class="rootCont">
+                                                                            <span>수주 프로젝트-2</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+            
+                                                                <tr class="treegrid-4 treegrid-parent-3 depth3 expanded">
+                                                                    <td>
+                                                                        <div class="rootCont">
+                                                                            <span>수주 프로젝트-3</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="treegrid-5 treegrid-parent-4 depth4 expanded">
+                                                                    <td>
+                                                                        <div class="rootCont">
+                                                                            <span>수주 프로젝트-4</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="treegrid-6 treegrid-parent-5 depth5">
+                                                                    <td>
+                                                                        <div class="rootCont">
+                                                                            <span>수주 프로젝트-5</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="treegrid-6 treegrid-parent-5 depth5 expanded">
+                                                                    <td>
+                                                                        <div class="rootCont">
+                                                                            <span>수주 프로젝트-5</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <button class="white full">+ 부서 편집</button>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="right">
+                                        <h5>서브타이틀</h5>   
+                                        <div class="cont hasFooter"><!--하단버튼이 있을때 hasFooter-->    
+                                            <div class="inputList flex">   
+                                                <ul>
+                                                    <li>
+                                                        <label for="">2분할</label>
+                                                        <input type="text" class="full" placeholder="입력하세요.">     
+                                                    </li>
+                                                    <li>
+                                                        <label for="">2분할</label>
+                                                        <input type="text" class="full" placeholder="입력하세요.">     
+                                                    </li>
+                                                    <li class="c1_2">
+                                                        <label for="">1분할</label>
+                                                        <input type="text" class="full" placeholder="입력하세요.">     
+                                                    </li>
+                                                    <li>
+                                                        <label for="">날짜타입</label>
+                                                        <div class="datepicker">
+                                                            <input type="text" class="hasDatepicker" placeholder="yyyy.mm.dd">
+                                                            <img src="../assets/img/icoCal.png">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <label class="need" for="">사용여부</label>
+                                                        <div >
+                                                            <input type="radio" id="a1"  checked="">
+                                                            <label for="a1">사용</label>
+                                                            <input type="radio" id="l1">
+                                                            <label for="l1">미사용</label>
+                                                        </div>
+                                                    </li>                
+                                                    <li class="c1_2"><!--전체영역일때-->
+                                                        <label for="">비고</label>
+                                                        <textarea name="" id="" cols="70" rows="4" placeholder="내용 입력"></textarea> 
+                                                    </li>
+                                                    <li class="c1_2 block"><!--전체영역이면서 제목아래로 떨어지는 컨텐츠-->
+                                                        <div class="tableTop">
+                                                            <div class="prefix">
+                                                                <h6>게시판타입</h6>
+                                                            </div>
+                                                            <div class="suffix">
+                                                                <button class="white">버튼</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tableBox">    
+                                                            <table class="">
+                                                                <colgroup>
+                                                                    <col width="60px;">   
+                                                                    <col width="15%;">
+                                                                    <col>    
+                                                                    <col width="20%;">
+                                                                    <col width="20%;">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>
+                                                                            <input type="checkbox" id="gg">
+                                                                            <label for="gg"></label>
+                                                                        </th>
+                                                                        <th>메뉴위치</th>
+                                                                        <th>메뉴명</th>
+                                                                        <th>노출순서</th>
+                                                                        <th>수정일</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="gg">
+                                                                            <label for="gg"></label>
+                                                                        </td>
+                                                                        <td>                                                    
+                                                                            <span class="gnb">
+                                                                                <i class="ico member gray"></i>
+                                                                            </span>
+                                                                        </td>
+                                                                        <td class="left"><a href="#" class="layerOpen" aria-controls="menu-detail">홈</a></td>
+                                                                        <td>
+                                                                            <div class="countBox">
+                                                                                <button class="onlyIco countUp"><i class="ico up"></i></button><!--230516 수정 -ys -->
+                                                                                <input type="text" value="1" class="countInput">
+                                                                                <button class="onlyIco countDown" disabled=""><i class="ico down"></i></button>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>yyyy.mm.dd hH:mm</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="gg">
+                                                                            <label for="gg"></label>
+                                                                        </td>
+                                                                        <td>어드민 &gt; GNB</td>
+                                                                        <td class="left"><a href="#">회원</a></td>
+                                                                        <td>
+                                                                            <div class="countBox">
+                                                                                <button class="onlyIco countUp"><i class="ico up"></i></button><!--230516 수정 -ys -->
+                                                                                <input type="text" value="1" class="countInput">
+                                                                                <button class="onlyIco countDown" disabled=""><i class="ico down"></i></button>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>yyyy.mm.dd hH:mm</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="gg">
+                                                                            <label for="gg"></label>
+                                                                        </td>
+                                                                        <td>어드민 &gt; GNB</td>
+                                                                        <td class="left"><a href="#">프로젝트</a></td>
+                                                                        <td>
+                                                                            <div class="countBox">
+                                                                                <button class="onlyIco countUp"><i class="ico up"></i></button><!--230516 수정 -ys -->
+                                                                                <input type="text" value="1" class="countInput">
+                                                                                <button class="onlyIco countDown" disabled=""><i class="ico down"></i></button>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>yyyy.mm.dd hH:mm</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="gg">
+                                                                            <label for="gg"></label>
+                                                                        </td>
+                                                                        <td>어드민 &gt; GNB</td>
+                                                                        <td class="left"><a href="#">매입/매출관리</a></td>
+                                                                        <td>
+                                                                            <div class="countBox">
+                                                                                <button class="onlyIco countUp"><i class="ico up"></i></button><!--230516 수정 -ys -->
+                                                                                <input type="text" value="1" class="countInput">
+                                                                                <button class="onlyIco countDown" disabled=""><i class="ico down"></i></button>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>yyyy.mm.dd hH:mm</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="nodata" colspan="5">검색 결과가 없습니다.</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>       
+                
+                                        <div class="modalFooter"><!--버튼이 하나일때 single 클래스 추가-->
+                                            <button class="white">취소</button>
+                                            <button class="bdType">저장</button>
+                                            <button>시스템반영</button>
+                                        </div>
+                                    </div>
+                                </div>           
+                            </div>
+                        </div>     
+                    </div>     
+                </section>                
+            </section>
+        </section>
+    </section>
+
+    
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/jquery.treegrid.min.js"></script>
+
+    <script>        
+        counting();
+        $('.tree').treegrid();
+    </script>
+</body>
+</html>
