@@ -7,18 +7,30 @@
     .grid{
         width: rem(1300);
     }
-    .faqQTit{}
+    .infoList{
+        &.listType{
+            .faqQCont{
+                margin-top: rem(20);
+            }
+        }
+    }
+    .faqQTit{
+        .info{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
     .faqQCont{
         .infoBox{
-            margin: rem(20) 0;
             padding: rem(40) 0;
             border-top:1px solid $inputGray;
             border-bottom:1px solid $inputGray;
         }
     }
     .faqQFile{
-        .info{
-            justify-content: space-between;
+        a{
+            color: $mainColor;
+            text-decoration: underline;
         }
     }
 }
