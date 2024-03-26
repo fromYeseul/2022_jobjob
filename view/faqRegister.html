@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1:1 문의 등록</title>
+    
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="../assets/css/style_pms.css">
+</head>
+<body>
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/pms/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li>
+                        <span aria-controls="showLevel" class="layerOpen">등급보기설정
+                    </span></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="noDepth">
+                            <a href="#"><i class="ico home"></i><span class="menuTxt">홈</span></a>
+                        </li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">고객문의</span></a></li>
+                                <li><a href="#"><span class="depth2">운영자관리</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>
+                        <li class="is-active"><a href="#"><i class="ico recruit"></i><span class="menuTxt">공고/지원자</span></a>
+                            <ul class="is-active">
+                                <li class="is-active"><a href="#"><span class="depth2">모집공고</span></a></li>
+                                <li><a href="#"><span class="depth2">인재검색/제안</span></a></li>
+                                <li><a href="#"><span class="depth2">보낸제안</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
+                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
+                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>    
+        
+        <section class="contWrapper noRight">
+            <section class="contLayout">
+                
+                <section class="faqRegister">
+
+                    <div class="pageTit">
+                        <h2>1:1 문의 등록</h2>
+                        <div class="suffix">
+                            <button class="white">취소</button>
+                            <button class="">저장</button>
+                        </div>
+                    </div>
+                    
+                    <div class="regiPartWrapper">                          
+                        <div class="regiPart">                            
+                            <div class="boxWrap">                                
+                                <div class="inputList">   
+                                    <ul class="grid col3">
+                                        <li class="">
+                                            <label>유형</label>
+                                            <select class="full" name="" id="">
+                                                <option value="">11</option>
+                                                <option value="">22</option>
+                                            </select>
+                                        </li>
+                                        <li class="faqNm">
+                                            <label>제목</label>
+                                            <input type="text" class="full" placeholder="(필수) 프로젝트 명을 입력하세요.">
+                                        </li>
+                                        <li class="faqEditor">                                            
+                                            <h6>내용</h6>
+                                            <div class="" style="height:300px; background-color:#ddd;">에디터 영역</div>
+                                        </li>
+                                        <li class="faqFile">                                            
+                                            <h6>첨부파일</h6>
+                                            <div class="uploadBox">
+                                                <div class="inputGroup upload">
+                                                    <div class="drop">
+                                                        <i class="ico fileUpload"></i>
+                                                        <label for="fileUpload">
+                                                            파일을 첨부해주세요.<br>
+                                                            (파일 최대 5개, 100MB 이하)                                                      
+                                                        </label>
+                                                    </div>
+                                                    <div class="list">
+                                                        <ul class="list_ul">
+                                                            <li>
+                                                                <span class="fileName">test.JPG</span>
+                                                                <span class="volume">45 KB</span>
+                                                                <i class="ico delete_bg"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                                <label for="cycleDocument22" class="">직접선택</label>
+                                                <input type="file" name="cycleDocument22" id="cycleDocument22" class="" tabindex="">
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                </div>       
+                            </div>
+                        </div>   
+                    </div>  
+                </section>                
+            </section>
+        </section>
+    </section>   
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

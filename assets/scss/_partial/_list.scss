@@ -101,6 +101,24 @@
     padding: rem(4) rem(6);
     border-radius: rem(4);
     border:1px solid $inputGray;
+    &.noBd{
+        margin-top: 0;
+        padding: rem(4) 0;
+        border: 0;
+        .info{
+            padding: 0;
+            .prefix{
+                a{
+                    color: $mainColor;
+                    text-decoration: underline;
+                }
+            }
+            .suffix{
+                display: flex;
+                gap: rem(30);
+            }
+        }
+    }
     .info{
         display: flex;
         align-items: center;
