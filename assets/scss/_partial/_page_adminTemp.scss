@@ -27,6 +27,16 @@
             gap: rem(30);
         }
     }
+    .divideBox{  //기존화면을 수정할수 없어서 이 scss에 적용        
+        &.hasCenter{
+            .optList{
+                padding: rem(10) 0;
+                ul{
+                    height: calc(100vh - 430px);
+                }
+            }
+        }
+    }
     .left{        
         .cont{
             margin: rem(20) 0;
@@ -46,9 +56,27 @@
                 height: calc(100vh - 440px);
             }
         }
+        .tabWrapper{
+            margin-top: rem(20);
+        }
     }
     .optList{
         padding: rem(20);
+    }
+    .tabWrapper{
+        .suffix{
+            align-items: center;
+        }
+        .hasBtn{
+            input{
+                height: rem(32);
+            }
+            button{              
+                padding: 0 rem(10);  
+                font-size: rem(14);
+                line-height: rem(30);
+            }
+        }
     }
     .infoList{
         .tit{
@@ -56,6 +84,14 @@
         }
     }
     .inputList{
+        &.flex{
+            li{
+                &.nodata{
+                    grid-column: 1 / 3;
+                    line-height: calc(100vh - 440px);
+                }
+            }
+        }
         > ul{            
             display: grid;
             align-items: center;
@@ -75,6 +111,15 @@
                 & + label{
                     min-width: initial;
                     margin-right: 5px;
+                }
+            }
+            .hasBtn{
+                input{
+                    width: 100%;
+                }
+                button{              
+                    width: auto;
+                    padding: 0 rem(5);
                 }
             }
         }
