@@ -1125,7 +1125,6 @@ header .center.title h3 {
 }
 header .suffix {
   flex: 1 1 48%;
-  text-align: right;
 }
 header .suffix ul {
   display: flex;
@@ -1704,6 +1703,9 @@ footer.toast button + button {
 }
 .modalCont .h3_sub {
   text-align: center;
+}
+.modalCont .h3_sub.ellipsis {
+  max-width: 100%;
 }
 .modalCont .tabBtnWrap {
   justify-content: center;
@@ -3014,6 +3016,7 @@ footer.toast button + button {
   align-items: center;
 }
 .tableTop.right {
+  gap: 5px;
   justify-content: flex-end;
 }
 .tableTop.center {
@@ -3201,7 +3204,7 @@ table tr td.nodata {
   height: 13.75rem;
   font-weight: 500;
   background: transparent;
-  text-align: center;
+  text-align: center !important;
 }
 table tr td.center {
   text-align: center;
@@ -4306,7 +4309,7 @@ span.button {
   font-weight: 400;
   text-align: center;
   padding: 0 0.375rem;
-  background: #dddddd;
+  background: #d3d3d3;
   border-radius: 1.25rem;
   border: 0;
 }
@@ -7078,9 +7081,6 @@ table.tree {
 .tree.icoType tr.depth8 .rootCont {
   margin-left: 11.5625rem;
 }
-.tree.icoType tr.noDepth td, .tree.icoType tr.noDepth span {
-  cursor: not-allowed;
-}
 .tree.icoType tr.noDepth .treegrid-expander::after {
   display: inline-block !important;
   background-position: -80px -200px;
@@ -7464,6 +7464,11 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 1.0625rem;
   height: 1.0625rem;
   background-position: -240px -380px;
+}
+.ico.my_w {
+  width: 1.1875rem;
+  height: 1.1875rem;
+  background-position: -280px -380px;
 }
 .ico.reduce {
   width: 1.125rem;
