@@ -273,12 +273,20 @@
         .suffix{
             ul{
                 display: flex;
-                gap: rem(30);
+                justify-content: space-between;
+                gap: rem(10);
+                width: rem(580);
                 color: $black;
+                li{
+                    flex: 1;
+                }
             }
             .label{
-                margin-right: rem(10);
+                margin-right: rem(5);
                 vertical-align: text-top;
+            }
+            .onlyIco{
+                margin-left: rem(10);
             }
         }
     }
