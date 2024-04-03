@@ -3243,6 +3243,21 @@ table tfoot td {
   background: #f2f2f7;
   border-bottom: 0;
 }
+table tfoot.hasInput td {
+  padding: 10px 5px;
+}
+table tfoot.hasInput td:last-child button {
+  margin-left: 4px;
+  width: 60px;
+  height: 32px;
+  line-height: 2rem;
+}
+table tfoot.hasInput .inputIco {
+  width: 100%;
+}
+table tfoot.hasInput input {
+  background: #fff;
+}
 table.noBd {
   text-align: left;
 }
@@ -10843,6 +10858,7 @@ table input::placeholder, table input[type=text]::placeholder, table textarea::p
 }
 table input[type=checkbox] + label,
 table input[type=radio] + label {
+  margin-right: 0.625rem;
   font-size: 0.8125rem;
 }
 table a {
@@ -11185,6 +11201,126 @@ table a {
   width: 100%;
   padding: 0.125rem;
   background: #fff;
+}
+
+.eleContract .boxWrap,
+.eleContAgree .boxWrap {
+  margin-top: 0.625rem;
+}
+.eleContract .underBg,
+.eleContAgree .underBg {
+  margin-top: 2.5rem;
+}
+.eleContract .cont,
+.eleContAgree .cont {
+  height: calc(100vh - 370px);
+  overflow-y: auto;
+}
+.eleContract .tableBox,
+.eleContAgree .tableBox {
+  overflow: visible;
+}
+.eleContract .tableBox .tooltip,
+.eleContAgree .tableBox .tooltip {
+  width: 13.75rem;
+  text-align: left;
+}
+.eleContract table tr:hover,
+.eleContAgree table tr:hover {
+  background: transparent;
+}
+.eleContract table tr.is-active,
+.eleContAgree table tr.is-active {
+  background: #eaf0f8;
+}
+.eleContract table tr.is-active:hover,
+.eleContAgree table tr.is-active:hover {
+  background: #eaf0f8;
+}
+.eleContract table tr.is-active .datepicker,
+.eleContract table tr.is-active input,
+.eleContract table tr.is-active select,
+.eleContAgree table tr.is-active .datepicker,
+.eleContAgree table tr.is-active input,
+.eleContAgree table tr.is-active select {
+  background-color: #fff;
+}
+.eleContract table tr.is-active .datepicker input,
+.eleContract table tr.is-active input input,
+.eleContract table tr.is-active select input,
+.eleContAgree table tr.is-active .datepicker input,
+.eleContAgree table tr.is-active input input,
+.eleContAgree table tr.is-active select input {
+  background: transparent;
+}
+.eleContract table th,
+.eleContAgree table th {
+  text-align: center;
+  color: #fff;
+  background: #8c98a6;
+}
+.eleContract table td,
+.eleContAgree table td {
+  padding: 4px 8px;
+  border-top: 1px solid #dddddd;
+}
+.eleContract table.rowType tr:last-child,
+.eleContAgree table.rowType tr:last-child {
+  border-bottom: 1px solid #dddddd;
+}
+.eleContract table tfoot,
+.eleContAgree table tfoot {
+  font-weight: bold;
+}
+.eleContract table .flex,
+.eleContAgree table .flex {
+  gap: 5px;
+}
+.eleContract table .flex li,
+.eleContAgree table .flex li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+}
+.eleContract table .flex .bdType,
+.eleContAgree table .flex .bdType {
+  margin-left: 2.5rem;
+  width: 3.125rem;
+  line-height: 1.75rem;
+}
+.eleContract table select,
+.eleContract table input[type=text],
+.eleContAgree table select,
+.eleContAgree table input[type=text] {
+  flex: 1;
+  line-height: 1.75rem;
+  height: 2rem;
+}
+.eleContract table select.smSize,
+.eleContAgree table select.smSize {
+  flex: initial;
+  width: 8.4375rem;
+}
+.eleContract table button,
+.eleContAgree table button {
+  line-height: 1.75rem;
+}
+.eleContract table button.round,
+.eleContAgree table button.round {
+  line-height: 1.125rem;
+}
+.eleContract .contractBox,
+.eleContAgree .contractBox {
+  margin-top: 1.25rem;
+  padding: 1.25rem 9.375rem;
+  text-align: center;
+  border: 1px solid #dddddd;
+}
+.eleContract .contractBox .flex,
+.eleContAgree .contractBox .flex {
+  margin-top: 1.25rem;
+  justify-content: space-between;
 }
 
 .projMonthly td,
@@ -11969,7 +12105,7 @@ table a {
 }
 
 .adminTemp {
-  min-width: calc(100vw - 52px);
+  width: 100%;
 }
 .adminTemp label {
   margin-bottom: 0;
