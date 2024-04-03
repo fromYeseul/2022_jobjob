@@ -270,6 +270,26 @@ table{
             background: $bgColor;
             border-bottom: 0;
         }
+        //거래처 담당자
+        &.hasInput{
+            td{
+                padding: 10px 5px;
+                &:last-child{
+                    button{
+                        margin-left: 4px;
+                        width: 60px;
+                        height: 32px;
+                        line-height: rem(32);
+                    }
+                }
+            }
+            .inputIco{
+                width: 100%;
+            }
+            input{
+                background: $white;
+            }
+        }
     }
     &.noBd{
         text-align: left;

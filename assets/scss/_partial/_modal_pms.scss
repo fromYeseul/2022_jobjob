@@ -340,6 +340,111 @@
     }
 }
 
+//전자계약
+//전자계약합의서
+.eleContract,
+.eleContAgree{
+    .boxWrap{
+        margin-top: rem(10);
+    }
+    .underBg{
+        margin-top: rem(40);
+    }
+    .cont{        
+        height: calc(100vh - 370px);
+        overflow-y: auto;
+    }
+    .tableBox{
+        overflow: visible;
+        .tooltip{
+            width: rem(220);
+            text-align: left;
+        }
+    }
+    table{
+        tr{
+            &:hover{
+                background: transparent;
+            }
+            &.is-active{
+                background: $trClk_pms;
+                &:hover{
+                    background: $trClk_pms;
+                } 
+                .datepicker,
+                input,
+                select{
+                    background-color: $white;
+                    input{
+                        background: transparent;
+                    }
+                }
+            }
+        }
+        th{
+            text-align: center;
+            color: $white;
+            background: $gnbGray;   
+        }
+        td{
+            padding: 4px 8px;
+            border-top: 1px solid $tableBorder;
+        }
+        &.rowType{
+            tr{
+                &:last-child{
+                    border-bottom: 1px solid $tableBorder;
+                }
+            }
+        }
+        tfoot{
+            font-weight: bold;
+        }
+        .flex{
+            gap: 5px;
+            li{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 50%;
+            }
+            .bdType{
+                margin-left: rem(40);
+                width: rem(50);
+                line-height: rem(28);
+            }
+        }
+        select,
+        input[type=text]{
+            flex: 1;
+            line-height: rem(28);
+            height: rem(32);
+        }
+        select{
+            &.smSize{
+                flex: initial;
+                width: rem(135);
+            }
+        }
+        button{
+            line-height: rem(28);
+            &.round{
+                line-height: rem(18);
+            }
+        }
+    }
+    .contractBox{
+        margin-top: rem(20);
+        padding: rem(20) rem(150);
+        text-align: center;
+        border: 1px solid $tableBorder;
+        .flex{
+            margin-top: rem(20);
+            justify-content: space-between;
+        }
+    }
+}
+
 
 //----------------매출매입집계
 //프로젝트별 매출집계 - 월별 매입/매출 
