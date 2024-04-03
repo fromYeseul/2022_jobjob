@@ -11216,12 +11216,21 @@ table a {
   height: calc(100vh - 370px);
   overflow-y: auto;
 }
+.eleContract .tableTop .prefix,
+.eleContAgree .tableTop .prefix {
+  align-items: flex-end;
+}
+.eleContract .tableTop .tooltip.bottom,
+.eleContAgree .tableTop .tooltip.bottom {
+  width: 11.875rem;
+  text-align: left;
+}
 .eleContract .tableBox,
 .eleContAgree .tableBox {
   overflow: visible;
 }
-.eleContract .tableBox .tooltip,
-.eleContAgree .tableBox .tooltip {
+.eleContract .tableBox .tooltip.bottom,
+.eleContAgree .tableBox .tooltip.bottom {
   width: 13.75rem;
   text-align: left;
 }
@@ -11264,6 +11273,10 @@ table a {
   padding: 4px 8px;
   border-top: 1px solid #dddddd;
 }
+.eleContract table td .yScroll,
+.eleContAgree table td .yScroll {
+  height: 3.75rem;
+}
 .eleContract table.rowType tr:last-child,
 .eleContAgree table.rowType tr:last-child {
   border-bottom: 1px solid #dddddd;
@@ -11275,6 +11288,7 @@ table a {
 .eleContract table .flex,
 .eleContAgree table .flex {
   gap: 5px;
+  align-items: center;
 }
 .eleContract table .flex li,
 .eleContAgree table .flex li {
@@ -11283,9 +11297,14 @@ table a {
   gap: 10px;
   width: 50%;
 }
+.eleContract table .flex li .prefix,
+.eleContAgree table .flex li .prefix {
+  display: flex;
+  gap: 5px;
+  flex: 1 1 0;
+}
 .eleContract table .flex .bdType,
 .eleContAgree table .flex .bdType {
-  margin-left: 2.5rem;
   width: 3.125rem;
   line-height: 1.75rem;
 }
@@ -11309,6 +11328,7 @@ table a {
 .eleContract table button.round,
 .eleContAgree table button.round {
   line-height: 1.125rem;
+  cursor: initial;
 }
 .eleContract .contractBox,
 .eleContAgree .contractBox {
