@@ -354,11 +354,24 @@
         height: calc(100vh - 370px);
         overflow-y: auto;
     }
+    .tableTop{
+        .prefix{
+            align-items: flex-end;
+        }
+        .tooltip{
+            &.bottom{
+                width: rem(190);
+                text-align: left;
+            }
+        }
+    }
     .tableBox{
         overflow: visible;
         .tooltip{
-            width: rem(220);
-            text-align: left;
+            &.bottom{
+                width: rem(220);
+                text-align: left;
+            }
         }
     }
     table{
@@ -389,6 +402,9 @@
         td{
             padding: 4px 8px;
             border-top: 1px solid $tableBorder;
+            .yScroll{
+                height: rem(60);
+            }
         }
         &.rowType{
             tr{
@@ -402,14 +418,19 @@
         }
         .flex{
             gap: 5px;
+            align-items: center;
             li{
                 display: flex;
                 align-items: center;
                 gap: 10px;
                 width: 50%;
+                .prefix{
+                    display: flex;
+                    gap: 5px;
+                    flex: 1 1 0;
+                }
             }
             .bdType{
-                margin-left: rem(40);
                 width: rem(50);
                 line-height: rem(28);
             }
@@ -430,6 +451,7 @@
             line-height: rem(28);
             &.round{
                 line-height: rem(18);
+                cursor: initial;
             }
         }
     }
