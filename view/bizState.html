@@ -984,8 +984,8 @@
             </div>
             <div class="modalCont eleContract">
                 <h2>전자계약</h2>
-                <div class="boxTop">전자계약번호 : P-A0000-A0000-A0000(23)</div><!--240415 수정-->
                 <div class="boxWrap titType">
+                    <!--240415 수정-->
                     <div class="head">
                         <div class="prefix">                           
                             <h3>
@@ -996,6 +996,7 @@
                             <button class="white">변경계약이력</button>
                         </div>
                     </div>
+                    <!--//240415 수정-->
                     <div class="cont">
                         
                         <!-- <img src="../assets/img/test.jpg" alt=""> -->
@@ -1151,11 +1152,11 @@
                                         </td>
                                         <!--//수기계약일때만 있음-->
 
-                                        <!--공급계약일때만 있음-->
-                                        <th>
+                                        
+                                        <th><!--240415 수정-->
                                             계약유형
                                             <span class="hasTooltip">
-                                                <i class="ico qMark2"></i>
+                                                <i class="ico qMark_w"></i>
                                                 <div class="tooltip bottom">                                                                                                                                                   
                                                     <div class="yScroll">
                                                         공급일 때 선택가능
@@ -1163,13 +1164,15 @@
                                                 </div>
                                             </span>
                                         </th>
+                                        <!--공급계약이 아닐때 disabled-->
                                         <td class="disabled">
-                                            <input type="radio" id="a11" name="c11" class="hasTxt" disabled>
+                                            <input type="radio" id="a11" name="c11" class="hasTxt" disabled><!--공급계약이 아닐때 disabled-->
                                             <label for="a11">주문서</label>
-                                            <input type="radio" id="l11" name="c11" class="hasTxt" disabled>
+                                            <input type="radio" id="l11" name="c11" class="hasTxt" disabled><!--공급계약이 아닐때 disabled-->
                                             <label for="l11">발주서</label>
                                         </td>
-                                        <!--//공급계약일때만 있음-->
+                                        <!--//공급계약 아닐때 disabled-->
+
                                         <th>소싱담당</th>
                                         <td>
                                             <select name="" id="">
@@ -1213,7 +1216,8 @@
                                         </td>
                                     </tr>
                                     <tr class="is-active">
-                                        <th>변경 후 / 계약기간</th>
+                                        <th>
+                                            <span class="need">변경 후 / 계약기간</span></th>
                                         <td>
                                             <div class="flex">
                                                 <div class="datepicker">
@@ -1233,7 +1237,7 @@
                                             <span>원</span>
                                         </td>
                                         <th>
-                                            계약금액<br>
+                                            <span class="need">계약금액</span><br>
 
                                             <input type="checkbox" id="ab1" name="aab" class="hasTxt">
                                             (<label for="ab1">VAT 포함)</label>
@@ -1297,8 +1301,9 @@
                                         </td>
                                     </tr>  
                                     
-                                    <!--수기계약에서 없음-->
+                                    
                                     <tr>
+                                        <!--수기계약에서 없음-->
                                         <th>발송상태</th>
                                         <td colspan="3">
                                             <ul class="flex">
@@ -1326,8 +1331,10 @@
                                         </td>
                                         <th>발송자</th>
                                         <td>R&D Lab 김재윤</td>
-                                    </tr>              
-                                    <!--//수기계약에서 없음-->                
+                                        <!--//수기계약에서 없음-->    
+                                        <th>전자발송번호</th>
+                                        <td>P-A0000-A0000-A0000(23)</td>
+                                    </tr>                          
                                 </tbody>
                             </table>
                         </div>        
@@ -1650,6 +1657,7 @@
     </div>
     <!--//전자계약합의서-->
 
+    <!--240415 추가 계약id 입력-->
     <div class="modalLayer center is-active">
         <div class="layerBox smMidSize">
             <div class="modalHeader">
@@ -1660,7 +1668,10 @@
                 서명 완료된 계약서를 다운로드 할 수 있습니다.
 
                 <li class="hasBtn">
-                    <input type="text" maxlength="50" placeholder="">
+                    <div class="inputIco">
+                        <input type="text" value="123436">
+                        <button class="txtType" type="button"><i class="ico delete_bg"></i></button>
+                    </div>
                     <button>적용</button>
                 </li>
             </div>
@@ -1670,6 +1681,7 @@
         </div>
         <div class="layerDim"></div> 
     </div>
+    <!--//계약id 입력-->
 
     <!--변경계약이력-->
     <div id="" class="modalLayer center is-active">
