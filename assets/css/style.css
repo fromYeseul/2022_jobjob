@@ -5841,7 +5841,6 @@ input[type=radio]:checked:disabled + label::before {
 }
 input[type=radio]:disabled + label {
   color: #cccccc;
-  background: #f8f8f8;
   cursor: not-allowed;
 }
 input[type=radio]:disabled + label::before {
@@ -7419,6 +7418,7 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   height: 0.75rem;
   vertical-align: -1px;
   background-position: -220px -360px;
+  margin-left: 2px;
 }
 .ico.advice {
   width: 1.25rem;
@@ -7535,6 +7535,12 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 1.125rem;
   height: 1.125rem;
   background-position: -240px -300px;
+  margin-left: 2px;
+}
+.ico.qMark_w {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -280px -300px;
   margin-left: 2px;
 }
 .ico.top {
@@ -11653,6 +11659,7 @@ h6 + .h6_sub {
 .datepicker {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0.5rem 0.25rem;
   height: 2.75rem;
   background: #fff;
