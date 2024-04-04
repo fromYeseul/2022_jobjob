@@ -984,13 +984,17 @@
             </div>
             <div class="modalCont eleContract">
                 <h2>전자계약</h2>
-                <div class="boxTop">
-                    <button class="bdType smSize">대금일정 생성</button>
-                </div>
+                <div class="boxTop">전자계약번호 : P-A0000-A0000-A0000(23)</div><!--240415 수정-->
                 <div class="boxWrap titType">
                     <div class="head">
-                        <h3><span class="label">종료</span>[종료] 대기업 B2B 주문 프로세스 개선 기획자 모집대기업 B2B 주문 프로세스 개선 기획자 모집대기업 B2B 주문 프로세스 개선 기획자 모집</h3>
-                        <button class="white">변경계약이력</button>
+                        <div class="prefix">                           
+                            <h3>
+                                <div class="h3_sub">P-A0000-A0000-A0000(23)</div>
+                                대기업 B2B 주문 프로세스 개선 기획자 모집대기업 B2B 주문 프로세스 개선 기획자
+                                모집대기업 B2B 주문 프로세스 개선 기획자 모집
+                            </h3>
+                            <button class="white">변경계약이력</button>
+                        </div>
                     </div>
                     <div class="cont">
                         
@@ -998,10 +1002,10 @@
 
                         <!--거래처-->
                         <div class="tableTop">
-                            <h5 class="underBg mt0">거래처</h5>
+                            <h5 class="underBg">거래처</h5>
                             <div class="suffix">
                                 <input type="checkbox" id="t5" name="aa" class="hasTxt">
-                                <label for="t5">대행여부</label>
+                                <label for="t5">대행</label>
                             </div>
                         </div>
                         <div class="tableBox">
@@ -1010,14 +1014,17 @@
                                     <col width="10%">
                                     <col width="40%">
                                     <col width="10%">
-                                    <col width="13%">
+                                    <col width="15%"><!--240415 수정-->
                                     <col width="10%">
                                     <col>
                                 </colgroup>
                                 <tbody>
                                     <tr>
                                         <th>계약처</th>
-                                        <td>CJ프레시웨이 (법인사업자)</td>
+                                        <td>
+                                            <span class="turnkey">턴</span><!--240415 수정-->
+                                            CJ프레시웨이 (법인사업자)
+                                        </td>
                                         <th>과세종류</th>
                                         <td colspan="3">일반과세</td>
                                     </tr>
@@ -1042,10 +1049,8 @@
                                     <i class="ico exMark_round"></i>
                                     <div class="tooltip bottom">                                                                                                                                                   
                                         <div class="yScroll">
-                                            <p>특수형태근로종사자 제외대상</p>
-                                            개인사업자 대표자명과 실투입자 이름이 다른 경우
-                                            특수형태근로종사자에서 제외됩니다.<br>
-                                            (고용/산재보험료 미공제)
+                                            <p>실제투입인력과 다름</p>
+                                            실제투입인력과 다름
                                         </div>
                                     </div>
                                 </span>
@@ -1056,7 +1061,8 @@
                                 <colgroup>
                                     <col span="4">
                                     <col width="20%">
-                                    <col spab="3">
+                                    <col>
+                                    <col width="15%" span="2">
                                 </colgroup>
                                 <thead>
                                     <tr>
@@ -1091,8 +1097,8 @@
                                         <td>고급</td>
                                         <td>2024.03.01 ~ 2024.04.30</td>
                                         <td>1.43</td>
-                                        <td>7,000,000원</td>
-                                        <td>10,000,000원</td>
+                                        <td class="txtRight">17,000,000원</td>
+                                        <td class="txtRight">10,000,000원</td>
                                     </tr>
                                     <tr class="is-active">
                                         <td>변경 후</td><!--변경계약일때만 내용있음-->
@@ -1101,8 +1107,8 @@
                                         <td>고급</td>
                                         <td>2024.03.01 ~ 2024.04.30</td>
                                         <td>1.43</td>
-                                        <td>7,000,000원</td>
-                                        <td>10,000,000원</td>
+                                        <td class="txtRight">7,000,000원</td>
+                                        <td class="txtRight">10,000,000원</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1121,7 +1127,7 @@
                                     <col width="10%">
                                     <col width="20%">
                                     <col width="10%" span="3">
-                                    <col width="13%">
+                                    <col width="15%"><!--240415 수정-->
                                     <col width="10%">
                                     <col>
                                 </colgroup>
@@ -1147,16 +1153,25 @@
 
                                         <!--공급계약일때만 있음-->
                                         <th>계약유형</th>
-                                        <td colspan="3">
+                                        <td class="disabled">
                                             <input type="radio" id="a11" name="c11" class="hasTxt">
-                                            <label for="a11">계약유형1</label>
+                                            <label for="a11">주문서</label>
                                             <input type="radio" id="l11" name="c11" class="hasTxt">
-                                            <label for="l11">계약유형2</label>
+                                            <label for="l11">발주서</label>
                                         </td>
                                         <!--//공급계약일때만 있음-->
+                                        <th>소싱담당</th>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">홍길동</option>
+                                                <option value="">김길동</option>
+                                            </select>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <th><span class="need">변경 전 / 계약기간</span></th>
+                                        <th>
+                                            <span class="need">변경 전 / 계약기간</span><!--240415 수정-->
+                                        </th>
                                         <td>
                                             <div class="flex">
                                                 <div class="datepicker">
@@ -1176,7 +1191,8 @@
                                             <span>원</span>
                                         </td>
                                         <th>
-                                            계약금액<br>
+                                            <span class="need">계약금액</span>
+                                            <br>
 
                                             <input type="checkbox" id="aa1" name="aaa" class="hasTxt">
                                             (<label for="aa1">VAT 포함)</label>
@@ -1243,21 +1259,38 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th rowspan="2">첨부파일</th>
-                                        <td colspan="3" rowspan="2">
-                                            <div class="yScroll">
-                                                <ul>
-                                                    <li>파일1.jpg</li>
-                                                    <li>파일2.jpg</li>
-                                                    <li>파일3.jpg</li>
-                                                    <li>파일1.jpg</li>
-                                                    <li>파일2.jpg</li>
-                                                </ul>
+                                        <th>첨부파일</th>
+                                        <td colspan="3">
+                                            <div class="uploadBox">
+                                                <div class="inputGroup upload">
+                                                    <div class="drop">
+                                                        <i class="ico fileUpload"></i>
+                                                        <label for="fileUpload">
+                                                            파일을 첨부해주세요.<br>
+                                                            (파일 최대 5개, 100MB 이하)                                                      
+                                                        </label>
+                                                    </div>
+                                                    <div class="list">
+                                                        <ul class="list_ul">
+                                                            <li>
+                                                                <span class="fileName">test.JPG</span>
+                                                                <span class="volume">45 KB</span>
+                                                                <i class="ico delete_bg"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                                <label for="c2" class="">직접선택</label>
+                                                <input type="file" name="c2" id="c2" class="" tabindex="">
                                             </div>
                                         </td>
-                                        <!--수기계약에서 없음-->
+                                    </tr>  
+                                    
+                                    <!--수기계약에서 없음-->
+                                    <tr>
                                         <th>발송상태</th>
-                                        <td colspan="3">     
+                                        <td colspan="3">
                                             <ul class="flex">
                                                 <li>
                                                     <div class="prefix">
@@ -1281,23 +1314,21 @@
                                                 </li>
                                             </ul>
                                         </td>
-                                        <!--//수기계약에서 없음-->
-                                    </tr>
-                                    
-                                    <!--수기계약에서 없음-->
-                                    <tr>
                                         <th>발송자</th>
                                         <td>R&D Lab 김재윤</td>
-                                    </tr>
-                                    <!--//수기계약에서 없음-->                                    
+                                    </tr>              
+                                    <!--//수기계약에서 없음-->                
                                 </tbody>
                             </table>
                         </div>        
 
                         <!--대금일정-->
                         <div class="tableTop">
-                            <h5 class="underBg">대금일정</h5>
-                            <div class="suffix">
+                            <div class="prefix">
+                                <h5 class="underBg">대금일정</h5>
+                                <button class="bdType smSize">대금일정 생성</button>
+                            </div>
+                            <div class="suffix">                               
                                 <button class="white smSize">지급스케줄 수정</button>
                             </div>
                         </div>
@@ -1345,6 +1376,9 @@
                                         <td class="right">3,000,000 원</td>
                                         <td><input type="text" placeholder="직접 입력"></td>
                                     </tr>
+                                    <tr>
+                                        <td colspan="6" class="nodata">저장 후 생성됩니다.</td>
+                                    </tr>
                                 </tbody>
                                 <tfoot>
                                     <tr>
@@ -1364,6 +1398,91 @@
                                 <li>전자계약의 대금일정은 4개 행을 초과할 수 없으며 수기계약만 진행할 수 있습니다.<br>
                                     (본 화면에서 수기계약으로 처리 후 계약서를 다운로드 받아 글로싸인에서 진행해 주시기 바랍니다.)</li>
                             </ul>
+                        </div>
+
+                        <div class="tableTop">
+                            <h5 class="underBg">메모</h5>
+                        </div>
+                        
+                        <div class="commentBox">
+                            <div class="commentInput">
+                                <span class="writer self">한아라(나)</span>
+                                <div class="comment">
+                                    <textarea name="" id="" rows="2"></textarea>
+                                </div>
+                                <button class="midSize">입력</button>
+                            </div>
+                            <div class="commentList">
+                                <ul>
+                                    <li>
+                                        <span class="writer self">
+                                            <span class="ellipsis">한아라한아라(나)</span>
+                                        </span>
+                                        <div class="comment">
+                                            <textarea name="" id="" rows="2"></textarea>
+                                        </div>
+                                        
+                                        <div class="rightBtn">
+                                            <button class="round save">저장</button>
+                                            <button class="round off">취소</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="writer self">
+                                            <span class="ellipsis">한아라(나)</span>
+                                        </span>
+                                        <div class="comment">
+                                            <div class="content">
+                                                동해물과 백두산이 마르고 닳도록 하느님이 보우하사 동해물과 백두산이 마르고 닳도록 마르고 보우하사 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                동해물과 백두산이 마르고 닳도록 하느님이 보우하사 동해물과 백두산이 마르고 닳도록 마르고 보우하사 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                            </div>
+                                            <div class="rightBtn"><!--내 메모만 보임-->
+                                                <button class="txtType">
+                                                    <i class="ico edit"></i>
+                                                </button>
+                                                <button class="txtType">
+                                                    <i class="ico gray_bin_sm"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <span class="date">2024.01.12 02:37:03 PM</span>
+                                    </li>
+                                    <li>
+                                        <span class="writer">
+                                            <span class="ellipsis">홍길동</span>
+                                        </span>
+                                        <div class="comment">
+                                            <div class="content">
+                                                동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                            </div>
+                                            
+                                        </div>
+                                        <span class="date">2024.01.12 02:37:03 PM</span>
+                                    </li>
+                                    <li>
+                                        <span class="writer">
+                                            <span class="ellipsis">홍길동</span>
+                                        </span>
+                                        <div class="comment">
+                                            <div class="content">
+                                            동해물과 백두산이 마르고 
+                                            </div>
+                                            <div class="rightBtn">
+                                                <button class="txtType">
+                                                    <i class="ico edit"></i>
+                                                </button>
+                                                <button class="txtType">
+                                                    <i class="ico gray_bin_sm"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <span class="date">2024.01.12 02:37:03 PM</span>
+                                    </li>
+                                </ul>
+                                <button class="txtType"><!--열림상태일때 is-active-->
+                                    <i class="ico expand"></i>더보기
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1395,13 +1514,16 @@
                             <table class="rowType">
                                 <colgroup>
                                     <col width="20%">
-                                    <col>
+                                    <col width="60%"><!--240415 수정-->
                                     <col>
                                 </colgroup>
                                 <tbody>
                                     <tr>
                                         <th>1. 계약명</th>
-                                        <td>CJ프레시웨이 온리원푸드넷 모바일 UI/UX 및 주문프로세스 개선</td>
+                                        <td>
+                                            <!--240415 수정-->
+                                            <a href="#">CJ프레시웨이 온리원푸드넷 모바일 UI/UX 및 주문프로세스 개선CJ프레시웨이 온리원푸드넷 모바일 UI/UX 및 주문프로세스 개선</a>
+                                        </td>
                                         <td><input type="text" placeholder="부재(최대 5자)"></td>
                                     </tr>
                                     <tr>
@@ -1518,6 +1640,26 @@
     </div>
     <!--//전자계약합의서-->
 
+    <div class="modalLayer center is-active">
+        <div class="layerBox smMidSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+            <div class="modalCont contractId">
+                계약이 완료되었다면 글로싸인 계약 ID를 입력해주세요.<br>
+                서명 완료된 계약서를 다운로드 할 수 있습니다.
+
+                <li class="hasBtn">
+                    <input type="text" maxlength="50" placeholder="">
+                    <button>적용</button>
+                </li>
+            </div>
+            <div class="modalFooter single">
+                <button class="white">닫기</button>
+            </div>
+        </div>
+        <div class="layerDim"></div> 
+    </div>
 
     <!--변경계약이력-->
     <div id="" class="modalLayer center is-active">

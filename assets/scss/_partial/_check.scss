@@ -487,12 +487,22 @@ input[type=radio]{
                 background-position: -20px -140px;
             }
         }
+        &:disabled{
+            + label{
+                &::before{
+                    background-position: -20px -160px;
+                }
+            }
+        }  
     }  
     &:disabled{
         + label{
-                color: $inputGray;
-                background:$inputDisable;
-                cursor: not-allowed;
+            color: $inputGray;
+            background:$inputDisable;
+            cursor: not-allowed;
+            &::before{
+                background-position: 0 -160px;
+            }
         }
     } 
 }

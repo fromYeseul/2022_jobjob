@@ -214,13 +214,27 @@
             // padding: rem(20) rem(25);
             padding: rem(15) rem(25);
             background: $boxTitBg;
+            .prefix{
+                display: flex;
+                align-items: flex-end;
+                button{
+                    margin-left: 5px;
+                    min-width: rem(90);
+                    line-height: rem(26);
+                }
+            }
             h3{
                 margin-bottom: 0;
                 font-size: rem(18);
                 @include ellipsis;
             }
+            .h3_sub{
+                text-align: left;
+                font-size: rem(12);
+                font-weight: normal;
+            }
             .label{
-                margin-right: 15px;
+                margin-right: rem(15);
                 vertical-align: middle;
             }
             button{

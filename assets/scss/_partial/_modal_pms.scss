@@ -347,16 +347,14 @@
     .boxWrap{
         margin-top: rem(10);
     }
-    .underBg{
-        margin-top: rem(40);
-    }
     .cont{        
         height: calc(100vh - 370px);
         overflow-y: auto;
     }
     .tableTop{
-        .prefix{
-            align-items: flex-end;
+        margin-top: rem(40);
+        &:first-child{
+            margin-top: 0;
         }
         .tooltip{
             &.bottom{
@@ -398,12 +396,25 @@
             text-align: center;
             color: $white;
             background: $gnbGray;   
+            .need{
+                position: relative;
+                &::after{
+                    content:'*';
+                    margin-left: rem(4);
+                }
+            }
         }
         td{
             padding: 4px 8px;
             border-top: 1px solid $tableBorder;
             .yScroll{
                 height: rem(60);
+            }
+            a{
+                cursor: initial;
+            }
+            &.nodata{
+                height: rem(100);
             }
         }
         &.rowType{
@@ -453,6 +464,21 @@
                 line-height: rem(18);
                 cursor: initial;
             }
+        }
+    }
+    .inputGroup{
+        min-width: auto;
+        padding: 10px 10px 10px 20px;
+        .list{
+            .list_ul{
+                max-height: rem(80);
+            }
+        }
+        & + label{
+            min-width: rem(78);
+            padding: 0 rem(6);
+            line-height: rem(28);
+            font-size: rem(14);
         }
     }
     .contractBox{
@@ -558,7 +584,18 @@
     }
 }
 
-
+.contractId{
+    margin-bottom: rem(70);
+    padding: 0 rem(30);
+    text-align: center;
+    .hasBtn{
+        margin-top: rem(30);
+        button{
+            padding: 0 rem(20);
+            width: auto;
+        }
+    }
+}
 
 
 //변경계약이력
