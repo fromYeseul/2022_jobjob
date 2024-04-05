@@ -10,62 +10,108 @@
         //     opacity: .2;
         // }
     }
-    //공통
-    &.search{
+    
+    //+,-
+    &.minus{
+        width: rem(18);
+        height: rem(2);
+        background-position: -120px -100px;
+    }
+    &.plus{
         width: rem(18);
         height: rem(18);
-        background-position: -320px 300px;
-        &.white{
-            background-position: -340px -300px;
+        background-position: -140px -100px;
+    }
+    &.smMinus,
+    &.removeLine{
+        width: rem(12);
+        height: rem(2);
+        background-position: -120px -120px;
+    }
+    &.smPlus,
+    &.addLine{
+        width: rem(12);
+        height: rem(12);
+        background-position: -140px -120px;
+    }
+    &.reduce{
+        width: rem(18);
+        height: rem(18);
+        background-position: -120px -160px;
+        cursor: pointer;
+    }
+    &.extend{
+        width: rem(18);
+        height: rem(18);
+        background-position: -140px -160px;
+        cursor: pointer;
+        &.is-active{
+            background-position: -120px -160px;
         }
-    }   
-    &.excDown{
-        width: rem(18);
-        height: rem(18);
-        background-position: -40px -340px;
-        vertical-align: -3px;
-        margin-right: 4px;
     }
-    &.download{        
-        width: rem(18);
-        height: rem(18);
-        background-position: 0 -340px;
-        cursor: pointer;
+
+    //화살표
+    &.top{
+        width: rem(34);
+        height: rem(34);
+        background-position: 0px 0px;
     }
-    &.filter{
-        width: rem(18);
-        height: rem(18);
-        background-position: -80px -340px;
+    &.down{
+        width: rem(13);
+        height: rem(9);
+        background-position: -80px -140px;
     }
-    &.map{
-        width: rem(20);
-        height: rem(18);
-        background-position: -80px -360px;
+    &.up{
+        width: rem(13);
+        height: rem(9);
+        background-position: -100px -140px;
     }
-    &.file{
+    &.arrow{
         width: rem(16);
+        height: rem(10);
+        background-position: -80px -120px;
+    }
+    &.expand{
+        width: rem(12);
+        height: rem(6);
+        background: url(../img/icoSelect.png) no-repeat;
+    }
+    &.sel_g{
+        width: rem(15);
+        height: rem(6);
+        background: url(../img/icoSelect_g.png) no-repeat;
+    }
+    &.goLt{
+        width: rem(9);
+        height: rem(16);
+        background-position: -40px -180px;
+    }
+    &.goRgt{
+        width: rem(9);
+        height: rem(16);
+        background-position: -60px -180px;
+    }
+
+    //닫기
+    &.smClose{
+        width: rem(12);
+        height: rem(12);    
+        vertical-align: -1px;
+        background-position: -80px -300px;
+        cursor: pointer;
+        &.w,
+        &.white{
+            background-position: -100px -300px;
+        }
+    }
+    &.layerClose{
+        width: rem(18);
         height: rem(18);
-        background-position: -80px -380px;
-        cursor: pointer;
+        background-position: 0 -300px;
     }
-    &.addfile{
-        width: rem(8);
-        height: rem(15);
-        background-position: -100px -380px;
-        cursor: pointer;
-    }
-    &.addfile_g{
-        width: rem(8);
-        height: rem(15);
-        background-position: -120px -380px;
-        cursor: pointer;
-        vertical-align: -2px;
-    }
-    &.fileUpload{
-        width: rem(20);
-        height: rem(20);
-        background-position: -40px -360px;
-    }
+
+    //삭제
+
     &.delete{
         width: rem(13);
         height: rem(12);
@@ -109,70 +155,8 @@
         background-position: -160px -420px;
         cursor:pointer;
     }
-    &.refresh{
-        width: rem(19);
-        height: rem(16);
-        background-position: -320px -320px;
-    }
-    &.refresh_g{
-        width: rem(19);
-        height: rem(16);
-        background-position: -340px -320px;
-    }
-    &.setting{
-        width: rem(18);
-        height: rem(18);
-        vertical-align: sub;
-        background-position: -80px -320px;
-        cursor:pointer;
-    }
-    &.setting_sm{
-        width: rem(12);
-        height: rem(12);
-        background-position: -100px -320px;
-        vertical-align: -1px;
-        cursor:pointer;        
-        &.is-active{
-            background-position: -120px -320px;
-        }
-    }
-    &.sort{
-        width: rem(18);
-        height: rem(3);
-        background-position: -20px -320px;
-    }
-    &.change{
-        width: rem(17);
-        height: rem(17);
-        background-position: -160px -380px;
-        cursor: pointer;
-    }
-    &.resume{
-        width: rem(16);
-        height: rem(17);
-        background-position: -20px -380px;
-    }
-    &.resume_b{
-        width: rem(16);
-        height: rem(17);
-        background-position: 0 -380px;
-        cursor: pointer;
-    }
-    &.manager{
-        width: rem(15);
-        height: rem(18);
-        background-position: -40px -380px;
-    }
-    // &.phNm{
-    //     width: rem(16);
-    //     height: rem(16);
-    //     background-position: -60px -100px;
-    // }
-    // &.mail{
-    //     width: rem(16);
-    //     height: rem(16);
-    //     background-position: -80px -100px;
-    // }
+
+    //잠금
     &.lock{
         width: rem(11);
         height: rem(14);
@@ -202,21 +186,215 @@
         margin-right: 5px; //0913 J추가 
         background-position: -300px -340px;
     }
-    &.letter{
+
+    //?, !    
+    &.qMark,
+    &.qMark2{
         width: rem(18);
-        height: rem(14);
-        background-position: -360px -440px;
+        height: rem(18);
+        background-position: -240px -300px;
+        margin-left: 2px;
+    }
+    &.qMark_w{
+        width: rem(18);
+        height: rem(18);
+        background-position: -280px -300px;
+        margin-left: 2px;
+    }
+    &.exMark{
+        width: rem(3);
+        height: rem(15);
+        background-position: -200px -360px;
+    }
+    &.exMark_round{
+        width: rem(12);
+        height: rem(12);
+        vertical-align: -1px;
+        background-position: -220px -360px;
+        margin-left: 2px;
+    }
+    &.signal_sm{
+        width: rem(13);
+        height: rem(13);
+        background-position: -160px -360px;
+    }
+    &.signal_la{
+        width: rem(26);
+        height: rem(22);
+        background-position: -0 -40px;
+        vertical-align: -2px;
+    }
+
+    //파일
+    &.file{
+        width: rem(16);
+        height: rem(18);
+        background-position: -80px -380px;
+        cursor: pointer;
+    }
+    &.fileUpload{
+        width: rem(20);
+        height: rem(20);
+        background-position: -40px -360px;
+    }
+    &.addfile{
+        width: rem(8);
+        height: rem(15);
+        background-position: -100px -380px;
+        cursor: pointer;
+    }
+    &.addfile_g{
+        width: rem(8);
+        height: rem(15);
+        background-position: -120px -380px;
+        cursor: pointer;
+        vertical-align: -2px;
+    }
+
+    //다운로드/업로드 
+    &.download{        
+        width: rem(18);
+        height: rem(18);
+        background-position: 0 -340px;
+        cursor: pointer;
+    }
+    &.excDown{
+        width: rem(18);
+        height: rem(18);
+        background-position: -40px -340px;
+        vertical-align: -3px;
+        margin-right: 4px;
+    }
+    &.pull{
+        width: rem(18);
+        height: rem(18);
+        background-position: -80px -160px;
+    }
+    &.push{
+        width: rem(18);
+        height: rem(18);
+        background-position: -100px -160px;
+    }
+    &.out{
+        width: rem(16);
+        height: rem(16);
+        background-position: -160px -400px;
+        vertical-align: -2px;
+    }
+
+    //리스트, 폴더, 문서
+    &.list{
+        width: rem(18);
+        height: rem(12);
+        background-position: -160px -320px;
+    }
+    &.pageList{
+        width: rem(16);
+        height: rem(18);
+        background-position: -320px -360px;
+        cursor: pointer;
+    }
+    &.pageList_w{
+        width: rem(11);
+        height: rem(13);
+        background-position: -340px -360px;
+    }
+    &.folder{
+        width: rem(19);
+        height: rem(15);
+        background-position: 0px -420px;
+        vertical-align: -2px;
+    }
+    &.paper{
+        width: rem(15);
+        height: rem(18);
+        background-position: -80px -420px;
+    }
+    &.resume{
+        width: rem(16);
+        height: rem(17);
+        background-position: -20px -380px;
+    }
+    &.resume_b{
+        width: rem(16);
+        height: rem(17);
+        background-position: 0 -380px;
+        cursor: pointer;
+    }
+    &.manager{
+        width: rem(15);
+        height: rem(18);
+        background-position: -40px -380px;
+    }
+    &.memo{
+        width: rem(17);
+        height: rem(17);
+        background-position: -320px -380px;
+        vertical-align: -2px;
+    }
+    
+    //동기화
+    &.refresh{
+        width: rem(19);
+        height: rem(16);
+        background-position: -320px -320px;
+    }
+    &.refresh_g{
+        width: rem(19);
+        height: rem(16);
+        background-position: -340px -320px;
+    }
+    &.synch{
+        width: rem(17);
+        height: rem(16);
+        background-position: -240px -320px;
+    }
+
+    //수정, 저장
+    &.change{
+        width: rem(17);
+        height: rem(17);
+        background-position: -160px -380px;
+        cursor: pointer;
+    }
+    &.edit{
+        width: rem(12);
+        height: rem(12);
+        background-position: -180px -380px;
+        vertical-align: initial;
+        cursor: pointer;
+        &:hover{
+            background-position: -200px -380px;
+        }
     }
     &.save{
         width: rem(15);
         height: rem(15);
         background-position: 0 -360px;
     }
-    &.saveCont{
-        width: rem(19);
+
+    //더보기/추가
+    &.more{
+        width: rem(3); 
         height: rem(18);
-        background-position: -240px -400px;
+        background-position: -0 -320px;
     }
+    &.more2{
+        width: rem(15); 
+        height: rem(20);
+        background-position: -40px -320px;
+        // padding: 0; 11.01 수정
+        padding: 0 3px;
+        cursor: pointer;
+    }
+    //addLine
+    &.addLine_chked{     
+        width: rem(18);
+        height: rem(15);
+        background-position: -140px -140px;
+    }
+
+    //미리보기
     &.preview{
         width: rem(18);
         height: rem(16);
@@ -233,145 +411,76 @@
         height: rem(18);
         background-position: -360px -340px;
     }
-    &.edit{
-        width: rem(12);
-        height: rem(12);
-        background-position: -180px -380px;
-        vertical-align: initial;
-        cursor: pointer;
-        &:hover{
-            background-position: -200px -380px;
-        }
-    }
-    &.signal_sm{
-        width: rem(11);
-        height: rem(10);
-        background-position: -160px -360px;
-    }
-    // &.signal_mid{
-    //     width: rem(13);
-    //     height: rem(13);
-    //     background-position: -180px -220px;
-    // }
-    &.signal_la{
-        width: rem(26);
-        height: rem(22);
-        background-position: -0 -40px;
-        vertical-align: -2px;
-    }
-    &.out{
-        width: rem(16);
-        height: rem(16);
-        background-position: -160px -400px;
-        vertical-align: -2px;
+
+    //분류
+    &.sort{
+        width: rem(18);
+        height: rem(3);
+        background-position: -20px -320px;
     }
     &.split{
         width: rem(17);
         height: rem(14);
         background-position: -80px -400px;
     }
-    &.synch{
-        width: rem(17);
-        height: rem(16);
-        background-position: -240px -320px;
+
+    //설정관련
+    &.filter{
+        width: rem(18);
+        height: rem(18);
+        background-position: -80px -340px;
+    }
+    &.setting{
+        width: rem(18);
+        height: rem(18);
+        vertical-align: sub;
+        background-position: -80px -320px;
+        cursor:pointer;
+    }
+    &.setting_sm{
+        width: rem(12);
+        height: rem(12);
+        background-position: -100px -320px;
+        vertical-align: -1px;
+        cursor:pointer;        
+        &.is-active{
+            background-position: -120px -320px;
+        }
+    }
+
+    //etc
+    &.search{
+        width: rem(18);
+        height: rem(18);
+        background-position: -320px 300px;
+        &.white{
+            background-position: -340px -300px;
+        }
+    }  
+    &.map{
+        width: rem(20);
+        height: rem(18);
+        background-position: -80px -360px;
+    }
+    &.letter{
+        width: rem(18);
+        height: rem(14);
+        background-position: -360px -440px;
+    }
+    &.saveCont{
+        width: rem(19);
+        height: rem(18);
+        background-position: -240px -400px;
     }
     &.inside{
         width: rem(19);
         height: rem(18);
         background-position: -260px -380px;
     }
-    &.exMark{
-        width: rem(3);
-        height: rem(15);
-        background-position: -200px -360px;
-    }
-    &.exMark_round{
-        width: rem(12);
-        height: rem(12);
-        vertical-align: -1px;
-        background-position: -220px -360px;
-        margin-left: 2px;
-    }
     &.advice{
         width: rem(20);
         height: rem(18);
         background-position: -260px -300px;
-    }
-    &.folder{
-        width: rem(19);
-        height: rem(15);
-        background-position: 0px -420px;
-        vertical-align: -2px;
-    }
-    &.paper{
-        width: rem(15);
-        height: rem(18);
-        background-position: -80px -420px;
-    }
-
-
-
-
-
-
-
-
-
-    &.more{
-        width: rem(3); 
-        height: rem(18);
-        background-position: -0 -320px;
-    }
-    &.more2{
-        width: rem(15); 
-        height: rem(20);
-        background-position: -40px -320px;
-        // padding: 0; 11.01 수정
-        padding: 0 3px;
-        cursor: pointer;
-    }
-    &.smClose{
-        width: rem(12);
-        height: rem(12);    
-        vertical-align: -1px;
-        background-position: -80px -300px;
-        cursor: pointer;
-        &.w,
-        &.white{
-            background-position: -100px -300px;
-        }
-    }
-    &.layerClose{
-        width: rem(18);
-        height: rem(18);
-        background-position: 0 -300px;
-    }
-    &.minus{
-        width: rem(18);
-        height: rem(2);
-        background-position: -120px -100px;
-    }
-    &.plus{
-        width: rem(18);
-        height: rem(18);
-        background-position: -140px -100px;
-    }
-    &.smMinus,
-    &.removeLine{
-        width: rem(12);
-        height: rem(2);
-        background-position: -120px -120px;
-    }
-    &.smPlus,
-    &.addLine{
-        width: rem(12);
-        height: rem(12);
-        background-position: -140px -120px;
-    }
-    &.addLine_chked{     
-        width: rem(18);
-        height: rem(15);
-        background-position: -140px -140px;
     }
     &.corporation{
         width: rem(17);
@@ -384,22 +493,6 @@
         background-position: -280px -380px;
     }
 
-    //+,-
-    &.reduce{
-        width: rem(18);
-        height: rem(18);
-        background-position: -120px -160px;
-        cursor: pointer;
-    }
-    &.extend{
-        width: rem(18);
-        height: rem(18);
-        background-position: -140px -160px;
-        cursor: pointer;
-        &.is-active{
-            background-position: -120px -160px;
-        }
-    }
 
     //레이아웃 - 사업현황등록
     &.layoutF{
@@ -420,104 +513,11 @@
             background-position: -200px 0;
         }
     }
-    &.qMark,
-    &.qMark2{
-        width: rem(18);
-        height: rem(18);
-        background-position: -240px -300px;
-        margin-left: 2px;
-    }
-    &.qMark_w{
-        width: rem(18);
-        height: rem(18);
-        background-position: -280px -300px;
-        margin-left: 2px;
-    }
-    &.top{
-        width: rem(34);
-        height: rem(34);
-        background-position: 0px 0px;
-    }
 
-    //카운팅 up, down
-    &.down{
-        width: rem(13);
-        height: rem(9);
-        background-position: -80px -140px;
-    }
-    &.up{
-        width: rem(13);
-        height: rem(9);
-        background-position: -100px -140px;
-    }
 
-    //아코디언 up,down
-    &.arrow{
-        width: rem(16);
-        height: rem(10);
-        background-position: -80px -120px;
-    }
-    &.memo{   //메모 신규추가
-        width: rem(17);
-        height: rem(17);
-        background-position: -320px -380px;
-        vertical-align: -2px;
-    }
-    &.pull{
-        width: rem(18);
-        height: rem(18);
-        background-position: -80px -160px;
-    }
-    &.push{
-        width: rem(18);
-        height: rem(18);
-        background-position: -100px -160px;
-    }
-    &.expand{
-        width: rem(12);
-        height: rem(6);
-        background: url(../img/icoSelect.png) no-repeat;
-    }
-    &.sel_g{
-        width: rem(15);
-        height: rem(6);
-        background: url(../img/icoSelect_g.png) no-repeat;
-    }
-    &.list{
-        width: rem(18);
-        height: rem(12);
-        background-position: -160px -320px;
-    }
-    &.pageList{
-        width: rem(16);
-        height: rem(18);
-        background-position: -320px -360px;
-        cursor: pointer;
-    }
-    &.pageList_w{
-        width: rem(11);
-        height: rem(13);
-        background-position: -340px -360px;
-    }
+
+
     //페이징
-    &.pagingLeft{
-        width: rem(10);
-        height: rem(18);
-        background-position: -40px -100px;
-        &.is-active{
-            background-position: -40px -120px;
-        }
-    }
-    // &.right2{
-    &.pagingRight{
-        width: rem(10);
-        height: rem(18);
-        background-position: -60px -100px;
-        &.is-active{
-            background-position: -60px -120px;
-        }
-    }
-    // &.left2_dou{        
     &.pagingFirst{        
         width: rem(13);
         height: rem(18);
@@ -526,6 +526,22 @@
             background-position: -40px -160px;
         }
     }
+    &.pagingLeft{
+        width: rem(10);
+        height: rem(18);
+        background-position: -40px -100px;
+        &.is-active{
+            background-position: -40px -120px;
+        }
+    }
+    &.pagingRight{
+        width: rem(10);
+        height: rem(18);
+        background-position: -60px -100px;
+        &.is-active{
+            background-position: -60px -120px;
+        }
+    }     
     &.pagingLast{        
         width: rem(13);
         height: rem(18);
@@ -533,16 +549,6 @@
         &.is-active{
             background-position: -60px -160px;
         }
-    }
-    &.goLt{
-        width: rem(9);
-        height: rem(16);
-        background-position: -40px -180px;
-    }
-    &.goRgt{
-        width: rem(9);
-        height: rem(16);
-        background-position: -60px -180px;
     }
 }
 
