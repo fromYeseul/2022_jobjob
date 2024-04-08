@@ -4145,6 +4145,7 @@ button.round,
   background: #fff;
   border: 1px solid #8a8a8c;
   border-radius: 1.25rem;
+  cursor: initial;
 }
 button.round.disabled,
 .button.round.disabled {
@@ -4292,12 +4293,14 @@ button.save, button.send,
   color: #fff;
   background: #0460d2;
   border: 0;
+  cursor: pointer;
 }
 button.off,
 .button.off {
   color: #666666;
   background: #ededed;
   border: 0;
+  cursor: pointer;
 }
 button.main,
 .button.main {
@@ -7155,60 +7158,95 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   opacity: 0.5;
   cursor: not-allowed !important;
 }
-.ico.search {
+.ico.minus {
+  width: 1.125rem;
+  height: 0.125rem;
+  background-position: -120px -100px;
+}
+.ico.plus {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -320px 300px;
+  background-position: -140px -100px;
 }
-.ico.search.white {
-  background-position: -340px -300px;
+.ico.smMinus, .ico.removeLine {
+  width: 0.75rem;
+  height: 0.125rem;
+  background-position: -120px -120px;
 }
-.ico.excDown {
+.ico.smPlus, .ico.addLine {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-position: -140px -120px;
+}
+.ico.reduce {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -40px -340px;
-  vertical-align: -3px;
-  margin-right: 4px;
-}
-.ico.download {
-  width: 1.125rem;
-  height: 1.125rem;
-  background-position: 0 -340px;
+  background-position: -120px -160px;
   cursor: pointer;
 }
-.ico.filter {
+.ico.extend {
   width: 1.125rem;
   height: 1.125rem;
-  background-position: -80px -340px;
+  background-position: -140px -160px;
+  cursor: pointer;
 }
-.ico.map {
-  width: 1.25rem;
-  height: 1.125rem;
-  background-position: -80px -360px;
+.ico.extend.is-active {
+  background-position: -120px -160px;
 }
-.ico.file {
+.ico.top {
+  width: 2.125rem;
+  height: 2.125rem;
+  background-position: 0px 0px;
+}
+.ico.down {
+  width: 0.8125rem;
+  height: 0.5625rem;
+  background-position: -80px -140px;
+}
+.ico.up {
+  width: 0.8125rem;
+  height: 0.5625rem;
+  background-position: -100px -140px;
+}
+.ico.arrow {
   width: 1rem;
+  height: 0.625rem;
+  background-position: -80px -120px;
+}
+.ico.expand {
+  width: 0.75rem;
+  height: 0.375rem;
+  background: url(../img/icoSelect.png) no-repeat;
+}
+.ico.sel_g {
+  width: 0.9375rem;
+  height: 0.375rem;
+  background: url(../img/icoSelect_g.png) no-repeat;
+}
+.ico.goLt {
+  width: 0.5625rem;
+  height: 1rem;
+  background-position: -40px -180px;
+}
+.ico.goRgt {
+  width: 0.5625rem;
+  height: 1rem;
+  background-position: -60px -180px;
+}
+.ico.smClose {
+  width: 0.75rem;
+  height: 0.75rem;
+  vertical-align: -1px;
+  background-position: -80px -300px;
+  cursor: pointer;
+}
+.ico.smClose.w, .ico.smClose.white {
+  background-position: -100px -300px;
+}
+.ico.layerClose {
+  width: 1.125rem;
   height: 1.125rem;
-  background-position: -80px -380px;
-  cursor: pointer;
-}
-.ico.addfile {
-  width: 0.5rem;
-  height: 0.9375rem;
-  background-position: -100px -380px;
-  cursor: pointer;
-}
-.ico.addfile_g {
-  width: 0.5rem;
-  height: 0.9375rem;
-  background-position: -120px -380px;
-  cursor: pointer;
-  vertical-align: -2px;
-}
-.ico.fileUpload {
-  width: 1.25rem;
-  height: 1.25rem;
-  background-position: -40px -360px;
+  background-position: 0 -300px;
 }
 .ico.delete {
   width: 0.8125rem;
@@ -7253,60 +7291,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-position: -160px -420px;
   cursor: pointer;
 }
-.ico.refresh {
-  width: 1.1875rem;
-  height: 1rem;
-  background-position: -320px -320px;
-}
-.ico.refresh_g {
-  width: 1.1875rem;
-  height: 1rem;
-  background-position: -340px -320px;
-}
-.ico.setting {
-  width: 1.125rem;
-  height: 1.125rem;
-  vertical-align: sub;
-  background-position: -80px -320px;
-  cursor: pointer;
-}
-.ico.setting_sm {
-  width: 0.75rem;
-  height: 0.75rem;
-  background-position: -100px -320px;
-  vertical-align: -1px;
-  cursor: pointer;
-}
-.ico.setting_sm.is-active {
-  background-position: -120px -320px;
-}
-.ico.sort {
-  width: 1.125rem;
-  height: 0.1875rem;
-  background-position: -20px -320px;
-}
-.ico.change {
-  width: 1.0625rem;
-  height: 1.0625rem;
-  background-position: -160px -380px;
-  cursor: pointer;
-}
-.ico.resume {
-  width: 1rem;
-  height: 1.0625rem;
-  background-position: -20px -380px;
-}
-.ico.resume_b {
-  width: 1rem;
-  height: 1.0625rem;
-  background-position: 0 -380px;
-  cursor: pointer;
-}
-.ico.manager {
-  width: 0.9375rem;
-  height: 1.125rem;
-  background-position: -40px -380px;
-}
 .ico.lock {
   width: 0.6875rem;
   height: 0.875rem;
@@ -7336,20 +7320,195 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   margin-right: 5px;
   background-position: -300px -340px;
 }
-.ico.letter {
+.ico.qMark, .ico.qMark2 {
   width: 1.125rem;
-  height: 0.875rem;
-  background-position: -360px -440px;
+  height: 1.125rem;
+  background-position: -240px -300px;
+  margin-left: 2px;
+}
+.ico.qMark_w {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -280px -300px;
+  margin-left: 2px;
+}
+.ico.exMark {
+  width: 0.1875rem;
+  height: 0.9375rem;
+  background-position: -200px -360px;
+}
+.ico.exMark_round {
+  width: 0.75rem;
+  height: 0.75rem;
+  vertical-align: -1px;
+  background-position: -220px -360px;
+  margin-left: 2px;
+}
+.ico.signal_sm {
+  width: 0.8125rem;
+  height: 0.8125rem;
+  background-position: -160px -360px;
+}
+.ico.signal_la {
+  width: 1.625rem;
+  height: 1.375rem;
+  background-position: 0 -40px;
+  vertical-align: -2px;
+}
+.ico.file {
+  width: 1rem;
+  height: 1.125rem;
+  background-position: -80px -380px;
+  cursor: pointer;
+}
+.ico.fileUpload {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-position: -40px -360px;
+}
+.ico.addfile {
+  width: 0.5rem;
+  height: 0.9375rem;
+  background-position: -100px -380px;
+  cursor: pointer;
+}
+.ico.addfile_g {
+  width: 0.5rem;
+  height: 0.9375rem;
+  background-position: -120px -380px;
+  cursor: pointer;
+  vertical-align: -2px;
+}
+.ico.download {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: 0 -340px;
+  cursor: pointer;
+}
+.ico.excDown {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -40px -340px;
+  vertical-align: -3px;
+  margin-right: 4px;
+}
+.ico.pull {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -80px -160px;
+}
+.ico.push {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -100px -160px;
+}
+.ico.out {
+  width: 1rem;
+  height: 1rem;
+  background-position: -160px -400px;
+  vertical-align: -2px;
+}
+.ico.list {
+  width: 1.125rem;
+  height: 0.75rem;
+  background-position: -160px -320px;
+}
+.ico.pageList {
+  width: 1rem;
+  height: 1.125rem;
+  background-position: -320px -360px;
+  cursor: pointer;
+}
+.ico.pageList_w {
+  width: 0.6875rem;
+  height: 0.8125rem;
+  background-position: -340px -360px;
+}
+.ico.folder {
+  width: 1.1875rem;
+  height: 0.9375rem;
+  background-position: 0px -420px;
+  vertical-align: -2px;
+}
+.ico.paper {
+  width: 0.9375rem;
+  height: 1.125rem;
+  background-position: -80px -420px;
+}
+.ico.resume {
+  width: 1rem;
+  height: 1.0625rem;
+  background-position: -20px -380px;
+}
+.ico.resume_b {
+  width: 1rem;
+  height: 1.0625rem;
+  background-position: 0 -380px;
+  cursor: pointer;
+}
+.ico.manager {
+  width: 0.9375rem;
+  height: 1.125rem;
+  background-position: -40px -380px;
+}
+.ico.memo {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  background-position: -320px -380px;
+  vertical-align: -2px;
+}
+.ico.refresh {
+  width: 1.1875rem;
+  height: 1rem;
+  background-position: -320px -320px;
+}
+.ico.refresh_g {
+  width: 1.1875rem;
+  height: 1rem;
+  background-position: -340px -320px;
+}
+.ico.synch {
+  width: 1.0625rem;
+  height: 1rem;
+  background-position: -240px -320px;
+}
+.ico.change {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  background-position: -160px -380px;
+  cursor: pointer;
+}
+.ico.edit {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-position: -180px -380px;
+  vertical-align: initial;
+  cursor: pointer;
+}
+.ico.edit:hover {
+  background-position: -200px -380px;
 }
 .ico.save {
   width: 0.9375rem;
   height: 0.9375rem;
   background-position: 0 -360px;
 }
-.ico.saveCont {
-  width: 1.1875rem;
+.ico.more {
+  width: 0.1875rem;
   height: 1.125rem;
-  background-position: -240px -400px;
+  background-position: 0 -320px;
+}
+.ico.more2 {
+  width: 0.9375rem;
+  height: 1.25rem;
+  background-position: -40px -320px;
+  padding: 0 3px;
+  cursor: pointer;
+}
+.ico.addLine_chked {
+  width: 1.125rem;
+  height: 0.9375rem;
+  background-position: -140px -140px;
 }
 .ico.preview {
   width: 1.125rem;
@@ -7366,127 +7525,70 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   height: 1.125rem;
   background-position: -360px -340px;
 }
-.ico.edit {
-  width: 0.75rem;
-  height: 0.75rem;
-  background-position: -180px -380px;
-  vertical-align: initial;
-  cursor: pointer;
-}
-.ico.edit:hover {
-  background-position: -200px -380px;
-}
-.ico.signal_sm {
-  width: 0.6875rem;
-  height: 0.625rem;
-  background-position: -160px -360px;
-}
-.ico.signal_la {
-  width: 1.625rem;
-  height: 1.375rem;
-  background-position: 0 -40px;
-  vertical-align: -2px;
-}
-.ico.out {
-  width: 1rem;
-  height: 1rem;
-  background-position: -160px -400px;
-  vertical-align: -2px;
+.ico.sort {
+  width: 1.125rem;
+  height: 0.1875rem;
+  background-position: -20px -320px;
 }
 .ico.split {
   width: 1.0625rem;
   height: 0.875rem;
   background-position: -80px -400px;
 }
-.ico.synch {
-  width: 1.0625rem;
-  height: 1rem;
-  background-position: -240px -320px;
+.ico.filter {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -80px -340px;
+}
+.ico.setting {
+  width: 1.125rem;
+  height: 1.125rem;
+  vertical-align: sub;
+  background-position: -80px -320px;
+  cursor: pointer;
+}
+.ico.setting_sm {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-position: -100px -320px;
+  vertical-align: -1px;
+  cursor: pointer;
+}
+.ico.setting_sm.is-active {
+  background-position: -120px -320px;
+}
+.ico.search {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: -320px 300px;
+}
+.ico.search.white {
+  background-position: -340px -300px;
+}
+.ico.map {
+  width: 1.25rem;
+  height: 1.125rem;
+  background-position: -80px -360px;
+}
+.ico.letter {
+  width: 1.125rem;
+  height: 0.875rem;
+  background-position: -360px -440px;
+}
+.ico.saveCont {
+  width: 1.1875rem;
+  height: 1.125rem;
+  background-position: -240px -400px;
 }
 .ico.inside {
   width: 1.1875rem;
   height: 1.125rem;
   background-position: -260px -380px;
 }
-.ico.exMark {
-  width: 0.1875rem;
-  height: 0.9375rem;
-  background-position: -200px -360px;
-}
-.ico.exMark_round {
-  width: 0.75rem;
-  height: 0.75rem;
-  vertical-align: -1px;
-  background-position: -220px -360px;
-  margin-left: 2px;
-}
 .ico.advice {
   width: 1.25rem;
   height: 1.125rem;
   background-position: -260px -300px;
-}
-.ico.folder {
-  width: 1.1875rem;
-  height: 0.9375rem;
-  background-position: 0px -420px;
-  vertical-align: -2px;
-}
-.ico.paper {
-  width: 0.9375rem;
-  height: 1.125rem;
-  background-position: -80px -420px;
-}
-.ico.more {
-  width: 0.1875rem;
-  height: 1.125rem;
-  background-position: 0 -320px;
-}
-.ico.more2 {
-  width: 0.9375rem;
-  height: 1.25rem;
-  background-position: -40px -320px;
-  padding: 0 3px;
-  cursor: pointer;
-}
-.ico.smClose {
-  width: 0.75rem;
-  height: 0.75rem;
-  vertical-align: -1px;
-  background-position: -80px -300px;
-  cursor: pointer;
-}
-.ico.smClose.w, .ico.smClose.white {
-  background-position: -100px -300px;
-}
-.ico.layerClose {
-  width: 1.125rem;
-  height: 1.125rem;
-  background-position: 0 -300px;
-}
-.ico.minus {
-  width: 1.125rem;
-  height: 0.125rem;
-  background-position: -120px -100px;
-}
-.ico.plus {
-  width: 1.125rem;
-  height: 1.125rem;
-  background-position: -140px -100px;
-}
-.ico.smMinus, .ico.removeLine {
-  width: 0.75rem;
-  height: 0.125rem;
-  background-position: -120px -120px;
-}
-.ico.smPlus, .ico.addLine {
-  width: 0.75rem;
-  height: 0.75rem;
-  background-position: -140px -120px;
-}
-.ico.addLine_chked {
-  width: 1.125rem;
-  height: 0.9375rem;
-  background-position: -140px -140px;
 }
 .ico.corporation {
   width: 1.0625rem;
@@ -7497,21 +7599,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   width: 1.1875rem;
   height: 1.1875rem;
   background-position: -280px -380px;
-}
-.ico.reduce {
-  width: 1.125rem;
-  height: 1.125rem;
-  background-position: -120px -160px;
-  cursor: pointer;
-}
-.ico.extend {
-  width: 1.125rem;
-  height: 1.125rem;
-  background-position: -140px -160px;
-  cursor: pointer;
-}
-.ico.extend.is-active {
-  background-position: -120px -160px;
 }
 .ico.layoutF {
   width: 1.9375rem;
@@ -7531,79 +7618,13 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .ico.layoutG.is-active {
   background-position: -200px 0;
 }
-.ico.qMark, .ico.qMark2 {
-  width: 1.125rem;
-  height: 1.125rem;
-  background-position: -240px -300px;
-  margin-left: 2px;
-}
-.ico.qMark_w {
-  width: 1.125rem;
-  height: 1.125rem;
-  background-position: -280px -300px;
-  margin-left: 2px;
-}
-.ico.top {
-  width: 2.125rem;
-  height: 2.125rem;
-  background-position: 0px 0px;
-}
-.ico.down {
+.ico.pagingFirst {
   width: 0.8125rem;
-  height: 0.5625rem;
-  background-position: -80px -140px;
-}
-.ico.up {
-  width: 0.8125rem;
-  height: 0.5625rem;
-  background-position: -100px -140px;
-}
-.ico.arrow {
-  width: 1rem;
-  height: 0.625rem;
-  background-position: -80px -120px;
-}
-.ico.memo {
-  width: 1.0625rem;
-  height: 1.0625rem;
-  background-position: -320px -380px;
-  vertical-align: -2px;
-}
-.ico.pull {
-  width: 1.125rem;
   height: 1.125rem;
-  background-position: -80px -160px;
+  background-position: -40px -140px;
 }
-.ico.push {
-  width: 1.125rem;
-  height: 1.125rem;
-  background-position: -100px -160px;
-}
-.ico.expand {
-  width: 0.75rem;
-  height: 0.375rem;
-  background: url(../img/icoSelect.png) no-repeat;
-}
-.ico.sel_g {
-  width: 0.9375rem;
-  height: 0.375rem;
-  background: url(../img/icoSelect_g.png) no-repeat;
-}
-.ico.list {
-  width: 1.125rem;
-  height: 0.75rem;
-  background-position: -160px -320px;
-}
-.ico.pageList {
-  width: 1rem;
-  height: 1.125rem;
-  background-position: -320px -360px;
-  cursor: pointer;
-}
-.ico.pageList_w {
-  width: 0.6875rem;
-  height: 0.8125rem;
-  background-position: -340px -360px;
+.ico.pagingFirst.is-active {
+  background-position: -40px -160px;
 }
 .ico.pagingLeft {
   width: 0.625rem;
@@ -7621,14 +7642,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 .ico.pagingRight.is-active {
   background-position: -60px -120px;
 }
-.ico.pagingFirst {
-  width: 0.8125rem;
-  height: 1.125rem;
-  background-position: -40px -140px;
-}
-.ico.pagingFirst.is-active {
-  background-position: -40px -160px;
-}
 .ico.pagingLast {
   width: 0.8125rem;
   height: 1.125rem;
@@ -7636,16 +7649,6 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
 }
 .ico.pagingLast.is-active {
   background-position: -60px -160px;
-}
-.ico.goLt {
-  width: 0.5625rem;
-  height: 1rem;
-  background-position: -40px -180px;
-}
-.ico.goRgt {
-  width: 0.5625rem;
-  height: 1rem;
-  background-position: -60px -180px;
 }
 
 /* GNB 아이콘 */
@@ -9855,6 +9858,9 @@ h6 + .h6_sub {
   display: none;
 }
 
+.styleguide #style-sort .tabWrapper .flex {
+  justify-content: initial;
+}
 .styleguide #style-sort > .tabBtnWrap {
   display: block;
   width: 15.625rem;
@@ -9923,22 +9929,13 @@ h6 + .h6_sub {
   margin-left: 1.25rem;
 }
 .styleguide .circle.primary {
-  background: #0460d2;
-}
-.styleguide .circle.gradient {
-  background: linear-gradient(to bottom, #0460d2, #1983cb, #47b892);
+  background: #2a55aa;
 }
 .styleguide .circle.highlight {
   background: #009ce0;
 }
-.styleguide .circle.onGoing {
-  background: #ffc812;
-}
 .styleguide .circle.cancel {
   background: #a6a6b6;
-}
-.styleguide .circle.delay {
-  background: #ff1236;
 }
 .styleguide .circle.error {
   background: #ff1236;
@@ -9977,20 +9974,33 @@ h6 + .h6_sub {
 }
 .styleguide .icon span {
   display: inline-block;
-  width: 7.5rem;
+  width: 8.75rem;
   line-height: 2.25rem;
 }
+.styleguide .icon .logo,
 .styleguide .icon .gnb {
   padding: 0.625rem;
-  background: #cccccc;
+  background: #f9f9f9;
+  background: #e6e6e6;
+}
+.styleguide .icon .common {
+  padding: 0.625rem;
+  background: #f9f9f9;
+  background: #e6e6e6;
 }
 .styleguide .icon .common ul {
   display: flex;
   flex-wrap: wrap;
 }
 .styleguide .icon .common ul li {
-  flex: 1 1 16%;
-  max-width: 16.25rem;
+  flex: 1 1 20%;
+  max-width: 12.5rem;
+}
+.styleguide .icon .common ul + h6 {
+  margin-top: 1.25rem;
+}
+.styleguide .icon .common .resume {
+  display: inline-block;
 }
 .styleguide .icon .paging {
   text-align: left;
@@ -11316,7 +11326,7 @@ table a {
 }
 .eleContract table td,
 .eleContAgree table td {
-  padding: 4px 8px;
+  padding: 8px;
   border-top: 1px solid #dddddd;
 }
 .eleContract table td .yScroll,
@@ -13105,7 +13115,11 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   width: 100%;
 }
 .projTotal table {
+  margin-bottom: 0.1875rem;
   border-bottom: 1px solid #666666;
+}
+.projTotal table:first-child {
+  margin-bottom: 0;
 }
 .projTotal table thead tr:last-child th {
   height: 1.5rem;
@@ -13113,6 +13127,12 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 }
 .projTotal table thead th:first-child {
   border-right: 1px solid #7c8a9a;
+}
+.projTotal table tbody {
+  display: none;
+}
+.projTotal table tbody.is-active {
+  display: table-row-group;
 }
 .projTotal table tbody tr {
   border-bottom: 0;
@@ -13123,7 +13143,7 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 }
 .projTotal table tbody td.left {
   padding: 0;
-  padding-left: 10px;
+  padding-left: 6px;
   text-align: left;
 }
 .projTotal table tfoot {
@@ -13133,6 +13153,9 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   padding: 0.5rem;
   font-weight: bold;
   text-align: right;
+}
+.projTotal table tfoot td:first-child {
+  border-right: 1px solid #dddddd;
 }
 .projTotal table tfoot .upper {
   display: flex;
@@ -13151,11 +13174,15 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   align-items: center;
 }
 .projTotal table tfoot .upper + .flex a {
+  width: 72%;
   color: #000000;
   text-decoration: underline;
 }
-.projTotal table + table {
-  margin-top: 0.1875rem;
+.projTotal table tfoot .up {
+  cursor: pointer;
+}
+.projTotal table tfoot .up.is-active {
+  transform: rotate(180deg);
 }
 
 .sourcingTotal .absolBody {
@@ -13264,6 +13291,8 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   text-align: center;
 }
 .eiCheck .tableBox td p {
+  display: flex;
+  justify-content: flex-end;
   color: #000000;
 }
 .eiCheck .tableBox td p.subInfo {
@@ -13271,6 +13300,9 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 }
 .eiCheck .tableBox td p.marked {
   color: #ff1236;
+}
+.eiCheck .tableBox td .turnkey {
+  margin-right: 0;
 }
 .eiCheck .tableBox tfoot {
   text-align: right;
@@ -13296,6 +13328,8 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   text-align: center;
 }
 .wcCheck .tableBox td p {
+  display: flex;
+  justify-content: flex-end;
   color: #000000;
 }
 .wcCheck .tableBox td p.subInfo {
@@ -13309,6 +13343,9 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 }
 .wcCheck .tableBox td p.marked .underL {
   color: #ff1236;
+}
+.wcCheck .tableBox td .turnkey {
+  margin-right: 0;
 }
 .wcCheck .tableBox tfoot {
   text-align: right;
