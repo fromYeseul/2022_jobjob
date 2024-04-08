@@ -258,6 +258,7 @@
                                             <a href="#" class="ellipsis">
                                                 CJ 올리브네트웍스 모바일앱 서비스 협약서 협약서협약서협약서
                                             </a>
+                                            <i class="ico up"></i><!--240415 추가-ys-->
                                         </div>
                                     </td>
 
@@ -443,6 +444,7 @@
                                             <a href="#" class="ellipsis">
                                                 CJ 올리브네트웍스 모바일앱 서비스 협약서 협약서협약서협약서
                                             </a>
+                                            <i class="ico up"></i>
                                         </div>
                                     </td>
 
@@ -556,6 +558,7 @@
                                             <a href="#" class="ellipsis">
                                                 CJ 올리브네트웍스
                                             </a>
+                                            <i class="ico up"></i>
                                         </div>
                                     </td>
 
@@ -1225,5 +1228,12 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>    
+    <script>
+        //아코디언
+        $("tfoot .ico.up").on("click", function(){
+            $(this).toggleClass("is-active");
+            $(this).parents("tfoot").siblings("tbody").toggleClass("is-active");
+        });
+    </script>
 </body>
 </html>
