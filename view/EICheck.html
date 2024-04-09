@@ -490,12 +490,13 @@
 
     <!--공단파일 업로드 팝업-->
     <div class="modalLayer center is-active">
-        <div class="layerBox midSize">
+        <div class="layerBox midSize2">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
             </div>
             <div class="modalCont pubFileUpload"><!--팝업 고유 클래스-->
                 <h3>공단파일 업로드</h3>
+                <div class="h3_sub">첨부된 파일명 기준으로 보험료가 적용되며 기존에 입력된 데이터가 있다면 덮어쓰기 됩니다.</div>      
                 
                 <div class="tableTop center">
                     <div class="hasBtn">
@@ -530,6 +531,9 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td colspan="8" class="nodata">입력해주세요.</td>
+                            </tr>
                             <tr>
                                 <td>
                                     <input type="checkbox" id="ta3">
@@ -703,7 +707,7 @@
                         </tbody>
                     </table>
                 </div>  
-                <!--240215 수정-ys-->    
+                <!--240215 수정-ys--    
                 <div class="bulletList">
                     <ul>
                         <li>첨부된 파일명 기준으로 보험료가 적용되며 기존에 입력된 데이터가 있다면 덮어쓰기 됩니다.</li>
