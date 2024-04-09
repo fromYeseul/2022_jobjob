@@ -16,21 +16,29 @@
 
         <div class="tabBtnWrap">
             <ul>
-                <li class="tabBtn"><a href="#style-component">component</a></li>
-                <li class="tabBtn"><a href="#style-element" class="is-active">element</a></li>
+                <li class="tabBtn"><a href="#style-component" class="is-active">component</a></li>
+                <li class="tabBtn"><a href="#style-element">element</a></li>
             </ul>
         </div>
         <div class="tabContWrap">
-            <div id="style-component" class="tabCont">                
+            <div id="style-component" class="tabCont is-active">                
                 <div class="tabWrapper listType" id="style-content">
                     <div class="tabBtnWrap">
                         <ul>
                             <li class="tabBtn"><a href="#nav" class="is-active">메뉴</a></li>
+                            <li class="tabBtn"><a href="#searchCond">검색조건</a></li>
+                            <li class="tabBtn"><a href="#tableComp">테이블</a></li>
+                            <li class="tabBtn"><a href="#pagination">페이징</a></li>
                             <li class="tabBtn"><a href="#bulletList">불릿 리스트</a></li>
+                            <li class="tabBtn"><a href="#treeGrid">트리그리드</a></li>
+                            <li class="tabBtn"><a href="#commentcomp">댓글</a></li>
+                            <li class="tabBtn"><a href="#contractBox">계약박스</a></li>
+                            <li class="tabBtn"><a href="#inputBox">등록박스</a></li>
                         </ul>                
                     </div>
                     <div class="tabContWrap">
                         
+                        <!--메뉴-->
                         <div class="tabCont is-active" id="nav" style="position:relative; height: 100vh;">
                             <h2>메뉴</h2>
                             <div class="clip mt20"><span>메뉴</span></div> 
@@ -90,20 +98,612 @@
                                 </section>  
                             </section>
                         </div>
+
+                        <!--검색조건-->
+                        <div class="tabCont" id="searchCond">
+                            <h2>검색조건</h2>
+
+                            <div class="clip mt20"><span>검색조건</span></div> 
+                            <div class="condition">
+                                <ul>
+                                    <li>
+                                        <p class="condiTit">조회년도</p>
+                                        <select>
+                                            <option value="">2023</option>
+                                            <option value="001">1</option>
+                                            <option value="002">2</option>
+                                            <option value="003">3</option>
+                                            <option value="004">4</option>
+                                            <option value="005">5</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <p class="condiTit">주관그룹</p>
+                                        <div class="select laSize">
+                                            <span class="selDefault">SAP 전략</span>
+                                            <ul class="optionList">
+                                                <li class="optionItem">
+                                                    <input type="checkbox" id="optChk_1" class="hasTxt">
+                                                    <label for="optChk_1">SAP 사업</label>
+                                                </li>                                        
+                                                <li class="optionItem">
+                                                    <input type="checkbox" id="optChk_2" class="hasTxt">
+                                                    <label for="optChk_2">SAP 전략</label>
+                                                </li>
+                                                <li class="optionItem">
+                                                    <input type="checkbox" id="optChk_3" class="hasTxt">
+                                                    <label for="optChk_3">SAP 융합</label>
+                                                </li>
+                                                <li class="optionItem">
+                                                    <input type="checkbox" id="optChk_4" class="hasTxt">
+                                                    <label for="optChk_4">대외사업</label>
+                                                </li>
+                                                <li class="optionItem">
+                                                    <input type="checkbox" id="optChk_5" class="hasTxt">
+                                                    <label for="optChk_5">미래융합사업</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>                            
+                                    <li>
+                                        <p class="condiTit">기술구분</p>
+                                        <select>
+                                            <option value="">전체</option>
+                                            <option value="001">1</option>
+                                            <option value="002">2</option>
+                                            <option value="003">3</option>
+                                            <option value="004">4</option>
+                                            <option value="005">5</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <p class="condiTit">사업유형</p>
+                                        <select>
+                                            <option value="">전체</option>
+                                            <option value="001">1</option>
+                                            <option value="002">2</option>
+                                            <option value="003">3</option>
+                                            <option value="004">4</option>
+                                            <option value="005">5</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <p class="condiTit">진행상태</p>
+                                        <select>
+                                            <option value="">전체</option>
+                                            <option value="001">1</option>
+                                            <option value="002">2</option>
+                                            <option value="003">3</option>
+                                            <option value="004">4</option>
+                                            <option value="005">5</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <p class="condiTit">사업기간</p>
+                                        <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">
+                                        <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">
+                                    </li>
+                                    
+                                    <li class="hasBtn">
+                                        <label class="condiTit" for="project2">구분</label>
+                                        <select class="mid-laSize">
+                                            <option value="">프로젝트코드</option>
+                                            <option value="001">원청사</option>
+                                            <option value="002">고객사</option>
+                                            <option value="003">프로젝트</option>
+                                        </select>
+                                        <input type="text" class="smSize" maxlength="20" placeholder="검색어 입력">
+                                        <button>
+                                            <i class="ico search white"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--테이블-->
+                        <div class="tabCont" id="tableComp">
+                            <h2>테이블</h2>
+
+                            <div class="clip mt20"><span>테이블 상단</span></div> 
+                            <div class="tableTop">
+                                <div class="prefix">
+                                    <select>
+                                        <option value="10">10개씩</option>
+                                        <option value="20" selected="">20개씩</option>
+                                        <option value="50">50개씩</option>
+                                        <option value="100">100개씩</option>
+                                    </select>
+                                    <input type="checkbox" class="hasTxt">
+                                    <label for="license01">다중원부번호</label>
+                                    <input type="checkbox" class="hasTxt">
+                                    <label for="license02">차액 Y</label>
+                                </div>
+        
+                                <div class="suffix">
+                                    <div class="refer">         
+                                        <ul>
+                                            <li><span>■ 공단부과금액</span></li>
+                                            <li><span class="subGray">■ 당사반영금액</span></li>
+                                            <li><span class="turnkey">미</span>미지급</li>
+                                        </ul>     
+                                    </div>
+                                
+                                    <button class="white">
+                                        <i class="ico excDown"></i>공단파일 업로드
+                                    </button> 
+                                    <button class="white">
+                                        <i class="ico excDown"></i>엑셀 다운로드
+                                    </button>   
+                                </div>
+                                
+                            </div>
+
+                            <div class="clip mt20"><span>테이블</span></div> 
+                            <div class="tableBox sticky">
+                                <table>
+                                    <colgroup>
+                                        <col width="50px;">
+                                        <col width="60px;" span="2">
+                                        <col width="120px;">
+                                        <col width="60px;" span="3">
+                                        <col width="90px;" span="3">
+                                        <col width="120px;">
+                                        <col>
+                                        <col width="60px;" span="2">
+                                        <col width="90px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>유형</th>
+                                            <th>재직상태</th>
+                                            <th>부서</th>
+                                            <th>이름</th>
+                                            <th>직급</th>
+                                            <th>직군</th>
+                                            <th>경력</th>
+                                            <th>
+                                                <input type="checkbox" id="careerChk" name="aa" class="hasTxt">
+                                                <label for="careerChk">인정등급</label>
+                                            </th>
+                                            <th>최종학력</th>
+                                            <th>연락처</th>
+                                            <th>보유기술</th>
+                                            <th>이력서</th>
+                                            <th>상세</th>
+                                            <th>경력수정일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>999</td>
+                                            <td>정규</td>
+                                            <td>재직중</td>
+                                            <td>AI 전략사업부</td>
+                                            <td><a href="#">홍길동</a></td>
+                                            <td>주임</td>
+                                            <td>개발</td>
+                                            <td>9년 5개월</td>
+                                            <td class="eHigh">특급</td>
+                                            <td>고등학교 졸업</td>
+                                            <td>010-1111-2222</td>
+                                            <td class="ellipsis"><a href="#">ASP, JSP, Java, Linux, Oracle, UNIX, ASP, JSP, Java, Linux, Oracle, UNIX</a></td>
+                                            <td><i class="ico download"></i></td>
+                                            <td><i class="ico resume_b"></i></td>
+                                            <td>2023.11.01</td>   
+                                        </tr>  
+                                        <tr>
+                                            <td>998</td>
+                                            <td>비정규</td>
+                                            <td>휴직</td>
+                                            <td>SAP 전략사업부</td>
+                                            <td><a href="#">홍길동</a></td>
+                                            <td>주임</td>
+                                            <td>개발</td>
+                                            <td>9년 5개월</td>
+                                            <td class="eHigh">특급</td>
+                                            <td>4년제 졸업</td>
+                                            <td>010-1111-2222</td>
+                                            <td class="ellipsis"><a href="#">ASP, JSP, Java, Linux, Oracle, UNIX, ASP, JSP, Java, Linux, Oracle, UNIX, ASP, JSP, Java, Linux, Oracle, UNIX, ASP, JSP, Java, Linux, Oracle, UNIX</a></td>
+                                            <td><i class="ico download"></i></td>
+                                            <td><i class="ico resume_b"></i></td>
+                                            <td>2023.11.01</td>    
+                                        </tr>  
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="clip mt20"><span>테이블</span></div> 
+                            <div class="tableBox sticky">
+                                <table>
+                                    <colgroup>
+                                        <col width="50px;">
+                                        <col width="60px;" span="2">
+                                        <col width="120px;">
+                                        <col width="60px;" span="3">
+                                        <col width="90px;" span="3">
+                                        <col width="120px;">
+                                        <col>
+                                        <col width="60px;" span="2">
+                                        <col width="90px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>유형</th>
+                                            <th>재직상태</th>
+                                            <th>부서</th>
+                                            <th>이름</th>
+                                            <th>직급</th>
+                                            <th>직군</th>
+                                            <th>경력</th>
+                                            <th>
+                                                <input type="checkbox" id="careerChk" name="aa" class="hasTxt">
+                                                <label for="careerChk">인정등급</label>
+                                            </th>
+                                            <th>최종학력</th>
+                                            <th>연락처</th>
+                                            <th>보유기술</th>
+                                            <th>이력서</th>
+                                            <th>상세</th>
+                                            <th>경력수정일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="15" class="nodata">검색결과가 없습니다.</td> 
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!--페이징-->
+                        <div class="tabCont" id="pagination">
+                            <h2>페이징</h2>
+
+                            <div class="clip mt20"><span>페이징</span></div> 
+                            <div class="paging">
+                                <ul>
+                                    <li class="pagingDouble">
+                                        <a href="#">
+                                            <span class="ico pagingFirst"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ico pagingLeft"></span>
+                                        </a>
+                                    </li>
+                                    <li class="is-active"><a>1</a></li>
+                                    <li><a>2</a></li>
+                                    <li><a>3</a></li>
+                                    <li><a>4</a></li>
+                                    <li><a>5</a></li>
+                                    <li><a>6</a></li>
+                                    <li><a>7</a></li>
+                                    <li><a>8</a></li>
+                                    <li><a>9</a></li>
+                                    <li><a>10</a></li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ico pagingRight is-active"></span>
+                                        </a>
+                                    </li>
+                                    <li class="pagingDouble">
+                                        <a href="#">
+                                            <span class="ico pagingLast is-active"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--불릿 리스트-->
                         <div class="tabCont" id="bulletList">
                             <h2>불릿 리스트</h2>
 
                             <div class="clip mt20"><span>매출매입/등급보기/연락주의자 명단</span></div> 
-                            <div class="">
-                                <h5>유의사항</h5>
-                                <div class="bulletList">
-                                    <ul>
-                                        <li>매출/매입을 N:N으로 매칭하려면 마우스로 그리드를 드래그 앤 드롭하세요.</li>
-                                        <li>특정 투입인원을 중복으로 입력할 수 있지만 ‘투입’상태값은 인원당 하나만 존재할 수 있습니다.</li>
-                                        <li>종료된 프로젝트는 투입 종료일 외 수정불가 합니다.</li>
-                                    </ul>
+                            <h5>유의사항</h5>
+                            <div class="bulletList">
+                                <ul>
+                                    <li>매출/매입을 N:N으로 매칭하려면 마우스로 그리드를 드래그 앤 드롭하세요.</li>
+                                    <li>특정 투입인원을 중복으로 입력할 수 있지만 ‘투입’상태값은 인원당 하나만 존재할 수 있습니다.</li>
+                                    <li>종료된 프로젝트는 투입 종료일 외 수정불가 합니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--트리그리드-->
+                        <div class="tabCont" id="treeGrid">
+                            <h2>트리그리드</h2>
+
+                            <div class="clip mt20"><span>트리그리드 - 아이콘x</span></div> 
+                            <table class="tree">
+                                <tbody>
+                                    <tr class="treegrid-1 depth1 expanded"><!--첫번째 항상 열림 expanded-->
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>프로젝트-1</span>
+                                                <i class="ico smPlus"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="treegrid-2 treegrid-parent-1 depth2 noDepth"><!--위치설정 depth2, 하위메뉴 없을 때 noDepth-->
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>수주 프로젝트-2</span>
+                                                <i class="ico smPlus"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-3 treegrid-parent-1 depth2 expanded">
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>수주 프로젝트-2</span>
+                                                <i class="ico smPlus"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="treegrid-4 treegrid-parent-3 depth3 expanded">
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>수주 프로젝트-3</span>
+                                                <i class="ico smPlus"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-5 treegrid-parent-4 depth4">
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>수주 프로젝트-4</span>
+                                                <i class="ico smPlus"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-5 treegrid-parent-4 depth4">
+                                        <td>
+                                            <div class="rootCont disabled"><!--비활성화클래스 disabled-->
+                                                <span>수주 프로젝트-4</span>
+                                                <i class="ico smPlus"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="clip mt20"><span>트리그리드 - 아이콘o</span></div> 
+                            <table class="tree icoType">
+                                <tbody>
+                                    <tr class="treegrid-1 depth1 expanded"><!--첫번째 항상 열림 expanded-->
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>
+                                                    <i class="ico folder"></i>
+                                                    프로젝트-1
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="treegrid-2 treegrid-parent-1 depth2 noDepth"><!--위치설정 depth2, 하위메뉴 없을 때 noDepth-->
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>
+                                                    <i class="ico folder"></i>
+                                                    수주 프로젝트-2
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-3 treegrid-parent-1 depth2 expanded">
+                                        <td>
+                                            <div class="rootCont is-active">
+                                                <span>
+                                                    <i class="ico folder"></i>
+                                                    수주 프로젝트-2
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="treegrid-4 treegrid-parent-3 depth3 expanded">
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>
+                                                    <i class="ico folder"></i>
+                                                    수주 프로젝트-3
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-5 treegrid-parent-4 depth4 expanded">
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>
+                                                    <i class="ico folder"></i>
+                                                    수주 프로젝트-4
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-6 treegrid-parent-5 depth5 noDepth"><!--하위depth없음-->
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>
+                                                    <i class="ico paper"></i><!--마지막 depth 아이콘-->
+                                                    수주 프로젝트-5
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-6 treegrid-parent-5 depth5 expanded">
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>
+                                                    <i class="ico folder"></i>
+                                                    수주 프로젝트-5
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-7 treegrid-parent-6 depth6 expanded">
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>
+                                                    <i class="ico folder"></i>
+                                                    수주 프로젝트-6
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-8 treegrid-parent-7 depth7 expanded">
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>
+                                                    <i class="ico folder"></i>
+                                                    수주 프로젝트-7
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="treegrid-9 treegrid-parent-8 depth8 noDepth"><!--하위depth없음-->
+                                        <td>
+                                            <div class="rootCont">
+                                                <span>
+                                                    <i class="ico paper"></i>
+                                                    수주 프로젝트-8
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!--댓글-->
+                        <div class="tabCont" id="commentcomp">
+                            <h2>댓글</h2>
+
+                            <div class="clip mt20"><span>댓글</span></div> 
+                            <div class="commentBox">
+                                <div class="commentInput">
+                                    <span class="writer self">한아라(나)</span>
+                                    <div class="comment">
+                                        <textarea name="" id="" rows="2"></textarea>
+                                    </div>
+                                    <button class="midSize">입력</button>
                                 </div>
-                            </div>  
+                                <div class="commentList">
+                                    <ul>
+                                        <li>
+                                            <span class="writer self">
+                                                <span class="ellipsis">한아라한아라(나)</span> 
+                                            </span>
+                                            <div class="comment">
+                                                <textarea name="" id="" rows="2"></textarea>
+                                            </div>
+                                            
+                                            <div class="rightBtn">
+                                                <button class="round save">저장</button>
+                                                <button class="round off">취소</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="writer self">
+                                                <span class="ellipsis">한아라(나)</span>
+                                            </span>
+                                            <div class="comment">
+                                                <div class="content">
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 동해물과 백두산이 마르고 닳도록 마르고 보우하사 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 동해물과 백두산이 마르고 닳도록 마르고 보우하사 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                </div>
+                                                <div class="rightBtn"><!--내 메모만 보임-->
+                                                    <button class="txtType">
+                                                        <i class="ico edit"></i>
+                                                    </button>
+                                                    <button class="txtType">
+                                                        <i class="ico gray_bin_sm"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <span class="date">2024.01.12 02:37:03 PM</span>
+                                        </li>
+                                        <li>
+                                            <span class="writer">
+                                                <span class="ellipsis">홍길동</span>
+                                            </span>
+                                            <div class="comment">
+                                                <div class="content">
+                                                    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+                                                </div>
+                                                
+                                            </div>
+                                            <span class="date">2024.01.12 02:37:03 PM</span>
+                                        </li>
+                                        <li>
+                                            <span class="writer">
+                                                <span class="ellipsis">홍길동</span>
+                                            </span>
+                                            <div class="comment">
+                                                <div class="content">
+                                                동해물과 백두산이 마르고 
+                                                </div>
+                                                <div class="rightBtn">
+                                                    <button class="txtType">
+                                                        <i class="ico edit"></i>
+                                                    </button>
+                                                    <button class="txtType">
+                                                        <i class="ico gray_bin_sm"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <span class="date">2024.01.12 02:37:03 PM</span>
+                                        </li>
+                                    </ul>
+                                    <!--10개 이상일때 보이기-ys-->
+                                    <button class="txtType"><!--열림상태일때 is-active-->
+                                        <i class="ico expand"></i>더보기
+                                    </button>
+                                    <!--//10개 이상일때 보이기-ys-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--계약박스-->
+                        <div class="tabCont" id="contractBox">
+                            <h2>계약박스</h2>
+
+                            <div class="clip mt20"><span>계약박스</span></div>                             
+                            <div class="contractBox">
+                                <p>본 계약변경합의서는 “㈜에코아이티”(이하 “동반”이라 칭함)과 
+                                    “권노은”(이하 “성장”’이라 칭함) 간에<br> 계약 건에 대하여 변경 계약을 체결한다.</p>
+                                <div class="flex">
+                                    <div class="prefix">발송일 : 2024.03.26</div>
+                                    <div class="suffix">작성일 : 2024.03.26</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--등록박스-->
+                        <div class="tabCont" id="inputBox">
+                            <h2>등록박스</h2>
+
+                            <div class="clip mt20"><span>등록박스</span></div> 
+                            <div class="inputBox flex">
+                                <div class="left">
+                                    기존 원부번호 : 10252898057
+                                </div>
+                                <div class="right">
+                                    변경 원부번호 :
+                                    <div class="hasBtn">
+                                        <input type="text" placeholder="숫자만 입력">
+                                        <button class="bdType">중복확인</button>
+                                    </div>                     
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -113,7 +713,7 @@
 
 
 
-            <div id="style-element" class="tabCont is-active">
+            <div id="style-element" class="tabCont">
                 <div class="tabWrapper listType" id="style-item">
                     <!--list-->
                     <div class="tabBtnWrap">
@@ -222,8 +822,8 @@
                                     </div>
                                     <div class="circle cancel">
                                         cancel<br>#a6a6b6
-                                    </div>
-                                    <div class="circle delay">
+                                    </div>   
+                                    <div class="circle error">
                                         error<br>#ff1236
                                     </div>   
                                 </div>
@@ -2181,26 +2781,19 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/script.js"></script>
-    <script>
-        selectBox();
-        toastClose();
-        //checkAll();
-        addText();
-        showMore();
-        rangeSlider();
-        rangeSliderMulti();
-        rangeSlider();
-    </script>
-
     
 
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="../assets/js/jquery.treegrid.min.js"></script>
     <script>
     $( function() {
         $( "#datepicker" ).datepicker();
     } );
+    </script>
+
+    <script>        
+        $('.tree').treegrid();
     </script>
 </body>
 </html>
