@@ -13,6 +13,12 @@
         &.hasInfo{
             height: auto;
             max-height: calc(100vh - 460px);
+            td{
+                &.nodata{
+                    // height: 469px;
+                    height: calc(100vh - 495px);
+                }
+            }
         }
     }
     table{
@@ -639,12 +645,45 @@
         &:hover{
             background: initial;
         }
+        th,
+        td{            
+            border-left: 1px solid $tableBorder;
+            &:first-child{
+                border-left: 0;
+            }
+        }
     }
-    .hasBtn{
+    .inputBox{
+        margin-top: rem(20);
+        gap: rem(20);
+        padding: rem(20) rem(14);
+        font-size: rem(14);
+        border: 0;
+        background: $modalBg;
+        align-items: center;
+        .right{
+            display: flex;
+            align-items: center;
+            gap: rem(5);
+            position: relative;
+            &::before{
+                content:'';
+                width: 1px;
+                height: 50%;
+                background: $subGray;
+                position: absolute;
+                top: 50%;
+                left: -10px;
+                transform: translateY(-50%);
+            }
+        }
+        input{
+            width: rem(120);
+            height: rem(32);
+        }
         button{
-            width: rem(100);
-            line-height: rem(28);
             padding: 0 rem(6);
+            line-height: rem(30);
             font-size: rem(14);
         }
     }

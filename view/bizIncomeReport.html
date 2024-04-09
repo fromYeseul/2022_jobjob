@@ -673,8 +673,8 @@
     <!--//지급스케쥴-->
 
     <!--보험 근로자원부번호 수정-->
-    <div id="" class="modalLayer center">
-        <div class="layerBox midSize">
+    <div id="" class="modalLayer center is-active">
+        <div class="layerBox sm-midSize"><!--240415 수정-ys-->
             <div class="modalHeader">
                 <button class="ico layerClose"></button>                     
             </div>
@@ -683,103 +683,90 @@
                 <h3>{산재}보험 근로자원부번호 수정</h3>  
                 <div class="h3_sub">CJ프레시웨이 주문프로세스 개선 및 UI/UX 개편 _ 오포도</div>      
 
-                <div class="tableBox sticky hasInfo">
-                    <table>          
-                        <colgroup>
-                            <col width="100px">
-                            <col width="120px">
-                            <col width="100px">
-                            <col>
-                            <col width="240px">
-                        </colgroup>
+                <div class="tableBox sticky hasInfo"><!--240415 수정-ys-->
+                    <table>
                         <thead>
                             <tr>
                                 <th>회차</th>
                                 <th>지급예정일</th>
                                 <th>지급여부</th>
-                                <th>현재 원부번호</th>
-                                <th>변경 원부번호</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>2회</td>
-                                <td>2013.02.01</a></td>
-                                <td>미지급</td>
-                                <td rowspan="6">10253898057</td>
-                                <td rowspan="6" class="left">
-                                    <div class="hasBtn">
-                                        <input type="text" maxlength="11" placeholder="숫자만 입력">
-                                        <button class="bdType">중복확인</button>
-                                    </div>
-                                    <div class="hasBtn">
-                                        <input type="text" maxlength="11" placeholder="숫자만 입력">
-                                        <button>적용하기</button><!--적용클릭시 팝업 닫힘-->
-                                    </div>
-                                    <span class="eHigh">중복없음</span>
-                                    <br><!--임시사용-->
-                                    <span class="eLow">변경불가(기지급 존재)</span>
-                                    <br><!--임시사용-->
-                                    <i class="ico exMark"></i> 기계약과 원부번호 중복
-                                        
-                                </td>
+                                <td>2013.02.01</td>
+                                <td>미지급</td>                                
                             </tr>
                             <tr>
                                 <td>3회</td>
-                                <td>2013.03.01</a></td>
+                                <td>2013.02.01</td>
                                 <td>예정</td>
                             </tr>
                             <tr>
                                 <td>4회</td>
-                                <td>2013.04.01</a></td>
+                                <td>2013.02.01</td>
                                 <td>예정</td>                               
                             </tr>
                             <tr>
                                 <td>5회</td>
-                                <td>2013.05.01</a></td>
+                                <td>2013.02.01</td>
                                 <td>예정</td>                                
                             </tr>
                             <tr>
                                 <td>6회</td>
-                                <td>2013.06.01</a></td>
+                                <td>2013.02.01</td>
+                                <td>예정</td>                                                        
+                            </tr>
+                            <tr>
+                                <td>3회</td>
+                                <td>2013.02.01</td>
+                                <td>예정</td>
+                            </tr>
+                            <tr>
+                                <td>4회</td>
+                                <td>2013.02.01</td>
+                                <td>예정</td>                               
+                            </tr>
+                            <tr>
+                                <td>3회</td>
+                                <td>2013.02.01</td>
+                                <td>예정</td>
+                            </tr>
+                            <tr>
+                                <td>4회</td>
+                                <td>2013.02.01</td>
+                                <td>예정</td>                               
+                            </tr>
+                            <tr>
+                                <td>6회</td>
+                                <td>2013.02.01</td>
                                 <td>예정</td>                                                        
                             </tr>
                             <tr>
                                 <td>7회</td>
-                                <td>2013.06.01</a></td>
+                                <td>2013.06.01</td>
                                 <td>예정</td>                                                        
-                            </tr>
-                            <tr>
-                                <td>2회</td>
-                                <td>2013.02.01</a></td>
-                                <td>미지급</td>
-                                <td>10253898057</td>
-                                <td class="left">0000</td>
-                            </tr>
-                            <tr>
-                                <td>2회</td>
-                                <td>2013.02.01</a></td>
-                                <td>미지급</td>
-                                <td>10253898057</td>
-                                <td class="left">0000</td>
-                            </tr>
-                            <tr>
-                                <td>2회</td>
-                                <td>2013.02.01</a></td>
-                                <td>미지급</td>
-                                <td>10253898057</td>
-                                <td class="left">0000</td>
-                            </tr>
-                            <tr>
-                                <td>2회</td>
-                                <td>2013.02.01</a></td>
-                                <td>미지급</td>
-                                <td>10253898057</td>
-                                <td class="left">0000</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>  
+                
+				<!--240415 추가-ys-->
+                <div class="inputBox flex">
+                    <div class="left">
+                        기존 원부번호 : 10252898057
+                    </div>
+                    <div class="right">
+                        변경 원부번호 :
+                        <div class="hasBtn">
+                            <input type="text" placeholder="숫자만 입력">
+                            <button class="bdType">중복확인</button>
+                        </div>                     
+                    </div>
+                </div>
+				<!--//240415 추가-ys-->
+
                 <!--240130 위치이동-ys-->
                 <div class="bulletList">
                     <ul>
