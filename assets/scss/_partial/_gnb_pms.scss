@@ -4,6 +4,16 @@
     border-right: 1px solid $activeGray;
     box-shadow: 1px 3px 3px 0 rgba(150, 150, 150, 0.1);
     .navWrapper{
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+          }
+        &::-webkit-scrollbar-thumb {
+            background-clip: padding-box;
+            border: 2px solid transparent;
+          }
         > ul{
             > li{                        
                 &.is-active{
