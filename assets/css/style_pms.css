@@ -10898,7 +10898,7 @@ table tr.is-filter:hover {
 }
 table tfoot td {
   padding: 0 6px;
-  background: #e6e6e6;
+  background: #eaeaea;
 }
 table input, table input[type=text], table textarea, table select, table button {
   font-size: 0.8125rem;
@@ -11548,6 +11548,12 @@ table a {
 .sourcingMonthly tfoot,
 .empMonthly tfoot {
   font-weight: bold;
+}
+
+.memDept .tableBox {
+  padding: 0 1.25rem;
+  border-radius: 0.4375rem;
+  border: 1px solid #cccccc;
 }
 
 .originNum tr:hover {
@@ -13126,7 +13132,7 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 .insertType tfoot td {
   padding: 0.5rem 0.625rem;
   font-weight: bold;
-  background: #e6e6e6;
+  background: #eaeaea;
 }
 .insertType tfoot td.center {
   padding-right: 0.25rem;
@@ -13136,11 +13142,14 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   width: 100%;
 }
 .projTotal table {
-  margin-bottom: 0.1875rem;
-  border-bottom: 1px solid #666666;
+  margin-bottom: 0.3125rem;
+  border: 1px solid #dddddd;
+  border-bottom: 2px solid #666666;
 }
 .projTotal table:first-child {
   margin-bottom: 0;
+  border: 1px solid #8c98a6;
+  border-bottom: 0;
 }
 .projTotal table thead tr:last-child th {
   height: 1.5rem;
@@ -13196,7 +13205,8 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 }
 .projTotal table tfoot .upper + .flex a {
   padding-right: 0;
-  width: 69%;
+  width: auto;
+  max-width: 68%;
   color: #000000;
   text-decoration: underline;
 }
@@ -13226,7 +13236,7 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 .sourcingTotal tfoot td {
   padding: 0.5rem 0.625rem;
   font-weight: bold;
-  background: #e6e6e6;
+  background: #eaeaea;
 }
 .sourcingTotal tfoot td.center {
   padding-right: 0.25rem;
@@ -13249,12 +13259,18 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 .empTotal tfoot td {
   padding: 0.5rem 0.625rem;
   font-weight: bold;
-  background: #e6e6e6;
+  background: #eaeaea;
 }
 .empTotal tfoot td.center {
   padding-right: 0.25rem;
 }
 
+.bizIncomeReport .select.laSize {
+  width: 9.375rem;
+}
+.bizIncomeReport .select .ellipsis {
+  max-width: 100%;
+}
 .bizIncomeReport .tableBox {
   max-height: calc(100vh - 371px);
 }
@@ -13277,6 +13293,12 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 
 .purchaseLedger {
   width: 100%;
+}
+.purchaseLedger .select.laSize {
+  width: 9.375rem;
+}
+.purchaseLedger .select .ellipsis {
+  max-width: 100%;
 }
 .purchaseLedger .tableBox {
   max-height: calc(100vh - 354px);
@@ -13303,6 +13325,12 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   transform: translateX(-50%);
 }
 
+.eiCheck .select.laSize {
+  width: 9.375rem;
+}
+.eiCheck .select .ellipsis {
+  max-width: 100%;
+}
 .eiCheck .tableBox {
   max-height: calc(100vh - 371px);
 }
@@ -13340,6 +13368,12 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   top: 110%;
 }
 
+.wcCheck .select.laSize {
+  width: 9.375rem;
+}
+.wcCheck .select .ellipsis {
+  max-width: 100%;
+}
 .wcCheck .tableBox {
   max-height: calc(100vh - 371px);
 }
