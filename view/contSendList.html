@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계약발송목록</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style_pms.css">
+
+</head>
+<body>
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/pms/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li><a href="#">내정보 수정</a></li>
+                    <li>
+                        <span aria-controls="showLevel" class="layerOpen">등급보기설정
+                    </span></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li>
+                            <a alerttoast="" href="dashboard.html"><i class="ico home"></i><span class="menuTxt">홈</span></a>
+                        </li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">멤버</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">직원</span></a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">거래처</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">매출거래처</span></a></li>
+                                <li><a href="#"><span class="depth2">매입거래처</span></a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#"><i class="ico bizstate"></i><span class="menuTxt">사업관리</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">사업현황</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico ledger"></i><span class="menuTxt">매출/매입집계</span></a>
+                            <ul>                                
+                                <li><a href="project_Sum.html"><span class="depth2">프로젝트별 매출/매입</span></a></li>
+                                <li><a href="inputType_Sum.html"><span class="depth2">투입유형별 매출/매입</span></a></li>
+                                <li><a href="sourcing_Sum.html"><span class="depth2">외주 매출/매입</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="is-active"><a href="#"><i class="ico tcount"></i><span class="menuTxt">매입원장</span></a>
+                            <ul>
+                                <li class="is-active"><a href="businessIncomeStatement.html"><span class="depth2">사업소득명세서</span></a></li>
+                                <li><a href="PurchaseLedger.html"><span class="depth2">매입원장(법인/개인)</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico calculation"></i><span class="menuTxt">보험료 대사</span></a>
+                            <ul>
+                                <li><a href="calculation_industrialAccident.html"><span class="depth2">산재보험료대사</span></a></li>
+                                <li><a href="calculation_employmentIInsurance.html"><span class="depth2">고용보험료대사</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>                        
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        
+        <section class="contWrapper noRight">
+            <section class="contLayout">
+                <section class="contSendList">
+                    <h2>계약발송목록</h2>
+
+                    <div class="condition">
+                        <ul>                            
+                            <li>
+                                <p class="condiTit">사업부</p>
+                                <div class="select laSize">
+                                    <span class="selDefault">전체</span>
+                                    <ul class="optionList">
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_1" class="hasTxt">
+                                            <label for="optChk_1">SAP 사업</label>
+                                        </li>   
+                                    </ul>
+                                </div>
+                            </li>                              
+                            <li>
+                                <p class="condiTit">계약상태</p>
+                                <select>
+                                    <option value="">전체</option>
+                                    <option value="001">계약서발송</option>
+                                    <option value="002">계약완료</option>
+                                    <option value="003">3</option>
+                                    <option value="004">4</option>
+                                    <option value="005">5</option>
+                                </select>
+                            </li>
+                            <li>
+                                <p class="condiTit">계약방식</p>
+                                <select>
+                                    <option value="">전체</option>
+                                    <option value="001">전자</option>
+                                    <option value="002">수기</option>
+                                </select>
+                            </li> 
+                            <li>
+                                <p class="condiTit">계약형태</p>
+                                <select>
+                                    <option value="">전체</option>
+                                    <option value="001">계약</option>
+                                    <option value="002">변경</option>
+                                </select>
+                            </li>
+                            <li>
+                                <p class="condiTit">계약기간</p>
+                                <div class="flex">
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일" id="datepicker1">
+                                    </div>
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일" id="datepicker2">
+                                    </div>
+                                </div>
+                            </li> 
+                            <li>
+                                <p class="condiTit">사업구분</p>
+                                <select>
+                                    <option value="">전체</option>
+                                    <option value="001">법인</option>
+                                    <option value="002">개인</option>
+                                    <option value="003">사업</option>
+                                </select>
+                            </li> 
+                            <li class="hasBtn">
+                                <label class="condiTit" for="project2">검색어 입력</label>
+                                <input type="text" class="smSize" id="project2" maxlength="20" placeholder="계약명, 계약처 및 문서계약번호">
+                                <button>
+                                    <i class="ico search white"></i>
+                                </button>
+                            </li>                                              
+                        </ul>
+                    </div>
+                       
+                    <div class="tableTop">
+                        <div class="prefix">
+                            <select>
+                                <option class="optionItem" value="10">10개씩</option>
+                                <option class="optionItem" value="20" selected="">20개씩</option>
+                                <option class="optionItem" value="50">50개씩</option>
+                                <option class="optionItem" value="100">100개씩</option>
+                            </select> 
+                            <span>총건수 : 26</span>                       
+                        </div>
+
+                        <div class="suffix">
+                            <button class="bdType">발송취소</button>                            
+                            <button>계약발송</button>
+                            <button class="white">
+                                <i class="ico excDown"></i>엑셀 다운로드
+                            </button>
+                        </div>                        
+                    </div>
+
+                    <div class="tableBox sticky">    
+                        <table class="lowType">
+                            <colgroup>
+                                <col width="40px">
+                                <col width="95px">                                      
+                                <col width="90px">                                      
+                                <col width="50px"> 
+                                
+                                <col width="200px">  
+                                <col width="60px" span="2">  
+                                <col><!--계약서명-->
+                                <col width="140px"> 
+                                <col width="125px">
+                                <col width="70px" span="2"> <!--사업현황--> 
+
+                                <col width="80px" span="2"><!--발송일-->
+                                <col width="60px">
+                                <col width="180px">
+                            </colgroup>
+                            <thead>
+                                <th>
+                                    <input type="checkbox" id="ff0">
+                                    <label for="ff0"></label>
+                                </th>
+                                <th>사업부</th>                                      
+                                <th>상태</th>                                 
+                                <th>사업구분</th>  
+                                <th>계약처</th> 
+                                <th>계약방식</th>
+                                <th>계약형태</th>      
+                                <th>계약서명</th>                               
+                                <th>계약기간</th>
+                                <th>계약금액</th>                                                                
+                                <th>사업현황</th> 
+                                <th>발송자</th>
+                                <th>(재)발송일</th>                                  
+                                <th>서명완료일</th>
+                                <th>계약서</th>
+                                <th>비고</th>                                     
+                            </thead>
+                            <tbody>                                
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="ff1">
+                                        <label for="ff1"></label>
+                                    </td>
+                                    <td>SAP 전략사업부</td>    
+                                    <td>계약완료</td>
+                                    <td>법인</td>
+                                    <td><a href="#">(주)매그넘브릿지</a></td>    
+                                    <td>전자</td> 
+                                    <td>계약</td>
+                                                                           
+                                    <td class="ellipsis">
+                                        <a href="#">SAMSUNG CAS ServiceSAMSUNG CAS ServiceSAMSUNG CAS Service</a>                                        
+                                    </td>
+                                    <td>2024.01.01 ~ 2024.12.31</td>
+                                    <td class="txtRight">50,000,000</td> 
+                                    
+                                    <td><i class="ico pageList"></i></td> 
+                                    <td>김재윤 수석</td>
+                                    <td>2024.04.13</td>                                                                                
+                                    <td>2024.04.13</td>   
+                                    <td><i class="ico download"></i></td>                          
+                                    <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="ff2">
+                                        <label for="ff2"></label>
+                                    </td>
+                                    <td>R&D 센터</td>    
+                                    <td><span class="marked">계약서발송</span></td>
+                                    <td>법인</td>
+                                    <td><a href="#">(주)주식회사에스아이시티</a></td>    
+                                    <td>전자</td> 
+                                    <td>변경</td> 
+                                                                           
+                                    <td class="ellipsis">
+                                        <a href="#">대기업 B2B 주문 프로세스 개선 기획자 모집</a>                                        
+                                    </td>
+                                    <td>2024.03.01 ~ 2024.12.31</td>
+                                    <td class="txtRight">820,000,000</td> 
+                                    
+                                    <td><i class="ico pageList"></i></td> 
+                                    <td>홍길동 책임</td>
+                                    <td>2024.04.13</td>                                                                                
+                                    <td>-</td> 
+                                    <td><i class="ico preview"></i></td>                          
+                                    <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
+                                </tr>                         
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="9"></td>
+                                    <td class="txtRight">450,000,000</td>                                          
+                                    <td colspan="6"></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <div class="listBottom pagingType">                        
+                        <div class="paging">
+                            <ul>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico pagingFirst"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico pagingLeft"></span>
+                                    </a>
+                                </li>
+                                <li class="is-active"><a>1</a></li>
+                                <li><a>2</a></li>
+                                <li><a>3</a></li>
+                                <li><a>4</a></li>
+                                <li><a>5</a></li>
+                                <li><a>6</a></li>
+                                <li><a>7</a></li>
+                                <li><a>8</a></li>
+                                <li><a>9</a></li>
+                                <li><a>10</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico pagingRight is-active"></span>
+                                    </a>
+                                </li>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico pagingLast is-active"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>          
+    </section>
+
+    <!--지급스케쥴-->
+    <div id="" class="modalLayer center">
+        <div class="layerBox midSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+           
+            <div class="modalCont paySchedule"><!--팝업 고유 클래스-->
+
+                <h3>지급스케쥴</h3>
+                <div class="h3_sub">CJ프레시웨이 주문프로세스 개선 및 UI/UX 개편 _ 오포도</div>
+                
+                <div class="tableTop right">
+                    <button type="button" class="onlyIco smSize"><i class="ico smPlus"></i></button>
+                </div>
+                <div class="tableBox sticky">
+                    <table> 
+                        <colgroup>
+                            <col width="50px">
+                            <col width="105px">
+                            <col width="65px">
+                            <col width="90px">
+                            <col width="75px" span="4">
+                            <col>
+                            <col width="40px">
+                        </colgroup>                      
+                        <thead>
+                            <tr>
+                                <th>회차</th>
+                                <th>지급예정일</th>
+                                <th>지급여부</th>
+                                <th>공급가</th>
+                                <th>소득세</th>
+                                <th>주민세</th>
+                                <th>산재보험</th>
+                                <th>고용보험</th>
+                                <th>차인지급액</th>
+                                <th>삭제</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="disabled">
+                                <td class="center">1회</td>
+                                <td>
+                                    <div class="datepicker sat disabled"><!--토요일일때 sat / 일요일 sun-->
+                                        <input type="text" placeholder="연-월-월" value="2024.01.01" id="datepicker11">
+                                    </div>
+                                </td>
+                                <td class="center"><button class="round order">완료</button></td>
+                                <td><input type="text" value="8,100,000" readonly></td>
+                                <td>243,000</td>
+                                <td>24,300</td>
+                                <td><input type="text" value="20,850" readonly></td>
+                                <td><input type="text" value="56,620" readonly></td>
+                                <td>7,757,600</td>
+                                <td class="center"><i class="ico delete_bg"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="center">2회</td>
+                                <td>
+                                    <div class="datepicker sat"><!--토요일일때 sat / 일요일 sun-->
+                                        <input type="text" placeholder="연-월-일" value="2024.01.01">
+                                    </div>
+                                </td>
+                                <td class="center">미지급</td>
+                                <td><input type="text" value="8,100,000"></td>
+                                <td>243,000</td>
+                                <td>24,300</td>
+                                <td><input type="text" value="20,850"></td>
+                                <td><input type="text" value="56,620"></td>
+                                <td>7,757,600</td>
+                                <td class="center"><i class="ico delete_bg"></i></td>
+                            </tr>    
+                            <tr>
+                                <td class="center">3회</td>
+                                <td>
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일" value="2024.01.01">
+                                    </div>
+                                </td>
+                                <td class="center"><button class="round order">완료</button></td>
+                                <td><input type="text" value="8,100,000" readonly></td>
+                                <td>243,000</td>
+                                <td>24,300</td>
+                                <td><input type="text" value="20,850" readonly></td>
+                                <td><input type="text" value="56,620" readonly></td>
+                                <td>7,757,600</td>
+                                <td class="center"><i class="ico delete_bg"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="center">4회</td>
+                                <td>
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일" value="2024.01.01">
+                                    </div>
+                                </td>
+                                <td class="center">미지급</td>
+                                <td><input type="text" value="8,100,000"></td>
+                                <td>243,000</td>
+                                <td>24,300</td>
+                                <td><input type="text" value="20,850"></td>
+                                <td><input type="text" value="56,620"></td>
+                                <td>7,757,600</td>
+                                <td class="center"><i class="ico delete_bg"></i></td>
+                            </tr>   
+                            <tr class="disabled">
+                                <td class="center">5회</td>
+                                <td>
+                                    <div class="datepicker disabled">
+                                        <input type="text" placeholder="연-월-일" value="2024.01.01">
+                                    </div>
+                                </td>
+                                <td class="center"><button class="round order">완료</button></td>
+                                <td><input type="text" value="8,100,000" readonly></td>
+                                <td>243,000</td>
+                                <td>24,300</td>
+                                <td><input type="text" value="20,850" readonly></td>
+                                <td><input type="text" value="56,620" readonly></td>
+                                <td>7,757,600</td>
+                                <td class="center"><i class="ico delete_bg"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="center">6회</td>
+                                <td>
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일" value="2024.01.01">
+                                    </div>
+                                </td>
+                                <td class="center">미지급</td>
+                                <td><input type="text" value="8,100,000"></td>
+                                <td>243,000</td>
+                                <td>24,300</td>
+                                <td><input type="text" value="20,850"></td>
+                                <td><input type="text" value="56,620"></td>
+                                <td>7,757,600</td>
+                                <td class="center"><i class="ico delete_bg"></i></td>
+                            </tr>     
+                        </tbody>
+                        <tfoot>                           
+                            <tr>
+                                <td class="center" colspan="3">
+                                    <span class="emp">총 계약금액 : 113,758,000</span>
+                                </td>
+                                <td>42,750,000</td>
+                                <td>104,300</td>
+                                <td>104,300</td>
+                                <td>100,850</td>
+                                <td>106,620</td>
+                                <td>32,750,600</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="modalFooter">    
+                <button class="white">닫기</button>
+                <button class="">저장</button>
+            </div>
+        </div>
+        <div class="layerDim"></div> 
+    </div>
+    <!--//지급스케쥴-->
+
+    <!--보험 근로자원부번호 수정-->
+    <div id="" class="modalLayer center">
+        <div class="layerBox">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>                     
+            </div>
+            
+            <div class="modalCont originNum"><!--팝업 고유 클래스-->
+                <h3>{산재}보험 근로자원부번호 수정</h3>  
+                <div class="h3_sub">CJ프레시웨이 주문프로세스 개선 및 UI/UX 개편 _ 오포도</div>      
+
+                <div class="tableBox sticky">
+                    <table>          
+                        <colgroup>
+                            <col width="100px">
+                            <col width="120px">
+                            <col width="100px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>현재 원부번호</th>
+                                <th colspan="2">변경 원부번호</th>
+                            </tr>
+                            <tr>
+                                <th>회차</th>
+                                <th>지급예정일</th>
+                                <th>지급여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="disabled">
+                                <td>10253898057</td>
+                                <td colspan="2">변경 불가</td>
+                            </tr>
+                            <tr>
+                                <td>1회</td>
+                                <td>2013.01.01</a></td>
+                                <td><button class="round order">완료</button></td>
+                            </tr>
+                            <tr>  
+                                <td>10253898057</td>
+                                <td colspan="2" class="left">
+                                    <div class="hasBtn">
+                                        <input type="text" maxlength="11" placeholder="숫자만 입력">
+                                        <button class="bdType">중복확인</button>
+                                    </div>
+                                    <!--
+                                    <div class="hasBtn">
+                                        <input type="text" maxlength="11" placeholder="숫자만 입력">
+                                        <button>적용하기</button><!--적용클릭시 팝업 닫힘
+                                    </div>
+                                    <span class="eHigh">중복없음</span>
+                                    <br>임시사용
+                                    <span class="eLow">변경불가(기지급 존재)</span>
+                                    <br><!--임시사용
+                                    <i class="ico exMark"></i> 기계약과 원부번호 중복-->
+                                        
+                                </td> 
+                            </tr>                         
+                            <tr>
+                                <td>2회</td>
+                                <td>2013.02.01</a></td>
+                                <td>미지급</td>                                
+                            </tr>
+                            <tr>
+                                <td>3회</td>
+                                <td>2013.03.01</a></td>
+                                <td>예정</td>
+                            </tr>
+                            <tr>
+                                <td>4회</td>
+                                <td>2013.04.01</a></td>
+                                <td>예정</td>                               
+                            </tr>
+                            <tr>
+                                <td>5회</td>
+                                <td>2013.05.01</a></td>
+                                <td>예정</td>                                
+                            </tr>
+                            <tr>
+                                <td>6회</td>
+                                <td>2013.06.01</a></td>
+                                <td>예정</td>                                                        
+                            </tr>
+                            <tr>
+                                <td>7회</td>
+                                <td>2013.06.01</a></td>
+                                <td>예정</td>                                                        
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                       
+            </div>
+            
+            <div class="bulletList">
+                <li>지급완료건이 존재하는 경우 변경할 수 없습니다. </li>
+                <li>공단에 신고된 실제 원부번호를 수정하는 것이 아니며, 다른 계약과 고용/산재보험료를 합산하거나 원부번호 보정이 필요할 때 사용합니다.   </li>
+            </div>     
+            <div class="modalFooter single">
+                <button class="white">닫기</button>
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--//보험 근로자원부번호 수정-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../assets/js/script.js"></script>     
+    <script>  
+        $(function(){
+            $("#datepicker00").datepicker({
+                dateFormat:'yy/mm/dd'
+                , showOn: 'button'
+                , buttonImage: '../assets/img/icoCal.png'
+                , buttonImageOnly: true
+            })
+            $("#datepicker11").datepicker({
+                dateFormat:'yy/mm'
+                , showOn: 'button'
+                , buttonImage: '../assets/img/icoCal.png'
+                , buttonImageOnly: true
+            })
+        });
+    </script>
+</body>
+</html>
