@@ -367,6 +367,12 @@
                 width: rem(190);
                 text-align: left;
             }
+            &.right{
+                width: rem(300);
+                right: auto;
+                text-align: left;
+                left: rem(20);
+            }
         }
     }
     .tableBox{
@@ -455,13 +461,16 @@
         select,
         input[type=text]{
             flex: 1;
-            line-height: rem(28);
-            height: rem(32);
+            // line-height: rem(28);
+            // height: rem(32);
         }
         select{
+            // width: 112px;
+            // max-width: 100%;
             &.smSize{
                 flex: initial;
-                width: rem(135);
+                // width: rem(144);
+                width: rem(190);
             }
         }
         button{
@@ -485,6 +494,23 @@
             padding: 0 rem(6);
             line-height: rem(28);
             font-size: rem(14);
+        }
+    }
+
+    .signBox{
+        margin-top: rem(30);
+        text-align: right;
+        table{
+            margin-left: auto;
+            width: rem(320);
+            th{
+                color: $tableGray;
+                background: transparent;
+                border-top: 1px solid $tableBorder;
+            }
+            td{
+                text-align: left;
+            }
         }
     }
 }
