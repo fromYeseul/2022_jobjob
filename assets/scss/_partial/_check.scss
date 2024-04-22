@@ -14,12 +14,17 @@ input[type=radio]{
         &::before{
             content:'';
             display: inline-block;
-            vertical-align: sub;
+            vertical-align: middle;
             width: rem(18);
             height: rem(18);
             // vertical-align: -3px;
             background-image: url(../img/icoGroup.png);
             background-position: 0px -100px;
+        }
+        + input{
+            + label{
+                margin-left: rem(5);
+            }
         }
     }
     &:checked{
