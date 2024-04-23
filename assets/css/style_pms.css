@@ -762,7 +762,8 @@ header {
 .contWrapper .contLayout .sendedOfferList, .contWrapper .contLayout .sendedOfferDetail, .contWrapper .contLayout .talentedSearch,
 .contWrapper .contLayout .clientBuy, .contWrapper .contLayout .clientSales, .contWrapper .contLayout .bizState, .contWrapper .contLayout .resumeList,
 .contWrapper .contLayout .dashboard, .contWrapper .contLayout .insertType, .contWrapper .contLayout .projTotal, .contWrapper .contLayout .salesLedger, .contWrapper .contLayout .sourcingTotal, .contWrapper .contLayout .empTotal,
-.contWrapper .contLayout .bizIncomeReport, .contWrapper .contLayout .purchaseLedger, .contWrapper .contLayout .eiCheck, .contWrapper .contLayout .wcCheck {
+.contWrapper .contLayout .bizIncomeReport, .contWrapper .contLayout .purchaseLedger, .contWrapper .contLayout .eiCheck, .contWrapper .contLayout .wcCheck,
+.contWrapper .contLayout .contSendList {
   height: calc(100vh - 60px);
   padding: 1.875rem 1.875rem 1.25rem 1.875rem;
   overflow-y: auto;
@@ -2976,12 +2977,24 @@ footer.toast button + button {
 .condition .hasBtn button + .hasTxt + label {
   margin-left: 1.25rem;
 }
+.condition .hasBtn .button.bdType,
+.condition .hasBtn button.bdType {
+  padding: 0 0.75rem;
+  width: auto;
+  color: #0460d2;
+  border: 1px solid #0460d2;
+  background: #fff;
+}
 .condition .hasBtn input {
   width: 25rem;
 }
 .condition .select.autoSize,
 .condition select.autoSize {
   height: 2.75rem;
+}
+.condition .select.laSize,
+.condition select.laSize {
+  width: 9.375rem;
 }
 .condition.right ul {
   justify-content: flex-end;
@@ -3214,7 +3227,7 @@ table tr td.left {
 }
 table tr td.right {
   text-align: right;
-  padding-right: 10px;
+  padding-right: 0.375rem;
 }
 table tr td.hasToast {
   position: relative;
@@ -3287,11 +3300,6 @@ table.rowType tr:last-child {
 }
 table.rowType td {
   padding: 0.75rem;
-}
-table.rowType td:first-child {
-  font-weight: 700;
-  padding: 0.75rem 0.375rem;
-  border-right: 1px solid #dddddd;
 }
 table.chkType tr th {
   padding: 0;
@@ -4141,9 +4149,8 @@ button.round,
   margin-right: 0.125rem;
   font-weight: 500;
   word-break: keep-all;
-  vertical-align: text-bottom;
   background: #fff;
-  border: 1px solid #8a8a8c;
+  border: 1px solid #b7b7c4;
   border-radius: 1.25rem;
   cursor: initial;
 }
@@ -4202,7 +4209,7 @@ button.onlyIco.lowSize,
 }
 button.onlyIco.gray,
 .button.onlyIco.gray {
-  border: 1px solid #8a8a8c;
+  border: 1px solid #b7b7c4;
   background: #929295;
 }
 button.onlyIco.round,
@@ -5479,11 +5486,15 @@ input[type=checkbox] + label::before,
 input[type=radio] + label::before {
   content: "";
   display: inline-block;
-  vertical-align: sub;
+  vertical-align: middle;
   width: 1.125rem;
   height: 1.125rem;
   background-image: url(../img/icoGroup.png);
   background-position: 0px -100px;
+}
+input[type=checkbox] + label + input + label,
+input[type=radio] + label + input + label {
+  margin-left: 0.3125rem;
 }
 input[type=checkbox]:checked + label::before,
 input[type=radio]:checked + label::before {
@@ -6500,6 +6511,9 @@ select.onGoing:focus {
 .select label::before {
   vertical-align: middle;
 }
+.select .ellipsis {
+  max-width: 100%;
+}
 .select + .select {
   margin-left: 0.625rem;
 }
@@ -7233,8 +7247,8 @@ tr.loading > td > .treegrid-container > .treegrid-expander::after {
   background-position: -180px -300px;
 }
 .ico.delete_bin {
-  width: 1.125rem;
-  height: 1.125rem;
+  width: 0.8125rem;
+  height: 1rem;
   vertical-align: inherit;
   background-position: -180px -340px;
   cursor: pointer;
@@ -10574,6 +10588,9 @@ h6 + .h6_sub {
 .layoutWrapper.is-active .gnbWrapper, .layoutWrapper.is-hover .gnbWrapper {
   background: #fff;
 }
+.layoutWrapper.is-active .navWrapper::-webkit-scrollbar, .layoutWrapper.is-hover .navWrapper::-webkit-scrollbar {
+  width: 0.375rem;
+}
 .layoutWrapper.is-active .navWrapper > ul > li::before, .layoutWrapper.is-hover .navWrapper > ul > li::before {
   background: #808080;
 }
@@ -10585,6 +10602,16 @@ h6 + .h6_sub {
   background: #fff;
   border-right: 1px solid #dddddd;
   box-shadow: 1px 3px 3px 0 rgba(150, 150, 150, 0.1);
+}
+.gnbWrapper .navWrapper::-webkit-scrollbar {
+  width: 0;
+}
+.gnbWrapper .navWrapper::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.gnbWrapper .navWrapper::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  border: 2px solid transparent;
 }
 .gnbWrapper .navWrapper > ul > li.is-active > a {
   color: #2a55aa;
@@ -10707,6 +10734,7 @@ header .tooltip .toolBox ul .myBottom .button {
   background-position: -60px 0;
 }
 .gnb .ico.member {
+  width: 1.5rem;
   background-position: -60px -30px;
 }
 .gnb .ico.project {
@@ -10897,7 +10925,7 @@ table tr.is-filter:hover {
   background: #f8f2f2;
 }
 table tfoot td {
-  padding: 0 6px;
+  padding: 0 4px;
   background: #eaeaea;
 }
 table input, table input[type=text], table textarea, table select, table button {
@@ -10908,7 +10936,6 @@ table input::placeholder, table input[type=text]::placeholder, table textarea::p
 }
 table input[type=checkbox] + label,
 table input[type=radio] + label {
-  margin-right: 0.625rem;
   font-size: 0.8125rem;
 }
 table a {
@@ -11278,6 +11305,13 @@ table a {
   width: 11.875rem;
   text-align: left;
 }
+.eleContract .tableTop .tooltip.right,
+.eleContAgree .tableTop .tooltip.right {
+  width: 18.75rem;
+  right: auto;
+  text-align: left;
+  left: 1.25rem;
+}
 .eleContract .tableBox,
 .eleContAgree .tableBox {
   overflow: visible;
@@ -11383,13 +11417,11 @@ table a {
 .eleContAgree table select,
 .eleContAgree table input[type=text] {
   flex: 1;
-  line-height: 1.75rem;
-  height: 2rem;
 }
 .eleContract table select.smSize,
 .eleContAgree table select.smSize {
   flex: initial;
-  width: 8.4375rem;
+  width: 11.875rem;
 }
 .eleContract table button,
 .eleContAgree table button {
@@ -11415,6 +11447,26 @@ table a {
   padding: 0 0.375rem;
   line-height: 1.75rem;
   font-size: 0.875rem;
+}
+.eleContract .signBox,
+.eleContAgree .signBox {
+  margin-top: 1.875rem;
+  text-align: right;
+}
+.eleContract .signBox table,
+.eleContAgree .signBox table {
+  margin-left: auto;
+  width: 20rem;
+}
+.eleContract .signBox table th,
+.eleContAgree .signBox table th {
+  color: #666666;
+  background: transparent;
+  border-top: 1px solid #dddddd;
+}
+.eleContract .signBox table td,
+.eleContAgree .signBox table td {
+  text-align: left;
 }
 
 .eleContract .contentFlex {
@@ -11678,11 +11730,14 @@ table a {
   margin-top: 1.25rem;
   padding: 1.25rem 9.375rem;
   text-align: center;
-  border: 1px solid #dddddd;
 }
 .contractBox .flex {
   margin-top: 1.25rem;
-  justify-content: space-between;
+  gap: 0.625rem;
+  justify-content: space-around;
+}
+.contractBox .flex .suffix {
+  margin-left: 0;
 }
 
 .memRegister .breadCrumb {
@@ -11693,10 +11748,10 @@ table a {
 }
 .memRegister .regiPartWrapper button.round {
   width: 4.125rem;
-  vertical-align: text-bottom;
+  height: 1.625rem;
 }
 .memRegister .regiPartWrapper button.round i {
-  margin-right: 3px;
+  margin-right: 0.3125rem;
 }
 .memRegister .boxWrap .flex {
   align-items: center;
@@ -11883,6 +11938,11 @@ table a {
 }
 .memDetail .chipBox {
   margin-top: 10px;
+}
+.memDetail table.rowType td:first-child {
+  font-weight: 700;
+  padding: 0.75rem 0.375rem;
+  border-right: 1px solid #dddddd;
 }
 
 #memDetail-1,
@@ -12750,9 +12810,6 @@ table a {
   column-gap: 3.75rem;
   grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr;
 }
-.clientRegister .bizCorpor.corpor .clientWeb {
-  grid-column: 3/5;
-}
 .clientRegister .bizCorpor.corpor .clientAdd {
   grid-column: 1/3;
 }
@@ -12824,12 +12881,6 @@ table a {
 
 .bizState {
   width: 100%;
-}
-.bizState .select.laSize {
-  width: 9.375rem;
-}
-.bizState .select .ellipsis {
-  max-width: 100%;
 }
 .bizState .tableBox {
   max-height: calc(100vh - 371px);
@@ -13265,12 +13316,6 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   padding-right: 0.25rem;
 }
 
-.bizIncomeReport .select.laSize {
-  width: 9.375rem;
-}
-.bizIncomeReport .select .ellipsis {
-  max-width: 100%;
-}
 .bizIncomeReport .tableBox {
   max-height: calc(100vh - 371px);
 }
@@ -13293,12 +13338,6 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 
 .purchaseLedger {
   width: 100%;
-}
-.purchaseLedger .select.laSize {
-  width: 9.375rem;
-}
-.purchaseLedger .select .ellipsis {
-  max-width: 100%;
 }
 .purchaseLedger .tableBox {
   max-height: calc(100vh - 354px);
@@ -13325,12 +13364,6 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   transform: translateX(-50%);
 }
 
-.eiCheck .select.laSize {
-  width: 9.375rem;
-}
-.eiCheck .select .ellipsis {
-  max-width: 100%;
-}
 .eiCheck .tableBox {
   max-height: calc(100vh - 371px);
 }
@@ -13368,12 +13401,6 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   top: 110%;
 }
 
-.wcCheck .select.laSize {
-  width: 9.375rem;
-}
-.wcCheck .select .ellipsis {
-  max-width: 100%;
-}
 .wcCheck .tableBox {
   max-height: calc(100vh - 371px);
 }
