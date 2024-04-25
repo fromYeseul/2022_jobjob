@@ -1126,11 +1126,11 @@
                                 <span class="hasTooltip">
                                     <i class="ico paper"></i>
                                     <div class="tooltip right">                                                                                                                                                   
-                                        <div class="yScroll">
-                                            변경 전 계약기간 : <b>2023.01.01 ~ 2023.12.31</b><br>
-                                            변경 전 M/M : <b>1.43</b><br>
-                                            변경 전 원단가(원) : <b>400,000</b><br>
-                                            변경 전 계약금액(원) : <b>500,000</b>
+                                        <div class="yScroll"><!--240425 수정-->
+                                            기간 : 2023.01.01 ~ 2023.12.31<br>
+                                            M/M : 1.43<br>
+                                            원단가 : 400,000원<br>
+                                            계약금액 : 500,000원
                                         </div>
                                     </div>
                                 </span>
@@ -1264,11 +1264,19 @@
                                             </div>
                                         </td>
                                         <th>청구일</th>
-                                        <td>                                            
-                                            <select>
-                                                <option value="">청구일</option>
-                                                <option value="">1일</option>
-                                            </select>
+                                        <td>              
+                                            <!--240425 수정-->
+                                            <div class="flex">                              
+                                                <select class="xxsSize">
+                                                    <option value="">당월</option>
+                                                    <option value="">1일</option>
+                                                </select>                                        
+                                                <select>
+                                                    <option value="">청구일</option>
+                                                    <option value="">1일</option>
+                                                </select>
+                                            </div>
+                                            <!--//240425 수정-->
                                         </td>
                                         <th>지급일</th>
                                         <td>                                            
@@ -1278,20 +1286,13 @@
                                             </select>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr>        
                                         <!--수기계약에서 없음-->
-                                        <th>인증방법</th>
-                                        <td colspan="3">
-                                            <input type="radio" id="a1" name="c1" class="hasTxt">
-                                            <label for="a1">본인인증</label>
-                                            <input type="radio" id="l1" name="c1" class="hasTxt">
-                                            <label for="l1">공인인증서</label>
-                                        </td>
                                         <th>발송자</th>
-                                        <td>R&D Lab 홍길동</td>
-                                        <!--//수기계약에서 없음-->    
+                                        <td colspan="3">R&D Lab 홍길동</td><!--240425 수정-->
+                                        <!--//수기계약에서 없음-->                            
                                         <th>전자발송번호</th>
-                                        <td>P-A0000-A0000-A0000(23)</td>
+                                        <td colspan="3">P-A0000-A0000-A0000(23)</td><!--240425 수정-->
                                     </tr>      
                                     <tr>
                                         <th>첨부파일</th>
@@ -1320,6 +1321,27 @@
                                                 <input type="file" name="c2" id="c2" class="" tabindex="">
                                             </div>
                                         </td>
+                                        <!--수기계약에서 없음-->
+                                        <th>인증방법</th>
+                                        <td colspan="3">
+                                            <div class="flex">
+                                                <div class="prefix">
+                                                    <input type="radio" id="a1" name="c1" class="hasTxt">
+                                                    <label for="a1">본인인증</label>
+                                                    <input type="radio" id="l1" name="c1" class="hasTxt">
+                                                    <label for="l1">공인인증서</label>
+                                                </div>
+                                                <div class="suffix">            
+                                                    <input type="checkbox" id="ab12" name="aab" class="hasTxt">
+                                                    <label for="ab12">담당자와 일치</label>
+                                                </div>
+                                            </div>
+                                            <div class="flex">
+                                                <input type="text" placeholder="이름">
+                                                <input type="text" placeholder="전화번호">
+                                            </div>
+                                        </td>
+                                        <!--//수기계약에서 없음-->    
                                     </tr>                      
                                 </tbody>
                             </table>
@@ -1912,7 +1934,7 @@
 
 
     <!--전자계약합의서-->
-    <div id="" class="modalLayer center">
+    <div id="" class="modalLayer center is-active">
         <div class="layerBox mid-laSize">
             <div class="modalHeader mb0">
                 <button class="ico layerClose"></button>
@@ -1921,8 +1943,8 @@
                 <h2>계약변경합의서</h2>
                 <div class="boxTop">
                     <div class="suffix">
-                        <button class="white smSize">미리보기</button>
-                        <button class="white smSize">계약서 다운로드</button>
+                        <button class="white smSize"><i class="ico preview"></i>미리보기</button>
+                        <button class="white smSize"><i class="ico download"></i>계약서 다운로드</button>
                     </div>
                 </div>
                 <div class="boxWrap titType">
@@ -1942,7 +1964,10 @@
                                             <!-- <a href="#">CJ프레시웨이 온리원푸드넷 모바일 UI/UX 및 주문프로세스 개선CJ프레시웨이 온리원푸드넷 모바일 UI/UX 및 주문프로세스 개선</a> -->
                                             
                                             <!--240430 수정-->
-                                            <textarea rows="2">CJ프레시웨이 온리원푸드넷 모바일 UI/UX 및 주문프로세스 개선CJ프레시웨이 온리원푸드넷 모바일 UI/UX 및 주문프로세스 개선</textarea>
+                                            <!-- <textarea rows="2">CJ프레시웨이 온리원푸드넷 모바일 UI/UX 및 주문프로세스 개선CJ프레시웨이 온리원푸드넷 모바일 UI/UX 및 주문프로세스 개선</textarea> -->
+                                            
+                                            <!--240425 수정-->
+                                            <input type="text" placeholder="부재(최대 5자)">
                                         </td>
                                         <td><input type="text" placeholder="부재(최대 5자)"></td>
                                     </tr>
@@ -1962,9 +1987,10 @@
                                     </tr>-->
                                     <tr>
                                         <th>2. 계약금액</th>
-                                        <td>
-                                            <p>변경 전 일금 천일만원정(10,010,000원/VAT별도) 월 7,000,000원</p>
-                                            <input type="text" class="laSize" value="변경 후 일금 천칠백일만원정(17,010,000원/VAT별도) 월 7,000,000원">
+                                        <td colspan="2"><!--240425 수정-->
+                                            <!-- <p>변경 전 일금 천일만원정(10,010,000원/VAT별도) 월 7,000,000원</p> -->
+                                            <input type="text" class="" value="변경 전 일금 천칠백일만원정(17,010,000원/VAT별도) 월 7,000,000원" disabled><!--240425 수정-->
+                                            <input type="text" class="" value="변경 후 일금 천칠백일만원정(17,010,000원/VAT별도) 월 7,000,000원">
                                         </td>
                                     </tr>
                                     <!-- <tr>
@@ -1980,9 +2006,10 @@
                                     </tr> -->
                                     <tr>
                                         <th>3. 계약기간</th>
-                                        <td>
-                                            <p>변경 전 2022년 01월 18일 ~ 2022년 12월 31일</p>
-                                            <input type="text" class="laSize" value="변경 후 2022년 01월 18일 ~ 2022년 12월 31일">
+                                        <td colspan="2"><!--240425 수정-->
+                                            <!-- <p>변경 전 2022년 01월 18일 ~ 2022년 12월 31일</p> -->
+                                            <input type="text" class="" value="변경 전 2022년 01월 18일 ~ 2022년 12월 31일" disabled><!--240425 수정-->
+                                            <input type="text" class="" value="변경 후 2022년 01월 18일 ~ 2022년 12월 31일">
                                         </td>
                                     </tr>
                                     <!--//240430 수정-->
@@ -2008,6 +2035,11 @@
                             </table>
                         </div>
 
+                        <!--240425 추가-->
+                        <div class="tableTop right">
+                            <button class="white smSize">지급스케줄</button>
+                        </div>
+                        <!--//240425 추가-->
                         <div class="tableBox">
                             <table>
                                 <colgroup>
@@ -2112,20 +2144,21 @@
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <!--240425 수정-->
                                         <td>
                                             서울 강남구<br> 
                                             강남대로146길 25 4층<br>
                                             서울 강남구 강남대로146길
                                             25 4층 서울 <br>
-                                            홍길동
+                                            <input type="text" value="홍길동">
                                         </td>
                                         <td>
-                                            서울 강남구<br> 
-                                            강남대로146길 25 4층<br>
-                                            서울 강남구 강남대로146길
-                                            25 4층 서울 <br>
+                                            에코아이티<br> 
+                                            111-000-1111
+                                            <textarea name="" id="" cols="5" rows="3">서울 강남구 강남대로146길 25 4층 홍길동</textarea><!--//240425 수정-->
                                             홍길동
                                         </td>
+                                        <!--//240425 수정-->
                                     </tr>
                                 </tbody>
                             </table>
@@ -2136,7 +2169,7 @@
                         <h5 class="mt30">※ 참고사항</h5>
                         <div class="bulletList">
                             <ul>
-                                <li>계약금액, 계약기간, 대금일정은 [계약기본] 화면에서만 수정할 수 있습니다</li>
+                                <li><span class="eHigh">계약금액, 계약기간, 대금일정은 [계약기본] 화면에서만 수정할 수 있습니다.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -2145,6 +2178,7 @@
             <div class="modalFooter">
                 <button class="white">닫기</button>
                 <button class="">저장</button>
+                <button class="rBdType">계약발송</button>
             </div>
         </div>
         <div class="layerDim"></div> 

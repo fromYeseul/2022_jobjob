@@ -358,7 +358,7 @@
         overflow-y: auto;
     }
     .tableTop{
-        margin-top: rem(40);
+        margin-top: rem(20);
         &:first-child{
             margin-top: 0;
         }
@@ -368,7 +368,7 @@
                 text-align: left;
             }
             &.right{
-                width: rem(300);
+                width: rem(200);
                 right: auto;
                 text-align: left;
                 left: rem(20);
@@ -442,6 +442,7 @@
         .flex{
             gap: 5px;
             align-items: center;
+            justify-content: space-between;
             li{
                 display: flex;
                 align-items: center;
@@ -457,12 +458,23 @@
                 width: rem(50);
                 line-height: rem(28);
             }
+            & + .flex{
+                margin-top: rem(15);
+
+            }
+            select,
+            input[type=text]{
+                flex: 1 1 auto;
+            }
         }
         select,
         input[type=text]{
             flex: 1;
             // line-height: rem(28);
             // height: rem(32);
+            & + input[type=text]{
+                margin-top: 5px;
+            }
         }
         select{
             // width: 112px;
@@ -517,6 +529,9 @@
 
 
 .eleContract{
+    .tableTop{
+        margin-top: rem(40);
+    }
     .contentFlex{
         display: flex;
         gap: 30px;
