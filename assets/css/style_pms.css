@@ -11294,7 +11294,7 @@ table a {
 }
 .eleContract .tableTop,
 .eleContAgree .tableTop {
-  margin-top: 2.5rem;
+  margin-top: 1.25rem;
 }
 .eleContract .tableTop:first-child,
 .eleContAgree .tableTop:first-child {
@@ -11307,7 +11307,7 @@ table a {
 }
 .eleContract .tableTop .tooltip.right,
 .eleContAgree .tableTop .tooltip.right {
-  width: 18.75rem;
+  width: 12.5rem;
   right: auto;
   text-align: left;
   left: 1.25rem;
@@ -11393,6 +11393,7 @@ table a {
 .eleContAgree table .flex {
   gap: 5px;
   align-items: center;
+  justify-content: space-between;
 }
 .eleContract table .flex li,
 .eleContAgree table .flex li {
@@ -11412,11 +11413,27 @@ table a {
   width: 3.125rem;
   line-height: 1.75rem;
 }
+.eleContract table .flex + .flex,
+.eleContAgree table .flex + .flex {
+  margin-top: 0.9375rem;
+}
+.eleContract table .flex select,
+.eleContract table .flex input[type=text],
+.eleContAgree table .flex select,
+.eleContAgree table .flex input[type=text] {
+  flex: 1 1 auto;
+}
 .eleContract table select,
 .eleContract table input[type=text],
 .eleContAgree table select,
 .eleContAgree table input[type=text] {
   flex: 1;
+}
+.eleContract table select + input[type=text],
+.eleContract table input[type=text] + input[type=text],
+.eleContAgree table select + input[type=text],
+.eleContAgree table input[type=text] + input[type=text] {
+  margin-top: 5px;
 }
 .eleContract table select.smSize,
 .eleContAgree table select.smSize {
@@ -11469,6 +11486,9 @@ table a {
   text-align: left;
 }
 
+.eleContract .tableTop {
+  margin-top: 2.5rem;
+}
 .eleContract .contentFlex {
   display: flex;
   gap: 30px;
@@ -12203,6 +12223,10 @@ table a {
 .faqDetail .regiPartWrapper .regiPart {
   padding-bottom: 3.125rem;
 }
+.faqDetail .regiPartWrapper .regiTop .prefix,
+.faqDetail .regiPartWrapper .regiTop .suffix {
+  gap: 0.625rem;
+}
 .faqDetail .regiPartWrapper .boxWrap {
   min-height: 18.75rem;
 }
@@ -12219,6 +12243,7 @@ table a {
 .faqDetail .faqQCont .infoBox {
   padding: 2.5rem 0;
   min-height: 18.75rem;
+  border-radius: 0;
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
 }
@@ -13203,10 +13228,10 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   border-bottom: 0;
 }
 .projTotal table thead tr:last-child th {
-  height: 1.5rem;
   border-top: 1px solid #7c8a9a;
 }
 .projTotal table thead th:first-child {
+  height: 1.3125rem;
   border-right: 1px solid #7c8a9a;
 }
 .projTotal table tbody {
@@ -13215,28 +13240,33 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 .projTotal table tbody.is-active {
   display: table-row-group;
 }
-.projTotal table tbody tr {
-  border-bottom: 0;
-}
 .projTotal table tbody td {
   text-align: right;
   padding: 0.5rem;
 }
 .projTotal table tbody td.left {
   padding: 0;
-  padding-left: 6px;
+  padding-left: 0.375rem;
   text-align: left;
+}
+.projTotal table tbody td.left:nth-child(3) {
+  border-right: 1px solid #dddddd;
 }
 .projTotal table tfoot {
   display: table-row-group;
 }
 .projTotal table tfoot td {
   padding: 0.5rem;
+  color: #000000;
   font-weight: bold;
   text-align: right;
 }
 .projTotal table tfoot td:first-child {
+  color: #666666;
   border-right: 1px solid #dddddd;
+}
+.projTotal table tfoot td .subGray {
+  color: #888888;
 }
 .projTotal table tfoot .upper {
   display: flex;
@@ -13364,14 +13394,19 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   transform: translateX(-50%);
 }
 
+.eiCheck .tableTop .subGray {
+  color: #666666;
+}
 .eiCheck .tableBox {
   max-height: calc(100vh - 371px);
 }
 .eiCheck .tableBox td {
+  color: #000000;
   text-align: right;
   padding: 0.25rem 0.375rem;
 }
 .eiCheck .tableBox td.center {
+  color: #888888;
   text-align: center;
 }
 .eiCheck .tableBox td p {
@@ -13380,7 +13415,7 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   color: #000000;
 }
 .eiCheck .tableBox td p.subInfo {
-  color: #a6a6b6;
+  color: #666666;
 }
 .eiCheck .tableBox td p.marked {
   color: #ff1236;
@@ -13401,14 +13436,19 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   top: 110%;
 }
 
+.wcCheck .tableTop .subGray {
+  color: #666666;
+}
 .wcCheck .tableBox {
   max-height: calc(100vh - 371px);
 }
 .wcCheck .tableBox td {
+  color: #000000;
   text-align: right;
   padding: 0.25rem 0.375rem;
 }
 .wcCheck .tableBox td.center {
+  color: #888888;
   text-align: center;
 }
 .wcCheck .tableBox td p {
@@ -13418,6 +13458,7 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 }
 .wcCheck .tableBox td p.subInfo {
   color: #a6a6b6;
+  color: #666666;
 }
 .wcCheck .tableBox td p.subInfo .underL {
   color: #666666;
