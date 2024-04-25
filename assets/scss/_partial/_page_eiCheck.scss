@@ -1,11 +1,18 @@
 .eiCheck{
     //width: 100%;
+    .tableTop{
+        .subGray{
+            color: $tableGray;
+        }
+    }
     .tableBox{
         max-height: calc(100vh - 371px);    
         td{
+            color: $black;
             text-align: right;
             padding: rem(4) rem(6);
             &.center{
+                color: $fileGray;
                 text-align: center;
             }
             p{
@@ -13,7 +20,8 @@
                 justify-content: flex-end;
                 color: $black;
                 &.subInfo{
-                    color: $cancel;
+                    //color: $cancel;
+                    color: $tableGray;
                 }
                 &.marked{
                     color: $error;
