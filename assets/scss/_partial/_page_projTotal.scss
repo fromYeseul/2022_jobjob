@@ -13,13 +13,14 @@
             tr{
                 &:last-child{
                     th{
-                        height: rem(24);
+                        // height: rem(24);
                         border-top:1px solid $theadBd;
                     }
                 }
             }
             th{
                 &:first-child{
+                    height: rem(21);
                     border-right:1px solid $theadBd;
                 }
             }
@@ -30,15 +31,18 @@
                 display: table-row-group;
             }
             tr{
-                border-bottom: 0;
+                // border-bottom: 0;
             }
             td{
                 text-align: right;
                 padding: rem(8);
                 &.left{
                     padding: 0;
-                    padding-left: 6px;
+                    padding-left: rem(6);
                     text-align: left;
+                    &:nth-child(3){
+                        border-right: 1px solid $tableBorder;
+                    }
                 }
             }
         }
@@ -46,10 +50,15 @@
             display: table-row-group;
             td{
                 padding: rem(8);
+                color: $black;
                 font-weight: bold;
                 text-align: right;
                 &:first-child{
+                    color: $tableGray;
                     border-right: 1px solid $tableBorder;
+                }
+                .subGray{
+                    color: $fileGray;
                 }
             }
             .upper{
