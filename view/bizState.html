@@ -992,7 +992,10 @@
                                 대기업 B2B 주문 프로세스 개선 기획자 모집대기업 B2B 주문 프로세스 개선 기획자
                                 모집대기업 B2B 주문 프로세스 개선 기획자 모집
                             </h3>
-                            <button class="white">변경계약이력</button>
+                            <div class="suffix">                                
+                                <button class="white">변경계약이력</button>
+                                <button class="white">변경계약이력</button>
+                            </div>
                         <!-- </div> -->
                     </div>
                     <!--//240415 수정-->
@@ -1125,13 +1128,15 @@
                                 <!--240430 추가-->
                                 <span class="hasTooltip">
                                     <i class="ico paper"></i>
-                                    <div class="tooltip right">                                                                                                                                                   
-                                        <div class="yScroll"><!--240425 수정-->
+                                    <div class="tooltip right">          
+                                        <!--240425 수정-->                                                                                                                                         
+                                        <div class="yScroll">
                                             기간 : 2023.01.01 ~ 2023.12.31<br>
                                             M/M : 1.43<br>
                                             원단가 : 400,000원<br>
                                             계약금액 : 500,000원
                                         </div>
+                                        <!--//240425 수정-->
                                     </div>
                                 </span>
                                 <!--//240430 추가-->
@@ -1321,6 +1326,7 @@
                                                 <input type="file" name="c2" id="c2" class="" tabindex="">
                                             </div>
                                         </td>
+                                        <!--240425 이동/추가-->
                                         <!--수기계약에서 없음-->
                                         <th>인증방법</th>
                                         <td colspan="3">
@@ -1342,6 +1348,7 @@
                                             </div>
                                         </td>
                                         <!--//수기계약에서 없음-->    
+                                        <!--//240425 이동/추가-->
                                     </tr>                      
                                 </tbody>
                             </table>
@@ -1943,19 +1950,21 @@
                 <h2>계약변경합의서</h2>
                 <div class="boxTop">
                     <div class="suffix">
-                        <button class="white smSize"><i class="ico preview"></i>미리보기</button>
-                        <button class="white smSize"><i class="ico download"></i>계약서 다운로드</button>
+                        <button class="white smSize"><i class="ico preview"></i>미리보기</button><!--240425 추가-->
+                        <button class="white smSize"><i class="ico download"></i>계약서 다운로드</button><!--240425 추가-->
                     </div>
                 </div>
                 <div class="boxWrap titType">
                     <div class="cont">
                         <div class="tableBox">
                             <table class="rowType">
+								<!--240425 수정-->
                                 <colgroup>
                                     <col width="20%">
                                     <col>
                                     <col width="20%">
                                 </colgroup>
+								<!--//240425 수정-->
                                 <tbody>
                                     <tr>
                                         <th>1. 계약명</th>
@@ -1966,7 +1975,7 @@
                                             <!--240430 수정-->
                                             <!-- <textarea rows="2">CJ프레시웨이 온리원푸드넷 모바일 UI/UX 및 주문프로세스 개선CJ프레시웨이 온리원푸드넷 모바일 UI/UX 및 주문프로세스 개선</textarea> -->
                                             
-                                            <!--240425 수정-->
+                                            <!--240425 input으로 변경-->
                                             <input type="text" placeholder="부재(최대 5자)">
                                         </td>
                                         <td><input type="text" placeholder="부재(최대 5자)"></td>
@@ -2169,7 +2178,7 @@
                         <h5 class="mt30">※ 참고사항</h5>
                         <div class="bulletList">
                             <ul>
-                                <li><span class="eHigh">계약금액, 계약기간, 대금일정은 [계약기본] 화면에서만 수정할 수 있습니다.</span></li>
+                                <li><span class="eHigh">계약금액, 계약기간, 대금일정은 [계약기본] 화면에서만 수정할 수 있습니다.</span></li><!--240425 색상변경-->
                             </ul>
                         </div>
                     </div>
@@ -2178,7 +2187,7 @@
             <div class="modalFooter">
                 <button class="white">닫기</button>
                 <button class="">저장</button>
-                <button class="rBdType">계약발송</button>
+                <button class="rBdType">계약발송</button><!--240425 버튼추가-->
             </div>
         </div>
         <div class="layerDim"></div> 
@@ -2212,7 +2221,7 @@
     <!--//계약id 입력-->
 
     <!--변경계약이력-->
-    <div id="" class="modalLayer center">
+    <div id="" class="modalLayer center is-active">
         <div class="layerBox midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
