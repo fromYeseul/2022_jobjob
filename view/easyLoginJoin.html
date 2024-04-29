@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+    <section id="wrapperNew" class="wrapperNew page_easyLogin join">
+        <div class="wrapperIn">
+
+            <div class="containerWrap">
+                <div class="container">
+                    <div id="header">
+                        <div class="mobileNavWrap">
+                            <div class="btnBackArea">
+                                <a href="#" class="btnBack">
+                                    <span class="sr-only">이전</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="headerIn">                            
+                            <div class="h1TitleArea">
+                                <h1 class="h1Title typeImg">
+                                    <a href="#"><img src="../assets/img/202403/img_logo.png" class="h1Img" alt="JOBJOB"></a>                                    
+                                </h1>
+                            </div>
+                            <div class="pageTitleArea">
+                                <span class="pageTitle">회원가입</span>
+                            </div>
+                        </div>
+                    </div> <!--// #header -->
+                    <div id="content">
+                        <div class="contsArea">
+                            <div class="inputList">
+                                <ul>
+                                    <li>
+                                        <label class="need" for="joinEmail">이메일 아이디</label>
+                                        <div class="mt5">
+                                            <div class="hasBtn">
+                                                <input type="text" class="full" id="joinEmail" placeholder="이메일 입력">
+                                                <button type="button" class="midSize btnPrimary">중복확인</button>
+                                            </div>
+                                            <p class="error is-active">영문과 숫자만 입력할 수 있습니다.</p>          
+                                        </div>                                                                
+                                    </li>
+                                    <li>                    
+                                        <label class="need" for="joinNm">이름</label>
+                                        <div class="mt5">
+                                            <input type="text" class="full" id="joinNm" placeholder="이름 입력">        
+                                        </div>                                                                                                               
+                                    </li>
+                                    <li>
+                                        <label class="need" for="joinPw">비밀번호</label>
+                                        <div class="mt5">
+                                            <div class="iconEyesWrap">
+                                                <input type="password" class="iconEyesIpt full" id="joinPw" placeholder="8~20자 영문, 숫자, 특수문자 조합">                                        
+                                                <button type="button" class="iconEyesBtn txtType">
+                                                    <i class="iconArea iconEyes"><span class="sr-only txt">비밀번호 표시/숨김</span></i>
+                                                </button>
+                                            </div>
+                                            <p class="error is-active"><span class="mainC">사용 가능한 비밀번호 입니다.</span></p>
+                                        </div>
+                                        <div class="mt15">
+                                            <div class="iconEyesWrap">
+                                                <input type="password" class="iconEyesIpt full" id="joinPwChk" placeholder="비밀번호 다시 입력">
+                                                <button type="button" class="iconEyesBtn txtType">
+                                                    <i class="iconArea iconEyes"></i>
+                                                </button>
+                                            </div>
+                                            <p class="error is-active">비밀번호가 일치하지 않습니다.</p>
+                                        </div>                                             
+                                    </li>
+                                    <li>                    
+                                        <label class="need" for="joinPn">휴대폰 번호</label>
+                                        <div class="mt5">
+                                            <input type="text" class="full" id="joinPn" placeholder="010-1234-5678">        
+                                        </div>                                                                                                               
+                                    </li>
+                                    <li>
+                                        <label class="need" for="joinBd">생년월일/성별</label>
+                                        <ul class="flexBwGap alignItemCenter mt5">
+                                            <li class="flex1"><input type="text" class="full" id="joinBd" placeholder="1988.12.12"></li>
+                                            <li class="ml5">
+                                                <ul class="flex">
+                                                    <li>
+                                                        <input type="radio" id="genderM" name="gender" class="hasTxt">
+                                                        <label for="genderM">남자</label>
+                                                    </li>
+                                                    <li class="ml10">
+                                                        <input type="radio" id="genderFm" name="gender" class="hasTxt">
+                                                        <label for="genderFm">여자</label>
+                                                    </li>
+                                                </ul>
+                                            </li>                                        
+                                        </ul>                                    
+                                    </li>
+                                    <li>
+                                        <label class="need" for="joinEm">이메일 주소</label>
+                                        <div class="mt5">
+                                            <input type="text" class="full" id="joinEm" placeholder="이메일 주소">
+                                            <p class="error is-active">이메일 형식이 올바르지 않습니다.</p>
+                                        </div>                                    
+                                    </li>
+                                </ul>
+                            </div> <!--// .inputList -->
+                        </div> <!--// .contsArea -->                    
+                    </div> <!--// #content -->
+                    <div id="footer">
+                        <div class="fixedBtArea btnArea">
+                            <button type="button" class="button">다음</button>
+                        </div>
+                        <div class="footerIn">
+                            <ul class="footList">
+                                <li class="item address">서울특별시 강남구 강남대로 146길 25(에코스페이스) 4층</li>
+                                <li class="item contact">
+                                    <span>TEL 02-6342-8021</span>
+                                    <span>FAX 02-864-8021</span>
+                                </li>
+                                <li class="item copyRight">Copyrightⓒ2023 ECHOIT. All rights reserved.</li>
+                            </ul>
+                        </div>
+                    </div> <!--// #footer -->
+                </div> <!--// .container -->
+            </div> <!--// .containerWrap -->
+
+        </div> <!--// .wrapperIn -->
+    </section> <!--// #wrapperNew -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+    $(function(){
+        $('.iconEyesBtn').on('click',function(){
+            $(this).parents('.iconEyesWrap').toggleClass('active');
+            if( $(this).parents('.iconEyesWrap').hasClass('active') == true ){
+                $(this).addClass('on').parents('.iconEyesWrap').find('.iconEyesIpt').attr('type',"text");
+            }
+            else{
+                $(this).removeClass('on').parents('.iconEyesWrap').find('.iconEyesIpt').attr('type','password');
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>

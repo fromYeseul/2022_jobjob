@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보 수정</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+    <section id="wrapperNew" class="wrapperNew page_easyLogin changeMyinfo">
+        <div class="wrapperIn">
+
+            <div class="containerWrap">
+                <div class="container">
+                    <div id="header">
+                        <div class="mobileNavWrap">
+                            <div class="btnBackArea">
+                                <a href="#" class="btnBack">
+                                    <span class="sr-only">이전</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="headerIn">
+                            <div class="h1TitleArea">
+                                <h1 class="h1Title typeImg">
+                                    <a href="#"><img src="../assets/img/202403/img_logo.png" class="h1Img" alt="JOBJOB"></a>                                    
+                                </h1>
+                            </div>
+                            <div class="pageTitleArea">
+                                <span class="pageTitle">개인정보 수정</span>
+                            </div>
+                        </div>
+                    </div> <!--// #header -->
+                    <div id="content">
+                        <div class="contsArea">
+                            <div class="inputList">
+                                <ul>
+                                    <li>
+                                        <p class="labelTxt">회원 프로필</p>
+                                        <div class="profileArea mt10">                                        
+                                            <div class="profileBox "> <!-- D: 사진 있을 경우 hasImg 추가 -->
+                                                <div class="profileImg profile-xlg">
+                                                    <!--img src="../assets/img/202403/temp-profile.png" alt="프로필 사진"-->
+                                                </div>
+                                                <i class="ico delete"><span class="sr-only">삭제</span></i>
+                                            </div>
+                                            <div class="profileBtn">
+                                                <button class="bdType laSize">프로필 교체</button>
+                                                <p class="subGray mt10 txtRight">200 x 200 권장</p>
+                                            </div>                                        
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="labelTxt">이메일 아이디</p>
+                                        <div class="mt5">
+                                            <div class="flexBwGap">
+                                                <p>
+                                                    <input type="text" class="full typeTxtOnly" id="joinEmail" value="honggildong@echoit.co.kr" readonly>
+                                                </p>
+                                                <button type="button" class="txtType underline fsSmall subGray">
+                                                    회원탈퇴
+                                                </button>
+                                            </div>    
+                                        </div>                                                                
+                                    </li>
+                                    <li>                    
+                                        <label for="joinNm">이름</label>
+                                        <div class="mt5">
+                                            <input type="text" class="full" id="joinNm" value="홍길동">        
+                                        </div>                                                                                                               
+                                    </li>
+                                    <li>
+                                        <div class="flexBwGap">
+                                            <div class="flex1">
+                                                <p class="labelTxt">비밀번호</p>
+                                                <input type="password" class="full typeTxtOnly mt5" id="joinPw" value="**********" readonly>
+                                            </div>
+                                            <button class="bdType laSize">비밀번호 변경</button>
+                                        </div>                            
+                                    </li>
+                                    <li>                    
+                                        <label for="joinPn">휴대폰 번호</label>
+                                        <div class="mt5">
+                                            <input type="text" class="full" id="joinPn" value="010-1234-5678">        
+                                        </div>                                                                                                               
+                                    </li>
+                                    <li>
+                                        <label for="joinBd">생년월일/성별</label>
+                                        <ul class="flexBwGap alignItemCenter mt5">
+                                            <li class="flex1"><input type="text" class="full" id="joinBd" value="1988.12.12"></li>
+                                            <li class="ml5">
+                                                <ul class="flex">
+                                                    <li>
+                                                        <input type="radio" id="genderM" name="gender" class="hasTxt" checked>
+                                                        <label for="genderM">남자</label>
+                                                    </li>
+                                                    <li class="ml10">
+                                                        <input type="radio" id="genderFm" name="gender" class="hasTxt">
+                                                        <label for="genderFm">여자</label>
+                                                    </li>
+                                                </ul>
+                                            </li>                                        
+                                        </ul>                                    
+                                    </li>
+                                    <li>
+                                        <label for="joinEm">이메일 주소</label>
+                                        <div class="mt5">
+                                            <input type="text" class="full" id="joinEm" value="echoit@echoit.co.kr">
+                                            <p class="error is-active">이메일 형식이 올바르지 않습니다.</p>
+                                        </div>                                    
+                                    </li>
+                                    <li>
+                                        <p class="labelTxt">수신 설정</p>
+                                        <div class="mt5">
+                                            <div class="flexBwGap">
+                                                <p>
+                                                    <span class="fcGray">프로젝트 채용 정보</span>
+                                                </p>
+                                                <ul class="flex">
+                                                    <li>
+                                                        <input type="checkbox" id="joinRs" class="hasTxt"> 
+                                                        <label for="joinRs">알림톡/문자</label>
+                                                    </li>
+                                                    <li class="ml20">
+                                                        <input type="checkbox" id="joinRs_2" class="hasTxt"> 
+                                                        <label for="joinRs_2">메일</label>
+                                                    </li>
+                                                </ul>
+                                            </div>    
+                                        </div>                                                                
+                                    </li>
+                                </ul>
+                            </div> <!--// .inputList -->
+                        </div> <!--// .contsArea -->                    
+                    </div> <!--// #content -->
+                    <div id="footer">
+                        <div class="fixedBtArea btnArea">
+                            <button type="button" class="button">완료</button>
+                        </div>
+                        <div class="footerIn">
+                            <ul class="footList">
+                                <li class="item address">서울특별시 강남구 강남대로 146길 25(에코스페이스) 4층</li>
+                                <li class="item contact">
+                                    <span>TEL 02-6342-8021</span>
+                                    <span>FAX 02-864-8021</span>
+                                </li>
+                                <li class="item copyRight">Copyrightⓒ2023 ECHOIT. All rights reserved.</li>
+                            </ul>
+                        </div>
+                    </div> <!--// #footer -->
+                </div> <!--// .container -->
+            </div> <!--// .containerWrap -->
+
+        </div> <!--// .wrapperIn -->
+    </section> <!--// #wrapperNew -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

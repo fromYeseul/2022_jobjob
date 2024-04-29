@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+    <section id="wrapperNew" class="wrapperNew page_easyLogin join auth">
+        <div class="wrapperIn">
+
+            <div class="containerWrap">
+                <div class="container">
+                    <div id="header">
+                        <div class="mobileNavWrap">
+                            <div class="btnBackArea">
+                                <a href="#" class="btnBack">
+                                    <span class="sr-only">이전</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="headerIn">
+                            <div class="h1TitleArea">
+                                <h1 class="h1Title typeImg">
+                                    <a href="#"><img src="../assets/img/202403/img_logo.png" class="h1Img" alt="JOBJOB"></a>                                    
+                                </h1>
+                            </div>
+                            <div class="pageTitleArea">
+                                <span class="pageTitle">회원가입</span>
+                            </div>
+                        </div>
+                    </div> <!--// #header -->
+                    <div id="content">
+                        <div class="contsArea">
+                            <div class="contsText center">
+                                <p class="txt lhNormal"><strong>echoit@echoit.co.kr</strong> 로 발송된<br>인증코드를 입력해주세요.</p>
+                            </div>
+                            <div class="authBox inputList">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <div class="hasBtn">
+                                                <div class="inputTimer">
+                                                    <input type="text" class="full" id="joinEmail" placeholder="코드 입력">
+                                                    <span class="timer"><span class="sr-only">남은시간</span>02:11</span>
+                                                </div>
+                                                <button type="button" class="midSize btnPrimary" disabled>재발송</button>
+                                            </div>
+                                            <p class="error fsSmaller is-active"><span class="mainC">인증코드를 입력하고 다음버튼을 눌러주세요</span></p>
+                                            <p class="error fsSmaller is-active">인증시간이 만료되었습니다. 재발송 버튼을 눌러주세요</p>
+                                        </div>
+                                        <div class="flexBwGap mt5">
+                                            <p>
+                                                <button type="button" class="txtType">
+                                                    <i class="iconArea iconQuestion"><span class="txt fsSmaller">인증메일이 오지 않나요?</span></i>
+                                                </button>
+                                            </p>
+                                            <p>
+                                                <button type="button" class="txtType">
+                                                    <span class="underline fsSmaller">인증취소</span>
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div> <!--// .inputList -->
+                        </div> <!--// .contsArea -->                    
+                    </div> <!--// #content -->
+                    <div id="footer">
+                        <div class="fixedBtArea btnArea">
+                            <button type="button" class="button" disabled>다음</button>  
+                        </div>
+                        <div class="footerIn">
+                            <ul class="footList">
+                                <li class="item address">서울특별시 강남구 강남대로 146길 25(에코스페이스) 4층</li>
+                                <li class="item contact">
+                                    <span>TEL 02-6342-8021</span>
+                                    <span>FAX 02-864-8021</span>
+                                </li>
+                                <li class="item copyRight">Copyrightⓒ2023 ECHOIT. All rights reserved.</li>
+                            </ul>
+                        </div>
+                    </div> <!--// #footer -->
+                </div> <!--// .container -->
+            </div>
+
+        </div> <!--// .wrapperIn -->
+    </section> <!--// #wrapperNew -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+    $(function(){
+        $('.iconEyesBtn').on('click',function(){
+            $(this).parents('.iconEyesWrap').toggleClass('active');
+            if( $(this).parents('.iconEyesWrap').hasClass('active') == true ){
+                $(this).addClass('on').parents('.iconEyesWrap').find('.iconEyesIpt').attr('type',"text");
+            }
+            else{
+                $(this).removeClass('on').parents('.iconEyesWrap').find('.iconEyesIpt').attr('type','password');
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>
