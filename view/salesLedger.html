@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>매출원장</title>
     
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
     <link rel="stylesheet" href="../assets/css/style_pms.css">
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
 
 </head>
 <body>
-
     <section class="layoutWrapper">
         <header>
             <div class="prefix">
@@ -38,26 +38,46 @@
                 </div>
                 <nav class="navWrapper">
                     <ul>
-                        <li class="is-active">
-                            <a alerttoast="" href="#"><i class="ico home"></i><span class="menuTxt">홈</span></a>
+                        <li>
+                            <a alerttoast="" href="dashboard.html"><i class="ico home"></i><span class="menuTxt">홈</span></a>
                         </li>
-                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span></a>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">멤버</span></a>
                             <ul>
-                                <li><a href="#"><span class="depth2">프로젝트</span></a></li>
-                                <li><a href="#"><span class="depth2">고객문의</span></a></li>
-                                <li><a href="#"><span class="depth2">운영자관리</span></a></li>
-                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
-                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                                <li><a href="#"><span class="depth2">직원</span></a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">거래처</span></a>
+                            <ul>
+                                <li><a href="#"><span class="depth2">매출거래처</span></a></li>
+                                <li><a href="#"><span class="depth2">매입거래처</span></a></li>
                             </ul>
                         </li>
-                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span></a>
+
+                        <li><a href="#"><i class="ico bizstate"></i><span class="menuTxt">사업관리</span></a>
                             <ul>
-                                <li><a href="#"><span class="depth2">시스템관리</span></a></li>
-                                <li><a href="#"><span class="depth2">통계</span></a></li>
+                                <li><a href="#"><span class="depth2">사업현황</span></a></li>
                             </ul>
                         </li>
-                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>
-                        
+                        <li><a href="#"><i class="ico ledger"></i><span class="menuTxt">매출/매입집계</span></a>
+                            <ul>                                
+                                <li><a href="project_Sum.html"><span class="depth2">프로젝트별 매출/매입</span></a></li>
+                                <li><a href="inputType_Sum.html"><span class="depth2">투입유형별 매출/매입</span></a></li>
+                                <li><a href="sourcing_Sum.html"><span class="depth2">외주 매출/매입</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="is-active"><a href="#"><i class="ico tcount"></i><span class="menuTxt">매입원장</span></a>
+                            <ul>
+                                <li><a href="businessIncomeStatement.html"><span class="depth2">사업소득명세서</span></a></li>
+                                <li class="is-active"><a href="PurchaseLedger.html"><span class="depth2">매입원장(법인/개인)</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico calculation"></i><span class="menuTxt">보험료 대사</span></a>
+                            <ul>
+                                <li><a href="calculation_industrialAccident.html"><span class="depth2">산재보험료대사</span></a></li>
+                                <li><a href="calculation_employmentIInsurance.html"><span class="depth2">고용보험료대사</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>                        
                     </ul>
                 </nav>
             </div>
@@ -65,15 +85,35 @@
         
         <section class="contWrapper noRight">
             <section class="contLayout">
-                <section class="salesLedger">
+                <section class="purchaseLedger salesLedger">
                     <h2>매출원장</h2>
-                    
+
                     <div class="condition">
-                        <ul>                            
+                        <ul>                          
                             <li>
-                                <p class="condiTit">주관그룹</p>
+                                <p class="condiTit">조회연도</p>
+                                <select>
+                                    <option value="">2024년</option>
+                                    <option value="001">2023년</option>
+                                    <option value="002">2022년</option>
+                                    <option value="003">2021년</option>
+                                </select>
+                            </li>
+                            <li>
+                                <p class="condiTit">조회월</p>
+                                <select>
+                                    <option value="">1월</option>
+                                    <option value="001">2월</option>
+                                    <option value="002">3월</option>
+                                    <option value="003">4월</option>
+                                    <option value="004">5월</option>
+                                    <option value="005">6월</option>
+                                </select>
+                            </li>
+                            <li>
+                                <p class="condiTit">주관부서</p>
                                 <div class="select laSize">
-                                    <span class="selDefault is-active">SAP 전략</span>
+                                    <span class="selDefault">전체</span>
                                     <ul class="optionList">
                                         <li class="optionItem">
                                             <input type="checkbox" id="optChk_1" class="hasTxt">
@@ -95,270 +135,792 @@
                                             <input type="checkbox" id="optChk_5" class="hasTxt">
                                             <label for="optChk_5">미래융합사업</label>
                                         </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_5" class="hasTxt">
+                                            <label for="optChk_5">플랫폼</label>
+                                        </li>
+                                        <li class="optionItem">
+                                            <input type="checkbox" id="optChk_5" class="hasTxt">
+                                            <label for="optChk_5">클라우드</label>
+                                        </li>
                                     </ul>
                                 </div>
-                            </li>                            
+                            </li>
                             <li>
-                                <p class="condiTit">세금계산서</p>
+                                <p class="condiTit">발행 형태</p>
                                 <select>
                                     <option value="">전체</option>
-                                    <option value="001">1</option>
-                                    <option value="002">2</option>
-                                    <option value="003">3</option>
-                                    <option value="004">4</option>
-                                    <option value="005">5</option>
+                                    <option value="001">미발행</option>
+                                    <option value="002">정발행</option>
+                                    <option value="003">역발행</option>
+                                    <option value="004">발행취소</option>
                                 </select>
                             </li>
                             <li>
-                                <p class="condiTit">귀속년도</p>
-                                <select>
-                                    <option value="">기본-당해년</option>
-                                    <option value="001">1</option>
-                                    <option value="002">2</option>
-                                    <option value="003">3</option>
-                                    <option value="004">4</option>
-                                    <option value="005">5</option>
-                                </select>
-                            </li>
-                            <li>
-                                <p class="condiTit">귀속월</p>
-                                <select>
-                                    <option value="">기본-당월</option>
-                                    <option value="001">1</option>
-                                    <option value="002">2</option>
-                                    <option value="003">3</option>
-                                    <option value="004">4</option>
-                                    <option value="005">5</option>
-                                </select>
-                            </li>
-                            <li>
-                                <p class="condiTit">일자</p>
-                                <select>
-                                    <option value="">청구예정일</option>
-                                    <option value="001">계산서 발행일</option>
-                                    <option value="002">입금예정일</option>
-                                    <option value="003">실제입금일</option>
-                                </select>
-                            </li>                            
-                            <li>
-                                <p class="condiTit">일자</p>
-                                <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">
-                                <input type="text" class="dateType" placeholder="연-월-일" id="datepicker">
-                            </li>
-                            
+                                <p class="condiTit">조회일자</p>
+                                <div class="flex">               
+                                    <select>
+                                        <option value="001">청구예정일</option>
+                                        <option value="002">계산서 발행일</option>
+                                        <option value="003">입금예정일</option>
+                                        <option value="004">실제예정일</option>
+                                    </select>                     
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="시작일">
+                                    </div>
+                                    <div class="datepicker">
+                                        <input type="text" placeholder="연-월-일">
+                                    </div>
+                                </div>
+                            </li> 
                             <li class="hasBtn">
-                                <label class="condiTit" for="project2">구분</label>
+                                <label class="condiTit" for="project2">검색구분</label>
                                 <select class="mid-laSize">
-                                    <option value="">프로젝트</option>
-                                    <option value="001">원청사</option>
-                                    <option value="002">고객사</option>
-                                    <option value="003">프로젝트</option>
+                                    <option value="">프로젝트명</option>
+                                    <option value="001">적요 내용</option>
+                                    <option value="002">비고 내용</option>
                                 </select>
-                                <!--230823 클래스 추가 -ys -->
                                 <input type="text" class="smSize" id="project2" maxlength="20" placeholder="검색어 입력">
                                 <button>
                                     <i class="ico search white"></i>
                                 </button>
-                            </li>
+                            </li>                              
                         </ul>
                     </div>
                        
                     <div class="tableTop">
-                        <span>
-                            <select class="smSize">
-                                <option class="optionItem" value="10">10개씩</option>
-                                <option class="optionItem" value="20" selected="">20개씩</option>
-                                <option class="optionItem" value="50">50개씩</option>
-                                <option class="optionItem" value="100">100개씩</option>
+                        <div class="prefix">
+                            <select>
+                                <option value="10">10개씩</option>
+                                <option value="20" selected="">20개씩</option>
+                                <option value="50">50개씩</option>
+                                <option value="100">100개씩</option>
                             </select>
-                            <span class="txtRight ml15"><input type="checkbox" id="license01" name="aa" class="hasTxt"><label for="license01">제경비 매출</label></span>
-                        </span>
-
-                        <span>
-                            <button class="white mid-lowSize">발행취소</button>
-                            <button class="bdType mid-lowSize">입금처리</button>
-                            <button class="white mid-lowSize">입금취소</button>
-                            <button class="white mid-lowSize">
-                                <i class="ico excDown"></i>
-                                엑셀 다운로드
+                            <input type="checkbox" class="hasTxt" id="c01">
+                            <label for="c01">제경비 매출</label>
+                        </div>
+                        <div class="suffix">
+                            <button class="white">발행취소</button>
+                            <button class="white">
+                                <i class="ico excDown"></i>엑셀 다운로드
                             </button>
-                            <button class="mid-lowSize">저장</button>
-                        </span>
-                        
-                        
+                            <button>저장</button>
+                        </div>
                     </div>
 
-                    <div class="relative"> 
-                        <div class="sideScroll"><!--231130 가로스크롤-ys-->
-                            <div class="tableBox">    
-                                <table class="hasInput">
-                                    <colgroup>
-                                        <col width="40px">
-                                        <col width="40px">
-                                        <col width="100px">
-                                        <col width="110px">
-                                        <col width="110px">
-                                        <col width="70px">
-                                        <col width="180px">
-                                        <col width="60px">
-                                        <col width="60px">  
+                    <div class="tableBox sticky">    
+                        <table class="lowType">
+                            <colgroup>
+                                <col width="30px" span="2"> 
+                                <col width="110px"> 
+                                <col width="80px">
+                                <col width="110px">  
+                                <col width="120px"> 
+                                <col width="170px">  
+                                <col width="60px">  
+                                <col width="60px">
+                                <col width="360px">
+                                <col width="160px">  
+                                <col width="60px"> 
+                                <col width="90px">  
+                                <col width="140px">
+                                <col width="100px">                                          
+                                <col width="90px">
+                                <col width="110px">
+                                <col width="110px">
+                                <col width="110px">
+                                <col width="140px">
+                                <col width="240px">
+                            </colgroup>
+                            <thead>
+                                <th></th>
+                                <th>No.</th>
+                                <th>청구예정일</th>
+                                <th>발행형태</th>
+                                <th>계산서발행일</th>                                
+                                <th>주관부서</th>
+                                <th>매출거래처</th>
+                                <th>유형</th>
+                                <th>기술구분</th>
+                                <th>프로젝트</th>
+                                <th>사업기간</th>
+                                <th>담당자</th>
+                                <th>청구차수</th>
+                                <th>청구적요</th>
+                                <th>공급가</th>
+                                <th>세액</th>
+                                <th>매출합계</th>
+                                <th>입금예정일</th>
+                                <th>실제입금일</th>
+                                <th>입금적요</th>
+                                <th>비고</th>                                   
+                            </thead>
+                            <tbody> 
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="selectRow1" name="selectRow">
+                                        <label for="selectRow1"></label>
+                                    </td>
+                                    <td>13</td>
+                                    <td>
+                                        <div class="datepicker sat">
+                                            <input type="text" placeholder="yyyy.mm.dd" value="2024.01.03" id="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select title="발행형태 선택">
+                                            <option value="">선택</option>
+                                            <option value="">정발행</option>
+                                            <option value="">역발행</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="datepicker sun">
+                                            <input type="text" placeholder="yyyy.mm.dd" value="2024.01.02" id="">
+                                        </div>
+                                    </td>                                    
+                                    <td>SAP전략</td>
+                                    <td><a href="#">동부씨엔아이(주)IT부문</a></td>
+                                    <td>법인</td>
+                                    <td>기타</td>
+                                    <td class="ellipsis">
+                                        <span class="label">SM</span>
+                                        <a href="#">SAMSUNG CAS ServiceSAMSUNG CAS ServiceSAMSUNG CAS ServiceSAMSUNG CAS Service</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
+                                    <td><i class="ico preview"></i></td>
+                                    <td><span class="layerOpen">3/4회</span></td>
+                                    <td>
+                                        <span class="hasTooltip">                                   
+                                            <span class="underL">청구적요내용내용내용</span>
+                                            <div class="tooltip bottom">청구적요 최대 10자 툴팁노출</div>         
+                                        </span>
+                                    </td> 
+                                    <td class="right">50,000,000</td>   
+                                    <td class="right">110,000</td>                                
+                                    <td class="right">150,000,000</td>
+                                    <td>2023.11.22</td>
+                                    <td>
+                                        <div class="flex">
+                                            <span class="comp">완</span>
+                                            <span>2023.11.30</span>
+                                            <button class="txtType" type="button">
+                                                <i class="ico gray_bin_sm"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="hasTooltip">                                   
+                                            <span class="underL">입금적요내용내용내용</span>
+                                            <div class="tooltip bottom">입금적요 최대 10자 툴팁노출</div>         
+                                        </span>
+                                    </td>
+                                    <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
+                                </tr>                               
+                                <tr>
+                                    <td>
+                                        <input type="radio" id="selectRow2" name="selectRow">
+                                        <label for="selectRow2"></label>
+                                    </td>
+                                    <td>14</td>
+                                    <td>
+                                        <div class="datepicker disabled">
+                                            <input type="text" placeholder="yyyy.mm.dd" value="2024.01.03" id="" disabled>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select title="발행형태 선택" disabled>
+                                            <option value="">선택</option>
+                                            <option value="">정발행</option>
+                                            <option value="">역발행</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="datepicker disabled">
+                                            <input type="text" placeholder="yyyy.mm.dd" value="2024.01.02" id="">
+                                        </div>
+                                    </td>                                    
+                                    <td>SAP전략</td>
+                                    <td><a href="#">동부씨엔아이(주)IT부문</a></td>
+                                    <td>법인</td>
+                                    <td>기타</td>
+                                    <td class="ellipsis">
+                                        <span class="label">SM</span>
+                                        <a href="#">SAMSUNG CAS ServiceSAMSUNG CAS ServiceSAMSUNG CAS ServiceSAMSUNG CAS Service</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
+                                    <td><i class="ico preview"></i></td>
+                                    <td><span class="layerOpen">3/4회</span></td>
+                                    <td>
+                                        <span class="hasTooltip">                                   
+                                            <span class="underL">청구적요내용내용내용</span>
+                                            <div class="tooltip bottom">청구적요 최대 10자 툴팁노출</div>         
+                                        </span>
+                                    </td> 
+                                    <td class="right">50,000,000</td>   
+                                    <td class="right">110,000</td>                                
+                                    <td class="right">150,000,000</td>
+                                    <td>2023.11.22</td>
+                                    <td>
+                                        <div class="flex">
+                                            <span class="comp">완</span>
+                                            <span>2023.11.30</span>
+                                            <button class="txtType" type="button">
+                                                <i class="ico gray_bin_sm"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="hasTooltip">                                   
+                                            <span class="underL">입금적요내용내용내용</span>
+                                            <div class="tooltip bottom">입금적요 최대 10자 툴팁노출</div>         
+                                        </span>
+                                    </td>
+                                    <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
+                                </tr>
+                                <tr class="disabled">
+                                    <td>
+                                        <input type="radio" id="selectRow3" name="selectRow" disabled>
+                                        <label for="selectRow3"></label>
+                                    </td>
+                                    <td>14</td>
+                                    <td>
+                                        <div class="datepicker disabled">
+                                            <input type="text" placeholder="yyyy.mm.dd" value="2024.01.03" id="" readonly>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select title="발행형태 선택" disabled>
+                                            <option value="">선택</option>
+                                            <option value="" selected>정발행</option>
+                                            <option value="">역발행</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="datepicker disabled">
+                                            <input type="text" placeholder="yyyy.mm.dd" value="2024.01.02" id="" readonly>
+                                        </div>
+                                    </td>                                    
+                                    <td>SAP전략</td>
+                                    <td><a href="#" class="disabled">동부씨엔아이(주)IT부문</a></td>
+                                    <td>법인</td>
+                                    <td>기타</td>
+                                    <td class="ellipsis">
+                                        <span class="label">SM</span>
+                                        <a href="#" class="disabled">SAMSUNG CAS ServiceSAMSUNG CAS ServiceSAMSUNG CAS ServiceSAMSUNG CAS Service</a>                                        
+                                    </td>
+                                    <td>2022.04.18 ~ 2023.05.17</td>
+                                    <td><i class="ico preview disabled"></i></td>
+                                    <td>2차</td>
+                                    <td>
+                                        청구적요내용
+                                    </td> 
+                                    <td class="right">50,000,000</td>   
+                                    <td class="right">110,000</td>                                
+                                    <td class="right">150,000,000</td>
+                                    <td>2023.11.22</td>
+                                    <td>
+                                        <div class="flex">
+                                            <span class="comp">완</span>
+                                            <span>2023.11.30</span>
+                                            <button class="txtType" type="button">
+                                                <i class="ico gray_bin_sm disabled"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="hasTooltip">                                   
+                                            <span class="underL">입금적요내용내용내용</span>
+                                            <div class="tooltip bottom">입금적요 최대 10자 툴팁노출</div>         
+                                        </span>
+                                    </td>
+                                    <td><textarea rows="1" placeholder="특이사항 메모입력" class="disabled" disabled></textarea></td>
+                                </tr>                                     
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="14"></td>
+                                    <td>450,000,000</td>
+                                    <td>1,100,000</td>
+                                    <td>1,500,000,000</td>
+                                    <td colspan="4"></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
 
-                                        <col width="340px">
-                                        <col width="100px">  
-                                        <col width="50px">  
-                                        <col width="50px">      
-                                        <col width="70px">
-
-                                        <col width="80px">  
-                                        <col width="70px">  
-                                        <col width="110px">
-                                        <col width="80px">  
-                                        <col width="125px">  
-                                        <col width="125px">  
-                                        <col width="60px">
-                                        <col width="180px">
-                                        <col width="40px">
-                                    </colgroup>
-                                    <thead>
-                                        <th>
-                                            <input type="checkbox" id="ff1">
-                                            <label for="ff1"></label>
-                                        </th>
-                                        <th>No.</th>
-                                        <th>청구예정일</th>
-                                        <th>계산서발행일</th>
-                                        <th>귀속월</th>
-                                        <th>주관그룹</th>
-                                        <th>매출거래처</th>
-                                        <th>기술구분</th>
-                                        <th>상태</th>
-                                        <th>프로젝트</th>
-                                        <th>사업기간</th>
-                                        <th>담당자</th>
-                                        <th>차수</th>
-                                        <th>청구적요</th>
-
-                                        <th>공급가</th>
-                                        <th>세액</th>
-                                        <th>합계</th>
-
-                                        <th>정산일</th>
-                                        <th>입금예정일</th>
-                                        <th>실제입금일</th>
-                                        <th>입금적요</th>
-                                        <th>비고</th>
-                                        <th>삭제</th>
-                                    </thead>
-                                    <tbody>                                
-                                        <tr>
-                                            <td>
-                                                <input type="checkbox" id="ff1">
-                                                <label for="ff1"></label>
-                                            </td>
-                                            <td>14</td>
-                                            <td><span class="tSales">2023.12.12 (토)</span></td>
-                                            <td><input class="dateType editType" type="text" placeholder="2023.01"></td>                                                                                          
-                                            <td><input class="dateType" type="text" placeholder="2023.01"></td>
-                                            <td>SAP전략</td>
-                                            <td><a href="#">CJ올리브네트웍스</a></td>
-                                            <td>WEB</td>
-                                            <td><button class="round">진행</button></td>
-                                            <td class="ellipsis">
-                                                <span class="label">SM</span>
-                                                <a href="#">CJ올리브네트웍스 모바일앱 서비스 협약서</a>                                        
-                                            </td>
-                                            <td>2022.04.18<br>2023.05.17</td>
-                                            <td><i class="ico preview"></i></td>
-                                            <td>2차</td> 
-                                            <td>중</td> 
-                                            <td class="right">50,000,000</td>          
-                                            <td class="right">50,000,000</td>   
-                                            <td class="right">110,000,000</td>
-                                            <td>60일 이내</td>
-                                            <td><input class="dateType" type="text" placeholder="2023.01.05"></td>
-                                            <td><input class="dateType" type="text" placeholder="2023.12.25"></td> 
-                                            <td>선</td>                            
-                                            <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
-                                            <td><i class="ico delete_bg"></i></td>
-                                        </tr>                                
-                                        <tr>
-                                            <td>
-                                                <input type="checkbox" id="ff1">
-                                                <label for="ff1"></label>
-                                            </td>
-                                            <td>14</td>
-                                            <td><span class="tSales">2023.12.12 (토)</span></td>
-                                            <td><input class="dateType editType" type="text" placeholder="2023.01"></td>                                                                                          
-                                            <td><input class="dateType" type="text" placeholder="2023.01"></td>
-                                            <td>SAP전략</td>
-                                            <td><a href="#">CJ올리브네트웍스</a></td>
-                                            <td>WEB</td>
-                                            <td><button class="round">진행</button></td>
-                                            <td class="ellipsis">
-                                                <span class="label">SM</span>
-                                                <a href="#">CJ올리브네트웍스 모바일앱 서비스 협약서</a>                                        
-                                            </td>
-                                            <td>2022.04.18<br>2023.05.17</td>
-                                            <td><i class="ico preview"></i></td>
-                                            <td>2차</td> 
-                                            <td>중</td> 
-                                            <td class="right">50,000,000</td>          
-                                            <td class="right">50,000,000</td>   
-                                            <td class="right">110,000,000</td>
-                                            <td>60일 이내</td>
-                                            <td><input class="dateType" type="text" placeholder="2023.01.05"></td>
-                                            <td><input class="dateType" type="text" placeholder="2023.12.25"></td> 
-                                            <td>선</td>                            
-                                            <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
-                                            <td><i class="ico delete_bg"></i></td>
-                                        </tr>  
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="listBottom pagingType">                        
-                            <div class="paging">
-                                <ul>
-                                    <li class="pagingDouble">
-                                        <a href="#">
-                                            <span class="ico pagingFirst"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="ico pagingLeft"></span>
-                                        </a>
-                                    </li>
-                                    <li class="is-active"><a>1</a></li>
-                                    <li><a>2</a></li>
-                                    <li><a>3</a></li>
-                                    <li><a>4</a></li>
-                                    <li><a>5</a></li>
-                                    <li><a>6</a></li>
-                                    <li><a>7</a></li>
-                                    <li><a>8</a></li>
-                                    <li><a>9</a></li>
-                                    <li><a>10</a></li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="ico pagingRight is-active"></span>
-                                        </a>
-                                    </li>
-                                    <li class="pagingDouble">
-                                        <a href="#">
-                                            <span class="ico pagingLast is-active"></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="listBottom pagingType">                        
+                        <div class="paging">
+                            <ul>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico pagingFirst"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico pagingLeft"></span>
+                                    </a>
+                                </li>
+                                <li class="is-active"><a>1</a></li>
+                                <li><a>2</a></li>
+                                <li><a>3</a></li>
+                                <li><a>4</a></li>
+                                <li><a>5</a></li>
+                                <li><a>6</a></li>
+                                <li><a>7</a></li>
+                                <li><a>8</a></li>
+                                <li><a>9</a></li>
+                                <li><a>10</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico pagingRight is-active"></span>
+                                    </a>
+                                </li>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico pagingLast is-active"></span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </section>
             </section>
-        </section>
+        </section>                        
     </section>
+
+    <!-- 청구 스케줄 팝업 //-->
+    <div id="" class="modalLayer center">
+        <div class="layerBox mid-laSize2">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+            <div class="modalCont chargeSet">
+                <h2>청구 스케줄</h2>
+                <div class="tableTop">
+                    <div class="prefix flexCenter">
+                        청구조건
+                        <select class="smSize" name="" id="">
+                            <option value="">정액</option>
+                            <option value="dog" disabled="">Dog</option>
+                            <option value="cat">Cat</option>
+                        </select>
+
+                        <!--input type="checkbox" name="" id="equality" class="hasTxt">
+                        <label-- for="equality">매월균등청구</label-->
+                        
+                        <select class="xxsSize" name="" id="">
+                            <option value="">매월</option>
+                            <option value="dog" disabled="">매주</option>
+                            <option value="cat">매년</option>
+                        </select>
+                        
+                        <select class="xxsSize" name="" id="">
+                            <option value="">1일</option>
+                            <option value="dog" disabled="">10일</option>
+                            <option value="cat">20일</option>
+                            <option value="cat">30일</option>
+                        </select>
+
+                        <button class="smSize">적용</button>
+                    </div>
+                    <div class="suffix">
+                        <button type="button" class="onlyIco smSize"><i class="ico smPlus"></i></button>
+                    </div>                   
+                </div>
+                <div class="">     
+                    <!--thead 고정용 table-->
+                    <div class="tableBox">
+                        <table class="hasInput">
+                            <thead>
+                                <tr>
+                                    <th width="160px">청구회차</th>
+                                    <th width="160px">                                        
+                                        청구금액
+                                        <input type="checkbox" id="equalityCharge" class="hasTxt">
+                                        <label for="equalityCharge">균등</label> 
+                                    </th>
+                                    <th width="148px">계산서발행</th>
+                                    <th width="148px">검수일자</th>
+                                    <th width="91px">분배율(%)</th>
+                                    <th>적요</th>
+                                    <th width="57px">삭제</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <!--thead 고정용 table-->
+                        
+                    <div class="tableBox absolBody">    
+                        <table class="hasInput">
+                            <colgroup>
+                                <col width="4%">
+                                <col width="10%">
+                                <col width="14%">
+                                <col width="13%">
+                                <col width="13%">
+
+                                <col width="8%">
+                                <col width="">
+                                <col width="5%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>1회</th>
+                                    <th>
+                                        <button class="round order">청구완료</button>
+                                    </th>
+                                    <td class="txtRight"><input type="text" class="txtRight" value="1,000,000" readonly></td>
+                                    <td>
+                                        <div class="datepicker disabled">
+                                            <input type="text" placeholder="yyyy.mm.dd" id="" readonly>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="datepicker disabled">
+                                            <input type="text" placeholder="yyyy.mm.dd" id="" value="2024.02.06" readonly>
+                                        </div>
+                                    </td>
+                                    <td>-</td>
+                                    <td><textarea rows="1" placeholder="특이사항 메모 입력"></textarea></td>
+                                    <td><i class="ico delete_bg"></i></td>
+                                </tr>
+                                <tr>
+                                    <th>2회</th>
+                                    <th>
+                                        <button class="round cancel">미청구</button>
+                                    </th>
+                                    <td class="txtRight"><input type="text" class="txtRight" value=""></td>
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="yyyy.mm.dd" id="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="yyyy.mm.dd" id="">
+                                        </div>
+                                    </td>
+                                    <td>-</td>
+                                    <td><textarea rows="1" placeholder="특이사항 메모 입력"></textarea></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--tfoot 고정용 table-->
+                    <div class="tableBox">
+                        <table>
+                            <colgroup>
+                                <col width="80%">
+                                <col width="20%">
+                            </colgroup>
+                            <tfoot>
+                                <tr>
+                                    <td class="right">
+                                        <b>청구합계 : 113,758,000 <span class="tBuy">(-35,997,000,006)</span></b>
+                                        <!--b><span class="emp">청구합계 : 113,758,000</span></b-->
+                                    </td>
+                                    <td><b>계약금액 : 250,000,000</b></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!--//tfoot 고정용 table-->
+                </div>  
+            </div>  <!--// .modalCont -->    
+
+            <div class="modalFooter">    
+                <div class="alertToast">
+                    저장되었습니다.
+                    <i class="ico smClose white"></i>
+                </div>
+
+                <button class="white">닫기</button>
+                <button class="">저장</button>
+            </div>
+        </div>
+        <div class="layerDim"></div> 
+    </div>
+    <!--// 청구 스케줄 팝업 -->
+
+    <!-- 입금 스케줄 팝업 //-->
+    <div id="" class="modalLayer center">
+        <div class="layerBox mid-laSize2">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+            </div>
+            <div class="modalCont chargeSet">
+                <h2>입금 스케줄</h2>
+                <div class="tableTop">
+                    <div class="prefix flexCenter">
+                        입금조건
+                        <select class="smSize" name="" id="">
+                            <option value="">비율</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                        </select>
+
+                        <input class="dateType laSize" type="text" placeholder="yyyy-mm-dd" id="">
+
+                        <button class="smSize">적용</button>
+                    </div>
+                    <div class="suffix">
+                        <button class="bdType mid-lowSize">청구스케줄 동기화</button>
+                    </div>                   
+                </div>
+                <div class="">     
+                    <!--thead 고정용 table-->
+                    <div class="tableBox">
+                        <table class="hasInput">
+                            <thead>
+                                <tr>
+                                    <th width="158px">입금회차</th>
+                                    <th width="137px">청구예정일자</th>
+                                    <th width="137px">입금예정일자</th>
+                                    <th width="148px">
+                                        입금금액
+                                        <input type="checkbox" id="equalityDeposit" class="hasTxt">
+                                        <label for="equalityDeposit">균등</label>
+                                    </th>
+                                    <th width="114px">분배율(%)</th>
+                                    <th>적요</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <!--thead 고정용 table-->
+                        
+                    <div class="tableBox absolBody">    
+                        <table class="hasInput">
+                            <colgroup>
+                                <col width="4%">
+                                <col width="10%">
+                                <col width="12%">
+                                <col width="12%">
+                                <col width="13%">
+                                <col width="10%">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>1회</th>
+                                    <th>
+                                        <button class="round order">입금완료</button>
+                                    </th>
+                                    <td>2024.01.06</td>
+                                    <td>
+                                        <div class="datepicker disabled">
+                                            <input type="text" placeholder="yyyy.mm.dd" id="" value="2024.02.06" readonly>
+                                        </div>
+                                    </td>
+                                    <td class="txtRight"><input type="text" class="txtRight" value="1,000,000" readonly></td>
+                                    <td><input class="xxsSize mainC" type="text" id="xxsSize"> %</td>
+                                    <td><textarea rows="1" placeholder="직접 입력"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <th>2회</th>
+                                    <th>
+                                        <button class="round cancel">미입금</button>
+                                    </th>
+                                    <td>2024.01.06</td>
+                                    <td>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="yyyy.mm.dd" id="">
+                                        </div>
+                                    </td>
+                                    <td class="txtRight"><input type="text" class="txtRight" value="1,000,000"></td>
+                                    <td><input class="xxsSize mainC" type="text" id="xxsSize"> %</td>
+                                    <td><textarea rows="1" placeholder="직접 입력"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--tfoot 고정용 table-->
+                    <div class="tableBox">
+                        <table>
+                            <colgroup>
+                                <col width="80%">
+                                <col width="20%">
+                            </colgroup>
+                            <tfoot>
+                                <tr>
+                                    <td class="right">
+                                        <b>입금합계 :3,000,000 <span class="tBuy">(-35,758,000)</span></b>
+                                    </td>
+                                    <td><b>계약금액 : 250,000,000</b></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!--//tfoot 고정용 table-->
+                </div>  
+            </div>  <!--// .modalCont -->   
+
+            <div class="modalFooter">    
+                <div class="alertToast">
+                    저장되었습니다.
+                    <i class="ico smClose white"></i>
+                </div>
+
+                <button class="white">닫기</button>
+                <button class="">저장</button>
+            </div>
+        </div>
+        <div class="layerDim"></div> 
+    </div>
+    <!--// 입금 스케줄 팝업 -->
+
+    <!-- 거래처 담당자 팝업 //-->
+    <div id="" class="modalLayer center clientAdmin">
+        <div class="layerBox mid-laSize">
+            <div class="modalHeader">
+                <button class="ico layerClose"></button>
+                <h3>거래처 담당자</h3>
+                <div class="h3_sub">거래처 단위로 담당자 정보를 입력하고 관리할 수 있습니다.</div>
+            </div>
+            <div class="modalCont center">
+                <div class="tableTop right">
+                    <button class="white mid-lowSize">선택삭제</button>
+                </div>
+                <div class="tableBox sticky">
+                    <table>
+                        <colgroup>
+                            <col width="25%">
+                            <col width="15%">
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th width="240px;">담당역할</th>
+                                <th width="150px;">이름</th>
+                                <th width="160px;">이메일</th>
+                                <th width="180px;">연락처</th>
+                                <th width="220px;">부서</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ellipsis">서버총괄</td>
+                                <td>김기동</td>
+                                <td>abc@echoit.co.kr</td>
+                                <td>010-8888-9999</td>
+                                <td>인프라 구매파트</td>
+                            </tr>
+                            <tr>
+                                <td class="ellipsis">세금계산서</td>
+                                <td>홍길동</td>
+                                <td>abdbfc@echoit.co.kr</td>
+                                <td>010-1122-3221</td>
+                                <td>서비스 구매그룹</td>
+                            </tr>
+                            <tr>
+                                <td class="ellipsis">세금계산서 세금계산서 세금계산서 세금계산서 세금계산서 세금계산서</td>
+                                <td>황길동</td>
+                                <td>abc1234@echoit.co.kr</td>
+                                <td>010-1234-1234</td>
+                                <td>총무팀</td>
+                            </tr>
+                            <tr>
+                                <td class="ellipsis">UI 개발툴</td>
+                                <td>황길동</td>
+                                <td>abc1234@echoit.co.kr</td>
+                                <td>010-1234-1234</td>
+                                <td>총무팀</td>
+                            </tr>
+                            <tr>
+                                <td class="nodata" colspan="5"><!--데이터 없을때-->
+                                    담당자가 없습니다.<br>
+                                    역할과 이름, 이메일, 연락처, 부서를 입력 후 추가버튼을 눌러주세요.
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>
+                                    <div class="inputIco">
+                                        <input type="text" class="" maxlength="" placeholder="검색어를 입력하세요.">
+                                        <button class="ico smClose"></button>
+                                    </div>
+                                </td>
+                                <td><input type="text" class="full" placeholder="이름 입력"></td>
+                                <td><input type="text" class="full" placeholder="이메일 입력"></td>
+                                <td><input type="text" class="full" placeholder="연락처 입력"></td>
+                                <td>
+                                    <div class="flex">
+                                        <input type="text" class="full" placeholder="부서 입력">
+                                        <button class="">추가</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div> <!--// .modalCont  -->
+            
+            <div class="modalFooter single">
+                <div class="alertToast" id="toast01">
+                    저장되었습니다. <i class="ico smClose w"></i>
+                </div>
+                <button class="white prefix layerOpen" aria-controls="del-confirm">닫기</button>
+                <!-- <button class="suffix">저장</button> -->
+            </div>
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--// 거래처 담당자 팝업 -->
+
+    <!-- 컨펌 팝업 //-->
+    <div id="" class="modalLayer center">
+        <div class="layerBox confirmType">
+            <div class="modalHeader"><h4>안내사항</h4></div>
+            <div class="modalCont center">
+                목록에서 삭제하시겠습니까?
+            </div>            
+            <div class="modalFooter">
+                <button class="white layerClose">취소</button>
+                <button class="layerClose">확인</button>
+            </div>
+            <!--div class="modalFooter">
+                <button class="layerClose">취소</button>
+            </div-->
+        </div>        
+        <div class="layerDim"></div>    
+    </div>
+    <!--// 컨펌 팝업 -->
+
+
+
+
+    
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../assets/js/script.js"></script>
+
+    <script>        
+        // datepicker test
+        // $(function() {
+        //     $("#datepicker").datepicker();
+        // });
+        $(function(){
+            $(".datepicker input").datepicker({
+                dateFormat:'yy/mm/dd'
+                , showOn: 'button'
+                , buttonImage: '../assets/img/icoCal.png'
+                , buttonImageOnly: true
+            })
+            $(".datepicker").each(function() {
+                if($(this).hasClass("disabled")) {
+                    $(this).find("input").datepicker("option","disabled",true);
+                }
+            })
+            
+        });
+    </script>
+    
 </body>
 </html>
