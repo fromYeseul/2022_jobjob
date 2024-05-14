@@ -763,7 +763,7 @@ header {
 .contWrapper .contLayout .clientBuy, .contWrapper .contLayout .clientSales, .contWrapper .contLayout .bizState, .contWrapper .contLayout .resumeList,
 .contWrapper .contLayout .dashboard, .contWrapper .contLayout .insertType, .contWrapper .contLayout .projTotal, .contWrapper .contLayout .salesLedger, .contWrapper .contLayout .sourcingTotal, .contWrapper .contLayout .empTotal,
 .contWrapper .contLayout .bizIncomeReport, .contWrapper .contLayout .purchaseLedger, .contWrapper .contLayout .eiCheck, .contWrapper .contLayout .wcCheck,
-.contWrapper .contLayout .contSendList {
+.contWrapper .contLayout .contSendList, .contWrapper .contLayout .licenseList {
   height: calc(100vh - 60px);
   padding: 1.875rem 1.875rem 1.25rem 1.875rem;
   overflow-y: auto;
@@ -5805,6 +5805,10 @@ input[type=radio].chkSwitch.wide:checked + label::after {
 .boxListType input[type=checkbox] + label::before {
   display: none;
 }
+.boxListType input[type=radio] + label + input + label,
+.boxListType input[type=checkbox] + label + input + label {
+  margin-left: 0;
+}
 .boxListType input[type=radio]:checked + label,
 .boxListType input[type=checkbox]:checked + label {
   color: #0460d2;
@@ -6759,6 +6763,18 @@ select.onGoing:focus {
   top: 50%;
   right: 0.625rem;
   transform: translateY(-5px);
+}
+.alertToast.wideType {
+  padding: 1.25rem 1.875rem;
+  padding-right: 3.125rem;
+  color: #000000;
+  background: #e6e6e6;
+}
+.alertToast.wideType .flex {
+  gap: 1.25rem;
+}
+.alertToast.wideType .ico {
+  right: 15px;
 }
 .alertToast.is-active {
   display: block;
@@ -11672,6 +11688,10 @@ table a {
   padding: 0.25rem;
 }
 
+#setPaymentDate .ui-datepicker table {
+  height: 17.0625rem;
+}
+
 .staffDetail {
   margin-top: -30px;
 }
@@ -13484,6 +13504,40 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   width: 11.875rem;
   text-align: left;
   top: 110%;
+}
+
+.licenseList {
+  position: relative;
+}
+.licenseList .tableBox {
+  max-height: calc(100vh - 60px);
+  overflow: visible;
+}
+.licenseList .tableBox thead .tooltip {
+  width: 12.5rem;
+}
+.licenseList .tableBox tbody .tooltip {
+  min-width: 9.375rem;
+}
+.licenseList .tableBox tr:hover {
+  background: transparent;
+}
+.licenseList .tableBox tr .sChecking {
+  margin-left: 0.3125rem;
+  display: inline-block;
+  min-width: 2.5rem;
+  text-align: left;
+}
+.licenseList .tableBox .tooltip.bottom {
+  top: 140%;
+}
+.licenseList .alertToast {
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+}
+.licenseList .alertToast .sortL::before {
+  left: 0.3125rem;
 }
 
 /*# sourceMappingURL=style_pms.css.map */

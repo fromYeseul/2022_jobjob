@@ -763,7 +763,7 @@ header {
 .contWrapper .contLayout .clientBuy, .contWrapper .contLayout .clientSales, .contWrapper .contLayout .bizState, .contWrapper .contLayout .resumeList,
 .contWrapper .contLayout .dashboard, .contWrapper .contLayout .insertType, .contWrapper .contLayout .projTotal, .contWrapper .contLayout .salesLedger, .contWrapper .contLayout .sourcingTotal, .contWrapper .contLayout .empTotal,
 .contWrapper .contLayout .bizIncomeReport, .contWrapper .contLayout .purchaseLedger, .contWrapper .contLayout .eiCheck, .contWrapper .contLayout .wcCheck,
-.contWrapper .contLayout .contSendList {
+.contWrapper .contLayout .contSendList, .contWrapper .contLayout .licenseList {
   height: calc(100vh - 60px);
   padding: 1.875rem 1.875rem 1.25rem 1.875rem;
   overflow-y: auto;
@@ -5837,6 +5837,10 @@ input[type=radio].chkSwitch.wide:checked + label::after {
 .boxListType input[type=checkbox] + label::before {
   display: none;
 }
+.boxListType input[type=radio] + label + input + label,
+.boxListType input[type=checkbox] + label + input + label {
+  margin-left: 0;
+}
 .boxListType input[type=radio]:checked + label,
 .boxListType input[type=checkbox]:checked + label {
   color: #0460d2;
@@ -6791,6 +6795,18 @@ select.onGoing:focus {
   top: 50%;
   right: 0.625rem;
   transform: translateY(-5px);
+}
+.alertToast.wideType {
+  padding: 1.25rem 1.875rem;
+  padding-right: 3.125rem;
+  color: #000000;
+  background: #e6e6e6;
+}
+.alertToast.wideType .flex {
+  gap: 1.25rem;
+}
+.alertToast.wideType .ico {
+  right: 15px;
 }
 .alertToast.is-active {
   display: block;
