@@ -1,0 +1,47 @@
+.licenseList{
+    // width: 100%;
+    position: relative;
+    .tableBox{
+        max-height: calc(100vh - 60px);
+        overflow: visible;
+        thead{        
+            .tooltip{
+                width: rem(200);
+            }
+        }
+        tbody{
+            .tooltip{
+                min-width: rem(150);
+            }
+        }
+        tr{
+            &:hover{
+                background: transparent;
+            }
+            .sChecking{
+                margin-left: rem(5);
+                display: inline-block;
+                min-width: rem(40);
+                text-align: left;
+            }
+            // .flexBw{
+            //     margin-right: 15px;
+            // }
+        }
+        .tooltip{
+            &.bottom{
+                top: 140%;
+            }
+        }
+    }
+    .alertToast{
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, -50%);
+        .sortL{
+            &::before{
+                left: rem(5);
+            }
+        }
+    }
+}
