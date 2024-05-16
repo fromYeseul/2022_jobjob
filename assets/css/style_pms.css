@@ -5516,7 +5516,7 @@ input[type=checkbox] + input[type=hidden] + label,
 input[type=radio] + input[type=hidden] + label {
   display: inline-block;
   cursor: pointer;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 400;
   position: relative;
 }
@@ -5665,7 +5665,6 @@ input[type=radio].chkSwitch.wide:checked + label::after {
   margin-right: 0.3125rem;
   text-align: center;
   color: #a6a6b6;
-  font-weight: 500;
   background: #fff;
   border-radius: 0.3125rem;
   border: 1px solid #cccccc;
@@ -11619,6 +11618,57 @@ table a {
   width: auto;
 }
 
+.licenseDetail .boxWrap {
+  margin-top: 10px;
+}
+.licenseDetail .boxWrap .cont {
+  height: calc(100vh - 370px);
+  overflow-y: auto;
+}
+.licenseDetail .boxWrap .col4 {
+  row-gap: 1.25rem;
+  column-gap: 2.5rem;
+  grid-template-columns: 110px 110px 110px 240px;
+}
+.licenseDetail .boxWrap .col5 {
+  row-gap: 1.25rem;
+  column-gap: 2.5rem;
+  grid-template-columns: 110px 110px 110px 240px 130px;
+}
+.licenseDetail .boxWrap .underBg {
+  margin-top: 2.5rem;
+}
+.licenseDetail .inputList > ul > li {
+  margin-bottom: 10px;
+}
+.licenseDetail .inputList .info {
+  margin-top: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  height: 2.75rem;
+}
+.licenseDetail .inputList .licenseAdmin {
+  grid-column: 1/5;
+}
+.licenseDetail .inputList input[type=checkbox] + label + input + label,
+.licenseDetail .inputList input[type=radio] + label + input + label {
+  margin-left: 0;
+}
+.licenseDetail .inputList .flexBw {
+  margin-top: 0;
+}
+.licenseDetail .inputList .tooltip {
+  width: 11.25rem;
+}
+.licenseDetail .inputList .tooltip.first {
+  left: 270%;
+}
+.licenseDetail .inputList .tooltip.first::after {
+  left: 34%;
+}
+
 .projMonthly td,
 .insertMonthly td,
 .sourcingMonthly td,
@@ -13526,7 +13576,7 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   margin-left: 0.3125rem;
   display: inline-block;
   min-width: 2.5rem;
-  text-align: left;
+  text-align: center;
 }
 .licenseList .tableBox .tooltip.bottom {
   top: 140%;
