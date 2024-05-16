@@ -643,6 +643,81 @@
 
 }
 
+//----------------라이선스 관리
+.licenseDetail{   
+    .boxWrap{
+        margin-top: 10px;
+        .cont{
+            height: calc(100vh - 370px);
+            overflow-y: auto;
+        }
+        .col4{
+            row-gap: rem(20);
+            column-gap: rem(40);
+            grid-template-columns: 110px 110px 110px 240px;
+        }
+        .col5{
+            row-gap: rem(20);
+            column-gap: rem(40);
+            grid-template-columns: 110px 110px 110px 240px 130px;
+        }
+        .underBg{
+            margin-top: rem(40);
+        }
+    } 
+    .inputList{
+        > ul{
+            > li{ 
+                margin-bottom: 10px;
+            }
+        }
+        .info{            
+            margin-top: rem(10);    
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5px;
+            height: rem(44);
+        }
+        .licenseAdmin{
+            // margin-top: 50px;
+            grid-column: 1 / 5;
+            // position: relative;
+            // &::before{
+            //     content:'';
+            //     width: 40px;
+            //     height: 1px;
+            //     background: $layoutColor;
+            //     position: absolute;
+            //     top: -30px;
+            //     left: 0;
+            // }
+        }
+        input[type=checkbox],
+        input[type=radio]{
+            + label{
+                + input{
+                    + label{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        .flexBw{
+            margin-top: 0;
+        }
+        .tooltip{
+            width: rem(180);
+            &.first{
+                left: 270%;
+                &::after{
+                    left: 34%;
+                }
+            }
+        }
+    }
+}
+
 
 //----------------매출매입집계
 //프로젝트별 매출집계 - 월별 매입/매출 
