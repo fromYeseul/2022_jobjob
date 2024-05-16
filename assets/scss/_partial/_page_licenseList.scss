@@ -2,16 +2,29 @@
     // width: 100%;
     position: relative;
     .tableBox{
-        max-height: calc(100vh - 60px);
-        overflow: visible;
+        // max-height: calc(100vh - 60px);
+        // overflow: visible;
         thead{        
             .tooltip{
                 width: rem(200);
+                top: 140%;
             }
         }
         tbody{
             .tooltip{
                 min-width: rem(150);
+                right: auto;
+                left: 120%;
+            }
+            tr{
+                &:last-child{
+                    .tooltip{
+                        top: -60%;
+                        &::after{
+                            top: 75%;
+                        }
+                    }
+                }
             }
         }
         tr{
@@ -27,10 +40,23 @@
             // .flexBw{
             //     margin-right: 15px;
             // }
+            // &:last-child{
+            //     .tooltip{
+            //         &.bottom{
+            //             top: -460%;
+            //             &::after{
+            //                 top: 76px;
+            //             }
+            //         }
+            //     }
+            // }
         }
-        .tooltip{
-            &.bottom{
-                top: 140%;
+        .point{
+            &.checking{                    
+                margin-left: rem(15);
+                font-size: rem(12);
+                color: $white;
+                background: $checking;
             }
         }
     }

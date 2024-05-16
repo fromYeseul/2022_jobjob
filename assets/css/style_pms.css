@@ -11622,18 +11622,16 @@ table a {
   margin-top: 10px;
 }
 .licenseDetail .boxWrap .cont {
-  height: calc(100vh - 430px);
+  height: calc(100vh - 370px);
   overflow-y: auto;
 }
 .licenseDetail .boxWrap .col4 {
   row-gap: 1.25rem;
   column-gap: 2.5rem;
-  grid-template-columns: 110px 110px 110px 240px;
+  grid-template-columns: 120px 120px 120px 240px;
 }
-.licenseDetail .boxWrap .col5 {
-  row-gap: 1.25rem;
-  column-gap: 2.5rem;
-  grid-template-columns: 110px 110px 110px 240px 130px;
+.licenseDetail .boxWrap .col4.type2 {
+  grid-template-columns: 160px 80px 120px 240px;
 }
 .licenseDetail .boxWrap .underBg {
   margin-top: 2.5rem;
@@ -11667,6 +11665,11 @@ table a {
 }
 .licenseDetail .inputList .tooltip.first::after {
   left: 34%;
+}
+.licenseDetail .inputList .point.checking {
+  font-size: 0.75rem;
+  color: #fff;
+  background: #ef9914;
 }
 
 .projMonthly td,
@@ -13559,15 +13562,20 @@ col.hideS.on, col.hideB.on, col.hideI.on {
 .licenseList {
   position: relative;
 }
-.licenseList .tableBox {
-  max-height: calc(100vh - 60px);
-  overflow: visible;
-}
 .licenseList .tableBox thead .tooltip {
   width: 12.5rem;
+  top: 140%;
 }
 .licenseList .tableBox tbody .tooltip {
   min-width: 9.375rem;
+  right: auto;
+  left: 120%;
+}
+.licenseList .tableBox tbody tr:last-child .tooltip {
+  top: -60%;
+}
+.licenseList .tableBox tbody tr:last-child .tooltip::after {
+  top: 75%;
 }
 .licenseList .tableBox tr:hover {
   background: transparent;
@@ -13578,8 +13586,11 @@ col.hideS.on, col.hideB.on, col.hideI.on {
   min-width: 2.5rem;
   text-align: center;
 }
-.licenseList .tableBox .tooltip.bottom {
-  top: 140%;
+.licenseList .tableBox .point.checking {
+  margin-left: 0.9375rem;
+  font-size: 0.75rem;
+  color: #fff;
+  background: #ef9914;
 }
 .licenseList .alertToast {
   left: 50%;

@@ -648,18 +648,16 @@
     .boxWrap{
         margin-top: 10px;
         .cont{
-            height: calc(100vh - 430px);
+            height: calc(100vh - 370px);
             overflow-y: auto;
         }
         .col4{
             row-gap: rem(20);
             column-gap: rem(40);
-            grid-template-columns: 110px 110px 110px 240px;
-        }
-        .col5{
-            row-gap: rem(20);
-            column-gap: rem(40);
-            grid-template-columns: 110px 110px 110px 240px 130px;
+            grid-template-columns: 120px 120px 120px 240px;
+            &.type2{
+                grid-template-columns: 160px 80px 120px 240px;
+            }
         }
         .underBg{
             margin-top: rem(40);
@@ -713,6 +711,13 @@
                 &::after{
                     left: 34%;
                 }
+            }
+        }
+        .point{
+            &.checking{                 
+                font-size: rem(12);
+                color: $white;
+                background: $checking;
             }
         }
     }

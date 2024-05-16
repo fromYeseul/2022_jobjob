@@ -199,9 +199,11 @@
                                 <col width="50px;">
                                 <col width="60px;">
                                 <col width="150px;">
-                                <col width="100px;" span="2">
-                                <col width="120px;">
-                                <col width="150px;" span="2">
+                                <col width="100px;">
+                                <col width="60px;">
+                                <col width="120px;" span="2">
+                                <col width="80px;">
+                                <col width="100px;">
                                 <col width="110px;" span="2">
                                 <col width="160px;" span="2">
                                 <col width="120px;">
@@ -219,7 +221,8 @@
                                     <th>수익유형</th>
                                     <th>라이선스 유형</th>
                                     <th>모듈</th>
-                                    <th>라이선스 적용상태</th>
+                                    <th>라이선스 상태</th>
+                                    <th>잔여기간</th>
                                     <th>주문시작</th>
                                     <th>주문만료</th>
                                     <th>매출
@@ -259,7 +262,7 @@
                                     <td>                                        
                                         <span class="hasTooltip layerOpen">
                                             2411009
-                                            <div class="tooltip bottom">                                                                                                                                                   
+                                            <div class="tooltip right">                                                                                                                                                   
                                                 <div class="yScroll txtLeft">
                                                     <p>프로젝트 이름</p>
                                                     CJ올리브네트웍스 모바일앱 서비스 협약서
@@ -271,22 +274,26 @@
                                     <td><span class="layerOpen">Designer</span></td>
                                     <td>Annual</td>
                                     <td>
-                                        <div class="flexBw">
-                                            <button class="round order">활성</button>
-                                            <span class="marked">-99일 이상</span>
-                                        </div>
+                                        <button class="round order">활성</button>
+                                    </td>
+                                    <td>
+                                        <span class="marked">-99일 이상</span>
                                     </td>
                                     <td>2024.01.01</td>
                                     <td>2024.03.31</td>  
-                                    <td class="txtRight">               
-                                        <span>18,234,000</span>    
-                                        <span class="sChecking">(150%)</span>  
+                                    <td class="">
+                                        <div class="flexBw">
+                                            <span class="point checking">150%</span>             
+                                            <span>18,234,000</span>    
+                                        </div>    
                                     </td>  
-                                    <td class="txtRight">                       
-                                        <span>62,900,000</span>
-                                        <span class="sChecking">(15%)</span>  
-                                    </td>    
-                                    <td class="txtRight">0</td>
+                                    <td>
+                                        <div class="flexBw">
+                                            <span class="point checking">14.5%</span>             
+                                            <span>212,234,000</span>    
+                                        </div>    
+                                    </td>
+                                    <td class="txtRight">12,212,234,000</td>
                                     <td class="ellipsis"></td>
                                 </tr>
                                 <tr>
@@ -301,7 +308,7 @@
                                     <td>                                        
                                         <span class="hasTooltip layerOpen">
                                             2411009
-                                            <div class="tooltip bottom">                                                                                                                                                   
+                                            <div class="tooltip right">                                                                                                                                                   
                                                 <div class="yScroll txtLeft">
                                                     <p>프로젝트 이름</p>CJ올리브네트웍스 모바일앱 서비스 협약서
                                                 </div>
@@ -310,65 +317,216 @@
                                     </td>
                                     <td>갱신</td>
                                     <td><span class="layerOpen">Unattended Bot</span></td>
-                                    <td>Perpetual</td>
+                                    <td>Perpetual</td> 
                                     <td>
-                                        <div class="flexBw">
-                                            <button class="round cancel">만료</button>
-                                            <span class="subGray">만료</span>
-                                        </div>
+                                        <button class="round cancel">만료</button>
+                                    </td>
+                                    <td>
+                                        <span class="subGray">만료</span>
                                     </td>
                                     <td>2024.01.01</td>
                                     <td>2024.03.31</td>   
-                                    <td class="txtRight">             
-                                        <span>500,234,000</span>
-                                        <span class="sChecking">(14.4%)</span>
+                                    <td>
+                                        <div class="flexBw">
+                                            <span class="point checking">18%</span>             
+                                            <span>18,234,000</span>    
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class="flexBw">
+                                            <span class="point checking">5%</span>             
+                                            <span>18,234,000</span>    
+                                        </div>    
+                                    </td>
+                                    <td class="txtRight">338,234,000</td>
+                                    <td class="ellipsis">신규사업 할인</td>
+                                </tr> 
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="ff1">
+                                        <label for="ff1"></label>
+                                    </td>
+                                    <td>3</td>
+                                    <td>                                        
+                                        <span class="hasTooltip layerOpen">
+                                            2411009
+                                            <div class="tooltip right">                                                                                                                                                   
+                                                <div class="yScroll txtLeft">
+                                                    <p>프로젝트 이름</p>
+                                                    CJ올리브네트웍스 모바일앱 서비스 협약서
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>신규</td>
+                                    <td><span class="layerOpen">Designer</span></td>
+                                    <td>Annual</td>
+                                    <td>
+                                        <button class="round order">활성</button>
+                                    </td>
+                                    <td>
+                                        <span class="marked">-99일 이상</span>
+                                    </td>
+                                    <td>2024.01.01</td>
+                                    <td>2024.03.31</td>  
+                                    <td>
+                                        <div class="flexBw">
+                                            <span class="point checking">2.5%</span>             
+                                            <span>18,234,000</span>    
+                                        </div>    
+                                    </td>
+                                    <td>
+                                        <div class="flexBw">
+                                            <span class="point checking">21%</span>             
+                                            <span>18,234,000</span>    
+                                        </div>    
+                                    </td> 
+                                </td>
+                                    <td class="txtRight">162,900,000</td>
+                                    <td class="ellipsis"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table style="margin-top:50px">
+                            <colgroup>
+                                <col width="50px;">
+                                <col width="60px;">
+                                <col width="150px;">
+                                <col width="100px;">
+                                <col width="60px;">
+                                <col width="120px;" span="2">
+                                <col width="80px;">
+                                <col width="100px;">
+                                <col width="110px;" span="2">
+                                <col width="160px;" span="2">
+                                <col width="120px;">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox" id="ff0">
+                                        <label for="ff0"></label>
+                                    </th>
+                                    <th>No.</th>
+                                    <th>고객사</th>
+                                    <th>프로젝트</th>
+                                    <th>수익유형</th>
+                                    <th>라이선스 유형</th>
+                                    <th>모듈</th>
+                                    <th>라이선스 상태</th>
+                                    <th>잔여기간</th>
+                                    <th>주문시작</th>
+                                    <th>주문만료</th>
+                                    <th>매출
+                                        <span class="hasTooltip">
+                                            <i class="ico qMark_w"></i>
+                                            <div class="tooltip bottom">                                                                                                                                                   
+                                                <div class="yScroll txtLeft">
+                                                    <p>라이선스</p>
+                                                    라이선스 모듈이 Perpetual인 경우<br> 요율이 적용된 금액입니다.
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </th>
+                                    <th>매입
+                                        <span class="hasTooltip">
+                                            <i class="ico qMark_w"></i>
+                                            <div class="tooltip bottom">                                                                                                                                                   
+                                                <div class="yScroll txtLeft">
+                                                    <p>라이선스</p>
+                                                    라이선스 모듈이 Perpetual인 경우<br> 요율이 적용된 금액입니다.
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </th>
+                                    <th>GP</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="ff2">
+                                        <label for="ff2"></label>
+                                    </td>
+                                    <td>2</td>
+                                    <td rowspan="2"><!--병합라인수 / 병합되는 tr의 해당 td 없어야함-->
+                                        <span class="layerOpen">지엔소프트</span>
+                                    </td>
+                                    <td>                                        
+                                        <span class="hasTooltip layerOpen">
+                                            2411009
+                                            <div class="tooltip right">                                                                                                                                                   
+                                                <div class="yScroll txtLeft">
+                                                    <p>프로젝트 이름</p>CJ올리브네트웍스 모바일앱 서비스 협약서
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>갱신</td>
+                                    <td><span class="layerOpen">Unattended Bot</span></td>
+                                    <td>Perpetual</td> 
+                                    <td>
+                                        <button class="round cancel">만료</button>
+                                    </td>
+                                    <td>
+                                        <span class="subGray">만료</span>
+                                    </td>
+                                    <td>2024.01.01</td>
+                                    <td>2024.03.31</td>                                       
+                                    <td class="txtRight">                
+                                        <span>1,118,234,000</span>    
+                                        <span class="sChecking">(150%)</span>  
                                     </td>  
-                                    <td class="txtRight">         
-                                        <span>1,200,900,000</span>   
-                                        <span class="sChecking">(-)</span>
-                                    </td>  
+                                    <td class="txtRight">                       
+                                        <span>1,262,900,000</span>
+                                        <span class="sChecking">(-)</span>  
+                                    </td>    
                                     <td class="txtRight">8,234,000</td>
                                     <td class="ellipsis">신규사업 할인</td>
                                 </tr>  
                                 <tr>
                                     <td>
-                                        <input type="checkbox" id="ff3">
-                                        <label for="ff3"></label>
+                                        <input type="checkbox" id="ff1">
+                                        <label for="ff1"></label>
                                     </td>
-                                    <td>1</td>
-                                    <!-- <td><span class="layerOpen">지엔소프트</span></td> -->
+                                    <td>3</td>
                                     <td>                                        
                                         <span class="hasTooltip layerOpen">
                                             2411009
-                                            <div class="tooltip bottom">                                                                                                                                                   
+                                            <div class="tooltip right">                                                                                                                                                   
                                                 <div class="yScroll txtLeft">
-                                                    <p>프로젝트 이름</p>CJ올리브네트웍스 모바일앱 서비스 협약서
+                                                    <p>프로젝트 이름</p>
+                                                    CJ올리브네트웍스 모바일앱 서비스 협약서
                                                 </div>
                                             </div>
                                         </span>
                                     </td>
-                                    <td>갱신</td>
-                                    <td><span class="layerOpen">Unattended Bot</span></td>
-                                    <td>Perpetual</td>
+                                    <td>신규</td>
+                                    <td><span class="layerOpen">Designer</span></td>
+                                    <td>Annual</td>
                                     <td>
-                                        <div class="flexBw">
-                                            <button class="round order">활성</button>
-                                            <span class="marked">오늘 만료</span>
-                                        </div>
+                                        <button class="round order">활성</button>
+                                    </td>
+                                    <td>
+                                        <span class="marked">-99일 이상</span>
                                     </td>
                                     <td>2024.01.01</td>
                                     <td>2024.03.31</td>  
-                                    <td class="txtRight">      
-                                        <span>8,234,000</span>          
-                                        <span class="sChecking">(15%)</span>
+                                    <td class="txtRight">                
+                                        <span>18,234,000</span>    
+                                        <span class="sChecking">(150%)</span>  
                                     </td>  
-                                    <td class="txtRight">                     
-                                        <span>6,900,000</span>
+                                    <td class="txtRight">                       
+                                        <span>62,900,000</span>
                                         <span class="sChecking">(15%)</span>  
-                                    </td>    
-                                    <td class="txtRight">8,234,000</td>
-                                    <td class="ellipsis">신규사업 할인</td>
-                                </tr>  
+                                    </td> 
+                                </td>
+                                    <td class="txtRight">62,900,000</td>
+                                    <td class="ellipsis"></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -460,16 +618,10 @@
                                 <li>
                                     <h6>라이선스 주문시작 - 만료</h6> 
                                     <div class="info">
-                                        <div class="datepicker">
-                                            <input type="text" placeholder="시작일" id="datepicker3" value="2023.08.07">
-                                        </div>
-                                        <span class="range">~</span>
-                                        <div class="datepicker">
-                                            <input type="text" placeholder="종료일" id="datepicker4">
-                                        </div>
+                                        2024.01.01 ~ 2024.12.31
                                     </div>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <div class="flexBw">
                                         <h6>매출
                                             <span class="hasTooltip">
@@ -485,7 +637,7 @@
                                         <span class="sChecking">(14.4%)</span>
                                     </div>
                                     <div class="info">
-                                        <input class="full txtRight" type="text" value="96,000,000" disabled="">
+                                        <span class>96,000,000</span>
                                     </div>   
                                 </li>
                                 <li>
@@ -504,13 +656,60 @@
                                         <span class="sChecking">(15%)</span>
                                     </div>
                                     <div class="info">
-                                        <input class="full txtRight" type="text" value="96,000,000" disabled="">
-                                    </div>                               
+                                        <span class>96,000,000</span>
+                                    </div>                                
                                 </li>
                                 <li>
                                     <h6>GP / Ratio</h6>
                                     <div class="info">
-                                        <input class="full txtRight" type="text" value="96,000,000" disabled="">
+                                        <span class>96,000,000 / 120%</span>
+                                    </div>                         
+                                </li>
+                                <li></li> -->
+
+                                <li>
+                                    <div class="flexBw">
+                                        <h6>매출
+                                            <span class="hasTooltip">
+                                                <i class="ico exMark_round"></i>
+                                                <div class="tooltip bottom first">                                                                                                                                                   
+                                                    <div class="yScroll txtLeft">
+                                                        <p>라이선스</p>
+                                                        라이선스 모듈이 Perpetual인 경우 요율이 적용된 금액입니다.
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </h6>
+                                    </div>
+                                    <div class="info">
+                                        <span class="point checking">150%</span>
+                                        <span class>96,000,000</span>
+                                    </div>   
+                                </li>
+
+                                <li>
+                                    <div class="flexBw">
+                                        <h6>매입
+                                            <span class="hasTooltip">
+                                                <i class="ico exMark_round"></i>
+                                                <div class="tooltip bottom">                                                                                                                                                   
+                                                    <div class="yScroll txtLeft">
+                                                        <p>라이선스</p>
+                                                        라이선스 모듈이 Perpetual인 경우 요율이 적용된 금액입니다.
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </h6>
+                                    </div>
+                                    <div class="info">
+                                        <span class="point checking">5%</span>
+                                        <span class>2,396,000,000</span>
+                                    </div>                                
+                                </li>
+                                <li>
+                                    <h6>GP / Ratio</h6>
+                                    <div class="info">
+                                        <span class>96,000,000 / 120%</span>
                                     </div>                         
                                 </li>
                             </ul>
@@ -518,7 +717,7 @@
 
                         <h5 class="underBg">부가정보</h5>
                         <div class="inputList">
-                            <ul class="grid col5">
+                            <ul class="grid col4 type2">
                                 <li>
                                     <h6>라이선스 코드</h6>
                                     <div class="info">
@@ -551,15 +750,8 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li>
-                                    <h6>담당자</h6>
-                                    <div class="info">
-                                        <button class="bdType midSize">담당자 지정</button>
-                                        <span class="mainC">4명</span>
-                                    </div>                             
-                                </li>
-                                <!-- <li class="licenseAdmin">
-                                    <h6>라이선스 만료 시 알림을 받을 담당자<span class="h6_sub subGray ml10">(라이선스 적용 만료 시 메일 알림을 받을 담당자를 지정합니다.)</span></h6>
+                                <li class="licenseAdmin">
+                                    <h6>라이선스 만료 시 알림을 받을 담당자<p class="h6_sub subGray">(라이선스 적용 만료 시 메일 알림을 받을 담당자를 지정합니다.)</p></h6>
                                     
                                     
                                     <div class="info">
@@ -578,7 +770,7 @@
                                             <label for="chk_4">김길동aa</label>            
                                         </div>
                                     </div>                                
-                                </li> -->
+                                </li>
                             </ul>
                         </div>
                     </div>
