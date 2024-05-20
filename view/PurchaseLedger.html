@@ -222,6 +222,7 @@
                                 <col width="80px" span="3">  
                                 <col width="110px" span="2"> 
                                 <col width="120px" span="2">  
+                                <col width="30px">
                                 <col width="70px" span="2">
                                 <col width="120px">                                          
                                 <col width="240px">
@@ -256,6 +257,7 @@
                                 <th>고용원부번호</th>
                                 <th>은행명</th>
                                 <th>계좌번호</th>
+                                <th></th>
                                 <th>지급예정일</th>
                                 <th>지급일정</th>
                                 <th>실지급일</th>
@@ -308,7 +310,27 @@
                                     <td>10253898057</td>
                                     <td>제주은행</td>
                                     <td>123-245689-111</td>
-                                    <td>2023.11.22</td>                                            
+                                    <!--240530 추가-->                                   
+                                    <td>
+                                        <i class="ico setting_sm is-active"></i>
+                                        <div class="modalLayer absol dev_optionPop is-active">
+                                            <div class="layerBox autoSize">
+                                                <div class="modalCont">
+                                                    <div class="flex_1_2">
+                                                        <select class="lowSize xsSize">
+                                                            <option value="">은행선택</option>
+                                                            <option value="060">BOA은행</option>
+                                                            <option value="060">제이피모칸제이스은행</option>
+                                                        </select>
+                                                        <input type="text" class="lowSize">
+                                                        <button class="smSize">적용</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                    
+                                    </td>
+                                    <!--240530 추가-->   
+                                    <td>2023.11.22</td> 
                                     <td>말일</td> 
                                     <td>
                                         <div class="flex">
@@ -363,7 +385,8 @@
                                     <td>10253898057</td>
                                     <td>케이뱅크</td>
                                     <td>123-245689-111</td>
-                                    <td>2023.11.22</td>                                            
+                                    <td><i class="ico setting_sm is-active"></i> </td>
+                                    <td>2023.11.22</td>                                           
                                     <td>말일</td> 
                                     <td>
                                         <div class="flex">
@@ -419,8 +442,9 @@
                                     <td>10253898057</td>
                                     <td>10253898057</td>
                                     <td>엠유에프지은행</td>
-                                    <td>123-245689-111</td>
-                                    <td>2023.11.22</td>                                            
+                                    <td>123-245689-111</td>   
+                                    <td><i class="ico setting_sm is-active"></i> </td>
+                                    <td>2023.11.22</td>                                         
                                     <td>말일</td> 
                                     <td>                                        
                                         <div class="flex">
@@ -444,7 +468,7 @@
                                     <td>400,000</td>
                                     <td>800,000</td>
                                     <td>4,500,000</td>
-                                    <td colspan="9"></td>
+                                    <td colspan="10"></td>
                                 </tr>
                             </tfoot>
                         </table>
