@@ -194,6 +194,7 @@
                                 <col width="80px" span="4"> 
                                 <col width="110px" span="2">  
                                 <col width="120px" span="2">  
+                                <col width="30px"><!--240530 추가-->
                                 <col width="70px">
                                 <col width="110px">                                          
                                 <col width="240px">
@@ -223,7 +224,8 @@
                                 <th>고용원부번호</th>
                                 <th>은행명</th>
                                 <th>계좌번호</th>
-                                <th>지급스케줄</th>
+                                <th></th>
+                                <th>지급일정</th>
                                 <th>실지급일</th>
                                 <th>비고</th>                                     
                             </thead>
@@ -259,8 +261,27 @@
                                     <td><span class="layerOpen">10253898057</span></td>
                                     <td><span class="layerOpen">10253898057</span></td>
                                     <td>제주은행</td>
-                                    <td>123-245689-111</td>
-                                                                                
+                                    <td class="txtLeft">123-245</td>  
+                                    <!--240530 추가-ys-->
+                                    <td>
+                                        <i class="ico setting_sm is-active"></i>
+                                        <div class="modalLayer absol dev_optionPop is-active">
+                                            <div class="layerBox autoSize">
+                                                <div class="modalCont">
+                                                    <div class="flex_1_2">
+                                                        <select class="lowSize xsSize">
+                                                            <option value="">은행선택</option>
+                                                            <option value="060">BOA은행</option>
+                                                            <option value="060">제이피모칸제이스은행</option>
+                                                        </select>
+                                                        <input type="text" class="lowSize">
+                                                        <button class="smSize">적용</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                    
+                                    </td>
+                                    <!--//240530 추가-ys-->                                                                              
                                     <td>말일</td> 
                                     <td>
                                         <div class="flex">
@@ -304,8 +325,9 @@
                                     <td><span class="layerOpen">10253898057</span></td>
                                     <td><span class="layerOpen">10253898057</span></td>
                                     <td>케이뱅크</td>
-                                    <td>123-245689-111</td>
-                                                                                
+                                    <td class="txtLeft">123-245689-111-00</td>
+                                    <td><i class="ico setting_sm is-active"></i></td>   
+
                                     <td>말일</td> 
                                     <td>
                                         <div class="flex">
@@ -349,8 +371,9 @@
                                     <td><span class="layerOpen">10253898057</span></td>
                                     <td><span class="layerOpen">10253898057</span></td>
                                     <td>엠유에프지은행</td>
-                                    <td>123-245689-111</td>
-                                                                                
+                                    <td class="txtLeft">123-2400-111</td>
+                                                         
+                                    <td><i class="ico setting_sm"></i></td>                       
                                     <td>말일</td> 
                                     <td>-</td>                          
                                     <td><textarea rows="1" placeholder="특이사항 메모입력"></textarea></td>
@@ -387,8 +410,9 @@
                                     <td><span class="layerOpen">10253898057</span></td>
                                     <td><span class="layerOpen">10253898057</span></td>
                                     <td>스텐다드차타드</td>
-                                    <td>123-245689-111</td>
+                                    <td class="txtLeft">123-245689-111</td>
                                                                                 
+                                    <td><i class="ico setting_sm"></i></td>
                                     <td>말일</td> 
                                     <td>
                                         <div class="flex">
@@ -432,8 +456,9 @@
                                     <td><span class="layerOpen">10253898057</span></td>
                                     <td><span class="layerOpen">10253898057</span></td>
                                     <td>제주은행</td>
-                                    <td>123-245689-111</td>
-                                                                                
+                                    <td class="txtLeft">123-245689-111</td>
+                                                                          
+                                    <td><i class="ico setting_sm"></i></td>      
                                     <td>말일</td> 
                                     <td>
                                         <div class="flex">
@@ -456,7 +481,7 @@
                                     <td>1,100,000</td>                                            
                                     <td>400,000</td>
                                     <td>80,000</td>                                           
-                                    <td colspan="7"></td>
+                                    <td colspan="8"></td><!--240530 수정-->
                                 </tr>
                             </tfoot>
                         </table>
