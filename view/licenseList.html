@@ -11,187 +11,120 @@
 </head>
 <body>
     <section class="layoutWrapper">
-        <header>
-            <div class="prefix">
-                <a href="#" class="logo">
-                    <img src="../assets/img/pms/icoLogo.png" alt="">
-                </a>
-            </div>
-            <div class="suffix">
-                <ul>
-                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
-                    <li><a href="#">로그아웃</a></li>
-                    <li>
-                        <a href="https://kaned.notion.site/kaned/ePMS-14ee9b2df5d24cceb145cc8faebd5f84" title="도움말" target="_blank">
-                            <i class="ico advice"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-
-        <section class="gnbWrapper">
-            <div class="gnb">
-                <div class="navCtrlBtn">
-                    <i class="ico ctrlBtn"></i>
-                </div>
-                <nav class="navWrapper">
-                    <ul>
-                        <li>
-                            <a alerttoast="" href="dashboard.html"><i class="ico home"></i><span class="menuTxt">홈</span></a>
-                        </li>
-                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">멤버</span></a>
-                            <ul>
-                                <li><a href="#"><span class="depth2">직원</span></a></li>
-                            </ul>
-                        </li>                        
-                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">거래처</span></a>
-                            <ul>
-                                <li><a href="#"><span class="depth2">매출거래처</span></a></li>
-                                <li><a href="#"><span class="depth2">매입거래처</span></a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="#"><i class="ico bizstate"></i><span class="menuTxt">사업관리</span></a>
-                            <ul>
-                                <li><a href="#"><span class="depth2">사업현황</span></a></li>
-                            </ul>
-                        </li>
-                        <li class="is-active"><a href="#"><i class="ico tcount"></i><span class="menuTxt">매출/매입집계</span></a>
-                            <ul>                                
-                                <li><a href="project_Sum.html"><span class="depth2">프로젝트별 매출/매입</span></a></li>
-                                <li><a href="inputType_Sum.html"><span class="depth2">투입유형별 매출/매입</span></a></li>
-                                <li class="is-active"><a href="sourcing_Sum.html"><span class="depth2">외주 매출/매입</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="ico ledger"></i><span class="menuTxt">매입원장</span></a>
-                            <ul>
-                                <li><a href="businessIncomeStatement.html"><span class="depth2">사업소득명세서</span></a></li>
-                                <li><a href="PurchaseLedger.html"><span class="depth2">매입원장(법인/개인)</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="ico calculation"></i><span class="menuTxt">보험료 대사</span></a>
-                            <ul>
-                                <li><a href="calculation_industrialAccident.html"><span class="depth2">산재보험료대사</span></a></li>
-                                <li><a href="calculation_employmentIInsurance.html"><span class="depth2">고용보험료대사</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span></a></li>                        
-                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span></a></li>                        
-                    </ul>
-                </nav>
-            </div>
-        </section>   
+        <header include-html="header_epms.html"></header>
+        <section class="gnbWrapper" include-html="nav_epms.html"></section>
         
         <section class="contWrapper noRight">
             <section class="contLayout">
                 <section class="licenseList">
                     <h2>라이선스 관리</h2>
                     
-                    <div class="condition">
-                        <ul>                            
-                            <li>
-                                <p class="condiTit">주관부서</p>
-                                <div class="select laSize">
-                                    <span class="selDefault is-active">SAP 전략</span>
-                                    <ul class="optionList">
-                                        <li class="optionItem">
-                                            <input type="checkbox" id="optChk_1" class="hasTxt">
-                                            <label for="optChk_1" class="ellipsis">SAP 사업SAP 사업SAP 사업</label>
-                                        </li>                                        
-                                        <li class="optionItem">
-                                            <input type="checkbox" id="optChk_2" class="hasTxt">
-                                            <label for="optChk_2" class="ellipsis">SAP 전략</label>
-                                        </li>
-                                        <li class="optionItem">
-                                            <input type="checkbox" id="optChk_3" class="hasTxt">
-                                            <label for="optChk_3" class="ellipsis">SAP 융합</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <label class="condiTit" for="client">고객사</label>
-                                <input type="text" id="client" placeholder="고객사명" maxlength="30">
-                            </li>
-                            <li>
-                                <p class="condiTit">수익유형</p>
-                                <select>
-                                    <option value="">전체</option>
-                                    <option value="001">신규</option>
-                                    <option value="002">관심</option>
-                                    <option value="003">요율</option>
-                                    <option value="004">무상</option>
-                                </select>
-                            </li>
-                            <li>
-                                <p class="condiTit">라이선스</p>
-                                <select>
-                                    <option value="">전체</option>
-                                    <option value="001">Orchestrator</option>
-                                    <option value="002">Designer</option>
-                                    <option value="003">Designer Lite</option>
-                                    <option value="004">Unattended Bot</option>
-                                    <option value="005">Attended Bot</option>
-                                </select>
-                            </li>
-                            <li>
-                                <p class="condiTit">모듈</p>
-                                <select>
-                                    <option value="">전체</option>
-                                    <option value="001">Annual</option>
-                                    <option value="002">Perpetual</option>
-                                    <option value="003">SaaS Monthly</option>
-                                </select>
-                            </li>
-                            <li>
-                                <p class="condiTit">상태</p>
-                                <select>
-                                    <option value="">전체</option>
-                                    <option value="001">활성</option>
-                                    <option value="002">만료</option>
-                                </select>
-                            </li>
-                            <li>
-                                <p class="condiTit">주문일자</p>
-                                <div class="flex">
-                                    <div class="datepicker">
-                                        <input type="text" placeholder="연-월-일" id="datepicker1">
+                    <form action="">
+                        <div class="condition">
+                            <ul>                            
+                                <li>
+                                    <p class="condiTit">주관부서</p>
+                                    <div class="select laSize">
+                                        <span class="selDefault is-active">SAP 전략</span>
+                                        <ul class="optionList">
+                                            <li class="optionItem">
+                                                <input type="checkbox" id="optChk_1" class="hasTxt">
+                                                <label for="optChk_1" class="ellipsis">SAP 사업SAP 사업SAP 사업</label>
+                                            </li>                                        
+                                            <li class="optionItem">
+                                                <input type="checkbox" id="optChk_2" class="hasTxt">
+                                                <label for="optChk_2" class="ellipsis">SAP 전략</label>
+                                            </li>
+                                            <li class="optionItem">
+                                                <input type="checkbox" id="optChk_3" class="hasTxt">
+                                                <label for="optChk_3" class="ellipsis">SAP 융합</label>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="datepicker">
-                                        <input type="text" placeholder="연-월-일" id="datepicker2">
+                                </li>
+                                <li>
+                                    <label class="condiTit" for="client">고객사</label>
+                                    <input type="text" id="client" placeholder="고객사명" maxlength="30">
+                                </li>
+                                <li>
+                                    <p class="condiTit">수익유형</p>
+                                    <select>
+                                        <option value="">전체</option>
+                                        <option value="001">신규</option>
+                                        <option value="002">관심</option>
+                                        <option value="003">요율</option>
+                                        <option value="004">무상</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <p class="condiTit">라이선스</p>
+                                    <select>
+                                        <option value="">전체</option>
+                                        <option value="001">Orchestrator</option>
+                                        <option value="002">Designer</option>
+                                        <option value="003">Designer Lite</option>
+                                        <option value="004">Unattended Bot</option>
+                                        <option value="005">Attended Bot</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <p class="condiTit">모듈</p>
+                                    <select>
+                                        <option value="">전체</option>
+                                        <option value="001">Annual</option>
+                                        <option value="002">Perpetual</option>
+                                        <option value="003">SaaS Monthly</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <p class="condiTit">상태</p>
+                                    <select>
+                                        <option value="">전체</option>
+                                        <option value="001">활성</option>
+                                        <option value="002">만료</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <p class="condiTit">주문일자</p>
+                                    <div class="flex">
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월-일" id="datepicker1">
+                                        </div>
+                                        <div class="datepicker">
+                                            <input type="text" placeholder="연-월-일" id="datepicker2">
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="hasBtn">
-                                <label class="condiTit" for="searchTxt">검색어</label>
-                                <input type="text" class="smSize" id="searchTxt" placeholder="프로젝트 코드/이름, 라이선스 코드">
-                                <button>
-                                    <i class="ico search white"></i>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-     
-                    <div class="tableTop">
-                        <div class="prefix">        
-                            <select>
-                                <option class="optionItem" value="10">10개씩</option>
-                                <option class="optionItem" value="20" selected="">20개씩</option>
-                                <option class="optionItem" value="50">50개씩</option>
-                                <option class="optionItem" value="100">100개씩</option>
-                            </select>
-                            <span>
-                                <input type="checkbox" class="hasTxt" id="c02">
-                                <label for="c02">만료임박</label>
-                            </span>
+                                </li>
+                                <li class="hasBtn">
+                                    <label class="condiTit" for="searchTxt">검색어</label>
+                                    <input type="text" class="smSize" id="searchTxt" placeholder="프로젝트 코드/이름, 라이선스 코드">
+                                    <button>
+                                        <i class="ico search white"></i>
+                                    </button>
+                                </li>
+                            </ul>
                         </div>
-                        
-                        <button class="white">
-                            <i class="ico excDown"></i>
-                            엑셀 다운로드
-                        </button>
-                    </div>
+        
+                        <div class="tableTop">
+                            <div class="prefix">        
+                                <select>
+                                    <option class="optionItem" value="10">10개씩</option>
+                                    <option class="optionItem" value="20" selected="">20개씩</option>
+                                    <option class="optionItem" value="50">50개씩</option>
+                                    <option class="optionItem" value="100">100개씩</option>
+                                </select>
+                                <span>
+                                    <input type="checkbox" class="hasTxt" id="c02">
+                                    <label for="c02">만료임박</label>
+                                </span>
+                            </div>
+                            
+                            <button class="white">
+                                <i class="ico excDown"></i>
+                                엑셀 다운로드
+                            </button>
+                        </div>
+                    </form>
                     
                     <div class="tableBox sticky">
                         <table>
@@ -289,83 +222,6 @@
                                         <span>212,234,000</span> 
                                     </td>
                                     <td class="txtRight">12,212,234,000</td>
-                                    <td class="ellipsis"></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="ff2">
-                                        <label for="ff2"></label>
-                                    </td>
-                                    <td>2</td>
-                                    <td rowspan="2"><!--병합라인수 / 병합되는 tr의 해당 td 없어야함-->
-                                        <span class="layerOpen">지엔소프트</span>
-                                    </td>
-                                    <td>                                        
-                                        <span class="hasTooltip layerOpen">
-                                            2411009
-                                            <div class="tooltip right">                                                                                                                                                   
-                                                <div class="yScroll txtLeft">
-                                                    <p>프로젝트 이름</p>CJ올리브네트웍스 모바일앱 서비스 협약서
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </td>
-                                    <td>갱신</td>
-                                    <td><span class="layerOpen">Unattended Bot</span></td>
-                                    <td>Perpetual</td> 
-                                    <td>
-                                        <button class="round cancel">만료</button>
-                                    </td>
-                                    <td>
-                                        <span class="subGray">만료</span>
-                                    </td>
-                                    <td>2024.01.01</td>
-                                    <td>2024.03.31</td>   
-                                    <td class="txtRight">           
-                                        <span>10,508,234,000</span>  
-                                    </td>
-                                    <td class="txtRight">          
-                                        <span>18,234,000</span> 
-                                    </td>
-                                    <td class="txtRight">338,234,000</td>
-                                    <td class="ellipsis">신규사업 할인</td>
-                                </tr> 
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="ff1">
-                                        <label for="ff1"></label>
-                                    </td>
-                                    <td>3</td>
-                                    <td>                                        
-                                        <span class="hasTooltip layerOpen">
-                                            2411009
-                                            <div class="tooltip right">                                                                                                                                                   
-                                                <div class="yScroll txtLeft">
-                                                    <p>프로젝트 이름</p>
-                                                    CJ올리브네트웍스 모바일앱 서비스 협약서
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </td>
-                                    <td>신규</td>
-                                    <td><span class="layerOpen">Designer</span></td>
-                                    <td>Annual</td>
-                                    <td>
-                                        <button class="round order">활성</button>
-                                    </td>
-                                    <td>
-                                        <span class="marked">-99일 이상</span>
-                                    </td>
-                                    <td>2024.01.01</td>
-                                    <td>2024.03.31</td>  
-                                    <td class="txtRight">
-                                        <span class="point checking">2.5%</span>             
-                                        <span>23,018,234,000</span> 
-                                    </td>
-                                    <td class="txtRight">       
-                                        <span>12,008,234,000</span>  
-                                    </td> 
-                                    <td class="txtRight">162,900,000</td>
                                     <td class="ellipsis"></td>
                                 </tr>
                             </tbody>
@@ -586,6 +442,7 @@
 
 
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/includeHTML.js"></script><!--header,nav공통 호출-->  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
