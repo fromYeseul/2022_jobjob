@@ -2,8 +2,10 @@
     // width: 100%;
     position: relative;
     .tableBox{
-        // max-height: calc(100vh - 60px);
+        max-height: calc(100vh - 360px);
+        min-height: rem(120);
         // overflow: visible;
+        border-bottom: 0;
         thead{        
             .tooltip{
                 width: rem(200);
@@ -14,14 +16,20 @@
             .tooltip{
                 min-width: rem(150);
                 right: auto;
-                left: 120%;
+                left: 103%;
+                &.right{
+                    min-width: rem(200);
+                    .yScroll{
+                        max-height: rem(42);
+                    }
+                }
             }
             tr{
                 &:last-child{
                     .tooltip{
-                        top: -60%;
+                        top: 0;
                         &::after{
-                            top: 75%;
+                            top: 65%;
                         }
                     }
                 }
@@ -47,6 +55,9 @@
                 background: $checking;
             }
         }
+    }
+    .listBottom{
+        border-top: 0;
     }
     .alertToast{
         left: 50%;
