@@ -637,10 +637,26 @@
     }
 }
 
-
-//변경계약이력
-.contractRecord{
-
+//요율적용
+.rateApply{
+    .modalHeader{
+        margin-bottom: 0;
+    }
+    .boxWrap{
+        border: 0;
+        background: $modalBg;
+        .col3{
+            justify-content: space-around;
+            column-gap: rem(20);
+            grid-template-columns: 140px 70px 180px;
+        }
+        .info{
+            margin-top: rem(10);
+        }
+        input{
+            text-align: right;
+        }
+    }
 }
 
 //----------------라이선스 관리
@@ -664,7 +680,7 @@
         .col4{
             row-gap: rem(20);
             column-gap: rem(40);
-            grid-template-columns: 120px 120px 120px 240px;
+            grid-template-columns: 120px 120px 120px 160px;
             &.type2{
                 grid-template-columns: 160px 80px 120px 240px;
             }
