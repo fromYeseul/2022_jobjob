@@ -204,13 +204,15 @@
                         <!--240315 수정-ys-->
                         <!--thead영역-->
                         <table>
+                            <!--240705 수정-ys-->
                             <!--240415 수정-ys-->
                             <colgroup>
-                                <col width="75px" span="2">
-                                <col width="100px" span="16">
-                                <col width="120px">
+                                <col width="85px" span="2">
+                                <col width="95px" span="16">
+                                <col>
                             </colgroup>
                             <!--//240415 수정-ys-->
+                            <!--//240705 수정-ys-->
                             <thead>
                                 <tr>
                                     <th colspan="3">프로젝트 정보</th>
@@ -242,11 +244,13 @@
 
                         <!--프로젝트 한세트-->
                         <table>
+                            <!--240705 수정-ys-->
                             <colgroup>
-                                <col width="75px" span="2">
-                                <col width="100px"span="16">
-                                <col width="120px">
+                                <col width="85px" span="2">
+                                <col width="95px" span="16">
+                                <col>
                             </colgroup>
+                            <!--//240705 수정-ys-->
                             <tfoot>
                                 <tr>
                                     <td colspan="3">
@@ -429,9 +433,9 @@
 
                         <table>
                             <colgroup>
-                                <col width="75px" span="2">
-                                <col width="100px"span="16">
-                                <col width="120px">
+                                <col width="85px" span="2">
+                                <col width="95px" span="16">
+                                <col>
                             </colgroup>
                             <tfoot>
                                 <tr>
@@ -543,9 +547,9 @@
                         
                         <table>
                             <colgroup>
-                                <col width="75px" span="2">
-                                <col width="100px"span="16">
-                                <col width="120px">
+                                <col width="85px" span="2">
+                                <col width="95px" span="16">
+                                <col>
                             </colgroup>
                             <tfoot>
                                 <tr>
@@ -1234,6 +1238,7 @@
         //테이블 펼침
         $("tfoot .ico.up").on("click", function(){
             $(this).toggleClass("is-active");
+            $(this).parents("tfoot").toggleClass("is-active");
             $(this).parents("tfoot").siblings("tbody").toggleClass("is-active");
         });
     </script>
