@@ -3,7 +3,7 @@
     table{
         margin-bottom: rem(5);
         border: 1px solid $tableBorder;
-        border-bottom: 2px solid $gray;
+        // border-bottom: 2px solid $gray;//240724 수정-ys
         &:first-child{
             margin-bottom: 0;
             border: 1px solid $gnbGray;
@@ -32,6 +32,10 @@
             }
             tr{
                 // border-bottom: 0;
+                border-bottom: 1px solid $tfoot_pms; //240724 수정-ys
+                &:last-child{
+                    border-bottom: 1px solid $layoutColor;//240724 수정-ys
+                }
             }
             td{
                 text-align: right;
@@ -41,21 +45,41 @@
                     padding-left: rem(6);
                     text-align: left;
                     &:nth-child(3){
-                        border-right: 1px solid $tableBorder;
+                        border-right: 1px solid $tfoot_pms; //240724 수정-ys
                     }
                 }
             }
         }
         tfoot{
             display: table-row-group;
+            border-bottom: 1px solid $tfoot_pms; //240724 수정-ys
+            //240724 수정-ys
+            tr{
+                &:last-child{                    
+                    td{
+                        border-bottom: 1px solid $layoutColor;
+                    }
+                }
+            }
+            &.is-active{
+                tr{
+                    &:last-child{                    
+                        td{
+                            border-bottom: 1px solid $tfoot_pms;
+                        }
+                    }
+                }
+            }
+            //240724 수정-ys
             td{
                 padding: rem(8);
                 color: $black;
+                background: $white;
                 font-weight: bold;
                 text-align: right;
                 &:first-child{
                     color: $tableGray;
-                    border-right: 1px solid $tableBorder;
+                    border-right: 1px solid $tfoot_pms; //240724 수정-ys
                 }
                 .subGray{
                     color: $fileGray;

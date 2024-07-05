@@ -5243,6 +5243,23 @@ label.btnType {
   width: 100%;
 }
 
+.required {
+  position: relative;
+}
+.required::after {
+  content: "*";
+  position: absolute;
+  right: 2px;
+}
+.required:has(.datepicker)::after {
+  top: -2px;
+  font-size: 15px;
+}
+.required:has(select)::after {
+  right: -9px;
+  top: 4px;
+}
+
 .inputBox {
   padding: 1.25rem;
   border-radius: 6px;

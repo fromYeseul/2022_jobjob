@@ -831,4 +831,24 @@ label{
 //     }
 // }
 
-
+//240617 필수입력 input 추가 -ys
+.required{
+    position: relative;
+    &::after{
+        content:'*';
+        position: absolute;
+        right: 2px;
+    }
+    &:has(.datepicker){
+        &::after{
+            top: -2px;
+            font-size: 15px;
+        }
+    }
+    &:has(select){
+        &::after{
+            right: -9px;
+            top: 4px;
+        }
+    }
+}

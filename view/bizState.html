@@ -434,7 +434,7 @@
     </section>
 
     
-
+    <!--전자계약 임의 레이아웃-->
     <div id="" class="modalLayer center">
         <div class="layerBox mid-laSize2">
             <div class="modalHeader mb0">
@@ -971,7 +971,7 @@
         </div>
         <div class="layerDim"></div> 
     </div>
-
+    <!--//전자계약 임의 레이아웃-->
 
     <!--전자계약서-->
     <div id="" class="modalLayer center is-active">
@@ -1330,7 +1330,11 @@
                                         <!--수기계약에서 없음-->
                                         <th>인증방법</th>
                                         <td colspan="3">
-                                            <div class="flex">
+                                            <input type="radio" id="a1" name="c1" class="hasTxt">
+                                            <label for="a1">본인인증</label>
+                                            <input type="radio" id="l1" name="c1" class="hasTxt">
+                                            <label for="l1">공인인증서</label>
+                                            <!-- <div class="flex">
                                                 <div class="prefix">
                                                     <input type="radio" id="a1" name="c1" class="hasTxt">
                                                     <label for="a1">본인인증</label>
@@ -1345,7 +1349,7 @@
                                             <div class="flex">
                                                 <input type="text" placeholder="이름">
                                                 <input type="text" placeholder="전화번호">
-                                            </div>
+                                            </div> -->
                                         </td>
                                         <!--//수기계약에서 없음-->    
                                         <!--//240425 이동/추가-->
@@ -2059,11 +2063,13 @@
                                     <tr>
                                         <th>대금일정</th>
                                         <th>
-                                            <input type="text" class="smSize">
-                                            <!-- <select class="xsSize noBd">
-                                                <option value="">공수</option>
-                                                <option value="">??</option>
-                                            </select> -->
+                                            <!-- <input type="text" class="smSize">240425 input으로.. 240614 select로 변경-->
+                                            <div class="required"><!--240617 추가-ys-->
+                                                <select class="noBd">
+                                                    <option value="">공급(m/m)</option>
+                                                    <option value="">청구조건(선,중,장)</option>
+                                                </select>
+                                            </div>
                                         </th>
                                         <th>청구일</th>
                                         <th>지급일</th>
@@ -2126,7 +2132,11 @@
                                         <td></td>
                                         <td><input type="text" class="smSize"></td>
                                         <td colspan="2"></td>
-                                        <td><input type="text" class="txtRight" value="3,000,000"></td>
+                                        <td>
+                                            <div class="required"><!--240617 추가-ys-->
+                                                <input type="text" class="txtRight" value="3,000,000">
+                                            </div>
+                                        </td>
                                         <td></td>
                                     </tr>
                                 </tfoot>
@@ -2140,45 +2150,48 @@
                                 <div class="prefix">작성일 : 2024.03.26</div>
                                 <div class="center">발송일 : 2024.03.26</div>
                                 <div class="suffix"><!--240523 추가-->
-                                    계약일 :
+                                    <span class="need">계약일 :</span>
                                     <div class="datepicker">
                                         <input type="text" placeholder="YYYY.MM.dd">
-                                    </div>
+                                    </div>  
                                 </div>
                             </div>
                         </div>
 
-                        <!--240430 추가-->
+                        <!--240618 수정-->
                         <div class="signBox">
                             <table>
-                                <thead>                                    
-                                    <tr>
-                                        <th>동반</th>
-                                        <th>성장</th>
-                                    </tr>
-                                </thead>
+                                <colgroup>
+                                    <col width="6%">
+                                    <col>
+                                    <col width="6%">
+                                    <col>
+                                </colgroup>
                                 <tbody>
                                     <tr>
-                                        <!--240425 수정-->
-                                        <td>
-                                            서울 강남구<br> 
-                                            강남대로146길 25 4층<br>
-                                            서울 강남구 강남대로146길
-                                            25 4층 서울 <br>
-                                            <input type="text" value="홍길동">
-                                        </td>
+                                        <th>
+                                            <span class="need">동<br>반</span>                                            
+                                        </th>
                                         <td>
                                             에코아이티<br> 
                                             111-000-1111
                                             <textarea name="" id="" cols="5" rows="3">서울 강남구 강남대로146길 25 4층 홍길동</textarea><!--//240425 수정-->
-                                            홍길동
+                                            <input type="text" value="홍길동">
                                         </td>
-                                        <!--//240425 수정-->
+                                        <th>
+                                            <span class="need">성<br>장</span>
+                                        </th>
+                                        <td>
+                                            에코아이티<br> 
+                                            111-000-1111
+                                            <textarea name="" id="" cols="5" rows="3">서울 강남구 강남대로146길 25 4층 홍길동</textarea><!--//240425 수정-->
+                                            <input type="text" value="홍길동">
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <!--//240430 추가-->
+                        <!--//240618 수정-->
 
 
                         <h5 class="mt30">※ 참고사항</h5>
@@ -2227,7 +2240,7 @@
     <!--//계약id 입력-->
 
     <!--변경계약이력-->
-    <div id="" class="modalLayer center is-active">
+    <div id="" class="modalLayer center">
         <div class="layerBox midSize">
             <div class="modalHeader">
                 <button class="ico layerClose"></button>
