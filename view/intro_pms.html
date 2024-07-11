@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMS 소개</title>
+    <style>        
+        /*reset, setting*/
+        @font-face{
+            font-display: swap;
+            font-family: "Pretendard";
+            font-weight: 600;
+            src: url(../assets/font/Pretendard-SemiBold.woff2) format('woff2'); 
+        }     
+        @font-face{
+            font-display: swap;
+            font-family: "Pretendard";
+            font-weight: 700;
+            src: url(../assets/font/Pretendard-Bold.woff2) format('woff2'); 
+        }
+        @font-face{
+            font-display: swap;
+            font-family: "Pretendard";
+            font-weight: 900;
+            src: url(../assets/font/Pretendard-ExtraBold.woff2) format('woff2'); 
+        }
+        body{
+            margin: 0;
+            padding: 60px;
+            font-family: "Pretendard", sans-serif;
+            font-weight: 600;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+
+        /*page*/
+        .intro_pms{
+            min-width: 1780px;
+            text-align: center;
+        }
+        h1{
+            margin-top: 150px;
+            margin-bottom: 70px;
+            text-align: center;
+            font-size: 32px;
+            position: relative;
+        }
+        h1::before{
+            content:'';
+            width: 39px;
+            height: 5px;
+            background: #6c94e1;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .button{
+            display: inline-block;
+            width: 232px;
+            height: 57px;
+            border: none;
+            color: white;
+            font-size: 23px;
+            line-height: 57px;
+            letter-spacing: -0.25px;
+            font-family: "Pretendard", sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            background-image: url('../assets/img/pms/intro/btn_bg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center left;
+            cursor: pointer;
+        }
+        img{
+            display: inline-block;
+        }
+
+        /*제품개요*/
+        .prod_summary{
+            position: relative;
+        }
+        .prod_summary .button{
+            position: absolute;
+            top: -20px;
+            right: 72px;
+        }
+
+        /*주요화면*/
+        .preview .content{
+            padding: 50px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 120px;
+            text-align: left;
+            border-bottom: 1px dashed #c6c4c4;
+        }
+        .preview .footer{
+            margin-top: 50px;
+            text-align: right;
+        }
+        .pre_txt h2{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: #6c94e1;
+            font-size: 26px;
+        }
+        .pre_txt h2 b{
+            font-size: 40px;
+            font-weight: 900;
+        }
+        .pre_txt ul{
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+        .pre_txt .viewTit{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .pre_txt .viewInfo{
+            color: #666;
+            line-height: 30px;
+        }
+        .pre_txt .viewSub{
+            color: #183c73;
+            font-weight: 700;
+            line-height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro_pms">
+        <div class="header_banner">
+            <img src="../assets/img/pms/intro/img01.png" alt="">
+        </div>
+        <div class="prod_summary">
+            <h1>제품 개요</h1>
+            <a href="#" class="button" target="_blank">데모 사이트 보기</a>
+            <img src="../assets/img/pms/intro/img02.png" alt="">
+        </div>
+        <div class="sys_form">
+            <h1>시스템 구성도</h1>
+            <img src="../assets/img/pms/intro/img03.png" alt="">
+        </div>
+        <div class="menu_form">
+            <h1>메뉴 구성도</h1>
+            <img src="../assets/img/pms/intro/img04.png" alt="">
+        </div>
+        <div class="preview">
+            <h1>주요화면</h1>
+            <div class="content">
+                <img src="../assets/img/pms/intro/img05_1.png" alt="">
+                <div class="pre_txt">
+                    <h2><b>01</b>거래처 관리</h2>
+                    <ul>
+                        <li>
+                            <strong class="viewTit">세밀한 매입매출 거래처 정보 관리</strong>
+                            <div class="viewInfo">
+                                사업 관리에 기초가 되는 거래처 기본 정보(사업자 번호, 회사명 등) 외에 <br>
+                                필요한 항목을 추가로 등록해 관리할 수 있습니다. <br>
+                                입력된 정보는 해당 거래처가 시스템에서 사용될 때 <br>
+                                자동으로 연동되어 편의성을 높입니다. 
+                            </div>
+                        </li>
+                        <li class="viewSub">
+                            거래처와 매입 계약 또는 매출 계약을 체결한적이 있다면 <br>
+                            계약 이력을 간편하게 조회할 수 있습니다. 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="pre_txt">
+                    <h2><b>02</b>사업관리</h2>
+                    <ul>
+                        <li>
+                            <strong class="viewTit">우리 회사에 사업관리에 필요한 모든 기능</strong>
+                            <div class="viewInfo">
+                                진행중인 사업에 필요한 인력과 H/W, S/W 매출매입을 정보를 입력/관리하고, <br>
+                                사업에 맞게 다양한 조건으로 데이터를 수정하는 기능이 제공됩니다.
+                            </div>
+                        </li>
+                        <li>
+                            <strong class="viewTit">[사업현황 상세]</strong>
+                            <div class="viewInfo">
+                                사업에 공급되는 인력과 H/W, S/W 매출매입을 입력하고, <br>
+                                계약기준 매출정보와 실제 투입기준의 매출정보로 이원화 시킬 수 있습니다. <br>
+                                입력된 데이터는 계약부터 집계 자료로 사용됩니다.
+                            </div>
+                        </li>
+                        <li>
+                            <strong class="viewTit">[계약/현황]</strong>
+                            <div class="viewInfo">
+                                사업에 투입되는 프리랜서와의 매입 계약서를 이메일, 카카오톡으로 전송하고 <br>
+                                온라인으로 서명을 진행해 계약을 체결합니다.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <img src="../assets/img/pms/intro/img05_2.png" alt="">
+            </div>
+            <div class="content">
+                <img src="../assets/img/pms/intro/img05_3.png" alt="">
+                <div class="pre_txt">
+                    <h2><b>03</b>원장관리</h2>
+                    <ul>
+                        <li>
+                            <strong class="viewTit">[매출원장] 이번달에 청구할 금액과 입금될 금액은?</strong>
+                            <div class="viewInfo">
+                                계약마다 서로 다른 청구일정, 입금일정이 누락되지 않도록 먼저 챙겨드립니다. <br>
+                                더 중요한 내용에 집중해주세요.
+                            </div>
+                        </li>
+                        <li>
+                            <strong class="viewTit">[매입원장] 지급해야 하는 매입 대금을 정확하게 관리</strong>
+                            <div class="viewInfo">
+                                매입 계약이 완료되면 지급 스케줄이 생성되고, 언제 얼마를 어디로 지급해야 하는지 <br>
+                                빠르게 파악할 수 있는 기능이 제공됩니다.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="pre_txt">
+                    <h2><b>04</b>대시보드</h2>
+                    <ul>
+                        <li>
+                            <strong class="viewTit">일일이 조회하지 않아도 부서 실적이 대시보드에</strong>
+                            <div class="viewInfo">
+                                회사 조직도와 동일하게 부서별 실적을 조회하고,  <br>
+                                전년 대비 매출을 한눈에 비교할 수 있습니다.  <br> <br>
+
+                                또한 부서별 프로젝트 계약 현황을 실시간으로 확인할 수 있습니다. 
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+                <img src="../assets/img/pms/intro/img05_4.png" alt="">
+            </div>
+            <div class="content">
+                <img src="../assets/img/pms/intro/img05_5.png" alt="">
+                <div class="pre_txt">
+                    <h2><b>05</b>매출/매입 집계</h2>
+                    <ul>
+                        <li>
+                            <strong class="viewTit">모든 매출매입 정보를 조회하는 게시판</strong>
+                            <div class="viewInfo">
+                                매입매출 내역이 집계 게시판에 자동으로 반영되어 <br>
+                                누락 없는 데이터 집계가 제공되며 <br>
+                                프로젝트별, 직원별, 거래처별 등 다양한 조건으로 <br>
+                                매출매입 자료를 확인할 수 있습니다. 
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="#" class="button" target="_blank">데모 사이트 보기</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
